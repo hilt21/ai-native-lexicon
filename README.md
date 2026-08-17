@@ -12,7 +12,7 @@ AI Native Lexicon is a data-first glossary for the language emerging around cont
 - built-in catalog search, plus Pagefind-powered site search on GitHub Pages
 - `/dataset.json` and `/llms.txt` machine-readable projections
 - schema, relationship, type, test, and production-build checks
-- automatic GitHub Pages deployment from `main`
+- automatic GitHub Pages deployment from `master`
 
 ## Run locally
 
@@ -59,7 +59,7 @@ Copy an existing file in `src/data/concepts/`, rename it with a kebab-case slug,
 
 ## Deploy to GitHub Pages
 
-1. Create a GitHub repository named `ai-native-lexicon` and push this project to `main`.
+1. Create a GitHub repository named `ai-native-lexicon` and push this project to `master`.
 2. In **Settings → Pages**, choose **GitHub Actions** as the source.
 3. The `Validate and deploy` workflow validates, tests, builds, and publishes the site.
 
