@@ -1,0 +1,13 @@
+term: Progressive Autonomy
+zh: 渐进式自主
+category: Governance
+status: emerging
+summary: Expanding an agent's authority in measured stages as evidence accumulates that it performs safely and effectively within each stage.
+definition: Progressive autonomy treats authority as earned and reversible. A workflow may begin in suggestion mode, advance to approval-gated execution, and later gain bounded automatic action based on evals, production evidence, and clear rollback triggers.
+why_it_matters: It aligns deployment risk with demonstrated capability. Teams can capture value early without making a single irreversible leap to full automation.
+when_to_use: Use it when introducing agents into consequential workflows or broadening an existing agent's scope.
+anti_pattern: Granting permanent broad access after a successful pilot with narrow, curated tasks.
+related: [bounded-autonomy, human-on-the-loop, permission-boundary, agent-ready-organization]
+tags: [governance, autonomy, rollout]
+sources: []
+added: 2026-08-14

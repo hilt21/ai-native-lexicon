@@ -1,0 +1,13 @@
+term: Retrieval Contract
+zh: 检索契约
+category: Knowledge
+status: emerging
+summary: An explicit agreement about what retrieval must return, with which metadata, freshness, trust level, and failure behavior.
+definition: A retrieval contract specifies query intent, eligible sources, ranking expectations, citation metadata, time constraints, and what the caller receives when confidence is low or evidence conflicts. It makes retrieval a typed dependency rather than an opaque search step.
+why_it_matters: Retrieval quality cannot be judged only by whether some text was returned. Contracts expose silent gaps and let downstream reasoning distinguish absence from failure.
+when_to_use: Use it when AI decisions depend on search, RAG, enterprise knowledge, or rapidly changing external facts.
+anti_pattern: Passing top-k text chunks to the model with no source identity, timestamp, or empty-result semantics.
+related: [memory-architecture, provenance-chain, context-engineering, context-hygiene]
+tags: [retrieval, rag, contracts]
+sources: []
+added: 2026-08-14

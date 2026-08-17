@@ -1,0 +1,13 @@
+term: Checkpoint and Resume
+zh: 检查点与恢复
+category: Execution
+status: foundational
+summary: Persisting enough validated state for an agent workflow to continue after interruption without replaying unsafe or expensive work.
+definition: A checkpoint records completed effects, pending decisions, load-bearing facts, budgets, artifacts, and the next valid transition. Resume logic verifies that external assumptions still hold before continuing from that state.
+why_it_matters: Long-running agents will encounter restarts, approvals, rate limits, and human pauses. Durable checkpoints make interruption an expected transition rather than an exceptional failure.
+when_to_use: Use it in workflows lasting beyond one request or containing costly and irreversible steps.
+anti_pattern: Saving only the conversation transcript and assuming it is an authoritative record of committed side effects.
+related: [idempotent-action, handoff, plan-execute-observe, load-bearing-facts]
+tags: [execution, persistence, recovery]
+sources: []
+added: 2026-08-14

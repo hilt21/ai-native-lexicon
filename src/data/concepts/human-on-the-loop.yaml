@@ -1,0 +1,13 @@
+term: Human on the Loop
+zh: 人在环上
+category: Governance
+status: evolving
+summary: A supervision model in which an agent acts independently inside bounds while a human monitors evidence and can intervene or change policy.
+definition: Human-on-the-loop supervision differs from approving every action. The human receives meaningful status, exceptions, and audit evidence, while the system provides pause, redirect, rollback, and escalation controls at suitable points.
+why_it_matters: Per-action approval does not scale, but removing human leverage creates unacceptable risk. On-the-loop design preserves oversight without turning the person into a click-through bottleneck.
+when_to_use: Use it for high-volume operations where most actions are routine but exceptions are consequential.
+anti_pattern: Calling a dashboard oversight when it cannot pause the agent or explain what requires attention.
+related: [progressive-autonomy, inspectable-agency, graceful-intervention, bounded-autonomy]
+tags: [oversight, human-in-the-loop, intervention]
+sources: []
+added: 2026-08-14

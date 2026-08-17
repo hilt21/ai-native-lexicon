@@ -1,0 +1,13 @@
+term: Failure Containment
+zh: 故障遏制
+category: Execution
+status: foundational
+summary: Structuring an AI system so that an incorrect decision or failed component has a limited, observable, and recoverable blast radius.
+definition: Failure containment combines narrow permissions, isolated workspaces, budgets, transactional boundaries, circuit breakers, and escalation paths. It assumes some model and tool failures will occur and designs the surrounding system to prevent cascade.
+why_it_matters: Average accuracy does not describe the cost of a rare consequential error. Containment makes residual uncertainty operationally tolerable.
+when_to_use: Use it wherever an agent performs repeated actions, controls shared resources, or depends on unreliable external systems.
+anti_pattern: Relying on the agent to notice and correct its own error after unrestricted side effects have spread.
+related: [bounded-autonomy, orchestration, graceful-intervention, idempotent-action]
+tags: [reliability, safety, recovery]
+sources: []
+added: 2026-08-14

@@ -1,0 +1,13 @@
+term: Context Hygiene
+zh: 上下文卫生
+category: Context
+status: evolving
+summary: The ongoing removal, correction, and separation of stale, duplicated, untrusted, or irrelevant information in an AI workflow.
+definition: Context hygiene is the operational discipline of keeping active context accurate and purposeful. It includes labeling untrusted input, expiring stale state, deduplicating evidence, separating observations from instructions, and refreshing assumptions after external changes.
+why_it_matters: Context quality degrades over time even when token limits are not reached. Hygiene prevents old plans and contaminated evidence from silently steering new decisions.
+when_to_use: Use it in persistent agents, collaborative sessions, changing environments, and any workflow that incorporates external text.
+anti_pattern: Appending every observation forever and relying on the model to resolve contradictions by itself.
+related: [context-engineering, context-budget, load-bearing-facts, memory-architecture]
+tags: [context, maintenance, trust]
+sources: []
+added: 2026-08-14

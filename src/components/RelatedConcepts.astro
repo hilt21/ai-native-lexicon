@@ -1,0 +1,18 @@
+---
+import type { Concept } from '../lib/catalog';
+import { categoryMeta, pathWithBase } from '../lib/catalog';
+
+interface Props { concepts: Concept[] }
+const { concepts } = Astro.props;
+---
+
+<div class="related-grid">
+  {concepts.map((concept) => (
+    <a href={pathWithBase(`/concepts/${concept.id}/`)} class="related-item">
+      <span>{categoryMeta[concept.data.category].code}</span>
+      <strong>{concept.data.term}</strong>
+      <small>{concept.data.zh}</small>
+      <i aria-hidden="true">↗</i>
+    </a>
+  ))}
+</div>

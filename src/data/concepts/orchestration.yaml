@@ -1,0 +1,13 @@
+term: Orchestration
+zh: 编排
+category: Agent Architecture
+status: foundational
+summary: The coordination of agents, tools, state, and control flow so that specialized work converges on one accountable outcome.
+definition: Orchestration defines who or what acts next, which context is transferred, how partial results are combined, and what happens on delay or failure. It may be deterministic, model-directed, or hybrid, but its contracts should remain observable.
+why_it_matters: Adding more agents multiplies coordination costs and failure paths. Explicit orchestration prevents parallel activity from being mistaken for progress.
+when_to_use: Use it when a task spans specialized roles, independent workstreams, or external systems with different timing.
+anti_pattern: Spawning many agents without ownership boundaries, merge rules, or a single completion criterion.
+related: [handoff, delegation-contract, failure-containment, thin-kernel]
+tags: [multi-agent, coordination, control-flow]
+sources: []
+added: 2026-08-14

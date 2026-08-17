@@ -1,0 +1,13 @@
+term: Policy as Code
+zh: 策略即代码
+category: Governance
+status: foundational
+summary: Expressing operational rules as versioned, testable, and enforceable logic rather than relying only on prose instructions.
+definition: Policy as code turns requirements such as approval thresholds, data access, action limits, and retention rules into deterministic checks around agent behavior. Natural-language guidance may explain the policy, but executable controls decide compliance.
+why_it_matters: Versioned policies can be reviewed, tested, audited, and rolled back. They reduce ambiguity where probabilistic interpretation is inappropriate.
+when_to_use: Use it when a rule protects money, data, infrastructure, legal commitments, or organizational authority.
+anti_pattern: Duplicating policy fragments across prompts until no one can tell which version is enforced.
+related: [permission-boundary, harness, agent-ready-organization, thin-kernel]
+tags: [governance, compliance, enforcement]
+sources: []
+added: 2026-08-14

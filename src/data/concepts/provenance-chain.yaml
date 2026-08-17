@@ -1,0 +1,13 @@
+term: Provenance Chain
+zh: 来源链
+category: Knowledge
+status: foundational
+summary: A traceable chain connecting an AI system's claim or action to the evidence, transformations, and decisions that produced it.
+definition: A provenance chain records where information originated, when it was observed, how it was filtered or summarized, and which outputs depended on it. It preserves the distinction between primary evidence, inference, and model-generated interpretation.
+why_it_matters: Without provenance, fluent outputs are difficult to verify or correct. A visible chain supports audits, debugging, user trust, and targeted invalidation when sources change.
+when_to_use: Use it for research, regulated decisions, incident response, generated datasets, and any output that may be challenged later.
+anti_pattern: Attaching a list of links after generation without recording which claim each source actually supports.
+related: [golden-trace, load-bearing-facts, retrieval-contract, eval-driven-development]
+tags: [evidence, traceability, knowledge]
+sources: []
+added: 2026-08-14

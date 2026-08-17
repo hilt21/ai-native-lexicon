@@ -1,0 +1,13 @@
+term: Load-bearing Facts
+zh: 承重事实
+category: Context
+status: emerging
+summary: Facts whose loss, distortion, or displacement would materially change the correctness or safety of an AI system's next action.
+definition: Load-bearing facts are the small subset of context that a workflow must preserve across summarization, retrieval, and handoff. Examples include the user's actual objective, irreversible constraints, authorization state, identifiers, and verified external conditions.
+why_it_matters: Long workflows naturally compress and transform context. Naming the facts that must survive creates a testable preservation requirement instead of trusting generic summaries.
+when_to_use: Use it before summarization, delegation, checkpointing, or any transition that may discard working context.
+anti_pattern: Treating all prior messages as equally important and assuming a fluent summary preserved every constraint.
+related: [context-budget, context-hygiene, provenance-chain, checkpoint-resume]
+tags: [context, reliability, handoff]
+sources: []
+added: 2026-08-14

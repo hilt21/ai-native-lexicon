@@ -1,0 +1,65 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import CategoryGrid from '../components/CategoryGrid.astro';
+import ConceptList from '../components/ConceptList.astro';
+import { getConcepts, pathWithBase } from '../lib/catalog';
+
+const concepts = await getConcepts();
+const featuredSlugs = ['context-engineering', 'thin-kernel', 'bounded-autonomy', 'harness', 'inspectable-agency'];
+const featured = featuredSlugs.map((slug) => concepts.find((concept) => concept.id === slug)).filter(Boolean);
+---
+
+<StarlightPage frontmatter={{ title: 'AI Native Lexicon', template: 'splash', editUrl: false }}>
+  <main class="lexicon-home">
+    <section class="lexicon-hero">
+      <div class="hero-kicker"><span>OPEN DATASET</span><span>EDITION 0.1</span></div>
+      <div class="hero-grid">
+        <div>
+          <p class="eyebrow">The language of systems that can reason and act</p>
+          <h1>AI Native<br/><em>Lexicon</em></h1>
+        </div>
+        <div class="hero-manifesto">
+          <p>An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.</p>
+          <div class="hero-actions">
+            <a class="button-primary" href={pathWithBase('/concepts/')}>Browse all concepts <span>↗</span></a>
+            <a class="text-link" href={pathWithBase('/about/')}>Read the editorial stance</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-ledger" aria-label="Lexicon statistics">
+        <div><strong>{concepts.length}</strong><span>working concepts</span></div>
+        <div><strong>08</strong><span>domains of practice</span></div>
+        <div><strong>YAML</strong><span>single source of truth</span></div>
+        <div><strong>OPEN</strong><span>built in public</span></div>
+      </div>
+    </section>
+
+    <section class="home-section">
+      <div class="section-heading">
+        <p>01 / ORIENTATION</p>
+        <h2>A field guide,<br/>not a fixed canon.</h2>
+        <p class="section-note">These are working definitions for builders. Maturity labels make disagreement visible; relationships keep each term from becoming an island.</p>
+      </div>
+      <CategoryGrid concepts={concepts} />
+    </section>
+
+    <section class="home-section home-featured">
+      <div class="section-heading compact">
+        <p>02 / START HERE</p>
+        <h2>Five ideas that<br/>change the frame.</h2>
+      </div>
+      <ConceptList concepts={featured as typeof concepts} />
+      <a class="view-all" href={pathWithBase('/concepts/')}>View the complete A–Z index <span>↗</span></a>
+    </section>
+
+    <section class="dataset-callout">
+      <p>03 / BUILT FOR HUMANS + AGENTS</p>
+      <h2>One source.<br/>Many projections.</h2>
+      <div>
+        <p>The website is generated from validated records. The same foundation can power a graph, timeline, API, or retrieval corpus without duplicating editorial work.</p>
+        <div class="projection-line"><span>YAML</span><b>→</b><span>WEB</span><b>→</b><span>JSON</span><b>→</b><span>LLM</span></div>
+        <a class="button-dark" href={pathWithBase('/dataset.json')}>Open the dataset <span>↗</span></a>
+      </div>
+    </section>
+  </main>
+</StarlightPage>

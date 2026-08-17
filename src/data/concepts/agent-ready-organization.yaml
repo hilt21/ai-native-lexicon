@@ -1,0 +1,13 @@
+term: Agent-ready Organization
+zh: 智能体就绪型组织
+category: Organization
+status: emerging
+summary: An organization whose processes, permissions, knowledge, and accountability are structured so agents can contribute safely and measurably.
+definition: An agent-ready organization has explicit process states, accessible authoritative knowledge, scoped credentials, observable outcomes, exception owners, and feedback loops. It changes the operating environment instead of merely adding chat interfaces to undocumented work.
+why_it_matters: Agents amplify the clarity or disorder already present in a system. Operational readiness determines whether automation produces leverage or faster confusion.
+when_to_use: Use it when assessing whether a team or process is prepared for consequential agent deployment.
+anti_pattern: Buying an agent platform before defining process ownership, source-of-truth data, and escalation paths.
+related: [delegation-contract, policy-as-code, progressive-autonomy, provenance-chain]
+tags: [organization, operations, readiness]
+sources: []
+added: 2026-08-14

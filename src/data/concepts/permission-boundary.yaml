@@ -1,0 +1,13 @@
+term: Permission Boundary
+zh: 权限边界
+category: Governance
+status: foundational
+summary: An enforced boundary that separates actions an agent may take directly from those requiring different credentials, approval, or escalation.
+definition: A permission boundary maps authority to specific resources and operations, ideally with least-privilege credentials and runtime checks. It distinguishes what the model proposes from what the system is actually capable of executing.
+why_it_matters: Prompt instructions are not access control. Technical boundaries limit the impact of reasoning errors, prompt injection, and compromised external content.
+when_to_use: Use it for every tool that reads sensitive data or changes external state.
+anti_pattern: Giving one long-lived administrator credential to an agent and expressing restrictions only in natural language.
+related: [bounded-autonomy, policy-as-code, deterministic-shell, thin-kernel]
+tags: [security, authorization, tools]
+sources: []
+added: 2026-08-14

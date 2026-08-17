@@ -1,0 +1,13 @@
+term: Context Budget
+zh: 上下文预算
+category: Context
+status: foundational
+summary: The finite allocation of attention, tokens, latency, and retrieval capacity available to an AI system for a particular decision.
+definition: A context budget is the practical limit on how much information a model can use effectively, not merely the advertised context-window size. It accounts for token volume, placement, relevance, competing instructions, latency, and the model's ability to recover important facts.
+why_it_matters: Every additional item competes for attention and cost. Explicit budgeting forces teams to rank evidence, compress history, and keep critical constraints visible.
+when_to_use: Use it when designing long sessions, multi-document retrieval, agent handoffs, or systems with strict latency and cost targets.
+anti_pattern: Filling the available window because unused tokens appear to be free capacity.
+related: [context-engineering, load-bearing-facts, context-hygiene, memory-architecture]
+tags: [context, tokens, attention, cost]
+sources: []
+added: 2026-08-14

@@ -1,0 +1,28 @@
+---
+import type { Concept } from '../lib/catalog';
+import { categoryMeta, pathWithBase } from '../lib/catalog';
+
+interface Props {
+  concepts: Concept[];
+  showCategory?: boolean;
+}
+
+const { concepts, showCategory = true } = Astro.props;
+---
+
+<div class="concept-list">
+  {concepts.map((concept, index) => (
+    <a class="concept-row" href={pathWithBase(`/concepts/${concept.id}/`)}>
+      <span class="concept-number">{String(index + 1).padStart(2, '0')}</span>
+      <span class="concept-name">
+        <strong>{concept.data.term}</strong>
+        <span>{concept.data.zh}</span>
+      </span>
+      {showCategory && (
+        <span class="concept-category">{categoryMeta[concept.data.category].code}</span>
+      )}
+      <span class="concept-summary">{concept.data.summary}</span>
+      <span class="concept-arrow" aria-hidden="true">↗</span>
+    </a>
+  ))}
+</div>

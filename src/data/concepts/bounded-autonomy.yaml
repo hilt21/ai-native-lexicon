@@ -1,0 +1,13 @@
+term: Bounded Autonomy
+zh: 有界自主性
+category: Agent Architecture
+status: foundational
+summary: Granting an agent freedom to choose actions only within explicit limits on scope, tools, time, cost, and reversibility.
+definition: Bounded autonomy defines an operating envelope rather than a binary choice between automation and approval. Within the envelope an agent may adapt and recover independently; crossing a boundary requires escalation, renewed authority, or a safer alternative.
+why_it_matters: Useful agents need room to act, but unconstrained action makes failures hard to contain. Bounds turn trust into an enforceable system property.
+when_to_use: Use it whenever an agent can change external state, spend resources, contact people, or run for an extended period.
+anti_pattern: Describing an agent as supervised while enforcing no technical limit on what it can do.
+related: [progressive-autonomy, permission-boundary, failure-containment, thin-kernel]
+tags: [autonomy, safety, authorization]
+sources: []
+added: 2026-08-14

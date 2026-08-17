@@ -1,0 +1,13 @@
+term: Intent Interface
+zh: 意图界面
+category: UX
+status: emerging
+summary: A user interface that helps people express desired outcomes, constraints, and authority while the system determines appropriate steps.
+definition: An intent interface shifts interaction from specifying every operation to defining the goal and its boundaries. It still lets users refine assumptions, inspect the proposed approach, and control consequential transitions rather than reducing everything to one prompt box.
+why_it_matters: Agents can plan across tools, but users remain responsible for outcomes. Good intent capture reduces hidden assumptions and makes autonomy legible.
+when_to_use: Use it for workflows where users know the desired result better than the exact sequence of operations.
+anti_pattern: Replacing a structured workflow with an empty chat box and expecting users to discover every necessary constraint.
+related: [graceful-intervention, context-engineering, delegation-contract, inspectable-agency]
+tags: [ux, intent, interaction]
+sources: []
+added: 2026-08-14

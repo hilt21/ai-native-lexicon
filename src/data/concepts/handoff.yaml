@@ -1,0 +1,13 @@
+term: Handoff
+zh: 交接
+category: Agent Architecture
+status: evolving
+summary: A controlled transfer of responsibility, relevant state, and completion criteria from one actor or agent to another.
+definition: A handoff is more than sending a transcript. It packages the objective, current state, load-bearing facts, authority limits, artifacts, unresolved risks, and the condition under which responsibility returns or completes.
+why_it_matters: Work commonly fails at ownership boundaries. A structured handoff preserves intent and makes it clear which actor is accountable for the next state transition.
+when_to_use: Use it between agents, between an agent and a human, or when resuming work in a new execution context.
+anti_pattern: Forwarding raw history and assuming the receiver will infer priorities, permissions, and done criteria.
+related: [orchestration, delegation-contract, checkpoint-resume, load-bearing-facts]
+tags: [coordination, ownership, context]
+sources: []
+added: 2026-08-14

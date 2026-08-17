@@ -1,0 +1,13 @@
+term: Progressive Disclosure
+zh: 渐进式披露
+category: Context
+status: foundational
+summary: Revealing instructions, evidence, and tools only when the current stage of work makes them relevant and actionable.
+definition: Progressive disclosure sequences context instead of loading everything at startup. A system begins with orientation and decision rules, then retrieves detailed procedures, examples, or tool schemas at the point where they can influence the next action.
+why_it_matters: Staged context reduces distraction and token pressure while preserving access to depth. It also makes the provenance of a decision easier to inspect.
+when_to_use: Use it for large instruction sets, specialized tools, branched workflows, or knowledge bases with uneven relevance.
+anti_pattern: Hiding critical safety constraints until after the agent has already committed to an action.
+related: [context-budget, load-bearing-facts, context-engineering, intent-interface]
+tags: [context, retrieval, disclosure]
+sources: []
+added: 2026-08-14

@@ -1,0 +1,13 @@
+term: Inspectable Agency
+zh: 可检视的能动性
+category: UX
+status: emerging
+summary: The property that an agent's current objective, state, evidence, actions, and authority can be understood by a responsible observer.
+definition: Inspectable agency exposes the operational story of a run without requiring users to read raw chain-of-thought. It presents plans, tool activity, source evidence, uncertainty, approvals, and meaningful state transitions at the right level of detail.
+why_it_matters: People cannot supervise what they cannot interpret. Inspectability supports trust calibration, intervention, debugging, and accountability without exposing private model internals.
+when_to_use: Use it in agent products where actions unfold over time or affect external systems.
+anti_pattern: Showing a theatrical stream of internal-looking text that does not correspond to enforceable state or real actions.
+related: [golden-trace, human-on-the-loop, plan-execute-observe, intent-interface]
+tags: [ux, observability, trust]
+sources: []
+added: 2026-08-14

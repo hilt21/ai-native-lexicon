@@ -1,0 +1,13 @@
+term: Graceful Intervention
+zh: 优雅干预
+category: UX
+status: emerging
+summary: The ability for a person to pause, redirect, correct, or take over an agent workflow without corrupting state or losing completed work.
+definition: Graceful intervention treats human input as a normal control transition. The system reaches or creates a safe point, reports committed effects, preserves relevant context, accepts changed intent, and resumes or hands over with clear ownership.
+why_it_matters: Real goals and external conditions change during execution. Intervention controls prevent users from choosing between passive waiting and destructive cancellation.
+when_to_use: Use it for long-running, costly, or consequential tasks where mid-course correction is likely.
+anti_pattern: Offering only a stop button that abandons state and leaves partial side effects unexplained.
+related: [human-on-the-loop, failure-containment, intent-interface, checkpoint-resume]
+tags: [ux, intervention, control]
+sources: []
+added: 2026-08-14

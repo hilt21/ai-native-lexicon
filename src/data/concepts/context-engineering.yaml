@@ -1,0 +1,13 @@
+term: Context Engineering
+zh: 上下文工程
+category: Context
+status: foundational
+summary: The deliberate design of what an AI system can see, when it sees it, and how that information is structured for the task.
+definition: Context engineering treats prompts, retrieved knowledge, tool results, memory, constraints, and examples as one designed operating environment. Its goal is to supply the smallest sufficient set of information that helps a model act correctly at each step.
+why_it_matters: Model capability is bounded by the quality and timing of available context. Better context can improve reliability, cost, and debuggability without changing the underlying model.
+when_to_use: Use it when an AI workflow depends on multiple information sources, long-running state, tools, or role-specific instructions.
+anti_pattern: Treating a single oversized system prompt as the complete solution to every information problem.
+related: [context-budget, progressive-disclosure, context-hygiene, retrieval-contract]
+tags: [context, prompting, architecture]
+sources: []
+added: 2026-08-14

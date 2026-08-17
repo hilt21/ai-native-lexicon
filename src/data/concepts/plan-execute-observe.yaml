@@ -1,0 +1,13 @@
+term: Plan–Execute–Observe
+zh: 计划—执行—观察
+category: Execution
+status: foundational
+summary: An execution discipline that separates intended actions, real side effects, and observed results into explicit stages.
+definition: Plan–execute–observe requires an agent to state or encode the next intended operation, run it through the execution boundary, and then update its state from the actual result. The observation, not the original expectation, drives the next step.
+why_it_matters: Separating stages makes failures local and visible. It prevents assumed success from contaminating later reasoning and creates natural points for policy checks.
+when_to_use: Use it for multi-step tool use, external APIs, infrastructure changes, and workflows with uncertain outcomes.
+anti_pattern: Treating a proposed action as completed and continuing the plan without checking the result.
+related: [agent-loop, checkpoint-resume, inspectable-agency, deterministic-shell]
+tags: [execution, control-loop, observation]
+sources: []
+added: 2026-08-14

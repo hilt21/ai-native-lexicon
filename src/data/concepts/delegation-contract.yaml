@@ -1,0 +1,13 @@
+term: Delegation Contract
+zh: 委托契约
+category: Organization
+status: emerging
+summary: A precise agreement defining the outcome, authority, evidence, escalation rules, and completion condition for delegated work.
+definition: A delegation contract packages what must be achieved, what may be changed, which resources are available, how progress is judged, when to ask for help, and what artifacts constitute completion. It applies to human-agent and agent-agent delegation.
+why_it_matters: Ambiguous delegation produces activity without accountability. A contract lets the delegate adapt methods while preserving the principal's intent and limits.
+when_to_use: Use it whenever responsibility crosses a human, team, agent, or execution boundary.
+anti_pattern: Assigning a broad goal with no authority limits or acceptance evidence, then judging success after the fact.
+related: [agent-ready-organization, handoff, orchestration, intent-interface]
+tags: [delegation, accountability, organization]
+sources: []
+added: 2026-08-14

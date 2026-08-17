@@ -1,0 +1,13 @@
+term: Eval-driven Development
+zh: 评测驱动开发
+category: Harness
+status: foundational
+summary: Developing AI behavior through explicit task examples, scoring criteria, and regression evaluation rather than intuition alone.
+definition: Eval-driven development makes representative cases and measurable outcomes part of the design loop. Changes to prompts, models, tools, retrieval, or orchestration are compared against the same behavioral expectations before release.
+why_it_matters: AI failures are distributional and can move when one case improves. Evals turn subjective quality claims into repeatable evidence and reveal regressions early.
+when_to_use: Use it for any AI feature whose quality depends on behavior rather than only deterministic code paths.
+anti_pattern: Shipping based on a handful of impressive demonstrations selected by the builder.
+related: [harness, golden-trace, inspectable-agency, provenance-chain]
+tags: [evaluation, testing, quality]
+sources: []
+added: 2026-08-14

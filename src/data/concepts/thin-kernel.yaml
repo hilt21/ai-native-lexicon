@@ -1,0 +1,13 @@
+term: Thin Kernel
+zh: 薄内核
+category: Agent Architecture
+status: emerging
+summary: A minimal deterministic core that owns essential execution guarantees while leaving fast-changing judgment to replaceable agent policies.
+definition: A thin kernel keeps only durable mechanisms—such as permissions, state transitions, tool invocation, audit recording, and cancellation—in trusted code. Planning strategies, prompts, and domain heuristics remain outside the kernel so they can evolve without weakening core guarantees.
+why_it_matters: AI behavior changes quickly while authorization and execution invariants should remain stable. A small trusted core is easier to test, audit, and port.
+when_to_use: Use it when building an agent runtime, orchestration platform, or safety-sensitive tool layer.
+anti_pattern: Embedding every workflow rule in the runtime until policy changes require risky kernel modifications.
+related: [deterministic-shell, harness, bounded-autonomy, permission-boundary]
+tags: [architecture, runtime, mechanism]
+sources: []
+added: 2026-08-14

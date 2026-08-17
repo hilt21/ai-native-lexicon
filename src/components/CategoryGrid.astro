@@ -1,0 +1,21 @@
+---
+import type { Concept } from '../lib/catalog';
+import { categoryMeta, pathWithBase } from '../lib/catalog';
+
+interface Props { concepts: Concept[] }
+const { concepts } = Astro.props;
+---
+
+<div class="category-grid">
+  {Object.entries(categoryMeta).map(([category, meta], index) => {
+    const count = concepts.filter((concept) => concept.data.category === category).length;
+    return (
+      <a class="category-cell" href={pathWithBase(`/categories/${meta.slug}/`)}>
+        <span class="category-index">0{index + 1} / {meta.code}</span>
+        <h3>{category}</h3>
+        <p>{meta.description}</p>
+        <span class="category-foot"><span>{count} concepts</span><span>Explore ↗</span></span>
+      </a>
+    );
+  })}
+</div>

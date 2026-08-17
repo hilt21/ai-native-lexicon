@@ -1,0 +1,13 @@
+term: Memory Architecture
+zh: 记忆架构
+category: Knowledge
+status: evolving
+summary: The design of how an AI system records, selects, updates, expires, and retrieves information across different time horizons.
+definition: Memory architecture separates transient working state, episodic records, durable user or domain knowledge, and authoritative external sources. It defines write criteria, retrieval policy, provenance, correction, and expiration for each memory class.
+why_it_matters: Persistence without structure accumulates stale or sensitive data, while no persistence forces repeated discovery. Architecture makes remembering selective and accountable.
+when_to_use: Use it for assistants, recurring workflows, personalization, organizational agents, or any session that outlives one context window.
+anti_pattern: Storing every conversation fragment in one vector index and calling the result long-term memory.
+related: [retrieval-contract, provenance-chain, context-hygiene, context-budget]
+tags: [memory, persistence, retrieval]
+sources: []
+added: 2026-08-14

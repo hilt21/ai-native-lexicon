@@ -1,0 +1,61 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { categoryMeta, getConcepts, pathWithBase } from '../lib/catalog';
+const concepts = await getConcepts();
+---
+
+<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts, definitions, categories, and tags.', editUrl: false }}>
+  <div class="search-panel">
+    <label for="concept-search">Search the working vocabulary</label>
+    <div class="search-input-wrap">
+      <span aria-hidden="true">⌕</span>
+      <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" />
+      <kbd>/</kbd>
+    </div>
+    <p id="search-count" aria-live="polite">Showing all {concepts.length} concepts</p>
+  </div>
+
+  <div class="search-results" id="search-results">
+    {concepts.map((concept) => (
+      <a
+        href={pathWithBase(`/concepts/${concept.id}/`)}
+        data-search={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.tags.join(' ')}`.toLowerCase()}
+      >
+        <span>{categoryMeta[concept.data.category].code}</span>
+        <strong>{concept.data.term} <small>{concept.data.zh}</small></strong>
+        <p>{concept.data.summary}</p>
+        <i aria-hidden="true">↗</i>
+      </a>
+    ))}
+  </div>
+
+  <p class="search-empty" id="search-empty" hidden>No matching concept yet. Try a broader word or propose a missing term.</p>
+
+  <script>
+    const input = document.querySelector<HTMLInputElement>('#concept-search');
+    const count = document.querySelector<HTMLElement>('#search-count');
+    const empty = document.querySelector<HTMLElement>('#search-empty');
+    const entries = [...document.querySelectorAll<HTMLElement>('[data-search]')];
+
+    function updateSearch() {
+      const words = (input?.value ?? '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+      let visible = 0;
+      for (const entry of entries) {
+        const haystack = entry.dataset.search ?? '';
+        const match = words.every((word) => haystack.includes(word));
+        entry.hidden = !match;
+        if (match) visible += 1;
+      }
+      if (count) count.textContent = words.length ? `${visible} matching concept${visible === 1 ? '' : 's'}` : `Showing all ${entries.length} concepts`;
+      if (empty) empty.hidden = visible !== 0;
+    }
+
+    input?.addEventListener('input', updateSearch);
+    document.addEventListener('keydown', (event) => {
+      if (event.key === '/' && document.activeElement !== input) {
+        event.preventDefault();
+        input?.focus();
+      }
+    });
+  </script>
+</StarlightPage>

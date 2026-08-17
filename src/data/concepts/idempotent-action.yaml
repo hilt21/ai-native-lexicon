@@ -1,0 +1,13 @@
+term: Idempotent Action
+zh: 幂等动作
+category: Execution
+status: foundational
+summary: An operation designed so that safely repeating it produces no additional unintended effect beyond the first successful application.
+definition: Idempotent actions use stable identifiers, precondition checks, deduplication keys, or desired-state semantics to make retries safe. When true idempotence is impossible, the operation should expose its commit state and compensating path.
+why_it_matters: Agents retry after timeouts, partial failures, and uncertain observations. Without idempotence, recovery can duplicate messages, payments, records, or destructive changes.
+when_to_use: Use it for every externally visible action that may be retried or resumed.
+anti_pattern: Retrying a state-changing request after a timeout without knowing whether the first attempt committed.
+related: [checkpoint-resume, deterministic-shell, failure-containment, plan-execute-observe]
+tags: [execution, reliability, retry]
+sources: []
+added: 2026-08-14

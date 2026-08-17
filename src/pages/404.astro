@@ -1,0 +1,13 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import { pathWithBase } from '../lib/catalog';
+---
+
+<StarlightPage frontmatter={{ title: '404', description: 'The requested page could not be found.', template: 'splash', editUrl: false }}>
+  <section class="not-found">
+    <p class="eyebrow">OUTSIDE THE OPERATING ENVELOPE</p>
+    <h1>Lost in<br/><em>context.</em></h1>
+    <p>This route is not part of the current lexicon.</p>
+    <a class="button-primary" href={pathWithBase('/')}>Return home <span>↗</span></a>
+  </section>
+</StarlightPage>

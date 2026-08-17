@@ -1,0 +1,62 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import RelatedConcepts from '../../components/RelatedConcepts.astro';
+import { categoryMeta, getConcepts, pathWithBase } from '../../lib/catalog';
+
+export async function getStaticPaths() {
+  const concepts = await getConcepts();
+  return concepts.map((concept) => ({ params: { slug: concept.id }, props: { concept, concepts } }));
+}
+
+const { concept, concepts } = Astro.props;
+const meta = categoryMeta[concept.data.category];
+const repository = process.env.GITHUB_REPOSITORY;
+const editUrl = repository
+  ? `https://github.com/${repository}/edit/main/src/data/concepts/${concept.id}.yaml`
+  : false;
+const related = concept.data.related
+  .map((slug: string) => concepts.find((entry: typeof concept) => entry.id === slug))
+  .filter((entry: typeof concept | undefined): entry is typeof concept => entry !== undefined);
+---
+
+<StarlightPage frontmatter={{
+  title: concept.data.term,
+  description: concept.data.summary,
+  editUrl,
+  tableOfContents: false,
+}}>
+  <article class="concept-detail">
+    <header class="concept-masthead">
+      <div>
+        <a href={pathWithBase(`/categories/${meta.slug}/`)}>{meta.code} / {concept.data.category}</a>
+        <p class="concept-zh">{concept.data.zh}</p>
+      </div>
+      <span class:list={['status-stamp', `status-${concept.data.status}`]}>{concept.data.status}</span>
+    </header>
+
+    <p class="concept-deck">{concept.data.summary}</p>
+
+    <div class="definition-grid">
+      <h2>Working definition</h2>
+      <p>{concept.data.definition}</p>
+    </div>
+    <div class="definition-grid">
+      <h2>Why it matters</h2>
+      <p>{concept.data.why_it_matters}</p>
+    </div>
+    <div class="practice-grid">
+      <div><span>USE IT WHEN</span><p>{concept.data.when_to_use}</p></div>
+      <div><span>WATCH FOR</span><p>{concept.data.anti_pattern}</p></div>
+    </div>
+
+    <div class="tag-line">
+      {concept.data.tags.map((tag: string) => <span>#{tag}</span>)}
+    </div>
+
+    <section class="related-section">
+      <p class="eyebrow">FOLLOW THE THREAD</p>
+      <h2>Related concepts</h2>
+      <RelatedConcepts concepts={related} />
+    </section>
+  </article>
+</StarlightPage>

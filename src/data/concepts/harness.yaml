@@ -1,0 +1,13 @@
+term: Harness
+zh: 智能体支架
+category: Harness
+status: foundational
+summary: The surrounding system that gives an AI model tools, constraints, state, feedback, and observability needed to perform useful work.
+definition: A harness turns a general model into an operational agent. It owns the tool interface, execution loop, context assembly, permissions, tracing, persistence, and evaluation hooks while keeping model behavior replaceable.
+why_it_matters: Production capability depends as much on the harness as on the model. Making it explicit focuses engineering on the parts that can be tested and controlled.
+when_to_use: Use the term when discussing the operational layer around a model rather than the model's raw capability.
+anti_pattern: Attributing every success or failure to the model while leaving the surrounding runtime unexamined.
+related: [thin-kernel, deterministic-shell, eval-driven-development, agent-loop]
+tags: [runtime, tooling, observability]
+sources: []
+added: 2026-08-14

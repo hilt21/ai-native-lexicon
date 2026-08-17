@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Native Lexicon concept",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "term",
+    "zh",
+    "category",
+    "status",
+    "summary",
+    "definition",
+    "why_it_matters",
+    "when_to_use",
+    "anti_pattern",
+    "related",
+    "tags",
+    "sources",
+    "added"
+  ],
+  "properties": {
+    "term": { "type": "string", "minLength": 2 },
+    "zh": { "type": "string", "minLength": 1 },
+    "category": {
+      "enum": ["Context", "Agent Architecture", "Harness", "Governance", "Execution", "Knowledge", "UX", "Organization"]
+    },
+    "status": { "enum": ["foundational", "emerging", "evolving", "contested"] },
+    "summary": { "type": "string", "minLength": 40, "maxLength": 240 },
+    "definition": { "type": "string", "minLength": 80 },
+    "why_it_matters": { "type": "string", "minLength": 60 },
+    "when_to_use": { "type": "string", "minLength": 40 },
+    "anti_pattern": { "type": "string", "minLength": 30 },
+    "related": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 6,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
+    },
+    "tags": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 8,
+      "uniqueItems": true,
+      "items": { "type": "string" }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["title", "url"],
+        "properties": {
+          "title": { "type": "string" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    },
+    "added": { "type": "string", "format": "date" }
+  }
+}

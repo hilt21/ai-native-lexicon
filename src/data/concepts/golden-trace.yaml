@@ -1,0 +1,13 @@
+term: Golden Trace
+zh: 黄金轨迹
+category: Harness
+status: emerging
+summary: A curated end-to-end record of a good agent run used as a review reference, regression fixture, or behavioral specification.
+definition: A golden trace captures the relevant observations, decisions, tool calls, state transitions, evidence, and final outcome of a representative task. It evaluates the path as well as the answer, while allowing explicitly marked nondeterministic variation.
+why_it_matters: Final-output tests miss unsafe or wasteful paths that happen to end correctly. Traces expose how the system reached the result and anchor debugging discussions.
+when_to_use: Use it for critical workflows, incident reproductions, onboarding examples, and changes to the agent loop.
+anti_pattern: Freezing incidental wording or timestamps so tightly that the trace rejects harmless variation.
+related: [eval-driven-development, agent-loop, provenance-chain, inspectable-agency]
+tags: [tracing, evaluation, regression]
+sources: []
+added: 2026-08-14

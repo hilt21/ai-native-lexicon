@@ -1,0 +1,28 @@
+{
+  "name": "ai-native-lexicon",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.",
+  "scripts": {
+    "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
+    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check && npm run validate:concepts",
+    "validate:concepts": "node scripts/validate-concepts.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.41.3",
+    "astro": "^7.1.6",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.3",
+    "yaml": "^2.8.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

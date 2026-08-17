@@ -1,0 +1,13 @@
+term: Deterministic Shell
+zh: 确定性外壳
+category: Harness
+status: emerging
+summary: A predictable software boundary that validates, executes, records, and constrains actions proposed by a probabilistic model.
+definition: The deterministic shell converts model proposals into typed operations, checks permissions and invariants, applies timeouts and budgets, and records outcomes. The model may decide what should happen; the shell decides whether and exactly how it can happen.
+why_it_matters: Probabilistic reasoning is valuable, but side effects require repeatable controls. The shell provides a stable place for guarantees and incident evidence.
+when_to_use: Use it around file changes, API calls, payments, deployments, messages, or any other consequential tool.
+anti_pattern: Letting free-form model text flow directly into privileged execution without validation.
+related: [thin-kernel, harness, idempotent-action, permission-boundary]
+tags: [runtime, determinism, tools]
+sources: []
+added: 2026-08-14
