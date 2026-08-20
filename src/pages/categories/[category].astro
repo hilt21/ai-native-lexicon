@@ -15,7 +15,7 @@ const { category, meta, concepts } = Astro.props;
 if (!getCategoryBySlug(meta.slug)) throw new Error(`Unknown category: ${meta.slug}`);
 ---
 
-<StarlightPage frontmatter={{ title: category, description: meta.description, editUrl: false }}>
+<StarlightPage frontmatter={{ title: category, description: meta.description, editUrl: false, tableOfContents: false }}>
   <div class="category-masthead">
     <span>{meta.code}</span>
     <p>{meta.question}</p>

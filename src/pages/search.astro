@@ -4,7 +4,7 @@ import { categoryMeta, getConcepts, pathWithBase } from '../lib/catalog';
 const concepts = await getConcepts();
 ---
 
-<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts, definitions, categories, and tags.', editUrl: false }}>
+<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts, definitions, categories, and tags.', editUrl: false, tableOfContents: false }}>
   <div class="search-panel">
     <label for="concept-search">Search the working vocabulary</label>
     <div class="search-input-wrap">

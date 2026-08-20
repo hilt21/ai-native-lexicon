@@ -1,14 +1,14 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import ConceptList from '../../components/ConceptList.astro';
-import { getConcepts } from '../../lib/catalog';
+import { getConcepts, pathWithBase } from '../../lib/catalog';
 const concepts = await getConcepts();
 ---
 
-<StarlightPage frontmatter={{ title: 'All concepts', description: 'The complete A–Z index of AI-native software engineering concepts.', editUrl: false }}>
+<StarlightPage frontmatter={{ title: 'All concepts', description: 'The complete A–Z index of AI-native software engineering concepts.', editUrl: false, tableOfContents: false }}>
   <div class="page-intro">
     <p class="eyebrow">A–Z / {concepts.length} ENTRIES</p>
-    <p>Browse the complete working vocabulary. Use the search control above to find terms by definition, category, or related idea.</p>
+    <p>Browse the complete working vocabulary, or <a href={pathWithBase('/search/')}>search by definition, category, or related idea</a>.</p>
   </div>
   <ConceptList concepts={concepts} />
 </StarlightPage>

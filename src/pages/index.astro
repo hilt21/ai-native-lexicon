@@ -12,7 +12,14 @@ const featured = featuredSlugs.map((slug) => concepts.find((concept) => concept.
 <StarlightPage frontmatter={{ title: 'AI Native Lexicon', template: 'splash', editUrl: false }}>
   <main class="lexicon-home">
     <section class="lexicon-hero">
-      <div class="hero-kicker"><span>OPEN DATASET</span><span>EDITION 0.1</span></div>
+      <div class="hero-kicker">
+        <nav aria-label="Primary">
+          <a href={pathWithBase('/concepts/')}>Concepts</a>
+          <a href={pathWithBase('/categories/')}>Categories</a>
+          <a href={pathWithBase('/search/')}>Search</a>
+        </nav>
+        <span>EDITION 0.1</span>
+      </div>
       <div class="hero-grid">
         <div>
           <p class="eyebrow">The language of systems that can reason and act</p>
