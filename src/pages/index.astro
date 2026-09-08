@@ -10,7 +10,7 @@ const featured = featuredSlugs.map((slug) => concepts.find((concept) => concept.
 ---
 
 <StarlightPage frontmatter={{ title: 'AI Native Lexicon', template: 'splash', editUrl: false }}>
-  <main class="lexicon-home">
+  <div class="lexicon-home" id="lexicon-content" tabindex="-1">
     <section class="lexicon-hero">
       <div class="hero-kicker">
         <nav aria-label="Primary">
@@ -68,5 +68,5 @@ const featured = featuredSlugs.map((slug) => concepts.find((concept) => concept.
         <a class="button-dark" href={pathWithBase('/dataset.json')}>Open the dataset <span>↗</span></a>
       </div>
     </section>
-  </main>
+  </div>
 </StarlightPage>

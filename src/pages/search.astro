@@ -1,6 +1,7 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { categoryMeta, getConcepts, pathWithBase } from '../lib/catalog';
+import { getConcepts } from '../lib/catalog';
+import ConceptRow from '../components/ConceptRow.astro';
 const concepts = await getConcepts();
 ---
 
@@ -17,15 +18,10 @@ const concepts = await getConcepts();
 
   <div class="search-results" id="search-results">
     {concepts.map((concept) => (
-      <a
-        href={pathWithBase(`/concepts/${concept.id}/`)}
-        data-search={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.tags.join(' ')}`.toLowerCase()}
-      >
-        <span>{categoryMeta[concept.data.category].code}</span>
-        <strong>{concept.data.term} <small>{concept.data.zh}</small></strong>
-        <p>{concept.data.summary}</p>
-        <i aria-hidden="true">↗</i>
-      </a>
+      <ConceptRow
+        concept={concept}
+        searchText={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.tags.join(' ')}`.toLowerCase()}
+      />
     ))}
   </div>
 

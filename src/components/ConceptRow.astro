@@ -1,0 +1,28 @@
+---
+import type { Concept } from '../lib/catalog';
+import { categoryMeta, pathWithBase } from '../lib/catalog';
+
+interface Props {
+  concept: Concept;
+  number?: number;
+  showCategory?: boolean;
+  searchText?: string;
+}
+
+const { concept, number, showCategory = true, searchText } = Astro.props;
+---
+
+<a
+  class:list={['concept-row', { 'concept-row-unclassified': !showCategory, 'concept-row-search': number === undefined }]}
+  href={pathWithBase(`/concepts/${concept.id}/`)}
+  data-search={searchText}
+>
+  {number !== undefined && <span class="concept-number">{String(number).padStart(2, '0')}</span>}
+  <span class="concept-name">
+    <strong>{concept.data.term}</strong>
+    <span>{concept.data.zh}</span>
+  </span>
+  {showCategory && <span class="concept-category">{categoryMeta[concept.data.category].code}</span>}
+  <span class="concept-summary">{concept.data.summary}</span>
+  <span class="concept-arrow" aria-hidden="true">↗</span>
+</a>

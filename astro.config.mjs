@@ -19,6 +19,7 @@ export default defineConfig({
         'An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.',
       favicon: '/favicon.svg',
       customCss: ['./src/styles/custom.css'],
+      components: { SkipLink: './src/components/SkipLink.astro' },
       social: hasRepository ? [{ icon: 'github', label: 'GitHub', href: repositoryUrl }] : [],
       ...(hasRepository ? { editLink: { baseUrl: `${repositoryUrl}/edit/main/` } } : {}),
       pagefind: usePagefind,
