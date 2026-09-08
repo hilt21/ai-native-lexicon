@@ -1,0 +1,75 @@
+:root {
+  --lex-space-1: 0.25rem;
+  --lex-space-2: 0.5rem;
+  --lex-space-3: 0.75rem;
+  --lex-space-4: 1rem;
+  --lex-space-6: 1.5rem;
+  --lex-space-8: 2rem;
+  --lex-space-12: 3rem;
+  --lex-section-space: clamp(3rem, 6vw, 6rem);
+  --lex-font-display: Georgia, "Times New Roman", serif;
+  --lex-text-label: 0.75rem;
+  --lex-text-small: 0.875rem;
+  --lex-text-body: 1rem;
+  --lex-text-control: 0.8125rem;
+  --lex-text-item: 1.25rem;
+  --lex-text-card: 1.375rem;
+  --lex-text-lead: clamp(1.25rem, 2vw, 1.5rem);
+  --lex-text-section: clamp(1.75rem, 3vw, 2.75rem);
+  --lex-text-display: clamp(3.5rem, 7vw, 6.5rem);
+  --lex-leading-body: 1.7;
+  --lex-reading-width: 65ch;
+  --lex-control-height: 2.75rem;
+  --lex-radius-control: 0.125rem;
+  --lex-shadow-action: 2px 2px 0 var(--lex-ink);
+  --lex-duration: 160ms;
+  --lex-focus: #456515;
+  --lex-paper: #f3f0e6;
+  --lex-paper-deep: #e6e0d0;
+  --lex-ink: #171916;
+  --lex-muted: #5f6358;
+  --lex-acid: #c8ff3d;
+  --lex-line: #cfcec2;
+  --sl-font: "Avenir Next", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --sl-font-mono: "SFMono-Regular", Consolas, monospace;
+  --sl-color-accent-low: #dfffa0;
+  --sl-color-accent: #31540a;
+  --sl-color-accent-high: #192b05;
+  --sl-color-white: var(--lex-ink);
+  --sl-color-gray-1: #242720;
+  --sl-color-gray-2: #3f423a;
+  --sl-color-gray-3: #66695e;
+  --sl-color-gray-4: #a6a89e;
+  --sl-color-gray-5: #d4d0c5;
+  --sl-color-gray-6: #e9e5db;
+  --sl-color-black: var(--lex-paper);
+  --sl-color-bg: var(--lex-paper);
+  --sl-color-bg-nav: color-mix(in srgb, var(--lex-paper) 92%, transparent);
+  --sl-color-bg-sidebar: var(--lex-paper);
+  --sl-content-width: 58rem;
+  --sl-text-5xl: clamp(2.25rem, 4vw, 4rem);
+}
+
+:root[data-theme='dark'] {
+  --lex-focus: #c8ff3d;
+  --lex-paper: #151713;
+  --lex-paper-deep: #22251f;
+  --lex-ink: #eef0e7;
+  --lex-muted: #adb2a3;
+  --lex-line: #41473a;
+  --sl-color-accent-low: #29370f;
+  --sl-color-accent: #c8ff3d;
+  --sl-color-accent-high: #e8ffae;
+  --sl-color-white: #eef0e7;
+  --sl-color-gray-1: #e3e6da;
+  --sl-color-gray-2: #c7cabf;
+  --sl-color-gray-3: #999e91;
+  --sl-color-gray-4: #6c7165;
+  --sl-color-gray-5: #383c34;
+  --sl-color-gray-6: #272a24;
+  --sl-color-black: #151713;
+  --sl-color-bg: #151713;
+  --sl-color-bg-nav: rgba(21, 23, 19, 0.92);
+  --sl-color-bg-sidebar: #151713;
+}
+

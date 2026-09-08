@@ -1,0 +1,8 @@
+---
+import DefaultSkipLink from '@astrojs/starlight/components/SkipLink.astro';
+const isSplash = Astro.locals.starlightRoute.entry.data.template === 'splash';
+---
+
+{isSplash
+  ? <a class="lex-skip-link" href="#lexicon-content">{Astro.locals.t('skipLink.label')}</a>
+  : <DefaultSkipLink />}
