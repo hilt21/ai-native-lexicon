@@ -1,0 +1,437 @@
+[
+  {
+    "number": 1,
+    "title": "Why AI Matters Now",
+    "coreIdea": "AI is becoming a new interface between people, knowledge and software.",
+    "keyLines": [
+      "AI is changing how we interact with information and software.",
+      "In the past, we had to learn how software works.",
+      "Now software is starting to understand how we communicate.",
+      "Natural language is becoming a new user interface.",
+      "That makes digital capabilities accessible to many more people."
+    ],
+    "realCase": [
+      "Think about finding information inside a company. Today, an employee may search SharePoint, open several documents, check emails and ask colleagues.",
+      "With AI, the interaction can become much simpler. The employee can describe the question in natural language, and AI can help find, summarize and connect the relevant information.",
+      "The important change is not just faster search. The user no longer needs to understand where every piece of information is stored."
+    ],
+    "discussionQuestion": "Where in your daily work do you spend too much time finding information?",
+    "endingLabel": "Transition",
+    "ending": "Once AI understands what we want, the next question is how much work we want it to do for us."
+  },
+  {
+    "number": 2,
+    "title": "Copilot vs Agent",
+    "coreIdea": "A copilot helps you do the work. An agent can take responsibility for part of the work.",
+    "keyLines": [
+      "A copilot usually works together with a human.",
+      "You ask, it responds, and you stay in control of every step.",
+      "An agent can work toward a goal across multiple steps.",
+      "It can use tools, make decisions and take actions.",
+      "The important difference is the level of delegation."
+    ],
+    "realCase": [
+      "Imagine preparing a weekly project report.",
+      "A copilot can summarize documents when you ask.",
+      "An agent could collect the latest project information, identify important changes, prepare the report, and send it to you for review.",
+      "The key shift is from asking AI individual questions to giving AI a goal."
+    ],
+    "discussionQuestion": "What part of your work would you feel comfortable delegating to an agent?",
+    "endingLabel": "Transition",
+    "ending": "If an agent can take responsibility for work, we need to understand what actually makes an agent possible."
+  },
+  {
+    "number": 3,
+    "title": "What Makes an Agent?",
+    "coreIdea": "An agent combines intelligence with context, tools, memory and boundaries.",
+    "keyLines": [
+      "The model gives the agent intelligence.",
+      "Context tells the agent what is happening.",
+      "Tools allow the agent to interact with the outside world.",
+      "Memory helps it keep useful information over time.",
+      "Guardrails define what the agent is allowed to do."
+    ],
+    "realCase": [
+      "Imagine an agent helping with customer requests.",
+      "The language model can understand the request.",
+      "Context gives it customer and product information.",
+      "Tools allow it to search a database or create a ticket.",
+      "Memory can preserve previous interactions.",
+      "Guardrails can require human approval before certain actions.",
+      "Together, these pieces turn a language model into a working system."
+    ],
+    "discussionQuestion": "Which of these five elements do you think is hardest to build well in an enterprise?",
+    "endingLabel": "Transition",
+    "ending": "But having all these capabilities still does not guarantee reliable behavior. That is where the harness becomes important."
+  },
+  {
+    "number": 4,
+    "title": "Agent Harness",
+    "coreIdea": "The harness defines how an agent operates safely and reliably around the model.",
+    "keyLines": [
+      "A powerful model does not automatically create a reliable agent.",
+      "The harness controls how the agent gets context and uses tools.",
+      "It defines permissions, approvals, error handling and evidence.",
+      "It also helps the agent understand when the task is complete.",
+      "The model provides intelligence. The harness provides discipline."
+    ],
+    "realCase": [
+      "Imagine an agent updating an engineering document.",
+      "Writing new text is relatively easy.",
+      "The harder questions are different.",
+      "Which documents can it access?",
+      "Can it overwrite the original file?",
+      "Should it create a new version?",
+      "When does it need approval?",
+      "What happens when a tool fails?",
+      "How do we know what it changed?",
+      "These are harness questions."
+    ],
+    "discussionQuestion": "If an AI agent could access your work systems tomorrow, what controls would you want around it?",
+    "endingLabel": "Transition",
+    "ending": "Some tasks need this kind of reasoning and control. Other tasks are much more predictable."
+  },
+  {
+    "number": 5,
+    "title": "Workflow vs Agent",
+    "coreIdea": "Use workflows for predictable paths and agents when the path depends on context.",
+    "keyLines": [
+      "Workflows are strong when rules are clear.",
+      "Agents become useful when the next step depends on judgment.",
+      "Predictability is valuable.",
+      "Flexibility is also valuable.",
+      "The right architecture often combines both."
+    ],
+    "realCase": [
+      "Consider an invoice approval process.",
+      "If every invoice follows the same approval rules, a workflow is usually enough.",
+      "Now imagine a supplier sends an unusual request with incomplete documents and several possible exceptions.",
+      "An agent can understand the situation and decide what information is missing.",
+      "A workflow can then execute the approved process reliably."
+    ],
+    "discussionQuestion": "Which processes in your team are predictable, and which ones require real judgment?",
+    "endingLabel": "Transition",
+    "ending": "Whether we use a workflow or an agent, both depend heavily on the information we give them."
+  },
+  {
+    "number": 6,
+    "title": "From Prompting to Context Engineering",
+    "coreIdea": "Good AI results increasingly depend on good context.",
+    "keyLines": [
+      "Prompting is useful, but it is only one part of the system.",
+      "AI needs the right information at the right time.",
+      "Good context can include documents, data, instructions and previous actions.",
+      "Poor context creates poor decisions.",
+      "Context engineering is becoming a core AI capability."
+    ],
+    "realCase": [
+      "Suppose you ask AI to write a project status report.",
+      "A clever prompt may improve the writing.",
+      "But if the AI does not know the current schedule, open issues, decisions and latest changes, the report will still be weak.",
+      "The quality of the answer depends heavily on the quality of the context."
+    ],
+    "discussionQuestion": "What information would AI need before it could really understand your work?",
+    "endingLabel": "Transition",
+    "ending": "Inside a company, some of the most valuable context comes from organizational knowledge."
+  },
+  {
+    "number": 7,
+    "title": "Enterprise Knowledge",
+    "coreIdea": "Enterprise AI becomes valuable when it can work with the knowledge people actually use.",
+    "keyLines": [
+      "Companies already have huge amounts of knowledge.",
+      "The problem is that this knowledge is often fragmented.",
+      "It lives in documents, emails, databases and people’s experience.",
+      "AI can help connect these sources.",
+      "But the knowledge must still be accurate, accessible and governed."
+    ],
+    "realCase": [
+      "Imagine a new engineer joining a project.",
+      "Important information may be spread across SharePoint, old reports, meeting notes, emails and senior engineers’ experience.",
+      "An AI assistant can help connect these sources and answer questions with relevant references.",
+      "This can reduce the time required to understand a project."
+    ],
+    "discussionQuestion": "Where does the most valuable knowledge in your team currently live?",
+    "endingLabel": "Transition",
+    "ending": "Knowledge helps AI understand the situation. Tools allow AI to do something about it."
+  },
+  {
+    "number": 8,
+    "title": "Tools and Actions",
+    "coreIdea": "AI creates more value when it can move from answering questions to taking useful actions.",
+    "keyLines": [
+      "A language model can generate information.",
+      "Tools allow it to interact with real systems.",
+      "It can search, create, update or trigger processes.",
+      "Every new tool increases capability.",
+      "Every new tool also increases responsibility and risk."
+    ],
+    "realCase": [
+      "An employee asks an AI assistant about annual leave.",
+      "Answering the policy question is useful.",
+      "An agent connected to tools could also check the employee’s remaining leave, find available dates and prepare the leave request.",
+      "The experience moves from information to action."
+    ],
+    "discussionQuestion": "Which system would create the most value if an AI agent could safely use it?",
+    "endingLabel": "Transition",
+    "ending": "As AI gains the ability to act, human judgment becomes even more important."
+  },
+  {
+    "number": 9,
+    "title": "Human in the Loop",
+    "coreIdea": "Human judgment should be placed at the moments where judgment creates the most value.",
+    "keyLines": [
+      "Full automation is not always the goal.",
+      "Some decisions are low-risk and repetitive.",
+      "Others involve uncertainty, responsibility or business impact.",
+      "Humans should focus on these high-value decision points.",
+      "Good AI systems make escalation easy."
+    ],
+    "realCase": [
+      "Imagine an AI agent preparing a technical change proposal.",
+      "It can collect information, compare versions and prepare the first draft.",
+      "But an experienced engineer may still approve the final technical decision.",
+      "AI handles much of the preparation.",
+      "The engineer focuses on judgment and accountability."
+    ],
+    "discussionQuestion": "Which decisions in your work should always require human approval?",
+    "endingLabel": "Transition",
+    "ending": "Human approval helps with control, but people also need evidence before they can trust an AI recommendation."
+  },
+  {
+    "number": 10,
+    "title": "Trust and Evidence",
+    "coreIdea": "In enterprise AI, a useful answer also needs evidence.",
+    "keyLines": [
+      "Confidence is not the same as correctness.",
+      "People need to understand where important information came from.",
+      "Good systems provide sources, logs and traceability.",
+      "Evidence allows humans to verify AI output.",
+      "Trust grows when the system makes verification easy."
+    ],
+    "realCase": [
+      "Suppose AI tells an engineer that a component meets a technical requirement.",
+      "The statement alone is not enough.",
+      "The engineer wants to know which requirement, which document, which revision and which test result support that conclusion.",
+      "Evidence turns an AI answer into something that can be reviewed."
+    ],
+    "discussionQuestion": "What evidence would you need before trusting an AI recommendation in your work?",
+    "endingLabel": "Transition",
+    "ending": "Evidence helps us understand what the agent did. Permissions determine what it is allowed to do."
+  },
+  {
+    "number": 11,
+    "title": "Permissions and Governance",
+    "coreIdea": "An agent should have only the authority required for its task.",
+    "keyLines": [
+      "Agents can access information and take actions.",
+      "That makes permission design extremely important.",
+      "Access should follow the principle of least privilege.",
+      "Sensitive actions may require additional approval.",
+      "Governance should be part of the system from the beginning."
+    ],
+    "realCase": [
+      "Imagine an HR agent helping employees with internal questions.",
+      "It may need access to general HR policies.",
+      "It should not automatically have access to every employee’s confidential information.",
+      "Different tasks require different levels of permission."
+    ],
+    "discussionQuestion": "What information in your organization should an AI agent never access by default?",
+    "endingLabel": "Transition",
+    "ending": "Even with good permissions, we still need to know whether the AI system actually performs well."
+  },
+  {
+    "number": 12,
+    "title": "AI Evaluation",
+    "coreIdea": "We should evaluate AI as a system, not by one impressive demo.",
+    "keyLines": [
+      "A good demo proves possibility.",
+      "Production requires consistency.",
+      "We should measure quality, reliability, cost and failure modes.",
+      "We should test normal cases and difficult cases.",
+      "Evaluation should continue after deployment."
+    ],
+    "realCase": [
+      "An AI assistant may summarize one document perfectly during a demonstration.",
+      "But in production it may need to summarize thousands of documents from different departments.",
+      "Some may be incomplete, old or inconsistent.",
+      "The important question is how well the system performs across the full range of real situations."
+    ],
+    "discussionQuestion": "How would you decide whether an AI use case is good enough for production?",
+    "endingLabel": "Transition",
+    "ending": "Before we evaluate an AI solution, we first need to choose the right problem to solve."
+  },
+  {
+    "number": 13,
+    "title": "Finding Good AI Use Cases",
+    "coreIdea": "The best AI opportunities often begin with business friction.",
+    "keyLines": [
+      "Start by looking for wasted time and repeated effort.",
+      "Look for searching, reading, comparing and summarizing.",
+      "Look for handovers and waiting time.",
+      "Look for work that depends on scattered information.",
+      "Then ask whether AI can remove some of that friction."
+    ],
+    "realCase": [
+      "A project manager spends several hours every week collecting updates from different teams.",
+      "The information already exists, but it is spread across emails, documents and systems.",
+      "AI could collect the information, identify changes and prepare a first summary.",
+      "This is a strong use case because the pain already exists."
+    ],
+    "discussionQuestion": "What repetitive task would you happily never do manually again?",
+    "endingLabel": "Transition",
+    "ending": "Once we find a good task, the next opportunity is often to look beyond that single task."
+  },
+  {
+    "number": 14,
+    "title": "From Task to Workflow",
+    "coreIdea": "The biggest AI value often comes from redesigning the workflow around AI.",
+    "keyLines": [
+      "Many people start with individual AI tasks.",
+      "That is a useful first step.",
+      "Bigger value appears when we connect multiple steps.",
+      "We should look at the complete flow of information and decisions.",
+      "AI gives us a reason to rethink how work is organized."
+    ],
+    "realCase": [
+      "Imagine creating a test report.",
+      "First, AI helps write one paragraph.",
+      "Later, the process can grow.",
+      "AI finds previous reports, extracts product information, identifies relevant standards, generates the first draft and prepares the document for review.",
+      "The value comes from connecting the complete workflow."
+    ],
+    "discussionQuestion": "Which AI use case in your team could grow from one task into an end-to-end workflow?",
+    "endingLabel": "Transition",
+    "ending": "Microsoft is building several tools around exactly this kind of work."
+  },
+  {
+    "number": 15,
+    "title": "Microsoft 365 Copilot",
+    "coreIdea": "Microsoft 365 Copilot brings AI into the tools where employees already work.",
+    "keyLines": [
+      "Most employees already spend their day in Microsoft 365.",
+      "Copilot brings AI into Word, Excel, PowerPoint, Outlook and Teams.",
+      "This reduces the need to move between tools.",
+      "The real advantage is access to work context.",
+      "Adoption becomes easier when AI appears inside familiar workflows."
+    ],
+    "realCase": [
+      "After a long project meeting, an employee may need to review notes, identify decisions and prepare follow-up actions.",
+      "Copilot can help summarize the meeting and prepare a first draft of the follow-up.",
+      "The user remains inside the same work environment."
+    ],
+    "discussionQuestion": "Which Microsoft 365 application would benefit most from AI in your daily work?",
+    "endingLabel": "Transition",
+    "ending": "Personal productivity is one layer. Companies also need agents designed for specific business purposes."
+  },
+  {
+    "number": 16,
+    "title": "Copilot Studio",
+    "coreIdea": "Copilot Studio helps organizations create agents around specific business needs.",
+    "keyLines": [
+      "General AI cannot know every business process.",
+      "Purpose-built agents can combine instructions, knowledge and tools.",
+      "They can connect AI with enterprise systems.",
+      "They can also include business rules and approval steps.",
+      "This makes agents more relevant to specific teams."
+    ],
+    "realCase": [
+      "Imagine an internal engineering support agent.",
+      "It understands engineering guidelines, searches approved documents, answers common questions and directs unusual cases to the right expert.",
+      "The agent has a clear business purpose and a controlled knowledge scope."
+    ],
+    "discussionQuestion": "If your team could build one specialized agent, what job would you give it?",
+    "endingLabel": "Transition",
+    "ending": "Many actions behind that agent still need predictable execution. This is where Power Automate fits well."
+  },
+  {
+    "number": 17,
+    "title": "Power Automate",
+    "coreIdea": "Power Automate provides predictable execution for repeatable business processes.",
+    "keyLines": [
+      "Many business processes follow clear rules.",
+      "These processes do not always need AI reasoning.",
+      "Power Automate can connect systems and execute defined steps.",
+      "It is especially useful for approvals, notifications and data movement.",
+      "Agents and automation can work together."
+    ],
+    "realCase": [
+      "An agent receives a customer request and decides that manager approval is required.",
+      "The agent does not need to invent the approval process.",
+      "Power Automate can start the predefined approval flow, collect the decision and return the result.",
+      "Reasoning and execution have different roles."
+    ],
+    "discussionQuestion": "Which manual approval or notification process in your team could already be automated today?",
+    "endingLabel": "Transition",
+    "ending": "Processes also need places where people can see, edit and manage structured information."
+  },
+  {
+    "number": 18,
+    "title": "Power Apps and Dataverse",
+    "coreIdea": "AI still needs structured data, clear state and good human interfaces.",
+    "keyLines": [
+      "Conversations are useful, but not every task should live inside a chat.",
+      "Business processes often need forms, tables and status tracking.",
+      "Power Apps provides user interfaces.",
+      "Dataverse can provide structured business data.",
+      "Together they create a stable environment around AI."
+    ],
+    "realCase": [
+      "Imagine an AI agent identifying potential quality issues.",
+      "Employees still need a place to review each issue, assign an owner, change its status and record the final decision.",
+      "A Power App can provide that workspace.",
+      "AI supports the process while structured systems preserve the business state."
+    ],
+    "discussionQuestion": "Which part of your work still needs a structured screen even if AI becomes much more powerful?",
+    "endingLabel": "Transition",
+    "ending": "This leads to one of the most useful enterprise patterns: combining agents with the Power Platform."
+  },
+  {
+    "number": 19,
+    "title": "Agent + Power Platform",
+    "coreIdea": "Let agents handle ambiguity and let automation handle predictable execution.",
+    "keyLines": [
+      "Agents are strong at understanding messy situations.",
+      "Workflows are strong at executing defined processes.",
+      "Apps provide structured human interaction.",
+      "Data platforms provide shared business state.",
+      "Combining these capabilities creates stronger enterprise solutions."
+    ],
+    "realCase": [
+      "Imagine a supplier sends an unusual technical request by email.",
+      "An agent reads the message, understands the request and identifies the required process.",
+      "Power Automate starts the correct workflow.",
+      "Dataverse stores the case.",
+      "A Power App allows engineers to review it.",
+      "The agent handles ambiguity while the platform provides structure."
+    ],
+    "discussionQuestion": "Where could your team combine AI reasoning with an existing Power Platform process?",
+    "endingLabel": "Transition",
+    "ending": "Technology provides the capability. Someone still needs to connect these possibilities with real business problems."
+  },
+  {
+    "number": 20,
+    "title": "The Role of an AI Champion",
+    "coreIdea": "An AI Champion connects technological possibilities with real business problems.",
+    "keyLines": [
+      "AI Champions do not need to have every technical answer.",
+      "Their value comes from connecting people, problems and possibilities.",
+      "They help teams identify useful experiments.",
+      "They also help people understand both opportunities and limitations.",
+      "Good AI adoption spreads through people who can translate technology into everyday work."
+    ],
+    "realCase": [
+      "A colleague says, “I spend hours every week preparing this report.”",
+      "An AI Champion does not immediately recommend a product.",
+      "First, they understand the workflow.",
+      "Where does the information come from?",
+      "Which steps require judgment?",
+      "Which parts are repetitive?",
+      "What risks exist?",
+      "Only then do they explore whether Copilot, an agent or Power Platform can help."
+    ],
+    "discussionQuestion": "What is one problem in your team that you would like to explore with AI?",
+    "endingLabel": "Closing Line",
+    "ending": "The most important question is no longer what AI can do. The useful question is where AI can make our work meaningfully better."
+  }
+]

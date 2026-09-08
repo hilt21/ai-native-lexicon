@@ -1,0 +1,20 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import SpeakingCard from '../components/SpeakingCard.astro';
+import cards from '../data/speaking-cards.json';
+---
+
+<StarlightPage frontmatter={{ title: 'Speaking Card', description: 'Twenty speaking cards for conversations about AI, agents and enterprise workflows.', editUrl: false, tableOfContents: false }}>
+  <div class="page-intro">
+    <p class="eyebrow">{cards.length} CARDS FOR CONVERSATION</p>
+    <p>Choose a topic. Open the speaking notes for key lines, a real case and a question to discuss.</p>
+  </div>
+  <div class="speaking-grid">
+    {cards.map((card) => <SpeakingCard card={card} />)}
+  </div>
+</StarlightPage>
+
+<style>
+  .speaking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--lex-space-6); }
+  @media (max-width: 50rem) { .speaking-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>

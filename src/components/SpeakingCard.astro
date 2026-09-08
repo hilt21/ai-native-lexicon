@@ -1,0 +1,58 @@
+---
+import type cards from '../data/speaking-cards.json';
+interface Props { card: (typeof cards)[number] }
+const { card } = Astro.props;
+const id = `card-${String(card.number).padStart(2, '0')}`;
+---
+
+<article class="speaking-card" id={id} aria-labelledby={`${id}-title`}>
+  <header>
+    <a class="card-number" href={`#${id}`} aria-label={`Link to card ${card.number}`}>Card {String(card.number).padStart(2, '0')}</a>
+    <h2 id={`${id}-title`}>{card.title}</h2>
+    <p class="core-idea">{card.coreIdea}</p>
+  </header>
+  <details>
+    <summary>Speaking notes<span class="sr-only">: {card.title}</span></summary>
+    <div class="notes">
+      <section aria-labelledby={`${id}-lines`}>
+        <h3 id={`${id}-lines`}>Key Lines</h3>
+        <ul>{card.keyLines.map((line) => <li>{line}</li>)}</ul>
+      </section>
+      <section aria-labelledby={`${id}-case`}>
+        <h3 id={`${id}-case`}>Real Case</h3>
+        {card.realCase.map((paragraph) => <p>{paragraph}</p>)}
+      </section>
+      <section class="discussion" aria-labelledby={`${id}-question`}>
+        <h3 id={`${id}-question`}>Discussion Question</h3>
+        <p>{card.discussionQuestion}</p>
+      </section>
+      <section aria-labelledby={`${id}-ending`}>
+        <h3 id={`${id}-ending`}>{card.endingLabel}</h3>
+        <p>{card.ending}</p>
+      </section>
+    </div>
+  </details>
+</article>
+
+<style>
+  .speaking-card { margin: 0; min-width: 0; border: 1px solid var(--lex-line); padding: var(--lex-space-6); background: var(--lex-paper); scroll-margin-top: var(--lex-section-space); }
+  .speaking-card:target { border-color: var(--lex-focus); }
+  .card-number { color: var(--lex-muted); font: var(--lex-text-small) var(--sl-font-mono); display: inline-flex; align-items: center; min-height: var(--lex-control-height); }
+  h2 { margin: var(--lex-space-2) 0 var(--lex-space-4); font: normal var(--lex-text-section)/1.15 var(--lex-font-display); letter-spacing: -0.025em; overflow-wrap: anywhere; }
+  p, li { font-size: var(--lex-text-body); line-height: var(--lex-leading-body); }
+  .core-idea { margin: 0 0 var(--lex-space-6); color: var(--lex-muted); }
+  details { margin: 0; padding: 0; border: 0; border-top: 1px solid var(--lex-line); }
+  summary { margin: 0; padding-inline: 0; padding-block: var(--lex-space-3); min-height: var(--lex-control-height); cursor: pointer; font-size: var(--lex-text-small); font-weight: 700; color: var(--lex-ink); }
+  summary::marker { color: var(--lex-focus); }
+  summary:hover { color: var(--lex-focus); }
+  summary:focus-visible { outline: 2px solid var(--lex-focus); outline-offset: 4px; }
+  .notes { display: grid; gap: var(--lex-space-6); padding-top: var(--lex-space-4); }
+  h3 { margin: 0 0 var(--lex-space-3); font-size: var(--lex-text-small); }
+  .notes p { margin: 0; }
+  .notes p + p { margin-top: var(--lex-space-3); }
+  ul { margin: 0; padding-left: var(--lex-space-6); }
+  li + li { margin-top: var(--lex-space-2); }
+  li::marker { color: var(--lex-focus); }
+  .discussion { padding: var(--lex-space-4); background: var(--lex-paper-deep); border-left: 2px solid var(--lex-focus); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+</style>
