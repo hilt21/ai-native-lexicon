@@ -2,7 +2,7 @@
 
 > An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.
 
-AI Native Lexicon is a data-first glossary for the language emerging around context, agents, harnesses, governance, execution, knowledge, experience, and organizational design. The MVP ships with 30 bilingual concepts, linked relationships, local search, machine-readable exports, and a GitHub Pages workflow.
+AI Native Lexicon is a data-first glossary for the language emerging around context, agents, harnesses, governance, execution, knowledge, experience, and organizational design. The catalog contains 84 concepts with English definitions and Chinese names across 18 categories, linked relationships, local search, machine-readable exports, and a GitHub Pages workflow.
 
 ## What is included
 

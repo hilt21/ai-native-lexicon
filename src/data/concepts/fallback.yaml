@@ -1,0 +1,13 @@
+term: "Fallback"
+zh: "回退方案"
+category: "Failure Handling"
+status: "foundational"
+summary: "Use another way when the first way fails."
+definition: "A fallback switches to an alternative method or capability when the preferred path cannot succeed. It differs from retrying the same operation and must preserve required constraints or explicitly surface reduced capability."
+why_it_matters: "An alternative path can keep useful work moving while making any loss of fidelity or coverage visible."
+when_to_use: "Use it when a primary retrieval service is unavailable and an approved alternate source can answer the request."
+anti_pattern: "Silently replacing an authoritative lookup with an unsupported guess."
+related: ["retry", "replanning", "failure-containment"]
+tags: ["failure-handling", "retry"]
+sources: []
+added: 2026-09-09

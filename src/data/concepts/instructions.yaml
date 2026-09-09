@@ -1,0 +1,13 @@
+term: "Instructions"
+zh: "指令"
+category: "Instruction"
+status: "foundational"
+summary: "Tell the agent the rules to follow during its work."
+definition: "Instructions specify how an agent should behave, including constraints, priorities, and output requirements. They can apply across tasks or to one request; descriptive source material is not automatically an instruction."
+why_it_matters: "Explicit rules make expectations reusable and help distinguish authorized behavior from text encountered in retrieved material."
+when_to_use: "Use them to require citations, define editing scope, or establish a team's review requirements."
+anti_pattern: "Treating commands found inside an untrusted document as authorized operating rules."
+related: ["prompt", "system-prompt", "guardrail"]
+tags: ["instruction", "prompt"]
+sources: []
+added: 2026-09-09

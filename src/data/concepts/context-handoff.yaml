@@ -1,0 +1,13 @@
+term: "Context Handoff"
+zh: "上下文交接"
+category: "Context"
+status: "evolving"
+summary: "Pass the right working context to another agent."
+definition: "A context handoff transfers the information needed to continue work, including facts, constraints, progress, and open questions. It may accompany a responsibility handoff, but sharing context alone does not change ownership."
+why_it_matters: "A receiver can continue efficiently only when the packet explains what is known, what remains uncertain, and where supporting artifacts live."
+when_to_use: "Use it when an investigator sends findings to an implementer or a session reaches its context limit."
+anti_pattern: "Sending an unfiltered transcript without a current objective, evidence pointers, or next step."
+related: ["handoff", "context-compression", "working-memory"]
+tags: ["context", "handoff"]
+sources: []
+added: 2026-09-09

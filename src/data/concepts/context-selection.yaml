@@ -1,0 +1,13 @@
+term: "Context Selection"
+zh: "上下文选择"
+category: "Context"
+status: "foundational"
+summary: "Choose what deserves attention in the current step."
+definition: "Context selection chooses which available information to include for a specific decision. It weighs relevance, reliability, and cost; it does not require rewriting or deleting the underlying source records."
+why_it_matters: "Selective inputs reduce distraction and leave room for the evidence most likely to change the next decision."
+when_to_use: "Use it to load the relevant function and test failure instead of an entire code repository."
+anti_pattern: "Including every retrieved document merely because there is still space in the window."
+related: ["context", "context-budget", "retrieval"]
+tags: ["context", "relevance"]
+sources: []
+added: 2026-09-09

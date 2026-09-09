@@ -1,0 +1,13 @@
+term: "Trace"
+zh: "执行轨迹"
+category: "Verification"
+status: "foundational"
+summary: "Keep a record of the agent's observable actions."
+definition: "A trace records observable execution events and their relationships, such as tool requests, results, timings, and state transitions. It supports investigation of behavior; it need not expose or reconstruct private model reasoning."
+why_it_matters: "A connected event record makes it easier to locate failures and relate a final result to the actions that produced it."
+when_to_use: "Use it to investigate which tool call introduced an incorrect value during a multi-step run."
+anti_pattern: "Logging only the final answer and calling it a complete execution trace."
+related: ["golden-trace", "observation", "inspectable-agency"]
+tags: ["verification", "golden-trace"]
+sources: []
+added: 2026-09-09

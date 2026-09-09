@@ -53,6 +53,66 @@ export const categoryMeta: Record<
     description: 'Redesign delegation, accountability, and operations for agent participation.',
     question: 'What makes a team agent-ready?',
   },
+  'Instruction': {
+    slug: 'instruction',
+    code: 'INS',
+    description: 'Express requests, behavioral rules, and the priorities that guide an agent.',
+    question: 'What should the agent follow?',
+  },
+  'Memory': {
+    slug: 'memory',
+    code: 'MEM',
+    description: 'Retain, refine, and retire information across steps and tasks.',
+    question: 'What should persist?',
+  },
+  'State': {
+    slug: 'state',
+    code: 'STA',
+    description: 'Represent progress and preserve the outputs needed to continue work.',
+    question: 'Where does the work stand?',
+  },
+  'Goal': {
+    slug: 'goal',
+    code: 'GOL',
+    description: 'Define outcomes and divide responsibility into finishable units.',
+    question: 'What counts as done?',
+  },
+  'Reasoning': {
+    slug: 'reasoning',
+    code: 'RSN',
+    description: 'Choose steps, revise plans, and assess decisions as evidence changes.',
+    question: 'What should happen next?',
+  },
+  'Capability': {
+    slug: 'capability',
+    code: 'CAP',
+    description: 'Equip agents with tools, procedures, and interoperable connections.',
+    question: 'What can the agent use?',
+  },
+  'Feedback': {
+    slug: 'feedback',
+    code: 'FDB',
+    description: 'Observe outcomes and use external signals to improve the next action.',
+    question: 'What did the world reveal?',
+  },
+  'Verification': {
+    slug: 'verification',
+    code: 'VER',
+    description: 'Connect performance and completion claims to inspectable checks.',
+    question: 'How do we know it worked?',
+  },
+  'Failure Handling': {
+    slug: 'failure-handling',
+    code: 'FAIL',
+    description: 'Handle unsuccessful actions and restore useful progress after disruption.',
+    question: 'How does work recover?',
+  },
+  'Multi-Agent': {
+    slug: 'multi-agent',
+    code: 'MULTI',
+    description: 'Manage responsibility, shared information, and dependencies between agents.',
+    question: 'How do agents work together?',
+  },
 };
 
 export type Concept = CollectionEntry<'concepts'>;

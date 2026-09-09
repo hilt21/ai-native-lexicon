@@ -1,0 +1,13 @@
+term: "Subtask"
+zh: "子任务"
+category: "Goal"
+status: "foundational"
+summary: "Break a big task into smaller pieces of work."
+definition: "A subtask is a smaller work unit that contributes to a parent task. Its inputs, output, and dependencies should be clear enough to integrate its result; local completion does not imply the parent task is finished."
+why_it_matters: "Smaller units make complex work easier to schedule and verify while exposing dependencies that prevent unsafe parallel execution."
+when_to_use: "Use it to separate document extraction from synthesis when the synthesis depends on extracted findings."
+anti_pattern: "Marking the parent complete merely because every worker submitted something."
+related: ["task", "task-decomposition", "coordination"]
+tags: ["goal", "task"]
+sources: []
+added: 2026-09-09

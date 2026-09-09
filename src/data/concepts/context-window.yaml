@@ -1,0 +1,13 @@
+term: "Context Window"
+zh: "上下文窗口"
+category: "Context"
+status: "foundational"
+summary: "Limit how much the agent can see at once."
+definition: "A context window is the model's bounded token capacity for an inference. Input and generated output must fit the interface's accounting rules; capacity is distinct from reliable recall or attention to every included fact."
+why_it_matters: "Window limits constrain how much history, retrieved text, and output can fit into one interaction, making selection necessary."
+when_to_use: "Use it when sizing long document analysis and reserving room for the model's response."
+anti_pattern: "Filling the available input capacity and assuming all details will be used equally well."
+related: ["context-budget", "context-selection", "context-compression"]
+tags: ["context", "context-budget"]
+sources: []
+added: 2026-09-09

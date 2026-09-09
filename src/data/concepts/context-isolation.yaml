@@ -1,0 +1,13 @@
+term: "Context Isolation"
+zh: "上下文隔离"
+category: "Context"
+status: "evolving"
+summary: "Keep unrelated tasks from mixing their information."
+definition: "Context isolation separates the working information of tasks or roles so that irrelevant assumptions do not leak between them. Separate conversations can support isolation, but do not by themselves isolate files, credentials, or permissions."
+why_it_matters: "Task separation reduces accidental reuse of another task's instructions, private details, or unverified conclusions."
+when_to_use: "Use it when separate agents analyze different customers or independent workstreams."
+anti_pattern: "Assuming separate chat histories prevent agents from reading the same unrestricted storage."
+related: ["context-selection", "permission-boundary", "delegation"]
+tags: ["context", "context-selection"]
+sources: []
+added: 2026-09-09

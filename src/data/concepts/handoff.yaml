@@ -1,6 +1,6 @@
 term: Handoff
 zh: 交接
-category: Agent Architecture
+category: Multi-Agent
 status: evolving
 summary: A controlled transfer of responsibility, relevant state, and completion criteria from one actor or agent to another.
 definition: A handoff is more than sending a transcript. It packages the objective, current state, load-bearing facts, authority limits, artifacts, unresolved risks, and the condition under which responsibility returns or completes.

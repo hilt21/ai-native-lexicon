@@ -1,0 +1,13 @@
+term: "Shared State"
+zh: "共享状态"
+category: "Multi-Agent"
+status: "foundational"
+summary: "Let multiple agents use the same trusted state."
+definition: "Shared state is a common representation that multiple actors can read or update under defined rules. Consistency, versioning, and ownership determine whether it is trustworthy; shared access alone does not prevent conflicts."
+why_it_matters: "A common progress record helps workers coordinate without independently inventing incompatible accounts of what is complete."
+when_to_use: "Use it to track task assignments and accepted results in a system with multiple workers."
+anti_pattern: "Allowing agents to overwrite the same status record without conflict detection or ownership rules."
+related: ["state", "coordination", "orchestration"]
+tags: ["multi-agent", "state"]
+sources: []
+added: 2026-09-09

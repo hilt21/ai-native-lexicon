@@ -1,0 +1,13 @@
+term: "Checkpoint"
+zh: "检查点"
+category: "State"
+status: "foundational"
+summary: "Save a place the agent can return to later."
+definition: "A checkpoint is a saved representation of execution state at a known boundary, sufficient for a defined form of resumption. It must identify what is complete and which side effects may already have occurred outside the saved state."
+why_it_matters: "A restart point limits repeated work after interruption and helps prevent replaying actions that already changed the outside world."
+when_to_use: "Use it after a completed batch before beginning the next stage of a long task."
+anti_pattern: "Saving conversation text without recording which external writes actually succeeded."
+related: ["checkpoint-resume", "recovery", "state"]
+tags: ["state", "checkpoint-resume"]
+sources: []
+added: 2026-09-09

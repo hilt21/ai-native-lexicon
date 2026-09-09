@@ -1,0 +1,13 @@
+term: "Replanning"
+zh: "重新规划"
+category: "Reasoning"
+status: "foundational"
+summary: "Change the plan when new facts change the task."
+definition: "Replanning revises the remaining actions or dependencies after new evidence, failure, or changed constraints. It should retain the authorized goal unless that goal is explicitly changed; it is not permission to expand scope."
+why_it_matters: "Adaptive work needs to abandon invalid assumptions without losing the user's original objective or repeating completed steps."
+when_to_use: "Use it when a required dependency is unavailable and another supported path can satisfy the same goal."
+anti_pattern: "Repeating an obsolete plan after evidence shows a prerequisite cannot be met."
+related: ["planning", "observation", "fallback"]
+tags: ["reasoning", "planning"]
+sources: []
+added: 2026-09-09

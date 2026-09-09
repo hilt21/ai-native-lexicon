@@ -1,0 +1,13 @@
+term: "Context Pruning"
+zh: "上下文裁剪"
+category: "Context"
+status: "foundational"
+summary: "Remove what is no longer useful from active context."
+definition: "Context pruning removes selected material from the active input, such as obsolete tool results or repeated messages. Unlike compression, it drops material rather than summarizing it; source history may remain stored elsewhere."
+why_it_matters: "Removing irrelevant history reduces distraction and token use while keeping the remaining working context focused."
+when_to_use: "Use it after a resolved error leaves several redundant stack traces in an ongoing session."
+anti_pattern: "Discarding an unresolved constraint simply because it appeared early in the conversation."
+related: ["context-compression", "context-hygiene", "forgetting"]
+tags: ["context", "context-compression"]
+sources: []
+added: 2026-09-09

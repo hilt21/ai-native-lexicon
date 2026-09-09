@@ -1,0 +1,13 @@
+term: "Tool"
+zh: "工具"
+category: "Capability"
+status: "foundational"
+summary: "Give the agent a capability for doing real work."
+definition: "A tool is an externally implemented capability an agent can invoke to obtain information or perform an action. Its interface defines inputs and outputs; the runtime decides whether and how the requested operation executes."
+why_it_matters: "Tools connect generated decisions to observable information and effects beyond the model's text response."
+when_to_use: "Use one to read a file, query a service, or run a bounded validation command."
+anti_pattern: "Assuming a model's description of a tool action means that the action actually executed."
+related: ["tool-calling", "tool-selection", "mcp"]
+tags: ["capability", "tool-calling"]
+sources: []
+added: 2026-09-09

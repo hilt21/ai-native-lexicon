@@ -1,0 +1,13 @@
+term: "Workflow"
+zh: "工作流"
+category: "Execution"
+status: "foundational"
+summary: "Follow a known path when steps are predictable."
+definition: "A workflow defines an established sequence or graph of steps, including branches and failure paths. It can contain model calls, but its overall control flow is prescribed rather than decided afresh by an agent at every turn."
+why_it_matters: "Predictable processes are easier to inspect and test when their transitions are explicit and repeated consistently."
+when_to_use: "Use it for a document pipeline with extraction, validation, and publication stages."
+anti_pattern: "Using an unconstrained agent to rediscover the same mandatory sequence on every run."
+related: ["agent-loop", "planning", "routing"]
+tags: ["execution", "agent-loop"]
+sources: []
+added: 2026-09-09

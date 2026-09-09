@@ -1,0 +1,13 @@
+term: "System Prompt"
+zh: "系统提示词"
+category: "Instruction"
+status: "foundational"
+summary: "Define the agent's basic behavior and operating rules."
+definition: "A system prompt is a message supplied through a model interface's system role to guide general behavior. Its precedence depends on the interface; text in this role does not itself enforce access permissions."
+why_it_matters: "Separating baseline behavior from task requests makes the agent's role easier to maintain while keeping enforcement responsibilities visible."
+when_to_use: "Use it to define a support agent's scope, response style, and handling of unsupported requests."
+anti_pattern: "Putting secrets or access controls in a system prompt and assuming they are technically protected."
+related: ["instructions", "permission", "guardrail"]
+tags: ["instruction", "instructions"]
+sources: []
+added: 2026-09-09

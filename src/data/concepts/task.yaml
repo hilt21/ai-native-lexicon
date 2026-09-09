@@ -1,0 +1,13 @@
+term: "Task"
+zh: "任务"
+category: "Goal"
+status: "foundational"
+summary: "Give the agent a clear piece of work to finish."
+definition: "A task is a bounded unit of work with an objective, inputs, constraints, and completion criteria. It may serve a larger goal and may contain subtasks, but should still have an identifiable owner and result."
+why_it_matters: "Bounded work is easier to assign, verify, and recover than an open-ended instruction with no observable finish."
+when_to_use: "Use it to ask an agent to fix a reproducible bug and demonstrate the required behavior."
+anti_pattern: "Assigning a broad role without identifying a deliverable or a condition for completion."
+related: ["goal", "subtask", "delegation-contract"]
+tags: ["goal", "scope"]
+sources: []
+added: 2026-09-09

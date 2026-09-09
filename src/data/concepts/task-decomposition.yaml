@@ -1,0 +1,13 @@
+term: "Task Decomposition"
+zh: "任务分解"
+category: "Reasoning"
+status: "foundational"
+summary: "Break a hard problem into simpler problems."
+definition: "Task decomposition identifies smaller problems whose results can be combined to satisfy a larger task. It includes defining boundaries and dependencies, not merely splitting the request into similarly sized fragments."
+why_it_matters: "Useful boundaries reduce cognitive load and make it possible to delegate independent work without losing responsibility for integration."
+when_to_use: "Use it to divide a feature into data changes, implementation, and behavioral verification."
+anti_pattern: "Splitting tightly coupled edits across workers without specifying interfaces or integration ownership."
+related: ["subtask", "planning", "delegation"]
+tags: ["reasoning", "subtask"]
+sources: []
+added: 2026-09-09

@@ -1,0 +1,13 @@
+term: "MCP"
+zh: "模型上下文协议"
+category: "Capability"
+status: "foundational"
+summary: "Give tools a common way to connect to agents."
+definition: "The Model Context Protocol is an open protocol for connecting AI applications to external capabilities and information. Servers can expose tools, resources, and prompts; the host application remains responsible for access decisions and execution policy."
+why_it_matters: "A shared integration interface reduces custom connectors while keeping protocol compatibility separate from trust in any particular server."
+when_to_use: "Use it when exposing a service to multiple compatible AI applications through a common interface."
+anti_pattern: "Assuming that a compatible MCP server is automatically trustworthy or authorized to access all data."
+related: ["tool", "tool-calling", "permission"]
+tags: ["capability", "tool"]
+sources: [{"title": "What is the Model Context Protocol (MCP)?", "url": "https://modelcontextprotocol.io/docs/getting-started/intro"}]
+added: 2026-09-09

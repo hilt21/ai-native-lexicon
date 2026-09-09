@@ -1,0 +1,13 @@
+term: "Delegation"
+zh: "委派"
+category: "Execution"
+status: "foundational"
+summary: "Give part of the work to another worker."
+definition: "Delegation assigns a scoped portion of work to another actor with the information and authority needed to perform it. The delegator still needs an integration and acceptance process; assignment alone does not ensure a usable result."
+why_it_matters: "Specialized workers can contribute effectively when ownership, output expectations, and dependencies are explicit."
+when_to_use: "Use it to assign an independent analysis while retaining responsibility for the final synthesis."
+anti_pattern: "Asking several agents to handle the problem without defining who owns which deliverable."
+related: ["delegation-contract", "subtask", "handoff"]
+tags: ["execution", "delegation-contract"]
+sources: []
+added: 2026-09-09

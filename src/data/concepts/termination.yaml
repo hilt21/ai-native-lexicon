@@ -1,0 +1,13 @@
+term: "Termination"
+zh: "终止"
+category: "Governance"
+status: "foundational"
+summary: "Know when the job is complete or execution must stop."
+definition: "Termination ends execution when a completion, failure, cancellation, or resource condition is reached. The final status should distinguish successful completion from stopping without success and preserve useful results or recovery information."
+why_it_matters: "A reliable stopping rule prevents endless loops and keeps an interrupted run from being misreported as a finished task."
+when_to_use: "Use it when acceptance checks pass, a budget is exhausted, or an authorized cancellation arrives."
+anti_pattern: "Marking a task complete solely because the agent stopped making progress."
+related: ["goal", "budget", "verification"]
+tags: ["governance", "goal"]
+sources: []
+added: 2026-09-09

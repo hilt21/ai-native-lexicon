@@ -1,0 +1,13 @@
+term: "Tool Calling"
+zh: "工具调用"
+category: "Execution"
+status: "foundational"
+summary: "Let the agent invoke an external capability."
+definition: "Tool calling is the interaction in which a model requests a named operation with structured arguments and the host executes or rejects it. Returned results become observations; a request alone does not prove successful execution."
+why_it_matters: "Separating the request from execution makes argument validation, permission checks, and error reporting visible."
+when_to_use: "Use it when an agent needs to query a database and use the returned rows in its next decision."
+anti_pattern: "Reporting success from the generated call arguments before receiving and checking the tool result."
+related: ["tool", "observation", "permission"]
+tags: ["execution", "tool"]
+sources: []
+added: 2026-09-09

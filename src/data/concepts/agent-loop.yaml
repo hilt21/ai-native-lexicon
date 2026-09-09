@@ -1,6 +1,6 @@
 term: Agent Loop
 zh: 智能体循环
-category: Agent Architecture
+category: Execution
 status: foundational
 summary: The recurring cycle in which an agent observes state, chooses an action, executes it, and incorporates the result into its next decision.
 definition: An agent loop is the control structure that turns a model call into an adaptive process. A robust loop makes observations, decisions, actions, stopping conditions, and errors explicit rather than hiding them inside an open-ended conversation.

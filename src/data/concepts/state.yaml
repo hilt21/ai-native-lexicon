@@ -1,0 +1,13 @@
+term: "State"
+zh: "状态"
+category: "State"
+status: "foundational"
+summary: "Keep track of where the work is right now."
+definition: "State is the explicit representation of a process at a point in time, such as its phase, completed steps, pending actions, and relevant values. It describes progress; a conversation or action history may only indirectly encode it."
+why_it_matters: "Reliable continuation needs a shared answer about what has happened and what remains to be done."
+when_to_use: "Use it to distinguish a queued action from a running, failed, or completed action."
+anti_pattern: "Inferring completion solely from the agent saying that it intends to perform an action."
+related: ["shared-state", "checkpoint", "working-memory"]
+tags: ["state", "shared-state"]
+sources: []
+added: 2026-09-09

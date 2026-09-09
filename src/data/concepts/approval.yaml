@@ -1,0 +1,13 @@
+term: "Approval"
+zh: "审批"
+category: "Governance"
+status: "foundational"
+summary: "Ask for authorization before specified important actions."
+definition: "Approval is a decision by an authorized person or policy process to allow a particular action or scope of work. It may be required in addition to technical permission and should identify what the approver is accepting."
+why_it_matters: "Review at consequential boundaries keeps action aligned with human intent when existing authority is insufficient."
+when_to_use: "Use it before an action whose defined policy requires a person to review the concrete proposed result."
+anti_pattern: "Treating silence or elapsed time as acceptance of a pending approval request."
+related: ["permission", "human-on-the-loop", "guardrail"]
+tags: ["governance", "permission"]
+sources: []
+added: 2026-09-09

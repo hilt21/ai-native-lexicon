@@ -1,0 +1,13 @@
+term: "Verification"
+zh: "验证"
+category: "Verification"
+status: "foundational"
+summary: "Check whether the requirements were truly met."
+definition: "Verification checks a result against explicit requirements using appropriate inspection, tests, or observed evidence. It concerns a defined claim and scope; checking one component cannot establish all properties of the complete system."
+why_it_matters: "Completion becomes meaningful when acceptance criteria are checked rather than inferred from the amount of work performed."
+when_to_use: "Use it before delivering a change to confirm the requested behavior and relevant constraints."
+anti_pattern: "Declaring success because a file was edited without checking the resulting behavior."
+related: ["evidence", "evaluation", "goal"]
+tags: ["verification", "evidence"]
+sources: []
+added: 2026-09-09

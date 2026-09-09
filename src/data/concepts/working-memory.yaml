@@ -1,0 +1,13 @@
+term: "Working Memory"
+zh: "工作记忆"
+category: "Memory"
+status: "foundational"
+summary: "Remember what matters for the current task."
+definition: "Working memory holds the facts, intermediate results, and unresolved decisions needed during a task. It can live in active context or an external scratchpad; it is not automatically a durable record for future tasks."
+why_it_matters: "Keeping a concise current picture prevents repeated investigation and loss of pending obligations during a long sequence of actions."
+when_to_use: "Use it to track hypotheses, completed checks, and the next unresolved issue while debugging."
+anti_pattern: "Using the full conversation as the only representation of current progress."
+related: ["state", "context", "long-term-memory"]
+tags: ["memory", "state"]
+sources: []
+added: 2026-09-09

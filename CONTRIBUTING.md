@@ -11,7 +11,7 @@ Check whether the idea is already represented under a different name. Prefer imp
 Create one kebab-case YAML file in `src/data/concepts/`. Every entry must include:
 
 - a concise English term and Chinese name;
-- exactly one of the eight existing categories;
+- exactly one category supported by `src/content.config.ts`;
 - a maturity status: `foundational`, `emerging`, `evolving`, or `contested`;
 - an original working definition that states the concept's boundary;
 - why it matters, when to use it, and a concrete anti-pattern;
@@ -19,6 +19,8 @@ Create one kebab-case YAML file in `src/data/concepts/`. Every entry must includ
 - optional sources only when they directly support origin, usage, or a factual claim.
 
 Do not fabricate a first use, author, or citation. The lexicon may define a useful working term without claiming who coined it.
+
+When adding a category, update `src/content.config.ts`, `schemas/concept.schema.json`, `scripts/concept-validation.mjs`, and `src/lib/catalog.ts` together, then run the full verification suite. Reuse existing concept slugs when updating or reclassifying entries.
 
 ## Editorial test
 

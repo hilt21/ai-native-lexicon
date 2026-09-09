@@ -13,6 +13,16 @@ export const categories = [
   'Knowledge',
   'UX',
   'Organization',
+  'Instruction',
+  'Memory',
+  'State',
+  'Goal',
+  'Reasoning',
+  'Capability',
+  'Feedback',
+  'Verification',
+  'Failure Handling',
+  'Multi-Agent',
 ] as const;
 
 export const conceptStatuses = ['foundational', 'emerging', 'evolving', 'contested'] as const;
