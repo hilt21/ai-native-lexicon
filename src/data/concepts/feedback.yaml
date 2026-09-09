@@ -1,0 +1,13 @@
+term: "Feedback"
+zh: "反馈"
+category: "Feedback"
+status: "foundational"
+summary: "Use the result to choose the next useful move."
+definition: "Feedback is information about a result that informs a subsequent decision or adjustment. It may come from a user, a test, or the environment; it becomes useful when connected to the objective and a possible response."
+why_it_matters: "A process that incorporates outcome signals can correct mistakes instead of repeatedly executing an ineffective approach."
+when_to_use: "Use it to adjust an implementation after a failing test identifies behavior that misses a requirement."
+anti_pattern: "Collecting reviewer comments but continuing with the same action regardless of what they say."
+related: ["observation", "reflection", "replanning"]
+tags: ["feedback", "observation"]
+sources: []
+added: 2026-09-09

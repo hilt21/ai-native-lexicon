@@ -1,0 +1,13 @@
+term: "Parallelism"
+zh: "并行"
+category: "Execution"
+status: "foundational"
+summary: "Do independent pieces of work at the same time."
+definition: "Parallelism executes multiple work units concurrently where their dependencies and resource access allow it. Results still need combination and verification; overlapping work is not beneficial when tasks contend for the same mutable state."
+why_it_matters: "Independent tasks can finish sooner, but coordination costs and write conflicts can erase the benefit if boundaries are unclear."
+when_to_use: "Use it to analyze separate documents before combining their findings in a later synthesis."
+anti_pattern: "Running dependent edits simultaneously against the same files with no ownership or merge rules."
+related: ["coordination", "shared-state", "task-decomposition"]
+tags: ["execution", "coordination"]
+sources: []
+added: 2026-09-09

@@ -1,0 +1,13 @@
+term: "RAG"
+zh: "检索增强生成"
+category: "Knowledge"
+status: "foundational"
+summary: "Find useful knowledge and bring it into context."
+definition: "Retrieval-augmented generation combines retrieval of external information with generation conditioned on that information. Retrieval supplies candidate evidence; the generated answer still needs checks for relevance, support, and freshness."
+why_it_matters: "RAG lets an application use an updateable knowledge source without relying solely on facts encoded in model parameters."
+when_to_use: "Use it when answering questions against a maintained document collection with source references."
+anti_pattern: "Assuming that attaching retrieved passages guarantees a factual or properly cited answer."
+related: ["retrieval", "grounding", "provenance-chain"]
+tags: ["knowledge", "retrieval"]
+sources: [{"title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", "url": "https://arxiv.org/abs/2005.11401"}]
+added: 2026-09-09

@@ -1,0 +1,13 @@
+term: "Artifact"
+zh: "产物"
+category: "State"
+status: "foundational"
+summary: "Save useful things created while doing the work."
+definition: "An artifact is an identifiable output of work, such as a report, patch, dataset, or image. It can be inspected or passed onward independently of the conversation; its existence alone does not prove it meets requirements."
+why_it_matters: "Persistent outputs make agent work reviewable and reusable by people, later steps, and other systems."
+when_to_use: "Use it to deliver a report as a saved file with a stable reference and appropriate format."
+anti_pattern: "Claiming a report is delivered when only a description of the intended report exists."
+related: ["evidence", "state", "verification"]
+tags: ["state", "evidence"]
+sources: []
+added: 2026-09-09

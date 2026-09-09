@@ -1,0 +1,13 @@
+term: "Tool Selection"
+zh: "工具选择"
+category: "Reasoning"
+status: "foundational"
+summary: "Choose the best tool for the next concrete step."
+definition: "Tool selection matches the current information need or action to an available capability. The choice considers scope, permissions, expected output, and side effects; selecting a tool is distinct from invoking it."
+why_it_matters: "A narrow suitable tool can reduce errors and unnecessary access compared with using a broad capability for every step."
+when_to_use: "Use it when choosing between searching filenames, reading a known file, and querying a service."
+anti_pattern: "Running a broad shell command when a scoped read operation would answer the question."
+related: ["tool", "tool-calling", "permission"]
+tags: ["reasoning", "tool"]
+sources: []
+added: 2026-09-09

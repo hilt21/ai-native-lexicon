@@ -1,0 +1,13 @@
+term: "Rollback"
+zh: "回滚"
+category: "Failure Handling"
+status: "foundational"
+summary: "Go back to a prior state when a change causes trouble."
+definition: "Rollback restores a previously accepted state after a problematic change where restoration is supported. It does not automatically reverse external effects; irreversible actions may require compensation or human handling."
+why_it_matters: "A defined reversal path limits damage from failed changes and clarifies what can actually be restored."
+when_to_use: "Use it to restore a prior configuration after a deployment check fails."
+anti_pattern: "Assuming a local file restore also reverses messages or transactions already sent externally."
+related: ["checkpoint", "recovery", "failure-containment"]
+tags: ["failure-handling", "checkpoint"]
+sources: []
+added: 2026-09-09

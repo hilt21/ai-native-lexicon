@@ -1,6 +1,6 @@
 term: Orchestration
 zh: 编排
-category: Agent Architecture
+category: Multi-Agent
 status: foundational
 summary: The coordination of agents, tools, state, and control flow so that specialized work converges on one accountable outcome.
 definition: Orchestration defines who or what acts next, which context is transferred, how partial results are combined, and what happens on delay or failure. It may be deterministic, model-directed, or hybrid, but its contracts should remain observable.

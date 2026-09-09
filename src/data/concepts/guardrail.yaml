@@ -1,0 +1,13 @@
+term: "Guardrail"
+zh: "防护规则"
+category: "Governance"
+status: "foundational"
+summary: "Stop the agent from taking disallowed actions."
+definition: "A guardrail is a control that constrains or checks behavior at a defined boundary, such as validating inputs or blocking a tool operation. Advisory model instructions can help, but do not provide the same enforcement as runtime controls."
+why_it_matters: "Explicit controls reduce dependence on the model consistently interpreting and following every safety or business rule."
+when_to_use: "Use it to reject tool arguments outside a permitted resource scope before execution."
+anti_pattern: "Relying only on a sentence asking the model not to access restricted files."
+related: ["permission-boundary", "policy-as-code", "approval"]
+tags: ["governance", "permission-boundary"]
+sources: []
+added: 2026-09-09

@@ -1,0 +1,13 @@
+term: "Skill"
+zh: "技能"
+category: "Capability"
+status: "evolving"
+summary: "Teach the agent how to do a kind of job well."
+definition: "A skill packages reusable procedural guidance for a class of tasks. It may include examples, references, or scripts; in the Agent Skills format, a SKILL.md file supplies instructions and metadata. A skill need not be an executable tool."
+why_it_matters: "Task-specific procedures make useful expertise reusable without placing every instruction in every model request."
+when_to_use: "Use it to package a repeatable document review procedure with templates and reference material."
+anti_pattern: "Loading all available skills into every request regardless of task relevance."
+related: ["instructions", "tool", "progressive-disclosure"]
+tags: ["capability", "instructions"]
+sources: [{"title": "Agent Skills Overview", "url": "https://agentskills.io/home"}]
+added: 2026-09-09

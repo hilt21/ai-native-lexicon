@@ -1,0 +1,13 @@
+term: "Context Refresh"
+zh: "上下文刷新"
+category: "Context"
+status: "evolving"
+summary: "Replace old information with newer verified facts."
+definition: "Context refresh updates active information by checking a current source and replacing or qualifying stale observations. It concerns freshness, not just making space, and should retain when and where a fact was checked."
+why_it_matters: "A previously correct observation can become wrong after another actor edits a file or an external system changes state."
+when_to_use: "Use it to reread a pull request's current status before deciding the next action."
+anti_pattern: "Reusing a cached status after a known change without checking the authoritative source."
+related: ["context-hygiene", "observation", "grounding"]
+tags: ["context", "context-hygiene"]
+sources: []
+added: 2026-09-09

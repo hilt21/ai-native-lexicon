@@ -1,0 +1,13 @@
+term: "Reflection"
+zh: "反思"
+category: "Reasoning"
+status: "evolving"
+summary: "Check whether the result and approach make sense."
+definition: "Reflection examines a result or process to identify mistakes, gaps, and possible improvements. It may use model critique or explicit questions; self-critique is not independent evidence that the result is correct."
+why_it_matters: "Reviewing the approach can reveal faulty assumptions before they are repeated, especially when coupled with external checks."
+when_to_use: "Use it after a failed attempt to compare the expected outcome with the observed result."
+anti_pattern: "Accepting a model's reassuring self-assessment in place of checking the underlying work."
+related: ["feedback", "verification", "replanning"]
+tags: ["reasoning", "feedback"]
+sources: []
+added: 2026-09-09

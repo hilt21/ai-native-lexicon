@@ -1,0 +1,13 @@
+term: "Routing"
+zh: "路由"
+category: "Reasoning"
+status: "foundational"
+summary: "Send work to the right model, skill, or agent."
+definition: "Routing directs an incoming request or intermediate work item to a suitable handler based on its characteristics. A route can be chosen by rules or a model; it does not necessarily transfer overall task ownership."
+why_it_matters: "Matching work to appropriate capabilities improves specialization and avoids running every request through the same expensive process."
+when_to_use: "Use it to send a billing question and a technical incident to different supported workflows."
+anti_pattern: "Dispatching by a single keyword without checking the request's actual intent."
+related: ["tool-selection", "skill", "orchestration"]
+tags: ["reasoning", "tool-selection"]
+sources: []
+added: 2026-09-09

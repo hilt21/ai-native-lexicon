@@ -1,0 +1,13 @@
+term: "Context"
+zh: "上下文"
+category: "Context"
+status: "foundational"
+summary: "Give the agent what it needs to know now."
+definition: "Context is the information available to a model for a particular inference, including instructions, conversation, selected records, and tool results. Information stored elsewhere becomes context only when supplied to that inference."
+why_it_matters: "Correct decisions require relevant facts to be available at the time of use, even when those facts already exist somewhere in the system."
+when_to_use: "Use it when assembling the request, current file contents, and constraints for a coding step."
+anti_pattern: "Assuming an agent knows a fact merely because it exists in a repository or earlier session."
+related: ["context-window", "context-selection", "context-engineering"]
+tags: ["context", "context-window"]
+sources: []
+added: 2026-09-09

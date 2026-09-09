@@ -1,0 +1,13 @@
+term: "Prompt"
+zh: "提示词"
+category: "Instruction"
+status: "foundational"
+summary: "Tell the agent what you want it to accomplish."
+definition: "A prompt is the input that asks a model or agent for a response or action. It can contain a request, examples, and task data; it is not necessarily a persistent rule or the entire context."
+why_it_matters: "A clear request reduces ambiguity about the desired result and gives the agent a concrete basis for choosing its next action."
+when_to_use: "Use it to ask an agent to summarize a document with a specified audience and output format."
+anti_pattern: "Asking for something better without saying what outcome or constraints matter."
+related: ["instructions", "context", "goal"]
+tags: ["instruction", "instructions"]
+sources: []
+added: 2026-09-09

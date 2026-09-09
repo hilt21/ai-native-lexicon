@@ -1,0 +1,13 @@
+term: "Evaluation"
+zh: "评估"
+category: "Verification"
+status: "foundational"
+summary: "Measure how well the agent performs on defined tasks."
+definition: "Evaluation assesses quality or performance using selected cases, criteria, and a measurement procedure. It can compare systems or track regressions; an aggregate score does not verify every outcome in a particular live task."
+why_it_matters: "Repeatable assessments reveal tradeoffs and regressions that isolated demonstrations or confident explanations can hide."
+when_to_use: "Use it to compare two agent configurations on representative tasks with the same scoring criteria."
+anti_pattern: "Optimizing for a small benchmark while claiming the score proves reliability on all user requests."
+related: ["eval-driven-development", "verification", "feedback"]
+tags: ["verification", "eval-driven-development"]
+sources: []
+added: 2026-09-09

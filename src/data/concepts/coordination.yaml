@@ -1,0 +1,13 @@
+term: "Coordination"
+zh: "协同"
+category: "Multi-Agent"
+status: "foundational"
+summary: "Help agents avoid getting in each other's way."
+definition: "Coordination aligns actors through ownership, dependencies, communication, and conflict-resolution rules. It can be centralized or distributed; orchestration is one way to organize control flow within this broader concern."
+why_it_matters: "Multiple capable workers can still duplicate effort or corrupt shared outputs unless their interactions are managed."
+when_to_use: "Use it when agents contribute independent changes that must be combined into a coherent final result."
+anti_pattern: "Starting parallel workers without defining write boundaries or responsibility for integration."
+related: ["orchestration", "parallelism", "shared-state"]
+tags: ["multi-agent", "orchestration"]
+sources: []
+added: 2026-09-09

@@ -1,0 +1,13 @@
+term: "Goal"
+zh: "目标"
+category: "Goal"
+status: "foundational"
+summary: "Tell the agent where the work should end up."
+definition: "A goal describes the desired outcome and the conditions under which it is satisfied. It guides action selection without necessarily prescribing every step; constraints determine which paths to the outcome are acceptable."
+why_it_matters: "An explicit destination helps the agent evaluate progress and stop when further activity no longer serves the request."
+when_to_use: "Use it to define a successful migration in terms of preserved behavior and accepted validation results."
+anti_pattern: "Using an activity such as keep improving as the only definition of success."
+related: ["task", "verification", "termination"]
+tags: ["goal", "task"]
+sources: []
+added: 2026-09-09

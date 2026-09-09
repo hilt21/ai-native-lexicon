@@ -11,6 +11,16 @@ export const CATEGORIES = [
   'Knowledge',
   'UX',
   'Organization',
+  'Instruction',
+  'Memory',
+  'State',
+  'Goal',
+  'Reasoning',
+  'Capability',
+  'Feedback',
+  'Verification',
+  'Failure Handling',
+  'Multi-Agent',
 ];
 
 export async function validateConceptDirectory(directory) {

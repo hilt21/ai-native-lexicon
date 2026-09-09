@@ -1,0 +1,13 @@
+term: "Planning"
+zh: "规划"
+category: "Reasoning"
+status: "foundational"
+summary: "Decide what steps may be needed to reach the goal."
+definition: "Planning proposes actions and dependencies that could achieve a goal under current assumptions. A plan is a revisable guide, not evidence that actions occurred or a guarantee that the environment will behave as expected."
+why_it_matters: "A visible sequence helps identify missing prerequisites and choose checks before costly work begins."
+when_to_use: "Use it before a migration with ordered preparation, execution, and validation stages."
+anti_pattern: "Treating a detailed plan as completed work or refusing to revise it after contrary evidence."
+related: ["goal", "task-decomposition", "replanning"]
+tags: ["reasoning", "goal"]
+sources: []
+added: 2026-09-09

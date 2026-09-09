@@ -1,0 +1,13 @@
+term: "Retry"
+zh: "重试"
+category: "Failure Handling"
+status: "foundational"
+summary: "Try an unsuccessful operation again when appropriate."
+definition: "A retry repeats an operation after failure or an uncertain result under a bounded policy. It is appropriate for potentially transient problems, but must account for actions that may already have produced side effects."
+why_it_matters: "A controlled second attempt can overcome temporary failure without turning a brief outage into repeated writes or unbounded traffic."
+when_to_use: "Use it for a transient read failure with a limit and delay between attempts."
+anti_pattern: "Repeating a payment or write after a timeout without checking whether the first attempt succeeded."
+related: ["idempotent-action", "fallback", "budget"]
+tags: ["failure-handling", "idempotent-action"]
+sources: []
+added: 2026-09-09

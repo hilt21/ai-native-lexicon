@@ -1,0 +1,13 @@
+term: "Context Compression"
+zh: "上下文压缩"
+category: "Context"
+status: "evolving"
+summary: "Keep the important parts and make the story shorter."
+definition: "Context compression rewrites or encodes working information into a smaller representation. A useful compressed account preserves constraints, decisions, unresolved questions, and references; it cannot be assumed to preserve every detail."
+why_it_matters: "Long tasks need room for new observations without losing the facts that determine what the agent should do next."
+when_to_use: "Use it to summarize completed investigation steps while retaining exact identifiers and pending work."
+anti_pattern: "Replacing precise requirements with a vague summary that cannot support the next action."
+related: ["context-pruning", "load-bearing-facts", "context-handoff"]
+tags: ["context", "context-pruning"]
+sources: []
+added: 2026-09-09

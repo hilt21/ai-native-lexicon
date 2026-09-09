@@ -1,0 +1,13 @@
+term: "Retrieval"
+zh: "信息检索"
+category: "Knowledge"
+status: "foundational"
+summary: "Look up information when the task needs it."
+definition: "Retrieval locates information in an external store using a query, filters, or direct identifiers. It may use lexical search, semantic search, or database lookup; returning a result does not establish that the result is correct."
+why_it_matters: "Looking up task-specific facts expands what an agent can use beyond its current context and the model's learned knowledge."
+when_to_use: "Use it to find the relevant policy section before answering a policy question."
+anti_pattern: "Treating the highest-ranked search hit as authoritative without checking its contents."
+related: ["rag", "retrieval-contract", "context-selection"]
+tags: ["knowledge", "rag"]
+sources: []
+added: 2026-09-09

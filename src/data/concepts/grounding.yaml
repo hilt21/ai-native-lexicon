@@ -1,0 +1,13 @@
+term: "Grounding"
+zh: "事实锚定"
+category: "Feedback"
+status: "foundational"
+summary: "Check ideas against evidence from the real world."
+definition: "Grounding connects a claim or decision to relevant external information, such as source text, measurements, or observed system state. Sources can be incomplete or wrong, so the connection must be assessed rather than assumed."
+why_it_matters: "Explicit support reduces reliance on plausible-sounding generation and makes claims easier to inspect and challenge."
+when_to_use: "Use it to link a factual answer to a current source that actually supports the specific statement."
+anti_pattern: "Adding a citation that mentions the topic but does not support the asserted claim."
+related: ["evidence", "retrieval", "provenance-chain"]
+tags: ["feedback", "evidence"]
+sources: []
+added: 2026-09-09

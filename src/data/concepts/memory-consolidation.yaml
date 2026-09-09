@@ -1,0 +1,13 @@
+term: "Memory Consolidation"
+zh: "记忆整合"
+category: "Memory"
+status: "evolving"
+summary: "Turn many experiences into a useful reusable lesson."
+definition: "Memory consolidation reviews multiple observations or episodes and produces a more compact durable record. It should distinguish repeated evidence from tentative interpretation and preserve references needed to revisit the lesson."
+why_it_matters: "Organizing experience into scoped lessons makes retrieval more useful than accumulating duplicate notes and contradictory fragments."
+when_to_use: "Use it after several incidents reveal the same verified failure mechanism and remedy."
+anti_pattern: "Promoting a single speculative explanation into a permanent rule for every future task."
+related: ["long-term-memory", "reflection", "provenance-chain"]
+tags: ["memory", "long-term-memory"]
+sources: []
+added: 2026-09-09

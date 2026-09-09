@@ -22,7 +22,7 @@
     "term": { "type": "string", "minLength": 2 },
     "zh": { "type": "string", "minLength": 1 },
     "category": {
-      "enum": ["Context", "Agent Architecture", "Harness", "Governance", "Execution", "Knowledge", "UX", "Organization"]
+      "enum": ["Context", "Agent Architecture", "Harness", "Governance", "Execution", "Knowledge", "UX", "Organization", "Instruction", "Memory", "State", "Goal", "Reasoning", "Capability", "Feedback", "Verification", "Failure Handling", "Multi-Agent"]
     },
     "status": { "enum": ["foundational", "emerging", "evolving", "contested"] },
     "summary": { "type": "string", "minLength": 40, "maxLength": 240 },

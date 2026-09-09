@@ -1,0 +1,13 @@
+term: "Evidence"
+zh: "证据"
+category: "Verification"
+status: "foundational"
+summary: "Show support that the work was really done."
+definition: "Evidence is inspectable information supporting or challenging a specific claim, such as test output or an observed state change. Its strength depends on relevance, provenance, and scope; a success message is not universal proof."
+why_it_matters: "Reviewers need a basis for accepting completion claims without reconstructing every action or trusting the agent's confidence."
+when_to_use: "Use it to support a bug-fix claim with a reproduction and a passing check of the corrected behavior."
+anti_pattern: "Presenting an unrelated passing test as proof that every requested behavior works."
+related: ["verification", "artifact", "provenance-chain"]
+tags: ["verification", "provenance"]
+sources: []
+added: 2026-09-09

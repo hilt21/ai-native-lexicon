@@ -1,0 +1,13 @@
+term: "Forgetting"
+zh: "遗忘"
+category: "Memory"
+status: "evolving"
+summary: "Remove old or low-value memories from future use."
+definition: "Forgetting retires, deletes, or excludes stored information from future retrieval according to retention and relevance rules. Unlike context pruning, it changes future memory availability; deleting a note does not erase model training data."
+why_it_matters: "Memory that never expires can preserve obsolete assumptions and retain information beyond the period in which it is useful."
+when_to_use: "Use it to retire superseded project guidance or implement an agreed memory retention period."
+anti_pattern: "Deleting a visible note while leaving its duplicate indexed and available for retrieval."
+related: ["long-term-memory", "context-pruning", "memory-consolidation"]
+tags: ["memory", "long-term-memory"]
+sources: []
+added: 2026-09-09

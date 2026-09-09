@@ -1,0 +1,13 @@
+term: "Observation"
+zh: "观测"
+category: "Feedback"
+status: "foundational"
+summary: "Look at what really happened after an action."
+definition: "An observation is information received from the environment, such as a tool result, file contents, or a measured status. It records what was exposed at a time and scope; interpreting its meaning is a separate step."
+why_it_matters: "Agents need external signals to distinguish intended effects from actual outcomes and notice changing conditions."
+when_to_use: "Use it to inspect a command's exit status and output before deciding whether the step succeeded."
+anti_pattern: "Treating the planned effect of an action as though it had already been observed."
+related: ["feedback", "agent-loop", "evidence"]
+tags: ["feedback", "environment"]
+sources: []
+added: 2026-09-09

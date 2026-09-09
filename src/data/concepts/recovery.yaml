@@ -1,0 +1,13 @@
+term: "Recovery"
+zh: "恢复"
+category: "Failure Handling"
+status: "foundational"
+summary: "Continue work after an interruption or failure."
+definition: "Recovery restores the ability to make progress after disruption by reconciling saved state with current reality. It may resume, retry, or choose another path; it must account for effects that occurred before the interruption."
+why_it_matters: "A recoverable process avoids losing completed work or duplicating actions when execution stops unexpectedly."
+when_to_use: "Use it after a process restart to determine which steps completed and what can safely run next."
+anti_pattern: "Restarting the entire workflow without checking which external actions already succeeded."
+related: ["checkpoint-resume", "checkpoint", "retry"]
+tags: ["failure-handling", "checkpoint-resume"]
+sources: []
+added: 2026-09-09

@@ -1,0 +1,13 @@
+term: "Budget"
+zh: "预算"
+category: "Governance"
+status: "foundational"
+summary: "Limit time, tokens, money, or tool calls for work."
+definition: "A budget bounds one or more resources available to a task, such as duration, token use, spending, or invocations. Useful enforcement tracks consumption and defines what happens at the limit; a target alone is not a hard cap."
+why_it_matters: "Explicit limits keep open-ended execution from consuming resources indefinitely and force decisions about useful remaining work."
+when_to_use: "Use it to cap an agent run and reserve enough capacity to report results or save resumable state."
+anti_pattern: "Continuing to call tools after the limit while merely noting that the budget was exceeded."
+related: ["context-budget", "termination", "bounded-autonomy"]
+tags: ["governance", "context-budget"]
+sources: []
+added: 2026-09-09
