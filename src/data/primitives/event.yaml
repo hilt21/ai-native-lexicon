@@ -1,0 +1,35 @@
+term: Event
+zh: 事件
+layer: Dynamics & Control
+summary: A significant occurrence distinguished from the interpretation or observation of that occurrence.
+definitions:
+  - name: Event
+    text: A fact that something significant occurred at an identifiable point or interval in time.
+scope: Systems that react to changes or need a history of meaningful occurrences.
+usage: Drive transitions from recorded facts rather than inferred narrative progress.
+composition:
+  pattern: Event → Rule → State Transition
+  example: A tool-completed event records the job identifier, completion time, and result location.
+considerations:
+  - Separate the occurrence from an interpretation of its cause.
+  - Delivery order and duplication may differ from occurrence order.
+distinctions: An event is an occurrence; an observation is information obtained about it, and a trace relates
+  multiple recorded steps.
+ownership:
+  kind: executor
+  rationale: Runtime instrumentation and event stores capture occurrences with identifiers and timestamps.
+priority:
+  level: P0
+  scope: Systems that react to changes or need a history of meaningful occurrences.
+  rationale: Systems reacting to change need identifiable occurrences to explain transitions and separate actual
+    events from inferred progress.
+related:
+  - state
+  - rule-policy
+  - observation-trace
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Event
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

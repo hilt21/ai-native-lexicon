@@ -8,6 +8,6 @@ why_it_matters: Context quality degrades over time even when token limits are no
 when_to_use: Use it in persistent agents, collaborative sessions, changing environments, and any workflow that incorporates external text.
 anti_pattern: Appending every observation forever and relying on the model to resolve contradictions by itself.
 related: [context-engineering, context-budget, load-bearing-facts, memory-architecture]
-tags: [context, maintenance, trust]
+primitives: ["context", "evidence"]
 sources: []
 added: 2026-08-14

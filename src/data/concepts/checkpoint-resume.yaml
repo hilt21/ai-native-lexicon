@@ -8,6 +8,6 @@ why_it_matters: Long-running agents will encounter restarts, approvals, rate lim
 when_to_use: Use it in workflows lasting beyond one request or containing costly and irreversible steps.
 anti_pattern: Saving only the conversation transcript and assuming it is an authoritative record of committed side effects.
 related: [idempotent-action, handoff, plan-execute-observe, load-bearing-facts]
-tags: [execution, persistence, recovery]
+primitives: ["execution", "recovery", "state"]
 sources: []
 added: 2026-08-14

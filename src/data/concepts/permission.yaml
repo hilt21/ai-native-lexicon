@@ -8,6 +8,6 @@ why_it_matters: "Scoped access limits the impact of mistakes and makes the bound
 when_to_use: "Use it to give an agent read access to one project while withholding unrelated resources."
 anti_pattern: "Granting broad write credentials for a task that only requires reading a single document."
 related: ["permission-boundary", "approval", "tool"]
-tags: ["governance", "permission-boundary"]
+primitives: ["permission", "actor", "resource"]
 sources: []
 added: 2026-09-09

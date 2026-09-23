@@ -8,6 +8,6 @@ why_it_matters: "Window limits constrain how much history, retrieved text, and o
 when_to_use: "Use it when sizing long document analysis and reserving room for the model's response."
 anti_pattern: "Filling the available input capacity and assuming all details will be used equally well."
 related: ["context-budget", "context-selection", "context-compression"]
-tags: ["context", "context-budget"]
+primitives: ["context", "resource", "constraint"]
 sources: []
 added: 2026-09-09

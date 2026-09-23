@@ -8,6 +8,6 @@ why_it_matters: "A narrow suitable tool can reduce errors and unnecessary access
 when_to_use: "Use it when choosing between searching filenames, reading a known file, and querying a service."
 anti_pattern: "Running a broad shell command when a scoped read operation would answer the question."
 related: ["tool", "tool-calling", "permission"]
-tags: ["reasoning", "tool"]
+primitives: ["reasoning", "capability-tool", "permission"]
 sources: []
 added: 2026-09-09

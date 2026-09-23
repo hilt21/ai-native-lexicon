@@ -1,0 +1,36 @@
+term: Stakeholder
+zh: 利益相关者
+layer: Purpose & Governance
+summary: A person or group with influence over, exposure to, or an interest in a system and its consequences.
+definitions:
+  - name: Stakeholder
+    text: A person or group that influences a system, is affected by it, or bears consequences of its operation.
+scope: Socio-technical systems with multiple interests or external effects.
+usage: Expose whose needs, authority, and risks must enter design decisions.
+composition:
+  pattern: Stakeholder + Purpose + Boundary → Policy
+  example: A hiring assistant accounts for candidates, recruiters, reviewers, and people affected by inaccurate
+    recommendations.
+considerations:
+  - Direct users are not the only affected parties.
+  - Do not infer consent or authority from a generated stakeholder list.
+distinctions: A stakeholder has an interest or exposure; an actor performs actions. One party can occupy both roles.
+ownership:
+  kind: hybrid
+  rationale: LLMs can help discover perspectives; people validate representation and software records explicit
+    responsibilities.
+priority:
+  level: P1
+  scope: Socio-technical systems with multiple interests or external effects.
+  rationale: Explicit stakeholder modeling is a strong default when benefits, risks, and decision authority are
+    distributed across people.
+related:
+  - purpose
+  - actor
+  - boundary-environment
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Stakeholder
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

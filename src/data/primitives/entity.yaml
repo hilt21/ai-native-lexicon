@@ -1,0 +1,34 @@
+term: Entity
+zh: 实体
+layer: Structure & Representation
+summary: An object whose stable identity allows it to be referenced as its attributes and state change.
+definitions:
+  - name: Entity
+    text: An object with a stable identity that can be referenced across changes to its attributes or state.
+scope: Systems that track persistent objects and their relationships.
+usage: Give durable work objects stable identities rather than relying on changing descriptions.
+composition:
+  pattern: Entity + Relation + State
+  example: A report retains its report ID across drafts, approvals, and publication events.
+considerations:
+  - Do not create a new entity for every presentation of the same object.
+  - Choose identity and lifecycle rules before spreading references.
+distinctions: An entity persists through state changes; a view presents selected information about it.
+ownership:
+  kind: executor
+  rationale: Databases and typed records preserve identity, references, and lifecycle rules.
+priority:
+  level: P0
+  scope: Systems that track persistent objects and their relationships.
+  rationale: Systems tracking persistent objects need identity rules to distinguish a changed object from a
+    different object.
+related:
+  - relation
+  - state
+  - view-projection
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Entity
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

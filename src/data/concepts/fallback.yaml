@@ -8,6 +8,6 @@ why_it_matters: "An alternative path can keep useful work moving while making an
 when_to_use: "Use it when a primary retrieval service is unavailable and an approved alternate source can answer the request."
 anti_pattern: "Silently replacing an authoritative lookup with an unsupported guess."
 related: ["retry", "replanning", "failure-containment"]
-tags: ["failure-handling", "retry"]
+primitives: ["recovery", "capability-tool", "constraint"]
 sources: []
 added: 2026-09-09

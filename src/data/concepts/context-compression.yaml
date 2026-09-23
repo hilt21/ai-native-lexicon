@@ -8,6 +8,6 @@ why_it_matters: "Long tasks need room for new observations without losing the fa
 when_to_use: "Use it to summarize completed investigation steps while retaining exact identifiers and pending work."
 anti_pattern: "Replacing precise requirements with a vague summary that cannot support the next action."
 related: ["context-pruning", "load-bearing-facts", "context-handoff"]
-tags: ["context", "context-pruning"]
+primitives: ["context", "constraint"]
 sources: []
 added: 2026-09-09

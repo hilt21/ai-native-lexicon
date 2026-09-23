@@ -1,0 +1,36 @@
+term: Purpose
+zh: 目的
+layer: Purpose & Governance
+summary: The intended benefit that explains why a system should exist and whom it should serve.
+definitions:
+  - name: Purpose
+    text: The reason a system exists, expressed through the change it should create and the people it should serve.
+scope: Systems whose design requires tradeoffs among competing outcomes.
+usage: Align design choices around the intended benefit before selecting mechanisms.
+composition:
+  pattern: Purpose → Success Criterion → Feedback
+  example: A support assistant exists to resolve customer problems; its criteria include correct resolution
+    rather than merely shorter replies.
+considerations:
+  - Name affected people, including those who do not operate the system.
+  - People responsible for the system must confirm value choices; model suggestions do not establish the
+    purpose.
+distinctions: Purpose explains why the system exists; a goal identifies a desired result within that purpose.
+ownership:
+  kind: hybrid
+  rationale: An LLM can surface alternatives and clarify intent; people confirm the purpose and software
+    preserves the accepted statement.
+priority:
+  level: P0
+  scope: Systems whose design requires tradeoffs among competing outcomes.
+  rationale: Without an explicit purpose, locally successful design choices can pursue incompatible outcomes.
+related:
+  - stakeholder
+  - goal
+  - success-criterion
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Purpose
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

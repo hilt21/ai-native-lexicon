@@ -8,6 +8,6 @@ why_it_matters: "Reliable continuation needs a shared answer about what has happ
 when_to_use: "Use it to distinguish a queued action from a running, failed, or completed action."
 anti_pattern: "Inferring completion solely from the agent saying that it intends to perform an action."
 related: ["shared-state", "checkpoint", "working-memory"]
-tags: ["state", "shared-state"]
+primitives: ["state"]
 sources: []
 added: 2026-09-09

@@ -8,6 +8,6 @@ why_it_matters: "Separating the request from execution makes argument validation
 when_to_use: "Use it when an agent needs to query a database and use the returned rows in its next decision."
 anti_pattern: "Reporting success from the generated call arguments before receiving and checking the tool result."
 related: ["tool", "observation", "permission"]
-tags: ["execution", "tool"]
+primitives: ["execution", "capability-tool", "interface", "observation-trace"]
 sources: []
 added: 2026-09-09

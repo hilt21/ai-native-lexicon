@@ -1,0 +1,36 @@
+term: Execution
+zh: 执行
+layer: Cognition & Action
+summary: The attempt to perform an authorized operation that can affect an actual system or environment.
+definitions:
+  - name: Execution
+    text: The attempt to carry out an authorized action through mechanisms that can affect the actual system or
+      environment.
+scope: Systems that perform operations rather than only describe proposed work.
+usage: Separate proposed intent from attempted actions and confirmed effects.
+composition:
+  pattern: Validated Intent + Permission → Executor → Observed Result
+  example: A coding agent requests a file edit; the filesystem operation and subsequent read establish what changed.
+considerations:
+  - A successful request receipt does not prove the intended effect occurred.
+  - Handle partial failure and uncertain external outcomes explicitly.
+distinctions: Execution is action, not narration, planning, or a guarantee of successful state change.
+ownership:
+  kind: executor
+  rationale: Functions, scripts, APIs, transactions, and state machines perform actions and expose their actual
+    outcomes.
+priority:
+  level: P0
+  scope: Systems that perform operations rather than only describe proposed work.
+  rationale: Acting systems must distinguish proposed intent from attempted operations and confirmed effects to
+    make truthful progress claims.
+related:
+  - permission
+  - observation-trace
+  - recovery
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Execution
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

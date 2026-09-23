@@ -8,6 +8,6 @@ why_it_matters: "Correct decisions require relevant facts to be available at the
 when_to_use: "Use it when assembling the request, current file contents, and constraints for a coding step."
 anti_pattern: "Assuming an agent knows a fact merely because it exists in a repository or earlier session."
 related: ["context-window", "context-selection", "context-engineering"]
-tags: ["context", "context-window"]
+primitives: ["context"]
 sources: []
 added: 2026-09-09

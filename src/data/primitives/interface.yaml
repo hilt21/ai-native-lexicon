@@ -1,0 +1,34 @@
+term: Interface
+zh: 接口
+layer: Structure & Representation
+summary: A contract describing how system units exchange inputs, outputs, effects, and obligations.
+definitions:
+  - name: Interface
+    text: An explicit contract governing how system units exchange inputs, outputs, and obligations.
+scope: Systems composed of interacting components or external services.
+usage: Expose a small stable contract while allowing internal implementation changes.
+composition:
+  pattern: Module ↔ Interface ↔ Module
+  example: A retrieval tool accepts a query and returns passages with source identifiers and a stated failure format.
+considerations:
+  - Include errors and side effects, not only successful output shapes.
+  - Exposing internal details increases coupling and caller burden.
+distinctions: An interface defines an exchange contract; a module contains the implementation behind it.
+ownership:
+  kind: executor
+  rationale: Schemas, APIs, validation, and protocol implementations make the contract executable.
+priority:
+  level: P0
+  scope: Systems composed of interacting components or external services.
+  rationale: Interacting units need explicit contracts to coordinate behavior and detect incompatible
+    assumptions at their boundaries.
+related:
+  - module
+  - capability-tool
+  - boundary-environment
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Interface
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

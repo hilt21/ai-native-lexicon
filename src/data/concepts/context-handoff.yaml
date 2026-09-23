@@ -8,6 +8,6 @@ why_it_matters: "A receiver can continue efficiently only when the packet explai
 when_to_use: "Use it when an investigator sends findings to an implementer or a session reaches its context limit."
 anti_pattern: "Sending an unfiltered transcript without a current objective, evidence pointers, or next step."
 related: ["handoff", "context-compression", "working-memory"]
-tags: ["context", "handoff"]
+primitives: ["context", "state"]
 sources: []
 added: 2026-09-09

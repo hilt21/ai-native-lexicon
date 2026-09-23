@@ -8,6 +8,6 @@ why_it_matters: "A recoverable process avoids losing completed work or duplicati
 when_to_use: "Use it after a process restart to determine which steps completed and what can safely run next."
 anti_pattern: "Restarting the entire workflow without checking which external actions already succeeded."
 related: ["checkpoint-resume", "checkpoint", "retry"]
-tags: ["failure-handling", "checkpoint-resume"]
+primitives: ["recovery", "state"]
 sources: []
 added: 2026-09-09

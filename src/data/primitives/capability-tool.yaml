@@ -1,0 +1,39 @@
+term: Capability / Tool
+zh: 能力与工具
+layer: Cognition & Action
+summary: An ability to produce outcomes, together with the callable operations that may make that ability available.
+definitions:
+  - name: Capability
+    text: An ability to produce a class of outcomes under specified conditions; it may be provided by a person,
+      model, process, or tool.
+  - concept: tool
+scope: Systems that act through identifiable abilities and callable operations.
+usage: Expose bounded operations with clear inputs, effects, and observable results.
+composition:
+  pattern: Reasoning → Tool Input → Execution → Evidence
+  example: A document agent invokes a search tool that returns identified source passages rather than
+    unrestricted database access.
+considerations:
+  - Capability does not imply permission.
+  - Tool execution may fail or have nondeterministic external effects; define those semantics explicitly.
+distinctions: A capability is an ability; a tool is a callable interface that realizes some ability. A skill
+  need not be an executable tool.
+ownership:
+  kind: executor
+  rationale: Runtime implementations execute callable operations and report results; models may select tools
+    without becoming their authority.
+priority:
+  level: P0
+  scope: Systems that act through identifiable abilities and callable operations.
+  rationale: An acting system must identify what operations are available and what effects they can produce
+    before selecting or authorizing them.
+related:
+  - interface
+  - permission
+  - execution
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Capability / Tool
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

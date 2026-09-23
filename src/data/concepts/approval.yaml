@@ -8,6 +8,6 @@ why_it_matters: "Review at consequential boundaries keeps action aligned with hu
 when_to_use: "Use it before an action whose defined policy requires a person to review the concrete proposed result."
 anti_pattern: "Treating silence or elapsed time as acceptance of a pending approval request."
 related: ["permission", "human-on-the-loop", "guardrail"]
-tags: ["governance", "permission"]
+primitives: ["permission", "actor"]
 sources: []
 added: 2026-09-09

@@ -8,6 +8,6 @@ why_it_matters: Useful agents need room to act, but unconstrained action makes f
 when_to_use: Use it whenever an agent can change external state, spend resources, contact people, or run for an extended period.
 anti_pattern: Describing an agent as supervised while enforcing no technical limit on what it can do.
 related: [progressive-autonomy, permission-boundary, failure-containment, thin-kernel]
-tags: [autonomy, safety, authorization]
+primitives: ["permission", "boundary-environment", "constraint"]
 sources: []
 added: 2026-08-14

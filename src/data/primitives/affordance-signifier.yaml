@@ -1,0 +1,37 @@
+term: Affordance / Signifier
+zh: 可行动性与提示
+layer: Cognition & Action
+summary: The actions available to an actor and the perceivable cues that help the actor discover them.
+definitions:
+  - name: Affordance
+    text: An action possibility arising from the relationship between an actor and its environment or interface.
+  - name: Signifier
+    text: A perceivable cue that communicates where or how an action can be taken.
+scope: Interfaces through which people or agents discover available actions.
+usage: Make supported actions discoverable and align cues with actual behavior.
+composition:
+  pattern: Capability + Signifier → Discoverable Action
+  example: A visible Resume control points to a real resumable task, while tool documentation tells an agent
+    which resume operation to call.
+considerations:
+  - A visible cue does not guarantee an action is available or authorized.
+  - Explain disabled or conditional actions instead of inviting impossible attempts.
+distinctions: Affordance concerns the possible action; signifier concerns the cue that makes it discoverable.
+ownership:
+  kind: hybrid
+  rationale: Interface code implements actions and availability; LLMs can help explain options in context.
+priority:
+  level: P1
+  scope: Interfaces through which people or agents discover available actions.
+  rationale: Interfaces should explicitly connect action possibilities to understandable cues when people or
+    agents must discover how to proceed.
+related:
+  - interface
+  - capability-tool
+  - permission
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Affordance / Signifier
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

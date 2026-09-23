@@ -8,6 +8,6 @@ why_it_matters: "Task separation reduces accidental reuse of another task's inst
 when_to_use: "Use it when separate agents analyze different customers or independent workstreams."
 anti_pattern: "Assuming separate chat histories prevent agents from reading the same unrestricted storage."
 related: ["context-selection", "permission-boundary", "delegation"]
-tags: ["context", "context-selection"]
+primitives: ["context", "boundary-environment"]
 sources: []
 added: 2026-09-09

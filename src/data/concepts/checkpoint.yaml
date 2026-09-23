@@ -8,6 +8,6 @@ why_it_matters: "A restart point limits repeated work after interruption and hel
 when_to_use: "Use it after a completed batch before beginning the next stage of a long task."
 anti_pattern: "Saving conversation text without recording which external writes actually succeeded."
 related: ["checkpoint-resume", "recovery", "state"]
-tags: ["state", "checkpoint-resume"]
+primitives: ["state", "recovery"]
 sources: []
 added: 2026-09-09

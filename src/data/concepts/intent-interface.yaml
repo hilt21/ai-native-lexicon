@@ -8,6 +8,6 @@ why_it_matters: Agents can plan across tools, but users remain responsible for o
 when_to_use: Use it for workflows where users know the desired result better than the exact sequence of operations.
 anti_pattern: Replacing a structured workflow with an empty chat box and expecting users to discover every necessary constraint.
 related: [graceful-intervention, context-engineering, delegation-contract, inspectable-agency]
-tags: [ux, intent, interaction]
+primitives: ["interface", "goal", "boundary-environment"]
 sources: []
 added: 2026-08-14

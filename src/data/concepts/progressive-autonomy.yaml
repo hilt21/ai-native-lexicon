@@ -8,6 +8,6 @@ why_it_matters: It aligns deployment risk with demonstrated capability. Teams ca
 when_to_use: Use it when introducing agents into consequential workflows or broadening an existing agent's scope.
 anti_pattern: Granting permanent broad access after a successful pilot with narrow, curated tasks.
 related: [bounded-autonomy, human-on-the-loop, permission-boundary, agent-ready-organization]
-tags: [governance, autonomy, rollout]
+primitives: ["permission", "verification-evaluation", "recovery"]
 sources: []
 added: 2026-08-14

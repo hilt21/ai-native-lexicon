@@ -1,0 +1,36 @@
+term: Buffer / Queue
+zh: 缓冲与队列
+layer: Dynamics & Control
+summary: Temporary holding capacity and ordering structures that separate production from later processing.
+definitions:
+  - name: Buffer
+    text: Temporary capacity that holds work or data between producers and consumers with different rates.
+  - name: Queue
+    text: A structure that organizes pending items for later processing under an explicit selection order.
+scope: Systems with bursty arrivals, asynchronous processing, or unequal processing rates.
+usage: Absorb short-term variation while exposing backlog and admission limits.
+composition:
+  pattern: Producer → Buffer → Consumer
+  example: A batch of document requests waits in a bounded queue before model workers process it.
+considerations:
+  - Bound capacity and define overload behavior.
+  - More buffering can hide inadequate capacity and increase waiting time.
+distinctions: A queue is an organized form of buffering; not every buffer is first-in-first-out.
+ownership:
+  kind: executor
+  rationale: Queue services and runtime code own ordering, limits, retries, and acknowledgement semantics.
+priority:
+  level: P1
+  scope: Systems with bursty arrivals, asynchronous processing, or unequal processing rates.
+  rationale: Buffers and queues should be explicit when unequal rates or bursty arrivals create waiting,
+    overload, or ordering requirements.
+related:
+  - flow
+  - delay
+  - resource
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Buffer / Queue
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

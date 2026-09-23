@@ -1,6 +1,6 @@
----
 import type { Concept } from '../lib/catalog';
 import { categoryMeta, pathWithBase } from '../lib/catalog';
+import CatalogRow from './CatalogRow.astro';
 
 interface Props {
   concept: Concept;
@@ -12,17 +12,13 @@ interface Props {
 const { concept, number, showCategory = true, searchText } = Astro.props;
 ---
 
-<a
-  class:list={['concept-row', { 'concept-row-unclassified': !showCategory, 'concept-row-search': number === undefined }]}
+<CatalogRow
   href={pathWithBase(`/concepts/${concept.id}/`)}
-  data-search={searchText}
->
-  {number !== undefined && <span class="concept-number">{String(number).padStart(2, '0')}</span>}
-  <span class="concept-name">
-    <strong>{concept.data.term}</strong>
-    <span>{concept.data.zh}</span>
-  </span>
-  {showCategory && <span class="concept-category">{categoryMeta[concept.data.category].code}</span>}
-  <span class="concept-summary">{concept.data.summary}</span>
-  <span class="concept-arrow" aria-hidden="true">↗</span>
-</a>
+  title={concept.data.term}
+  secondary={concept.data.zh}
+  marker={categoryMeta[concept.data.category].code}
+  summary={concept.data.summary}
+  searchText={searchText}
+  number={number === undefined ? undefined : String(number).padStart(2, '0')}
+  showMarker={showCategory}
+/>

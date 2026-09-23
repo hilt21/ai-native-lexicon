@@ -8,6 +8,6 @@ why_it_matters: "Specialized workers can contribute effectively when ownership, 
 when_to_use: "Use it to assign an independent analysis while retaining responsibility for the final synthesis."
 anti_pattern: "Asking several agents to handle the problem without defining who owns which deliverable."
 related: ["delegation-contract", "subtask", "handoff"]
-tags: ["execution", "delegation-contract"]
+primitives: ["execution", "actor", "goal", "permission"]
 sources: []
 added: 2026-09-09

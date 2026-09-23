@@ -1,0 +1,35 @@
+term: Harness
+zh: 智能体支架
+layer: Runtime & Trust
+summary: The runtime layer that coordinates AI reasoning with context, tools, state, permissions, and checks.
+definitions:
+  - concept: harness
+scope: AI agent runtimes coordinating model inference with tools, state, and operational controls.
+usage: Connect reasoning to bounded execution with inspectable state and outcomes.
+composition:
+  pattern: Context + Reasoning + Tools + Permissions + Verification → Agent Run
+  example: A coding runtime supplies relevant files, executes approved tools, captures results, and checks
+    completion criteria.
+considerations:
+  - Keep the control layer small enough to inspect and replace.
+  - Remove model-specific workarounds when evidence shows they are no longer needed.
+distinctions: Harness is an AI runtime coordination layer, not a synonym for every runtime, framework, or tool collection.
+ownership:
+  kind: hybrid
+  rationale: Code owns state and enforcement; models supply bounded reasoning within the coordinated runtime.
+priority:
+  level: P0
+  scope: AI agent runtimes coordinating model inference with tools, state, and operational controls.
+  rationale: AI agent systems need an explicit runtime owner for coordination and enforcement that cannot be
+    delegated to model output alone.
+related:
+  - context
+  - execution
+  - permission
+  - verification-evaluation
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Harness
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

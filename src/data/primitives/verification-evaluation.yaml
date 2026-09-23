@@ -1,0 +1,38 @@
+term: Verification / Evaluation
+zh: 验证与评估
+layer: Runtime & Trust
+summary: Checks of particular requirements and assessments of broader quality or performance using selected
+  evidence and criteria.
+definitions:
+  - concept: verification
+  - concept: evaluation
+scope: Systems that need defensible judgments about individual results or broader quality.
+usage: Compare evidence with explicit criteria before claiming success or adopting changes.
+composition:
+  pattern: Evidence + Criteria + Invariants → Verdict
+  example: A report pipeline checks required source links mechanically and evaluates answer relevance on a
+    representative query set.
+considerations:
+  - Passing structural checks does not establish semantic correctness.
+  - An aggregate quality score does not verify every individual result.
+distinctions: Verification checks a particular requirement or result; evaluation assesses quality or
+  performance under a chosen methodology.
+ownership:
+  kind: hybrid
+  rationale: Code performs formal checks; LLMs can assist semantic assessment with explicit criteria, evidence,
+    and appropriate review.
+priority:
+  level: P0
+  scope: Systems that need defensible judgments about individual results or broader quality.
+  rationale: Systems need an explicit basis for judging results so that plausible output and aggregate scores do
+    not masquerade as verified success.
+related:
+  - evidence
+  - success-criterion
+  - invariant
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Verification / Evaluation
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

@@ -1,0 +1,33 @@
+term: Module
+zh: 模块
+layer: Structure & Representation
+summary: An implementation unit that hides related decisions and capabilities behind an interface.
+definitions:
+  - name: Module
+    text: A unit that encapsulates related capabilities and internal design decisions behind an interface.
+scope: Systems with responsibilities that can be separated without excessive cross-boundary coordination.
+usage: Hide decisions likely to change while keeping callers simple.
+composition:
+  pattern: Module = Interface + Hidden Decisions
+  example: A retrieval module owns ranking and indexing choices behind a stable search interface.
+considerations:
+  - A forwarding wrapper may add navigation cost without hiding meaningful complexity.
+  - Evaluate module boundaries against actual change patterns.
+distinctions: A module is an implementation boundary; hierarchy describes nesting among units.
+ownership:
+  kind: executor
+  rationale: Code boundaries and encapsulated implementations enforce the separation.
+priority:
+  level: P1
+  scope: Systems with responsibilities that can be separated without excessive cross-boundary coordination.
+  rationale: Explicit modules are a strong default when encapsulating change reduces the knowledge callers must carry.
+related:
+  - interface
+  - hierarchy
+  - capability-tool
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Module
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

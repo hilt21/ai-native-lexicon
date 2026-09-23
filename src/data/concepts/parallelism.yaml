@@ -8,6 +8,6 @@ why_it_matters: "Independent tasks can finish sooner, but coordination costs and
 when_to_use: "Use it to analyze separate documents before combining their findings in a later synthesis."
 anti_pattern: "Running dependent edits simultaneously against the same files with no ownership or merge rules."
 related: ["coordination", "shared-state", "task-decomposition"]
-tags: ["execution", "coordination"]
+primitives: ["execution", "relation", "resource"]
 sources: []
 added: 2026-09-09

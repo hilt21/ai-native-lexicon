@@ -8,6 +8,6 @@ why_it_matters: "Keeping a concise current picture prevents repeated investigati
 when_to_use: "Use it to track hypotheses, completed checks, and the next unresolved issue while debugging."
 anti_pattern: "Using the full conversation as the only representation of current progress."
 related: ["state", "context", "long-term-memory"]
-tags: ["memory", "state"]
+primitives: ["memory", "state"]
 sources: []
 added: 2026-09-09

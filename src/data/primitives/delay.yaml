@@ -1,0 +1,35 @@
+term: Delay
+zh: 延迟
+layer: Dynamics & Control
+summary: The lag between an action, its effects, and the availability of information about those effects.
+definitions:
+  - name: Delay
+    text: Elapsed time between an action, a resulting change, and the availability of information about that
+      change.
+scope: Systems with asynchronous effects, waiting, or feedback loops.
+usage: Account for lag before interpreting missing results or issuing corrective actions.
+composition:
+  pattern: Action → Delay → Observation → Feedback
+  example: A deployment agent waits for health signals to settle before judging a rollout unsuccessful.
+considerations:
+  - Repeated correction before effects arrive can cause oscillation.
+  - Separate processing time, queue time, and observation lag when diagnosing delays.
+distinctions: Delay is elapsed lag; a time budget is a constraint on a resource.
+ownership:
+  kind: executor
+  rationale: Timers, timestamps, scheduling, and timeout policies measure and handle lag.
+priority:
+  level: P1
+  scope: Systems with asynchronous effects, waiting, or feedback loops.
+  rationale: Systems with asynchronous effects need explicit delay assumptions to avoid premature failure
+    judgments and excessive correction.
+related:
+  - control
+  - feedback
+  - buffer-queue
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Delay
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

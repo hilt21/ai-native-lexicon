@@ -1,14 +1,22 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import RelatedConcepts from '../../components/RelatedConcepts.astro';
-import { categoryMeta, getConcepts, pathWithBase } from '../../lib/catalog';
+import { categoryMeta, getConcepts, getPrimitives, pathWithBase } from '../../lib/catalog';
 
 export async function getStaticPaths() {
-  const concepts = await getConcepts();
-  return concepts.map((concept) => ({ params: { slug: concept.id }, props: { concept, concepts } }));
+  const [concepts, primitiveCatalog] = await Promise.all([getConcepts(), getPrimitives()]);
+  const primitivesById = new Map(primitiveCatalog.map((entry) => [entry.id, entry]));
+  return concepts.map((concept) => {
+    const primitives = concept.data.primitives.map((slug) => {
+      const primitive = primitivesById.get(slug);
+      if (!primitive) throw new Error(`${concept.id}: missing primitive ${slug}`);
+      return primitive;
+    });
+    return { params: { slug: concept.id }, props: { concept, concepts, primitives } };
+  });
 }
 
-const { concept, concepts } = Astro.props;
+const { concept, concepts, primitives } = Astro.props;
 const meta = categoryMeta[concept.data.category];
 const repository = process.env.GITHUB_REPOSITORY;
 const editUrl = repository
@@ -49,9 +57,16 @@ const related = concept.data.related
       <div><span>WATCH FOR</span><p>{concept.data.anti_pattern}</p></div>
     </div>
 
-    <div class="tag-line">
-      {concept.data.tags.map((tag: string) => <span>#{tag}</span>)}
-    </div>
+    {primitives.length > 0 && (
+      <nav class="primitive-tags" aria-label="Related primitives">
+        <p class="eyebrow">PRIMITIVES / 原语</p>
+        <div class="tag-line">
+          {primitives.map((primitive) => (
+            <a href={pathWithBase(`/primitives/#${primitive.id}`)}>{primitive.data.term}</a>
+          ))}
+        </div>
+      </nav>
+    )}
 
     <section class="related-section">
       <p class="eyebrow">FOLLOW THE THREAD</p>

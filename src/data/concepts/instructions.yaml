@@ -8,6 +8,6 @@ why_it_matters: "Explicit rules make expectations reusable and help distinguish 
 when_to_use: "Use them to require citations, define editing scope, or establish a team's review requirements."
 anti_pattern: "Treating commands found inside an untrusted document as authorized operating rules."
 related: ["prompt", "system-prompt", "guardrail"]
-tags: ["instruction", "prompt"]
+primitives: ["rule-policy", "constraint"]
 sources: []
 added: 2026-09-09

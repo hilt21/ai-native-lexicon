@@ -8,6 +8,6 @@ why_it_matters: "Separating baseline behavior from task requests makes the agent
 when_to_use: "Use it to define a support agent's scope, response style, and handling of unsupported requests."
 anti_pattern: "Putting secrets or access controls in a system prompt and assuming they are technically protected."
 related: ["instructions", "permission", "guardrail"]
-tags: ["instruction", "instructions"]
+primitives: ["rule-policy", "context"]
 sources: []
 added: 2026-09-09

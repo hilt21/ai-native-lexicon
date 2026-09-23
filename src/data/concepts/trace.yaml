@@ -8,6 +8,6 @@ why_it_matters: "A connected event record makes it easier to locate failures and
 when_to_use: "Use it to investigate which tool call introduced an incorrect value during a multi-step run."
 anti_pattern: "Logging only the final answer and calling it a complete execution trace."
 related: ["golden-trace", "observation", "inspectable-agency"]
-tags: ["verification", "golden-trace"]
+primitives: ["verification-evaluation", "observation-trace", "evidence"]
 sources: []
 added: 2026-09-09

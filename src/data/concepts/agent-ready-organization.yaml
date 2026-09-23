@@ -8,6 +8,6 @@ why_it_matters: Agents amplify the clarity or disorder already present in a syst
 when_to_use: Use it when assessing whether a team or process is prepared for consequential agent deployment.
 anti_pattern: Buying an agent platform before defining process ownership, source-of-truth data, and escalation paths.
 related: [delegation-contract, policy-as-code, progressive-autonomy, provenance-chain]
-tags: [organization, operations, readiness]
+primitives: ["state", "permission", "feedback"]
 sources: []
 added: 2026-08-14

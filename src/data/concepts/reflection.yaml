@@ -8,6 +8,6 @@ why_it_matters: "Reviewing the approach can reveal faulty assumptions before the
 when_to_use: "Use it after a failed attempt to compare the expected outcome with the observed result."
 anti_pattern: "Accepting a model's reassuring self-assessment in place of checking the underlying work."
 related: ["feedback", "verification", "replanning"]
-tags: ["reasoning", "feedback"]
+primitives: ["reasoning", "feedback"]
 sources: []
 added: 2026-09-09

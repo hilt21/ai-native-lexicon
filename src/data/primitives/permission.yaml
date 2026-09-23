@@ -1,0 +1,34 @@
+term: Permission
+zh: 权限
+layer: Runtime & Trust
+summary: The authorization that determines which operations an actor may perform on which resources.
+definitions:
+  - concept: permission
+scope: Systems where identities can read resources, invoke operations, or change state.
+usage: Make authorization explicit and enforce it at the point where effects occur.
+composition:
+  pattern: Actor + Requested Action + Permission → Allow or Deny
+  example: An agent may read a repository but needs a separately authorized operation to publish a release.
+considerations:
+  - Model output cannot grant itself authorization.
+  - Scope credentials to the operation and resource actually needed.
+distinctions: Permission determines authorization. Guardrails are broader controls that may also constrain
+  inputs, outputs, budgets, or behavior.
+ownership:
+  kind: executor
+  rationale: Authentication, access checks, and runtime enforcement determine which actions may proceed.
+priority:
+  level: P0
+  scope: Systems where identities can read resources, invoke operations, or change state.
+  rationale: Any system capable of affecting resources must separate available capability from authorized action
+    at the point of effect.
+related:
+  - actor
+  - constraint
+  - sandbox
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Permission / Guardrail 权限与护栏
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

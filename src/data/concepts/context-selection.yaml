@@ -8,6 +8,6 @@ why_it_matters: "Selective inputs reduce distraction and leave room for the evid
 when_to_use: "Use it to load the relevant function and test failure instead of an entire code repository."
 anti_pattern: "Including every retrieved document merely because there is still space in the window."
 related: ["context", "context-budget", "retrieval"]
-tags: ["context", "relevance"]
+primitives: ["context", "resource"]
 sources: []
 added: 2026-09-09

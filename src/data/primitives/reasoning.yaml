@@ -1,0 +1,38 @@
+term: Reasoning
+zh: 推理
+layer: Cognition & Action
+summary: The formation of interpretations and choices when information, meaning, or possible paths are not
+  fully specified.
+definitions:
+  - name: Reasoning
+    text: The process of forming interpretations and selecting possibilities from available information,
+      especially when meaning or paths are not fully specified.
+scope: AI agent systems handling semantic ambiguity, incomplete information, or open-ended choices.
+usage: Use model inference where selecting a useful action requires interpretation beyond fixed rules.
+composition:
+  pattern: Context + Goal → Reasoning → Proposed Plan
+  example: A debugging agent compares symptoms and code to propose which hypothesis to test next.
+considerations:
+  - Generated explanations can be plausible and wrong.
+  - Use fixed procedures when the decision is already fully specified.
+distinctions: Reasoning proposes or interprets; execution produces effects and verification checks claims.
+  Formal reasoning also exists outside LLMs.
+ownership:
+  kind: llm
+  rationale: LLMs are suitable for open-ended semantic inference; their conclusions remain proposals to be
+    checked before consequential use.
+priority:
+  level: P0
+  scope: AI agent systems handling semantic ambiguity, incomplete information, or open-ended choices.
+  rationale: Open-ended AI agent tasks require explicit reasoning responsibilities where fixed rules cannot
+    fully specify the next useful action.
+related:
+  - context
+  - plan
+  - verification-evaluation
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Reasoning
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

@@ -8,6 +8,6 @@ why_it_matters: Adding more agents multiplies coordination costs and failure pat
 when_to_use: Use it when a task spans specialized roles, independent workstreams, or external systems with different timing.
 anti_pattern: Spawning many agents without ownership boundaries, merge rules, or a single completion criterion.
 related: [handoff, delegation-contract, failure-containment, thin-kernel]
-tags: [multi-agent, coordination, control-flow]
+primitives: ["flow", "actor", "context"]
 sources: []
 added: 2026-08-14

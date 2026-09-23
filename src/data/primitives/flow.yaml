@@ -1,0 +1,34 @@
+term: Flow
+zh: 流
+layer: Dynamics & Control
+summary: The movement of information, work, material, or value through a system over time.
+definitions:
+  - name: Flow
+    text: Movement of information, work, material, or value between parts of a system over time.
+scope: Systems that transfer or transform work and information across stages.
+usage: Find bottlenecks by following end-to-end movement rather than optimizing isolated steps.
+composition:
+  pattern: Source → Transform → Sink
+  example: User requests pass through intake, retrieval, generation, review, and delivery.
+considerations:
+  - Faster generation can worsen a downstream review backlog.
+  - Track flow rate together with failure and waiting time.
+distinctions: A flow describes movement; a workflow specifies an organized sequence of activities that may carry that flow.
+ownership:
+  kind: executor
+  rationale: Pipelines, schedulers, and transport mechanisms implement and measure transfers.
+priority:
+  level: P0
+  scope: Systems that transfer or transform work and information across stages.
+  rationale: End-to-end movement determines whether local processing actually delivers useful results and where
+    bottlenecks accumulate.
+related:
+  - buffer-queue
+  - delay
+  - resource
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Flow
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

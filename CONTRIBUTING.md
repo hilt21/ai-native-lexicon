@@ -16,11 +16,16 @@ Create one kebab-case YAML file in `src/data/concepts/`. Every entry must includ
 - an original working definition that states the concept's boundary;
 - why it matters, when to use it, and a concrete anti-pattern;
 - two to six valid related-concept slugs;
+- a `primitives` array of valid primitive slugs (empty is allowed); do not use free-form `tags`;
 - optional sources only when they directly support origin, usage, or a factual claim.
 
 Do not fabricate a first use, author, or citation. The lexicon may define a useful working term without claiming who coined it.
 
 When adding a category, update `src/content.config.ts`, `schemas/concept.schema.json`, `scripts/concept-validation.mjs`, and `src/lib/catalog.ts` together, then run the full verification suite. Reuse existing concept slugs when updating or reclassifying entries.
+
+## Primitive entries
+
+Follow [the primitive content guide](./docs/primitives.md). Use `definitions: [{ concept: existing-slug }]` when a definition is already canonical in a concept. Add inline definitions only for new meanings. Referenced concepts must include the primitive in their `primitives` array. `related` on a primitive points to other primitives, not concepts; reverse concept links are derived automatically.
 
 ## Editorial test
 

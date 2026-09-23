@@ -8,6 +8,6 @@ why_it_matters: "RAG lets an application use an updateable knowledge source with
 when_to_use: "Use it when answering questions against a maintained document collection with source references."
 anti_pattern: "Assuming that attaching retrieved passages guarantees a factual or properly cited answer."
 related: ["retrieval", "grounding", "provenance-chain"]
-tags: ["knowledge", "retrieval"]
+primitives: ["context", "evidence", "capability-tool"]
 sources: [{"title": "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks", "url": "https://arxiv.org/abs/2005.11401"}]
 added: 2026-09-09

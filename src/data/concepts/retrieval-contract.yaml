@@ -8,6 +8,6 @@ why_it_matters: Retrieval quality cannot be judged only by whether some text was
 when_to_use: Use it when AI decisions depend on search, RAG, enterprise knowledge, or rapidly changing external facts.
 anti_pattern: Passing top-k text chunks to the model with no source identity, timestamp, or empty-result semantics.
 related: [memory-architecture, provenance-chain, context-engineering, context-hygiene]
-tags: [retrieval, rag, contracts]
+primitives: ["interface", "evidence", "constraint"]
 sources: []
 added: 2026-08-14

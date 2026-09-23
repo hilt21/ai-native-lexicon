@@ -8,6 +8,6 @@ why_it_matters: Separating stages makes failures local and visible. It prevents 
 when_to_use: Use it for multi-step tool use, external APIs, infrastructure changes, and workflows with uncertain outcomes.
 anti_pattern: Treating a proposed action as completed and continuing the plan without checking the result.
 related: [agent-loop, checkpoint-resume, inspectable-agency, deterministic-shell]
-tags: [execution, control-loop, observation]
+primitives: ["execution", "control", "observation-trace", "plan", "state"]
 sources: []
 added: 2026-08-14

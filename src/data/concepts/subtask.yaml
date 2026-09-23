@@ -8,6 +8,6 @@ why_it_matters: "Smaller units make complex work easier to schedule and verify w
 when_to_use: "Use it to separate document extraction from synthesis when the synthesis depends on extracted findings."
 anti_pattern: "Marking the parent complete merely because every worker submitted something."
 related: ["task", "task-decomposition", "coordination"]
-tags: ["goal", "task"]
+primitives: ["goal", "relation", "success-criterion"]
 sources: []
 added: 2026-09-09

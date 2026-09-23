@@ -8,6 +8,6 @@ why_it_matters: "Bounded work is easier to assign, verify, and recover than an o
 when_to_use: "Use it to ask an agent to fix a reproducible bug and demonstrate the required behavior."
 anti_pattern: "Assigning a broad role without identifying a deliverable or a condition for completion."
 related: ["goal", "subtask", "delegation-contract"]
-tags: ["goal", "scope"]
+primitives: ["goal", "boundary-environment", "constraint", "success-criterion"]
 sources: []
 added: 2026-09-09

@@ -8,6 +8,6 @@ why_it_matters: "Multiple capable workers can still duplicate effort or corrupt 
 when_to_use: "Use it when agents contribute independent changes that must be combined into a coherent final result."
 anti_pattern: "Starting parallel workers without defining write boundaries or responsibility for integration."
 related: ["orchestration", "parallelism", "shared-state"]
-tags: ["multi-agent", "orchestration"]
+primitives: ["actor", "relation", "rule-policy"]
 sources: []
 added: 2026-09-09

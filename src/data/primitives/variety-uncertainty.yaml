@@ -1,0 +1,39 @@
+term: Variety / Uncertainty
+zh: 多样性与不确定性
+layer: Cognition & Action
+summary: The range of relevant situations and the limits of knowledge about which situation holds or what will happen.
+definitions:
+  - name: Variety
+    text: The range of distinguishable states or situations relevant to a system and its possible responses.
+  - name: Uncertainty
+    text: Limited knowledge about which state holds, what will happen, or how well an explanation applies.
+scope: Systems facing heterogeneous conditions or incomplete information.
+usage: Match response options and evidence collection to the situations the system must handle.
+composition:
+  pattern: Environmental Variety → Response Options; Uncertainty → Observation
+  example: A support agent uses fixed routing for known request types and gathers more evidence for unfamiliar
+    failures.
+considerations:
+  - More autonomy is not automatically a better response to uncertainty.
+  - State uncertainty about facts separately from variability in the environment.
+distinctions: Many possible states can be well understood; a narrow situation can still be poorly known.
+  Variety and uncertainty are not interchangeable quantities.
+ownership:
+  kind: hybrid
+  rationale: Software tracks observable conditions and available responses; LLMs assist interpretation where
+    cases cannot be fully enumerated.
+priority:
+  level: P1
+  scope: Systems facing heterogeneous conditions or incomplete information.
+  rationale: Heterogeneous or incompletely known conditions require explicit response options and evidence needs
+    to avoid unjustified uniform behavior.
+related:
+  - model
+  - observation-trace
+  - reasoning
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Variety / Uncertainty
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

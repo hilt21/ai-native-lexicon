@@ -1,0 +1,37 @@
+term: Model
+zh: 模型
+layer: Structure & Representation
+summary: A purposeful simplification of reality used to explain, predict, discuss, or control some aspect of it.
+definitions:
+  - name: Model
+    text: A purpose-driven simplification of some aspect of reality used to understand, predict, discuss, or
+      control it.
+scope: Design and decision-making that depend on an explicit representation of how something works.
+usage: Expose assumptions so predictions can be checked against actual outcomes.
+composition:
+  pattern: Reality → Model → Decision → Observation
+  example: An agent scheduler models tasks, dependencies, and worker capacity to estimate feasible ordering.
+considerations:
+  - State what the model excludes and where it stops being useful.
+  - A convincing explanation is not evidence that the model predicts well.
+distinctions: This entry concerns representations of reality; an LLM is one specific learned computational
+  model, not the entire meaning of Model.
+ownership:
+  kind: hybrid
+  rationale: LLMs can propose representations; structured implementations and observations test their
+    operational usefulness.
+priority:
+  level: P1
+  scope: Design and decision-making that depend on an explicit representation of how something works.
+  rationale: Models should be explicit wherever assumptions materially guide decisions, so their limits and
+    predictive usefulness can be checked.
+related:
+  - view-projection
+  - observation-trace
+  - variety-uncertainty
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Model
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

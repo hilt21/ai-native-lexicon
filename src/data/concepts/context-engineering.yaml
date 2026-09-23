@@ -8,6 +8,6 @@ why_it_matters: Model capability is bounded by the quality and timing of availab
 when_to_use: Use it when an AI workflow depends on multiple information sources, long-running state, tools, or role-specific instructions.
 anti_pattern: Treating a single oversized system prompt as the complete solution to every information problem.
 related: [context-budget, progressive-disclosure, context-hygiene, retrieval-contract]
-tags: [context, prompting, architecture]
+primitives: ["context", "interface"]
 sources: []
 added: 2026-08-14

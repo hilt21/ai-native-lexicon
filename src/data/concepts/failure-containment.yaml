@@ -8,6 +8,6 @@ why_it_matters: Average accuracy does not describe the cost of a rare consequent
 when_to_use: Use it wherever an agent performs repeated actions, controls shared resources, or depends on unreliable external systems.
 anti_pattern: Relying on the agent to notice and correct its own error after unrestricted side effects have spread.
 related: [bounded-autonomy, orchestration, graceful-intervention, idempotent-action]
-tags: [reliability, safety, recovery]
+primitives: ["recovery", "boundary-environment", "permission", "constraint"]
 sources: []
 added: 2026-08-14

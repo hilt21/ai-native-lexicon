@@ -8,6 +8,6 @@ why_it_matters: "Tools connect generated decisions to observable information and
 when_to_use: "Use one to read a file, query a service, or run a bounded validation command."
 anti_pattern: "Assuming a model's description of a tool action means that the action actually executed."
 related: ["tool-calling", "tool-selection", "mcp"]
-tags: ["capability", "tool-calling"]
+primitives: ["capability-tool", "interface"]
 sources: []
 added: 2026-09-09

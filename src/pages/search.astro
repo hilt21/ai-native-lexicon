@@ -1,11 +1,13 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { getConcepts } from '../lib/catalog';
+import { getConcepts, getPrimitives, pathWithBase } from '../lib/catalog';
 import ConceptRow from '../components/ConceptRow.astro';
-const concepts = await getConcepts();
+import CatalogRow from '../components/CatalogRow.astro';
+const [concepts, primitives] = await Promise.all([getConcepts(), getPrimitives()]);
+const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
 ---
 
-<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts, definitions, categories, and tags.', editUrl: false, tableOfContents: false }}>
+<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts and primitives by name, category, or summary.', editUrl: false, tableOfContents: false }}>
   <div class="search-panel">
     <label for="concept-search">Search the working vocabulary</label>
     <div class="search-input-wrap">
@@ -13,19 +15,30 @@ const concepts = await getConcepts();
       <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" />
       <kbd>/</kbd>
     </div>
-    <p id="search-count" aria-live="polite">Showing all {concepts.length} concepts</p>
+    <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length} entries</p>
   </div>
 
   <div class="search-results" id="search-results">
     {concepts.map((concept) => (
       <ConceptRow
         concept={concept}
-        searchText={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.tags.join(' ')}`.toLowerCase()}
+        searchText={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.primitives.map((id) => `${id} ${primitiveNames.get(id)}`).join(' ')}`.toLowerCase()}
+      />
+    ))}
+    {primitives.map((primitive) => (
+      <CatalogRow
+        href={pathWithBase(`/primitives/#${primitive.id}`)}
+        title={primitive.data.term}
+        secondary={primitive.data.zh}
+        marker={primitive.data.priority.level}
+        summary={primitive.data.summary}
+        searchText={`${primitive.data.term} ${primitive.data.zh} ${primitive.data.summary} ${primitive.data.layer} ${primitive.id}`.toLowerCase()}
+        number="P"
       />
     ))}
   </div>
 
-  <p class="search-empty" id="search-empty" hidden>No matching concept yet. Try a broader word or propose a missing term.</p>
+  <p class="search-empty" id="search-empty" hidden>No matching entry yet. Try a broader word or propose a missing term.</p>
 
   <script>
     const input = document.querySelector<HTMLInputElement>('#concept-search');
@@ -42,7 +55,7 @@ const concepts = await getConcepts();
         entry.hidden = !match;
         if (match) visible += 1;
       }
-      if (count) count.textContent = words.length ? `${visible} matching concept${visible === 1 ? '' : 's'}` : `Showing all ${entries.length} concepts`;
+      if (count) count.textContent = words.length ? `${visible} matching ${visible === 1 ? 'entry' : 'entries'}` : `Showing all ${entries.length} entries`;
       if (empty) empty.hidden = visible !== 0;
     }
 

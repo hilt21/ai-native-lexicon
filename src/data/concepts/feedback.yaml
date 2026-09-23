@@ -8,6 +8,6 @@ why_it_matters: "A process that incorporates outcome signals can correct mistake
 when_to_use: "Use it to adjust an implementation after a failing test identifies behavior that misses a requirement."
 anti_pattern: "Collecting reviewer comments but continuing with the same action regardless of what they say."
 related: ["observation", "reflection", "replanning"]
-tags: ["feedback", "observation"]
+primitives: ["feedback", "observation-trace"]
 sources: []
 added: 2026-09-09

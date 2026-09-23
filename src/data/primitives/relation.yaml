@@ -1,0 +1,34 @@
+term: Relation
+zh: 关系
+layer: Structure & Representation
+summary: A meaningful, typed connection between identifiable objects, with direction where the meaning requires it.
+definitions:
+  - name: Relation
+    text: A connection between identifiable objects with explicit meaning, type, and, where appropriate, direction.
+scope: Systems whose dependencies or associations affect behavior and interpretation.
+usage: Make dependencies and provenance inspectable rather than implicit in prose.
+composition:
+  pattern: Entity A → Typed Relation → Entity B
+  example: A generated claim links to the source passage that supports it and the report that contains it.
+considerations:
+  - State whether the relation is directional and what deletion means.
+  - A link alone does not prove the semantic relationship it claims.
+distinctions: A relation is a meaningful connection; a flow describes movement along or through connections.
+ownership:
+  kind: executor
+  rationale: Structured references and integrity checks maintain links; semantic claims may still need review.
+priority:
+  level: P0
+  scope: Systems whose dependencies or associations affect behavior and interpretation.
+  rationale: Dependencies and associations shape system behavior, so leaving their meaning implicit undermines
+    correctness and traceability.
+related:
+  - entity
+  - evidence
+  - flow
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Relation
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

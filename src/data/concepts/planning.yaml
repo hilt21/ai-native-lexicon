@@ -8,6 +8,6 @@ why_it_matters: "A visible sequence helps identify missing prerequisites and cho
 when_to_use: "Use it before a migration with ordered preparation, execution, and validation stages."
 anti_pattern: "Treating a detailed plan as completed work or refusing to revise it after contrary evidence."
 related: ["goal", "task-decomposition", "replanning"]
-tags: ["reasoning", "goal"]
+primitives: ["reasoning", "goal", "plan"]
 sources: []
 added: 2026-09-09

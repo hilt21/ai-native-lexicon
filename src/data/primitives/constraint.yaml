@@ -1,0 +1,35 @@
+term: Constraint
+zh: 约束
+layer: Purpose & Governance
+summary: An explicit limit on which solutions, actions, or states are acceptable.
+definitions:
+  - name: Constraint
+    text: A condition that limits which solutions, actions, or states are admissible.
+scope: Systems with limits on behavior, resources, outputs, or acceptable outcomes.
+usage: Eliminate inadmissible choices before execution or commitment.
+composition:
+  pattern: Goal + Constraint → Feasible Action
+  example: An agent may summarize private files but cannot send their contents to an external service.
+considerations:
+  - Express enforceable constraints as checks at the point of effect.
+  - A natural-language restriction alone is not an enforcement mechanism.
+distinctions: A constraint limits the feasible space; an invariant is a property required to remain true
+  across specified transitions.
+ownership:
+  kind: executor
+  rationale: Code, policies, budgets, and access checks enforce formalizable restrictions; uncertain
+    interpretation should be resolved before commitment.
+priority:
+  level: P0
+  scope: Systems with limits on behavior, resources, outputs, or acceptable outcomes.
+  rationale: A design cannot identify admissible actions without accounting for the conditions that rule actions out.
+related:
+  - invariant
+  - rule-policy
+  - permission
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Constraint
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

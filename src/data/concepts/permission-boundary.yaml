@@ -8,6 +8,6 @@ why_it_matters: Prompt instructions are not access control. Technical boundaries
 when_to_use: Use it for every tool that reads sensitive data or changes external state.
 anti_pattern: Giving one long-lived administrator credential to an agent and expressing restrictions only in natural language.
 related: [bounded-autonomy, policy-as-code, deterministic-shell, thin-kernel]
-tags: [security, authorization, tools]
+primitives: ["permission", "capability-tool", "boundary-environment"]
 sources: []
 added: 2026-08-14

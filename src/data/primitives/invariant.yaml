@@ -1,0 +1,35 @@
+term: Invariant
+zh: 不变量
+layer: Purpose & Governance
+summary: A property that must remain true across the states and transitions included in its scope.
+definitions:
+  - name: Invariant
+    text: A property required to remain true throughout a specified set of system states or transitions.
+scope: Stateful systems with correctness or safety conditions that must survive every allowed transition.
+usage: Preserve essential properties while allowing implementations to vary.
+composition:
+  pattern: Proposed Transition → Invariant Check → Commit
+  example: A task may be marked complete only when its required evidence references remain resolvable.
+considerations:
+  - State the transitions over which the property must hold.
+  - Check-then-write races can invalidate a previously successful check.
+distinctions: An invariant is a persistent property; verification is an activity used to assess whether it holds.
+ownership:
+  kind: executor
+  rationale: Transactions, state machines, constraints, and checks maintain machine-checkable properties at
+    transition boundaries.
+priority:
+  level: P0
+  scope: Stateful systems with correctness or safety conditions that must survive every allowed transition.
+  rationale: Stateful systems need persistent correctness conditions to prevent locally valid actions from
+    producing an invalid overall state.
+related:
+  - state
+  - constraint
+  - verification-evaluation
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Invariant
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

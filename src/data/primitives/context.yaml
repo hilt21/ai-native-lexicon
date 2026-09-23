@@ -1,0 +1,35 @@
+term: Context
+zh: 上下文
+layer: Cognition & Action
+summary: The information directly available to the current reasoning or decision process.
+definitions:
+  - concept: context
+scope: AI reasoning and decision processes with a bounded set of directly available information.
+usage: Supply the facts and instructions needed for the present decision without flooding the reasoning process.
+composition:
+  pattern: State + Retrieved Memory + Task → Context
+  example: A coding agent receives the relevant function, current failure, accepted constraints, and latest test
+    output.
+considerations:
+  - Availability does not establish truth or authority.
+  - Preserve source identity and separate external content from instructions.
+distinctions: Context is currently accessible information; memory is information retained for later retrieval
+  and state holds authoritative current facts.
+ownership:
+  kind: hybrid
+  rationale: Software selects and bounds inputs; LLMs can help assess relevance and summarize with traceable references.
+priority:
+  level: P0
+  scope: AI reasoning and decision processes with a bounded set of directly available information.
+  rationale: A reasoning process cannot use unavailable information, so input selection and authority must be
+    explicit in its design.
+related:
+  - memory
+  - state
+  - resource
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Context
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

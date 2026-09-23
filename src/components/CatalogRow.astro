@@ -1,0 +1,25 @@
+interface Props {
+  href: string;
+  title: string;
+  secondary: string;
+  marker: string;
+  summary: string;
+  searchText?: string;
+  number?: string;
+  showMarker?: boolean;
+}
+
+const { href, title, secondary, marker, summary, searchText, number, showMarker = true } = Astro.props;
+---
+
+<a
+  class:list={['concept-row', { 'concept-row-unclassified': !showMarker, 'concept-row-search': number === undefined }]}
+  href={href}
+  data-search={searchText}
+>
+  {number !== undefined && <span class="concept-number">{number}</span>}
+  <span class="concept-name"><strong>{title}</strong><span>{secondary}</span></span>
+  {showMarker && <span class="concept-category">{marker}</span>}
+  <span class="concept-summary">{summary}</span>
+  <span class="concept-arrow" aria-hidden="true">↗</span>
+</a>

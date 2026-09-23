@@ -1,0 +1,34 @@
+term: Hierarchy
+zh: 层级
+layer: Structure & Representation
+summary: A nested or ordered arrangement of units that separates levels of responsibility or abstraction.
+definitions:
+  - name: Hierarchy
+    text: An arrangement of nested or ordered units that separates levels of responsibility or abstraction.
+scope: Systems whose complexity benefits from decomposition into levels.
+usage: Localize reasoning and changes while making cross-level dependencies explicit.
+composition:
+  pattern: System → Subsystem → Module
+  example: A research task contains evidence-gathering workstreams, each with bounded retrieval steps.
+considerations:
+  - A tree is misleading when shared dependencies dominate.
+  - Delegation depth does not remove accountability at higher levels.
+distinctions: Hierarchy describes organization; a plan describes intended actions and their dependencies.
+ownership:
+  kind: hybrid
+  rationale: LLMs can suggest decompositions; explicit ownership and dependency records govern execution.
+priority:
+  level: P1
+  scope: Systems whose complexity benefits from decomposition into levels.
+  rationale: Hierarchies help when decomposition localizes decisions, but deserve explicit modeling only where
+    the resulting levels clarify real dependencies.
+related:
+  - module
+  - relation
+  - plan
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Hierarchy
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

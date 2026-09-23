@@ -8,6 +8,6 @@ why_it_matters: Staged context reduces distraction and token pressure while pres
 when_to_use: Use it for large instruction sets, specialized tools, branched workflows, or knowledge bases with uneven relevance.
 anti_pattern: Hiding critical safety constraints until after the agent has already committed to an action.
 related: [context-budget, load-bearing-facts, context-engineering, intent-interface]
-tags: [context, retrieval, disclosure]
+primitives: ["context", "rule-policy"]
 sources: []
 added: 2026-08-14

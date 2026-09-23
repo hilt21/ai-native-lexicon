@@ -1,0 +1,40 @@
+term: Rule / Policy
+zh: 规则与策略
+layer: Purpose & Governance
+summary: Specific conditional prescriptions and broader governing decisions that shape permissible or required
+  behavior.
+definitions:
+  - name: Rule
+    text: An explicit condition and prescribed consequence governing a particular case.
+  - name: Policy
+    text: A set of governing decisions or principles that determines what behavior is permitted, required, or
+      preferred across cases.
+scope: Systems that need consistent decisions about admissible or required behavior.
+usage: Make repeatable decisions enforceable and exceptions visible.
+composition:
+  pattern: Condition → Policy → Allowed Action
+  example: A publication policy requires approval before a report becomes public; a rule checks the approval
+    record at submission.
+considerations:
+  - Keep hard prohibitions separate from preferences.
+  - A model-generated policy explanation does not replace the enforcing rule.
+distinctions: Instructions may mix goals and data; rules and policies specifically govern behavior.
+ownership:
+  kind: executor
+  rationale: Formalizable decisions belong in code or policy engines, with explicit handling for cases needing
+    human judgment.
+priority:
+  level: P0
+  scope: Systems that need consistent decisions about admissible or required behavior.
+  rationale: Repeatable behavior requires explicit governing decisions so that equivalent cases do not depend on
+    incidental model interpretation.
+related:
+  - constraint
+  - permission
+  - invariant
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Rule / Policy
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

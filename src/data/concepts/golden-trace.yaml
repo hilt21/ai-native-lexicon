@@ -8,6 +8,6 @@ why_it_matters: Final-output tests miss unsafe or wasteful paths that happen to 
 when_to_use: Use it for critical workflows, incident reproductions, onboarding examples, and changes to the agent loop.
 anti_pattern: Freezing incidental wording or timestamps so tightly that the trace rejects harmless variation.
 related: [eval-driven-development, agent-loop, provenance-chain, inspectable-agency]
-tags: [tracing, evaluation, regression]
+primitives: ["observation-trace", "verification-evaluation", "evidence"]
 sources: []
 added: 2026-08-14
