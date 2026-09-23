@@ -1,0 +1,35 @@
+term: Evidence
+zh: 证据
+layer: Runtime & Trust
+summary: Traceable information used to support or challenge a particular claim.
+definitions:
+  - concept: evidence
+scope: Systems making claims, acceptance decisions, or consequential changes that need inspectable support.
+usage: Attach relevant, traceable support to a specific claim rather than relying on confident wording.
+composition:
+  pattern: Observation + Claim + Provenance → Evidence → Verification
+  example: A test result tied to the tested commit supports a claim about that commit, not a later untested revision.
+considerations:
+  - Check relevance, freshness, and provenance before reusing evidence.
+  - Absence of recorded failure is not proof of success.
+distinctions: Observation is obtained information; evidence is information used to support or challenge a
+  claim. Verification uses it to judge a requirement.
+ownership:
+  kind: hybrid
+  rationale: Software captures and retains source records; LLMs help interpret relevance while conclusions
+    remain tied to inspectable support.
+priority:
+  level: P0
+  scope: Systems making claims, acceptance decisions, or consequential changes that need inspectable support.
+  rationale: Claims and acceptance decisions need inspectable support to distinguish demonstrated outcomes from
+    confident descriptions.
+related:
+  - observation-trace
+  - verification-evaluation
+  - success-criterion
+sources:
+  - title: Primitive tag mapping audit and existing concept definition
+    section: C. 来自旧标签的额外原语输入 — Evidence
+    basis: editorial-synthesis
+    verification: unverified
+added: 2026-09-23

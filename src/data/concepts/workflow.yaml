@@ -8,6 +8,6 @@ why_it_matters: "Predictable processes are easier to inspect and test when their
 when_to_use: "Use it for a document pipeline with extraction, validation, and publication stages."
 anti_pattern: "Using an unconstrained agent to rediscover the same mandatory sequence on every run."
 related: ["agent-loop", "planning", "routing"]
-tags: ["execution", "agent-loop"]
+primitives: ["execution", "plan", "flow", "rule-policy"]
 sources: []
 added: 2026-09-09

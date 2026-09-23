@@ -8,6 +8,6 @@ why_it_matters: "Looking up task-specific facts expands what an agent can use be
 when_to_use: "Use it to find the relevant policy section before answering a policy question."
 anti_pattern: "Treating the highest-ranked search hit as authoritative without checking its contents."
 related: ["rag", "retrieval-contract", "context-selection"]
-tags: ["knowledge", "rag"]
+primitives: ["capability-tool"]
 sources: []
 added: 2026-09-09

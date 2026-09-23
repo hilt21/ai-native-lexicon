@@ -1,0 +1,39 @@
+term: Emergence
+zh: 涌现
+layer: Dynamics & Control
+summary: Collective behavior arising from interactions that is not apparent from examining a component in isolation.
+definitions:
+  - name: Emergence
+    text: System-level behavior produced through interactions among components that is not apparent from examining
+      a component in isolation.
+scope: Complex or multi-agent systems with significant interaction effects.
+usage: Investigate collective patterns through observations and experiments rather than assuming local
+  correctness guarantees global behavior.
+composition:
+  pattern: Local Rules + Relations + Repeated Interaction → System-Level Pattern
+  example: Several individually reasonable agents repeatedly duplicate searches because their local coordination
+    rules fail to expose ownership.
+considerations:
+  - Use emergence as an analytical lens, not an excuse for unexplained behavior.
+  - Test competing explanations against measured interaction patterns.
+distinctions: Emergence describes a system-level phenomenon; it is not a callable runtime component or proof
+  of intelligence.
+ownership:
+  kind: llm
+  rationale: LLMs can suggest cross-component explanations; instrumentation and experiments are still needed to
+    establish what actually occurs.
+priority:
+  level: P2
+  scope: Complex or multi-agent systems with significant interaction effects.
+  rationale: Emergence becomes a first-class concern when interacting components produce consequential patterns
+    that local component checks cannot explain.
+related:
+  - relation
+  - observation-trace
+  - adaptation-learning
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Emergence
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

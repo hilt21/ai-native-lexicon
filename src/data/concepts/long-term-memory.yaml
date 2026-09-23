@@ -8,6 +8,6 @@ why_it_matters: "Reusable knowledge can reduce repeated work, provided the syste
 when_to_use: "Use it to retain a confirmed project convention that will matter in later sessions."
 anti_pattern: "Saving every interaction indefinitely and treating old notes as current instructions."
 related: ["working-memory", "memory-consolidation", "forgetting"]
-tags: ["memory", "working-memory"]
+primitives: ["memory"]
 sources: []
 added: 2026-09-09

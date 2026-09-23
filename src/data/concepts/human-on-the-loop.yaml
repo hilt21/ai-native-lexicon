@@ -8,6 +8,6 @@ why_it_matters: Per-action approval does not scale, but removing human leverage 
 when_to_use: Use it for high-volume operations where most actions are routine but exceptions are consequential.
 anti_pattern: Calling a dashboard oversight when it cannot pause the agent or explain what requires attention.
 related: [progressive-autonomy, inspectable-agency, graceful-intervention, bounded-autonomy]
-tags: [oversight, human-in-the-loop, intervention]
+primitives: ["actor", "observation-trace", "control"]
 sources: []
 added: 2026-08-14

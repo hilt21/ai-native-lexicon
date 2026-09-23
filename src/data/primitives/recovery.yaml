@@ -1,0 +1,38 @@
+term: Recovery
+zh: 恢复
+layer: Runtime & Trust
+summary: Mechanisms for restoring valid operation after failure, with reversibility describing how far effects
+  can be undone.
+definitions:
+  - concept: recovery
+  - name: Reversibility
+    text: The extent to which an action and its effects can be undone under specified conditions.
+scope: Systems where failures, interruption, or partial effects require a route back to valid progress.
+usage: Design restart, compensation, and rollback paths before relying on repeated execution.
+composition:
+  pattern: Failure → Detection → Rollback or Compensation → Resume
+  example: After a partial document upload, a task records completed objects and resumes remaining work without
+    duplicating them.
+considerations:
+  - Retrying a non-idempotent action can repeat side effects.
+  - Compensation may restore business consistency without undoing every historical effect.
+distinctions: Recovery restores valid operation or progress; reversibility is a property of actions. Recovery
+  can succeed without exact reversal.
+ownership:
+  kind: executor
+  rationale: Checkpoints, transactions, retry controls, and compensating operations implement known recovery paths.
+priority:
+  level: P1
+  scope: Systems where failures, interruption, or partial effects require a route back to valid progress.
+  rationale: Recovery should be explicit when interruption or partial effects can leave work incomplete or make
+    a repeated action unsafe.
+related:
+  - state
+  - execution
+  - observation-trace
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Recovery / Reversibility 恢复与可逆性
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

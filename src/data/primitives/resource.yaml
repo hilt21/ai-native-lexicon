@@ -1,0 +1,35 @@
+term: Resource
+zh: 资源
+layer: Dynamics & Control
+summary: A finite capacity or asset that actions consume, reserve, share, or compete to obtain.
+definitions:
+  - name: Resource
+    text: A limited capacity or asset that can be consumed, allocated, reserved, or contested.
+scope: Systems with finite time, money, compute, storage, or attention capacity.
+usage: Allocate scarce capacity explicitly and define what happens when it runs out.
+composition:
+  pattern: Actor + Resource Budget → Bounded Execution
+  example: A research agent receives a token allowance, API spending cap, and deadline.
+considerations:
+  - A budget should be checked against actual usage, not model estimates alone.
+  - Reserve headroom for recovery and final verification.
+distinctions: Resource is the available capacity; a budget constrains consumption and context is information
+  occupying some of that capacity.
+ownership:
+  kind: executor
+  rationale: Counters, quotas, schedulers, and billing records govern allocation and consumption.
+priority:
+  level: P0
+  scope: Systems with finite time, money, compute, storage, or attention capacity.
+  rationale: Every operational design faces finite capacity, and unchecked consumption can prevent both task
+    completion and recovery.
+related:
+  - constraint
+  - execution
+  - context
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Resource
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

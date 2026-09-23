@@ -8,6 +8,6 @@ why_it_matters: "Organizing experience into scoped lessons makes retrieval more 
 when_to_use: "Use it after several incidents reveal the same verified failure mechanism and remedy."
 anti_pattern: "Promoting a single speculative explanation into a permanent rule for every future task."
 related: ["long-term-memory", "reflection", "provenance-chain"]
-tags: ["memory", "long-term-memory"]
+primitives: ["memory", "observation-trace", "evidence"]
 sources: []
 added: 2026-09-09

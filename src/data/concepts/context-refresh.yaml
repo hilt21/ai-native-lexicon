@@ -8,6 +8,6 @@ why_it_matters: "A previously correct observation can become wrong after another
 when_to_use: "Use it to reread a pull request's current status before deciding the next action."
 anti_pattern: "Reusing a cached status after a known change without checking the authoritative source."
 related: ["context-hygiene", "observation", "grounding"]
-tags: ["context", "context-hygiene"]
+primitives: ["context", "observation-trace"]
 sources: []
 added: 2026-09-09

@@ -8,6 +8,6 @@ why_it_matters: Persistence without structure accumulates stale or sensitive dat
 when_to_use: Use it for assistants, recurring workflows, personalization, organizational agents, or any session that outlives one context window.
 anti_pattern: Storing every conversation fragment in one vector index and calling the result long-term memory.
 related: [retrieval-contract, provenance-chain, context-hygiene, context-budget]
-tags: [memory, persistence, retrieval]
+primitives: ["memory", "state", "rule-policy"]
 sources: []
 added: 2026-08-14

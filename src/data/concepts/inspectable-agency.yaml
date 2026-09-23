@@ -8,6 +8,6 @@ why_it_matters: People cannot supervise what they cannot interpret. Inspectabili
 when_to_use: Use it in agent products where actions unfold over time or affect external systems.
 anti_pattern: Showing a theatrical stream of internal-looking text that does not correspond to enforceable state or real actions.
 related: [golden-trace, human-on-the-loop, plan-execute-observe, intent-interface]
-tags: [ux, observability, trust]
+primitives: ["observation-trace", "evidence", "view-projection"]
 sources: []
 added: 2026-08-14

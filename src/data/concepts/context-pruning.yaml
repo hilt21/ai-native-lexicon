@@ -8,6 +8,6 @@ why_it_matters: "Removing irrelevant history reduces distraction and token use w
 when_to_use: "Use it after a resolved error leaves several redundant stack traces in an ongoing session."
 anti_pattern: "Discarding an unresolved constraint simply because it appeared early in the conversation."
 related: ["context-compression", "context-hygiene", "forgetting"]
-tags: ["context", "context-compression"]
+primitives: ["context"]
 sources: []
 added: 2026-09-09

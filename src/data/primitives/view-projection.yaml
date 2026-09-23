@@ -1,0 +1,37 @@
+term: View / Projection
+zh: 视图与投影
+layer: Structure & Representation
+summary: A purpose-specific representation and the transformation that derives it from underlying records or models.
+definitions:
+  - name: View
+    text: A purpose-specific presentation of information from an underlying model or record set.
+  - name: Projection
+    text: A transformation that derives a selected representation from underlying information.
+scope: Systems serving multiple audiences or surfaces from shared records.
+usage: Present the information each reader needs without creating competing sources of truth.
+composition:
+  pattern: Model + Stakeholder + Purpose → Projection → View
+  example: A concept record feeds a detail page, search result, and primitive association list.
+considerations:
+  - A projection can omit important context or become stale.
+  - Edit canonical records rather than independently editing derived copies.
+distinctions: A view is the representation a consumer uses; projection is the derivation, though software
+  sometimes names its output a projection too.
+ownership:
+  kind: executor
+  rationale: Templates and queries derive repeatable representations from canonical data.
+priority:
+  level: P1
+  scope: Systems serving multiple audiences or surfaces from shared records.
+  rationale: Explicit projections are a strong default when several surfaces must remain consistent with one
+    authoritative representation.
+related:
+  - model
+  - entity
+  - context
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — View / Projection
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

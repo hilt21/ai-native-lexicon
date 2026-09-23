@@ -8,6 +8,6 @@ why_it_matters: Long workflows naturally compress and transform context. Naming 
 when_to_use: Use it before summarization, delegation, checkpointing, or any transition that may discard working context.
 anti_pattern: Treating all prior messages as equally important and assuming a fluent summary preserved every constraint.
 related: [context-budget, context-hygiene, provenance-chain, checkpoint-resume]
-tags: [context, reliability, handoff]
+primitives: ["context", "constraint", "evidence"]
 sources: []
 added: 2026-08-14

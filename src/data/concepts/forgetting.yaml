@@ -8,6 +8,6 @@ why_it_matters: "Memory that never expires can preserve obsolete assumptions and
 when_to_use: "Use it to retire superseded project guidance or implement an agreed memory retention period."
 anti_pattern: "Deleting a visible note while leaving its duplicate indexed and available for retrieval."
 related: ["long-term-memory", "context-pruning", "memory-consolidation"]
-tags: ["memory", "long-term-memory"]
+primitives: ["memory", "rule-policy"]
 sources: []
 added: 2026-09-09

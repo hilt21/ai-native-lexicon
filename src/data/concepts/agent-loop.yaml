@@ -8,6 +8,6 @@ why_it_matters: Reliability problems often live between model calls. Exposing th
 when_to_use: Use it for tasks that require multiple dependent actions or adaptation to tool results.
 anti_pattern: Repeating model calls indefinitely without a progress measure, stop condition, or failure state.
 related: [plan-execute-observe, harness, golden-trace, checkpoint-resume]
-tags: [agent, control-loop, runtime]
+primitives: ["actor", "control", "observation-trace", "reasoning", "execution", "success-criterion"]
 sources: []
 added: 2026-08-14

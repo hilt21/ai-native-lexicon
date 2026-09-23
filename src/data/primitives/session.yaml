@@ -1,0 +1,37 @@
+term: Session
+zh: 会话
+layer: Runtime & Trust
+summary: A task lifecycle with an identity and retained progress that connects operations across time.
+definitions:
+  - name: Session
+    text: A bounded task lifecycle with an identity and retained progress that allows related interactions and
+      operations to be coordinated over time.
+scope: Long-running or resumable agent tasks; this entry uses a durable task-session interpretation.
+usage: Keep task identity and recoverable progress separate from the current model input.
+composition:
+  pattern: Session Identity + Retained State + Event History → Resume
+  example: A research task resumes after interruption using its accepted outline, completed searches, and
+    pending work.
+considerations:
+  - A full history should not be copied into every model context.
+  - Specify retention and concurrent ownership of session state.
+distinctions: Session is a lifecycle container; context is current input. Not every implementation uses an
+  event log or supports durable recovery.
+ownership:
+  kind: executor
+  rationale: Persistent records and lifecycle management preserve identity and recovery points across interactions.
+priority:
+  level: P1
+  scope: Long-running or resumable agent tasks; this entry uses a durable task-session interpretation.
+  rationale: Long-running or resumable tasks need explicit session identity and lifecycle rules to preserve
+    continuity beyond a single model interaction.
+related:
+  - state
+  - context
+  - recovery
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Session
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

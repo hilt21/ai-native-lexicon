@@ -131,3 +131,20 @@ export function pathWithBase(path: string) {
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   return `${base}${path.startsWith('/') ? path : `/${path}`}` || '/';
 }
+
+export type Primitive = CollectionEntry<'primitives'>;
+
+export async function getPrimitives() {
+  return (await getCollection('primitives')).sort((a, b) => a.data.term.localeCompare(b.data.term));
+}
+
+export function getPrimitiveDefinitions(primitive: Primitive, conceptsById: Map<string, Concept>) {
+  return primitive.data.definitions.map((definition) => {
+    if ('concept' in definition) {
+      const concept = conceptsById.get(definition.concept);
+      if (!concept) throw new Error(`${primitive.id}: missing defining concept ${definition.concept}`);
+      return { name: concept.data.term, text: concept.data.definition, concept: concept.id };
+    }
+    return { ...definition, concept: undefined };
+  });
+}

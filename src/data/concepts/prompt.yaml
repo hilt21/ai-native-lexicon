@@ -8,6 +8,6 @@ why_it_matters: "A clear request reduces ambiguity about the desired result and 
 when_to_use: "Use it to ask an agent to summarize a document with a specified audience and output format."
 anti_pattern: "Asking for something better without saying what outcome or constraints matter."
 related: ["instructions", "context", "goal"]
-tags: ["instruction", "instructions"]
+primitives: ["context"]
 sources: []
 added: 2026-09-09

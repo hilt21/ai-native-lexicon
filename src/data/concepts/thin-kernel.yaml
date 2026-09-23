@@ -8,6 +8,6 @@ why_it_matters: AI behavior changes quickly while authorization and execution in
 when_to_use: Use it when building an agent runtime, orchestration platform, or safety-sensitive tool layer.
 anti_pattern: Embedding every workflow rule in the runtime until policy changes require risky kernel modifications.
 related: [deterministic-shell, harness, bounded-autonomy, permission-boundary]
-tags: [architecture, runtime, mechanism]
+primitives: ["module", "permission", "state", "execution"]
 sources: []
 added: 2026-08-14

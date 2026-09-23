@@ -1,0 +1,35 @@
+term: Goal
+zh: 目标
+layer: Purpose & Governance
+summary: The desired result that gives a task or system a concrete direction and a basis for stopping.
+definitions:
+  - concept: goal
+scope: Goal-directed tasks and systems with an intended outcome.
+usage: Name the result to pursue so plans and stopping decisions have a stable reference.
+composition:
+  pattern: Purpose → Goal → Plan + Success Criterion
+  example: A research task aims to deliver a source-backed comparison of three architectures within the agreed scope.
+considerations:
+  - An agent should not silently replace the accepted goal with an easier proxy.
+  - Resolve conflicting goals with the responsible people.
+distinctions: Purpose explains why the work matters; goal specifies the desired result and success criteria
+  determine how attainment is judged.
+ownership:
+  kind: hybrid
+  rationale: People authorize intended outcomes; LLMs help clarify them and software preserves accepted goals
+    and completion conditions.
+priority:
+  level: P0
+  scope: Goal-directed tasks and systems with an intended outcome.
+  rationale: Goal-directed work needs an explicit intended result to align plans, resolve drift, and judge when
+    further action is unnecessary.
+related:
+  - purpose
+  - success-criterion
+  - plan
+sources:
+  - title: Primitive tag mapping audit and existing concept definition
+    section: C. 来自旧标签的额外原语输入 — Goal
+    basis: editorial-synthesis
+    verification: unverified
+added: 2026-09-23

@@ -8,6 +8,6 @@ why_it_matters: "Persistent outputs make agent work reviewable and reusable by p
 when_to_use: "Use it to deliver a report as a saved file with a stable reference and appropriate format."
 anti_pattern: "Claiming a report is delivered when only a description of the intended report exists."
 related: ["evidence", "state", "verification"]
-tags: ["state", "evidence"]
+primitives: ["state", "evidence", "entity"]
 sources: []
 added: 2026-09-09

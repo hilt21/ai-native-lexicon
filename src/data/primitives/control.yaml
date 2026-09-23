@@ -1,0 +1,34 @@
+term: Control
+zh: 控制
+layer: Dynamics & Control
+summary: The selection of interventions using observations and desired conditions to regulate behavior.
+definitions:
+  - name: Control
+    text: The use of observations and desired conditions to select interventions that regulate system behavior.
+scope: Systems requiring correction, stabilization, or bounded progress toward a goal.
+usage: Define what is measured, what can be changed, and when intervention occurs.
+composition:
+  pattern: Goal + Observation → Controller → Action
+  example: A runtime stops new agent calls when spending approaches the accepted budget.
+considerations:
+  - Delayed or excessive correction can destabilize the process.
+  - Specify escalation when the controller lacks an effective response.
+distinctions: Feedback supplies information; control uses information and a reference condition to intervene.
+ownership:
+  kind: executor
+  rationale: Runtime rules and controllers enforce predictable intervention; models can advise within explicit limits.
+priority:
+  level: P0
+  scope: Systems requiring correction, stabilization, or bounded progress toward a goal.
+  rationale: Systems that must maintain limits or progress toward a reference condition need explicit
+    intervention rules rather than observation alone.
+related:
+  - feedback
+  - goal
+  - constraint
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Control
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

@@ -8,6 +8,6 @@ why_it_matters: Agents retry after timeouts, partial failures, and uncertain obs
 when_to_use: Use it for every externally visible action that may be retried or resumed.
 anti_pattern: Retrying a state-changing request after a timeout without knowing whether the first attempt committed.
 related: [checkpoint-resume, deterministic-shell, failure-containment, plan-execute-observe]
-tags: [execution, reliability, retry]
+primitives: ["execution", "state", "recovery"]
 sources: []
 added: 2026-08-14

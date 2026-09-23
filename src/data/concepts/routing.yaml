@@ -8,6 +8,6 @@ why_it_matters: "Matching work to appropriate capabilities improves specializati
 when_to_use: "Use it to send a billing question and a technical incident to different supported workflows."
 anti_pattern: "Dispatching by a single keyword without checking the request's actual intent."
 related: ["tool-selection", "skill", "orchestration"]
-tags: ["reasoning", "tool-selection"]
+primitives: ["reasoning", "rule-policy", "actor"]
 sources: []
 added: 2026-09-09

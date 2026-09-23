@@ -174,3 +174,9 @@ main h1 { font-family: var(--lex-font-display); line-height: 1.08; letter-spacin
 /* Splash pages have a custom title; their skip link targets visible content. */
 .lex-skip-link { position: fixed; top: var(--lex-space-3); left: var(--lex-space-3); transform: translateY(-200%); padding: var(--lex-space-3) var(--lex-space-4); background: var(--lex-ink); color: var(--lex-paper); z-index: var(--sl-z-index-skiplink); }
 .lex-skip-link:focus { transform: none; }
+
+.primitive-tags { margin-top: var(--lex-space-8); }
+.primitive-tags .eyebrow { margin-bottom: 0.5rem; }
+.primitive-tags .tag-line { margin-top: 0; }
+.tag-line a { display: inline-flex; align-items: center; min-height: var(--lex-control-height); padding: 0.35rem 0.65rem; border: 1px solid var(--lex-line); color: var(--lex-ink); font-weight: 700; font-family: var(--sl-font-mono); font-size: var(--lex-text-small); line-height: 1.5; text-decoration: none; }
+.tag-line a:hover { background: var(--lex-paper-deep); text-decoration: underline; }

@@ -1,0 +1,35 @@
+term: Success Criterion
+zh: 成功判据
+layer: Purpose & Governance
+summary: An observable condition used to decide whether an intended result has been achieved.
+definitions:
+  - name: Success Criterion
+    text: An observable condition used to decide whether an intended result has been achieved.
+scope: Systems and tasks that need a defensible completion or acceptance decision.
+usage: Turn intended outcomes into evidence requirements before work starts.
+composition:
+  pattern: Goal → Success Criterion → Evidence → Verdict
+  example: A code agent finishes only after the requested behavior works and the agreed regression checks pass.
+considerations:
+  - Proxy metrics can improve while the intended outcome worsens.
+  - Specify who resolves ambiguous or subjective acceptance.
+distinctions: The goal is the desired result; the criterion states how attainment will be judged.
+ownership:
+  kind: hybrid
+  rationale: People confirm acceptance expectations; software checks objective conditions and LLMs can assist
+    bounded semantic assessment.
+priority:
+  level: P0
+  scope: Systems and tasks that need a defensible completion or acceptance decision.
+  rationale: Completion claims need explicit criteria so that activity, confidence, and proxy metrics do not
+    substitute for the intended result.
+related:
+  - goal
+  - evidence
+  - verification-evaluation
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Success Criterion
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

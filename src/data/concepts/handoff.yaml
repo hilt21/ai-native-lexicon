@@ -8,6 +8,6 @@ why_it_matters: Work commonly fails at ownership boundaries. A structured handof
 when_to_use: Use it between agents, between an agent and a human, or when resuming work in a new execution context.
 anti_pattern: Forwarding raw history and assuming the receiver will infer priorities, permissions, and done criteria.
 related: [orchestration, delegation-contract, checkpoint-resume, load-bearing-facts]
-tags: [coordination, ownership, context]
+primitives: ["context", "goal", "state", "permission"]
 sources: []
 added: 2026-08-14

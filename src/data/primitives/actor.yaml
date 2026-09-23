@@ -1,0 +1,38 @@
+term: Actor / Agent
+zh: 行动者
+layer: Purpose & Governance
+summary: An identifiable participant that can perceive, decide, or act; an agent has delegated discretion
+  toward a goal.
+definitions:
+  - name: Actor
+    text: An identifiable participant capable of perceiving, deciding, or performing actions within a system.
+  - name: Agent
+    text: An actor delegated some capacity to select and pursue actions toward a goal within specified limits.
+scope: Systems where actions have identifiable performers and authority.
+usage: Connect each action to a responsible participant, available capability, and permission.
+composition:
+  pattern: Actor + Capability + Permission → Execution
+  example: A research agent can search documents while a publishing service alone can release the approved report.
+considerations:
+  - Having a capability does not establish permission.
+  - Keep technical identity and human accountability explicit.
+distinctions: Agent is a specialized actor, not a synonym for every user, service, or organization.
+ownership:
+  kind: hybrid
+  rationale: Models may propose actions; authenticated services execute within assigned permissions and record
+    the actor identity.
+priority:
+  level: P1
+  scope: Systems where actions have identifiable performers and authority.
+  rationale: Systems with multiple performers need explicit actors to assign capabilities, permissions, and
+    responsibility without conflating them.
+related:
+  - capability-tool
+  - permission
+  - execution
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Actor / Agent
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

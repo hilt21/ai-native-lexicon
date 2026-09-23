@@ -8,6 +8,6 @@ why_it_matters: "Adaptive work needs to abandon invalid assumptions without losi
 when_to_use: "Use it when a required dependency is unavailable and another supported path can satisfy the same goal."
 anti_pattern: "Repeating an obsolete plan after evidence shows a prerequisite cannot be met."
 related: ["planning", "observation", "fallback"]
-tags: ["reasoning", "planning"]
+primitives: ["reasoning", "plan", "constraint"]
 sources: []
 added: 2026-09-09

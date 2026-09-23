@@ -1,0 +1,35 @@
+term: Feedback
+zh: 反馈
+layer: Dynamics & Control
+summary: Information about action results that returns to influence subsequent decisions.
+definitions:
+  - concept: feedback
+scope: Systems where action results can influence subsequent decisions.
+usage: Close the loop between acting and adjusting using relevant outcome information.
+composition:
+  pattern: Execution → Observation → Feedback → Adjustment
+  example: A coding agent reads a failing test result and changes the implementation before running the relevant
+    check again.
+considerations:
+  - Prefer outcome evidence to self-reported confidence.
+  - Account for delay and noisy signals before amplifying corrections.
+distinctions: An observation becomes feedback when it enters a subsequent decision; collecting logs alone does
+  not close a loop.
+ownership:
+  kind: hybrid
+  rationale: Instrumentation supplies results; code handles explicit responses and LLMs interpret bounded
+    semantic feedback.
+priority:
+  level: P0
+  scope: Systems where action results can influence subsequent decisions.
+  rationale: Systems cannot reliably correct their behavior unless actual outcomes influence what they do next.
+related:
+  - observation-trace
+  - control
+  - delay
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Feedback
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

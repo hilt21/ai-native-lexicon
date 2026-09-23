@@ -1,0 +1,36 @@
+term: Memory
+zh: 记忆
+layer: Cognition & Action
+summary: Information retained beyond the current step or session for possible retrieval and reuse.
+definitions:
+  - name: Memory
+    text: Information retained across steps or sessions so that it can be retrieved and used again.
+scope: Tasks whose future decisions benefit from prior experience or retained facts.
+usage: Store useful experience outside the active context and retrieve it when relevant.
+composition:
+  pattern: Experience → Memory → Retrieval → Context
+  example: A research assistant saves an accepted terminology decision and retrieves it when drafting a later report.
+considerations:
+  - Retained information can become stale or incorrect.
+  - Give records update, provenance, and deletion rules rather than appending indefinitely.
+distinctions: Memory is retained information; context is the subset currently available to reasoning. Working
+  and long-term memory differ in lifetime and use.
+ownership:
+  kind: hybrid
+  rationale: Storage and retrieval preserve records; LLMs may propose summaries and relevance judgments subject
+    to review.
+priority:
+  level: P1
+  scope: Tasks whose future decisions benefit from prior experience or retained facts.
+  rationale: Retained memory is a strong default when later work needs prior facts or experience, but it
+    requires deliberate freshness and lifecycle rules.
+related:
+  - context
+  - state
+  - adaptation-learning
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Memory
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

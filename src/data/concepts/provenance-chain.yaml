@@ -8,6 +8,6 @@ why_it_matters: Without provenance, fluent outputs are difficult to verify or co
 when_to_use: Use it for research, regulated decisions, incident response, generated datasets, and any output that may be challenged later.
 anti_pattern: Attaching a list of links after generation without recording which claim each source actually supports.
 related: [golden-trace, load-bearing-facts, retrieval-contract, eval-driven-development]
-tags: [evidence, traceability, knowledge]
+primitives: ["evidence", "relation"]
 sources: []
 added: 2026-08-14

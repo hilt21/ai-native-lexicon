@@ -8,6 +8,6 @@ why_it_matters: "A defined reversal path limits damage from failed changes and c
 when_to_use: "Use it to restore a prior configuration after a deployment check fails."
 anti_pattern: "Assuming a local file restore also reverses messages or transactions already sent externally."
 related: ["checkpoint", "recovery", "failure-containment"]
-tags: ["failure-handling", "checkpoint"]
+primitives: ["recovery", "state"]
 sources: []
 added: 2026-09-09

@@ -8,6 +8,6 @@ why_it_matters: "An explicit destination helps the agent evaluate progress and s
 when_to_use: "Use it to define a successful migration in terms of preserved behavior and accepted validation results."
 anti_pattern: "Using an activity such as keep improving as the only definition of success."
 related: ["task", "verification", "termination"]
-tags: ["goal", "task"]
+primitives: ["goal", "success-criterion"]
 sources: []
 added: 2026-09-09

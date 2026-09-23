@@ -14,7 +14,7 @@
     "when_to_use",
     "anti_pattern",
     "related",
-    "tags",
+    "primitives",
     "sources",
     "added"
   ],
@@ -37,12 +37,10 @@
       "uniqueItems": true,
       "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
     },
-    "tags": {
+    "primitives": {
       "type": "array",
-      "minItems": 2,
-      "maxItems": 8,
       "uniqueItems": true,
-      "items": { "type": "string" }
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
     },
     "sources": {
       "type": "array",

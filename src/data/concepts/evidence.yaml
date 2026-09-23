@@ -8,6 +8,6 @@ why_it_matters: "Reviewers need a basis for accepting completion claims without 
 when_to_use: "Use it to support a bug-fix claim with a reproduction and a passing check of the corrected behavior."
 anti_pattern: "Presenting an unrelated passing test as proof that every requested behavior works."
 related: ["verification", "artifact", "provenance-chain"]
-tags: ["verification", "provenance"]
+primitives: ["verification-evaluation", "evidence"]
 sources: []
 added: 2026-09-09

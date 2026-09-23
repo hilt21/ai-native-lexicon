@@ -1,0 +1,34 @@
+term: State
+zh: 状态
+layer: Structure & Representation
+summary: The current facts and progress that a system needs to determine what can happen next.
+definitions:
+  - concept: state
+scope: Stateful software and agent workflows where future behavior depends on current facts.
+usage: Keep progress and commitments explicit so work can resume without reconstructing them from prose.
+composition:
+  pattern: State + Event → Next State
+  example: An agent task records its current phase, accepted artifact version, and pending approval.
+considerations:
+  - Separate authoritative state from generated summaries.
+  - Handle concurrent updates before treating a snapshot as current.
+distinctions: State represents current facts; memory retains information for later use and context is what is
+  currently available to reasoning.
+ownership:
+  kind: executor
+  rationale: Databases, files, and state machines store and update authoritative state under explicit consistency rules.
+priority:
+  level: P0
+  scope: Stateful software and agent workflows where future behavior depends on current facts.
+  rationale: Future behavior depends on current facts, making explicit authoritative state essential to correct
+    transitions and reliable resumption.
+related:
+  - event
+  - memory
+  - context
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — State
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

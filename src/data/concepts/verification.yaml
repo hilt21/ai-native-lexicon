@@ -8,6 +8,6 @@ why_it_matters: "Completion becomes meaningful when acceptance criteria are chec
 when_to_use: "Use it before delivering a change to confirm the requested behavior and relevant constraints."
 anti_pattern: "Declaring success because a file was edited without checking the resulting behavior."
 related: ["evidence", "evaluation", "goal"]
-tags: ["verification", "evidence"]
+primitives: ["verification-evaluation", "evidence", "success-criterion"]
 sources: []
 added: 2026-09-09

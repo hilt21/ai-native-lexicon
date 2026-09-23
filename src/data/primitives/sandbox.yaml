@@ -1,0 +1,35 @@
+term: Sandbox
+zh: 沙箱
+layer: Runtime & Trust
+summary: An execution environment that restricts access and effects to contain potentially unsafe operations.
+definitions:
+  - name: Sandbox
+    text: An execution environment that restricts access and effects to contain potentially unsafe or untrusted
+      operations.
+scope: Systems executing generated code, external tools, or other actions requiring containment.
+usage: Limit the reachable files, network, credentials, processes, and resource capacity of an operation.
+composition:
+  pattern: Tool + Sandbox + Resource Limit → Bounded Execution
+  example: Generated analysis code runs with a temporary workspace, no production credentials, and a time limit.
+considerations:
+  - Isolation has specific boundaries and does not prove an operation is harmless.
+  - Control network and credentials as well as the filesystem.
+distinctions: A sandbox contains execution; permission establishes authorization. One does not replace the other.
+ownership:
+  kind: executor
+  rationale: Operating-system and infrastructure controls impose execution boundaries independently of model compliance.
+priority:
+  level: P1
+  scope: Systems executing generated code, external tools, or other actions requiring containment.
+  rationale: Sandboxing is a strong default when generated or untrusted actions need containment beyond ordinary
+    application-level authorization.
+related:
+  - boundary-environment
+  - permission
+  - resource
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Sandbox
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

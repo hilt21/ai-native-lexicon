@@ -3,6 +3,7 @@ import { glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { z } from 'zod';
+import { primitiveLayers, primitiveSchema } from './lib/primitive-schema.mjs';
 
 export const categories = [
   'Context',
@@ -38,7 +39,7 @@ export const conceptSchema = z.object({
   when_to_use: z.string().min(40),
   anti_pattern: z.string().min(30),
   related: z.array(z.string()).min(2).max(6),
-  tags: z.array(z.string()).min(2).max(8),
+  primitives: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)),
   sources: z
     .array(
       z.object({
@@ -50,6 +51,11 @@ export const conceptSchema = z.object({
   added: z.coerce.date(),
 });
 
+const primitives = defineCollection({
+  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/data/primitives' }),
+  schema: primitiveSchema,
+});
+
 const concepts = defineCollection({
   loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/data/concepts' }),
   schema: conceptSchema,
@@ -57,6 +63,6 @@ const concepts = defineCollection({
 
 const docs = defineCollection({ loader: docsLoader(), schema: docsSchema() });
 
-export const collections = { concepts, docs };
+export const collections = { concepts, primitives, docs };
 
 export type Category = (typeof categories)[number];

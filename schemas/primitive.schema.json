@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Native Lexicon primitive",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "term",
+    "zh",
+    "layer",
+    "summary",
+    "definitions",
+    "scope",
+    "usage",
+    "composition",
+    "considerations",
+    "distinctions",
+    "ownership",
+    "priority",
+    "related",
+    "sources",
+    "added"
+  ],
+  "properties": {
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "zh": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "layer": {
+      "enum": [
+        "Purpose & Governance",
+        "Structure & Representation",
+        "Dynamics & Control",
+        "Cognition & Action",
+        "Runtime & Trust"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "definitions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "oneOf": [
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "concept"
+            ],
+            "properties": {
+              "concept": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              }
+            }
+          },
+          {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "name",
+              "text"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "usage": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pattern",
+        "example"
+      ],
+      "properties": {
+        "pattern": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "considerations": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "distinctions": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "ownership": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "rationale"
+      ],
+      "properties": {
+        "kind": {
+          "enum": [
+            "llm",
+            "executor",
+            "hybrid"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "priority": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "level",
+        "scope",
+        "rationale"
+      ],
+      "properties": {
+        "level": {
+          "enum": [
+            "P0",
+            "P1",
+            "P2"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      }
+    },
+    "related": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "title",
+          "section",
+          "basis",
+          "verification"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "section": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "basis": {
+            "enum": [
+              "report-synthesis",
+              "editorial-synthesis"
+            ]
+          },
+          "verification": {
+            "enum": [
+              "unverified",
+              "verified"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "pattern": "^https?://"
+          }
+        }
+      }
+    },
+    "added": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

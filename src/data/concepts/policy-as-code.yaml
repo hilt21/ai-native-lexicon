@@ -8,6 +8,6 @@ why_it_matters: Versioned policies can be reviewed, tested, audited, and rolled 
 when_to_use: Use it when a rule protects money, data, infrastructure, legal commitments, or organizational authority.
 anti_pattern: Duplicating policy fragments across prompts until no one can tell which version is enforced.
 related: [permission-boundary, harness, agent-ready-organization, thin-kernel]
-tags: [governance, compliance, enforcement]
+primitives: ["rule-policy", "permission", "constraint"]
 sources: []
 added: 2026-08-14

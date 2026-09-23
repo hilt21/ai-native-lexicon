@@ -23,21 +23,23 @@ export const CATEGORIES = [
   'Multi-Agent',
 ];
 
-export async function validateConceptDirectory(directory) {
+export async function readYamlDirectory(directory) {
   const files = (await readdir(directory)).filter((file) => /\.ya?ml$/.test(file)).sort();
   const records = [];
   const errors = [];
-
   for (const file of files) {
     const slug = basename(file).replace(/\.ya?ml$/, '');
     try {
-      const data = parse(await readFile(join(directory, file), 'utf8'));
-      records.push({ slug, file, data });
+      records.push({ slug, file, data: parse(await readFile(join(directory, file), 'utf8')) });
     } catch (error) {
       errors.push(`${file}: invalid YAML (${error.message})`);
     }
   }
+  return { files, records, errors };
+}
 
+export async function validateConceptDirectory(directory) {
+  const { files, records, errors } = await readYamlDirectory(directory);
   const slugs = new Set(records.map(({ slug }) => slug));
   const terms = new Map();
 

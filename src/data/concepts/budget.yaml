@@ -8,6 +8,6 @@ why_it_matters: "Explicit limits keep open-ended execution from consuming resour
 when_to_use: "Use it to cap an agent run and reserve enough capacity to report results or save resumable state."
 anti_pattern: "Continuing to call tools after the limit while merely noting that the budget was exceeded."
 related: ["context-budget", "termination", "bounded-autonomy"]
-tags: ["governance", "context-budget"]
+primitives: ["resource", "constraint"]
 sources: []
 added: 2026-09-09

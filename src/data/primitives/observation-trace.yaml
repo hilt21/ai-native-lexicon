@@ -1,0 +1,35 @@
+term: Observation / Trace
+zh: 观测与执行轨迹
+layer: Runtime & Trust
+summary: Information about actual conditions or outcomes, and connected records that make a run inspectable over time.
+definitions:
+  - concept: observation
+  - concept: trace
+scope: Systems needing evidence of actual behavior across individual actions and longer runs.
+usage: Record outcomes and their relationships so failures can be reconstructed.
+composition:
+  pattern: Execution → Observation + Trace → Evidence
+  example: A tool call records its request ID, result, timing, and parent task so a failed run can be inspected.
+considerations:
+  - Logs may be incomplete, sampled, delayed, or sensitive.
+  - Record enough identity and ordering information to connect relevant steps.
+distinctions: An observation captures information about a result or condition; a trace connects records across
+  an execution. Neither automatically proves a claim.
+ownership:
+  kind: executor
+  rationale: Instrumentation, logs, metrics, and trace stores capture behavior independently of model descriptions.
+priority:
+  level: P0
+  scope: Systems needing evidence of actual behavior across individual actions and longer runs.
+  rationale: Actual behavior must be observable to diagnose failures, check completion, and reconstruct how a
+    result arose.
+related:
+  - event
+  - evidence
+  - verification-evaluation
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Observation / Trace
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

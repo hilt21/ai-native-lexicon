@@ -8,6 +8,6 @@ why_it_matters: Ambiguous delegation produces activity without accountability. A
 when_to_use: Use it whenever responsibility crosses a human, team, agent, or execution boundary.
 anti_pattern: Assigning a broad goal with no authority limits or acceptance evidence, then judging success after the fact.
 related: [agent-ready-organization, handoff, orchestration, intent-interface]
-tags: [delegation, accountability, organization]
+primitives: ["goal", "boundary-environment", "resource", "success-criterion", "permission"]
 sources: []
 added: 2026-08-14

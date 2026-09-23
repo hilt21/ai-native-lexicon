@@ -1,0 +1,39 @@
+term: Adaptation / Learning
+zh: 适应与学习
+layer: Dynamics & Control
+summary: Changes made in response to conditions or experience, including retained changes to knowledge and
+  future behavior.
+definitions:
+  - name: Adaptation
+    text: A change in behavior or configuration in response to conditions or experience.
+  - name: Learning
+    text: A process in which experience produces a retained change in knowledge, a model, or future behavior.
+scope: Systems expected to improve or adjust across repeated experience.
+usage: Turn observed outcomes into controlled changes with measurable effects.
+composition:
+  pattern: Feedback → Learning → Model or Policy Update
+  example: A retrieval service evaluates missed answers, proposes a ranking change, and checks it on held-out
+    queries before adoption.
+considerations:
+  - A reflective explanation does not establish that behavior improved.
+  - Separate proposing an update from authorizing and deploying it.
+distinctions: Adaptation can be a temporary response; learning implies a retained change. Neither necessarily
+  requires modifying model weights.
+ownership:
+  kind: hybrid
+  rationale: LLMs may infer candidate changes; versioned updates, evaluation, and deployment controls govern adoption.
+priority:
+  level: P1
+  scope: Systems expected to improve or adjust across repeated experience.
+  rationale: Systems expected to improve across experience should explicitly govern what changes, how
+    improvement is measured, and when changes are adopted.
+related:
+  - feedback
+  - memory
+  - verification-evaluation
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Adaptation / Learning
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

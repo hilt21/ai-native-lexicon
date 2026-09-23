@@ -8,6 +8,6 @@ why_it_matters: "A controlled second attempt can overcome temporary failure with
 when_to_use: "Use it for a transient read failure with a limit and delay between attempts."
 anti_pattern: "Repeating a payment or write after a timeout without checking whether the first attempt succeeded."
 related: ["idempotent-action", "fallback", "budget"]
-tags: ["failure-handling", "idempotent-action"]
+primitives: ["recovery", "rule-policy", "execution"]
 sources: []
 added: 2026-09-09

@@ -1,0 +1,40 @@
+term: Boundary / Environment
+zh: 边界与环境
+layer: Structure & Representation
+summary: The separation that defines a system, together with the external conditions and participants that
+  influence it.
+definitions:
+  - name: Boundary
+    text: A chosen separation that identifies what belongs to a system and where exchanges with other systems
+      occur.
+  - name: Environment
+    text: The external conditions and participants that affect a system but lie outside its chosen boundary.
+scope: Any system described relative to an explicit design or operational scope.
+usage: Expose dependencies and exchanges that the system cannot fully control.
+composition:
+  pattern: Boundary → Interface; Environment → Constraint
+  example: A document agent controls its local workspace but depends on an external search service with separate
+    latency and access rules.
+considerations:
+  - Revisit the boundary when responsibilities change.
+  - A diagrammed boundary does not enforce an execution restriction.
+distinctions: Boundary is the separation; environment is what lies beyond it. A sandbox is one mechanism for
+  enforcing selected boundaries.
+ownership:
+  kind: hybrid
+  rationale: LLMs can help frame scope; software interfaces and runtime restrictions implement the accepted boundary.
+priority:
+  level: P0
+  scope: Any system described relative to an explicit design or operational scope.
+  rationale: Every design depends on what it controls, what it excludes, and how it exchanges information or
+    effects with its surroundings.
+related:
+  - interface
+  - constraint
+  - sandbox
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Boundary / Environment
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

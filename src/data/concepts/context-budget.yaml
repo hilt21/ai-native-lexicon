@@ -8,6 +8,6 @@ why_it_matters: Every additional item competes for attention and cost. Explicit 
 when_to_use: Use it when designing long sessions, multi-document retrieval, agent handoffs, or systems with strict latency and cost targets.
 anti_pattern: Filling the available window because unused tokens appear to be free capacity.
 related: [context-engineering, load-bearing-facts, context-hygiene, memory-architecture]
-tags: [context, tokens, attention, cost]
+primitives: ["context", "resource", "constraint"]
 sources: []
 added: 2026-08-14

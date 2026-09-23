@@ -1,0 +1,37 @@
+term: Plan
+zh: 计划
+layer: Cognition & Action
+summary: An inspectable statement of intended steps, dependencies, and stopping conditions for pursuing a goal.
+definitions:
+  - name: Plan
+    text: An inspectable representation of intended steps, dependencies, and stopping conditions for reaching a
+      goal.
+scope: Tasks requiring coordinated steps or revisions as new evidence appears.
+usage: Make the intended route reviewable without treating it as a guarantee of execution.
+composition:
+  pattern: Goal → Reasoning → Plan → Execution
+  example: A migration plan orders backup, transformation, verification, and cutover, with a stop condition on
+    validation failure.
+considerations:
+  - Revise the plan when evidence invalidates assumptions.
+  - Use an established workflow when dynamic planning adds no value.
+distinctions: Planning is the process of producing or revising a plan; a plan is its artifact. Actual
+  execution may differ from it.
+ownership:
+  kind: hybrid
+  rationale: LLMs may propose steps; software records dependencies and enforces accepted execution boundaries.
+priority:
+  level: P1
+  scope: Tasks requiring coordinated steps or revisions as new evidence appears.
+  rationale: Multi-step tasks benefit from explicit plans when coordination or new evidence can change the route
+    to completion.
+related:
+  - goal
+  - reasoning
+  - execution
+sources:
+  - title: 系统设计哲学的跨学科理论框架与可组合原语集
+    section: 最终原语集 — Plan
+    basis: report-synthesis
+    verification: unverified
+added: 2026-09-23

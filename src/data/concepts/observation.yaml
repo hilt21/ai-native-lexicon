@@ -8,6 +8,6 @@ why_it_matters: "Agents need external signals to distinguish intended effects fr
 when_to_use: "Use it to inspect a command's exit status and output before deciding whether the step succeeded."
 anti_pattern: "Treating the planned effect of an action as though it had already been observed."
 related: ["feedback", "agent-loop", "evidence"]
-tags: ["feedback", "environment"]
+primitives: ["feedback", "boundary-environment", "observation-trace"]
 sources: []
 added: 2026-09-09

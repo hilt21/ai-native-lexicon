@@ -8,6 +8,6 @@ why_it_matters: "Repeatable assessments reveal tradeoffs and regressions that is
 when_to_use: "Use it to compare two agent configurations on representative tasks with the same scoring criteria."
 anti_pattern: "Optimizing for a small benchmark while claiming the score proves reliability on all user requests."
 related: ["eval-driven-development", "verification", "feedback"]
-tags: ["verification", "eval-driven-development"]
+primitives: ["verification-evaluation", "success-criterion"]
 sources: []
 added: 2026-09-09

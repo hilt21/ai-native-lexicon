@@ -8,6 +8,6 @@ why_it_matters: "A common progress record helps workers coordinate without indep
 when_to_use: "Use it to track task assignments and accepted results in a system with multiple workers."
 anti_pattern: "Allowing agents to overwrite the same status record without conflict detection or ownership rules."
 related: ["state", "coordination", "orchestration"]
-tags: ["multi-agent", "state"]
+primitives: ["state", "actor", "rule-policy"]
 sources: []
 added: 2026-09-09

@@ -8,6 +8,6 @@ why_it_matters: "Explicit support reduces reliance on plausible-sounding generat
 when_to_use: "Use it to link a factual answer to a current source that actually supports the specific statement."
 anti_pattern: "Adding a citation that mentions the topic but does not support the asserted claim."
 related: ["evidence", "retrieval", "provenance-chain"]
-tags: ["feedback", "evidence"]
+primitives: ["feedback", "evidence", "observation-trace"]
 sources: []
 added: 2026-09-09

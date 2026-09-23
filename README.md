@@ -2,13 +2,13 @@
 
 > An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.
 
-AI Native Lexicon is a data-first glossary for the language emerging around context, agents, harnesses, governance, execution, knowledge, experience, and organizational design. The catalog contains 84 concepts with English definitions and Chinese names across 18 categories, linked relationships, local search, machine-readable exports, and a GitHub Pages workflow.
+AI Native Lexicon is a data-first glossary for the language emerging around context, agents, harnesses, governance, execution, knowledge, experience, and organizational design. The catalog contains 84 concepts with English definitions and Chinese names across 18 categories, 42 composable primitive entries, linked relationships, local search, machine-readable exports, and a GitHub Pages workflow.
 
 ## What is included
 
 - Astro + Starlight static site with an editorial visual system
-- one validated YAML record per concept
-- home, A–Z index, category indexes, concept pages, and related concepts
+- one validated YAML record per concept or primitive; existing definitions are referenced, not copied
+- home, A–Z index, category indexes, concept pages, a primitive index with anchor links, and related concepts
 - built-in catalog search, plus Pagefind-powered site search on GitHub Pages
 - `/dataset.json` and `/llms.txt` machine-readable projections
 - schema, relationship, type, test, and production-build checks
@@ -35,6 +35,7 @@ npm run build
 
 ```text
 src/data/concepts/       canonical YAML concept records
+src/data/primitives/     primitive descriptions and references to concept definitions
 src/content.config.ts    runtime Zod schema used by Astro
 schemas/                 portable JSON Schema for editors and tools
 src/pages/               generated site routes and data endpoints
@@ -48,14 +49,18 @@ tests/                   dataset integrity tests
 The architecture deliberately keeps the publishing layer thin:
 
 ```text
-validated YAML → content collection → web pages / categories / JSON / llms.txt
+validated YAML → content collections → web pages / categories / primitives / JSON / llms.txt
 ```
 
 Future Concept Graph and Timeline views should consume the same collection rather than introduce a second content store.
 
 ## Add a concept
 
-Copy an existing file in `src/data/concepts/`, rename it with a kebab-case slug, and complete every required field. `related` values are slugs and must resolve to existing records. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the editorial and review criteria.
+Copy an existing file in `src/data/concepts/`, rename it with a kebab-case slug, and complete every required field. `related` values are concept slugs and must resolve to existing records. `primitives` contains zero or more primitive slugs; legacy `tags` are no longer supported. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the editorial and review criteria.
+
+## Add a primitive
+
+Create a stable kebab-case YAML file in `src/data/primitives/` following [the primitive content guide](./docs/primitives.md). Records include definitions, scope, composition examples, considerations, distinctions, scoped priorities, ownership, and source status. The page and reverse concept links are generated from the collections.
 
 ## Deploy to GitHub Pages
 
@@ -67,7 +72,7 @@ The workflow derives the owner, repository name, canonical URL, base path, GitHu
 
 ## Data API
 
-- `dataset.json` contains the complete validated catalog.
+- `dataset.json` version `0.2.0` contains `concepts` and `primitives`. Concept `tags` are replaced by `primitives` references; primitive `definitions` either reference a concept by slug or contain a new inline definition.
 - `llms.txt` provides a compact discovery document for language models and retrieval tools.
 
 The records are intentionally ready for graph and timeline projections: stable slugs identify nodes, `related` defines edges, and `added` provides an initial temporal field.
