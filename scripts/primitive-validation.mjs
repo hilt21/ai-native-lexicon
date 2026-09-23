@@ -1,4 +1,3 @@
-import { readdir, readFile } from 'node:fs/promises';
 import { readYamlDirectory } from './concept-validation.mjs';
 
 // Astro validates field shapes; this check validates relationships across collections.

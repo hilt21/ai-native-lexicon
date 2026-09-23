@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { z } from 'zod';
-import { primitiveLayers, primitiveSchema } from './lib/primitive-schema.mjs';
+import { primitiveSchema } from './lib/primitive-schema.mjs';
 
 export const categories = [
   'Context',
