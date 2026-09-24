@@ -1,29 +1,52 @@
 # AI Native Lexicon
 
-> An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.
+> A field guide to the language of systems that can reason and act.
 
-AI Native Lexicon is a data-first glossary for the language emerging around context, agents, harnesses, governance, execution, knowledge, experience, and organizational design. The catalog contains 84 concepts with English definitions and Chinese names across 18 categories, 42 composable primitive entries, linked relationships, local search, machine-readable exports, and a GitHub Pages workflow.
+[**Explore the live lexicon ↗**](https://hilt21.github.io/ai-native-lexicon/) · [Browse the source](https://github.com/hilt21/ai-native-lexicon) · [Open the dataset](https://hilt21.github.io/ai-native-lexicon/dataset.json)
 
-## What is included
+AI-native software brings together context, tools, permissions, memory, state, and feedback. This open lexicon gives those ideas stable, inspectable working definitions, shows how they connect, and gives teams a shared path from explanation to design conversation.
 
-- Astro + Starlight static site with an editorial visual system
-- one validated YAML record per concept or primitive; existing definitions are referenced, not copied
-- home, A–Z index, category indexes, concept pages, a primitive index with anchor links, and related concepts
-- built-in catalog search, plus Pagefind-powered site search on GitHub Pages
-- `/dataset.json` and `/llms.txt` machine-readable projections
-- schema, relationship, type, test, and production-build checks
-- automatic GitHub Pages deployment from `master`
+**84 concepts · 18 categories · 42 primitives · 20 Speaking Cards**
+
+## One vocabulary, three ways to use it
+
+- **Concepts** explain an idea: its boundary, why it matters, when to use it, and what can go wrong.
+- **Primitives** make reusable design elements visible, with scope, composition examples, trade-offs, ownership, and priority.
+- **Speaking Cards** turn selected ideas into material for teaching, discussion, and practice.
+
+These are separate content types connected by explicit references. A definition stays with its Concept; a Primitive may refer to that definition or add a distinct meaning; a Speaking Card links to both without copying either.
+
+## Follow an idea
+
+Start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness/), open the [Harness primitive](https://hilt21.github.io/ai-native-lexicon/primitives/harness/), then use [Agent Harness · Card 04](https://hilt21.github.io/ai-native-lexicon/speaking-card/#card-04) to explain and discuss the design. The same pattern works across concepts, primitives, and cards: follow a term to the building blocks it uses, then to material that helps communicate it.
+
+## Explore the collection
+
+- [Browse concepts](https://hilt21.github.io/ai-native-lexicon/concepts/) by name or explore the [categories](https://hilt21.github.io/ai-native-lexicon/categories/).
+- Use [search](https://hilt21.github.io/ai-native-lexicon/search/) to find concepts and primitives.
+- Browse the [primitive directory](https://hilt21.github.io/ai-native-lexicon/primitives/) or open the [Speaking Cards](https://hilt21.github.io/ai-native-lexicon/speaking-card/).
+- Inspect [`dataset.json`](https://hilt21.github.io/ai-native-lexicon/dataset.json) for the machine-readable concept and primitive records, or [`llms.txt`](https://hilt21.github.io/ai-native-lexicon/llms.txt) for a compact page index.
+
+## A working vocabulary, not a fixed canon
+
+Entries are editorial working definitions, not claims of universal agreement. Concepts show maturity; primitive entries identify their synthesis basis and whether sources have been independently verified. Relationship and schema checks keep references inspectable as the collection grows.
+
+The canonical content lives in three places: concept YAML in `src/data/concepts/`, primitive YAML in `src/data/primitives/`, and Speaking Card JSON in `src/data/speaking-cards.json`. The static site, search, cross-links, and machine-readable exports are generated from these records.
+
+## Contribute
+
+Help make the vocabulary more useful: clarify a term's boundary, add a well-supported relationship, improve an example, or propose a missing concept. Start with the [contribution guide](./CONTRIBUTING.md); primitive entries have a separate [content guide](./docs/primitives.md).
 
 ## Run locally
 
-Requires Node.js 22.12 or newer.
+Requires Node.js 22.12 or newer. The GitHub Actions workflow uses Node.js 24.
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
-The local site opens at `http://localhost:4321/`. Before proposing a change, run:
+The site opens at `http://localhost:4321/`. Before submitting a change, run the checks used by CI:
 
 ```sh
 npm run check
@@ -31,51 +54,11 @@ npm test
 npm run build
 ```
 
-## Repository structure
+`npm run check` checks the Astro project and validates concept, primitive, and Speaking Card references. `npm test` runs data-integrity and UI-regression tests. `npm run build` validates Speaking Card references and builds the static site.
 
-```text
-src/data/concepts/       canonical YAML concept records
-src/data/primitives/     primitive descriptions and references to concept definitions
-src/content.config.ts    runtime Zod schema used by Astro
-schemas/                 portable JSON Schema for editors and tools
-src/pages/               generated site routes and data endpoints
-src/components/          small presentation components
-src/lib/catalog.ts       catalog queries and category metadata
-scripts/                 cross-record relationship validation
-tests/                   dataset integrity tests
-.github/workflows/       validation and Pages deployment
-```
+## GitHub Pages
 
-The architecture deliberately keeps the publishing layer thin:
-
-```text
-validated YAML → content collections → web pages / categories / primitives / JSON / llms.txt
-```
-
-Future Concept Graph and Timeline views should consume the same collection rather than introduce a second content store.
-
-## Add a concept
-
-Copy an existing file in `src/data/concepts/`, rename it with a kebab-case slug, and complete every required field. `related` values are concept slugs and must resolve to existing records. `primitives` contains zero or more primitive slugs; legacy `tags` are no longer supported. See [CONTRIBUTING.md](./CONTRIBUTING.md) for the editorial and review criteria.
-
-## Add a primitive
-
-Create a stable kebab-case YAML file in `src/data/primitives/` following [the primitive content guide](./docs/primitives.md). Records include definitions, scope, composition examples, considerations, distinctions, scoped priorities, ownership, and source status. The page and reverse concept links are generated from the collections.
-
-## Deploy to GitHub Pages
-
-1. Create a GitHub repository named `ai-native-lexicon` and push this project to `master`.
-2. In **Settings → Pages**, choose **GitHub Actions** as the source.
-3. The `Validate and deploy` workflow validates, tests, builds, and publishes the site.
-
-The workflow derives the owner, repository name, canonical URL, base path, GitHub link, and edit links from the GitHub environment. For a custom domain, set `SITE_URL` and `BASE_PATH=/` in the workflow or repository environment.
-
-## Data API
-
-- `dataset.json` version `0.2.0` contains `concepts` and `primitives`. Concept `tags` are replaced by `primitives` references; primitive `definitions` either reference a concept by slug or contain a new inline definition.
-- `llms.txt` provides a compact discovery document for language models and retrieval tools.
-
-The records are intentionally ready for graph and timeline projections: stable slugs identify nodes, `related` defines edges, and `added` provides an initial temporal field.
+The [Pages workflow](./.github/workflows/pages.yml) validates, tests, builds, and deploys the site on successful pushes to `main` or `master`; pull requests run the checks without deploying. The deployment derives its URL and repository subpath from the GitHub environment.
 
 ## License
 
