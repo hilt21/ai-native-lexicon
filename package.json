@@ -6,10 +6,11 @@
   "description": "An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.",
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build": "npm run validate:speaking-cards && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check && npm run validate:concepts",
+    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check && npm run validate:concepts && npm run validate:speaking-cards",
     "validate:concepts": "node scripts/validate-concepts.mjs",
+    "validate:speaking-cards": "node scripts/validate-speaking-cards.mjs",
     "test": "node --test tests/*.test.mjs"
   },
   "dependencies": {

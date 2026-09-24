@@ -1,0 +1,156 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import SpeakingCardLinks from '../../components/SpeakingCardLinks.astro';
+import speakingCards from '../../data/speaking-cards.json';
+import { getConcepts, getPrimitives, getPrimitiveDefinitions, pathWithBase } from '../../lib/catalog';
+import { primitiveLayerId, primitiveOwners, primitivePriorities } from '../../lib/primitive-presentation';
+
+export async function getStaticPaths() {
+  const [concepts, primitives] = await Promise.all([getConcepts(), getPrimitives()]);
+  const conceptsById = new Map(concepts.map((concept) => [concept.id, concept]));
+  const primitivesById = new Map(primitives.map((primitive) => [primitive.id, primitive]));
+  const conceptsByPrimitive = new Map(primitives.map(({ id }) => [id, [] as typeof concepts]));
+  for (const concept of concepts) {
+    for (const slug of concept.data.primitives) conceptsByPrimitive.get(slug)?.push(concept);
+  }
+
+  return primitives.map((primitive) => {
+    const related = primitive.data.related.map((slug) => {
+      const entry = primitivesById.get(slug);
+      if (!entry) throw new Error(`${primitive.id}: missing related primitive ${slug}`);
+      return entry;
+    });
+    return {
+      params: { slug: primitive.id },
+      props: {
+        primitive,
+        related,
+        linkedConcepts: conceptsByPrimitive.get(primitive.id) ?? [],
+        definitions: getPrimitiveDefinitions(primitive, conceptsById),
+      },
+    };
+  });
+}
+
+const { primitive, related, linkedConcepts, definitions } = Astro.props;
+const { data } = primitive;
+const layerId = primitiveLayerId(data.layer);
+const owner = primitiveOwners[data.ownership.kind];
+const priority = primitivePriorities[data.priority.level];
+const linkedSpeakingCards = speakingCards.filter((card) => card.primitives.includes(primitive.id));
+---
+
+<StarlightPage frontmatter={{ title: data.term, description: data.summary, editUrl: false, tableOfContents: false }}>
+  <article class="primitive-detail" aria-label={data.term}>
+    <header class="concept-masthead primitive-masthead">
+      <div>
+        <a href={pathWithBase(`/primitives/#${layerId}`)}>{data.layer}</a>
+        <p class="concept-zh" lang="zh">{data.zh}</p>
+      </div>
+      <div class="primitive-stamps">
+        <span class="status-stamp">{data.priority.level} · {priority.label}</span>
+        <span class="status-stamp">{owner.label}</span>
+      </div>
+    </header>
+
+    <p class="concept-deck">{data.summary}</p>
+
+    <div class="definition-grid">
+      <h2>Definition / 定义</h2>
+      <div>
+        {definitions.map((definition) => (
+          <div class="primitive-definition">
+            <p><strong>{definition.name}.</strong> {definition.text}</p>
+            {definition.concept && <a href={pathWithBase(`/concepts/${definition.concept}/`)}>Read the concept →</a>}
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <div class="definition-grid">
+      <h2>Scope / 适用范围</h2>
+      <p>{data.scope}</p>
+    </div>
+
+    <div class="practice-grid primitive-practice">
+      <div>
+        <span>USE & COMPOSITION / 用途与组合</span>
+        <p>{data.usage}</p>
+        <p class="primitive-pattern">{data.composition.pattern}</p>
+        <p>{data.composition.example}</p>
+      </div>
+      <div>
+        <span>ENGINEERING & COGNITION / 工程与认知注意点</span>
+        <ul>{data.considerations.map((note) => <li>{note}</li>)}</ul>
+      </div>
+    </div>
+
+    <div class="definition-grid">
+      <h2>Distinctions / 概念边界</h2>
+      <p>{data.distinctions}</p>
+    </div>
+
+    <div class="definition-grid">
+      <h2>Ownership & priority / 归属与优先级</h2>
+      <div>
+        <p><strong>{owner.label}.</strong> {data.ownership.rationale}</p>
+        <p><strong>{data.priority.level} · {data.priority.scope}.</strong> {data.priority.rationale}</p>
+      </div>
+    </div>
+
+    {related.length > 0 && (
+      <nav class="related-section" aria-label={`${data.term}: related primitives`}>
+        <p class="eyebrow">COMBINE WITH / 关联原语</p>
+        <h2>Related primitives</h2>
+        <ul class="primitive-links">
+          {related.map((entry) => <li><a href={pathWithBase(`/primitives/${entry.id}/`)}>{entry.data.term}</a></li>)}
+        </ul>
+      </nav>
+    )}
+
+    <nav class="related-section" aria-label={`${data.term}: concepts`}>
+      <p class="eyebrow">IN THE LEXICON / {linkedConcepts.length} CONCEPTS</p>
+      <h2>Concepts using this primitive</h2>
+      {linkedConcepts.length > 0
+        ? <ul class="primitive-links">{linkedConcepts.map((concept) => <li><a href={pathWithBase(`/concepts/${concept.id}/`)}>{concept.data.term}</a></li>)}</ul>
+        : <p>No linked concepts yet.</p>}
+    </nav>
+
+    <SpeakingCardLinks cards={linkedSpeakingCards} headingId={`${primitive.id}-speaking-cards`} />
+
+    <details class="primitive-sources">
+      <summary>Sources & editorial basis / 来源依据</summary>
+      <ul>{data.sources.map((source) => (
+        <li>
+          {source.url ? <a href={source.url}>{source.title}</a> : <cite>{source.title}</cite>}
+          {`. ${source.section}. ${source.basis === 'report-synthesis' ? 'Adapted research synthesis' : 'Editorial synthesis'}; ${source.verification === 'unverified' ? 'not independently verified' : 'verified'}.`}
+        </li>
+      ))}</ul>
+    </details>
+
+    <a class="primitive-back" href={pathWithBase(`/primitives/#${layerId}`)}>Back to primitive directory ↑</a>
+  </article>
+</StarlightPage>
+
+<style>
+  .primitive-stamps { display: flex; flex-wrap: wrap; gap: var(--lex-space-2); }
+  .primitive-stamps .status-stamp { white-space: nowrap; }
+  .primitive-detail .primitive-definition + .primitive-definition { margin-top: var(--lex-space-6); }
+  .primitive-definition p { margin-top: 0; }
+  .primitive-practice { margin-top: var(--lex-space-8); }
+  .primitive-practice span { font-weight: 800; font-family: var(--sl-font-mono); letter-spacing: 0.06em; }
+  .primitive-practice ul { padding-inline-start: 1.2rem; margin-bottom: 0; }
+  .primitive-practice li + li { margin-top: var(--lex-space-2); }
+  .primitive-pattern { padding: var(--lex-space-4); background: var(--lex-paper-deep); font-family: var(--sl-font-mono); font-size: var(--lex-text-small); overflow-wrap: anywhere; }
+  .primitive-detail .related-section { margin-top: var(--lex-space-12); }
+  .primitive-detail .related-section h2 { margin-bottom: var(--lex-space-4); }
+  .primitive-links { display: flex; flex-wrap: wrap; gap: var(--lex-space-2) var(--lex-space-6); list-style: none; padding: 0; }
+  .primitive-links li { margin: 0; }
+  .primitive-links a, .primitive-back { display: inline-flex; align-items: center; min-height: var(--lex-control-height); }
+  .primitive-sources { margin-top: var(--lex-space-8); color: var(--lex-muted); font-size: var(--lex-text-small); }
+  .primitive-sources summary { min-height: var(--lex-control-height); padding-block: 0.6rem; cursor: pointer; font-weight: 700; }
+  .primitive-back { margin-top: var(--lex-space-6); }
+  @media (max-width: 50rem) {
+    .primitive-stamps { gap: 0.4rem; }
+  }
+</style>

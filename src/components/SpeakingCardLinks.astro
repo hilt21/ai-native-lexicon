@@ -1,0 +1,44 @@
+---
+import type cards from '../data/speaking-cards.json';
+import { pathWithBase } from '../lib/catalog';
+
+interface Props {
+  cards: (typeof cards)[number][];
+  headingId: string;
+}
+
+const { cards: linkedCards, headingId } = Astro.props;
+---
+
+{linkedCards.length > 0 && (
+  <section class="related-section speaking-card-backlinks" aria-labelledby={headingId}>
+    <h2 id={headingId}>Speaking cards / 讲解与练习</h2>
+    <ul>
+      {linkedCards.map((card) => {
+        const cardId = `card-${String(card.number).padStart(2, '0')}`;
+        return (
+          <li>
+            <a href={pathWithBase(`/speaking-card/#${cardId}`)}>
+              <span class="card-number">Card {String(card.number).padStart(2, '0')}</span>
+              <span>{card.title}</span>
+              <span class="card-arrow" aria-hidden="true">↗</span>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+)}
+
+<style>
+  .speaking-card-backlinks h2 { margin-bottom: var(--lex-space-4); }
+  .speaking-card-backlinks ul { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--lex-line); }
+  .speaking-card-backlinks li { margin: 0; border-bottom: 1px solid var(--lex-line); }
+  .speaking-card-backlinks a { display: grid; align-items: center; grid-template-columns: 5rem minmax(0, 1fr) 1rem; gap: var(--lex-space-4); min-height: var(--lex-control-height); padding: var(--lex-space-2) var(--lex-space-3); color: var(--lex-ink); text-decoration: none; }
+  .speaking-card-backlinks a:hover { background: color-mix(in srgb, var(--lex-acid) 24%, transparent); }
+  .card-number { color: var(--lex-muted); font: var(--lex-text-label) var(--sl-font-mono); }
+  .card-arrow { text-align: right; }
+  @media (max-width: 30rem) {
+    .speaking-card-backlinks a { grid-template-columns: 4rem minmax(0, 1fr) 1rem; gap: var(--lex-space-2); }
+  }
+</style>
