@@ -33,3 +33,16 @@ test('the splash page exposes primary navigation without a sidebar', async () =>
     assert.match(home, new RegExp(`pathWithBase\\('${path}'\\)`));
   }
 });
+
+test('primitive catalog and concept links resolve to stable detail routes', async () => {
+  const [row, detail, concept] = await Promise.all([
+    '../src/components/PrimitiveRow.astro',
+    '../src/pages/primitives/[slug].astro',
+    '../src/pages/concepts/[slug].astro',
+  ].map(readSource));
+
+  assert.match(row, /id=\{primitive\.id\}/);
+  assert.match(row, /href=\{pathWithBase\(`\/primitives\/\$\{primitive\.id\}\/`\)\}/);
+  assert.match(detail, /params: \{ slug: primitive\.id \}/);
+  assert.match(concept, /`\/primitives\/\$\{primitive\.id\}\/`/);
+});

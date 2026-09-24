@@ -2,6 +2,8 @@
   {
     "number": 1,
     "title": "Why AI Matters Now",
+    "concepts": ["context", "intent-interface", "retrieval"],
+    "primitives": ["interface", "context", "view-projection"],
     "coreIdea": "AI is becoming a new interface between people, knowledge and software.",
     "keyLines": [
       "AI is changing how we interact with information and software.",
@@ -22,6 +24,8 @@
   {
     "number": 2,
     "title": "Copilot vs Agent",
+    "concepts": ["agent-loop", "delegation", "goal"],
+    "primitives": ["actor", "goal", "capability-tool", "execution"],
     "coreIdea": "A copilot helps you do the work. An agent can take responsibility for part of the work.",
     "keyLines": [
       "A copilot usually works together with a human.",
@@ -43,6 +47,8 @@
   {
     "number": 3,
     "title": "What Makes an Agent?",
+    "concepts": ["approval", "context", "guardrail", "long-term-memory", "tool"],
+    "primitives": ["model", "context", "capability-tool", "memory", "permission", "constraint"],
     "coreIdea": "An agent combines intelligence with context, tools, memory and boundaries.",
     "keyLines": [
       "The model gives the agent intelligence.",
@@ -67,6 +73,8 @@
   {
     "number": 4,
     "title": "Agent Harness",
+    "concepts": ["approval", "artifact", "evidence", "failure-containment", "harness", "permission", "termination"],
+    "primitives": ["harness", "context", "capability-tool", "permission", "recovery", "evidence", "observation-trace"],
     "coreIdea": "The harness defines how an agent operates safely and reliably around the model.",
     "keyLines": [
       "A powerful model does not automatically create a reliable agent.",
@@ -94,6 +102,8 @@
   {
     "number": 5,
     "title": "Workflow vs Agent",
+    "concepts": ["agent-loop", "context", "deterministic-shell", "workflow"],
+    "primitives": ["flow", "reasoning", "execution", "rule-policy"],
     "coreIdea": "Use workflows for predictable paths and agents when the path depends on context.",
     "keyLines": [
       "Workflows are strong when rules are clear.",
@@ -116,6 +126,8 @@
   {
     "number": 6,
     "title": "From Prompting to Context Engineering",
+    "concepts": ["context-engineering", "context-selection", "prompt", "retrieval"],
+    "primitives": ["context", "memory"],
     "coreIdea": "Good AI results increasingly depend on good context.",
     "keyLines": [
       "Prompting is useful, but it is only one part of the system.",
@@ -137,6 +149,8 @@
   {
     "number": 7,
     "title": "Enterprise Knowledge",
+    "concepts": ["context-engineering", "grounding", "provenance-chain", "rag", "retrieval"],
+    "primitives": ["context", "evidence", "memory"],
     "coreIdea": "Enterprise AI becomes valuable when it can work with the knowledge people actually use.",
     "keyLines": [
       "Companies already have huge amounts of knowledge.",
@@ -158,6 +172,8 @@
   {
     "number": 8,
     "title": "Tools and Actions",
+    "concepts": ["permission", "tool", "tool-calling"],
+    "primitives": ["capability-tool", "permission", "execution"],
     "coreIdea": "AI creates more value when it can move from answering questions to taking useful actions.",
     "keyLines": [
       "A language model can generate information.",
@@ -179,6 +195,8 @@
   {
     "number": 9,
     "title": "Human in the Loop",
+    "concepts": ["approval", "bounded-autonomy", "graceful-intervention", "human-on-the-loop"],
+    "primitives": ["actor", "control", "permission", "stakeholder"],
     "coreIdea": "Human judgment should be placed at the moments where judgment creates the most value.",
     "keyLines": [
       "Full automation is not always the goal.",
@@ -201,6 +219,8 @@
   {
     "number": 10,
     "title": "Trust and Evidence",
+    "concepts": ["evidence", "grounding", "inspectable-agency", "provenance-chain", "trace", "verification"],
+    "primitives": ["evidence", "observation-trace", "verification-evaluation"],
     "coreIdea": "In enterprise AI, a useful answer also needs evidence.",
     "keyLines": [
       "Confidence is not the same as correctness.",
@@ -222,6 +242,8 @@
   {
     "number": 11,
     "title": "Permissions and Governance",
+    "concepts": ["agent-ready-organization", "approval", "guardrail", "permission", "permission-boundary", "policy-as-code"],
+    "primitives": ["permission", "constraint", "rule-policy", "stakeholder"],
     "coreIdea": "An agent should have only the authority required for its task.",
     "keyLines": [
       "Agents can access information and take actions.",
@@ -243,6 +265,8 @@
   {
     "number": 12,
     "title": "AI Evaluation",
+    "concepts": ["eval-driven-development", "evaluation", "failure-containment", "verification"],
+    "primitives": ["verification-evaluation", "success-criterion", "variety-uncertainty"],
     "coreIdea": "We should evaluate AI as a system, not by one impressive demo.",
     "keyLines": [
       "A good demo proves possibility.",
@@ -264,6 +288,8 @@
   {
     "number": 13,
     "title": "Finding Good AI Use Cases",
+    "concepts": [],
+    "primitives": ["context", "flow"],
     "coreIdea": "The best AI opportunities often begin with business friction.",
     "keyLines": [
       "Start by looking for wasted time and repeated effort.",
@@ -285,6 +311,8 @@
   {
     "number": 14,
     "title": "From Task to Workflow",
+    "concepts": ["retrieval", "task-decomposition", "workflow"],
+    "primitives": ["flow", "plan", "execution", "context", "view-projection"],
     "coreIdea": "The biggest AI value often comes from redesigning the workflow around AI.",
     "keyLines": [
       "Many people start with individual AI tasks.",
@@ -307,6 +335,8 @@
   {
     "number": 15,
     "title": "Microsoft 365 Copilot",
+    "concepts": ["context", "context-engineering", "intent-interface"],
+    "primitives": ["context", "interface", "view-projection"],
     "coreIdea": "Microsoft 365 Copilot brings AI into the tools where employees already work.",
     "keyLines": [
       "Most employees already spend their day in Microsoft 365.",
@@ -327,6 +357,8 @@
   {
     "number": 16,
     "title": "Copilot Studio",
+    "concepts": ["agent-ready-organization", "approval", "harness", "instructions", "retrieval", "routing", "tool"],
+    "primitives": ["purpose", "context", "capability-tool", "rule-policy", "permission", "stakeholder"],
     "coreIdea": "Copilot Studio helps organizations create agents around specific business needs.",
     "keyLines": [
       "General AI cannot know every business process.",
@@ -347,6 +379,8 @@
   {
     "number": 17,
     "title": "Power Automate",
+    "concepts": ["approval", "deterministic-shell", "tool-calling", "workflow"],
+    "primitives": ["flow", "rule-policy", "execution", "event", "interface"],
     "coreIdea": "Power Automate provides predictable execution for repeatable business processes.",
     "keyLines": [
       "Many business processes follow clear rules.",
@@ -368,6 +402,8 @@
   {
     "number": 18,
     "title": "Power Apps and Dataverse",
+    "concepts": ["feedback", "inspectable-agency", "intent-interface", "state"],
+    "primitives": ["state", "entity", "interface", "view-projection", "stakeholder", "event"],
     "coreIdea": "AI still needs structured data, clear state and good human interfaces.",
     "keyLines": [
       "Conversations are useful, but not every task should live inside a chat.",
@@ -389,6 +425,8 @@
   {
     "number": 19,
     "title": "Agent + Power Platform",
+    "concepts": ["agent-loop", "context", "orchestration", "state", "workflow"],
+    "primitives": ["actor", "context", "reasoning", "flow", "execution", "state", "entity", "interface", "capability-tool"],
     "coreIdea": "Let agents handle ambiguity and let automation handle predictable execution.",
     "keyLines": [
       "Agents are strong at understanding messy situations.",
@@ -412,6 +450,8 @@
   {
     "number": 20,
     "title": "The Role of an AI Champion",
+    "concepts": ["agent-ready-organization", "context-engineering", "task-decomposition", "workflow"],
+    "primitives": ["stakeholder", "context", "reasoning", "flow"],
     "coreIdea": "An AI Champion connects technological possibilities with real business problems.",
     "keyLines": [
       "AI Champions do not need to have every technical answer.",

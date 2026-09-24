@@ -1,0 +1,82 @@
+---
+import type { Primitive } from '../lib/catalog';
+import { pathWithBase } from '../lib/catalog';
+import { primitiveOwners, primitivePriorities } from '../lib/primitive-presentation';
+
+interface Props {
+  primitive: Primitive;
+}
+
+const { primitive } = Astro.props;
+const { data } = primitive;
+---
+
+<a class="primitive-row" id={primitive.id} href={pathWithBase(`/primitives/${primitive.id}/`)}>
+  <span class="primitive-row-name">
+    <strong>{data.term}</strong>
+    <span lang="zh">{data.zh}</span>
+  </span>
+  <span class="primitive-row-summary">{data.summary}</span>
+  <span class="primitive-row-meta">
+    <span>{data.priority.level} {primitivePriorities[data.priority.level].label}</span>
+    <span>{primitiveOwners[data.ownership.kind].label}</span>
+  </span>
+  <span class="primitive-row-arrow" aria-hidden="true">↗</span>
+</a>
+
+<style>
+  .primitive-row {
+    display: grid;
+    align-items: center;
+    grid-template-columns: minmax(9rem, 0.9fr) minmax(0, 2fr) minmax(9rem, 0.8fr) 1rem;
+    gap: var(--lex-space-4);
+    padding: var(--lex-space-4) 0;
+    color: var(--lex-ink) !important;
+    border-bottom: 1px solid var(--lex-line);
+    text-decoration: none !important;
+    transition: background var(--lex-duration) ease;
+    scroll-margin-top: 6rem;
+  }
+
+  .primitive-row:hover { background: color-mix(in srgb, var(--lex-acid) 34%, transparent); }
+  .primitive-row:target { background: color-mix(in srgb, var(--lex-acid) 22%, transparent); }
+  .primitive-row-name strong {
+    display: block;
+    font-family: var(--lex-font-display);
+    font-size: var(--lex-text-item);
+    font-weight: 600;
+    line-height: 1.25;
+    overflow-wrap: anywhere;
+  }
+  .primitive-row-name > span, .primitive-row-summary {
+    color: var(--lex-muted);
+    font-size: var(--lex-text-small);
+    line-height: 1.55;
+  }
+  .primitive-row-name > span { display: block; margin-top: 0.2rem; }
+  .primitive-row-meta {
+    display: grid;
+    gap: var(--lex-space-1);
+    color: var(--lex-muted);
+    font-family: var(--sl-font-mono);
+    font-size: var(--lex-text-label);
+    line-height: 1.5;
+  }
+  .primitive-row-arrow { text-align: right; }
+
+  @container (max-width: 44rem) {
+    .primitive-row {
+      grid-template-columns: minmax(0, 1fr) 1rem;
+      gap: var(--lex-space-2) var(--lex-space-3);
+      padding-block: var(--lex-space-4);
+    }
+    .primitive-row-name { grid-column: 1; grid-row: 1; }
+    .primitive-row-summary { grid-column: 1; grid-row: 3; }
+    .primitive-row-meta { grid-column: 1; grid-row: 2; display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; }
+    .primitive-row-arrow { grid-column: 2; grid-row: 1; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .primitive-row { transition: none; }
+  }
+</style>

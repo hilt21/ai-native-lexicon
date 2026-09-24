@@ -1,6 +1,8 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import RelatedConcepts from '../../components/RelatedConcepts.astro';
+import SpeakingCardLinks from '../../components/SpeakingCardLinks.astro';
+import speakingCards from '../../data/speaking-cards.json';
 import { categoryMeta, getConcepts, getPrimitives, pathWithBase } from '../../lib/catalog';
 
 export async function getStaticPaths() {
@@ -25,6 +27,7 @@ const editUrl = repository
 const related = concept.data.related
   .map((slug: string) => concepts.find((entry: typeof concept) => entry.id === slug))
   .filter((entry: typeof concept | undefined): entry is typeof concept => entry !== undefined);
+const linkedSpeakingCards = speakingCards.filter((card) => card.concepts.includes(concept.id));
 ---
 
 <StarlightPage frontmatter={{
@@ -62,11 +65,13 @@ const related = concept.data.related
         <p class="eyebrow">PRIMITIVES / 原语</p>
         <div class="tag-line">
           {primitives.map((primitive) => (
-            <a href={pathWithBase(`/primitives/#${primitive.id}`)}>{primitive.data.term}</a>
+            <a href={pathWithBase(`/primitives/${primitive.id}/`)}>{primitive.data.term}</a>
           ))}
         </div>
       </nav>
     )}
+
+    <SpeakingCardLinks cards={linkedSpeakingCards} headingId={`${concept.id}-speaking-cards`} />
 
     <section class="related-section">
       <p class="eyebrow">FOLLOW THE THREAD</p>

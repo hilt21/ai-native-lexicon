@@ -2,6 +2,24 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import SpeakingCard from '../components/SpeakingCard.astro';
 import cards from '../data/speaking-cards.json';
+import { getConcepts, getPrimitives } from '../lib/catalog';
+
+const [concepts, primitives] = await Promise.all([getConcepts(), getPrimitives()]);
+const conceptsById = new Map(concepts.map((concept) => [concept.id, concept]));
+const primitivesById = new Map(primitives.map((primitive) => [primitive.id, primitive]));
+const cardsWithRelations = cards.map((card) => ({
+  card,
+  concepts: card.concepts.map((slug) => {
+    const concept = conceptsById.get(slug);
+    if (!concept) throw new Error(`Card ${card.number}: missing concept ${slug}`);
+    return concept;
+  }),
+  primitives: card.primitives.map((slug) => {
+    const primitive = primitivesById.get(slug);
+    if (!primitive) throw new Error(`Card ${card.number}: missing primitive ${slug}`);
+    return primitive;
+  }),
+}));
 ---
 
 <StarlightPage frontmatter={{ title: 'Speaking Card', description: 'Twenty speaking cards for conversations about AI, agents and enterprise workflows.', editUrl: false, tableOfContents: false }}>
@@ -10,7 +28,9 @@ import cards from '../data/speaking-cards.json';
     <p>Choose a topic. Open the speaking notes for key lines, a real case and a question to discuss.</p>
   </div>
   <div class="speaking-grid">
-    {cards.map((card) => <SpeakingCard card={card} />)}
+    {cardsWithRelations.map(({ card, concepts: relatedConcepts, primitives: relatedPrimitives }) => (
+      <SpeakingCard card={card} concepts={relatedConcepts} primitives={relatedPrimitives} />
+    ))}
   </div>
 </StarlightPage>
 

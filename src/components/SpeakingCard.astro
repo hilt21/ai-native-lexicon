@@ -1,16 +1,28 @@
 ---
 import type cards from '../data/speaking-cards.json';
-interface Props { card: (typeof cards)[number] }
-const { card } = Astro.props;
+import type { Concept, Primitive } from '../lib/catalog';
+import { pathWithBase } from '../lib/catalog';
+
+interface Props {
+  card: (typeof cards)[number];
+  concepts: Concept[];
+  primitives: Primitive[];
+}
+
+const { card, concepts, primitives } = Astro.props;
 const id = `card-${String(card.number).padStart(2, '0')}`;
 ---
 
 <article class="speaking-card" id={id} aria-labelledby={`${id}-title`}>
   <header>
-    <a class="card-number" href={`#${id}`} aria-label={`Link to card ${card.number}`}>Card {String(card.number).padStart(2, '0')}</a>
+    <a class="card-number" href={pathWithBase(`/speaking-card/#${id}`)} aria-label={`Link to card ${card.number}: ${card.title}`}>Card {String(card.number).padStart(2, '0')}</a>
     <h2 id={`${id}-title`}>{card.title}</h2>
     <p class="core-idea">{card.coreIdea}</p>
   </header>
+  <p class="relation-counts" aria-label={`Related entries: ${concepts.length} concepts, ${primitives.length} primitives`}>
+    <span>{concepts.length} concepts</span>
+    <span>{primitives.length} primitives</span>
+  </p>
   <details>
     <summary>Speaking notes<span class="sr-only">: {card.title}</span></summary>
     <div class="notes">
@@ -30,6 +42,18 @@ const id = `card-${String(card.number).padStart(2, '0')}`;
         <h3 id={`${id}-ending`}>{card.endingLabel}</h3>
         <p>{card.ending}</p>
       </section>
+      <nav class="related-links" aria-labelledby={`${id}-concepts`}>
+        <h3 id={`${id}-concepts`}>Related concepts / 相关概念</h3>
+        {concepts.length > 0
+          ? <ul>{concepts.map((concept) => <li><a href={pathWithBase(`/concepts/${concept.id}/`)}>{concept.data.term}</a></li>)}</ul>
+          : <p class="no-relations">No direct concept links.</p>}
+      </nav>
+      <nav class="related-links" aria-labelledby={`${id}-primitives`}>
+        <h3 id={`${id}-primitives`}>Related primitives / 相关原语</h3>
+        {primitives.length > 0
+          ? <ul>{primitives.map((primitive) => <li><a href={pathWithBase(`/primitives/${primitive.id}/`)}>{primitive.data.term}</a></li>)}</ul>
+          : <p class="no-relations">No direct primitive links.</p>}
+      </nav>
     </div>
   </details>
 </article>
@@ -41,6 +65,7 @@ const id = `card-${String(card.number).padStart(2, '0')}`;
   h2 { margin: var(--lex-space-2) 0 var(--lex-space-4); font: normal var(--lex-text-section)/1.15 var(--lex-font-display); letter-spacing: -0.025em; overflow-wrap: anywhere; }
   p, li { font-size: var(--lex-text-body); line-height: var(--lex-leading-body); }
   .core-idea { margin: 0 0 var(--lex-space-6); color: var(--lex-muted); }
+  .relation-counts { display: flex; flex-wrap: wrap; gap: var(--lex-space-2) var(--lex-space-4); margin: calc(var(--lex-space-4) * -1) 0 var(--lex-space-4); color: var(--lex-muted); font: var(--lex-text-label) var(--sl-font-mono); }
   details { margin: 0; padding: 0; border: 0; border-top: 1px solid var(--lex-line); }
   summary { margin: 0; padding-inline: 0; padding-block: var(--lex-space-3); min-height: var(--lex-control-height); cursor: pointer; font-size: var(--lex-text-small); font-weight: 700; color: var(--lex-ink); }
   summary::marker { color: var(--lex-focus); }
@@ -48,6 +73,11 @@ const id = `card-${String(card.number).padStart(2, '0')}`;
   summary:focus-visible { outline: 2px solid var(--lex-focus); outline-offset: 4px; }
   .notes { display: grid; gap: var(--lex-space-6); padding-top: var(--lex-space-4); }
   h3 { margin: 0 0 var(--lex-space-3); font-size: var(--lex-text-small); }
+  .related-links { border-top: 1px solid var(--lex-line); padding-top: var(--lex-space-4); }
+  .related-links ul { display: flex; flex-wrap: wrap; gap: var(--lex-space-2) var(--lex-space-6); list-style: none; margin: 0; padding: 0; }
+  .related-links li { margin: 0; }
+  .related-links a { display: inline-flex; align-items: center; min-height: var(--lex-control-height); color: var(--lex-ink); text-underline-offset: 0.2em; }
+  .no-relations { margin: 0; color: var(--lex-muted); }
   .notes p { margin: 0; }
   .notes p + p { margin-top: var(--lex-space-3); }
   ul { margin: 0; padding-left: var(--lex-space-6); }
