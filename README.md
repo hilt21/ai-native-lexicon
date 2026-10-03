@@ -31,7 +31,7 @@ Start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness
 
 Entries are editorial working definitions, not claims of universal agreement. Concepts show maturity; primitive entries identify their synthesis basis and whether sources have been independently verified. Relationship and schema checks keep references inspectable as the collection grows.
 
-The canonical content lives in three places: concept YAML in `src/data/concepts/`, primitive YAML in `src/data/primitives/`, and Speaking Card JSON in `src/data/speaking-cards.json`. The static site, search, cross-links, and machine-readable exports are generated from these records.
+The canonical content lives in three places: concept YAML in `src/data/concepts/`, primitive YAML in `src/data/primitives/`, and Speaking Card YAML in `src/data/speaking-cards/`. The static site, search, cross-links, and machine-readable exports are generated from these records.
 
 ## Contribute
 
@@ -63,3 +63,11 @@ The [Pages workflow](./.github/workflows/pages.yml) validates, tests, builds, an
 ## License
 
 Source code is available under the MIT License. Lexicon content and dataset records are available under [CC BY 4.0](./LICENSE-CONTENT.md).
+
+### Managing Speaking Cards
+
+Each card is one YAML record in `src/data/speaking-cards/` (for example, `card-01.yaml`). Add, edit, or remove files to manage the collection; pages and backlinks update automatically during development or the next build. Cards are sorted by their unique positive integer `number`, independent of filename. Keep existing numbers stable because they determine public `#card-XX` anchors; gaps are allowed and deleting a card does not renumber others.
+
+Copy an existing card as a starting point and assign an unused number. Required fields are `number`, `title`, `concepts`, `primitives`, `coreIdea`, `keyLines`, `realCase`, `discussionQuestion`, `endingLabel`, and `ending`. Notes must be non-empty; relationship arrays may be empty and must reference existing slugs without duplicates. The portable contract is `schemas/speaking-card.schema.json`; Astro and the CLI share `src/lib/speaking-card-schema.mjs`.
+
+Run `npm run check`, `npm test`, and `npm run build` after editing. Validation rejects malformed YAML, invalid fields, duplicate numbers, and broken relationships.

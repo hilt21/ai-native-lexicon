@@ -1,0 +1,26 @@
+number: 2
+title: Copilot vs Agent
+concepts:
+  - agent-loop
+  - delegation
+  - goal
+primitives:
+  - actor
+  - goal
+  - capability-tool
+  - execution
+coreIdea: A copilot helps you do the work. An agent can take responsibility for part of the work.
+keyLines:
+  - A copilot usually works together with a human.
+  - You ask, it responds, and you stay in control of every step.
+  - An agent can work toward a goal across multiple steps.
+  - It can use tools, make decisions and take actions.
+  - The important difference is the level of delegation.
+realCase:
+  - Imagine preparing a weekly project report.
+  - A copilot can summarize documents when you ask.
+  - An agent could collect the latest project information, identify important changes, prepare the report, and send it to you for review.
+  - The key shift is from asking AI individual questions to giving AI a goal.
+discussionQuestion: What part of your work would you feel comfortable delegating to an agent?
+endingLabel: Transition
+ending: If an agent can take responsibility for work, we need to understand what actually makes an agent possible.

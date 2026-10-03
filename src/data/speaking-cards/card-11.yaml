@@ -1,0 +1,29 @@
+number: 11
+title: Permissions and Governance
+concepts:
+  - agent-ready-organization
+  - approval
+  - guardrail
+  - permission
+  - permission-boundary
+  - policy-as-code
+primitives:
+  - permission
+  - constraint
+  - rule-policy
+  - stakeholder
+coreIdea: An agent should have only the authority required for its task.
+keyLines:
+  - Agents can access information and take actions.
+  - That makes permission design extremely important.
+  - Access should follow the principle of least privilege.
+  - Sensitive actions may require additional approval.
+  - Governance should be part of the system from the beginning.
+realCase:
+  - Imagine an HR agent helping employees with internal questions.
+  - It may need access to general HR policies.
+  - It should not automatically have access to every employee’s confidential information.
+  - Different tasks require different levels of permission.
+discussionQuestion: What information in your organization should an AI agent never access by default?
+endingLabel: Transition
+ending: Even with good permissions, we still need to know whether the AI system actually performs well.

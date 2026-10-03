@@ -1,0 +1,31 @@
+number: 20
+title: The Role of an AI Champion
+concepts:
+  - agent-ready-organization
+  - context-engineering
+  - task-decomposition
+  - workflow
+primitives:
+  - stakeholder
+  - context
+  - reasoning
+  - flow
+coreIdea: An AI Champion connects technological possibilities with real business problems.
+keyLines:
+  - AI Champions do not need to have every technical answer.
+  - Their value comes from connecting people, problems and possibilities.
+  - They help teams identify useful experiments.
+  - They also help people understand both opportunities and limitations.
+  - Good AI adoption spreads through people who can translate technology into everyday work.
+realCase:
+  - A colleague says, “I spend hours every week preparing this report.”
+  - An AI Champion does not immediately recommend a product.
+  - First, they understand the workflow.
+  - Where does the information come from?
+  - Which steps require judgment?
+  - Which parts are repetitive?
+  - What risks exist?
+  - Only then do they explore whether Copilot, an agent or Power Platform can help.
+discussionQuestion: What is one problem in your team that you would like to explore with AI?
+endingLabel: Closing Line
+ending: The most important question is no longer what AI can do. The useful question is where AI can make our work meaningfully better.

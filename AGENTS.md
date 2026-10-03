@@ -4,7 +4,7 @@ This repository is a data-first lexicon with three separate content types. Treat
 
 ## Canonical data and relationships
 
-- Concepts live in `src/data/concepts/*.yaml`; primitives live in `src/data/primitives/*.yaml`; Speaking Cards live in `src/data/speaking-cards.json`.
+- Concepts live in `src/data/concepts/*.yaml`; primitives live in `src/data/primitives/*.yaml`; Speaking Cards live in `src/data/speaking-cards/*.yaml`.
 - Keep Concepts, Primitives, and Speaking Cards as separate data types. Do not copy concept definitions or primitive descriptions into cards.
 - Preserve stable concept and primitive filename slugs and Speaking Card numbers/`#card-XX` anchors; they are public identifiers and relationship targets.
 - Concept `related` values reference concepts; concept `primitives` values reference primitives. Primitive `related` values reference primitives. A primitive definition may reference a concept or provide a new inline definition; a referenced concept must link back to that primitive in its `primitives` array.

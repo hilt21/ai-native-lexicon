@@ -1,9 +1,9 @@
-import { readdir, readFile } from 'node:fs/promises';
+import { readdir } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
 import { validateSpeakingCardReferences } from './speaking-card-validation.mjs';
+import { readSpeakingCards } from './read-speaking-cards.mjs';
 
-const cardsPath = new URL('../src/data/speaking-cards.json', import.meta.url);
-const cards = JSON.parse(await readFile(cardsPath, 'utf8'));
+const cards = await readSpeakingCards();
 
 async function readSlugs(directory) {
   const files = await readdir(directory);

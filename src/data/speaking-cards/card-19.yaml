@@ -1,0 +1,35 @@
+number: 19
+title: Agent + Power Platform
+concepts:
+  - agent-loop
+  - context
+  - orchestration
+  - state
+  - workflow
+primitives:
+  - actor
+  - context
+  - reasoning
+  - flow
+  - execution
+  - state
+  - entity
+  - interface
+  - capability-tool
+coreIdea: Let agents handle ambiguity and let automation handle predictable execution.
+keyLines:
+  - Agents are strong at understanding messy situations.
+  - Workflows are strong at executing defined processes.
+  - Apps provide structured human interaction.
+  - Data platforms provide shared business state.
+  - Combining these capabilities creates stronger enterprise solutions.
+realCase:
+  - Imagine a supplier sends an unusual technical request by email.
+  - An agent reads the message, understands the request and identifies the required process.
+  - Power Automate starts the correct workflow.
+  - Dataverse stores the case.
+  - A Power App allows engineers to review it.
+  - The agent handles ambiguity while the platform provides structure.
+discussionQuestion: Where could your team combine AI reasoning with an existing Power Platform process?
+endingLabel: Transition
+ending: Technology provides the capability. Someone still needs to connect these possibilities with real business problems.

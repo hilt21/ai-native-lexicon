@@ -1,0 +1,24 @@
+number: 1
+title: Why AI Matters Now
+concepts:
+  - context
+  - intent-interface
+  - retrieval
+primitives:
+  - interface
+  - context
+  - view-projection
+coreIdea: AI is becoming a new interface between people, knowledge and software.
+keyLines:
+  - AI is changing how we interact with information and software.
+  - In the past, we had to learn how software works.
+  - Now software is starting to understand how we communicate.
+  - Natural language is becoming a new user interface.
+  - That makes digital capabilities accessible to many more people.
+realCase:
+  - Think about finding information inside a company. Today, an employee may search SharePoint, open several documents, check emails and ask colleagues.
+  - With AI, the interaction can become much simpler. The employee can describe the question in natural language, and AI can help find, summarize and connect the relevant information.
+  - The important change is not just faster search. The user no longer needs to understand where every piece of information is stored.
+discussionQuestion: Where in your daily work do you spend too much time finding information?
+endingLabel: Transition
+ending: Once AI understands what we want, the next question is how much work we want it to do for us.

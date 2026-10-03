@@ -1,0 +1,24 @@
+number: 15
+title: Microsoft 365 Copilot
+concepts:
+  - context
+  - context-engineering
+  - intent-interface
+primitives:
+  - context
+  - interface
+  - view-projection
+coreIdea: Microsoft 365 Copilot brings AI into the tools where employees already work.
+keyLines:
+  - Most employees already spend their day in Microsoft 365.
+  - Copilot brings AI into Word, Excel, PowerPoint, Outlook and Teams.
+  - This reduces the need to move between tools.
+  - The real advantage is access to work context.
+  - Adoption becomes easier when AI appears inside familiar workflows.
+realCase:
+  - After a long project meeting, an employee may need to review notes, identify decisions and prepare follow-up actions.
+  - Copilot can help summarize the meeting and prepare a first draft of the follow-up.
+  - The user remains inside the same work environment.
+discussionQuestion: Which Microsoft 365 application would benefit most from AI in your daily work?
+endingLabel: Transition
+ending: Personal productivity is one layer. Companies also need agents designed for specific business purposes.

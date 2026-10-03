@@ -1,0 +1,33 @@
+number: 3
+title: What Makes an Agent?
+concepts:
+  - approval
+  - context
+  - guardrail
+  - long-term-memory
+  - tool
+primitives:
+  - model
+  - context
+  - capability-tool
+  - memory
+  - permission
+  - constraint
+coreIdea: An agent combines intelligence with context, tools, memory and boundaries.
+keyLines:
+  - The model gives the agent intelligence.
+  - Context tells the agent what is happening.
+  - Tools allow the agent to interact with the outside world.
+  - Memory helps it keep useful information over time.
+  - Guardrails define what the agent is allowed to do.
+realCase:
+  - Imagine an agent helping with customer requests.
+  - The language model can understand the request.
+  - Context gives it customer and product information.
+  - Tools allow it to search a database or create a ticket.
+  - Memory can preserve previous interactions.
+  - Guardrails can require human approval before certain actions.
+  - Together, these pieces turn a language model into a working system.
+discussionQuestion: Which of these five elements do you think is hardest to build well in an enterprise?
+endingLabel: Transition
+ending: But having all these capabilities still does not guarantee reliable behavior. That is where the harness becomes important.

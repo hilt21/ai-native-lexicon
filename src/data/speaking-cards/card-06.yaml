@@ -1,0 +1,25 @@
+number: 6
+title: From Prompting to Context Engineering
+concepts:
+  - context-engineering
+  - context-selection
+  - prompt
+  - retrieval
+primitives:
+  - context
+  - memory
+coreIdea: Good AI results increasingly depend on good context.
+keyLines:
+  - Prompting is useful, but it is only one part of the system.
+  - AI needs the right information at the right time.
+  - Good context can include documents, data, instructions and previous actions.
+  - Poor context creates poor decisions.
+  - Context engineering is becoming a core AI capability.
+realCase:
+  - Suppose you ask AI to write a project status report.
+  - A clever prompt may improve the writing.
+  - But if the AI does not know the current schedule, open issues, decisions and latest changes, the report will still be weak.
+  - The quality of the answer depends heavily on the quality of the context.
+discussionQuestion: What information would AI need before it could really understand your work?
+endingLabel: Transition
+ending: Inside a company, some of the most valuable context comes from organizational knowledge.

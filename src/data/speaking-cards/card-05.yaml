@@ -1,0 +1,28 @@
+number: 5
+title: Workflow vs Agent
+concepts:
+  - agent-loop
+  - context
+  - deterministic-shell
+  - workflow
+primitives:
+  - flow
+  - reasoning
+  - execution
+  - rule-policy
+coreIdea: Use workflows for predictable paths and agents when the path depends on context.
+keyLines:
+  - Workflows are strong when rules are clear.
+  - Agents become useful when the next step depends on judgment.
+  - Predictability is valuable.
+  - Flexibility is also valuable.
+  - The right architecture often combines both.
+realCase:
+  - Consider an invoice approval process.
+  - If every invoice follows the same approval rules, a workflow is usually enough.
+  - Now imagine a supplier sends an unusual request with incomplete documents and several possible exceptions.
+  - An agent can understand the situation and decide what information is missing.
+  - A workflow can then execute the approved process reliably.
+discussionQuestion: Which processes in your team are predictable, and which ones require real judgment?
+endingLabel: Transition
+ending: Whether we use a workflow or an agent, both depend heavily on the information we give them.

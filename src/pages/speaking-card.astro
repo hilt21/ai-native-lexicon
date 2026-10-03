@@ -1,8 +1,10 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import SpeakingCard from '../components/SpeakingCard.astro';
-import cards from '../data/speaking-cards.json';
+import { getSpeakingCards } from '../lib/speaking-cards';
 import { getConcepts, getPrimitives } from '../lib/catalog';
+
+const cards = await getSpeakingCards();
 
 const [concepts, primitives] = await Promise.all([getConcepts(), getPrimitives()]);
 const conceptsById = new Map(concepts.map((concept) => [concept.id, concept]));
@@ -22,7 +24,7 @@ const cardsWithRelations = cards.map((card) => ({
 }));
 ---
 
-<StarlightPage frontmatter={{ title: 'Speaking Card', description: 'Twenty speaking cards for conversations about AI, agents and enterprise workflows.', editUrl: false, tableOfContents: false }}>
+<StarlightPage frontmatter={{ title: 'Speaking Card', description: `${cards.length} speaking cards for conversations about AI, agents and enterprise workflows.`, editUrl: false, tableOfContents: false }}>
   <div class="page-intro">
     <p class="eyebrow">{cards.length} CARDS FOR CONVERSATION</p>
     <p>Choose a topic. Open the speaking notes for key lines, a real case and a question to discuss.</p>

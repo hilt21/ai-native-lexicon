@@ -1,0 +1,27 @@
+number: 7
+title: Enterprise Knowledge
+concepts:
+  - context-engineering
+  - grounding
+  - provenance-chain
+  - rag
+  - retrieval
+primitives:
+  - context
+  - evidence
+  - memory
+coreIdea: Enterprise AI becomes valuable when it can work with the knowledge people actually use.
+keyLines:
+  - Companies already have huge amounts of knowledge.
+  - The problem is that this knowledge is often fragmented.
+  - It lives in documents, emails, databases and people’s experience.
+  - AI can help connect these sources.
+  - But the knowledge must still be accurate, accessible and governed.
+realCase:
+  - Imagine a new engineer joining a project.
+  - Important information may be spread across SharePoint, old reports, meeting notes, emails and senior engineers’ experience.
+  - An AI assistant can help connect these sources and answer questions with relevant references.
+  - This can reduce the time required to understand a project.
+discussionQuestion: Where does the most valuable knowledge in your team currently live?
+endingLabel: Transition
+ending: Knowledge helps AI understand the situation. Tools allow AI to do something about it.

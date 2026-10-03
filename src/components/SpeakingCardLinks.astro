@@ -1,9 +1,9 @@
 ---
-import type cards from '../data/speaking-cards.json';
+import type { SpeakingCardData } from '../lib/speaking-cards';
 import { pathWithBase } from '../lib/catalog';
 
 interface Props {
-  cards: (typeof cards)[number][];
+  cards: SpeakingCardData[];
   headingId: string;
 }
 

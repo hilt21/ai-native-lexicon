@@ -1,0 +1,26 @@
+number: 12
+title: AI Evaluation
+concepts:
+  - eval-driven-development
+  - evaluation
+  - failure-containment
+  - verification
+primitives:
+  - verification-evaluation
+  - success-criterion
+  - variety-uncertainty
+coreIdea: We should evaluate AI as a system, not by one impressive demo.
+keyLines:
+  - A good demo proves possibility.
+  - Production requires consistency.
+  - We should measure quality, reliability, cost and failure modes.
+  - We should test normal cases and difficult cases.
+  - Evaluation should continue after deployment.
+realCase:
+  - An AI assistant may summarize one document perfectly during a demonstration.
+  - But in production it may need to summarize thousands of documents from different departments.
+  - Some may be incomplete, old or inconsistent.
+  - The important question is how well the system performs across the full range of real situations.
+discussionQuestion: How would you decide whether an AI use case is good enough for production?
+endingLabel: Transition
+ending: Before we evaluate an AI solution, we first need to choose the right problem to solve.

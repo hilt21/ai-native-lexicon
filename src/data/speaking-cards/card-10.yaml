@@ -1,0 +1,28 @@
+number: 10
+title: Trust and Evidence
+concepts:
+  - evidence
+  - grounding
+  - inspectable-agency
+  - provenance-chain
+  - trace
+  - verification
+primitives:
+  - evidence
+  - observation-trace
+  - verification-evaluation
+coreIdea: In enterprise AI, a useful answer also needs evidence.
+keyLines:
+  - Confidence is not the same as correctness.
+  - People need to understand where important information came from.
+  - Good systems provide sources, logs and traceability.
+  - Evidence allows humans to verify AI output.
+  - Trust grows when the system makes verification easy.
+realCase:
+  - Suppose AI tells an engineer that a component meets a technical requirement.
+  - The statement alone is not enough.
+  - The engineer wants to know which requirement, which document, which revision and which test result support that conclusion.
+  - Evidence turns an AI answer into something that can be reviewed.
+discussionQuestion: What evidence would you need before trusting an AI recommendation in your work?
+endingLabel: Transition
+ending: Evidence helps us understand what the agent did. Permissions determine what it is allowed to do.
