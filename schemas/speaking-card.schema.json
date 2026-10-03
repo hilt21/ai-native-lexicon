@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concepts": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      }
+    },
+    "coreIdea": {
+      "type": "string",
+      "minLength": 1
+    },
+    "keyLines": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "realCase": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "discussionQuestion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "endingLabel": {
+      "type": "string",
+      "minLength": 1
+    },
+    "ending": {
+      "type": "string",
+      "minLength": 1
+    }
+  },
+  "required": [
+    "number",
+    "title",
+    "concepts",
+    "primitives",
+    "coreIdea",
+    "keyLines",
+    "realCase",
+    "discussionQuestion",
+    "endingLabel",
+    "ending"
+  ],
+  "additionalProperties": false
+}

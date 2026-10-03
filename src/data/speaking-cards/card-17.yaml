@@ -1,0 +1,28 @@
+number: 17
+title: Power Automate
+concepts:
+  - approval
+  - deterministic-shell
+  - tool-calling
+  - workflow
+primitives:
+  - flow
+  - rule-policy
+  - execution
+  - event
+  - interface
+coreIdea: Power Automate provides predictable execution for repeatable business processes.
+keyLines:
+  - Many business processes follow clear rules.
+  - These processes do not always need AI reasoning.
+  - Power Automate can connect systems and execute defined steps.
+  - It is especially useful for approvals, notifications and data movement.
+  - Agents and automation can work together.
+realCase:
+  - An agent receives a customer request and decides that manager approval is required.
+  - The agent does not need to invent the approval process.
+  - Power Automate can start the predefined approval flow, collect the decision and return the result.
+  - Reasoning and execution have different roles.
+discussionQuestion: Which manual approval or notification process in your team could already be automated today?
+endingLabel: Transition
+ending: Processes also need places where people can see, edit and manage structured information.

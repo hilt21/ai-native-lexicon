@@ -1,10 +1,10 @@
 ---
-import type cards from '../data/speaking-cards.json';
+import type { SpeakingCardData } from '../lib/speaking-cards';
 import type { Concept, Primitive } from '../lib/catalog';
 import { pathWithBase } from '../lib/catalog';
 
 interface Props {
-  card: (typeof cards)[number];
+  card: SpeakingCardData;
   concepts: Concept[];
   primitives: Primitive[];
 }

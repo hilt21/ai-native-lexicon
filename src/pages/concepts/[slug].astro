@@ -2,7 +2,7 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import RelatedConcepts from '../../components/RelatedConcepts.astro';
 import SpeakingCardLinks from '../../components/SpeakingCardLinks.astro';
-import speakingCards from '../../data/speaking-cards.json';
+import { getSpeakingCards } from '../../lib/speaking-cards';
 import { categoryMeta, getConcepts, getPrimitives, pathWithBase } from '../../lib/catalog';
 
 export async function getStaticPaths() {
@@ -27,7 +27,7 @@ const editUrl = repository
 const related = concept.data.related
   .map((slug: string) => concepts.find((entry: typeof concept) => entry.id === slug))
   .filter((entry: typeof concept | undefined): entry is typeof concept => entry !== undefined);
-const linkedSpeakingCards = speakingCards.filter((card) => card.concepts.includes(concept.id));
+const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.concepts.includes(concept.id));
 ---
 
 <StarlightPage frontmatter={{

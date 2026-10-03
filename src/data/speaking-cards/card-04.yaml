@@ -1,0 +1,39 @@
+number: 4
+title: Agent Harness
+concepts:
+  - approval
+  - artifact
+  - evidence
+  - failure-containment
+  - harness
+  - permission
+  - termination
+primitives:
+  - harness
+  - context
+  - capability-tool
+  - permission
+  - recovery
+  - evidence
+  - observation-trace
+coreIdea: The harness defines how an agent operates safely and reliably around the model.
+keyLines:
+  - A powerful model does not automatically create a reliable agent.
+  - The harness controls how the agent gets context and uses tools.
+  - It defines permissions, approvals, error handling and evidence.
+  - It also helps the agent understand when the task is complete.
+  - The model provides intelligence. The harness provides discipline.
+realCase:
+  - Imagine an agent updating an engineering document.
+  - Writing new text is relatively easy.
+  - The harder questions are different.
+  - Which documents can it access?
+  - Can it overwrite the original file?
+  - Should it create a new version?
+  - When does it need approval?
+  - What happens when a tool fails?
+  - How do we know what it changed?
+  - These are harness questions.
+discussionQuestion: If an AI agent could access your work systems tomorrow, what controls would you want around it?
+endingLabel: Transition
+ending: Some tasks need this kind of reasoning and control. Other tasks are much more predictable.

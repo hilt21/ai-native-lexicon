@@ -1,0 +1,29 @@
+number: 18
+title: Power Apps and Dataverse
+concepts:
+  - feedback
+  - inspectable-agency
+  - intent-interface
+  - state
+primitives:
+  - state
+  - entity
+  - interface
+  - view-projection
+  - stakeholder
+  - event
+coreIdea: AI still needs structured data, clear state and good human interfaces.
+keyLines:
+  - Conversations are useful, but not every task should live inside a chat.
+  - Business processes often need forms, tables and status tracking.
+  - Power Apps provides user interfaces.
+  - Dataverse can provide structured business data.
+  - Together they create a stable environment around AI.
+realCase:
+  - Imagine an AI agent identifying potential quality issues.
+  - Employees still need a place to review each issue, assign an owner, change its status and record the final decision.
+  - A Power App can provide that workspace.
+  - AI supports the process while structured systems preserve the business state.
+discussionQuestion: Which part of your work still needs a structured screen even if AI becomes much more powerful?
+endingLabel: Transition
+ending: "This leads to one of the most useful enterprise patterns: combining agents with the Power Platform."

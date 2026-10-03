@@ -1,0 +1,28 @@
+number: 9
+title: Human in the Loop
+concepts:
+  - approval
+  - bounded-autonomy
+  - graceful-intervention
+  - human-on-the-loop
+primitives:
+  - actor
+  - control
+  - permission
+  - stakeholder
+coreIdea: Human judgment should be placed at the moments where judgment creates the most value.
+keyLines:
+  - Full automation is not always the goal.
+  - Some decisions are low-risk and repetitive.
+  - Others involve uncertainty, responsibility or business impact.
+  - Humans should focus on these high-value decision points.
+  - Good AI systems make escalation easy.
+realCase:
+  - Imagine an AI agent preparing a technical change proposal.
+  - It can collect information, compare versions and prepare the first draft.
+  - But an experienced engineer may still approve the final technical decision.
+  - AI handles much of the preparation.
+  - The engineer focuses on judgment and accountability.
+discussionQuestion: Which decisions in your work should always require human approval?
+endingLabel: Transition
+ending: Human approval helps with control, but people also need evidence before they can trust an AI recommendation.

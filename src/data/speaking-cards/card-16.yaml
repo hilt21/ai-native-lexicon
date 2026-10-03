@@ -1,0 +1,31 @@
+number: 16
+title: Copilot Studio
+concepts:
+  - agent-ready-organization
+  - approval
+  - harness
+  - instructions
+  - retrieval
+  - routing
+  - tool
+primitives:
+  - purpose
+  - context
+  - capability-tool
+  - rule-policy
+  - permission
+  - stakeholder
+coreIdea: Copilot Studio helps organizations create agents around specific business needs.
+keyLines:
+  - General AI cannot know every business process.
+  - Purpose-built agents can combine instructions, knowledge and tools.
+  - They can connect AI with enterprise systems.
+  - They can also include business rules and approval steps.
+  - This makes agents more relevant to specific teams.
+realCase:
+  - Imagine an internal engineering support agent.
+  - It understands engineering guidelines, searches approved documents, answers common questions and directs unusual cases to the right expert.
+  - The agent has a clear business purpose and a controlled knowledge scope.
+discussionQuestion: If your team could build one specialized agent, what job would you give it?
+endingLabel: Transition
+ending: Many actions behind that agent still need predictable execution. This is where Power Automate fits well.

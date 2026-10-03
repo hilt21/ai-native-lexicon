@@ -1,0 +1,28 @@
+number: 14
+title: From Task to Workflow
+concepts:
+  - retrieval
+  - task-decomposition
+  - workflow
+primitives:
+  - flow
+  - plan
+  - execution
+  - context
+  - view-projection
+coreIdea: The biggest AI value often comes from redesigning the workflow around AI.
+keyLines:
+  - Many people start with individual AI tasks.
+  - That is a useful first step.
+  - Bigger value appears when we connect multiple steps.
+  - We should look at the complete flow of information and decisions.
+  - AI gives us a reason to rethink how work is organized.
+realCase:
+  - Imagine creating a test report.
+  - First, AI helps write one paragraph.
+  - Later, the process can grow.
+  - AI finds previous reports, extracts product information, identifies relevant standards, generates the first draft and prepares the document for review.
+  - The value comes from connecting the complete workflow.
+discussionQuestion: Which AI use case in your team could grow from one task into an end-to-end workflow?
+endingLabel: Transition
+ending: Microsoft is building several tools around exactly this kind of work.

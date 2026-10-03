@@ -3,6 +3,7 @@ import { glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { z } from 'zod';
+import { speakingCardSchema } from './lib/speaking-card-schema.mjs';
 import { primitiveSchema } from './lib/primitive-schema.mjs';
 
 export const categories = [
@@ -63,6 +64,11 @@ const concepts = defineCollection({
 
 const docs = defineCollection({ loader: docsLoader(), schema: docsSchema() });
 
-export const collections = { concepts, primitives, docs };
+const speakingCards = defineCollection({
+  loader: glob({ pattern: '*.{yaml,yml}', base: './src/data/speaking-cards' }),
+  schema: speakingCardSchema,
+});
+
+export const collections = { concepts, primitives, speakingCards, docs };
 
 export type Category = (typeof categories)[number];

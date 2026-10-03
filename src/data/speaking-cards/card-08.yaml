@@ -1,0 +1,25 @@
+number: 8
+title: Tools and Actions
+concepts:
+  - permission
+  - tool
+  - tool-calling
+primitives:
+  - capability-tool
+  - permission
+  - execution
+coreIdea: AI creates more value when it can move from answering questions to taking useful actions.
+keyLines:
+  - A language model can generate information.
+  - Tools allow it to interact with real systems.
+  - It can search, create, update or trigger processes.
+  - Every new tool increases capability.
+  - Every new tool also increases responsibility and risk.
+realCase:
+  - An employee asks an AI assistant about annual leave.
+  - Answering the policy question is useful.
+  - An agent connected to tools could also check the employee’s remaining leave, find available dates and prepare the leave request.
+  - The experience moves from information to action.
+discussionQuestion: Which system would create the most value if an AI agent could safely use it?
+endingLabel: Transition
+ending: As AI gains the ability to act, human judgment becomes even more important.

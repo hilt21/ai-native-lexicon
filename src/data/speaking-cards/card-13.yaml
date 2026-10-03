@@ -1,0 +1,21 @@
+number: 13
+title: Finding Good AI Use Cases
+concepts: []
+primitives:
+  - context
+  - flow
+coreIdea: The best AI opportunities often begin with business friction.
+keyLines:
+  - Start by looking for wasted time and repeated effort.
+  - Look for searching, reading, comparing and summarizing.
+  - Look for handovers and waiting time.
+  - Look for work that depends on scattered information.
+  - Then ask whether AI can remove some of that friction.
+realCase:
+  - A project manager spends several hours every week collecting updates from different teams.
+  - The information already exists, but it is spread across emails, documents and systems.
+  - AI could collect the information, identify changes and prepare a first summary.
+  - This is a strong use case because the pain already exists.
+discussionQuestion: What repetitive task would you happily never do manually again?
+endingLabel: Transition
+ending: Once we find a good task, the next opportunity is often to look beyond that single task.
