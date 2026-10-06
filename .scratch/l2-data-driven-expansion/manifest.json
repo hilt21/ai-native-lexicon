@@ -1,0 +1,284 @@
+{
+  "status": "published_verified",
+  "repository": "hilt21/ai-native-lexicon",
+  "default_branch": "master",
+  "local_source_commit": "2368945b1d757585e26c1bbdd9d8c888c6865e69",
+  "remote_issues_created": [
+    {
+      "local_id": "L2-01",
+      "number": 7,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/7"
+    },
+    {
+      "local_id": "L2-02",
+      "number": 8,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/8"
+    },
+    {
+      "local_id": "L2-03",
+      "number": 9,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/9"
+    },
+    {
+      "local_id": "L2-04",
+      "number": 10,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/10"
+    },
+    {
+      "local_id": "L2-05",
+      "number": 11,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/11"
+    },
+    {
+      "local_id": "L2-06",
+      "number": 12,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/12"
+    },
+    {
+      "local_id": "L2-07",
+      "number": 13,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/13"
+    },
+    {
+      "local_id": "L2-08",
+      "number": 14,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/14"
+    },
+    {
+      "local_id": "L2-09",
+      "number": 15,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/15"
+    },
+    {
+      "local_id": "L2-10",
+      "number": 16,
+      "url": "https://github.com/hilt21/ai-native-lexicon/issues/16"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "L2-01",
+      "title": "合法新增 YAML 可通过发布检查，编辑链接使用正确分支",
+      "slice": "L2-0",
+      "kind": "修复切片",
+      "file": "01-extension-and-edit-branch.md",
+      "deps": [],
+      "remote_number": 7,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/7",
+      "remote_database_id": 5724090228,
+      "remote_dependencies": [],
+      "dependency_mode": "none",
+      "body_sha256": "0dd3824554f8b7605f1557e4eee78c691b80a2fcab40c2956e9472c3c5889935",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-02",
+      "title": "引入共享内容输入契约与目录读取边界，保持既有页面行为",
+      "slice": "L2-1 / Expand",
+      "kind": "独立准备重构",
+      "file": "02-expand-shared-content-boundary.md",
+      "deps": [
+        "L2-01"
+      ],
+      "remote_number": 8,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/8",
+      "remote_database_id": 5724090715,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-01",
+          "number": 7
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "34e2af83bcffc75e8af1a9474d8274b38c811e95ceab36f1fc57aa5fe7da757e",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-03",
+      "title": "Concept 从输入到 CLI、Astro 和 portable schema 使用同一契约",
+      "slice": "L2-1 / Migrate 1",
+      "kind": "类型贯通切片",
+      "file": "03-migrate-concept-contract.md",
+      "deps": [
+        "L2-02"
+      ],
+      "remote_number": 9,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/9",
+      "remote_database_id": 5724091887,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-02",
+          "number": 8
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "abafae24da6a5bb97f683da0d679459e4f5e6a575079ad612d3f764e4fadb079",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-04",
+      "title": "Primitive 的定义、引用和 portable schema 统一到共享契约",
+      "slice": "L2-1 / Migrate 2",
+      "kind": "类型贯通切片",
+      "file": "04-migrate-primitive-contract.md",
+      "deps": [
+        "L2-03"
+      ],
+      "remote_number": 10,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/10",
+      "remote_database_id": 5724137926,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-03",
+          "number": 9
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "f79337da24696c5ac321d02eb930c5e8e5059a960a49ba200298beb6c6d1193c",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-05",
+      "title": "演讲指南统一共享契约，保留卡片编号、展开与反向关联",
+      "slice": "L2-1 / Migrate 3",
+      "kind": "类型贯通切片",
+      "file": "05-migrate-speaking-guide-contract.md",
+      "deps": [
+        "L2-04"
+      ],
+      "remote_number": 11,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/11",
+      "remote_database_id": 5724139496,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-04",
+          "number": 10
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "aa9db8213a5f5b1b8136c84f00a18f43671023665f2dfe1f934bc6f7e9adb165",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-06",
+      "title": "删除迁移期旧规则，并将 portable schema 漂移检查接入 CI",
+      "slice": "L2-1 / Contract",
+      "kind": "重构收尾",
+      "file": "06-contract-legacy-rules-and-schema-drift.md",
+      "deps": [
+        "L2-05"
+      ],
+      "remote_number": 12,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/12",
+      "remote_database_id": 5724140753,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-05",
+          "number": 11
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "c092afb5f062ead9fb4d4570c85d5e0be9fd0a2ad7b0f36b82f1c25c6789cf78",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-07",
+      "title": "新增分类 YAML 自动产生分类页面、计数与校验词汇",
+      "slice": "L2-2 / 分类",
+      "kind": "配置到页面切片",
+      "file": "07-category-yaml-to-page.md",
+      "deps": [
+        "L2-06"
+      ],
+      "remote_number": 13,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/13",
+      "remote_database_id": 5724142194,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-06",
+          "number": 12
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "0bf085df6afdc25dbf324a6af60afea1b775682f90e55d503f1c2fdf56b2c720",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-08",
+      "title": "新增原语层级 YAML 自动驱动校验、目录分组与锚点",
+      "slice": "L2-2 / 层级",
+      "kind": "配置到页面切片",
+      "file": "08-layer-yaml-to-page.md",
+      "deps": [
+        "L2-07"
+      ],
+      "remote_number": 14,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/14",
+      "remote_database_id": 5724143418,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-07",
+          "number": 13
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "7df799d4e0ac081a5386f2ad5f494fe4849837a590e164af21065609968948ed",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-09",
+      "title": "演讲指南进入自定义搜索、dataset 与 llms，导出具有稳定版本",
+      "slice": "L2-3",
+      "kind": "内容到投影切片",
+      "file": "09-speaking-guide-search-and-exports.md",
+      "deps": [
+        "L2-08"
+      ],
+      "remote_number": 15,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/15",
+      "remote_database_id": 5724144950,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-08",
+          "number": 14
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "7f3c8b2a57ef3f214ccd765ef13b6a5e35944a2aaee9e5417d187df5f4c12a6c",
+      "publication_verified": true
+    },
+    {
+      "id": "L2-10",
+      "title": "新增内容与分类配置的完整扩充场景可重跑，并更新贡献流程",
+      "slice": "L2-4",
+      "kind": "整体用户场景验收",
+      "file": "10-repeatable-extension-integration.md",
+      "deps": [
+        "L2-09"
+      ],
+      "remote_number": 16,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/16",
+      "remote_database_id": 5724146265,
+      "remote_dependencies": [
+        {
+          "local_id": "L2-09",
+          "number": 15
+        }
+      ],
+      "dependency_mode": "native_and_body",
+      "body_sha256": "b6eeb7cb8850473d4d7971bd76824d96c6b0a1005ed73fd93a5af1cf9329e6a5",
+      "publication_verified": true
+    }
+  ],
+  "remote_default_branch_sha": "85df1bc2d3c45dee361f944d5ccd2003c454977f",
+  "approval": "User confirmed reviewed breakdown in this conversation.",
+  "verification_summary": {
+    "tickets": 10,
+    "native_dependency_edges": 9,
+    "ready_for_agent": [
+      "L2-01"
+    ],
+    "titles_and_bodies_verified": true,
+    "no_parent_issue_modified": true
+  }
+}
