@@ -2,55 +2,13 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
-import { z } from 'zod';
+import { categories, conceptStatuses } from './domain/content/concept-input.mjs';
+import { conceptSchema } from './lib/concept-schema.mjs';
+import { conceptLoader } from './lib/concept-loader.mjs';
 import { speakingCardSchema } from './lib/speaking-card-schema.mjs';
 import { primitiveSchema } from './lib/primitive-schema.mjs';
 
-export const categories = [
-  'Context',
-  'Agent Architecture',
-  'Harness',
-  'Governance',
-  'Execution',
-  'Knowledge',
-  'UX',
-  'Organization',
-  'Instruction',
-  'Memory',
-  'State',
-  'Goal',
-  'Reasoning',
-  'Capability',
-  'Feedback',
-  'Verification',
-  'Failure Handling',
-  'Multi-Agent',
-] as const;
-
-export const conceptStatuses = ['foundational', 'emerging', 'evolving', 'contested'] as const;
-
-export const conceptSchema = z.object({
-  term: z.string().min(2),
-  zh: z.string().min(1),
-  category: z.enum(categories),
-  status: z.enum(conceptStatuses),
-  summary: z.string().min(40).max(240),
-  definition: z.string().min(80),
-  why_it_matters: z.string().min(60),
-  when_to_use: z.string().min(40),
-  anti_pattern: z.string().min(30),
-  related: z.array(z.string()).min(2).max(6),
-  primitives: z.array(z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/)),
-  sources: z
-    .array(
-      z.object({
-        title: z.string(),
-        url: z.url(),
-      }),
-    )
-    .default([]),
-  added: z.coerce.date(),
-});
+export { categories, conceptStatuses, conceptSchema };
 
 const primitives = defineCollection({
   loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/data/primitives' }),
@@ -58,7 +16,7 @@ const primitives = defineCollection({
 });
 
 const concepts = defineCollection({
-  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/data/concepts' }),
+  loader: conceptLoader(),
   schema: conceptSchema,
 });
 

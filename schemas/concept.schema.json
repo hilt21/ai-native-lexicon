@@ -1,8 +1,113 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AI Native Lexicon concept",
   "type": "object",
-  "additionalProperties": false,
+  "properties": {
+    "term": {
+      "type": "string",
+      "minLength": 2
+    },
+    "zh": {
+      "type": "string",
+      "minLength": 1
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Context",
+        "Agent Architecture",
+        "Harness",
+        "Governance",
+        "Execution",
+        "Knowledge",
+        "UX",
+        "Organization",
+        "Instruction",
+        "Memory",
+        "State",
+        "Goal",
+        "Reasoning",
+        "Capability",
+        "Feedback",
+        "Verification",
+        "Failure Handling",
+        "Multi-Agent"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "foundational",
+        "emerging",
+        "evolving",
+        "contested"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 40,
+      "maxLength": 240
+    },
+    "definition": {
+      "type": "string",
+      "minLength": 80
+    },
+    "why_it_matters": {
+      "type": "string",
+      "minLength": 60
+    },
+    "when_to_use": {
+      "type": "string",
+      "minLength": 40
+    },
+    "anti_pattern": {
+      "type": "string",
+      "minLength": 30
+    },
+    "related": {
+      "minItems": 2,
+      "maxItems": 6,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "primitives": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "sources": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "url"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "added": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    }
+  },
   "required": [
     "term",
     "zh",
@@ -15,45 +120,8 @@
     "anti_pattern",
     "related",
     "primitives",
-    "sources",
     "added"
   ],
-  "properties": {
-    "term": { "type": "string", "minLength": 2 },
-    "zh": { "type": "string", "minLength": 1 },
-    "category": {
-      "enum": ["Context", "Agent Architecture", "Harness", "Governance", "Execution", "Knowledge", "UX", "Organization", "Instruction", "Memory", "State", "Goal", "Reasoning", "Capability", "Feedback", "Verification", "Failure Handling", "Multi-Agent"]
-    },
-    "status": { "enum": ["foundational", "emerging", "evolving", "contested"] },
-    "summary": { "type": "string", "minLength": 40, "maxLength": 240 },
-    "definition": { "type": "string", "minLength": 80 },
-    "why_it_matters": { "type": "string", "minLength": 60 },
-    "when_to_use": { "type": "string", "minLength": 40 },
-    "anti_pattern": { "type": "string", "minLength": 30 },
-    "related": {
-      "type": "array",
-      "minItems": 2,
-      "maxItems": 6,
-      "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
-    },
-    "primitives": {
-      "type": "array",
-      "uniqueItems": true,
-      "items": { "type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$" }
-    },
-    "sources": {
-      "type": "array",
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": ["title", "url"],
-        "properties": {
-          "title": { "type": "string" },
-          "url": { "type": "string", "format": "uri" }
-        }
-      }
-    },
-    "added": { "type": "string", "format": "date" }
-  }
+  "additionalProperties": false,
+  "title": "AI Native Lexicon concept"
 }

@@ -1,23 +1,25 @@
 import { z } from 'zod';
-import { isoDate, slug } from './rules.mjs';
+import { codepointText, isoDate, slugReferences, sourceUri } from './rules.mjs';
 
-// Migration input contract. Production still uses src/content.config.ts until L2-03.
 export const conceptInputSchema = z.object({
-  term: z.string().min(2),
-  zh: z.string().min(1),
+  term: codepointText(2),
+  zh: codepointText(1),
   category: z.enum([
     'Context', 'Agent Architecture', 'Harness', 'Governance', 'Execution', 'Knowledge',
     'UX', 'Organization', 'Instruction', 'Memory', 'State', 'Goal', 'Reasoning',
     'Capability', 'Feedback', 'Verification', 'Failure Handling', 'Multi-Agent',
   ]),
   status: z.enum(['foundational', 'emerging', 'evolving', 'contested']),
-  summary: z.string().min(40).max(240),
-  definition: z.string().min(80),
-  why_it_matters: z.string().min(60),
-  when_to_use: z.string().min(40),
-  anti_pattern: z.string().min(30),
-  related: z.array(slug).min(2).max(6),
-  primitives: z.array(slug),
-  sources: z.array(z.object({ title: z.string(), url: z.url() }).strict()).default([]),
+  summary: codepointText(40, 240),
+  definition: codepointText(80),
+  why_it_matters: codepointText(60),
+  when_to_use: codepointText(40),
+  anti_pattern: codepointText(30),
+  related: slugReferences.min(2).max(6),
+  primitives: slugReferences,
+  sources: z.array(z.object({ title: z.string(), url: sourceUri }).strict()).default([]),
   added: isoDate,
 }).strict();
+
+export const categories = conceptInputSchema.shape.category.options;
+export const conceptStatuses = conceptInputSchema.shape.status.options;

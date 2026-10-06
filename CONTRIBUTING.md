@@ -11,17 +11,20 @@ Check whether the idea is already represented under a different name. Prefer imp
 Create one kebab-case YAML file in `src/data/concepts/`. Every entry must include:
 
 - a concise English term and Chinese name;
-- exactly one category supported by `src/content.config.ts`;
+- exactly one category supported by `src/domain/content/concept-input.mjs`;
 - a maturity status: `foundational`, `emerging`, `evolving`, or `contested`;
 - an original working definition that states the concept's boundary;
 - why it matters, when to use it, and a concrete anti-pattern;
-- two to six valid related-concept slugs;
-- a `primitives` array of valid primitive slugs (empty is allowed); do not use free-form `tags`;
+- two to six unique, valid related-concept slugs;
+- a `primitives` array of unique, valid primitive slugs (empty is allowed); do not use free-form `tags`;
+- an `added` value containing a real ISO calendar date (`YYYY-MM-DD`);
 - optional sources only when they directly support origin, usage, or a factual claim.
 
 Do not fabricate a first use, author, or citation. The lexicon may define a useful working term without claiming who coined it.
 
-When adding a category, update `src/content.config.ts`, `schemas/concept.schema.json`, `scripts/concept-validation.mjs`, and `src/lib/catalog.ts` together, then run the full verification suite. Reuse existing concept slugs when updating or reclassifying entries.
+Concept inputs reject unknown fields. Omitted `sources` becomes `[]`; each provided source needs a title and an absolute URI. Text length limits count Unicode code points, consistently with the portable schema. Source URIs must encode spaces and use valid percent escapes.
+
+When adding a category, update the category enum in `src/domain/content/concept-input.mjs` and the presentation metadata in `src/lib/catalog.ts`, then run `npm run schema:concept` and the full verification suite. Reuse existing concept slugs when updating or reclassifying entries.
 
 ## Primitive entries
 
@@ -48,6 +51,8 @@ npm run build
 ```
 
 `npm run check` applies the same Zod schema used by the website and verifies cross-record relationships. Pull requests run the complete pipeline without deploying.
+
+After changing Concept field rules, run `npm run schema:concept` to regenerate `schemas/concept.schema.json`. Tests compare the actual field decisions of the Astro adapter, CLI validator and JSON Schema validator. Primitive and Speaking Card contracts remain on their existing migration bridges.
 
 For data-expansion or edit-link changes, also run `npm run test:extension`. It adds one record of each type in an isolated copy, runs the full checks and build, and verifies rendered edit links without modifying canonical data.
 
