@@ -4,19 +4,19 @@ import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { categories, conceptStatuses } from './domain/content/concept-input.mjs';
 import { conceptSchema } from './lib/concept-schema.mjs';
-import { conceptLoader } from './lib/concept-loader.mjs';
+import { yamlContentLoader } from './lib/yaml-content-loader.mjs';
 import { speakingCardSchema } from './lib/speaking-card-schema.mjs';
 import { primitiveSchema } from './lib/primitive-schema.mjs';
 
 export { categories, conceptStatuses, conceptSchema };
 
 const primitives = defineCollection({
-  loader: glob({ pattern: '**/*.{yaml,yml}', base: './src/data/primitives' }),
+  loader: yamlContentLoader('primitives'),
   schema: primitiveSchema,
 });
 
 const concepts = defineCollection({
-  loader: conceptLoader(),
+  loader: yamlContentLoader('concepts'),
   schema: conceptSchema,
 });
 

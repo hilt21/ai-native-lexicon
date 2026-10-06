@@ -160,3 +160,84 @@ test('contract-only changes revalidate Astro records with a warm cache', async (
     await assert.rejects(npm(directory, ['exec', '--', 'astro', 'sync']), /term[\s\S]*Text length/);
   });
 });
+
+test('inline and concept-defined Primitives use the shared contract in deployed projections', async () => {
+  await inIsolatedProject(async (directory) => {
+    const primitive = await yaml(directory, 'src/data/primitives/state.yaml');
+    const originalConcept = await yaml(directory, 'src/data/concepts/verification.yaml');
+    const definition = 'This canonical fixture definition belongs to the new concept and is rendered by the referencing primitive.';
+    const concept = {
+      ...originalConcept,
+      term: 'L2 Defining Concept',
+      definition,
+      primitives: ['l2-defined-primitive'],
+      added: '2026-10-06',
+    };
+    const inline = {
+      ...primitive,
+      term: 'L2 Inline Primitive',
+      definitions: [{ name: 'Independent meaning', text: 'The inline definition is owned by this primitive.' }],
+      related: [],
+      added: '2026-10-06',
+    };
+    const referenced = {
+      ...primitive,
+      term: 'L2 Defined Primitive',
+      definitions: [{ concept: 'l2-primitive-concept' }],
+      related: ['l2-inline-primitive'],
+      added: '2026-10-06',
+    };
+    const conceptFile = join(directory, 'src/data/concepts/l2-primitive-concept.yaml');
+    const primitiveFile = join(directory, 'src/data/primitives/l2-defined-primitive.yaml');
+    await writeFile(conceptFile, stringify(concept));
+    await writeFile(join(directory, 'src/data/primitives/l2-inline-primitive.yaml'), stringify(inline));
+    await writeFile(primitiveFile, stringify(referenced));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['run', 'build']);
+
+    const catalog = await readFile(join(directory, 'dist/primitives/index.html'), 'utf8');
+    const layer = catalog.match(/<section[^>]*id="layer-structure-representation"[^>]*>([\s\S]*?)<\/section>/)?.[1];
+    assert.ok(layer, 'the existing layer anchor must remain stable');
+    for (const slug of ['l2-inline-primitive', 'l2-defined-primitive']) {
+      assert.ok(layer.includes(`href="/ai-native-lexicon/primitives/${slug}/"`));
+    }
+    const inlinePage = await readFile(join(directory, 'dist/primitives/l2-inline-primitive/index.html'), 'utf8');
+    assert.ok(inlinePage.includes(inline.definitions[0].text));
+    const detailPath = join(directory, 'dist/primitives/l2-defined-primitive/index.html');
+    const detail = await readFile(detailPath, 'utf8');
+    assert.ok(detail.includes(definition));
+    assert.ok(detail.includes('href="/ai-native-lexicon/concepts/l2-primitive-concept/"'));
+    assert.ok(detail.includes('href="/ai-native-lexicon/primitives/l2-inline-primitive/"'));
+    assert.ok(detail.includes('href="/ai-native-lexicon/primitives/#layer-structure-representation"'));
+    const conceptPage = await readFile(join(directory, 'dist/concepts/l2-primitive-concept/index.html'), 'utf8');
+    assert.ok(conceptPage.includes('href="/ai-native-lexicon/primitives/l2-defined-primitive/"'));
+    const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
+    const exported = dataset.primitives.find(({ slug }) => slug === 'l2-defined-primitive');
+    assert.equal(exported.added, '2026-10-06T00:00:00.000Z');
+    assert.deepEqual(exported.definitions, [{ concept: 'l2-primitive-concept' }]);
+
+    const changedDefinition = 'This changed canonical fixture definition is read from the concept again after the next site build.';
+    await writeFile(conceptFile, stringify({ ...concept, definition: changedDefinition }));
+    await npm(directory, ['run', 'build']);
+    const rebuilt = await readFile(detailPath, 'utf8');
+    assert.ok(rebuilt.includes(changedDefinition));
+    assert.equal(rebuilt.includes(definition), false);
+    assert.deepEqual((await yaml(directory, 'src/data/primitives/l2-defined-primitive.yaml')).definitions, [{ concept: 'l2-primitive-concept' }]);
+
+    await writeFile(primitiveFile, stringify({ ...referenced, sources: [{ ...referenced.sources[0], url: 'ftp://example.com/notes' }] }));
+    await assert.rejects(npm(directory, ['run', 'check']), /l2-defined-primitive[\s\S]*sources/);
+    await assert.rejects(npm(directory, ['run', 'validate:concepts']), /l2-defined-primitive.yaml: sources/);
+  });
+});
+
+test('Primitive contract-only changes revalidate Astro records with a warm cache', async () => {
+  await inIsolatedProject(async (directory) => {
+    await npm(directory, ['exec', '--', 'astro', 'sync']);
+    const contract = join(directory, 'src/domain/content/primitive-input.mjs');
+    const source = await readFile(contract, 'utf8');
+    const stricter = source.replace('term: text,', 'term: text.min(300),');
+    assert.notEqual(stricter, source);
+    await writeFile(contract, stricter);
+    await assert.rejects(npm(directory, ['exec', '--', 'astro', 'sync']), /term[\s\S]*Too small/);
+  });
+});

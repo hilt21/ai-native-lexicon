@@ -1,6 +1,6 @@
-import { readYamlDirectory } from './concept-validation.mjs';
+import { readPrimitiveInputs } from '../src/domain/content/read-content.mjs';
 
-// Astro validates field shapes; this check validates relationships across collections.
+// Input contracts validate field shapes; this check validates relationships across collections.
 export function validatePrimitiveReferences(concepts, primitives) {
   const errors = [];
   const conceptsBySlug = new Map(concepts.map((concept) => [concept.slug, concept]));
@@ -55,7 +55,7 @@ export function validatePrimitiveReferences(concepts, primitives) {
 }
 
 export async function validatePrimitiveDirectory(directory, concepts) {
-  const { files, records, errors } = await readYamlDirectory(directory);
+  const { files, records, errors } = await readPrimitiveInputs(directory);
   errors.push(...validatePrimitiveReferences(concepts, records));
   return { files, records, errors };
 }

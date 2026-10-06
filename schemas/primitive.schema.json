@@ -1,8 +1,228 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "AI Native Lexicon primitive",
   "type": "object",
-  "additionalProperties": false,
+  "properties": {
+    "term": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "zh": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "layer": {
+      "type": "string",
+      "enum": [
+        "Purpose & Governance",
+        "Structure & Representation",
+        "Dynamics & Control",
+        "Cognition & Action",
+        "Runtime & Trust"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "definitions": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "anyOf": [
+          {
+            "type": "object",
+            "properties": {
+              "concept": {
+                "type": "string",
+                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+              }
+            },
+            "required": [
+              "concept"
+            ],
+            "additionalProperties": false
+          },
+          {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              },
+              "text": {
+                "type": "string",
+                "minLength": 1,
+                "pattern": "\\S"
+              }
+            },
+            "required": [
+              "name",
+              "text"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      }
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "usage": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "composition": {
+      "type": "object",
+      "properties": {
+        "pattern": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "example": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "pattern",
+        "example"
+      ],
+      "additionalProperties": false
+    },
+    "considerations": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "pattern": "\\S"
+      }
+    },
+    "distinctions": {
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "ownership": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": [
+            "llm",
+            "executor",
+            "hybrid"
+          ]
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "kind",
+        "rationale"
+      ],
+      "additionalProperties": false
+    },
+    "priority": {
+      "type": "object",
+      "properties": {
+        "level": {
+          "type": "string",
+          "enum": [
+            "P0",
+            "P1",
+            "P2"
+          ]
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "\\S"
+        }
+      },
+      "required": [
+        "level",
+        "scope",
+        "rationale"
+      ],
+      "additionalProperties": false
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+      },
+      "uniqueItems": true
+    },
+    "sources": {
+      "minItems": 1,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "section": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "basis": {
+            "type": "string",
+            "enum": [
+              "report-synthesis",
+              "editorial-synthesis"
+            ]
+          },
+          "verification": {
+            "type": "string",
+            "enum": [
+              "unverified",
+              "verified"
+            ]
+          },
+          "url": {
+            "type": "string",
+            "pattern": "^https?:\\/\\/(?:[^/?#@\\s]+@)?(?:\\[[0-9a-fA-F:.]+\\]|(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])(?:\\.(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9]?[0-9])){3}|(?!(?:[a-zA-Z0-9_-]+\\.)*(?:[0-9]+|0[xX][0-9a-fA-F]*)\\.?(?=[:/?#]|$))[a-zA-Z0-9_-]+(?:\\.[a-zA-Z0-9_-]+)*\\.?)(?::(?:0*(?:[0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5]))?)?(?:[/?#]|$)",
+            "format": "uri"
+          }
+        },
+        "required": [
+          "title",
+          "section",
+          "basis",
+          "verification"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "added": {
+      "type": "string",
+      "format": "date",
+      "pattern": "^(?:(?:\\d\\d[2468][048]|\\d\\d[13579][26]|\\d\\d0[48]|[02468][048]00|[13579][26]00)-02-29|\\d{4}-(?:(?:0[13578]|1[02])-(?:0[1-9]|[12]\\d|3[01])|(?:0[469]|11)-(?:0[1-9]|[12]\\d|30)|(?:02)-(?:0[1-9]|1\\d|2[0-8])))$"
+    }
+  },
   "required": [
     "term",
     "zh",
@@ -20,221 +240,6 @@
     "sources",
     "added"
   ],
-  "properties": {
-    "term": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "\\S"
-    },
-    "zh": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "\\S"
-    },
-    "layer": {
-      "enum": [
-        "Purpose & Governance",
-        "Structure & Representation",
-        "Dynamics & Control",
-        "Cognition & Action",
-        "Runtime & Trust"
-      ]
-    },
-    "summary": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "\\S"
-    },
-    "definitions": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "oneOf": [
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "concept"
-            ],
-            "properties": {
-              "concept": {
-                "type": "string",
-                "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-              }
-            }
-          },
-          {
-            "type": "object",
-            "additionalProperties": false,
-            "required": [
-              "name",
-              "text"
-            ],
-            "properties": {
-              "name": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              },
-              "text": {
-                "type": "string",
-                "minLength": 1,
-                "pattern": "\\S"
-              }
-            }
-          }
-        ]
-      }
-    },
-    "scope": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "\\S"
-    },
-    "usage": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "\\S"
-    },
-    "composition": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "pattern",
-        "example"
-      ],
-      "properties": {
-        "pattern": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        },
-        "example": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        }
-      }
-    },
-    "considerations": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "string",
-        "minLength": 1,
-        "pattern": "\\S"
-      }
-    },
-    "distinctions": {
-      "type": "string",
-      "minLength": 1,
-      "pattern": "\\S"
-    },
-    "ownership": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "kind",
-        "rationale"
-      ],
-      "properties": {
-        "kind": {
-          "enum": [
-            "llm",
-            "executor",
-            "hybrid"
-          ]
-        },
-        "rationale": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        }
-      }
-    },
-    "priority": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "level",
-        "scope",
-        "rationale"
-      ],
-      "properties": {
-        "level": {
-          "enum": [
-            "P0",
-            "P1",
-            "P2"
-          ]
-        },
-        "scope": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        },
-        "rationale": {
-          "type": "string",
-          "minLength": 1,
-          "pattern": "\\S"
-        }
-      }
-    },
-    "related": {
-      "type": "array",
-      "minItems": 0,
-      "items": {
-        "type": "string",
-        "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-      },
-      "uniqueItems": true
-    },
-    "sources": {
-      "type": "array",
-      "minItems": 1,
-      "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "title",
-          "section",
-          "basis",
-          "verification"
-        ],
-        "properties": {
-          "title": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "\\S"
-          },
-          "section": {
-            "type": "string",
-            "minLength": 1,
-            "pattern": "\\S"
-          },
-          "basis": {
-            "enum": [
-              "report-synthesis",
-              "editorial-synthesis"
-            ]
-          },
-          "verification": {
-            "enum": [
-              "unverified",
-              "verified"
-            ]
-          },
-          "url": {
-            "type": "string",
-            "format": "uri",
-            "pattern": "^https?://"
-          }
-        }
-      }
-    },
-    "added": {
-      "type": "string",
-      "format": "date"
-    }
-  }
+  "additionalProperties": false,
+  "title": "AI Native Lexicon primitive"
 }
