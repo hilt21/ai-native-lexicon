@@ -1,6 +1,6 @@
-import { primitiveLayers } from './primitive-schema.mjs';
+import { layerAnchor, layerRegistry } from '../domain/taxonomy/layers.mjs';
 
-export type PrimitiveLayer = (typeof primitiveLayers)[number];
+export type PrimitiveLayer = (typeof layerRegistry)[number]['name'];
 
 export const primitiveOwners = {
   llm: {
@@ -34,6 +34,5 @@ export const primitivePriorities = {
 } as const;
 
 export function primitiveLayerId(layer: PrimitiveLayer) {
-  const slug = layer.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return `layer-${slug}`;
+  return layerAnchor(layer);
 }

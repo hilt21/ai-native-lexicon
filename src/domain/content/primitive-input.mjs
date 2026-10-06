@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { layerNames } from '../taxonomy/layers.mjs';
 import { isoDate, slug, slugReferences, sourceUri, text as requiredText } from './rules.mjs';
 
 const text = requiredText.regex(/\S/, 'Use non-blank text');
@@ -16,10 +17,7 @@ const httpSourceUrl = sourceUri.regex(
 export const primitiveInputSchema = z.object({
   term: text,
   zh: text,
-  layer: z.enum([
-    'Purpose & Governance', 'Structure & Representation', 'Dynamics & Control',
-    'Cognition & Action', 'Runtime & Trust',
-  ]),
+  layer: z.enum(layerNames),
   summary: text,
   definitions: z.array(z.union([
     z.object({ concept: slug }).strict(),

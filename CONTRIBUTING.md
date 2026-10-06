@@ -32,6 +32,8 @@ Follow [the primitive content guide](./docs/primitives.md). Use `definitions: [{
 
 Primitive inputs reject unknown fields, blank text and duplicate `related` references. Definitions, considerations and sources must be nonempty; ownership, priority and source status use the existing vocabularies. Source URLs must be absolute HTTP(S) URIs with a hostname or explicit IP address, a port from 0 through 65535 when supplied, encoded spaces and valid percent escapes. Numeric IPv4 hosts use four decimal octets; IPv6 hosts use brackets. `added` must be a real `YYYY-MM-DD` calendar date. Field rules live in `src/domain/content/primitive-input.mjs`; the Astro adapter retains UTC Date values and trimmed text for existing projections.
 
+To add a Primitive layer, create one direct `.yaml` or `.yml` record in `src/data/taxonomy/layers/` with `name`, `anchor` and a unique positive integer `order`. The name is the existing Primitive reference value; the explicit `layer-*` anchor is a public target and stays stable independently of the display name. Run `npm run schema:generate` and the full checks plus `npm run test:extension`. Empty configured layers are valid and display zero members. Add a member through Primitive YAML using the configured name. Duplicate names/anchors/orders, bad anchors, unconfigured layers and Primitive filename slugs colliding with layer anchors or generated heading IDs are rejected. Layer anchors must also stay distinct from other layers’ generated heading IDs. Priority and ownership vocabularies are unchanged.
+
 ## Editorial test
 
 A reviewer should be able to answer yes to each question:
