@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { contentBranch } from './src/lib/repository.mjs';
 
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'ai-native-lexicon';
 const owner = process.env.GITHUB_REPOSITORY_OWNER ?? 'example';
@@ -21,7 +22,7 @@ export default defineConfig({
       customCss: ['./src/styles/custom.css'],
       components: { SkipLink: './src/components/SkipLink.astro' },
       social: hasRepository ? [{ icon: 'github', label: 'GitHub', href: repositoryUrl }] : [],
-      ...(hasRepository ? { editLink: { baseUrl: `${repositoryUrl}/edit/main/` } } : {}),
+      ...(hasRepository ? { editLink: { baseUrl: `${repositoryUrl}/edit/${contentBranch}/` } } : {}),
       pagefind: usePagefind,
       disable404Route: true,
       sidebar: [

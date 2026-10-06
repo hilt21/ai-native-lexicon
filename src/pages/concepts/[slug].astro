@@ -3,6 +3,7 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import RelatedConcepts from '../../components/RelatedConcepts.astro';
 import SpeakingCardLinks from '../../components/SpeakingCardLinks.astro';
 import { getSpeakingCards } from '../../lib/speaking-cards';
+import { contentBranch } from '../../lib/repository.mjs';
 import { categoryMeta, getConcepts, getPrimitives, pathWithBase } from '../../lib/catalog';
 
 export async function getStaticPaths() {
@@ -22,7 +23,7 @@ const { concept, concepts, primitives } = Astro.props;
 const meta = categoryMeta[concept.data.category];
 const repository = process.env.GITHUB_REPOSITORY;
 const editUrl = repository
-  ? `https://github.com/${repository}/edit/main/src/data/concepts/${concept.id}.yaml`
+  ? `https://github.com/${repository}/edit/${contentBranch}/src/data/concepts/${concept.id}.yaml`
   : false;
 const related = concept.data.related
   .map((slug: string) => concepts.find((entry: typeof concept) => entry.id === slug))

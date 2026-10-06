@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -9,9 +9,15 @@ import { primitiveSchema } from '../src/lib/primitive-schema.mjs';
 
 const conceptDirectory = fileURLToPath(new URL('../src/data/concepts/', import.meta.url));
 
+async function yamlFileCount(directory) {
+  return (await readdir(directory)).filter((file) => /\.ya?ml$/.test(file)).length;
+}
+
 test('concepts use explicit primitive references instead of legacy tags', async () => {
-  const { records } = await validateConceptDirectory(conceptDirectory);
-  assert.equal(records.length, 84);
+  const { records, errors } = await validateConceptDirectory(conceptDirectory);
+  assert.deepEqual(errors, []);
+  assert.ok(records.length > 0, 'concept catalog must not be empty');
+  assert.equal(records.length, await yamlFileCount(conceptDirectory));
   for (const { slug, data } of records) {
     assert.ok(Array.isArray(data.primitives), `${slug}: missing primitives`);
     assert.equal('tags' in data, false, `${slug}: legacy tags`);
@@ -21,10 +27,11 @@ test('concepts use explicit primitive references instead of legacy tags', async 
 const { validatePrimitiveDirectory, validatePrimitiveReferences } = await import('../scripts/primitive-validation.mjs');
 const primitiveDirectory = fileURLToPath(new URL('../src/data/primitives/', import.meta.url));
 
-test('the 42 primitive entries and all cross-collection references resolve', async () => {
+test('primitive entries and all cross-collection references resolve', async () => {
   const { records } = await validateConceptDirectory(conceptDirectory);
   const result = await validatePrimitiveDirectory(primitiveDirectory, records);
-  assert.equal(result.records.length, 42);
+  assert.ok(result.records.length > 0, 'primitive catalog must not be empty');
+  assert.equal(result.records.length, await yamlFileCount(primitiveDirectory));
   assert.deepEqual(result.errors, []);
   for (const { slug, data } of result.records) {
     const parsed = primitiveSchema.safeParse(data);
