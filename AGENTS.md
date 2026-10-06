@@ -35,3 +35,20 @@ npm run build
 ## Architecture direction
 
 Concept pages, primitive pages, category indexes, search, Speaking Card links, `/dataset.json`, and `/llms.txt` are projections of the canonical data. Preserve the separate responsibilities and stable slugs when adding a projection; do not introduce a second source of truth or a graph database.
+
+## Agent skills
+
+### Issue tracker
+
+Issues and specs live in GitHub Issues for `hilt21/ai-native-lexicon`.
+See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the five default triage labels.
+See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Use a single-context layout: root `GLOSSARY.md` and `docs/adr/`.
+See `docs/agents/domain.md`.
