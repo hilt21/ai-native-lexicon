@@ -241,3 +241,43 @@ test('Primitive contract-only changes revalidate Astro records with a warm cache
     await assert.rejects(npm(directory, ['exec', '--', 'astro', 'sync']), /term[\s\S]*Too small/);
   });
 });
+
+test('a standalone Speaking Guide preserves anchors, backlinks and strict notes', async () => {
+  await inIsolatedProject(async (directory) => {
+    const original = await yaml(directory, 'src/data/speaking-cards/card-01.yaml');
+    const numbers = await Promise.all((await readdir(join(directory, 'src/data/speaking-cards')))
+      .filter((file) => /\.ya?ml$/.test(file)).map(async (file) => (await yaml(directory, `src/data/speaking-cards/${file}`)).number));
+    const number = Math.max(...numbers) + 7;
+    const guide = { ...original, number, title: 'L2 Standalone Speaking Guide', concepts: ['context'], primitives: ['context'] };
+    const file = join(directory, 'src/data/speaking-cards/l2-guide.yml');
+    await writeFile(file, stringify(guide));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['run', 'build']);
+    const cards = await readFile(join(directory, 'dist/speaking-card/index.html'), 'utf8');
+    for (const id of [...numbers, number]) assert.ok(cards.includes(`id="card-${String(id).padStart(2, '0')}"`));
+    assert.ok(cards.includes(guide.title));
+    for (const type of ['concepts', 'primitives']) {
+      const detail = await readFile(join(directory, 'dist', type, 'context/index.html'), 'utf8');
+      assert.ok(detail.includes(`/ai-native-lexicon/speaking-card/#card-${String(number).padStart(2, '0')}`));
+    }
+    await writeFile(file, stringify({ ...guide, number: numbers[0] }));
+    await assert.rejects(npm(directory, ['run', 'build']), /duplicate speaking card number/);
+    await writeFile(file, stringify({ ...guide, keyLines: [' '] }));
+    await assert.rejects(npm(directory, ['run', 'check']), /keyLines/);
+  });
+});
+
+test('parallel project builds keep Speaking Guide cache records isolated', async () => {
+  const title = 'L2 Cache Isolation Guide';
+  await Promise.all([false, true].map((addGuide) => inIsolatedProject(async (directory) => {
+    if (addGuide) {
+      const original = await yaml(directory, 'src/data/speaking-cards/card-01.yaml');
+      const numbers = await Promise.all((await readdir(join(directory, 'src/data/speaking-cards')))
+        .filter((file) => /\.ya?ml$/.test(file)).map(async (file) => (await yaml(directory, `src/data/speaking-cards/${file}`)).number));
+      await writeFile(join(directory, 'src/data/speaking-cards/l2-cache-guide.yml'), stringify({ ...original, number: Math.max(...numbers) + 1, title }));
+    }
+    await npm(directory, ['run', 'build']);
+    const page = await readFile(join(directory, 'dist/speaking-card/index.html'), 'utf8');
+    assert.equal(page.includes(title), addGuide);
+  })));
+});

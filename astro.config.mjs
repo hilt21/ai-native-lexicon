@@ -10,6 +10,7 @@ const isPagesBuild = process.env.GITHUB_ACTIONS === 'true';
 const usePagefind = isPagesBuild && process.env.SKIP_PAGEFIND !== 'true';
 
 export default defineConfig({
+  cacheDir: './.astro/cache',
   site: process.env.SITE_URL ?? `https://${owner}.github.io`,
   base: process.env.BASE_PATH ?? (isPagesBuild ? `/${repository}` : '/'),
   trailingSlash: 'always',
