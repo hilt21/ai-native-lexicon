@@ -62,4 +62,3 @@ export function readTaxonomy(directory, schema, uniqueFields) {
   records.sort((a, b) => a.order - b.order);
   return { records, errors };
 }
-
