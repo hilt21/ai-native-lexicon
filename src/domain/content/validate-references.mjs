@@ -1,4 +1,7 @@
 import { categories as CATEGORIES } from './concept-input.mjs';
+import { layerHeadingId, layerRegistry } from '../taxonomy/layers.mjs';
+
+const layerNavigationIds = new Set(layerRegistry.flatMap(({ anchor }) => [anchor, layerHeadingId(anchor)]));
 
 export function validateConceptReferences(records) {
   const errors = [];
@@ -49,6 +52,7 @@ export function validatePrimitiveReferences(concepts, primitives) {
     checkLinks(slug, 'primitives', data?.primitives, primitiveSlugs);
   }
   for (const { slug, data } of primitives) {
+    if (layerNavigationIds.has(slug)) errors.push(`${slug}: primitive filename slug collides with layer anchor or heading ID`);
     if (!data || typeof data !== 'object' || Array.isArray(data)) {
       errors.push(`${slug}: entry must be a YAML object`);
       continue;

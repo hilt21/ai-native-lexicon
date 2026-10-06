@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse, stringify } from 'yaml';
 import { categoryRegistry } from '../src/domain/taxonomy/categories.mjs';
+import { layerRegistry } from '../src/domain/taxonomy/layers.mjs';
 
 const run = promisify(execFile);
 const repository = fileURLToPath(new URL('../', import.meta.url));
@@ -335,5 +336,40 @@ test('adding category YAML publishes an empty route and then its first Concept w
     await writeFile(member, stringify({ ...concept, category: 'Unconfigured Domain' }));
     await assert.rejects(npm(directory, ['run', 'validate:catalog']), /l2-category-member.yaml: category/);
     assert.deepEqual(await Promise.all(sourceFiles.map((file) => readFile(join(directory, file), 'utf8'))), sourceBefore);
+  });
+});
+
+test('adding layer YAML publishes an empty group and its first Primitive with explicit anchors', async () => {
+  await inIsolatedProject(async (directory) => {
+    const sources = ['src/domain/content/primitive-input.mjs', 'src/domain/taxonomy/layers.mjs', 'src/domain/taxonomy/read-taxonomy.mjs', 'src/lib/primitive-presentation.ts', 'src/pages/primitives.astro', 'src/pages/primitives/[slug].astro'];
+    const before = await Promise.all(sources.map((file) => readFile(join(directory, file), 'utf8')));
+    const layer = { name: 'L2 Expansion Layer', anchor: 'layer-fixture-explicit-target', order: Math.max(...layerRegistry.map(({ order }) => order)) + 10 };
+    await writeFile(join(directory, 'src/data/taxonomy/layers/l2-expansion-layer.yml'), stringify(layer));
+    await npm(directory, ['run', 'schema:generate']);
+    const schema = JSON.parse(await readFile(join(directory, 'schemas/primitive.schema.json'), 'utf8'));
+    assert.ok(schema.properties.layer.enum.includes(layer.name));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['test']);
+    await npm(directory, ['run', 'build']);
+    const catalog = join(directory, 'dist/primitives/index.html');
+    const empty = await readFile(catalog, 'utf8');
+    assert.ok(empty.includes(`href="#${layer.anchor}"`));
+    assert.match(empty.match(new RegExp(`<section[^>]*id="${layer.anchor}"[\\s\\S]*?</section>`))?.[0] ?? '', /00 primitives/);
+    for (const { anchor } of layerRegistry) assert.ok(empty.includes(`id="${anchor}"`));
+    const primitive = { ...await yaml(directory, 'src/data/primitives/state.yaml'), term: 'L2 Layer Member', layer: layer.name, definitions: [{ name: 'Independent meaning', text: 'A new primitive belongs to the configured layer.' }], related: [] };
+    const member = join(directory, 'src/data/primitives/l2-layer-member.yaml');
+    await writeFile(member, stringify(primitive));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['run', 'build']);
+    const grouped = (await readFile(catalog, 'utf8')).match(new RegExp(`<section[^>]*id="${layer.anchor}"[\\s\\S]*?</section>`))?.[0] ?? '';
+    assert.match(grouped, /01 primitives/);
+    assert.ok(grouped.includes('id="l2-layer-member"'));
+    assert.ok(grouped.includes('href="/ai-native-lexicon/primitives/l2-layer-member/"'));
+    const detail = await readFile(join(directory, 'dist/primitives/l2-layer-member/index.html'), 'utf8');
+    assert.ok(detail.includes(`href="/ai-native-lexicon/primitives/#${layer.anchor}"`));
+    assert.equal(detail.includes('#layer-l2-expansion-layer'), false);
+    await writeFile(member, stringify({ ...primitive, layer: 'Unconfigured Layer' }));
+    await assert.rejects(npm(directory, ['run', 'validate:catalog']), /l2-layer-member.yaml: layer/);
+    assert.deepEqual(await Promise.all(sources.map((file) => readFile(join(directory, file), 'utf8'))), before);
   });
 });

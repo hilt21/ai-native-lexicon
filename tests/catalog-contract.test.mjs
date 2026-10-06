@@ -48,6 +48,13 @@ test('the public catalog boundary rejects cross-record failures and malformed in
     assert.match(validateCatalog(await readCatalog(directory)).errors.join('\n'), expected, path);
     await writeFile(file, source);
   }
+  const primitive = parse(await readFile(join(directory, 'primitives/state.yaml'), 'utf8'));
+  for (const slug of ['layer-purpose-governance', 'layer-purpose-governance-title']) {
+    const collision = join(directory, 'primitives', `${slug}.yaml`);
+    await writeFile(collision, stringify({ ...primitive, term: 'Layer Anchor Collision Fixture', definitions: [{ name: 'Standalone', text: 'A valid input with a reserved layer navigation ID as its filename.' }], related: [] }));
+    assert.match(validateCatalog(await readCatalog(directory)).errors.join('\n'), /primitive filename slug collides with layer anchor or heading ID/);
+    await rm(collision);
+  }
   await writeFile(join(directory, 'speaking-cards/card-01.yaml'), 'number: [unfinished');
   assert.match(validateCatalog(await readCatalog(directory)).errors.join('\n'), /speaking-cards\/card-01.yaml: invalid YAML/);
 });

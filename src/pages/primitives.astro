@@ -4,6 +4,7 @@ import PrimitiveRow from '../components/PrimitiveRow.astro';
 import { getPrimitives } from '../lib/catalog';
 import { primitiveLayers } from '../lib/primitive-schema.mjs';
 import { primitiveLayerId, primitiveOwners, primitivePriorities, type PrimitiveLayer } from '../lib/primitive-presentation';
+import { layerHeadingId } from '../domain/taxonomy/layers.mjs';
 
 const primitives = await getPrimitives();
 const primitivesByLayer = new Map<PrimitiveLayer, typeof primitives>(primitiveLayers.map((layer: PrimitiveLayer) => [layer, []]));
@@ -35,10 +36,11 @@ for (const primitive of primitives) primitivesByLayer.get(primitive.data.layer)?
     {primitiveLayers.map((layer: PrimitiveLayer) => {
       const members = primitivesByLayer.get(layer) ?? [];
       const layerId = primitiveLayerId(layer);
+      const headingId = layerHeadingId(layerId);
       return (
-        <section class="primitive-layer" id={layerId} aria-labelledby={`${layerId}-title`}>
+        <section class="primitive-layer" id={layerId} aria-labelledby={headingId}>
           <header class="primitive-layer-heading">
-            <h2 id={`${layerId}-title`}>{layer}</h2>
+            <h2 id={headingId}>{layer}</h2>
             <span>{String(members.length).padStart(2, '0')} primitives</span>
           </header>
           <div class="primitive-layer-list">
