@@ -117,3 +117,46 @@ test('rendered edit links use the default content branch and an explicit overrid
     }
   });
 });
+
+test('a standalone Concept uses the shared contract in the CLI and deployed projections', async () => {
+  await inIsolatedProject(async (directory) => {
+    const original = await yaml(directory, 'src/data/concepts/verification.yaml');
+    const { sources, ...fields } = original;
+    const concept = {
+      ...fields,
+      term: 'L2 Concept Migration',
+      primitives: ['view-projection'],
+      added: '2026-10-06',
+    };
+    const file = join(directory, 'src/data/concepts/l2-concept-migration.yaml');
+    await writeFile(file, stringify(concept));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['run', 'build']);
+    const route = '/ai-native-lexicon/concepts/l2-concept-migration/';
+    for (const path of ['concepts/index.html', 'categories/verification/index.html']) {
+      assert.ok((await readFile(join(directory, 'dist', path), 'utf8')).includes(`href="${route}"`), path);
+    }
+    const detail = await readFile(join(directory, 'dist/concepts/l2-concept-migration/index.html'), 'utf8');
+    assert.ok(detail.includes('href="/ai-native-lexicon/primitives/view-projection/"'));
+    const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
+    const exported = dataset.concepts.find(({ slug }) => slug === 'l2-concept-migration');
+    assert.deepEqual(exported.sources, []);
+    assert.equal(exported.added, '2026-10-06T00:00:00.000Z');
+
+    await writeFile(file, stringify({ ...concept, added: '2026-10-06T00:00:00.000Z' }));
+    await assert.rejects(npm(directory, ['run', 'check']), /l2-concept-migration[\s\S]*added/);
+    await assert.rejects(npm(directory, ['run', 'validate:concepts']), /l2-concept-migration.yaml: added/);
+  });
+});
+
+test('contract-only changes revalidate Astro records with a warm cache', async () => {
+  await inIsolatedProject(async (directory) => {
+    await npm(directory, ['exec', '--', 'astro', 'sync']);
+    const contract = join(directory, 'src/domain/content/concept-input.mjs');
+    const source = await readFile(contract, 'utf8');
+    const stricter = source.replace('term: codepointText(2)', 'term: codepointText(200)');
+    assert.notEqual(stricter, source);
+    await writeFile(contract, stricter);
+    await assert.rejects(npm(directory, ['exec', '--', 'astro', 'sync']), /term[\s\S]*Text length/);
+  });
+});

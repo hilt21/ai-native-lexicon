@@ -12,16 +12,19 @@
     "validate:concepts": "node scripts/validate-concepts.mjs",
     "validate:speaking-cards": "node scripts/validate-speaking-cards.mjs",
     "test": "node --test tests/*.test.mjs",
-    "test:extension": "node --test tests/data-extension.integration.mjs"
+    "test:extension": "node --test tests/data-extension.integration.mjs",
+    "schema:concept": "node scripts/generate-concept-schema.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",
+    "ajv-formats": "3.0.1",
     "astro": "^7.1.6",
     "sharp": "^0.34.5",
     "zod": "4.4.3"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
+    "ajv": "8.20.0",
     "typescript": "^5.9.3",
     "yaml": "^2.8.2"
   },

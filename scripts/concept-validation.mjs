@@ -2,26 +2,10 @@ import { readdir, readFile } from 'node:fs/promises';
 import { basename, join } from 'node:path';
 import { parse } from 'yaml';
 
-export const CATEGORIES = [
-  'Context',
-  'Agent Architecture',
-  'Harness',
-  'Governance',
-  'Execution',
-  'Knowledge',
-  'UX',
-  'Organization',
-  'Instruction',
-  'Memory',
-  'State',
-  'Goal',
-  'Reasoning',
-  'Capability',
-  'Feedback',
-  'Verification',
-  'Failure Handling',
-  'Multi-Agent',
-];
+import { categories as CATEGORIES } from '../src/domain/content/concept-input.mjs';
+import { readConceptInputs } from '../src/domain/content/read-content.mjs';
+
+export { CATEGORIES };
 
 export async function readYamlDirectory(directory) {
   const files = (await readdir(directory)).filter((file) => /\.ya?ml$/.test(file)).sort();
@@ -39,23 +23,16 @@ export async function readYamlDirectory(directory) {
 }
 
 export async function validateConceptDirectory(directory) {
-  const { files, records, errors } = await readYamlDirectory(directory);
+  const { files, records, errors } = await readConceptInputs(directory);
   const slugs = new Set(records.map(({ slug }) => slug));
   const terms = new Map();
 
   for (const { slug, file, data } of records) {
-    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(slug)) errors.push(`${file}: filename must be a kebab-case slug`);
-    if (!data || typeof data !== 'object') {
-      errors.push(`${file}: entry must be a YAML object`);
-      continue;
-    }
-    if (!CATEGORIES.includes(data.category)) errors.push(`${file}: unknown category "${data.category}"`);
-    if (!Array.isArray(data.related) || data.related.length < 2) errors.push(`${file}: related must contain at least two slugs`);
     for (const related of data.related ?? []) {
       if (related === slug) errors.push(`${file}: concept cannot relate to itself`);
       if (!slugs.has(related)) errors.push(`${file}: related concept "${related}" does not exist`);
     }
-    const normalizedTerm = String(data.term ?? '').trim().toLowerCase();
+    const normalizedTerm = data.term.trim().toLowerCase();
     if (terms.has(normalizedTerm)) errors.push(`${file}: duplicate term also found in ${terms.get(normalizedTerm)}`);
     terms.set(normalizedTerm, file);
   }
