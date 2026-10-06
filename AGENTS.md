@@ -15,7 +15,7 @@ This repository is a data-first lexicon with three separate content types. Treat
 
 ## Schema and implementation
 
-- For concept fields, update `src/domain/content/concept-input.mjs` and regenerate the portable schema with `npm run schema:concept`; `src/lib/concept-schema.mjs` preserves Date output for existing Astro consumers. For primitive fields, update `src/domain/content/primitive-input.mjs` and regenerate with `npm run schema:primitive`; `src/lib/primitive-schema.mjs` preserves Date output. Keep portable schemas, cross-record validators, tests, and content documentation synchronized. Speaking Card references are checked by `scripts/speaking-card-validation.mjs`.
+- For concept fields, update `src/domain/content/concept-input.mjs` and regenerate the portable schema with `npm run schema:concept`; `src/lib/concept-schema.mjs` preserves Date output for existing Astro consumers. For primitive fields, update `src/domain/content/primitive-input.mjs` and regenerate with `npm run schema:primitive`; `src/lib/primitive-schema.mjs` preserves Date output. Keep portable schemas, cross-record validators, tests, and content documentation synchronized. Speaking Guide fields live in `src/domain/content/speaking-card-input.mjs`; cross-record checks live in `src/domain/content/validate-references.mjs`. Run `npm run schema:generate` after field changes; `npm run schema:check` detects drift without writing files.
 - Keep the runtime thin: do not add a database, client framework, or generator unless the existing content collections cannot satisfy a demonstrated requirement.
 - Do not duplicate canonical records into Markdown pages or handwritten indexes. Pages and machine-readable endpoints should query the existing content collections and card data.
 - Keep changes surgical and follow the established visual and content style.
@@ -30,7 +30,7 @@ npm test
 npm run build
 ```
 
-`npm run check` runs Astro checks and concept, primitive, and Speaking Card reference validation. `npm test` runs data-integrity and UI-regression tests. The GitHub Actions workflow runs all three before deployment.
+`npm run check` runs read-only portable-schema drift detection, Astro checks and catalog reference validation. `npm test` runs data-integrity and UI-regression tests. The GitHub Actions workflow runs all three before deployment.
 
 ## Architecture direction
 

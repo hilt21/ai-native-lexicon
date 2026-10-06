@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import test from 'node:test';
-import { validateConceptDirectory } from '../scripts/concept-validation.mjs';
+import { validateConceptDirectory } from '../src/domain/content/catalog.mjs';
 import { primitiveSchema } from '../src/lib/primitive-schema.mjs';
 
 const conceptDirectory = fileURLToPath(new URL('../src/data/concepts/', import.meta.url));
@@ -24,7 +24,8 @@ test('concepts use explicit primitive references instead of legacy tags', async 
   }
 });
 
-const { validatePrimitiveDirectory, validatePrimitiveReferences } = await import('../scripts/primitive-validation.mjs');
+const { validatePrimitiveDirectory } = await import('../src/domain/content/catalog.mjs');
+const { validatePrimitiveReferences } = await import('../src/domain/content/validate-references.mjs');
 const primitiveDirectory = fileURLToPath(new URL('../src/data/primitives/', import.meta.url));
 
 test('primitive entries and all cross-collection references resolve', async () => {
@@ -39,11 +40,11 @@ test('primitive entries and all cross-collection references resolve', async () =
   }
 });
 
-test('broken links, duplicate references, legacy tags and missing backlinks are rejected', () => {
-  const concepts = [{ slug: 'a', data: { primitives: ['missing', 'missing'], tags: [] } }];
+test('broken links, duplicate references and missing backlinks are rejected', () => {
+  const concepts = [{ slug: 'a', data: { primitives: ['missing', 'missing'] } }];
   const primitives = [{ slug: 'p', data: { term: 'P', related: ['p', 'missing'], definitions: [{ concept: 'a' }, { concept: 'absent' }] } }];
   const errors = validatePrimitiveReferences(concepts, primitives).join('\n');
-  for (const message of ['legacy tags', 'duplicate primitives', 'primitives target "missing"', 'related cannot reference itself', 'related target "missing"', 'definitions target "absent"', 'must link back']) {
+  for (const message of ['duplicate primitives', 'primitives target "missing"', 'related cannot reference itself', 'related target "missing"', 'definitions target "absent"', 'must link back']) {
     assert.ok(errors.includes(message), message);
   }
 });

@@ -10,8 +10,8 @@ import { primitiveSchema } from '../src/lib/primitive-schema.mjs';
 import { execFile } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
-import { validateConceptDirectory } from '../scripts/concept-validation.mjs';
-import { validatePrimitiveDirectory } from '../scripts/primitive-validation.mjs';
+import { validateConceptDirectory } from '../src/domain/content/catalog.mjs';
+import { validatePrimitiveDirectory } from '../src/domain/content/catalog.mjs';
 
 const state = parse(await readFile(new URL('../src/data/primitives/state.yaml', import.meta.url), 'utf8'));
 const { records: concepts } = await validateConceptDirectory(new URL('../src/data/concepts/', import.meta.url));
@@ -60,7 +60,7 @@ test('the generation command writes the committed Primitive portable schema', as
   const directory = await mkdtemp(join(tmpdir(), 'lexicon-generated-primitive-'));
   t.after(() => rm(directory, { recursive: true, force: true }));
   const file = join(directory, 'primitive.schema.json');
-  await run(process.execPath, [fileURLToPath(new URL('../scripts/generate-primitive-schema.mjs', import.meta.url)), file]);
+  await run(process.execPath, [fileURLToPath(new URL('../scripts/content-schemas.mjs', import.meta.url)), 'generate-one', 'primitive', file]);
   const generated = JSON.parse(await readFile(file, 'utf8'));
   const committed = JSON.parse(await readFile(new URL('../schemas/primitive.schema.json', import.meta.url), 'utf8'));
   assert.deepEqual(generated, committed);
