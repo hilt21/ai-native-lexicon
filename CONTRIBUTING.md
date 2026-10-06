@@ -58,7 +58,36 @@ npm run build
 
 After changing field rules, run `npm run schema:generate` to regenerate all three portable schemas (or a corresponding `schema:concept`, `schema:primitive`, `schema:speaking-card` command). `npm run schema:check` only compares committed schemas and exits nonzero with a filename when they drift. Tests compare the actual field decisions of the Astro adapter, CLI validator and JSON Schema validator. Concept and Primitive portable schemas are generated from their shared input contracts. Speaking Cards use the same shared input boundary; run `npm run schema:speaking-card` after changing their fields.
 
-For data-expansion or edit-link changes, also run `npm run test:extension`. It adds one record of each type in an isolated copy, runs the full checks and build, and verifies rendered edit links without modifying canonical data.
+For data-expansion or edit-link changes, also run `npm run test:extension`. It exercises isolated contract and projection regressions without modifying canonical data.
+
+## Repeatable L2 expansion acceptance
+
+Add records to the existing direct YAML collections. Concept and Primitive filename slugs, category slugs, layer anchors and Speaking Guide numbers are public identities: preserve them when editing. Update inbound references before removing a target. Relationship lists and backlinks are generated from canonical references, never maintained in a second index.
+
+Speaking Guide is an **Application Resource**: independently curated material that helps someone explain a topic. Speaking Cards are its current **Content Projection**. A future Skill Map is another resource type and will need its own approved schema and projections; adding an arbitrary new content type is not automatic.
+
+For a new category or layer, add its YAML configuration first, then run `npm run schema:generate`. This generates portable enums from configuration; do not hand-edit JSON or duplicate vocabularies in page code. An empty category/layer can publish before members arrive. Add Concepts, Primitives and Guides using the shared contracts and meaningful references, then run the required checks above.
+
+Run the combined production-subpath acceptance:
+
+```sh
+npm run test:l2
+```
+
+It builds a baseline, creates an empty category and layer, generates portable schemas, adds one Concept, one Primitive and one Speaking Guide with legal relationships, and runs check/test/build. It validates all records through the public Node catalog and portable schemas, checks rendered projections, preserves every baseline HTML route/ID, and resolves all internal navigation links. Invalid references, duplicate identities, unknown taxonomy and schema drift must fail. Source and existing records are compared byte-for-byte; temporary records are removed even on failure. Run it twice to confirm repeatability.
+
+The browser portion uses a separate optional runner so ordinary CI does not need a browser installation:
+
+```sh
+npx playwright install chromium
+npm run test:l2 -- --browser
+```
+
+This runs the same full scenario and adds real Chromium interaction at 1440px and 390px: title/idea and English/Chinese related-name search, no results, clearing, guide notes, associated navigation and horizontal overflow checks. Evidence is written to `output/playwright/l2-10/` as JSON reports and screenshots. The fixture uses the GitHub Pages `/ai-native-lexicon` base. Reports are execution evidence, not formal content; inspect screenshots when presentation changes. CI runs `test:l2` and the smaller extension regressions before deployment. See [the L2 verification record](docs/audits/l2-10-verification.md) for actual runs.
+
+If Chromium downloads are unavailable and Google Chrome is already installed, run `PLAYWRIGHT_CHANNEL=chrome npm run test:l2 -- --browser` instead. The same assertions run against the installed browser; the evidence report records its version.
+
+L2 verifies structured YAML expansion. It does not ingest raw articles, generate proposals, approve knowledge changes or implement the planned L3/L4 governance workflow.
 
 GitHub edit links use the `master` content branch by default. Set `CONTENT_BRANCH` when the canonical files live on another branch; this applies to both concept pages and Starlight documentation links.
 

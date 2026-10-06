@@ -23,7 +23,7 @@ Start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness
 ## Explore the collection
 
 - [Browse concepts](https://hilt21.github.io/ai-native-lexicon/concepts/) by name or explore the [categories](https://hilt21.github.io/ai-native-lexicon/categories/).
-- Use [search](https://hilt21.github.io/ai-native-lexicon/search/) to find concepts and primitives.
+- Use [search](https://hilt21.github.io/ai-native-lexicon/search/) to find concepts, primitives and Speaking Guides, including related names.
 - Browse the [primitive directory](https://hilt21.github.io/ai-native-lexicon/primitives/) or open the [Speaking Cards](https://hilt21.github.io/ai-native-lexicon/speaking-card/).
 - Inspect [`dataset.json`](https://hilt21.github.io/ai-native-lexicon/dataset.json) for separate machine-readable Concept, Primitive and Speaking Guide records, or [`llms.txt`](https://hilt21.github.io/ai-native-lexicon/llms.txt) for a compact page index.
 
@@ -55,6 +55,12 @@ npm run build
 ```
 
 `npm run check` checks the Astro project and validates concept, primitive, and Speaking Card references. `npm test` runs data-integrity and UI-regression tests. `npm run build` validates Speaking Card references and builds the static site.
+
+For content or taxonomy expansion, also run `npm run test:extension` and `npm run test:l2`. The latter verifies an isolated, complete expansion under the production base, including empty taxonomy, three new linked records, all projections and preserved routes/anchors. To include real browser checks, install Chromium with `npx playwright install chromium`, then run `npm run test:l2 -- --browser`. See [the contribution workflow](CONTRIBUTING.md#repeatable-l2-expansion-acceptance) and [L2 evidence](docs/audits/l2-10-verification.md).
+
+Categories and Primitive layers are YAML configuration in `src/data/taxonomy/`. Add configuration, generate portable schemas with `npm run schema:generate`, then add members without changing page code or manually synchronizing enums. Existing slugs, layer anchors and Card numbers remain stable.
+
+Speaking Guides are independently curated Application Resources; Speaking Cards are their current presentation. A future Skill Map needs its own content contract. The current L2 workflow covers structured YAML; raw-material ingestion and proposal/approval automation remain L3/L4 work.
 
 ## GitHub Pages
 

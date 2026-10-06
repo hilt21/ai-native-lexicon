@@ -1,0 +1,18 @@
+{
+  "base": "/ai-native-lexicon",
+  "browser": false,
+  "stages": [
+    "baseline public routes, unique IDs and internal links",
+    "empty category/layer and generated portable enums",
+    "complete content, relationships, projections and preserved public targets",
+    "invalid references, duplicate identities, unknown taxonomy and read-only drift rejection",
+    "isolated cleanup and unchanged formal YAML/source"
+  ],
+  "viewports": [],
+  "routes": {
+    "baseline": 152,
+    "expanded": 155,
+    "baselineLinks": 3210,
+    "expandedLinks": 3260
+  }
+}
