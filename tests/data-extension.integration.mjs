@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
-import { access, cp, mkdtemp, readFile, readdir, rm, symlink, writeFile } from 'node:fs/promises';
+import { access, cp, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
@@ -19,7 +19,8 @@ async function inIsolatedProject(verify) {
     for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
       await cp(join(repository, path), join(directory, path), { recursive: true });
     }
-    await symlink(join(repository, 'node_modules'), join(directory, 'node_modules'), 'junction');
+    // External dependency symlinks break Astro's virtual CSS module paths on Linux.
+    await cp(join(repository, 'node_modules'), join(directory, 'node_modules'), { recursive: true, verbatimSymlinks: true });
     await verify(directory);
   } finally {
     await rm(directory, { recursive: true, force: true });

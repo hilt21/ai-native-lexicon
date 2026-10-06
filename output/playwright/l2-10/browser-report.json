@@ -1,0 +1,122 @@
+{
+  "base": "/ai-native-lexicon",
+  "browser": true,
+  "stages": [
+    "baseline public routes, unique IDs and internal links",
+    "empty category/layer and generated portable enums",
+    "complete content, relationships, projections and preserved public targets",
+    "invalid references, duplicate identities, unknown taxonomy and read-only drift rejection",
+    "real browser search, disclosure, relationship navigation and overflow",
+    "isolated cleanup and unchanged formal YAML/source"
+  ],
+  "viewports": [
+    {
+      "width": 1440,
+      "queries": [
+        "L2 Acceptance Guide",
+        "Quasar acceptance",
+        "L2 Acceptance Concept",
+        "扩充验收概念",
+        "L2 Acceptance Primitive",
+        "扩充验收原语"
+      ],
+      "total": 149,
+      "navigation": [
+        "search→guide",
+        "guide→concept",
+        "concept→primitive",
+        "primitive→layer",
+        "category→concept",
+        "concept→guide"
+      ],
+      "clear": true,
+      "noResults": true,
+      "notes": true,
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "queries": [
+        "L2 Acceptance Guide",
+        "Quasar acceptance",
+        "L2 Acceptance Concept",
+        "扩充验收概念",
+        "L2 Acceptance Primitive",
+        "扩充验收原语"
+      ],
+      "total": 149,
+      "navigation": [
+        "search→guide",
+        "guide→concept",
+        "concept→primitive",
+        "primitive→layer",
+        "category→concept",
+        "concept→guide"
+      ],
+      "clear": true,
+      "noResults": true,
+      "notes": true,
+      "overflow": false
+    }
+  ],
+  "routes": {
+    "baseline": 152,
+    "expanded": 155,
+    "baselineLinks": 3210,
+    "expandedLinks": 3260
+  },
+  "browserResult": {
+    "version": "154.0.8037.98",
+    "channel": "chrome",
+    "viewports": [
+      {
+        "width": 1440,
+        "queries": [
+          "L2 Acceptance Guide",
+          "Quasar acceptance",
+          "L2 Acceptance Concept",
+          "扩充验收概念",
+          "L2 Acceptance Primitive",
+          "扩充验收原语"
+        ],
+        "total": 149,
+        "navigation": [
+          "search→guide",
+          "guide→concept",
+          "concept→primitive",
+          "primitive→layer",
+          "category→concept",
+          "concept→guide"
+        ],
+        "clear": true,
+        "noResults": true,
+        "notes": true,
+        "overflow": false
+      },
+      {
+        "width": 390,
+        "queries": [
+          "L2 Acceptance Guide",
+          "Quasar acceptance",
+          "L2 Acceptance Concept",
+          "扩充验收概念",
+          "L2 Acceptance Primitive",
+          "扩充验收原语"
+        ],
+        "total": 149,
+        "navigation": [
+          "search→guide",
+          "guide→concept",
+          "concept→primitive",
+          "primitive→layer",
+          "category→concept",
+          "concept→guide"
+        ],
+        "clear": true,
+        "noResults": true,
+        "notes": true,
+        "overflow": false
+      }
+    ]
+  }
+}

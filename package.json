@@ -18,7 +18,8 @@
     "schema:speaking-card": "node scripts/content-schemas.mjs generate-one speaking-card",
     "validate:catalog": "node scripts/validate-catalog.mjs",
     "schema:generate": "node scripts/content-schemas.mjs generate",
-    "schema:check": "node scripts/content-schemas.mjs check"
+    "schema:check": "node scripts/content-schemas.mjs check",
+    "test:l2": "node scripts/verify-l2-expansion.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",
@@ -30,6 +31,8 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.6",
     "ajv": "8.20.0",
+    "parse5": "7.3.0",
+    "playwright": "1.63.0",
     "typescript": "^5.9.3",
     "yaml": "^2.8.2"
   },
