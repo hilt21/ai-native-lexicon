@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
-import { mkdir, mkdtemp, readFile, rm, writeFile } from 'node:fs/promises';
+import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { conceptInputSchema } from '../src/domain/content/concept-input.mjs';
-import { readYamlDirectory, validateConceptDirectory } from '../scripts/concept-validation.mjs';
+import { validateConceptDirectory } from '../src/domain/content/catalog.mjs';
 import { primitiveInputSchema } from '../src/domain/content/primitive-input.mjs';
 import { primitiveLayers, primitiveSchema } from '../src/lib/primitive-schema.mjs';
 import { speakingCardInputSchema } from '../src/domain/content/speaking-card-input.mjs';
@@ -30,7 +30,7 @@ test('concept inputs preserve canonical fields and ISO date strings', async () =
 
 test('primitive inputs preserve legacy field semantics with string dates', async () => {
   assert.deepEqual(primitiveInputSchema.shape.layer.options, primitiveLayers);
-  const { records, errors } = await readYamlDirectory(fileURLToPath(new URL('../src/data/primitives/', import.meta.url)));
+  const { records, errors } = await readPrimitiveInputs();
   assert.deepEqual(errors, []);
   assert.ok(records.length > 0);
   for (const { file, data } of records) {
@@ -42,7 +42,7 @@ test('primitive inputs preserve legacy field semantics with string dates', async
 });
 
 test('speaking guide inputs preserve card numbers, references and text', async () => {
-  const { records, errors } = await readYamlDirectory(fileURLToPath(new URL('../src/data/speaking-cards/', import.meta.url)));
+  const { records, errors } = await readSpeakingCardInputs();
   assert.deepEqual(errors, []);
   assert.ok(records.length > 0);
   for (const { file, data } of records) {
@@ -115,11 +115,12 @@ test('content readers discover canonical inputs with stable filenames and card n
     [readSpeakingCardInputs, speakingCardInputSchema, 'speaking-cards'],
   ]) {
     const directory = fileURLToPath(new URL(`../src/data/${type}/`, import.meta.url));
-    const legacy = await readYamlDirectory(directory);
+    const files = (await readdir(directory)).filter((file) => /\.ya?ml$/.test(file)).sort();
+    const records = await Promise.all(files.map(async (file) => ({ file, slug: file.replace(/\.ya?ml$/, ''), data: parse(await readFile(join(directory, file), 'utf8')) })));
     const actual = await reader(directory);
     assert.deepEqual(actual.errors, []);
-    assert.deepEqual(actual.files, legacy.files);
-    const expected = legacy.records.map(({ file, slug, data }) => ({ file, slug, data: schema.parse(data) }));
+    assert.deepEqual(actual.files, files);
+    const expected = records.map(({ file, slug, data }) => ({ file, slug, data: schema.parse(data) }));
     if (type === 'speaking-cards') expected.sort((a, b) => a.data.number - b.data.number);
     assert.deepEqual(actual.records, expected);
   }

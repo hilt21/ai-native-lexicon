@@ -28,7 +28,7 @@ jobs:
           cache: npm
       - name: Install dependencies
         run: npm ci
-      - name: Validate types and concept data
+      - name: Validate types, catalog and portable schemas
         run: npm run check
       - name: Run tests
         run: npm test

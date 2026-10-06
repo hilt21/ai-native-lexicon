@@ -6,16 +6,19 @@
   "description": "An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.",
   "scripts": {
     "dev": "ASTRO_TELEMETRY_DISABLED=1 astro dev",
-    "build": "npm run validate:speaking-cards && ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "build": "npm run validate:catalog && ASTRO_TELEMETRY_DISABLED=1 astro build",
     "preview": "ASTRO_TELEMETRY_DISABLED=1 astro preview",
-    "check": "ASTRO_TELEMETRY_DISABLED=1 astro check && npm run validate:concepts && npm run validate:speaking-cards",
-    "validate:concepts": "node scripts/validate-concepts.mjs",
-    "validate:speaking-cards": "node scripts/validate-speaking-cards.mjs",
+    "check": "npm run schema:check && ASTRO_TELEMETRY_DISABLED=1 astro check && npm run validate:catalog",
+    "validate:concepts": "npm run validate:catalog",
+    "validate:speaking-cards": "npm run validate:catalog",
     "test": "node --test tests/*.test.mjs",
     "test:extension": "node --test tests/data-extension.integration.mjs",
-    "schema:concept": "node scripts/generate-concept-schema.mjs",
-    "schema:primitive": "node scripts/generate-primitive-schema.mjs",
-    "schema:speaking-card": "node scripts/generate-speaking-card-schema.mjs"
+    "schema:concept": "node scripts/content-schemas.mjs generate-one concept",
+    "schema:primitive": "node scripts/content-schemas.mjs generate-one primitive",
+    "schema:speaking-card": "node scripts/content-schemas.mjs generate-one speaking-card",
+    "validate:catalog": "node scripts/validate-catalog.mjs",
+    "schema:generate": "node scripts/content-schemas.mjs generate",
+    "schema:check": "node scripts/content-schemas.mjs check"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",

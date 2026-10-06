@@ -9,8 +9,8 @@ import Ajv2020 from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
 import { conceptInputSchema } from '../src/domain/content/concept-input.mjs';
 import { conceptSchema } from '../src/lib/concept-schema.mjs';
-import { validateConceptDirectory } from '../scripts/concept-validation.mjs';
-import { validatePrimitiveDirectory } from '../scripts/primitive-validation.mjs';
+import { validateConceptDirectory } from '../src/domain/content/catalog.mjs';
+import { validatePrimitiveDirectory } from '../src/domain/content/catalog.mjs';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
 
@@ -99,7 +99,7 @@ test('the schema generation command writes the committed portable contract', asy
   const directory = await mkdtemp(join(tmpdir(), 'lexicon-generated-concept-'));
   t.after(() => rm(directory, { recursive: true, force: true }));
   const file = join(directory, 'concept.schema.json');
-  await run(process.execPath, [fileURLToPath(new URL('../scripts/generate-concept-schema.mjs', import.meta.url)), file]);
+  await run(process.execPath, [fileURLToPath(new URL('../scripts/content-schemas.mjs', import.meta.url)), 'generate-one', 'concept', file]);
   const generated = JSON.parse(await readFile(file, 'utf8'));
   const committed = JSON.parse(await readFile(new URL('../schemas/concept.schema.json', import.meta.url), 'utf8'));
   assert.deepEqual(generated, committed);

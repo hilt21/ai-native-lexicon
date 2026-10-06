@@ -15,7 +15,7 @@ test('every speaking card declares concept and primitive references', () => {
 });
 
 test('current references resolve to existing concept and primitive slugs', async () => {
-  const { validateSpeakingCardReferences } = await import('../scripts/speaking-card-validation.mjs');
+  const { validateSpeakingCardReferences } = await import('../src/domain/content/validate-references.mjs');
   const slugsIn = async (directory) => (await readdir(new URL(directory, import.meta.url)))
     .filter((file) => /\.ya?ml$/.test(file))
     .map((file) => file.replace(/\.ya?ml$/, ''));
@@ -28,7 +28,7 @@ test('current references resolve to existing concept and primitive slugs', async
 });
 
 test('invalid and duplicate speaking-card references report their card and target', async () => {
-  const { validateSpeakingCardReferences } = await import('../scripts/speaking-card-validation.mjs');
+  const { validateSpeakingCardReferences } = await import('../src/domain/content/validate-references.mjs');
   const errors = validateSpeakingCardReferences([
     { number: 4, title: 'Agent Harness', concepts: ['harness', 'missing', 'harness'], primitives: ['missing'] },
   ], ['harness'], ['harness']);
@@ -41,7 +41,7 @@ test('invalid and duplicate speaking-card references report their card and targe
 });
 
 test('empty speaking-card relations are valid', async () => {
-  const { validateSpeakingCardReferences } = await import('../scripts/speaking-card-validation.mjs');
+  const { validateSpeakingCardReferences } = await import('../src/domain/content/validate-references.mjs');
   assert.deepEqual(validateSpeakingCardReferences([
     { number: 13, title: 'Finding Good AI Use Cases', concepts: [], primitives: [] },
   ], [], []), []);

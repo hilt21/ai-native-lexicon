@@ -2,7 +2,9 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
-import { CATEGORIES, validateConceptDirectory } from '../scripts/concept-validation.mjs';
+import { validateConceptDirectory } from '../src/domain/content/catalog.mjs';
+
+import { categories as CATEGORIES } from '../src/domain/content/concept-input.mjs';
 
 const directory = fileURLToPath(new URL('../src/data/concepts/', import.meta.url));
 

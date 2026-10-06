@@ -281,3 +281,16 @@ test('parallel project builds keep Speaking Guide cache records isolated', async
     assert.equal(page.includes(title), addGuide);
   })));
 });
+
+test('repository check fails on schema drift without repairing the committed file', async () => {
+  await inIsolatedProject(async (directory) => {
+    const file = join(directory, 'schemas/primitive.schema.json');
+    const original = await readFile(file, 'utf8');
+    await writeFile(file, '{}\n');
+    await assert.rejects(npm(directory, ['run', 'check']), /Schema drift:[\s\S]*primitive.schema.json/);
+    assert.equal(await readFile(file, 'utf8'), '{}\n');
+    await writeFile(file, original);
+    await npm(directory, ['run', 'check']);
+    assert.equal(await readFile(file, 'utf8'), original);
+  });
+});

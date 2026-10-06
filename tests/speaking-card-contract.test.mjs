@@ -68,6 +68,6 @@ test('the guide schema command writes the exact committed portable contract', as
   const directory = await mkdtemp(join(tmpdir(), 'lexicon-guide-schema-'));
   t.after(() => rm(directory, { recursive: true, force: true }));
   const file = join(directory, 'speaking-card.schema.json');
-  await promisify(execFile)(process.execPath, [fileURLToPath(new URL('../scripts/generate-speaking-card-schema.mjs', import.meta.url)), file]);
+  await promisify(execFile)(process.execPath, [fileURLToPath(new URL('../scripts/content-schemas.mjs', import.meta.url)), 'generate-one', 'speaking-card', file]);
   assert.deepEqual(JSON.parse(await readFile(file, 'utf8')), JSON.parse(await readFile(new URL('../schemas/speaking-card.schema.json', import.meta.url), 'utf8')));
 });
