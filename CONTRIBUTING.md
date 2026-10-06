@@ -49,6 +49,10 @@ npm run build
 
 `npm run check` applies the same Zod schema used by the website and verifies cross-record relationships. Pull requests run the complete pipeline without deploying.
 
+For data-expansion or edit-link changes, also run `npm run test:extension`. It adds one record of each type in an isolated copy, runs the full checks and build, and verifies rendered edit links without modifying canonical data.
+
+GitHub edit links use the `master` content branch by default. Set `CONTENT_BRANCH` when the canonical files live on another branch; this applies to both concept pages and Starlight documentation links.
+
 ## Scope of changes
 
 Keep pull requests focused. Do not mix a terminology proposal with unrelated styling, dependency, or architecture changes. When changing a definition, explain the practical ambiguity the change resolves.

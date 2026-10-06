@@ -11,7 +11,8 @@
     "check": "ASTRO_TELEMETRY_DISABLED=1 astro check && npm run validate:concepts && npm run validate:speaking-cards",
     "validate:concepts": "node scripts/validate-concepts.mjs",
     "validate:speaking-cards": "node scripts/validate-speaking-cards.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "test": "node --test tests/*.test.mjs",
+    "test:extension": "node --test tests/data-extension.integration.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",
