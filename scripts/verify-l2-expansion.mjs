@@ -1,9 +1,9 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
-import { cp, mkdir, mkdtemp, readFile, readdir, rm, symlink, writeFile } from 'node:fs/promises';
+import { cp, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { dirname, join, relative } from 'node:path';
+import { join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse as parseHtml } from 'parse5';
@@ -103,7 +103,8 @@ try {
   for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
     await cp(join(repository, path), join(directory, path), { recursive: true });
   }
-  await symlink(join(repository, 'node_modules'), join(directory, 'node_modules'), 'junction');
+  // Keep dependency paths inside the fixture so Astro can resolve virtual CSS modules.
+  await cp(join(repository, 'node_modules'), join(directory, 'node_modules'), { recursive: true, verbatimSymlinks: true });
   const sourceBefore = await digest(join(directory, 'src'));
   const originalData = new Map(await Promise.all((await files(join(directory, 'src/data'))).map(async (file) => [file, await readFile(file, 'utf8')])));
   await npm(['run', 'build']);

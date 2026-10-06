@@ -31,4 +31,6 @@ Reports: [automatic](../../output/playwright/l2-10/automatic-report.json), [brow
 
 Only test tooling, workflow and contributor documentation change. No formal content, runtime module, schema, page or style is changed by this ticket. Existing Linux optional runtime lock entries are retained while adding only the browser-test dependency; the already-used HTML parser is explicitly declared as a test dependency.
 
+The first Linux CI run (`37480795920`, Node 24.21.0) exposed an isolation defect: fixtures linked `node_modules` outside their project and Astro could not resolve virtual component CSS metadata. Both runners now copy dependencies into each temporary project, preserving relative `.bin` symlinks. This changes only test setup and keeps all 12 regressions and the complete acceptance gate enabled. An unused import reported by that run is removed.
+
 This proves the L2 structured-YAML expansion gate. Raw articles/notes, Proposal review/apply, automated editorial acceptance and L3/L4 are still future work. PR merge and issue closure require successful CI on the submitted head.
