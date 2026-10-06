@@ -30,6 +30,8 @@ When adding a category, update the category enum in `src/domain/content/concept-
 
 Follow [the primitive content guide](./docs/primitives.md). Use `definitions: [{ concept: existing-slug }]` when a definition is already canonical in a concept. Add inline definitions only for new meanings. Referenced concepts must include the primitive in their `primitives` array. `related` on a primitive points to other primitives, not concepts; reverse concept links are derived automatically.
 
+Primitive inputs reject unknown fields, blank text and duplicate `related` references. Definitions, considerations and sources must be nonempty; ownership, priority and source status use the existing vocabularies. Source URLs must be absolute HTTP(S) URIs with a hostname or explicit IP address, a port from 0 through 65535 when supplied, encoded spaces and valid percent escapes. Numeric IPv4 hosts use four decimal octets; IPv6 hosts use brackets. `added` must be a real `YYYY-MM-DD` calendar date. Field rules live in `src/domain/content/primitive-input.mjs`; the Astro adapter retains UTC Date values and trimmed text for existing projections.
+
 ## Editorial test
 
 A reviewer should be able to answer yes to each question:
@@ -52,7 +54,7 @@ npm run build
 
 `npm run check` applies the same Zod schema used by the website and verifies cross-record relationships. Pull requests run the complete pipeline without deploying.
 
-After changing Concept field rules, run `npm run schema:concept` to regenerate `schemas/concept.schema.json`. Tests compare the actual field decisions of the Astro adapter, CLI validator and JSON Schema validator. Primitive and Speaking Card contracts remain on their existing migration bridges.
+After changing field rules, run `npm run schema:concept` or `npm run schema:primitive` to regenerate the corresponding portable schema. Tests compare the actual field decisions of the Astro adapter, CLI validator and JSON Schema validator. Concept and Primitive portable schemas are generated from their shared input contracts. Speaking Cards remain on their existing migration bridge.
 
 For data-expansion or edit-link changes, also run `npm run test:extension`. It adds one record of each type in an isolated copy, runs the full checks and build, and verifies rendered edit links without modifying canonical data.
 

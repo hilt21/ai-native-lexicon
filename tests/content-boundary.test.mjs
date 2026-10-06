@@ -96,7 +96,11 @@ test('input contracts export complete portable schemas into a temporary director
         assert.equal(exported.properties.added.type, 'string');
         assert.equal(exported.properties.added.format, 'date');
       }
-      if (name === 'primitive') assert.equal(exported.properties.sources.items.properties.url.pattern, '^https?:\\/\\/');
+      if (name === 'primitive') {
+        const pattern = new RegExp(exported.properties.sources.items.properties.url.pattern);
+        assert.equal(pattern.test('https://example.com/notes'), true);
+        assert.equal(pattern.test('ftp://example.com/notes'), false);
+      }
       if (name === 'speaking-card') assert.equal(exported.properties.number.type, 'integer');
     }
   } finally {

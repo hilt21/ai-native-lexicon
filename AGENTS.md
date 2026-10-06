@@ -15,7 +15,7 @@ This repository is a data-first lexicon with three separate content types. Treat
 
 ## Schema and implementation
 
-- For concept fields, update `src/domain/content/concept-input.mjs` and regenerate the portable schema with `npm run schema:concept`; `src/lib/concept-schema.mjs` preserves Date output for existing Astro consumers. For primitive fields, update `src/lib/primitive-schema.mjs`. Keep portable schemas, cross-record validators, tests, and content documentation synchronized. Speaking Card references are checked by `scripts/speaking-card-validation.mjs`.
+- For concept fields, update `src/domain/content/concept-input.mjs` and regenerate the portable schema with `npm run schema:concept`; `src/lib/concept-schema.mjs` preserves Date output for existing Astro consumers. For primitive fields, update `src/domain/content/primitive-input.mjs` and regenerate with `npm run schema:primitive`; `src/lib/primitive-schema.mjs` preserves Date output. Keep portable schemas, cross-record validators, tests, and content documentation synchronized. Speaking Card references are checked by `scripts/speaking-card-validation.mjs`.
 - Keep the runtime thin: do not add a database, client framework, or generator unless the existing content collections cannot satisfy a demonstrated requirement.
 - Do not duplicate canonical records into Markdown pages or handwritten indexes. Pages and machine-readable endpoints should query the existing content collections and card data.
 - Keep changes surgical and follow the established visual and content style.

@@ -17,7 +17,7 @@ See [the State record](../src/data/primitives/state.yaml) for a referenced defin
 | Field | Content |
 |---|---|
 | `term`, `zh` | English display name and Chinese name |
-| `layer` | One of the five layers in `src/content.config.ts` |
+| `layer` | One of the five layers in `src/domain/content/primitive-input.mjs` |
 | `summary` | A concise orientation for search and machine-readable discovery |
 | `definitions` | Nonempty list of `{ concept: slug }` or `{ name, text }`; a referenced concept must link back |
 | `scope` | Applicable domain, abstraction level, and conditions |
@@ -41,7 +41,11 @@ The supplied report is located by title and section. Its external references rem
 
 `/primitives/` renders descriptions, anchor targets, and derived concept backlinks. Concepts link to the relevant anchors. Search includes primitive names (English and Chinese) for linked concepts and standalone primitive results. Both `/dataset.json` and `/llms.txt` expose the new entries. Dataset version `0.2.0` replaces concept `tags` with `primitives`; consumers must resolve primitive definition references against the dataset's concepts.
 
-Keep runtime schema, portable JSON schemas, reference validation, tests, and this guide synchronized. Run:
+Field rules are defined once in `src/domain/content/primitive-input.mjs`. The CLI reads this contract; `src/lib/primitive-schema.mjs` adapts validated date strings to UTC Date values for Astro. Text is trimmed and must contain non-whitespace characters. Unknown fields are rejected at every object boundary. Source URLs require an absolute HTTP(S) URI with a hostname or explicit IP address, a port from 0 through 65535 when supplied, and valid percent escapes. Numeric IPv4 hosts use four decimal octets; IPv6 hosts use brackets.
+
+After changing field rules, run `npm run schema:primitive` to regenerate `schemas/primitive.schema.json`. Related-reference uniqueness is a field rule; missing targets, self-links, repeated defining-concept references and required Concept backlinks are checked across the canonical collections. Layer vocabularies and anchors remain unchanged.
+
+Keep the shared contract, generated portable schema, reference validation, tests, and this guide synchronized. Run:
 
 ```sh
 npm run check
