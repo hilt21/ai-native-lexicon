@@ -7,6 +7,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse, stringify } from 'yaml';
+import { categoryRegistry } from '../src/domain/taxonomy/categories.mjs';
 
 const run = promisify(execFile);
 const repository = fileURLToPath(new URL('../', import.meta.url));
@@ -292,5 +293,47 @@ test('repository check fails on schema drift without repairing the committed fil
     await writeFile(file, original);
     await npm(directory, ['run', 'check']);
     assert.equal(await readFile(file, 'utf8'), original);
+  });
+});
+
+test('adding category YAML publishes an empty route and then its first Concept without source edits', async () => {
+  await inIsolatedProject(async (directory) => {
+    const sourceFiles = ['astro.config.mjs', 'src/domain/content/concept-input.mjs', 'src/domain/taxonomy/categories.mjs', 'src/lib/catalog.ts', 'src/pages/index.astro', 'src/pages/categories/index.astro', 'src/pages/categories/[category].astro', 'src/components/CategoryGrid.astro'];
+    const sourceBefore = await Promise.all(sourceFiles.map((file) => readFile(join(directory, file), 'utf8')));
+    const category = { name: 'L2 Expansion Domain', slug: 'l2-expansion-domain', code: 'L2', description: 'A configured category can exist before its first concept.', question: 'How does a new domain begin?', order: Math.max(...categoryRegistry.map(({ order }) => order)) + 10 };
+    await writeFile(join(directory, 'src/data/taxonomy/categories/l2-expansion-domain.yml'), stringify(category));
+    await npm(directory, ['run', 'schema:generate']);
+    const schema = JSON.parse(await readFile(join(directory, 'schemas/concept.schema.json'), 'utf8'));
+    assert.ok(schema.properties.category.enum.includes(category.name));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['test']);
+    await npm(directory, ['run', 'build']);
+    const route = '/ai-native-lexicon/categories/l2-expansion-domain/';
+    const detail = join(directory, 'dist/categories/l2-expansion-domain/index.html');
+    assert.match(await readFile(detail, 'utf8'), /00 concepts/);
+    for (const file of ['dist/index.html', 'dist/categories/index.html']) {
+      const html = await readFile(join(directory, file), 'utf8');
+      assert.ok(html.includes(`href="${route}"`));
+      const count = String(categoryRegistry.length + 1).padStart(2, '0');
+      if (file === 'dist/index.html') assert.match(html, new RegExp(`<strong>${count}</strong>\\s*<span>domains of practice</span>`));
+      else assert.ok(html.includes(`${count} DOMAINS OF PRACTICE`));
+      const links = [...html.matchAll(/href="\/ai-native-lexicon\/categories\/([^/"\s]+)\/"/g)].map((match) => match[1]);
+      assert.deepEqual(links, [...categoryRegistry.map(({ slug }) => slug), category.slug]);
+      assert.equal(/>0\d{2} \/ /.test(html), false, 'grid indexes must not be padded as 010');
+    }
+    for (const { slug } of categoryRegistry) await access(join(directory, 'dist/categories', slug, 'index.html'));
+    const concept = { ...await yaml(directory, 'src/data/concepts/verification.yaml'), term: 'L2 Category Member', category: category.name };
+    const member = join(directory, 'src/data/concepts/l2-category-member.yaml');
+    await writeFile(member, stringify(concept));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['run', 'build']);
+    const categoryHtml = await readFile(detail, 'utf8');
+    assert.match(categoryHtml, /01 concepts/);
+    assert.ok(categoryHtml.includes('href="/ai-native-lexicon/concepts/l2-category-member/"'));
+    const conceptHtml = await readFile(join(directory, 'dist/concepts/l2-category-member/index.html'), 'utf8');
+    assert.ok(conceptHtml.includes(`href="${route}"`));
+    await writeFile(member, stringify({ ...concept, category: 'Unconfigured Domain' }));
+    await assert.rejects(npm(directory, ['run', 'validate:catalog']), /l2-category-member.yaml: category/);
+    assert.deepEqual(await Promise.all(sourceFiles.map((file) => readFile(join(directory, file), 'utf8'))), sourceBefore);
   });
 });

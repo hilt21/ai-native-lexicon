@@ -1,0 +1,6 @@
+name: Knowledge
+slug: knowledge
+code: KNW
+description: Preserve evidence, memory, freshness, and provenance across decisions.
+question: What can the system justify?
+order: 6

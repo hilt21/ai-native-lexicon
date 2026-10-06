@@ -2,7 +2,7 @@
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import ConceptList from '../components/ConceptList.astro';
-import { getConcepts, pathWithBase } from '../lib/catalog';
+import { categoryRegistry, getConcepts, pathWithBase } from '../lib/catalog';
 
 const concepts = await getConcepts();
 const featuredSlugs = ['context-engineering', 'thin-kernel', 'bounded-autonomy', 'harness', 'inspectable-agency'];
@@ -37,7 +37,7 @@ const featured = featuredSlugs.map((slug) => concepts.find((concept) => concept.
       </div>
       <div class="hero-ledger" aria-label="Lexicon statistics">
         <div><strong>{concepts.length}</strong><span>working concepts</span></div>
-        <div><strong>08</strong><span>domains of practice</span></div>
+        <div><strong>{String(categoryRegistry.length).padStart(2, '0')}</strong><span>domains of practice</span></div>
         <div><strong>YAML</strong><span>single source of truth</span></div>
         <div><strong>OPEN</strong><span>built in public</span></div>
       </div>

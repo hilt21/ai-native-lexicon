@@ -1,0 +1,6 @@
+name: Goal
+slug: goal
+code: GOL
+description: Define outcomes and divide responsibility into finishable units.
+question: What counts as done?
+order: 12

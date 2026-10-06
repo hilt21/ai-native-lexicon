@@ -17,9 +17,6 @@ export function validateConceptReferences(records) {
 
   const categoryCounts = Object.fromEntries(CATEGORIES.map((category) => [category, 0]));
   for (const { data } of records) if (data?.category in categoryCounts) categoryCounts[data.category] += 1;
-  for (const [category, count] of Object.entries(categoryCounts)) {
-    if (count === 0) errors.push(`category "${category}" has no concepts`);
-  }
 
   return { errors, categoryCounts };
 }

@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { fileURLToPath } from 'node:url';
 import { contentBranch } from './src/lib/repository.mjs';
 
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'ai-native-lexicon';
@@ -11,6 +12,11 @@ const usePagefind = isPagesBuild && process.env.SKIP_PAGEFIND !== 'true';
 
 export default defineConfig({
   cacheDir: './.astro/cache',
+  vite: {
+    define: {
+      'import.meta.env.LEXICON_TAXONOMY_ROOT': JSON.stringify(fileURLToPath(new URL('./src/data/taxonomy/', import.meta.url))),
+    },
+  },
   site: process.env.SITE_URL ?? `https://${owner}.github.io`,
   base: process.env.BASE_PATH ?? (isPagesBuild ? `/${repository}` : '/'),
   trailingSlash: 'always',

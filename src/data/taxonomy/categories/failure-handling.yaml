@@ -1,0 +1,6 @@
+name: Failure Handling
+slug: failure-handling
+code: FAIL
+description: Handle unsuccessful actions and restore useful progress after disruption.
+question: How does work recover?
+order: 17

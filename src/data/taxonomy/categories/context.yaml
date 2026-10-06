@@ -1,0 +1,6 @@
+name: Context
+slug: context
+code: CTX
+description: Design the information an AI system can use—and protect what must not be lost.
+question: What should the system know now?
+order: 1

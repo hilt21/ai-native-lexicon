@@ -1,14 +1,11 @@
 import { z } from 'zod';
+import { categoryNames } from '../taxonomy/categories.mjs';
 import { codepointText, isoDate, slugReferences, sourceUri } from './rules.mjs';
 
 export const conceptInputSchema = z.object({
   term: codepointText(2),
   zh: codepointText(1),
-  category: z.enum([
-    'Context', 'Agent Architecture', 'Harness', 'Governance', 'Execution', 'Knowledge',
-    'UX', 'Organization', 'Instruction', 'Memory', 'State', 'Goal', 'Reasoning',
-    'Capability', 'Feedback', 'Verification', 'Failure Handling', 'Multi-Agent',
-  ]),
+  category: z.enum(categoryNames),
   status: z.enum(['foundational', 'emerging', 'evolving', 'contested']),
   summary: codepointText(40, 240),
   definition: codepointText(80),

@@ -1,13 +1,13 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import ConceptList from '../../components/ConceptList.astro';
-import { categoryMeta, getCategoryBySlug, getConcepts } from '../../lib/catalog';
+import { categoryRegistry, getCategoryBySlug, getConcepts } from '../../lib/catalog';
 
 export async function getStaticPaths() {
   const concepts = await getConcepts();
-  return Object.entries(categoryMeta).map(([category, meta]) => ({
+  return categoryRegistry.map((meta) => ({
     params: { category: meta.slug },
-    props: { category, meta, concepts: concepts.filter((concept) => concept.data.category === category) },
+    props: { category: meta.name, meta, concepts: concepts.filter((concept) => concept.data.category === meta.name) },
   }));
 }
 

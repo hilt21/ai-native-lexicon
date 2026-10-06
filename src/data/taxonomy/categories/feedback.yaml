@@ -1,0 +1,6 @@
+name: Feedback
+slug: feedback
+code: FDB
+description: Observe outcomes and use external signals to improve the next action.
+question: What did the world reveal?
+order: 15

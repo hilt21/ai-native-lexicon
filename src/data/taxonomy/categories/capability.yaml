@@ -1,0 +1,6 @@
+name: Capability
+slug: capability
+code: CAP
+description: Equip agents with tools, procedures, and interoperable connections.
+question: What can the agent use?
+order: 14

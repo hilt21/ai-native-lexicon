@@ -1,0 +1,6 @@
+name: Execution
+slug: execution
+code: EXE
+description: Make action, recovery, and side effects reliable in an uncertain world.
+question: How does intent become safe action?
+order: 5
