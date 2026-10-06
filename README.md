@@ -25,7 +25,7 @@ Start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness
 - [Browse concepts](https://hilt21.github.io/ai-native-lexicon/concepts/) by name or explore the [categories](https://hilt21.github.io/ai-native-lexicon/categories/).
 - Use [search](https://hilt21.github.io/ai-native-lexicon/search/) to find concepts and primitives.
 - Browse the [primitive directory](https://hilt21.github.io/ai-native-lexicon/primitives/) or open the [Speaking Cards](https://hilt21.github.io/ai-native-lexicon/speaking-card/).
-- Inspect [`dataset.json`](https://hilt21.github.io/ai-native-lexicon/dataset.json) for the machine-readable concept and primitive records, or [`llms.txt`](https://hilt21.github.io/ai-native-lexicon/llms.txt) for a compact page index.
+- Inspect [`dataset.json`](https://hilt21.github.io/ai-native-lexicon/dataset.json) for separate machine-readable Concept, Primitive and Speaking Guide records, or [`llms.txt`](https://hilt21.github.io/ai-native-lexicon/llms.txt) for a compact page index.
 
 ## A working vocabulary, not a fixed canon
 
@@ -71,3 +71,5 @@ Each card is one YAML record in `src/data/speaking-cards/` (for example, `card-0
 Copy an existing card as a starting point and assign an unused number. Required fields are `number`, `title`, `concepts`, `primitives`, `coreIdea`, `keyLines`, `realCase`, `discussionQuestion`, `endingLabel`, and `ending`. Notes must be non-empty; relationship arrays may be empty and must reference existing slugs without duplicates. The portable contract is `schemas/speaking-card.schema.json`; Astro and the CLI share `src/lib/speaking-card-schema.mjs`.
 
 Run `npm run check`, `npm test`, and `npm run build` after editing. Validation rejects malformed YAML, invalid fields, duplicate numbers, and broken relationships.
+
+See [machine-readable projections](docs/exports.md) for stable card identity, the `schema_version`/`dataset_version` distinction, legacy `version` compatibility and build timestamps. The content digest includes taxonomy semantics and excludes deployment/build variables.

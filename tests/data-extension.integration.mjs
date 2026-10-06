@@ -373,3 +373,50 @@ test('adding layer YAML publishes an empty group and its first Primitive with ex
     assert.deepEqual(await Promise.all(sources.map((file) => readFile(join(directory, file), 'utf8'))), before);
   });
 });
+
+test('new Speaking Guide YAML reaches search, dataset and llms with stable content versions', async () => {
+  await inIsolatedProject(async (directory) => {
+    const original = await yaml(directory, 'src/data/speaking-cards/card-01.yaml');
+    const numbers = await Promise.all((await readdir(join(directory, 'src/data/speaking-cards'))).filter((file) => /\.ya?ml$/.test(file)).map(async (file) => (await yaml(directory, `src/data/speaking-cards/${file}`)).number));
+    const number = Math.max(...numbers) + 7;
+    const guide = { ...original, number, title: 'L2 Projection Guide', coreIdea: 'Quasar signal demonstrates projection coverage.', concepts: ['context'], primitives: ['state'] };
+    const file = join(directory, 'src/data/speaking-cards/l2-projection-guide.yml');
+    await writeFile(file, stringify(guide));
+    await npm(directory, ['run', 'check']);
+    await npm(directory, ['run', 'build']);
+    const datasetPath = join(directory, 'dist/dataset.json');
+    const first = JSON.parse(await readFile(datasetPath, 'utf8'));
+    const exported = first.speaking_cards?.find((card) => card.number === number);
+    assert.deepEqual(exported, guide);
+    assert.equal(first.version, '0.2.0');
+    assert.equal(first.schema_version, '1.0.0');
+    assert.deepEqual(first.counts, { concepts: first.concepts.length, primitives: first.primitives.length, speaking_cards: numbers.length + 1 });
+    const href = `/ai-native-lexicon/speaking-card/#card-${String(number).padStart(2, '0')}`;
+    const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');
+    assert.ok(search.includes(`href="${href}"`));
+    assert.ok(search.includes(guide.title));
+    assert.ok(search.includes(guide.coreIdea));
+    const row = search.match(new RegExp(`<a[^>]*href="${href}"[^>]*>`))?.[0] ?? '';
+    for (const text of ['l2 projection guide', 'quasar signal', 'context', 'state']) assert.ok(row.includes(text), text);
+    for (const path of ['concepts/context.yaml', 'primitives/state.yaml']) {
+      const name = (await yaml(directory, `src/data/${path}`)).zh;
+      assert.ok(row.includes(name), `${path}: related display name must be indexed`);
+    }
+    const llms = await readFile(join(directory, 'dist/llms.txt'), 'utf8');
+    assert.ok(llms.includes(`[${guide.title}](https://hilt21.github.io${href}): ${guide.coreIdea}`));
+    assert.ok(llms.includes('## Concepts') && llms.includes('## Primitives'));
+    await npm(directory, ['run', 'build']);
+    const repeated = JSON.parse(await readFile(datasetPath, 'utf8'));
+    assert.equal(repeated.dataset_version, first.dataset_version);
+    assert.notEqual(repeated.generated_at, first.generated_at);
+    await writeFile(file, stringify({ ...guide, coreIdea: 'Changed canonical speaking content.' }));
+    await npm(directory, ['run', 'build']);
+    const changed = JSON.parse(await readFile(datasetPath, 'utf8'));
+    assert.notEqual(changed.dataset_version, repeated.dataset_version);
+    const categoryFile = join(directory, 'src/data/taxonomy/categories/context.yaml');
+    const category = parse(await readFile(categoryFile, 'utf8'));
+    await writeFile(categoryFile, stringify({ ...category, description: `${category.description} A revised domain boundary.` }));
+    await npm(directory, ['run', 'build']);
+    assert.notEqual(JSON.parse(await readFile(datasetPath, 'utf8')).dataset_version, changed.dataset_version);
+  });
+});

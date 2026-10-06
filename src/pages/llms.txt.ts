@@ -1,9 +1,10 @@
-import { getConcepts, getPrimitives } from '../lib/catalog';
+import { getConcepts, getPrimitives, pathWithBase } from '../lib/catalog';
+import { getSpeakingCards } from '../lib/speaking-cards';
 
 export const prerender = true;
 
 export async function GET({ site }: { site: URL | undefined }) {
-  const [concepts, primitives] = await Promise.all([getConcepts(), getPrimitives()]);
+  const [concepts, primitives, speakingCards] = await Promise.all([getConcepts(), getPrimitives(), getSpeakingCards()]);
   const origin = site?.toString().replace(/\/$/, '') ?? '';
   const base = import.meta.env.BASE_URL.replace(/\/$/, '');
   const lines = [
@@ -20,6 +21,10 @@ export async function GET({ site }: { site: URL | undefined }) {
     '## Concepts',
     '',
     ...concepts.map((concept) => `- [${concept.data.term}](${origin}${base}/concepts/${concept.id}/): ${concept.data.summary}`),
+    '',
+    '## Speaking Guides',
+    '',
+    ...speakingCards.map((card) => `- [${card.title}](${origin}${pathWithBase(`/speaking-card/#card-${String(card.number).padStart(2, '0')}`)}): ${card.coreIdea}`),
   ];
   return new Response(lines.join('\n'), { headers: { 'Content-Type': 'text/plain; charset=utf-8' } });
 }
