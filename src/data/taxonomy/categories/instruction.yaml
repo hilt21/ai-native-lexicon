@@ -1,0 +1,6 @@
+name: Instruction
+slug: instruction
+code: INS
+description: Express requests, behavioral rules, and the priorities that guide an agent.
+question: What should the agent follow?
+order: 9

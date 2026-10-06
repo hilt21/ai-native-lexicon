@@ -1,0 +1,6 @@
+name: State
+slug: state
+code: STA
+description: Represent progress and preserve the outputs needed to continue work.
+question: Where does the work stand?
+order: 11

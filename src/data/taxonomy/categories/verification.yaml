@@ -1,0 +1,6 @@
+name: Verification
+slug: verification
+code: VER
+description: Connect performance and completion claims to inspectable checks.
+question: How do we know it worked?
+order: 16

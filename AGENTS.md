@@ -15,6 +15,8 @@ This repository is a data-first lexicon with three separate content types. Treat
 
 ## Schema and implementation
 
+- Category configuration is canonical in `src/data/taxonomy/categories/`. Add category metadata there, preserve names/public slugs and explicit order, then run `npm run schema:generate`. Empty configured categories are valid; see `CONTRIBUTING.md` for expansion steps.
+
 - For concept fields, update `src/domain/content/concept-input.mjs` and regenerate the portable schema with `npm run schema:concept`; `src/lib/concept-schema.mjs` preserves Date output for existing Astro consumers. For primitive fields, update `src/domain/content/primitive-input.mjs` and regenerate with `npm run schema:primitive`; `src/lib/primitive-schema.mjs` preserves Date output. Keep portable schemas, cross-record validators, tests, and content documentation synchronized. Speaking Guide fields live in `src/domain/content/speaking-card-input.mjs`; cross-record checks live in `src/domain/content/validate-references.mjs`. Run `npm run schema:generate` after field changes; `npm run schema:check` detects drift without writing files.
 - Keep the runtime thin: do not add a database, client framework, or generator unless the existing content collections cannot satisfy a demonstrated requirement.
 - Do not duplicate canonical records into Markdown pages or handwritten indexes. Pages and machine-readable endpoints should query the existing content collections and card data.

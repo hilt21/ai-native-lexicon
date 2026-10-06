@@ -1,0 +1,6 @@
+name: Multi-Agent
+slug: multi-agent
+code: MULTI
+description: Manage responsibility, shared information, and dependencies between agents.
+question: How do agents work together?
+order: 18

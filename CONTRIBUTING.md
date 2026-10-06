@@ -11,7 +11,7 @@ Check whether the idea is already represented under a different name. Prefer imp
 Create one kebab-case YAML file in `src/data/concepts/`. Every entry must include:
 
 - a concise English term and Chinese name;
-- exactly one category supported by `src/domain/content/concept-input.mjs`;
+- exactly one category name configured in `src/data/taxonomy/categories/`;
 - a maturity status: `foundational`, `emerging`, `evolving`, or `contested`;
 - an original working definition that states the concept's boundary;
 - why it matters, when to use it, and a concrete anti-pattern;
@@ -24,7 +24,7 @@ Do not fabricate a first use, author, or citation. The lexicon may define a usef
 
 Concept inputs reject unknown fields. Omitted `sources` becomes `[]`; each provided source needs a title and an absolute URI. Text length limits count Unicode code points, consistently with the portable schema. Source URIs must encode spaces and use valid percent escapes.
 
-When adding a category, update the category enum in `src/domain/content/concept-input.mjs` and the presentation metadata in `src/lib/catalog.ts`, then run `npm run schema:concept` and the full verification suite. Reuse existing concept slugs when updating or reclassifying entries.
+To add a category, create one direct `.yaml` or `.yml` record in `src/data/taxonomy/categories/` with `name`, `slug`, `code`, `description`, `question` and a unique positive integer `order`. The name is the existing Concept reference value; the slug is its public URL. Keep both stable. Records display by `order`, which is not a public identity. Run `npm run schema:generate`, then the full verification suite and `npm run test:extension`; derived JSON schemas are generated, never hand-edited. A configured category may have zero members: its route remains available and shows zero. Adding its first Concept requires only a new Concept YAML record. Unknown category names and duplicate names/slugs/orders are rejected. Reuse existing concept slugs when updating or reclassifying entries. Restart a running dev server after taxonomy changes so its loaded input contracts refresh.
 
 ## Primitive entries
 

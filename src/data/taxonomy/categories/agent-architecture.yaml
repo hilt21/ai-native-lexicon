@@ -1,0 +1,7 @@
+name: Agent Architecture
+slug: agent-architecture
+code: ARC
+description: Shape agents as systems with explicit loops, boundaries, roles, and
+  control flow.
+question: How is agency structured?
+order: 2

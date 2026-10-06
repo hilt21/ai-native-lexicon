@@ -1,0 +1,6 @@
+name: Harness
+slug: harness
+code: HAR
+description: Build the deterministic support system around probabilistic model behavior.
+question: What makes the model operational?
+order: 3
