@@ -54,7 +54,7 @@ npm run build
 
 `npm run check` applies the same Zod schema used by the website and verifies cross-record relationships. Pull requests run the complete pipeline without deploying.
 
-After changing field rules, run `npm run schema:concept` or `npm run schema:primitive` to regenerate the corresponding portable schema. Tests compare the actual field decisions of the Astro adapter, CLI validator and JSON Schema validator. Concept and Primitive portable schemas are generated from their shared input contracts. Speaking Cards remain on their existing migration bridge.
+After changing field rules, run `npm run schema:concept` or `npm run schema:primitive` to regenerate the corresponding portable schema. Tests compare the actual field decisions of the Astro adapter, CLI validator and JSON Schema validator. Concept and Primitive portable schemas are generated from their shared input contracts. Speaking Cards use the same shared input boundary; run `npm run schema:speaking-card` after changing their fields.
 
 For data-expansion or edit-link changes, also run `npm run test:extension`. It adds one record of each type in an isolated copy, runs the full checks and build, and verifies rendered edit links without modifying canonical data.
 
@@ -63,3 +63,5 @@ GitHub edit links use the `master` content branch by default. Set `CONTENT_BRANC
 ## Scope of changes
 
 Keep pull requests focused. Do not mix a terminology proposal with unrelated styling, dependency, or architecture changes. When changing a definition, explain the practical ambiguity the change resolves.
+
+Speaking Guides use `src/domain/content/speaking-card-input.mjs`. Keep their number and `#card-XX` anchors stable; references may be empty but cannot repeat. Add new notes in the existing `keyLines` and `realCase` arrays, and keep all text nonblank. Shared readers support direct `.yaml` and `.yml` records, preserve numeric ordering and reject duplicate numbers.

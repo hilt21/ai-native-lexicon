@@ -3,7 +3,7 @@ import { glob } from 'astro/loaders';
 import { parse } from 'yaml';
 
 /**
- * @param {'concepts' | 'primitives'} collection
+ * @param {'concepts' | 'primitives' | 'speaking-cards'} collection
  * @returns {import('astro/loaders').Loader}
  */
 export function yamlContentLoader(collection) {

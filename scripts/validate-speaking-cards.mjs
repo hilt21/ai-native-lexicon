@@ -1,20 +1,15 @@
-import { readdir } from 'node:fs/promises';
-import { fileURLToPath } from 'node:url';
+import { readConceptInputs, readPrimitiveInputs } from '../src/domain/content/read-content.mjs';
 import { validateSpeakingCardReferences } from './speaking-card-validation.mjs';
 import { readSpeakingCards } from './read-speaking-cards.mjs';
 
 const cards = await readSpeakingCards();
 
-async function readSlugs(directory) {
-  const files = await readdir(directory);
-  return files.filter((file) => /\.ya?ml$/.test(file)).map((file) => file.replace(/\.ya?ml$/, ''));
-}
-
-const [conceptSlugs, primitiveSlugs] = await Promise.all([
-  readSlugs(fileURLToPath(new URL('../src/data/concepts/', import.meta.url))),
-  readSlugs(fileURLToPath(new URL('../src/data/primitives/', import.meta.url))),
-]);
-const errors = validateSpeakingCardReferences(cards, conceptSlugs, primitiveSlugs);
+const [concepts, primitives] = await Promise.all([readConceptInputs(), readPrimitiveInputs()]);
+const errors = [
+  ...concepts.errors,
+  ...primitives.errors,
+  ...validateSpeakingCardReferences(cards, concepts.records.map(({ slug }) => slug), primitives.records.map(({ slug }) => slug)),
+];
 
 if (errors.length > 0) {
   console.error(`Speaking card reference validation failed with ${errors.length} error(s):`);

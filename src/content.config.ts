@@ -1,5 +1,4 @@
 import { defineCollection } from 'astro:content';
-import { glob } from 'astro/loaders';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
 import { categories, conceptStatuses } from './domain/content/concept-input.mjs';
@@ -23,7 +22,7 @@ const concepts = defineCollection({
 const docs = defineCollection({ loader: docsLoader(), schema: docsSchema() });
 
 const speakingCards = defineCollection({
-  loader: glob({ pattern: '*.{yaml,yml}', base: './src/data/speaking-cards' }),
+  loader: yamlContentLoader('speaking-cards'),
   schema: speakingCardSchema,
 });
 

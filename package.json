@@ -14,7 +14,8 @@
     "test": "node --test tests/*.test.mjs",
     "test:extension": "node --test tests/data-extension.integration.mjs",
     "schema:concept": "node scripts/generate-concept-schema.mjs",
-    "schema:primitive": "node scripts/generate-primitive-schema.mjs"
+    "schema:primitive": "node scripts/generate-primitive-schema.mjs",
+    "schema:speaking-card": "node scripts/generate-speaking-card-schema.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",

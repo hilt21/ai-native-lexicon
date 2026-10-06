@@ -9,32 +9,37 @@
     },
     "title": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "concepts": {
       "type": "array",
       "items": {
         "type": "string",
         "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-      }
+      },
+      "uniqueItems": true
     },
     "primitives": {
       "type": "array",
       "items": {
         "type": "string",
         "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
-      }
+      },
+      "uniqueItems": true
     },
     "coreIdea": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "keyLines": {
       "minItems": 1,
       "type": "array",
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "\\S"
       }
     },
     "realCase": {
@@ -42,20 +47,24 @@
       "type": "array",
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "\\S"
       }
     },
     "discussionQuestion": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "endingLabel": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     },
     "ending": {
       "type": "string",
-      "minLength": 1
+      "minLength": 1,
+      "pattern": "\\S"
     }
   },
   "required": [
@@ -70,5 +79,6 @@
     "endingLabel",
     "ending"
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "title": "AI Native Lexicon speaking card"
 }
