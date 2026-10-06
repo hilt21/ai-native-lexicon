@@ -3,11 +3,13 @@ import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { getConcepts, getPrimitives, pathWithBase } from '../lib/catalog';
 import ConceptRow from '../components/ConceptRow.astro';
 import CatalogRow from '../components/CatalogRow.astro';
-const [concepts, primitives] = await Promise.all([getConcepts(), getPrimitives()]);
+import { getSpeakingCards } from '../lib/speaking-cards';
+const [concepts, primitives, speakingCards] = await Promise.all([getConcepts(), getPrimitives(), getSpeakingCards()]);
 const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
+const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
 ---
 
-<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts and primitives by name, category, or summary.', editUrl: false, tableOfContents: false }}>
+<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts, primitives and speaking guides by name, idea, or relationships.', editUrl: false, tableOfContents: false }}>
   <div class="search-panel">
     <label for="concept-search">Search the working vocabulary</label>
     <div class="search-input-wrap">
@@ -15,7 +17,7 @@ const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.ter
       <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" />
       <kbd>/</kbd>
     </div>
-    <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length} entries</p>
+    <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length + speakingCards.length} entries</p>
   </div>
 
   <div class="search-results" id="search-results">
@@ -34,6 +36,17 @@ const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.ter
         summary={primitive.data.summary}
         searchText={`${primitive.data.term} ${primitive.data.zh} ${primitive.data.summary} ${primitive.data.layer} ${primitive.id}`.toLowerCase()}
         number="P"
+      />
+    ))}
+    {speakingCards.map((card) => (
+      <CatalogRow
+        href={pathWithBase(`/speaking-card/#card-${String(card.number).padStart(2, '0')}`)}
+        title={card.title}
+        secondary={`Speaking Guide · Card ${String(card.number).padStart(2, '0')}`}
+        marker="GUIDE"
+        summary={card.coreIdea}
+        searchText={`${card.title} ${card.coreIdea} ${card.concepts.map((slug) => `${slug} ${conceptNames.get(slug)}`).join(' ')} ${card.primitives.map((slug) => `${slug} ${primitiveNames.get(slug)}`).join(' ')}`.toLowerCase()}
+        number="S"
       />
     ))}
   </div>
