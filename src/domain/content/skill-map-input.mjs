@@ -1,11 +1,12 @@
 import { z } from 'zod';
-import { text as requiredText, slug, isoDate, slugReferences } from './rules.mjs';
+import { slug, isoDate, slugReferences, sourceUri } from './rules.mjs';
 
-const text = requiredText.regex(/\S/, 'Use non-blank text');
+const text = z.string().min(1).regex(/^\S(?:[\s\S]*\S)?$/, 'Use non-blank text without surrounding whitespace');
 const texts = z.array(text).refine((v) => new Set(v).size === v.length, 'Duplicate values are not allowed').meta({ uniqueItems: true });
 const path = text.regex(/^(?!\/)(?!.*\\)(?!.*(?:^|\/)\.\.?(?:\/|$))[^/]+(?:\/[^/]+)*$/, 'Use a relative source path without traversal');
 const commit = z.string().regex(/^(?:[a-f0-9]{40}|[a-f0-9]{64})$/);
-const sourceFields = { id: slug, repository: z.url({ protocol: /^https?$/ }), root_path: path, version: text.optional(), observed_at: isoDate };
+const repository = sourceUri.regex(/^https?:\/\/[^/?#]+(?:[/?#]|$)/, 'Use an absolute HTTP(S) repository URI');
+const sourceFields = { id: slug, repository, root_path: path, version: text.optional(), observed_at: isoDate };
 const source = z.union([
   z.object({ ...sourceFields, verification_status: z.literal('pending'), commit: commit.optional(), verified_at: isoDate.optional() }).strict(),
   z.object({ ...sourceFields, verification_status: z.literal('verified'), commit, verified_at: isoDate }).strict(),

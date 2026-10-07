@@ -1,6 +1,6 @@
 # Skill Map tickets：最小票数审查
 
-状态（2026-10-07）：维护者已确认单票粒度，SM-01 已发布为 [GitHub Issue #28](https://github.com/hilt21/ai-native-lexicon/issues/28)，状态 OPEN，标签 ready-for-agent。本地票稿为首次发布正文镜像，manifest.json 保存发布与回读核验记录；尚未开始开发。
+状态（2026-10-07）：维护者已确认单票粒度，SM-01 已发布为 [GitHub Issue #28](https://github.com/hilt21/ai-native-lexicon/issues/28)，状态 OPEN，标签 ready-for-agent。本地票稿为首次发布正文镜像，manifest.json 保存发布与回读核验记录；首次发布时尚未开始开发；后续进度以 GitHub Issue/PR 的实时状态为准。
 
 依据：用户确认的 `docs/design/skill-map.md`，本地提交 `30c49ee4dd7f0d3df3d645211af08f75abbc29fa`。该提交尚未 push；为使发布后的票不依赖未发布文档链接，SM-01 正文末尾包含冻结的已批准 spec。用户原始 YAML 保留本地，不因票据规划而公开。
 

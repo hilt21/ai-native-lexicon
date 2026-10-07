@@ -7,12 +7,12 @@
         "title": {
           "type": "string",
           "minLength": 1,
-          "pattern": "\\S"
+          "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
         },
         "summary": {
           "type": "string",
           "minLength": 1,
-          "pattern": "\\S"
+          "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
         },
         "order": {
           "type": "integer",
@@ -25,7 +25,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "\\S"
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
           },
           "uniqueItems": true
         },
@@ -44,7 +44,7 @@
                 "minLength": 1,
                 "allOf": [
                   {
-                    "pattern": "\\S"
+                    "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                   },
                   {
                     "pattern": "^(?!\\/)(?!.*\\\\)(?!.*(?:^|\\/)\\.\\.?(?:\\/|$))[^/]+(?:\\/[^/]+)*$"
@@ -71,7 +71,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "\\S"
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
           },
           "uniqueItems": true
         },
@@ -81,7 +81,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "\\S"
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
           },
           "uniqueItems": true
         },
@@ -98,12 +98,12 @@
               "title": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "when": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "steps": {
                 "minItems": 1,
@@ -114,12 +114,12 @@
                     "title": {
                       "type": "string",
                       "minLength": 1,
-                      "pattern": "\\S"
+                      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                     },
                     "why": {
                       "type": "string",
                       "minLength": 1,
-                      "pattern": "\\S"
+                      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                     },
                     "nodes": {
                       "minItems": 1,
@@ -137,7 +137,7 @@
                     "when": {
                       "type": "string",
                       "minLength": 1,
-                      "pattern": "\\S"
+                      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                     },
                     "outputs": {
                       "default": [],
@@ -145,7 +145,7 @@
                       "items": {
                         "type": "string",
                         "minLength": 1,
-                        "pattern": "\\S"
+                        "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                       },
                       "uniqueItems": true
                     }
@@ -183,12 +183,12 @@
         "title": {
           "type": "string",
           "minLength": 1,
-          "pattern": "\\S"
+          "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
         },
         "summary": {
           "type": "string",
           "minLength": 1,
-          "pattern": "\\S"
+          "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
         },
         "order": {
           "type": "integer",
@@ -201,7 +201,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "\\S"
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
           },
           "uniqueItems": true
         },
@@ -220,7 +220,7 @@
                 "minLength": 1,
                 "allOf": [
                   {
-                    "pattern": "\\S"
+                    "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                   },
                   {
                     "pattern": "^(?!\\/)(?!.*\\\\)(?!.*(?:^|\\/)\\.\\.?(?:\\/|$))[^/]+(?:\\/[^/]+)*$"
@@ -243,7 +243,7 @@
         "retirement_note": {
           "type": "string",
           "minLength": 1,
-          "pattern": "\\S"
+          "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
         },
         "when_to_use": {
           "default": [],
@@ -251,7 +251,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "\\S"
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
           },
           "uniqueItems": true
         },
@@ -261,7 +261,7 @@
           "items": {
             "type": "string",
             "minLength": 1,
-            "pattern": "\\S"
+            "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
           },
           "uniqueItems": true
         },
@@ -278,12 +278,12 @@
               "title": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "when": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "steps": {
                 "minItems": 1,
@@ -294,12 +294,12 @@
                     "title": {
                       "type": "string",
                       "minLength": 1,
-                      "pattern": "\\S"
+                      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                     },
                     "why": {
                       "type": "string",
                       "minLength": 1,
-                      "pattern": "\\S"
+                      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                     },
                     "nodes": {
                       "minItems": 1,
@@ -317,7 +317,7 @@
                     "when": {
                       "type": "string",
                       "minLength": 1,
-                      "pattern": "\\S"
+                      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                     },
                     "outputs": {
                       "default": [],
@@ -325,7 +325,7 @@
                       "items": {
                         "type": "string",
                         "minLength": 1,
-                        "pattern": "\\S"
+                        "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                       },
                       "uniqueItems": true
                     }

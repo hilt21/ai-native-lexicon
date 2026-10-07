@@ -33,6 +33,11 @@ test('a second skill map appears across page and machine projections using only 
     assert.match(await readFile(join(directory, 'dist/llms.txt'), 'utf8'), /Example Skill Map/);
     const pstack = await readFile(join(directory, 'dist/skill-maps/pstack/journeys/fix-bug/index.html'), 'utf8');
     assert.match(pstack, /修复涉及模块或接口变化时/);
+    const configuredMap = await yaml(directory, 'src/data/skill-maps/example/map.yaml');
+    configuredMap.taxonomy.layers = [{ id: 'configured', label: 'Configured', description: 'An optional layer.' }];
+    await writeFile(join(root, 'map.yaml'), stringify(configuredMap));
+    await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
+    assert.match(await readFile(join(directory, 'dist/skill-maps/example/overview/index.html'), 'utf8'), /\/skill-maps\/example\/nodes\/how\//);
     await writeFile(join(root, 'nodes/how.yaml'), stringify({ title: 'Old how', summary: 'Retired test entry.', type: 'tool', status: 'retired', retirement_note: 'Use current tools.', source_refs: node.source_refs }));
     await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
     const retired = await readFile(join(directory, 'dist/skill-maps/example/nodes/how/index.html'), 'utf8');

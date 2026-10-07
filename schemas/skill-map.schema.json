@@ -9,17 +9,17 @@
     "title": {
       "type": "string",
       "minLength": 1,
-      "pattern": "\\S"
+      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
     },
     "summary": {
       "type": "string",
       "minLength": 1,
-      "pattern": "\\S"
+      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
     },
     "scope": {
       "type": "string",
       "minLength": 1,
-      "pattern": "\\S"
+      "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
     },
     "audience": {
       "minItems": 1,
@@ -27,7 +27,7 @@
       "items": {
         "type": "string",
         "minLength": 1,
-        "pattern": "\\S"
+        "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
       },
       "uniqueItems": true
     },
@@ -50,6 +50,7 @@
               },
               "repository": {
                 "type": "string",
+                "pattern": "^https?:\\/\\/[^/?#]+(?:[/?#]|$)",
                 "format": "uri"
               },
               "root_path": {
@@ -57,7 +58,7 @@
                 "minLength": 1,
                 "allOf": [
                   {
-                    "pattern": "\\S"
+                    "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                   },
                   {
                     "pattern": "^(?!\\/)(?!.*\\\\)(?!.*(?:^|\\/)\\.\\.?(?:\\/|$))[^/]+(?:\\/[^/]+)*$"
@@ -67,7 +68,7 @@
               "version": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "observed_at": {
                 "type": "string",
@@ -106,6 +107,7 @@
               },
               "repository": {
                 "type": "string",
+                "pattern": "^https?:\\/\\/[^/?#]+(?:[/?#]|$)",
                 "format": "uri"
               },
               "root_path": {
@@ -113,7 +115,7 @@
                 "minLength": 1,
                 "allOf": [
                   {
-                    "pattern": "\\S"
+                    "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
                   },
                   {
                     "pattern": "^(?!\\/)(?!.*\\\\)(?!.*(?:^|\\/)\\.\\.?(?:\\/|$))[^/]+(?:\\/[^/]+)*$"
@@ -123,7 +125,7 @@
               "version": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "observed_at": {
                 "type": "string",
@@ -182,12 +184,12 @@
               "label": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "description": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               }
             },
             "required": [
@@ -211,12 +213,12 @@
               "label": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "description": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               }
             },
             "required": [
@@ -240,12 +242,12 @@
               "label": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "description": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               }
             },
             "required": [
@@ -268,17 +270,17 @@
               "description": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "outgoing_label": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               },
               "incoming_label": {
                 "type": "string",
                 "minLength": 1,
-                "pattern": "\\S"
+                "pattern": "^\\S(?:[\\s\\S]*\\S)?$"
               }
             },
             "required": [

@@ -1,37 +1,14 @@
 import assert from 'node:assert/strict';
-import { mkdtemp, mkdir, readFile, writeFile, rm } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join } from 'node:path';
-import { tmpdir } from 'node:os';
 import test from 'node:test';
+import { fixture, mapInput, nodeInput } from './skill-map-fixture.mjs';
 import { stringify } from 'yaml';
 import { readSkillMaps } from '../src/domain/content/read-skill-maps.mjs';
 import { validateSkillMapSources, validateSkillMapSnapshotChanges } from '../src/domain/content/validate-skill-map-references.mjs';
 import Ajv from 'ajv/dist/2020.js';
 import addFormats from 'ajv-formats';
-import { skillMapNodeInputSchema } from '../src/domain/content/skill-map-input.mjs';
-
-export const mapInput = {
-  schema_version: '1.0.0', title: 'Test skills', summary: 'A map for testing.', scope: 'Test ecosystem', audience: ['Builders'],
-  sources: [{ id: 'test-v1', repository: 'https://github.com/example/skills', root_path: 'skills', commit: 'a'.repeat(40), observed_at: '2026-10-07', verification_status: 'verified', verified_at: '2026-10-07' }],
-  current_sources: ['test-v1'],
-  taxonomy: { types: [{ id: 'tool', label: 'Tool', description: 'A capability.' }], relation_types: [{ id: 'uses', description: 'Uses a capability.', outgoing_label: 'Uses', incoming_label: 'Used by' }] },
-};
-export const nodeInput = { title: 'Explain', summary: 'Explain a system.', type: 'tool', mechanism: 'Read and explain.', when_to_use: ['Understand a system.'], solves: ['Missing context.'], source_refs: [{ source: 'test-v1', path: 'explain/SKILL.md' }] };
-
-export async function fixture(t, maps = { example: { map: mapInput, nodes: { explain: nodeInput } } }) {
-  const directory = await mkdtemp(join(tmpdir(), 'lexicon-skill-maps-'));
-  t.after(() => rm(directory, { recursive: true, force: true }));
-  for (const [id, content] of Object.entries(maps)) {
-    const root = join(directory, id);
-    await mkdir(join(root, 'nodes'), { recursive: true });
-    await mkdir(join(root, 'journeys'), { recursive: true });
-    await writeFile(join(root, 'map.yaml'), stringify(content.map));
-    await writeFile(join(root, 'relations.yaml'), stringify({ relations: content.relations ?? [] }));
-    for (const [slug, node] of Object.entries(content.nodes ?? {})) await writeFile(join(root, 'nodes', `${slug}.yaml`), stringify(node));
-    for (const [slug, journey] of Object.entries(content.journeys ?? {})) await writeFile(join(root, 'journeys', `${slug}.yaml`), stringify(journey));
-  }
-  return directory;
-}
+import { skillMapInputSchema, skillMapNodeInputSchema } from '../src/domain/content/skill-map-input.mjs';
 
 test('independent records assemble a map without requiring pstack layers or input/output fields', async (t) => {
   const result = await readSkillMaps(await fixture(t));
@@ -94,11 +71,23 @@ test('portable node schema and runtime input agree on active/retired shapes and 
     [nodeInput, true],
     [{ title: 'Retired', summary: 'Removed.', type: 'tool', status: 'retired', retirement_note: 'No longer supported.' }, true],
     [{ ...nodeInput, source_refs: [{ source: 'test-v1', path: '../outside' }] }, false],
+    [{ ...nodeInput, source_refs: [{ source: 'test-v1', path: ' ../outside' }] }, false],
+    [{ ...nodeInput, tags: ['same', ' same'] }, false],
     [{ ...nodeInput, source_refs: [nodeInput.source_refs[0], nodeInput.source_refs[0]] }, false],
     [{ ...nodeInput, knowledge_refs: { concepts: [] } }, false],
     [{ ...nodeInput, mechanism: ' ' }, false],
   ]) {
     assert.equal(skillMapNodeInputSchema.safeParse(input).success, accepted);
     assert.equal(portable(input), accepted, JSON.stringify(portable.errors));
+  }
+});
+
+test('portable map schema and runtime reject non-HTTP, relative and unencoded repository URIs', async () => {
+  const ajv = new Ajv({ strict: false }); addFormats(ajv);
+  const portable = ajv.compile(JSON.parse(await readFile(new URL('../schemas/skill-map.schema.json', import.meta.url), 'utf8')));
+  for (const [repository, accepted] of [['https://github.com/example/skills', true], ['ftp://example.com/repo', false], ['https:example.com', false], ['https://example.com/re po', false]]) {
+    const input = structuredClone(mapInput); input.sources[0].repository = repository;
+    assert.equal(skillMapInputSchema.safeParse(input).success, accepted, repository);
+    assert.equal(portable(input), accepted, repository);
   }
 });

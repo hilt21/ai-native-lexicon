@@ -1,29 +1,43 @@
 import { readSkillMaps } from '../domain/content/read-skill-maps.mjs';
 import { validateSkillMapSources } from '../domain/content/validate-skill-map-references.mjs';
+import { fileURLToPath } from 'node:url';
+import { resolve } from 'node:path';
 
-export function skillMapLoader() {
+export function skillMapLoader(directory = new URL('../data/skill-maps/', import.meta.url)) {
+  const root = resolve(directory instanceof URL ? fileURLToPath(directory) : directory).replaceAll('\\', '/');
+  let stopWatching;
+  let generation = 0;
   return {
     name: 'skill-maps-yaml-loader',
     async load(context) {
+      stopWatching?.();
+      const current = ++generation;
       const sync = async () => {
-        const result = await readSkillMaps();
+        const result = await readSkillMaps(directory);
         const errors = [...result.errors, ...validateSkillMapSources(result.records)];
         if (errors.length) throw new Error(errors.join('\n'));
-        context.store.clear();
-        for (const record of result.records) {
+        const parsed = await Promise.all(result.records.map(async (record) => {
           const data = await context.parseData(record);
-          context.store.set({ id: record.id, data, digest: context.generateDigest(data) });
-        }
+          return { id: record.id, data, digest: context.generateDigest(data) };
+        }));
+        if (current !== generation) return;
+        context.store.clear();
+        for (const record of parsed) context.store.set(record);
       };
       await sync();
       if (context.watcher) {
-        context.watcher.add('src/data/skill-maps');
+        let pending = Promise.resolve();
         const reload = (path) => {
-          if (path.replaceAll('\\', '/').includes('/skill-maps/')) {
-            void sync().catch((error) => context.logger.error(error.message));
+          const changed = path.replaceAll('\\', '/');
+          if (changed === root || changed.startsWith(`${root}/`)) {
+            pending = pending.then(sync, sync);
+            void pending.catch((error) => context.logger.error(error.message));
           }
         };
-        context.watcher.on('add', reload).on('change', reload).on('unlink', reload);
+        const events = ['add', 'change', 'unlink', 'addDir', 'unlinkDir'];
+        for (const event of events) context.watcher.on(event, reload);
+        context.watcher.add(root);
+        stopWatching = () => { for (const event of events) context.watcher.off(event, reload); };
       }
     },
   };
