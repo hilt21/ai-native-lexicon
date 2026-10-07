@@ -25,4 +25,3 @@ export async function fixture(t, maps = { example: { map: mapInput, nodes: { exp
   }
   return directory;
 }
-
