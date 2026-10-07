@@ -56,6 +56,14 @@ test('record shape errors and directory collisions are reported rather than sile
   const result = await readSkillMaps(directory);
   const errors = result.errors.join('\n');
   assert.match(errors, /duplicate filename/); assert.match(errors, /broken.yaml/); assert.match(errors, /extra.yaml/); assert.match(errors, /nested/); assert.match(errors, /unexpected map content/);
+  assert.match(errors, /extra.yaml[^\n]*surprise/);
+});
+
+test('union-shaped node and journey failures retain the invalid field in file diagnostics', async (t) => {
+  const journey = { title: 'Work', summary: 'Guidance.', when_to_use: ['Do work.'], outputs: ['Result.'], variants: [{ id: 'standard', title: 'Standard', steps: [{ title: 'Read', why: 'Understand.', nodes: ['explain'] }] }], surprise: true };
+  const result = await readSkillMaps(await fixture(t, { example: { map: mapInput, nodes: { explain: { ...nodeInput, mechanism: 42 } }, journeys: { work: journey } } }));
+  assert.match(result.errors.join('\n'), /nodes\/explain.yaml[^\n]*mechanism/);
+  assert.match(result.errors.join('\n'), /journeys\/work.yaml[^\n]*surprise/);
 });
 
 test('source paths cannot escape the immutable repository root', async (t) => {

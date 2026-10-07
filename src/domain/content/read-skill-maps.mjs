@@ -6,6 +6,12 @@ import { slug } from './rules.mjs';
 import { skillMapInputSchema, skillMapNodeInputSchema, skillMapJourneyInputSchema, skillMapRelationsInputSchema } from './skill-map-input.mjs';
 import { validateSkillMapReferences } from './validate-skill-map-references.mjs';
 
+function describeIssue(issue) {
+  if (issue.code === 'invalid_union') return issue.errors.flatMap((branch) => branch.flatMap(describeIssue));
+  const field = [...issue.path, ...(issue.code === 'unrecognized_keys' ? issue.keys : [])].join('.') || '(record)';
+  return [`${field}: ${issue.message}`];
+}
+
 export async function readSkillMaps(directory = new URL('../../data/skill-maps/', import.meta.url)) {
   const root = directory instanceof URL ? fileURLToPath(directory) : directory;
   const errors = [];
@@ -16,7 +22,7 @@ export async function readSkillMaps(directory = new URL('../../data/skill-maps/'
   async function read(file, schema) {
     try { return schema.parse(parse(await readFile(join(root, file), 'utf8'))); }
     catch (error) {
-      errors.push(`${file}: ${error.issues ? error.issues.map((i) => `${i.path.join('.')}: ${i.message}`).join('; ') : error.message}`);
+      errors.push(`${file}: ${error.issues ? [...new Set(error.issues.flatMap(describeIssue))].join('; ') : error.message}`);
       return null;
     }
   }
