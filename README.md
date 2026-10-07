@@ -1,47 +1,60 @@
+<img src="./public/favicon.svg" alt="AI Native Lexicon icon" width="48" height="48" />
+
 # AI Native Lexicon
 
 > A field guide to the language of systems that can reason and act.
 
 [**Explore the live lexicon ↗**](https://hilt21.github.io/ai-native-lexicon/) · [Browse the source](https://github.com/hilt21/ai-native-lexicon) · [Open the dataset](https://hilt21.github.io/ai-native-lexicon/dataset.json)
 
-AI-native software brings together context, tools, permissions, memory, state, and feedback. This open lexicon gives those ideas stable, inspectable working definitions, shows how they connect, and gives teams a shared path from explanation to design conversation.
+AI-native software brings together context, tools, permissions, memory, state, and feedback. This open lexicon helps developers, system designers and educators understand those ideas, discuss design decisions, prepare explanations and explore how agent skills work together.
 
-**84 concepts · 18 categories · 42 primitives · 20 Speaking Cards**
+**84 concepts · 18 categories · 42 primitives · 20 Speaking Cards · 1 Skill Map**
 
-## One vocabulary, three ways to use it
+## Start with your task
 
-- **Concepts** explain an idea: its boundary, why it matters, when to use it, and what can go wrong.
-- **Primitives** make reusable design elements visible, with scope, composition examples, trade-offs, ownership, and priority.
-- **Speaking Cards** turn selected ideas into material for teaching, discussion, and practice.
+| I want to… | Start here | What I get |
+| --- | --- | --- |
+| Understand a term | [Concepts](https://hilt21.github.io/ai-native-lexicon/concepts/) | Working definitions, boundaries, use cases and anti-patterns. |
+| Discuss a system design | [Primitives](https://hilt21.github.io/ai-native-lexicon/primitives/) | Reusable design elements, composition examples, trade-offs, ownership and priority. |
+| Prepare a talk or discussion | [Speaking Cards](https://hilt21.github.io/ai-native-lexicon/speaking-card/) | Core ideas, key lines, cases and discussion prompts. |
+| Choose and combine agent skills | [Skill Maps](https://hilt21.github.io/ai-native-lexicon/skill-maps/) | Task journeys, skill descriptions, relationships and pinned source evidence. |
 
-These are separate content types connected by explicit references. A definition stays with its Concept; a Primitive may refer to that definition or add a distinct meaning; a Speaking Card links to both without copying either.
+Browse concepts by [category](https://hilt21.github.io/ai-native-lexicon/categories/), or use [search](https://hilt21.github.io/ai-native-lexicon/search/) to find concepts, primitives, Speaking Guides, maps, map nodes and task journeys.
 
-## Follow an idea
+## Try two reading paths
 
-Start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness/), open the [Harness primitive](https://hilt21.github.io/ai-native-lexicon/primitives/harness/), then use [Agent Harness · Card 04](https://hilt21.github.io/ai-native-lexicon/speaking-card/#card-04) to explain and discuss the design. The same pattern works across concepts, primitives, and cards: follow a term to the building blocks it uses, then to material that helps communicate it.
+**From an idea to a discussion:** start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness/), open the [Harness primitive](https://hilt21.github.io/ai-native-lexicon/primitives/harness/), then use [Agent Harness · Card 04](https://hilt21.github.io/ai-native-lexicon/speaking-card/#card-04) to explain and discuss the design.
 
-## Explore the collection
+**From a task to a skill combination:** open the [pstack Skill Map](https://hilt21.github.io/ai-native-lexicon/skill-maps/pstack/), choose [“我想修 bug”](https://hilt21.github.io/ai-native-lexicon/skill-maps/pstack/journeys/fix-bug/), and follow the recommended and conditional steps to each node's mechanism, inputs, outputs and source. The first map contains 74 nodes covering skills, playbooks and principles, with seven task journeys. These journeys provide guidance; the website does not execute skills.
 
-- [Browse concepts](https://hilt21.github.io/ai-native-lexicon/concepts/) by name or explore the [categories](https://hilt21.github.io/ai-native-lexicon/categories/).
-- Use [search](https://hilt21.github.io/ai-native-lexicon/search/) to find concepts, primitives and Speaking Guides, including related names.
-- Browse the [primitive directory](https://hilt21.github.io/ai-native-lexicon/primitives/) or open the [Speaking Cards](https://hilt21.github.io/ai-native-lexicon/speaking-card/).
-- Inspect [`dataset.json`](https://hilt21.github.io/ai-native-lexicon/dataset.json) for separate machine-readable Concept, Primitive and Speaking Guide records, or [`llms.txt`](https://hilt21.github.io/ai-native-lexicon/llms.txt) for a compact page index.
+![pstack Skill Map task entry page](./docs/audits/assets/skill-map-tasks-desktop.png)
 
-## A working vocabulary, not a fixed canon
+## Data and editorial boundaries
 
 Entries are editorial working definitions, not claims of universal agreement. Concepts show maturity; primitive entries identify their synthesis basis and whether sources have been independently verified. Relationship and schema checks keep references inspectable as the collection grows.
 
-The canonical content lives in three places: concept YAML in `src/data/concepts/`, primitive YAML in `src/data/primitives/`, and Speaking Card YAML in `src/data/speaking-cards/`. The static site, search, cross-links, and machine-readable exports are generated from these records.
+Concepts and Primitives are knowledge records. Speaking Guides and Skill Maps are independently curated Application Resources; Speaking Cards and Skill Map pages are their current projections. A definition stays with its Concept; a Primitive may reference it or define a distinct meaning; a Speaking Card links to both without copying either. Skill Map references to Concepts, Primitives and Speaking Guides remain a future contract and are not yet implemented.
 
-## Contribute
+Canonical YAML lives in:
 
-Help make the vocabulary more useful: clarify a term's boundary, add a well-supported relationship, improve an example, or propose a missing concept. Start with the [contribution guide](./CONTRIBUTING.md); primitive entries have a separate [content guide](./docs/primitives.md).
+- `src/data/concepts/` — one record per concept.
+- `src/data/primitives/` — one record per primitive.
+- `src/data/speaking-cards/` — one record per card, with stable numbers and `#card-XX` anchors.
+- `src/data/skill-maps/<map-id>/` — map metadata, independent nodes and journeys, and one relationship table.
+
+The Astro/Starlight static site, search, cross-links and machine-readable exports are projections of these records. Categories and Primitive layers use YAML configuration in `src/data/taxonomy/`; each Skill Map defines its own taxonomy. Valid new maps are discovered automatically without adding page code. Map updates preserve public IDs, pin new source revisions as separate snapshots and retain retired detail pages. Official source descriptions and editorial interpretations are distinguished.
+
+Inspect [`dataset.json`](https://hilt21.github.io/ai-native-lexicon/dataset.json) for separate `concepts`, `primitives`, `speaking_cards` and `skill_maps` arrays, or [`llms.txt`](https://hilt21.github.io/ai-native-lexicon/llms.txt) for compact navigation. See [the export contract](./docs/exports.md) for stable identities, `schema_version`, `dataset_version`, legacy `version` compatibility and build timestamps. The content digest includes taxonomy semantics and excludes deployment/build variables.
+
+Structured YAML expansion is supported. Raw-material ingestion and proposal/approval automation remain planned L3/L4 work.
 
 ## Run locally
 
 Requires Node.js 22.12 or newer. The GitHub Actions workflow uses Node.js 24.
 
 ```sh
+git clone https://github.com/hilt21/ai-native-lexicon.git
+cd ai-native-lexicon
 npm ci
 npm run dev
 ```
@@ -51,31 +64,29 @@ The site opens at `http://localhost:4321/`. Before submitting a change, run the 
 ```sh
 npm run check
 npm test
+npm run test:extension
+npm run test:l2
 npm run build
 ```
 
-`npm run check` checks the Astro project and validates concept, primitive, and Speaking Card references. `npm test` runs data-integrity and UI-regression tests. `npm run build` validates Speaking Card references and builds the static site.
+`npm run check` detects portable-schema drift, checks the Astro project and validates catalog references and Skill Map sources. `npm test` runs data-integrity and UI-regression tests. `test:extension` checks isolated expansion regressions, including Skill Maps; `test:l2` verifies a complete Concept/Primitive/Speaking Guide expansion under the production base while preserving routes and anchors. `npm run build` validates the catalog and builds the static site.
 
-For content or taxonomy expansion, also run `npm run test:extension` and `npm run test:l2`. The latter verifies an isolated, complete expansion under the production base, including empty taxonomy, three new linked records, all projections and preserved routes/anchors. To include real browser checks, install Chromium with `npx playwright install chromium`, then run `npm run test:l2 -- --browser`. See [the contribution workflow](CONTRIBUTING.md#repeatable-l2-expansion-acceptance) and [L2 evidence](docs/audits/l2-10-verification.md).
+After changing field rules or category/layer configuration, run `npm run schema:generate` before verification. `npm run schema:check` detects drift without writing files.
 
-Categories and Primitive layers are YAML configuration in `src/data/taxonomy/`. Add configuration, generate portable schemas with `npm run schema:generate`, then add members without changing page code or manually synchronizing enums. Existing slugs, layer anchors and Card numbers remain stable.
-
-Speaking Guides are independently curated Application Resources; Speaking Cards are their current presentation. A future Skill Map needs its own content contract. The current L2 workflow covers structured YAML; raw-material ingestion and proposal/approval automation remain L3/L4 work.
+Optional browser verification: install Chromium with `npx playwright install chromium`, then run `npm run test:l2 -- --browser`. See [the L2 workflow](./CONTRIBUTING.md#repeatable-l2-expansion-acceptance) and [verification evidence](./docs/audits/l2-10-verification.md).
 
 ## GitHub Pages
 
 The [Pages workflow](./.github/workflows/pages.yml) validates, tests, builds, and deploys the site on successful pushes to `main` or `master`; pull requests run the checks without deploying. The deployment derives its URL and repository subpath from the GitHub environment.
 
-## License
+## Guides and contracts
 
-Source code is available under the MIT License. Lexicon content and dataset records are available under [CC BY 4.0](./LICENSE-CONTENT.md).
+Help improve a term's boundary, example or evidence, or propose a meaningful new record. Use these guides for detailed requirements:
 
-### Managing Speaking Cards
+- [Content editing and validation](./CONTRIBUTING.md), including [Speaking Guides](./CONTRIBUTING.md#scope-of-changes) and [Skill Maps](./CONTRIBUTING.md#skill-maps).
+- [Primitive content guide](./docs/primitives.md).
+- [Skill Map field and UI contract](./docs/design/skill-map.md) and [pstack source-verification record](./docs/audits/skill-map-sm-01.md).
+- [Shared content boundary](./src/domain/content/README.md) and [machine-readable projections](./docs/exports.md).
+- [Domain glossary](./GLOSSARY.md) and [application-resource architecture](./docs/adr/0006-application-resources-and-projections.md).
 
-Each card is one YAML record in `src/data/speaking-cards/` (for example, `card-01.yaml`). Add, edit, or remove files to manage the collection; pages and backlinks update automatically during development or the next build. Cards are sorted by their unique positive integer `number`, independent of filename. Keep existing numbers stable because they determine public `#card-XX` anchors; gaps are allowed and deleting a card does not renumber others.
-
-Copy an existing card as a starting point and assign an unused number. Required fields are `number`, `title`, `concepts`, `primitives`, `coreIdea`, `keyLines`, `realCase`, `discussionQuestion`, `endingLabel`, and `ending`. Notes must be non-empty; relationship arrays may be empty and must reference existing slugs without duplicates. The portable contract is `schemas/speaking-card.schema.json`; Astro and the CLI share `src/lib/speaking-card-schema.mjs`.
-
-Run `npm run check`, `npm test`, and `npm run build` after editing. Validation rejects malformed YAML, invalid fields, duplicate numbers, and broken relationships.
-
-See [machine-readable projections](docs/exports.md) for stable card identity, the `schema_version`/`dataset_version` distinction, legacy `version` compatibility and build timestamps. The content digest includes taxonomy semantics and excludes deployment/build variables.
+Source code: [MIT](./LICENSE). Editorial content: [CC BY 4.0, except where otherwise noted](./LICENSE-CONTENT.md). The pstack source descriptions retain their [upstream MIT notice](./src/data/skill-maps/pstack/SOURCE-LICENSE.txt).
