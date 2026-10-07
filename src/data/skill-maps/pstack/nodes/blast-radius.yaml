@@ -35,3 +35,11 @@ official_description: Find what a change could break somewhere else before it sh
   beyond the diff, and prove the one fact it's safe because of by running real code
   instead of writing it up. Use for 'blast radius of X', 'what could this break',
   or reviewing a small diff you don't trust.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

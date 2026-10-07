@@ -1,20 +1,20 @@
 ---
-import { mapLink, type SkillMap } from '../lib/skill-maps';
+import { taxonomyLang, textLang, mapLink, type SkillMap } from '../lib/skill-maps';
 interface Props { map: SkillMap }
 const { map } = Astro.props;
 ---
 <section class="map-directory" data-map-directory>
   <div class="map-filters">
     <label>Search items<input data-map-query type="search" placeholder="Name, task or idea…" /></label>
-    <label>Type<select data-map-type><option value="">All types</option>{map.data.taxonomy.types.map((t) => <option value={t.id}>{t.label}</option>)}</select></label>
-    {map.data.taxonomy.clusters.length > 0 && <label>Cluster<select data-map-cluster><option value="">All clusters</option>{map.data.taxonomy.clusters.map((c) => <option value={c.id}>{c.label}</option>)}</select></label>}
+    <label>Type<select data-map-type><option value="">All types</option>{map.data.taxonomy.types.map((t) => <option value={t.id} lang={taxonomyLang(map, "types", t.id, "label")}>{t.label}</option>)}</select></label>
+    {map.data.taxonomy.clusters.length > 0 && <label>Cluster<select data-map-cluster><option value="">All clusters</option>{map.data.taxonomy.clusters.map((c) => <option value={c.id} lang={taxonomyLang(map, "clusters", c.id, "label")}>{c.label}</option>)}</select></label>}
     <label class="map-retired-control"><input data-map-retired type="checkbox" /> Include retired</label>
     <button data-map-clear type="button">Clear filters</button>
   </div>
   <p data-map-count aria-live="polite">{map.data.nodes.filter((n) => n.status === 'active').length} active items</p>
   <div class="map-item-list">
     {map.data.nodes.map((node) => <a class="map-item" href={mapLink(map.id, `nodes/${node.id}/`)} data-map-item data-type={node.type} data-clusters={[node.primary_cluster, ...node.secondary_clusters].filter(Boolean).join(' ')} data-retired={node.status === 'retired' ? 'true' : 'false'} data-text={`${node.title} ${node.summary} ${node.when_to_use.join(' ')} ${node.tags.join(' ')} ${map.data.taxonomy.types.find((t) => t.id === node.type)?.label} ${map.data.taxonomy.clusters.filter((c) => c.id === node.primary_cluster || node.secondary_clusters.includes(c.id)).map((c) => c.label).join(' ')}`.toLowerCase()}>
-      <strong>{node.title}</strong><span class="map-item-type">{map.data.taxonomy.types.find((t) => t.id === node.type)?.label}{node.status === 'retired' && ' · Retired'}</span><span>{node.summary}</span>
+      <strong lang={textLang(node, "title")}>{node.title}</strong><span class="map-item-type"><span lang={taxonomyLang(map, "types", node.type, "label")}>{map.data.taxonomy.types.find((t) => t.id === node.type)?.label}</span>{node.status === 'retired' && ' · Retired'}</span><span lang={textLang(node, "summary")}>{node.summary}</span>
     </a>)}
   </div>
   <p data-map-empty hidden>No matching items. Clear the filters or try a broader word.</p>
@@ -37,6 +37,8 @@ const { map } = Astro.props;
       directory.querySelector<HTMLElement>('[data-map-empty]')!.hidden = count !== 0;
     }
     directory.addEventListener('input', update);
+    directory.addEventListener('change', update);
+    window.addEventListener('pageshow', () => { setTimeout(update, 0); });
     directory.querySelector('[data-map-clear]')!.addEventListener('click', () => { query.value = ''; type.value = ''; if (cluster) cluster.value = ''; retired.checked = false; update(); query.focus(); });
     update();
   }

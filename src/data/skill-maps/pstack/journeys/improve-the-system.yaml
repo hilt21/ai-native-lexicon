@@ -31,3 +31,15 @@ variants:
     - automate-me
     optional: true
     when: 复盘结果需要落到技能或工作方式时。
+text_languages:
+  inputs.0: zh-Hans
+  summary: zh-Hans
+  title: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.1.title: zh-Hans
+  variants.0.steps.1.why: zh-Hans
+  variants.0.steps.2.title: zh-Hans
+  variants.0.steps.2.when: zh-Hans
+  variants.0.steps.2.why: zh-Hans
+  variants.0.title: zh-Hans

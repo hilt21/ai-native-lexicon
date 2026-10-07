@@ -25,3 +25,7 @@ handoffs: []
 official_description: Apply when integrating a new requirement into an existing design.
   Redesign as if the requirement had been a foundational assumption from day one,
   instead of bolting it on.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans

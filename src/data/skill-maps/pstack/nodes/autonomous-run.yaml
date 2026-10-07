@@ -28,3 +28,10 @@ source_refs:
 - source: pstack-0-15-15-df581122
   path: skills/poteto-mode/playbooks/autonomous-run.md
 handoffs: []
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  solves.2: zh-Hans
+  summary: zh-Hans
+  when_to_use.1: zh-Hans

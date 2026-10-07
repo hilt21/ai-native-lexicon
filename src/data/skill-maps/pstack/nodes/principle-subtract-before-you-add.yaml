@@ -24,3 +24,7 @@ handoffs: []
 official_description: Apply when sequencing an addition, refactor, or rewrite. Remove
   dead code, redundant validators, and stub references first, then build on the simpler
   base.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans

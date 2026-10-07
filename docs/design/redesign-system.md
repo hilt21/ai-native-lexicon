@@ -19,6 +19,7 @@ Use semantic tokens (`--lex-text-small`, `--lex-space-6`, `--lex-muted`) instead
 | `CategoryGrid` | Home, categories | `headingLevel` defaults to h3 below the homepage h2, and uses h2 on the category index. |
 | `RelatedConcepts` | Concept details | Existing relationship links, shared typography, border and spacing tokens. |
 | `.button-primary`, `.button-dark`, `.text-link` | Home, 404 | Shared size, type, focus and pressed states. |
+| `.map-summary` | Five Skill Map single-paragraph summary surfaces | Block text limited by the available width and existing reading measure. |
 | `.page-intro`, `.category-masthead`, `.definition-grid` | Listing and reading pages | Shared lead text, reading measure and spacing. |
 | `.search-input-wrap` | Search | Existing label, native search input, visible focus-within and live count. |
 | `SkipLink` | Starlight shell | Keeps the default inner-page link; splash pages target their visible focusable content instead of the hidden generated title. |
@@ -60,3 +61,5 @@ These checks are not a full screen-reader or WCAG certification. Dynamic concept
 - No changes to concept schema, content records, search matching, exports or routes. The prior dataset differs only by its generated timestamp; `llms.txt` is byte-identical.
 
 Final verification: `npm run check`, `npm test` (6 tests), `npm run build` (44 pages), and `git diff --check` passed. After reinstalling from the unchanged lockfile, the original workspace also completed the full check/test/build chain. Its live Astro preview is available at `http://127.0.0.1:4324/`; the earlier port 4321 visual mock should no longer be used.
+
+WEB-01 keeps two-child `.page-intro` layouts and ordinary Markdown margins. UI grid direct children (`practice-grid`, `map-io`, `map-structure`) reset only block-start margins. Map filter borders use `--lex-control-border`; decorative separators retain `--lex-line`. Catalog field search includes Concept definitions and related names, explains its scope beside the input, and uses native input behavior with Starlight Cmd/Ctrl+K. The historical Slash shortcut checks above describe the earlier implementation.

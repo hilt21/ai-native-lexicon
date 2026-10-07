@@ -33,3 +33,11 @@ official_description: Configure which models pstack uses per role and at what re
   budget. Detects your available models and writes an always-applied rule that overrides
   the skill defaults. Use for /setup-pstack, "configure pstack models", "pstack budget",
   or changing pstack's model choices.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

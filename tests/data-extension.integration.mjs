@@ -16,6 +16,7 @@ test('a second skill map appears across page and machine projections using only 
     await mkdir(join(root, 'nodes'), { recursive: true });
     await mkdir(join(root, 'journeys'), { recursive: true });
     const originalMap = await yaml(directory, 'src/data/skill-maps/pstack/map.yaml');
+    delete originalMap.text_languages;
     await writeFile(join(root, 'map.yaml'), stringify({ ...originalMap, title: 'Example Skill Map', scope: 'Synthetic test ecosystem', taxonomy: { types: [{ id: 'tool', label: 'Tool', description: 'A custom capability.' }], relation_types: [] } }));
     await writeFile(join(root, 'relations.yaml'), stringify({ relations: [] }));
     const node = await yaml(directory, 'src/data/skill-maps/pstack/nodes/how.yaml');
@@ -428,7 +429,7 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     const exported = first.speaking_cards?.find((card) => card.number === number);
     assert.deepEqual(exported, guide);
     assert.equal(first.version, '0.2.0');
-    assert.equal(first.schema_version, '1.1.0');
+    assert.equal(first.schema_version, '1.2.0');
     assert.deepEqual(first.counts, { concepts: first.concepts.length, primitives: first.primitives.length, speaking_cards: numbers.length + 1, skill_maps: first.skill_maps.length });
     const href = `/ai-native-lexicon/speaking-card/#card-${String(number).padStart(2, '0')}`;
     const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');

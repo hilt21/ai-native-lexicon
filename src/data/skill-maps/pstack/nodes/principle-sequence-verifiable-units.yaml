@@ -26,3 +26,7 @@ official_description: Apply to multi-step work (sweeps, migrations, runs of simi
   edits) and to how you stack commits and PRs. Break work into small units that each
   end in a verifiable state, check each before the next, and order delivery so the
   sequence proves itself to a reviewer.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans

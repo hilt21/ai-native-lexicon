@@ -1,21 +1,22 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 import { pathWithBase } from '../lib/catalog';
-import { mapLink, type SkillMap } from '../lib/skill-maps';
-interface Props { map: SkillMap; title: string; description: string; section: 'tasks' | 'nodes' | 'overview' }
-const { map, title, description, section } = Astro.props;
+import { textLang, mapLink, type SkillMap } from '../lib/skill-maps';
+interface Props { map: SkillMap; title: string; description: string; titleLanguage?: string; titleParts?: { text: string; lang?: string }[]; section: 'tasks' | 'nodes' | 'overview' }
+const { map, title, description, titleLanguage, titleParts, section } = Astro.props;
+Astro.locals.skillMapTitleParts = titleParts ?? (titleLanguage ? [{ text: title, lang: titleLanguage }] : undefined);
 const tabs = [{ id: 'tasks', label: 'Tasks', suffix: '' }, { id: 'nodes', label: 'All items', suffix: 'nodes/' }, { id: 'overview', label: 'Structure', suffix: 'overview/' }];
 ---
 <StarlightPage frontmatter={{ title, description, editUrl: false, tableOfContents: false }}>
   <div class="skill-map">
-    <nav aria-label="Breadcrumb" class="map-breadcrumb"><a href={pathWithBase('/skill-maps/')}>Skill Maps</a><span aria-hidden="true">/</span><a href={mapLink(map.id)}>{map.data.title}</a></nav>
-    <p class="map-scope">{map.data.scope}</p>
+    <nav aria-label="Breadcrumb" class="map-breadcrumb"><a href={pathWithBase('/skill-maps/')}>Skill Maps</a><span aria-hidden="true">/</span><a href={mapLink(map.id)} lang={textLang(map.data, "title")}>{map.data.title}</a></nav>
+    <p class="map-scope" lang={textLang(map.data, "scope")}>{map.data.scope}</p>
     <nav aria-label="Map views" class="map-tabs">{tabs.map((tab) => <a href={mapLink(map.id, tab.suffix)} aria-current={section === tab.id ? 'page' : undefined}>{tab.label}</a>)}</nav>
     <slot />
     <footer class="map-provenance">
       <h2>About this map</h2>
-      <p>用途、机制、关系与任务路径为编辑解读；源码链接定位具体版本。使用建议不代表自动执行或授权。</p>
-      {map.data.current_sources.map((id) => { const s = map.data.sources.find((s) => s.id === id)!; return <p><a href={`${s.repository.replace(/\/$/, '')}/tree/${s.commit}/${s.root_path}`}>Source {s.version ?? s.id}</a> · 清单与官方描述核对于 {s.verified_at}</p>; })}
+      <p lang="zh-Hans">用途、机制、关系与任务路径为编辑解读；源码链接定位具体版本。使用建议不代表自动执行或授权。</p>
+      {map.data.current_sources.map((id) => { const s = map.data.sources.find((s) => s.id === id)!; return <p><a href={`${s.repository.replace(/\/$/, '')}/tree/${s.commit}/${s.root_path}`}>Source {s.version ?? s.id}</a> · <span lang="zh-Hans">清单与官方描述核对于</span> {s.verified_at}</p>; })}
     </footer>
   </div>
 </StarlightPage>

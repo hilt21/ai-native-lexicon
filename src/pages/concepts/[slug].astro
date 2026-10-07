@@ -61,6 +61,8 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.con
       <div><span>WATCH FOR</span><p>{concept.data.anti_pattern}</p></div>
     </div>
 
+    {concept.data.sources.length > 0 && <section class="concept-sources"><h2>Sources</h2><ul>{concept.data.sources.map((source) => <li><a href={source.url}>{source.title}</a></li>)}</ul></section>}
+
     {primitives.length > 0 && (
       <nav class="primitive-tags" aria-label="Related primitives">
         <p class="eyebrow">PRIMITIVES / 原语</p>

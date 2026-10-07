@@ -35,3 +35,11 @@ official_description: 'Periodic pass that keeps a project''s verification skill 
   feature map honest: parallel source readers per feature, one live session driving
   every feature, at most one PR of proven corrections. Use for /maintain-verification-skill
   or "audit the verify skill".'
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans

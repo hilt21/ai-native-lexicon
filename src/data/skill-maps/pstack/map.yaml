@@ -1,4 +1,4 @@
-schema_version: 1.0.0
+schema_version: 1.1.0
 title: pstack Skill Map
 summary: 从工作目标出发，选择和组合 pstack 的技能、操作手册与工程原则。
 scope: pstack 0.15.15 的技能体系；用途和任务路径是编辑解读。
@@ -92,3 +92,41 @@ taxonomy:
     outgoing_label: 可恢复的工作
     incoming_label: 由此处恢复的工作
     description: 通过恢复入口继续先前的工作。
+text_languages:
+  audience.0: zh-Hans
+  audience.1: zh-Hans
+  scope: zh-Hans
+  summary: zh-Hans
+  taxonomy.clusters.0.label: zh-Hans
+  taxonomy.clusters.1.label: zh-Hans
+  taxonomy.clusters.2.label: zh-Hans
+  taxonomy.clusters.3.label: zh-Hans
+  taxonomy.clusters.4.label: zh-Hans
+  taxonomy.clusters.5.label: zh-Hans
+  taxonomy.clusters.6.label: zh-Hans
+  taxonomy.clusters.7.label: zh-Hans
+  taxonomy.relation_types.0.description: zh-Hans
+  taxonomy.relation_types.0.incoming_label: zh-Hans
+  taxonomy.relation_types.0.outgoing_label: zh-Hans
+  taxonomy.relation_types.1.description: zh-Hans
+  taxonomy.relation_types.1.incoming_label: zh-Hans
+  taxonomy.relation_types.1.outgoing_label: zh-Hans
+  taxonomy.relation_types.2.description: zh-Hans
+  taxonomy.relation_types.2.incoming_label: zh-Hans
+  taxonomy.relation_types.2.outgoing_label: zh-Hans
+  taxonomy.relation_types.3.description: zh-Hans
+  taxonomy.relation_types.3.incoming_label: zh-Hans
+  taxonomy.relation_types.3.outgoing_label: zh-Hans
+  taxonomy.relation_types.4.description: zh-Hans
+  taxonomy.relation_types.4.incoming_label: zh-Hans
+  taxonomy.relation_types.4.outgoing_label: zh-Hans
+  taxonomy.types.0.description: zh-Hans
+  taxonomy.types.0.label: zh-Hans
+  taxonomy.types.1.description: zh-Hans
+  taxonomy.types.1.label: zh-Hans
+  taxonomy.types.2.description: zh-Hans
+  taxonomy.types.2.label: zh-Hans
+  taxonomy.types.3.description: zh-Hans
+  taxonomy.types.3.label: zh-Hans
+  taxonomy.types.4.description: zh-Hans
+  taxonomy.types.4.label: zh-Hans

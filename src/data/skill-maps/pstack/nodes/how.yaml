@@ -33,3 +33,11 @@ official_description: Use for "how does X work", code walkthroughs before changi
   something, and placement / ownership / layering questions ("where should this live",
   "which package owns this", "is this the right layer"). Explains subsystem architecture,
   runtime flow, onboarding mental models. Use why for motivation.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

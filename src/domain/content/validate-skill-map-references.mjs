@@ -9,6 +9,19 @@ export function validateSkillMapReferences({ id, data }) {
     }
     return values;
   };
+  const languages = (record, where, kind) => {
+    if (record.text_languages !== undefined && data.schema_version === '1.0.0') fail(`${where} text_languages`, 'text_languages requires map schema_version 1.1.0');
+    for (const path of Object.keys(record.text_languages ?? {})) {
+      const patterns = {
+        map: /^(?:title|summary|scope|audience\.(?:0|[1-9][0-9]*)|taxonomy\.(?:types|layers|clusters)\.(?:0|[1-9][0-9]*)\.(?:label|description)|taxonomy\.relation_types\.(?:0|[1-9][0-9]*)\.(?:outgoing_label|incoming_label|description))$/,
+        node: /^(?:title|summary|mechanism|retirement_note|official_description|(?:when_to_use|solves|inputs|outputs|handoffs|tags)\.(?:0|[1-9][0-9]*))$/,
+        journey: /^(?:title|summary|retirement_note|(?:when_to_use|inputs|outputs)\.(?:0|[1-9][0-9]*)|variants\.(?:0|[1-9][0-9]*)\.(?:title|when|steps\.(?:0|[1-9][0-9]*)\.(?:title|why|when|outputs\.(?:0|[1-9][0-9]*))))$/,
+      };
+      const target = path.split('.').reduce((value, key) => value && Object.hasOwn(value, key) ? value[key] : undefined, record);
+      if (!patterns[kind].test(path) || typeof target !== 'string' || target.length === 0) fail(`${where} text_languages.${path}`, 'must target an existing nonempty prose string on this record');
+    }
+  };
+  languages(data, 'map.yaml', 'map');
   const nodes = index(data.nodes, 'nodes');
   const sources = index(data.sources, 'map.yaml sources');
   const types = index(data.taxonomy.types, 'map.yaml types');
@@ -20,6 +33,7 @@ export function validateSkillMapReferences({ id, data }) {
   for (const source of data.current_sources) exists(sources, source, 'map.yaml current_sources', 'source');
   for (const node of data.nodes) {
     const where = `nodes/${node.id}.yaml`;
+    languages(node, where, 'node');
     exists(types, node.type, where, 'type');
     if (node.layer) exists(layers, node.layer, where, 'layer');
     for (const cluster of [...node.secondary_clusters, ...(node.primary_cluster ? [node.primary_cluster] : [])]) exists(clusters, cluster, where, 'cluster');
@@ -36,6 +50,7 @@ export function validateSkillMapReferences({ id, data }) {
   }
   for (const journey of data.journeys) {
     const where = `journeys/${journey.id}.yaml`;
+    languages(journey, where, 'journey');
     refs(journey, where);
     index(journey.variants, where);
     for (const variant of journey.variants) for (const step of variant.steps) for (const node of step.nodes) {

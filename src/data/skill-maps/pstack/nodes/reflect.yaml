@@ -31,3 +31,11 @@ handoffs: []
 official_description: Spawn three parallel review subagents over the active transcript,
   surface learnings, and route each to a concrete edit on an existing skill. Use when
   the user says reflect.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

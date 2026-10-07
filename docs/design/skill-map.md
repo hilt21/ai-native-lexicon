@@ -418,3 +418,15 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 Q1–Q12 的关键选择及完整设计均已由用户确认；数据身份与关系、导航、页面线框、来源/更新边界、扩充流程和验收均已记录。本稿的具体字段与路由作为后续实现依据，设计阶段已结束。
 
 当前只修改设计文档、领域术语与 ADR；没有创建 Skill Map canonical 数据、修改运行 schema、实现页面或执行发布。附件通过结构检查，但 Q12 的上游来源基线尚未完成；这个事实不妨碍完成本次设计，也不能据此声称 pstack 已可发布。
+
+## Text language annotations (Map input 1.1.0)
+
+Map, Node and Journey may include `text_languages`, a flat dictionary from an existing prose path to its language tag. Strings remain canonical strings. Tags use lowercase two/three-letter language, optional Titlecase four-letter script, optional uppercase two-letter or three-digit region (`en`, `zh-Hans`, `en-US`, `pt-BR`). Named paths and zero-based indexes must resolve to nonempty prose; no wildcards or language defaults are supported.
+
+Map paths: `title`, `summary`, `scope`, `audience.N`; taxonomy `types/layers/clusters.N.label/description`; `relation_types.N.outgoing_label/incoming_label/description`. Node paths: `title`, `summary`, `mechanism`, `retirement_note`, `official_description`; `when_to_use/solves/inputs/outputs/handoffs/tags.N`. Journey paths: `title`, `summary`, `retirement_note`, `when_to_use/inputs/outputs.N`; `variants.N.title/when`; `variants.N.steps.N.title/why/when/outputs.N`.
+
+IDs, references, sources, dates, URLs, nonexistent fields and out-of-bounds indexes are rejected by the shared assembled reader. Maintain hints when editorial array order changes. A map with any annotations requires `schema_version: 1.1.0`; Nodes/Journeys inherit this edition. Unannotated 1.0.0 maps remain accepted; empty dictionaries are valid only in 1.1.0. Missing hints inherit document `en`, with no character detection or automatic translation.
+
+Templates apply each hint to the smallest text element, including reused titles, taxonomy labels, directory options and Search summaries. Composite labels keep separate spans when languages differ. Literal Chinese UI is explicitly `zh-Hans`; official English prose stays English. Relations and source snapshots carry no new language fields.
+
+Structure retains taxonomy order, complete active counts and up to three examples per group in node-ID order. Secondary cluster membership counts. Each relationship type with an active-to-active edge shows one canonical directed example selected by `(from,to)` order. Guidance and Journey order do not confer execution authority.

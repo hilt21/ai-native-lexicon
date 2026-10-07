@@ -35,3 +35,13 @@ handoffs:
 official_description: poteto's agent style for concise, detailed responses, deliberate
   subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode,
   or requests to work in this style.
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  solves.2: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

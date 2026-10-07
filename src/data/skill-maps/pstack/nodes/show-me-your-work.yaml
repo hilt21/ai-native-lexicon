@@ -34,3 +34,10 @@ official_description: 'Keep a reviewable decision trail for long-running or unat
   default; commit it when a reviewer needs the trail to trust the result. Use for
   /show-me-your-work, autonomous or multi-phase runs, or work a human reviews after
   stepping away.'
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.3: zh-Hans

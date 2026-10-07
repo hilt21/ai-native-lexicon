@@ -35,3 +35,12 @@ official_description: Sketch types, signatures, and module structure before code
   then stay in the loop while implementation fills in. Use for /architect, 'architect
   this', 'design this', or non-trivial work where jumping to code would lock in the
   wrong shape.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans
+  when_to_use.3: zh-Hans
