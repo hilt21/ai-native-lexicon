@@ -33,3 +33,11 @@ handoffs:
 official_description: Vet a perf measurement (limiter, tuning, limits, errors, repeatability,
   relevance, and whether the work happened) before you report or act on it. Use when
   you run a benchmark or report a speedup or regression you measured.
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.2: zh-Hans

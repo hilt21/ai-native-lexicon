@@ -24,3 +24,7 @@ handoffs: []
 official_description: Apply when product, UX, or feature-scope tradeoffs come up.
   Choose user delight over implementation convenience; ship fewer polished features
   over more rough ones.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans

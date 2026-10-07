@@ -35,3 +35,11 @@ official_description: Reconstruct your recent working context from your own chat
   back a tight current-state brief. Use for 'recall my work on X', 'catch me up',
   'what have I been working on', 'where did I leave off', before starting or resuming
   work.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

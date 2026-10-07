@@ -24,3 +24,10 @@ source_refs:
 handoffs:
 - 交接说明：final response
 official_description: Cut AI tells from any writing. Must always apply.
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans

@@ -39,3 +39,16 @@ official_description: Find the mistakes agents keep repeating in this repo and m
   each one impossible. Try architecture first, then types, then a lint whose error
   names the fix, then a test, and write docs last. Prove each check fails on a real
   past mistake. Repeat this each time the operator corrects you. Use for /correct.
+text_languages:
+  handoffs.0: zh-Hans
+  handoffs.1: zh-Hans
+  handoffs.2: zh-Hans
+  handoffs.3: zh-Hans
+  handoffs.4: zh-Hans
+  handoffs.5: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans

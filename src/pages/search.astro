@@ -4,12 +4,12 @@ import { getConcepts, getPrimitives, pathWithBase } from '../lib/catalog';
 import ConceptRow from '../components/ConceptRow.astro';
 import CatalogRow from '../components/CatalogRow.astro';
 import { getSpeakingCards } from '../lib/speaking-cards';
-import { getSkillMaps, mapLink } from '../lib/skill-maps';
+import { textLang, taxonomyLang, getSkillMaps, mapLink } from '../lib/skill-maps';
 const [concepts, primitives, speakingCards, maps] = await Promise.all([getConcepts(), getPrimitives(), getSpeakingCards(), getSkillMaps()]);
 const mapResults = maps.flatMap((map) => [
-  { href: mapLink(map.id), title: map.data.title, summary: map.data.summary, secondary: 'Skill Map', marker: 'MAP', number: 'M', search: `${map.data.scope} ${map.data.audience.join(' ')}` },
-  ...map.data.nodes.map((n) => ({ href: mapLink(map.id, `nodes/${n.id}/`), title: n.title, summary: n.summary, secondary: `${map.data.title} · ${map.data.taxonomy.types.find((t) => t.id === n.type)?.label}${n.status === 'retired' ? ' · Retired' : ''}`, marker: 'ITEM', number: 'N', search: `${n.when_to_use.join(' ')} ${n.tags.join(' ')} ${map.data.taxonomy.clusters.filter((c) => c.id === n.primary_cluster || n.secondary_clusters.includes(c.id)).map((c) => c.label).join(' ')}` })),
-  ...map.data.journeys.map((j) => ({ href: mapLink(map.id, `journeys/${j.id}/`), title: j.title, summary: j.summary, secondary: `${map.data.title} · Task journey${j.status === 'retired' ? ' · Retired' : ''}`, marker: 'TASK', number: 'J', search: j.when_to_use.join(' ') })),
+  { href: mapLink(map.id), title: map.data.title, summary: map.data.summary, titleLanguage: textLang(map.data, 'title'), summaryLanguage: textLang(map.data, 'summary'), secondary: 'Skill Map', marker: 'MAP', number: 'M', search: `${map.data.scope} ${map.data.audience.join(' ')}` },
+  ...map.data.nodes.map((n) => ({ href: mapLink(map.id, `nodes/${n.id}/`), title: n.title, summary: n.summary, titleLanguage: textLang(n, 'title'), summaryLanguage: textLang(n, 'summary'), secondaryParts: [{ text: map.data.title, lang: textLang(map.data, 'title') }, { text: ' · ' }, { text: map.data.taxonomy.types.find((t) => t.id === n.type)?.label ?? '', lang: taxonomyLang(map, 'types', n.type, 'label') }, { text: n.status === 'retired' ? ' · Retired' : '' }], secondary: `${map.data.title} · ${map.data.taxonomy.types.find((t) => t.id === n.type)?.label}${n.status === 'retired' ? ' · Retired' : ''}`, marker: 'ITEM', number: 'N', search: `${n.when_to_use.join(' ')} ${n.tags.join(' ')} ${map.data.taxonomy.clusters.filter((c) => c.id === n.primary_cluster || n.secondary_clusters.includes(c.id)).map((c) => c.label).join(' ')}` })),
+  ...map.data.journeys.map((j) => ({ href: mapLink(map.id, `journeys/${j.id}/`), title: j.title, summary: j.summary, titleLanguage: textLang(j, 'title'), summaryLanguage: textLang(j, 'summary'), secondaryParts: [{ text: map.data.title, lang: textLang(map.data, 'title') }, { text: ` · Task journey${j.status === 'retired' ? ' · Retired' : ''}` }], secondary: `${map.data.title} · Task journey${j.status === 'retired' ? ' · Retired' : ''}`, marker: 'TASK', number: 'J', search: j.when_to_use.join(' ') })),
 ]);
 const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
 const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
@@ -20,9 +20,9 @@ const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} $
     <label for="concept-search">Search the working vocabulary</label>
     <div class="search-input-wrap">
       <span aria-hidden="true">⌕</span>
-      <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" />
-      <kbd>/</kbd>
+      <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" aria-describedby="search-help" />
     </div>
+    <p id="search-help">This catalog matches record fields, including concept definitions and linked terms. Header Search, when available, searches full page text.</p>
     <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length + speakingCards.length + mapResults.length} entries</p>
   </div>
 
@@ -31,7 +31,7 @@ const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} $
     {concepts.map((concept) => (
       <ConceptRow
         concept={concept}
-        searchText={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.primitives.map((id) => `${id} ${primitiveNames.get(id)}`).join(' ')}`.toLowerCase()}
+        searchText={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.definition} ${concept.data.related.map((id) => `${id} ${conceptNames.get(id)}`).join(' ')} ${concept.data.primitives.map((id) => `${id} ${primitiveNames.get(id)}`).join(' ')}`.toLowerCase()}
       />
     ))}
     {primitives.map((primitive) => (
@@ -80,11 +80,5 @@ const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} $
     }
 
     input?.addEventListener('input', updateSearch);
-    document.addEventListener('keydown', (event) => {
-      if (event.key === '/' && document.activeElement !== input) {
-        event.preventDefault();
-        input?.focus();
-      }
-    });
   </script>
 </StarlightPage>

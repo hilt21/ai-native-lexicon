@@ -30,6 +30,7 @@
   --lex-muted: #5f6358;
   --lex-acid: #c8ff3d;
   --lex-line: #cfcec2;
+  --lex-control-border: #5f6358;
   --sl-font: "Avenir Next", "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
   --sl-font-mono: "SFMono-Regular", Consolas, monospace;
   --sl-color-accent-low: #dfffa0;
@@ -57,6 +58,7 @@
   --lex-ink: #eef0e7;
   --lex-muted: #adb2a3;
   --lex-line: #41473a;
+  --lex-control-border: #adb2a3;
   --sl-color-accent-low: #29370f;
   --sl-color-accent: #c8ff3d;
   --sl-color-accent-high: #e8ffae;

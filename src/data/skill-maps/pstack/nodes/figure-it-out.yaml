@@ -35,3 +35,11 @@ official_description: 'Design an auditable playbook when no narrower one fits: a
   away. Scales rigor to the task, runs a hypothesis loop, and logs decisions via show-me-your-work.
   Use for /figure-it-out, ''figure it out'', a large migration, or when no narrower
   playbook applies.'
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

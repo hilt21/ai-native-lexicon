@@ -25,3 +25,7 @@ handoffs: []
 official_description: Apply when two or more fixes that share one premise have failed
   the same gate. Take a census of which actors hold the imbalance before the next
   fix, then question the premise instead of writing another fix that assumes it.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans

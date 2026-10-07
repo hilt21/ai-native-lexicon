@@ -1,0 +1,9 @@
+---
+import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro';
+---
+{Astro.locals.skillMapTitleParts ? <h1 id="_top">{Astro.locals.skillMapTitleParts.map((part) => <span lang={part.lang}>{part.text}</span>)}</h1> : <DefaultPageTitle />}
+<style>
+  @layer starlight.core {
+    h1 { margin-top: 1rem; font-size: var(--sl-text-h1); line-height: var(--sl-line-height-headings); font-weight: 600; color: var(--sl-color-white); }
+  }
+</style>

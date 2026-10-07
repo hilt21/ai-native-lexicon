@@ -34,3 +34,12 @@ handoffs:
 official_description: Use for "interrogate", "adversarial review", "multi-model review",
   "challenge this", "stress test this code", "find blind spots", or "tear this apart".
   Multiple LLM reviewers challenge changes from independent angles.
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  when_to_use.2: zh-Hans

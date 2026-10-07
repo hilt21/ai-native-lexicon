@@ -32,3 +32,11 @@ official_description: Use for "automate me", "create/update/refresh my -mode ski
   "turn/capture my preferences or working style into a skill", or wanting agents to
   follow how the user works. Drafts or revises a personal -mode skill via create-skill
   + unslop, optionally pulling fresh evidence from recent transcripts.
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans

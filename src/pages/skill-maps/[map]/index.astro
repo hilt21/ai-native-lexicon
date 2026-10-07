@@ -1,15 +1,15 @@
 ---
 import SkillMapPage from '../../../components/SkillMapPage.astro';
-import { getSkillMaps, orderedJourneys, mapLink, type SkillMap } from '../../../lib/skill-maps';
+import { taxonomyLang, textLang, getSkillMaps, orderedJourneys, mapLink, type SkillMap } from '../../../lib/skill-maps';
 export async function getStaticPaths() { return (await getSkillMaps()).map((map) => ({ params: { map: map.id }, props: { map } })); }
 interface Props { map: SkillMap }
 const { map } = Astro.props;
 const journeys = orderedJourneys(map).filter((j) => j.status === 'active');
 ---
-<SkillMapPage map={map} title={map.data.title} description={map.data.summary} section="tasks">
-  <p class="page-intro">{map.data.summary}</p>
-  <h2>你想完成什么？</h2>
-  <div class="map-journeys">{journeys.map((journey) => <a class="map-journey" href={mapLink(map.id, `journeys/${journey.id}/`)}><h3>{journey.title}</h3><p>{journey.summary}</p><p class="map-scope">产物：{journey.outputs.join(' / ')}</p></a>)}</div>
-  {journeys.length === 0 && <p>这张地图尚无任务路径。<a href={mapLink(map.id, 'nodes/')}>Browse all items</a> to choose an entry.</p>}
-  <section class="map-reading"><h2>如何阅读这套体系</h2><p>{map.data.taxonomy.layers.map((l) => l.label).join(' → ') || map.data.taxonomy.types.map((t) => t.label).join(' / ')}</p><p>任务路径提供选择建议；能力与原则的关系可以从条目详情查阅。</p><a href={mapLink(map.id, 'overview/')}>Explore the structure</a></section>
+<SkillMapPage map={map} title={map.data.title} titleLanguage={textLang(map.data, "title")} description={map.data.summary} section="tasks">
+  <p class="map-summary" lang={textLang(map.data, "summary")}>{map.data.summary}</p>
+  <h2 lang="zh-Hans">你想完成什么？</h2>
+  <div class="map-journeys">{journeys.map((journey) => <a class="map-journey" href={mapLink(map.id, `journeys/${journey.id}/`)}><h3 lang={textLang(journey, "title")}>{journey.title}</h3><p lang={textLang(journey, "summary")}>{journey.summary}</p><p class="map-scope"><span lang="zh-Hans">产物：</span>{journey.outputs.map((text, i) => <>{i > 0 && ' / '}<span lang={textLang(journey, `outputs.${i}`)}>{text}</span></>)}</p></a>)}</div>
+  {journeys.length === 0 && <p><span lang="zh-Hans">这张地图尚无任务路径。</span><a href={mapLink(map.id, 'nodes/')}>Browse all items</a> to choose an entry.</p>}
+  <section class="map-reading"><h2 lang="zh-Hans">如何阅读这套体系</h2><p>{(map.data.taxonomy.layers.length ? map.data.taxonomy.layers : map.data.taxonomy.types).map((item, i) => <>{i > 0 && (map.data.taxonomy.layers.length ? ' → ' : ' / ')}<span lang={taxonomyLang(map, map.data.taxonomy.layers.length ? 'layers' : 'types', item.id, 'label')}>{item.label}</span></>)}</p><p lang="zh-Hans">任务路径提供选择建议；能力与原则的关系可以从条目详情查阅。</p><a href={mapLink(map.id, 'overview/')}>Explore the structure</a></section>
 </SkillMapPage>

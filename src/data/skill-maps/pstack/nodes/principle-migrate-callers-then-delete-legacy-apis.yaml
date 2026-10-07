@@ -26,3 +26,8 @@ handoffs:
 official_description: Apply when introducing a new internal API while old callers
   still exist. Migrate callers and delete the old API in the same wave instead of
   preserving compatibility layers.
+text_languages:
+  handoffs.0: zh-Hans
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans

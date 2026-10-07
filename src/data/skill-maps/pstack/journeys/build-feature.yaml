@@ -41,3 +41,21 @@ variants:
     - shipping
     optional: true
     when: 需要推进发布且已获得相应授权时。
+text_languages:
+  inputs.0: zh-Hans
+  summary: zh-Hans
+  title: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.1.title: zh-Hans
+  variants.0.steps.1.why: zh-Hans
+  variants.0.steps.2.title: zh-Hans
+  variants.0.steps.2.why: zh-Hans
+  variants.0.steps.3.title: zh-Hans
+  variants.0.steps.3.why: zh-Hans
+  variants.0.steps.4.title: zh-Hans
+  variants.0.steps.4.why: zh-Hans
+  variants.0.steps.5.title: zh-Hans
+  variants.0.steps.5.when: zh-Hans
+  variants.0.steps.5.why: zh-Hans
+  variants.0.title: zh-Hans

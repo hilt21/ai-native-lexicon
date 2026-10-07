@@ -19,7 +19,8 @@
     "validate:catalog": "node scripts/validate-catalog.mjs",
     "schema:generate": "node scripts/content-schemas.mjs generate",
     "schema:check": "node scripts/content-schemas.mjs check",
-    "test:l2": "node scripts/verify-l2-expansion.mjs"
+    "test:l2": "node scripts/verify-l2-expansion.mjs",
+    "test:browser": "node scripts/verify-web-browser.mjs"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.41.3",

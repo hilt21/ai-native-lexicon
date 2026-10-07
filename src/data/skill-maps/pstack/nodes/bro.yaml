@@ -23,3 +23,9 @@ source_refs:
   path: skills/bro/SKILL.md
 handoffs: []
 official_description: Restate the last message in plain human language, with no jargon.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans

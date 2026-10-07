@@ -30,3 +30,9 @@ handoffs: []
 official_description: Use when building a custom UI (page, dashboard, buttons) that
   should wake a Grok Bot over a webhook, when the user must provide a webhook sender
   key, or when exposing that UI on Tailscale.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans

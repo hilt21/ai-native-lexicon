@@ -29,3 +29,9 @@ source_refs:
 handoffs: []
 official_description: TypeScript best practices. Use when reading or editing any .ts
   or .tsx file.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans

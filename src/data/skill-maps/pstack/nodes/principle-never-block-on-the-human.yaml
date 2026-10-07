@@ -25,3 +25,7 @@ handoffs: []
 official_description: Apply when tempted to ask 'should I do X?' on reversible work.
   Proceed, present the result, let the human course-correct after the fact; reserve
   confirmation for irreversible actions.
+text_languages:
+  mechanism: zh-Hans
+  solves.0: zh-Hans
+  summary: zh-Hans
