@@ -1,0 +1,44 @@
+title: pr
+summary: 把变更整理成能快速理解风险与证据的 PR body。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: delivery-human-loop
+secondary_clusters:
+  - architecture-quality
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: 在编写 PR body 时组织问题、变化、最小视觉（图、调用树、伪码或 diff）及简短说明、before/after 验证证据，以及 one-way/two-way door 与影响范围，帮助 reviewer 判断。输出是 PR 说明；它本身不授权创建、发布、推送或合并 PR。
+when_to_use:
+  - 需要编写或更新 PR body。
+solves:
+  - 让 PR 从代码清单变成决策与验证 briefing。
+  - 把合并风险和证据放到 reviewer 第一视野。
+inputs:
+  - diff
+  - verification evidence
+  - risk context
+outputs:
+  - PR body
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/pr/SKILL.md
+handoffs: []
+official_description: Use when writing a PR body.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: en
+  inputs.1: en
+  inputs.2: en
+  outputs.0: en
+  tags.0: en
+  tags.1: en
+  tags.2: en

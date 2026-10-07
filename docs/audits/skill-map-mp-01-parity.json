@@ -1,0 +1,14 @@
+{
+  "baseline_commit": "04ff2914d503c54a8962d4ff3b4aa728be231acc",
+  "public_catalog_existing_collections_and_pstack_deep_equal": true,
+  "dataset_schema_version": "1.2.0",
+  "counts": {
+    "concepts": 84,
+    "primitives": 42,
+    "speaking_cards": 20,
+    "skill_maps": 2
+  },
+  "baseline_equivalent_digest": "sha256:480da61cd50ee8104e6ac254be1659163bc3afafebd14903ac47448f2571c754",
+  "final_digest": "sha256:acbc3754d00485ddc874fab5be07485d768b31e58b0b19de2192a63e07bf6357",
+  "note": "Baseline catalog read from Git HEAD canonical data; baseline-equivalent digest uses unchanged existing exports/taxonomy with the new map absent. Build/deployment timestamps are excluded by the public version function."
+}

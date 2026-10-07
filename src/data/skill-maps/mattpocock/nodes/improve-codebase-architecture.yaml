@@ -1,0 +1,48 @@
+title: improve-codebase-architecture
+summary: 扫描代码库，寻找可以让模块更深、更易维护的架构机会。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: architecture-quality
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后，先读取 codebase-design，结合仓库现状、历史与热点委派 survey，查找能隐藏更多复杂度的 deepening opportunities，并用 deletion test 检查改进意义。生成临时 HTML 候选报告，等待用户选择一个方向后，再通过 grilling 与 domain-modeling 深入设计；调查阶段不自动改源码或实施所有候选。
+when_to_use:
+  - 希望主动改善 codebase，而不是等待架构问题变成 bug。
+  - 需要寻找适合下一轮重构的高价值候选。
+solves:
+  - 抑制 Agent 加速编码带来的软件熵。
+  - 让架构改进从模糊感觉变成可比较候选。
+inputs:
+  - 代码库
+  - 现有模块与接口
+outputs:
+  - 架构机会列表
+  - 可视化 HTML 报告
+  - 选中候选的设计问题
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/improve-codebase-architecture/SKILL.md
+handoffs: []
+official_description: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

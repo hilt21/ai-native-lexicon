@@ -1,0 +1,48 @@
+title: triage
+summary: 把外部 issue 和 PR 经过状态机处理成可行动的工作。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后，针对原始外部 bug report、feature request 或指定 PR，按配置角色与状态收集上下文，先提出分类及状态建议并等待维护者方向，然后验证 bug 或 diff，必要时通过 grilling 与 domain-modeling 补齐信息。结果可为 needs-info、ready-for-human、wontfix 或 agent-ready brief 等状态，并非每项都进入实施。外部 PR 自动发现开关默认关闭；to-tickets 已准备好的票据无需再次 triage。
+when_to_use:
+  - 有外部 bug report、feature request 或 PR 需要处理。
+  - issue backlog 需要从原始输入变成可实施工作。
+solves:
+  - 减少原始 issue 的歧义。
+  - 把未加工需求转换成可交给 Agent 的明确任务。
+inputs:
+  - issue 或 external PR
+  - triage 配置
+outputs:
+  - 分类及事实验证结果
+  - 经确认的处理方向与适用状态
+  - 准备充分时的 agent-ready brief
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/triage/SKILL.md
+handoffs: []
+official_description: Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

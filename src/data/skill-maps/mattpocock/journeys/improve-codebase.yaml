@@ -1,0 +1,64 @@
+title: 我想改善代码架构
+summary: 先扫描 deepening opportunities，再选择一个候选进入正常设计与实现流程。
+order: 6
+when_to_use:
+  - 希望主动降低 codebase entropy，提升可测试性和 Agent 可导航性。
+inputs:
+  - 当前代码库
+outputs:
+  - 架构机会报告
+  - 选中改进方向
+  - 可进入主流程的设计
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/improve-codebase-architecture/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/codebase-design/SKILL.md
+variants:
+  - id: standard
+    title: 先调查，再选择改进方向
+    steps:
+      - title: 扫描 deepening opportunities
+        why: 用户启动 architecture survey；它内部使用 codebase-design 词汇与 grilling 深入选中的候选，扫描不自动重构所有机会。
+        nodes:
+          - improve-codebase-architecture
+        outputs:
+          - 可视化候选报告与选中方向
+      - title: 直接查阅模块设计词汇
+        why: codebase-design 是模块形状的参考能力；需要讨论 interface、seam 或 locality 时查阅，无需把词汇阅读当作必经阶段。
+        nodes:
+          - codebase-design
+        outputs:
+          - 模块边界与接口设计语言
+        optional: true
+        when: 需要明确设计词汇或模块 seam。
+      - title: 将选中想法带回主流程
+        why: 候选是新的 idea，由用户启动 grill-with-docs 收敛决策，再按工作规模选择 spec/tickets 或直接实施。
+        nodes:
+          - grill-with-docs
+        outputs:
+          - 已对齐的架构设计
+        optional: true
+        when: 准备把一个候选变成实际变更。
+text_languages:
+  title: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  inputs.0: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  variants.0.title: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.0.outputs.0: zh-Hans
+  variants.0.steps.1.title: zh-Hans
+  variants.0.steps.1.why: zh-Hans
+  variants.0.steps.1.when: zh-Hans
+  variants.0.steps.1.outputs.0: zh-Hans
+  variants.0.steps.2.title: zh-Hans
+  variants.0.steps.2.why: zh-Hans
+  variants.0.steps.2.when: zh-Hans
+  variants.0.steps.2.outputs.0: zh-Hans

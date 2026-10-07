@@ -1,0 +1,45 @@
+title: codebase-design
+summary: 用 deep-module 词汇设计更小接口、更深实现和更清晰 seam。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: architecture-quality
+secondary_clusters: []
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: 围绕 module、interface、depth、seam、adapter、leverage 与 locality 判断模块边界，寻找以更简单接口承载更多行为的设计。
+when_to_use:
+  - 设计或重构模块接口。
+  - 需要判断 seam 放在哪里或怎样提高可测试性和 Agent 可导航性。
+solves:
+  - 减少浅模块和层层转发。
+  - 降低读者与 Agent 理解系统需要跨越的接口数量。
+inputs:
+  - 现有模块结构
+  - 目标行为
+outputs:
+  - 模块、interface、depth、seam、adapter 与 locality 的共享词汇
+  - 需要时的接口替代方案与判断原则
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/codebase-design/SKILL.md
+handoffs: []
+official_description: Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

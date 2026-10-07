@@ -1,0 +1,44 @@
+title: retro
+summary: 从一次 coding session 中找出可以改进 Agent 环境的机会。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: architecture-quality
+secondary_clusters:
+  - communication-tooling
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动复盘后，先读取 writing-for-agents，再查指定 session 的原始记录；未指定时采用当前 session。按导航、自动检查、编码标准、steering、工具成本和信息访问查找候选，将机械问题建议为确定性检查，将判断问题建议为审查标准。按严重度呈现环境改进候选供人选择，不自动把所有建议应用到代码或环境。
+when_to_use:
+  - 一次 build 完成后。
+  - 一次 Agent run 出现低效、错误或反复纠正后。
+solves:
+  - 让失败经验改善下一次 Agent 工作环境。
+  - 把机械错误从人工提醒升级成检查、工具或导航结构。
+inputs:
+  - session transcript
+  - 仓库环境
+outputs:
+  - 按严重度排序的环境改进建议
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/retro/SKILL.md
+handoffs: []
+official_description: Conduct a retrospective on a coding session.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: en
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

@@ -1,0 +1,48 @@
+title: setup-pre-commit
+summary: 把格式化与已有类型检查、测试脚本接入 pre-commit，缺少的脚本省略并报告。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: communication-tooling
+secondary_clusters:
+  - architecture-quality
+tags:
+  - misc
+  - model-invoked
+  - stable
+mechanism: 检测项目包管理器，复用已有 formatter 配置，接入 Husky、lint-staged 与 Prettier。只有对应 npm/package scripts 存在时才接入类型检查和测试；缺少的脚本省略并报告。完成 smoke check 后提交 hooks/config 变更，不承诺每个项目都具有完整测试。
+when_to_use:
+  - 项目缺少 pre-commit guardrail。
+  - 希望提交时自动运行 formatting、typechecking 或 tests。
+solves:
+  - 缩短错误反馈距离。
+  - 把代码质量检查从人工记忆升级成自动门禁。
+inputs:
+  - 当前仓库
+  - 包管理和测试命令
+outputs:
+  - Husky hooks
+  - lint-staged 配置
+  - pre-commit checks
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: misc/setup-pre-commit/SKILL.md
+handoffs: []
+official_description: Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: en
+  outputs.1: zh-Hans
+  outputs.2: en
+  tags.0: en
+  tags.1: en
+  tags.2: en

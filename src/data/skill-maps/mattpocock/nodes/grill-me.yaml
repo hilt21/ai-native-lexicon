@@ -1,0 +1,39 @@
+title: grill-me
+summary: 通过持续追问把一个计划或设计中的未决分支全部暴露出来。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: alignment-domain
+secondary_clusters: []
+tags:
+  - productivity
+  - user-invoked
+  - stable
+mechanism: 调用 grilling 的采访循环，但不依赖仓库状态，也不写 GLOSSARY.md 或 ADR；适合无 working directory 的思考任务。
+when_to_use:
+  - 没有仓库，但需要把计划、设计或写作思路想清楚。
+solves:
+  - 减少“我以为我已经想清楚”的隐藏假设。
+  - 在实现前发现尚未做出的决策。
+inputs:
+  - 计划、设计或想法
+outputs:
+  - 澄清后的决策树
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/grill-me/SKILL.md
+handoffs: []
+official_description: A relentless interview to sharpen a plan or design.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  outputs.0: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

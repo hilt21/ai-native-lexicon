@@ -1,0 +1,48 @@
+title: setup-matt-pocock-skills
+summary: 为仓库配置 Matt Pocock skills 依赖的项目级约定。
+type: workflow
+status: active
+layer: entry
+primary_cluster: entry-routing
+secondary_clusters:
+  - communication-tooling
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后先探索仓库，再建议 issue tracker，确认配置草稿后写 docs/agents 的 tracker、domain 与必要 triage-labels 文档，并更新现有 CLAUDE.md/AGENTS.md 指针。默认采用 single-context 文档布局，只有真实 monorepo 才询问多 context；未安装 triage 时可跳过标签配置。它配置项目约定而不安装技能，切换 tracker 时可重跑或直接编辑配置。
+when_to_use:
+  - 第一次在一个仓库中使用这套 engineering skills。
+  - 项目的 issue tracker、triage 标签或文档布局发生变化。
+solves:
+  - 避免每个 workflow 重复询问项目约定。
+  - 让 triage、spec 和 ticket 流程拥有稳定的共享配置。
+inputs:
+  - 仓库
+  - issue tracker 选择
+  - triage 标签约定
+  - 领域文档布局
+outputs:
+  - 项目级 skills 配置
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/setup-matt-pocock-skills/SKILL.md
+handoffs: []
+official_description: "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills."
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  inputs.2: zh-Hans
+  inputs.3: zh-Hans
+  outputs.0: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

@@ -1,0 +1,46 @@
+title: domain-modeling
+summary: 持续建立项目的统一领域语言和关键决策记录。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: alignment-domain
+secondary_clusters:
+  - architecture-quality
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: 挑战模糊或重载的领域术语，用 edge cases 检验含义，随时把稳定词汇写入 GLOSSARY.md。只有难以逆转、缺少背景会令人意外且存在实质 tradeoff 的决定才建议记成 ADR；不把实现细节塞进 glossary，也不把每个稳定认识都写成 ADR。
+when_to_use:
+  - 项目术语不一致或同一个词承担多个含义。
+  - 需要修改 GLOSSARY.md 或记录 ADR。
+solves:
+  - 降低人与 Agent 的语言歧义。
+  - 让命名、导航和后续推理共享同一领域模型。
+inputs:
+  - 领域术语
+  - 代码和业务上下文
+outputs:
+  - 更新后的 GLOSSARY.md
+  - 满足记录条件时的 ADR
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/domain-modeling/SKILL.md
+handoffs: []
+official_description: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en
