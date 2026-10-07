@@ -1,0 +1,44 @@
+title: to-spec
+summary: 把当前已经讨论清楚的内容压缩成可发布规格。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后，从现有对话和代码库综合目标、范围及决策，不重新采访需求；采用领域词汇和 ADR。优先提出少量、尽可能高层的现有测试 seam，并向用户确认，再将 spec 发布到已配置的 issue tracker，标记为 agent-ready。若 tracker 配置缺失，先完成 setup。
+when_to_use:
+  - 当前对话已经把需求讨论清楚，需要转成 durable spec。
+  - 多 session build 在实现前需要稳定规格。
+solves:
+  - 避免重新解释已经完成的讨论。
+  - 把易丢失的会话上下文变成可引用的规格。
+inputs:
+  - 当前 conversation
+  - 项目 tracker 配置
+outputs:
+  - published spec
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+handoffs: []
+official_description: "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed."
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: en
+  tags.0: en
+  tags.1: en
+  tags.2: en

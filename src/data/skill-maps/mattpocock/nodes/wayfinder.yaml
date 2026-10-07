@@ -1,0 +1,49 @@
+title: wayfinder
+summary: 把超出单个 session 的模糊大项目拆成一张决策地图。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - debugging-research
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后，针对太大且路线尚不清晰的工作在 tracker 建 decision map。随后通常每个 session 解决一个非研究票，研究票可由后台 Agent 并行推进；prototype、grilling 或必要 task 用于解除决策阻塞，人工决定需要真实交流。默认产出决策，再由用户带入 to-spec；正文允许 Notes 明确覆盖规划默认，但不把地图直接当工程交付 backlog。
+when_to_use:
+  - greenfield 或巨大 feature，当前还无法写出完整 spec。
+  - 关键未知需要跨 session 逐步解决。
+solves:
+  - 避免在高不确定性下过早进入实现。
+  - 让长周期探索留下可共享的决策轨迹。
+inputs:
+  - 目标或大方向
+  - issue tracker
+outputs:
+  - decision map
+  - resolved unknowns
+  - 可进入 to-spec 的清晰路径
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/wayfinder/SKILL.md
+handoffs: []
+official_description: Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: en
+  outputs.0: en
+  outputs.1: en
+  outputs.2: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

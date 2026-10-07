@@ -1,0 +1,129 @@
+schema_version: 1.1.0
+title: Matt Pocock Skills Map
+summary: 从用户目标出发，选择和组合 Matt Pocock 的工程技能，从需求澄清、规划、实现到验证和复盘。
+scope: 固定 mattpocock/skills 1.3.1（dd400c3a）中 31 个非 in-progress 技能：27 项属于官方插件发行清单，另含 4 项 misc 工具；排除 7 项 in-progress 及已移除的 resolving-merge-conflicts。插件发行与教学目录不保证包含全部 31 项。用途、分类、关系与七条任务路径是编辑解读；user-invoked 入口需用户显式启动，网站提供阅读而不安装或运行技能。
+audience:
+  - 第一次使用 Matt Pocock skills 的开发者
+  - 希望建立可靠 AI coding workflow 的工程师
+  - 需要理解不同 skills 如何组合的 Agent 使用者
+sources:
+  - id: mattpocock-skills-1-3-1-dd400c3a
+    repository: https://github.com/mattpocock/skills
+    root_path: skills
+    version: 1.3.1
+    commit: dd400c3ad65e57c06f05e832e0aac92c7992f34d
+    observed_at: 2026-10-07
+    verification_status: verified
+    verified_at: 2026-10-07
+current_sources:
+  - mattpocock-skills-1-3-1-dd400c3a
+taxonomy:
+  types:
+    - id: router
+      label: 入口路由
+      description: 帮助用户选择下一条工作路径。
+    - id: workflow
+      label: 用户工作流
+      description: 用户显式启动并编排完整工作阶段的技能。
+    - id: discipline
+      label: 可复用能力
+      description: Agent 可根据任务自动调用的工程方法与能力。
+  layers:
+    - id: entry
+      label: Entry
+      description: 配置系统并选择工作入口。
+    - id: workflow
+      label: Workflow
+      description: 从用户目标出发组织完整工作。
+    - id: discipline
+      label: Discipline
+      description: 为工作流提供可复用工程能力。
+  clusters:
+    - id: entry-routing
+      label: 入口与路由
+      description: 我应该从哪里开始？
+    - id: alignment-domain
+      label: 对齐与领域理解
+      description: 我们真正要解决什么问题，语言是否一致？
+    - id: spec-planning
+      label: 规格与计划
+      description: 如何把想法变成可执行工作？
+    - id: implementation-feedback
+      label: 实现与反馈
+      description: 如何以短反馈循环完成代码？
+    - id: debugging-research
+      label: 调试与探索
+      description: 当答案或根因未知时如何获得证据？
+    - id: architecture-quality
+      label: 架构与代码质量
+      description: 如何保持代码库可理解、可测试和可演进？
+    - id: delivery-human-loop
+      label: 交付与人工环节
+      description: 如何完成 PR、交接和必须由人执行的步骤？
+    - id: communication-tooling
+      label: 沟通与工程工具
+      description: 如何改善 Agent communication 和工程环境？
+  relation_types:
+    - id: routes_to
+      outgoing_label: 推荐进入
+      incoming_label: 由此路由进入
+      description: 入口只推荐适合当前任务的技能；由用户决定是否启动，不代表自动调用。
+    - id: uses
+      outgoing_label: 使用能力
+      incoming_label: 被这些工作流使用
+      description: 实际使用或明确引用的可复用能力；仅共享设计词汇时在关系说明中限定，不代表运行调用。
+    - id: feeds
+      outgoing_label: 产物可交接给
+      incoming_label: 接收来自
+      description: 一个阶段的产物成为另一阶段的输入。
+    - id: configures
+      outgoing_label: 配置
+      incoming_label: 由此配置
+      description: 一个技能建立其他技能依赖的项目级配置。
+text_languages:
+  title: en
+  summary: zh-Hans
+  scope: zh-Hans
+  audience.0: zh-Hans
+  audience.1: zh-Hans
+  audience.2: zh-Hans
+  taxonomy.types.0.label: zh-Hans
+  taxonomy.types.0.description: zh-Hans
+  taxonomy.types.1.label: zh-Hans
+  taxonomy.types.1.description: zh-Hans
+  taxonomy.types.2.label: zh-Hans
+  taxonomy.types.2.description: zh-Hans
+  taxonomy.layers.0.label: en
+  taxonomy.layers.0.description: zh-Hans
+  taxonomy.layers.1.label: en
+  taxonomy.layers.1.description: zh-Hans
+  taxonomy.layers.2.label: en
+  taxonomy.layers.2.description: zh-Hans
+  taxonomy.clusters.0.label: zh-Hans
+  taxonomy.clusters.0.description: zh-Hans
+  taxonomy.clusters.1.label: zh-Hans
+  taxonomy.clusters.1.description: zh-Hans
+  taxonomy.clusters.2.label: zh-Hans
+  taxonomy.clusters.2.description: zh-Hans
+  taxonomy.clusters.3.label: zh-Hans
+  taxonomy.clusters.3.description: zh-Hans
+  taxonomy.clusters.4.label: zh-Hans
+  taxonomy.clusters.4.description: zh-Hans
+  taxonomy.clusters.5.label: zh-Hans
+  taxonomy.clusters.5.description: zh-Hans
+  taxonomy.clusters.6.label: zh-Hans
+  taxonomy.clusters.6.description: zh-Hans
+  taxonomy.clusters.7.label: zh-Hans
+  taxonomy.clusters.7.description: zh-Hans
+  taxonomy.relation_types.0.description: zh-Hans
+  taxonomy.relation_types.0.outgoing_label: zh-Hans
+  taxonomy.relation_types.0.incoming_label: zh-Hans
+  taxonomy.relation_types.1.description: zh-Hans
+  taxonomy.relation_types.1.outgoing_label: zh-Hans
+  taxonomy.relation_types.1.incoming_label: zh-Hans
+  taxonomy.relation_types.2.description: zh-Hans
+  taxonomy.relation_types.2.outgoing_label: zh-Hans
+  taxonomy.relation_types.2.incoming_label: zh-Hans
+  taxonomy.relation_types.3.description: zh-Hans
+  taxonomy.relation_types.3.outgoing_label: zh-Hans
+  taxonomy.relation_types.3.incoming_label: zh-Hans

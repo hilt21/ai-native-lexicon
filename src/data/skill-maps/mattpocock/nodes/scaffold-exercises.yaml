@@ -1,0 +1,43 @@
+title: scaffold-exercises
+summary: 创建符合课程约定的 exercises 目录、题目、答案与 explainer 骨架。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: communication-tooling
+secondary_clusters: []
+tags:
+  - misc
+  - model-invoked
+  - stable
+mechanism: 在既有课程组织方式下，按编号和命名规则建立 section/problem、README 与所需 problem/explainer stubs；未指定时默认 explainer。遵循相应模板，运行 pnpm ai-hero-cli internal lint 验证课程结构后提交；不是适用于任意项目的通用 scaffold 或 lint。
+when_to_use:
+  - 创建新的课程 section 或练习。
+  - 需要批量生成 exercise/problem/solution/explainer 骨架。
+solves:
+  - 减少课程内容脚手架的重复手工工作。
+inputs:
+  - 课程结构要求
+  - 练习列表
+outputs:
+  - exercise directory structure
+  - problem/solution/explainer stubs
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: misc/scaffold-exercises/SKILL.md
+handoffs: []
+official_description: Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: en
+  outputs.1: en
+  tags.0: en
+  tags.1: en
+  tags.2: en

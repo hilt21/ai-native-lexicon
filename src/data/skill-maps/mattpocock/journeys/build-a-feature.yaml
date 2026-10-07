@@ -1,0 +1,297 @@
+title: 我要开发一个 Feature
+summary: 小而明确的工作直接实施；多 session 工作先固化 spec 和票据，再在逐票实施与整图编排之间二选一。实施内部包含 TDD 与 review。
+order: 3
+when_to_use:
+  - 要实现一个新的产品行为或工程变更。
+inputs:
+  - feature idea 或 agent-ready issue
+outputs:
+  - 已实现并验证的代码
+  - 按实施方式产生的 review 结果与 commit 或 integration branch
+  - 适用时的 PR body 与环境改进候选
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/setup-matt-pocock-skills/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-tickets/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement-spec/SKILL.md
+variants:
+  - id: multi-session-sequential
+    title: 多 session：逐票 implement
+    when: 已有或需要生成自包含票据，用户希望按 blockers-first 顺序手工推进；与整图 implement-spec 二选一。
+    steps:
+      - title: 首次使用先完成配置
+        why: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - 可供后续入口读取的项目配置
+        optional: true
+        when: 首次工程工作，或项目配置仍缺失。
+      - title: 澄清仍未解决的设计
+        why: 在 working directory 中保留领域词汇与设计决策；明确的既有 spec 不需要重新追问。
+        nodes:
+          - grill-with-docs
+        outputs:
+          - 澄清的设计、GLOSSARY.md 和必要 ADR
+        optional: true
+        when: 需求或设计仍有未决分支。
+      - title: 综合规格并确认测试边界
+        why: 把已讨论的决定写成 durable spec；测试 seam 要先与用户确认。
+        nodes:
+          - to-spec
+        outputs:
+          - 已发布的 agent-ready spec 与确认的 seam
+        optional: true
+        when: 准备进入多 session 工作，且尚无完整 spec。
+      - title: 确认 tracer-bullet 拆票方案
+        why: 每票覆盖完整可演示行为并能在一个新 context 内完成；确认粒度与阻塞关系后发布，必要 prefactor 先做。
+        nodes:
+          - to-tickets
+        outputs:
+          - 已批准并发布的 tickets 与 blocking edges
+        optional: true
+        when: 尚无 agent-ready tickets。
+      - title: 每票在新上下文中实施
+        why: 用户显式启动 implement；每票按确认 seam 做 red→green，内部完成 code-review 后提交。票据自包含，可在每票之间清空旧上下文。
+        nodes:
+          - implement
+        outputs:
+          - 每票的代码、测试、review 与 commit
+      - title: 编写 PR 说明
+        why: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+        nodes:
+          - pr
+        outputs:
+          - PR body 与验证证据
+        optional: true
+        when: 通过 pull request 交付。
+      - title: 由用户选择是否复盘
+        why: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+        nodes:
+          - retro
+        outputs:
+          - 按严重度排列的环境改进候选
+        optional: true
+        when: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+  - id: multi-session-orchestrated
+    title: 多 session：整图 implement-spec
+    when: 用户希望把整个 spec 的 ticket graph 交给编排者，在 ready frontier 上并行推进；与逐票 implement 二选一。
+    steps:
+      - title: 首次使用先完成配置
+        why: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - 可供后续入口读取的项目配置
+        optional: true
+        when: 首次工程工作，或项目配置仍缺失。
+      - title: 澄清仍未解决的设计
+        why: 在 working directory 中保留领域词汇与设计决策；明确的既有 spec 不需要重新追问。
+        nodes:
+          - grill-with-docs
+        outputs:
+          - 澄清的设计、GLOSSARY.md 和必要 ADR
+        optional: true
+        when: 需求或设计仍有未决分支。
+      - title: 综合规格并确认测试边界
+        why: 把已讨论的决定写成 durable spec；测试 seam 要先与用户确认。
+        nodes:
+          - to-spec
+        outputs:
+          - 已发布的 agent-ready spec 与确认的 seam
+        optional: true
+        when: 准备进入多 session 工作，且尚无完整 spec。
+      - title: 确认 tracer-bullet 拆票方案
+        why: 每票覆盖完整可演示行为并能在一个新 context 内完成；确认粒度与阻塞关系后发布，必要 prefactor 先做。
+        nodes:
+          - to-tickets
+        outputs:
+          - 已批准并发布的 tickets 与 blocking edges
+        optional: true
+        when: 尚无 agent-ready tickets。
+      - title: 编排整个票据图
+        why: 用户显式启动 implement-spec；各 implementer 在独立 worktree 用 TDD 实施，落到 integration branch，再统一 code-review。无需随后重跑另一种实施入口。
+        nodes:
+          - implement-spec
+        outputs:
+          - integration branch、票据完成状态与全图 review
+      - title: 编写 PR 说明
+        why: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+        nodes:
+          - pr
+        outputs:
+          - PR body 与验证证据
+        optional: true
+        when: 通过 pull request 交付。
+      - title: 由用户选择是否复盘
+        why: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+        nodes:
+          - retro
+        outputs:
+          - 按严重度排列的环境改进候选
+        optional: true
+        when: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+  - id: single-session
+    title: 单 session：直接 implement
+    when: 工作小而明确，已约定行为与测试边界，不需要 spec/tickets 分阶段。
+    steps:
+      - title: 在当前上下文直接实施
+        why: 用户显式启动 implement；TDD 与 code-review 在内部完成，避免把它们写成之后重复执行的阶段。
+        nodes:
+          - implement
+        outputs:
+          - 代码、验证、review 和 commit
+      - title: 编写 PR 说明
+        why: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+        nodes:
+          - pr
+        outputs:
+          - PR body 与验证证据
+        optional: true
+        when: 通过 pull request 交付。
+      - title: 由用户选择是否复盘
+        why: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+        nodes:
+          - retro
+        outputs:
+          - 按严重度排列的环境改进候选
+        optional: true
+        when: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+  - id: incoming-request
+    title: 外部原始请求：先 triage
+    when: 未由 to-tickets 创建的外部 bug report、feature request 或 PR 尚未准备好；已 agent-ready 的票不走此分支。
+    steps:
+      - title: 首次使用先完成配置
+        why: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - 可供后续入口读取的项目配置
+        optional: true
+        when: 首次工程工作，或项目配置仍缺失。
+      - title: 分类并验证外部输入
+        why: triage 先建议并等待维护者方向，再验证事实，必要时补齐设计；结果可能是 needs-info、ready-for-human、wontfix 或 ready-for-agent，只有后者进入实施。
+        nodes:
+          - triage
+        outputs:
+          - 经确认的处理方向与状态；ready-for-agent 时的 brief
+      - title: 实施已准备好的工作
+        why: 用户显式启动 implement；其内部使用已确认 seam 的 TDD 和 code-review，不再重复 triage。
+        nodes:
+          - implement
+        outputs:
+          - 实现、验证、review 和 commit
+        optional: true
+        when: triage 得到维护者确认的 ready-for-agent 结果；其他状态先停在对应处理方向。
+      - title: 编写 PR 说明
+        why: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+        nodes:
+          - pr
+        outputs:
+          - PR body 与验证证据
+        optional: true
+        when: 通过 pull request 交付。
+text_languages:
+  title: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  inputs.0: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  variants.0.title: zh-Hans
+  variants.0.when: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.0.when: zh-Hans
+  variants.0.steps.0.outputs.0: zh-Hans
+  variants.0.steps.1.title: zh-Hans
+  variants.0.steps.1.why: zh-Hans
+  variants.0.steps.1.when: zh-Hans
+  variants.0.steps.1.outputs.0: zh-Hans
+  variants.0.steps.2.title: zh-Hans
+  variants.0.steps.2.why: zh-Hans
+  variants.0.steps.2.when: zh-Hans
+  variants.0.steps.2.outputs.0: zh-Hans
+  variants.0.steps.3.title: zh-Hans
+  variants.0.steps.3.why: zh-Hans
+  variants.0.steps.3.when: zh-Hans
+  variants.0.steps.3.outputs.0: zh-Hans
+  variants.0.steps.4.title: zh-Hans
+  variants.0.steps.4.why: zh-Hans
+  variants.0.steps.4.outputs.0: zh-Hans
+  variants.0.steps.5.title: zh-Hans
+  variants.0.steps.5.why: zh-Hans
+  variants.0.steps.5.when: zh-Hans
+  variants.0.steps.5.outputs.0: zh-Hans
+  variants.0.steps.6.title: zh-Hans
+  variants.0.steps.6.why: zh-Hans
+  variants.0.steps.6.when: zh-Hans
+  variants.0.steps.6.outputs.0: zh-Hans
+  variants.1.title: zh-Hans
+  variants.1.when: zh-Hans
+  variants.1.steps.0.title: zh-Hans
+  variants.1.steps.0.why: zh-Hans
+  variants.1.steps.0.when: zh-Hans
+  variants.1.steps.0.outputs.0: zh-Hans
+  variants.1.steps.1.title: zh-Hans
+  variants.1.steps.1.why: zh-Hans
+  variants.1.steps.1.when: zh-Hans
+  variants.1.steps.1.outputs.0: zh-Hans
+  variants.1.steps.2.title: zh-Hans
+  variants.1.steps.2.why: zh-Hans
+  variants.1.steps.2.when: zh-Hans
+  variants.1.steps.2.outputs.0: zh-Hans
+  variants.1.steps.3.title: zh-Hans
+  variants.1.steps.3.why: zh-Hans
+  variants.1.steps.3.when: zh-Hans
+  variants.1.steps.3.outputs.0: zh-Hans
+  variants.1.steps.4.title: zh-Hans
+  variants.1.steps.4.why: zh-Hans
+  variants.1.steps.4.outputs.0: zh-Hans
+  variants.1.steps.5.title: zh-Hans
+  variants.1.steps.5.why: zh-Hans
+  variants.1.steps.5.when: zh-Hans
+  variants.1.steps.5.outputs.0: zh-Hans
+  variants.1.steps.6.title: zh-Hans
+  variants.1.steps.6.why: zh-Hans
+  variants.1.steps.6.when: zh-Hans
+  variants.1.steps.6.outputs.0: zh-Hans
+  variants.2.title: zh-Hans
+  variants.2.when: zh-Hans
+  variants.2.steps.0.title: zh-Hans
+  variants.2.steps.0.why: zh-Hans
+  variants.2.steps.0.outputs.0: zh-Hans
+  variants.2.steps.1.title: zh-Hans
+  variants.2.steps.1.why: zh-Hans
+  variants.2.steps.1.when: zh-Hans
+  variants.2.steps.1.outputs.0: zh-Hans
+  variants.2.steps.2.title: zh-Hans
+  variants.2.steps.2.why: zh-Hans
+  variants.2.steps.2.when: zh-Hans
+  variants.2.steps.2.outputs.0: zh-Hans
+  variants.3.title: zh-Hans
+  variants.3.when: zh-Hans
+  variants.3.steps.0.title: zh-Hans
+  variants.3.steps.0.why: zh-Hans
+  variants.3.steps.0.when: zh-Hans
+  variants.3.steps.0.outputs.0: zh-Hans
+  variants.3.steps.1.title: zh-Hans
+  variants.3.steps.1.why: zh-Hans
+  variants.3.steps.1.outputs.0: zh-Hans
+  variants.3.steps.2.title: zh-Hans
+  variants.3.steps.2.why: zh-Hans
+  variants.3.steps.2.when: zh-Hans
+  variants.3.steps.2.outputs.0: zh-Hans
+  variants.3.steps.3.title: zh-Hans
+  variants.3.steps.3.why: zh-Hans
+  variants.3.steps.3.when: zh-Hans
+  variants.3.steps.3.outputs.0: zh-Hans

@@ -1,0 +1,50 @@
+title: implement
+summary: 实现一个由 spec 或 tickets 描述的具体工作单元。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: implementation-feedback
+secondary_clusters:
+  - delivery-human-loop
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后，按 spec 或票据工作，在已经确认的公共 seam 上尽可能使用 TDD 的 red→green 小片实现，期间运行类型检查和相关测试，末尾运行完整测试并调用 code-review，最后提交到当前分支。TDD 与 review 是这条实施路径包含的能力，不需要用户完成实施后再重复手工启动。
+when_to_use:
+  - 已有明确 ticket 或小型 spec，可在当前 session 内完成。
+  - 希望以测试和 review 约束 Agent 实现。
+solves:
+  - 让代码生成进入短反馈循环。
+  - 防止“写完即完成”而缺少验证与审查。
+inputs:
+  - spec 或 ticket
+  - 当前仓库
+outputs:
+  - 实现代码
+  - 测试结果
+  - code review 结果
+  - commit
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement/SKILL.md
+handoffs: []
+official_description: Implement a piece of work based on a spec or set of tickets.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  outputs.3: en
+  tags.0: en
+  tags.1: en
+  tags.2: en

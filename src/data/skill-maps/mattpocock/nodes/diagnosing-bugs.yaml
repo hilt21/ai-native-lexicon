@@ -1,0 +1,48 @@
+title: diagnosing-bugs
+summary: 用能捕获真实症状的短反馈寻找根因并修复；正确 seam 上建立回归保护，缺少 seam 时记录发现。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: debugging-research
+secondary_clusters:
+  - implementation-feedback
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: 先实际运行一个能捕获此 bug 精确症状的快速反馈命令并看到失败；flake 先提高并固定复现率。再逐项缩小 repro、列出可证伪假设并 instrument。只有存在能表达真实调用模式的正确 seam 时，才先写失败回归测试、修复并看其通过；否则记录缺少 seam 这一发现。最后重跑原始场景、清理 debug instrumentation 并记录根因。没有反馈入口时先说明尝试与访问缺口，不靠猜测继续。
+when_to_use:
+  - bug 不适合凭代码阅读直接判断。
+  - 问题是间歇性、回归性或性能相关。
+solves:
+  - 把根因判断建立在能观察真实症状的反馈上。
+  - 在存在正确 seam 时锁定修复，否则揭示架构可测试性缺口。
+inputs:
+  - bug symptom
+  - 可运行系统
+outputs:
+  - 可重复反馈或固定高复现率的 repro
+  - 根因证据与修复
+  - 正确 seam 上的回归测试，或明确记录缺失 seam
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/diagnosing-bugs/SKILL.md
+handoffs: []
+official_description: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: en
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

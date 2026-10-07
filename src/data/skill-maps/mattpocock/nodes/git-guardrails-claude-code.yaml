@@ -1,0 +1,42 @@
+title: git-guardrails-claude-code
+summary: 用 Claude Code hooks 阻止危险 Git 命令执行。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: communication-tooling
+secondary_clusters:
+  - architecture-quality
+tags:
+  - misc
+  - model-invoked
+  - stable
+mechanism: 为 Claude Code 的项目或全局范围配置 PreToolUse Bash hook，在命令执行前拦截所有 git push 以及 reset --hard、clean、branch -D 等指定危险操作，并可按需求调整规则。push 是否有破坏性与它被策略阻止是不同判断；这些 hooks 不是所有 harness 通用的保护。
+when_to_use:
+  - 希望限制 Agent 执行危险 Git 操作。
+  - 仓库需要更强的版本控制安全边界。
+solves:
+  - 把 Git 安全从提示词升级成运行前 guardrail。
+inputs:
+  - 项目或全局 Claude Code 配置
+  - 需要阻止的 git 操作范围
+outputs:
+  - Git safety hooks
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: misc/git-guardrails-claude-code/SKILL.md
+handoffs: []
+official_description: Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, branch -D, etc.) before they execute. Use when user wants to prevent destructive git operations, add git safety hooks, or block git push/reset in Claude Code.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: en
+  tags.0: en
+  tags.1: en
+  tags.2: en

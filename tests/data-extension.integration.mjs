@@ -9,8 +9,16 @@ import { promisify } from 'node:util';
 import { parse, stringify } from 'yaml';
 import { categoryRegistry } from '../src/domain/taxonomy/categories.mjs';
 import { layerRegistry } from '../src/domain/taxonomy/layers.mjs';
+import { readCatalog, validateCatalog } from '../src/domain/content/catalog.mjs';
 
-test('a second skill map appears across page and machine projections using only YAML additions', async () => {
+test('Matt Pocock and an additional skill map appear across page and machine projections using only YAML additions', async () => {
+  const baseline = await readCatalog();
+  assert.deepEqual(validateCatalog(baseline).errors, []);
+  const mattRecord = baseline.skillMaps.find((map) => map.id === 'mattpocock');
+  assert.ok(mattRecord, 'the approved Matt Pocock map must be discoverable through the public catalog');
+  const matt = mattRecord.data;
+  assert.equal(matt.nodes.length, 31);
+  assert.deepEqual(matt.journeys.map(({ id }) => id).sort(), ['build-a-feature', 'choose-a-skill', 'clarify-an-idea', 'fix-a-hard-bug', 'handoff-work', 'improve-codebase', 'plan-a-huge-effort']);
   await inIsolatedProject(async (directory) => {
     const root = join(directory, 'src/data/skill-maps/example');
     await mkdir(join(root, 'nodes'), { recursive: true });
@@ -24,7 +32,14 @@ test('a second skill map appears across page and machine projections using only 
     await writeFile(join(root, 'nodes/how.yaml'), stringify({ ...node, type: 'tool' }));
     await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
     const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
-    assert.equal(dataset.counts.skill_maps, 2);
+    assert.equal(dataset.schema_version, '1.2.0');
+    assert.equal(dataset.counts.skill_maps, baseline.skillMaps.length + 1);
+    const exportedMatt = dataset.skill_maps.find((map) => map.id === 'mattpocock');
+    assert.equal(exportedMatt.schema_version, '1.1.0');
+    assert.equal(exportedMatt.text_languages.scope, 'zh-Hans');
+    assert.equal(exportedMatt.text_languages.title, 'en');
+    assert.equal(exportedMatt.nodes.length, 31);
+    assert.equal(exportedMatt.journeys.length, 7);
     assert.equal(dataset.skill_maps.find((m) => m.id === 'example').nodes[0].id, 'how');
     const page = await readFile(join(directory, 'dist/skill-maps/example/nodes/how/index.html'), 'utf8');
     assert.match(page, /Example Skill Map/);
@@ -32,6 +47,21 @@ test('a second skill map appears across page and machine projections using only 
     const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');
     assert.match(search, /\/ai-native-lexicon\/skill-maps\/example\/nodes\/how\//);
     assert.match(await readFile(join(directory, 'dist/llms.txt'), 'utf8'), /Example Skill Map/);
+    assert.match(await readFile(join(directory, 'dist/llms.txt'), 'utf8'), /Matt Pocock Skills Map/);
+    const maps = await readFile(join(directory, 'dist/skill-maps/index.html'), 'utf8');
+    assert.match(maps, /\/ai-native-lexicon\/skill-maps\/mattpocock\//);
+    for (const collection of ['nodes', 'journeys']) {
+      for (const { id } of matt[collection]) {
+        const route = `/ai-native-lexicon/skill-maps/mattpocock/${collection}/${id}/`;
+        assert.ok(search.includes(route), `${route} is discoverable in Search`);
+        const detail = await readFile(join(directory, `dist/skill-maps/mattpocock/${collection}/${id}/index.html`), 'utf8');
+        assert.match(detail, /Matt Pocock Skills Map/);
+        assert.match(detail, /dd400c3ad65e57c06f05e832e0aac92c7992f34d/);
+      }
+    }
+    for (const path of ['index.html', 'nodes/index.html', 'overview/index.html']) {
+      assert.match(await readFile(join(directory, 'dist/skill-maps/mattpocock', path), 'utf8'), /Matt Pocock Skills Map/);
+    }
     const pstack = await readFile(join(directory, 'dist/skill-maps/pstack/journeys/fix-bug/index.html'), 'utf8');
     assert.match(pstack, /修复涉及模块或接口变化时/);
     const configuredMap = await yaml(directory, 'src/data/skill-maps/example/map.yaml');

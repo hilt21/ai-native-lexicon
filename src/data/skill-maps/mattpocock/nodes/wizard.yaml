@@ -1,0 +1,46 @@
+title: wizard
+summary: 为只能由人完成的外部步骤生成交互式 Bash 向导。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: delivery-human-loop
+secondary_clusters:
+  - communication-tooling
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: 遇到只有人能完成的认证、凭据、第三方 dashboard 或 cutover 步骤时，生成交互式 Bash 向导，把 URL、提示、采集值和配置写入步骤组织起来。Agent 只生成并静态验证脚本，将运行命令交给人；人执行时才采集值或写入配置。Agent 能自行完成的步骤不进入这个向导。
+when_to_use:
+  - Agent 遇到必须由人完成的认证、凭据或第三方 UI 操作。
+  - 一次性 migration/cutover 需要防止遗漏步骤。
+solves:
+  - 减少每次重新向人解释操作步骤。
+  - 让 human-in-the-loop 过程更可重复、更少出错。
+inputs:
+  - 人工操作目标
+  - 需要采集或写入的配置
+outputs:
+  - 交互式 Bash 向导
+  - 静态验证结果与供人运行的命令
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/wizard/SKILL.md
+handoffs: []
+official_description: Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

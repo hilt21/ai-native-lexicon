@@ -1,0 +1,44 @@
+title: grilling
+summary: 作为可复用 interview primitive，持续追问直到设计树的开放分支被解决。
+type: discipline
+status: active
+layer: discipline
+primary_cluster: alignment-domain
+secondary_clusters:
+  - spec-planning
+tags:
+  - productivity
+  - model-invoked
+  - stable
+mechanism: 维护待决问题 frontier，每轮提出所有已经就绪的问题及建议，等待用户回答。可查事实通过探索取得，偏好和产品决定由用户选择；只有 frontier 清空且用户确认共同理解后才结束，不替用户模拟答案。
+when_to_use:
+  - 任何 wrapper 需要结构化 interview。
+  - 用户明确要求 stress-test 一个计划或决定。
+solves:
+  - 避免一次性“大问题”只得到表面答案。
+  - 把模糊想法分解成一组可决策分支。
+inputs:
+  - 计划、决定或想法
+outputs:
+  - 已解决的设计分支
+  - 剩余未知
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/grilling/SKILL.md
+handoffs: []
+official_description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test their thinking, or uses any 'grill' trigger phrases.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

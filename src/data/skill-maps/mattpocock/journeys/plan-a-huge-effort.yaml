@@ -1,0 +1,74 @@
+title: 这个项目太大，一次想不清
+summary: 用 decision tickets 逐步消除未知，直到巨大工作可以坍缩成普通 spec 和 tickets。
+order: 5
+when_to_use:
+  - greenfield 项目或巨大 feature 超过单个 Agent session 的认知容量。
+inputs:
+  - 长期目标
+  - 当前未知
+outputs:
+  - decision map
+  - 已解决未知
+  - 可进入主开发流程的 spec 输入
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/wayfinder/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-tickets/SKILL.md
+variants:
+  - id: standard
+    title: 逐步消除未知，再回到 spec
+    steps:
+      - title: 首次使用先完成配置
+        why: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - 可供后续入口读取的项目配置
+        optional: true
+        when: 首次工程工作，或项目配置仍缺失。
+      - title: 建立并推进决策地图
+        why: 用户启动 wayfinder；它在 tracker 上以 decision tickets 管理未知，按问题类型内部使用 research、prototype 或 grilling。产物是决策而非工程交付。
+        nodes:
+          - wayfinder
+        outputs:
+          - 共享 decision map 与已解决未知
+      - title: 把清晰决策折叠为规格
+        why: 当路径清楚后，由用户启动 to-spec，将 linked decisions 综合成 buildable plan，并确认测试 seam；不直接跳到整个巨大工作的实现。
+        nodes:
+          - to-spec
+        outputs:
+          - durable spec 与确认的测试边界
+      - title: 确认并发布执行票据
+        why: 由用户启动 to-tickets，确认完整 vertical tracer-bullet 的粒度与 blocking graph，再选择逐票或整图实施。
+        nodes:
+          - to-tickets
+        outputs:
+          - agent-ready tickets 与阻塞关系
+text_languages:
+  title: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: en
+  outputs.1: zh-Hans
+  outputs.2: zh-Hans
+  variants.0.title: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.0.when: zh-Hans
+  variants.0.steps.0.outputs.0: zh-Hans
+  variants.0.steps.1.title: zh-Hans
+  variants.0.steps.1.why: zh-Hans
+  variants.0.steps.1.outputs.0: zh-Hans
+  variants.0.steps.2.title: zh-Hans
+  variants.0.steps.2.why: zh-Hans
+  variants.0.steps.2.outputs.0: zh-Hans
+  variants.0.steps.3.title: zh-Hans
+  variants.0.steps.3.why: zh-Hans
+  variants.0.steps.3.outputs.0: zh-Hans

@@ -1,0 +1,68 @@
+title: 我要把工作交给另一个 Agent 或人
+summary: 根据接收者不同，把上下文压缩成 handoff，或把外部决策缺口变成 questionnaire。
+order: 7
+when_to_use:
+  - 需要新 harness、新目录、交给同事或在阶段中分出侧任务。
+  - 当前阻塞信息只有另一位利益相关者能够提供。
+inputs:
+  - 当前工作状态或决策缺口
+outputs:
+  - portable handoff 或 questionnaire
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/handoff/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/to-questionnaire/SKILL.md
+variants:
+  - id: agent-handoff
+    title: 新 harness、目录、同事或侧任务
+    when: 需要 portable artifact；普通阶段边界可先继续或根据条件 clear/compact/委派。
+    steps:
+      - title: 压缩可携带上下文
+        why: 用户启动 handoff，写明目标、决策、状态、证据、使用的技能、文件指针和下一步。
+        nodes:
+          - handoff
+        outputs:
+          - 操作系统临时目录中的 handoff Markdown
+  - id: human-questionnaire
+    title: 向另一个人获取缺失信息
+    when: 真正的阻塞在外部利益相关者掌握的信息或决定。
+    steps:
+      - title: 先确认问卷收件人与结果
+        why: 用户启动 to-questionnaire；先追问要发给谁、需要拿回什么，再把缺口写成可异步填写的问卷。生成问卷不等于发送。
+        nodes:
+          - to-questionnaire
+        outputs:
+          - 面向已明确收件人的 Markdown questionnaire
+      - title: 将回答带回设计或规格
+        why: 回答是新材料，用户根据准备状态选择继续 grill-with-docs 或综合 to-spec；它们不是同时自动启动。
+        nodes:
+          - grill-with-docs
+          - to-spec
+        outputs:
+          - 补齐的设计决定或 spec 输入
+        optional: true
+        when: 已取得回答并需要继续原工作。
+text_languages:
+  title: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  when_to_use.1: zh-Hans
+  inputs.0: zh-Hans
+  outputs.0: zh-Hans
+  variants.0.title: zh-Hans
+  variants.0.when: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.0.outputs.0: zh-Hans
+  variants.1.title: zh-Hans
+  variants.1.when: zh-Hans
+  variants.1.steps.0.title: zh-Hans
+  variants.1.steps.0.why: zh-Hans
+  variants.1.steps.0.outputs.0: zh-Hans
+  variants.1.steps.1.title: zh-Hans
+  variants.1.steps.1.why: zh-Hans
+  variants.1.steps.1.when: zh-Hans
+  variants.1.steps.1.outputs.0: zh-Hans

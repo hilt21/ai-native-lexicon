@@ -1,0 +1,208 @@
+{
+  "base": "/ai-native-lexicon",
+  "browser": "154.0.8037.98",
+  "layouts": [
+    {
+      "route": "skill-maps/",
+      "width": 390,
+      "theme": "light",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/",
+      "width": 390,
+      "theme": "light",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/",
+      "width": 390,
+      "theme": "light",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/tdd/",
+      "width": 390,
+      "theme": "light",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/journeys/build-a-feature/",
+      "width": 390,
+      "theme": "light",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/overview/",
+      "width": 390,
+      "theme": "light",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/",
+      "width": 390,
+      "theme": "dark",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/",
+      "width": 390,
+      "theme": "dark",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/",
+      "width": 390,
+      "theme": "dark",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/tdd/",
+      "width": 390,
+      "theme": "dark",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/journeys/build-a-feature/",
+      "width": 390,
+      "theme": "dark",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/overview/",
+      "width": 390,
+      "theme": "dark",
+      "document": 390,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/",
+      "width": 1440,
+      "theme": "light",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/",
+      "width": 1440,
+      "theme": "light",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/",
+      "width": 1440,
+      "theme": "light",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/tdd/",
+      "width": 1440,
+      "theme": "light",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/journeys/build-a-feature/",
+      "width": 1440,
+      "theme": "light",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/overview/",
+      "width": 1440,
+      "theme": "light",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/",
+      "width": 1440,
+      "theme": "dark",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/",
+      "width": 1440,
+      "theme": "dark",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/",
+      "width": 1440,
+      "theme": "dark",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/nodes/tdd/",
+      "width": 1440,
+      "theme": "dark",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/journeys/build-a-feature/",
+      "width": 1440,
+      "theme": "dark",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    },
+    {
+      "route": "skill-maps/mattpocock/overview/",
+      "width": 1440,
+      "theme": "dark",
+      "document": 1440,
+      "h1": 1,
+      "main": 1
+    }
+  ],
+  "checks": [
+    "31-node directory, name filter, map ownership, empty state, clear and keyboard focus",
+    "data-only language metadata, immutable source links and named implementation variants",
+    "global Search same-name isolation, owner names, empty query and recovery",
+    "no-JS task, node and journey direct reading/navigation"
+  ],
+  "observed_at": "2026-10-07",
+  "map_input_schema": "1.1.0",
+  "dataset_schema": "1.2.0",
+  "verified_after_final_semantic_corrections": true
+}

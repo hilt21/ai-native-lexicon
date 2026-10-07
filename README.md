@@ -8,7 +8,7 @@
 
 AI-native software brings together context, tools, permissions, memory, state, and feedback. This open lexicon helps developers, system designers and educators understand those ideas, discuss design decisions, prepare explanations and explore how agent skills work together.
 
-**84 concepts · 18 categories · 42 primitives · 20 Speaking Cards · 1 Skill Map**
+**84 concepts · 18 categories · 42 primitives · 20 Speaking Cards · 2 Skill Maps**
 
 ## Start with your task
 
@@ -26,6 +26,8 @@ Browse concepts by [category](https://hilt21.github.io/ai-native-lexicon/categor
 **From an idea to a discussion:** start with [Harness](https://hilt21.github.io/ai-native-lexicon/concepts/harness/), open the [Harness primitive](https://hilt21.github.io/ai-native-lexicon/primitives/harness/), then use [Agent Harness · Card 04](https://hilt21.github.io/ai-native-lexicon/speaking-card/#card-04) to explain and discuss the design.
 
 **From a task to a skill combination:** open the [pstack Skill Map](https://hilt21.github.io/ai-native-lexicon/skill-maps/pstack/), choose [“我想修 bug”](https://hilt21.github.io/ai-native-lexicon/skill-maps/pstack/journeys/fix-bug/), and follow the recommended and conditional steps to each node's mechanism, inputs, outputs and source. The first map contains 74 nodes covering skills, playbooks and principles, with seven task journeys. These journeys provide guidance; the website does not execute skills.
+
+The [Matt Pocock Skills Map](https://hilt21.github.io/ai-native-lexicon/skill-maps/mattpocock/) offers seven task journeys and 31 skills pinned to upstream 1.3.1. Its scope includes the 27 plugin-listed skills and four repository misc tools; seven in-progress skills are excluded. Start with [choosing a skill](https://hilt21.github.io/ai-native-lexicon/skill-maps/mattpocock/journeys/choose-a-skill/) or [building a feature](https://hilt21.github.io/ai-native-lexicon/skill-maps/mattpocock/journeys/build-a-feature/). Recommendations explain when the user chooses an entry and when a workflow uses a reusable capability.
 
 ![pstack Skill Map task entry page](./docs/audits/assets/skill-map-tasks-desktop.png)
 
@@ -85,8 +87,8 @@ Help improve a term's boundary, example or evidence, or propose a meaningful new
 
 - [Content editing and validation](./CONTRIBUTING.md), including [Speaking Guides](./CONTRIBUTING.md#scope-of-changes) and [Skill Maps](./CONTRIBUTING.md#skill-maps).
 - [Primitive content guide](./docs/primitives.md).
-- [Skill Map field and UI contract](./docs/design/skill-map.md) and [pstack source-verification record](./docs/audits/skill-map-sm-01.md).
+- [Skill Map field and UI contract](./docs/design/skill-map.md), [pstack source-verification record](./docs/audits/skill-map-sm-01.md) and [Matt Pocock source and semantic audit](./docs/audits/skill-map-mp-01.md).
 - [Shared content boundary](./src/domain/content/README.md) and [machine-readable projections](./docs/exports.md).
 - [Domain glossary](./GLOSSARY.md) and [application-resource architecture](./docs/adr/0006-application-resources-and-projections.md).
 
-Source code: [MIT](./LICENSE). Editorial content: [CC BY 4.0, except where otherwise noted](./LICENSE-CONTENT.md). The pstack source descriptions retain their [upstream MIT notice](./src/data/skill-maps/pstack/SOURCE-LICENSE.txt).
+Source code: [MIT](./LICENSE). Editorial content: [CC BY 4.0, except where otherwise noted](./LICENSE-CONTENT.md). Upstream-derived Skill Map content retains the source MIT notices for [pstack](./src/data/skill-maps/pstack/SOURCE-LICENSE.txt) and [Matt Pocock](./src/data/skill-maps/mattpocock/SOURCE-LICENSE.txt).

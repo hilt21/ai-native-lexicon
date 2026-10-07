@@ -1,0 +1,46 @@
+title: teach
+summary: 在当前 workspace 中用多 session 方式持续教授一个技能或概念。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: communication-tooling
+secondary_clusters:
+  - alignment-domain
+tags:
+  - productivity
+  - user-invoked
+  - stable
+mechanism: 用户显式启动后先澄清学习 mission 与可信资料，在当前目录建立可持续的教学 workspace，用带引用的短篇交互 HTML lessons、reference HTML、学习记录和可复用资产支持跨 session 学习。mission 变化需用户确认；记录和重复练习旨在长期保留理解，不承诺掌握结果。
+when_to_use:
+  - 希望持续学习一个主题，而不是得到一次性解释。
+solves:
+  - 跨 session 保留学习进度。
+  - 把教学从单次回答变成可延续的学习流程。
+inputs:
+  - 学习 mission
+  - 可信资源
+  - 当前学习记录与 workspace
+outputs:
+  - 带引用的交互 HTML lessons 与 reference HTML
+  - 可跨 session 延续的学习记录和资产
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/teach/SKILL.md
+handoffs: []
+official_description: Teach the user a new skill or concept, within this workspace.
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  inputs.2: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

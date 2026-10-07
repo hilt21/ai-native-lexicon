@@ -1,0 +1,360 @@
+relations:
+  - from: ask-matt
+    to: setup-matt-pocock-skills
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 首次工程流程且项目配置缺失时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: grill-with-docs
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 有 working directory 且设计仍未清晰时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: triage
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 原始外部请求尚未准备好；不包括 to-tickets 生成的票时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: improve-codebase-architecture
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 希望调查架构或维护机会时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: to-spec
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 决定已清晰且需要多 session 规格时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: to-tickets
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 已有 spec 且需要自包含执行票据时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: implement
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 小而明确的工作或一张 agent-ready 票时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: implement-spec
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 选择整图编排，与逐票 implement 二选一时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: wayfinder
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 工作太大且前往目标的路线尚不清晰时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: retro
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 用户希望回看 session 的环境摩擦，原记录仍可查时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: grill-me
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 没有 working directory，需要无状态澄清时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: handoff
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 需要新 harness、新目录、交给同事或阶段中分出侧任务时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: teach
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 需要在教学 workspace 跨 session 学习时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: ask-matt
+    to: to-questionnaire
+    type: routes_to
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 缺失信息由另一位利益相关者掌握时推荐此入口，推荐后停止；用户决定是否显式启动。
+  - from: setup-matt-pocock-skills
+    to: triage
+    type: configures
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/setup-matt-pocock-skills/SKILL.md
+    note: 建立 tracker、标签与领域文档等项目前提，不代表安装技能或自动调用后续入口。
+  - from: setup-matt-pocock-skills
+    to: to-spec
+    type: configures
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/setup-matt-pocock-skills/SKILL.md
+    note: 建立 tracker、标签与领域文档等项目前提，不代表安装技能或自动调用后续入口。
+  - from: setup-matt-pocock-skills
+    to: to-tickets
+    type: configures
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/setup-matt-pocock-skills/SKILL.md
+    note: 建立 tracker、标签与领域文档等项目前提，不代表安装技能或自动调用后续入口。
+  - from: setup-matt-pocock-skills
+    to: implement-spec
+    type: configures
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/setup-matt-pocock-skills/SKILL.md
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/implement-spec/SKILL.md
+    note: 建立 tracker、标签与领域文档等项目前提，不代表安装技能或自动调用后续入口。
+  - from: grill-with-docs
+    to: grilling
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/grill-with-docs/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: grill-with-docs
+    to: domain-modeling
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/grill-with-docs/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: grill-me
+    to: grilling
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: productivity/grill-me/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: triage
+    to: grilling
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/triage/SKILL.md
+    note: 只有验证及处理方向确定后，仍需 fleshing out 的请求才内部调用 grilling。
+  - from: improve-codebase-architecture
+    to: codebase-design
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/improve-codebase-architecture/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: improve-codebase-architecture
+    to: grilling
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/improve-codebase-architecture/SKILL.md
+    note: 先等待用户选择候选，再内部调用 grilling 深入该方向；不自动选择或重构所有候选。
+  - from: to-spec
+    to: to-tickets
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 适用条件下，前一阶段的产物供用户选择下一入口；不是自动启动用户技能。
+  - from: to-tickets
+    to: implement
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 已批准的自包含票据供用户逐票实施；与整图 implement-spec 二选一。
+  - from: to-tickets
+    to: implement-spec
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 已批准的票据图供用户整图编排；与逐票 implement 二选一。
+  - from: triage
+    to: implement
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 只在外部输入已形成 agent-ready brief 后交接实施；to-tickets 已准备的票不重复 triage。
+  - from: implement
+    to: tdd
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/implement/SKILL.md
+    note: 固定正文要求尽可能在事先约定的 seam 上使用 TDD；不是事后重复的独立阶段。
+  - from: implement
+    to: code-review
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/implement/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: implement-spec
+    to: tdd
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/implement-spec/SKILL.md
+    note: 各 implementer 直接调用 model-invoked 的 TDD；编排者没有自动调用 user-invoked 的 implement。
+  - from: implement-spec
+    to: code-review
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/implement-spec/SKILL.md
+    note: 所有票据合入 integration branch 后做一次全图审查，不要求再重复每票独立审查。
+  - from: implement
+    to: pr
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 需要 PR 交付时，代码与验证证据供 Agent 编写 PR body；此关系不授予远端发布或合并权限。
+  - from: implement-spec
+    to: pr
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: integration branch 与统一 review 的证据可用于 PR body；是否创建或合并由任务授权决定。
+  - from: implement
+    to: retro
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 实施记录可供用户复盘环境；retro 输出候选，不自动应用建议。
+  - from: implement-spec
+    to: retro
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 整图实施的 session 证据可供用户复盘环境；不是编排者自动应用建议。
+  - from: wayfinder
+    to: research
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/wayfinder/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: wayfinder
+    to: prototype
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/wayfinder/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: wayfinder
+    to: grilling
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/wayfinder/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: wayfinder
+    to: to-spec
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 当决策地图清晰后，由用户启动 to-spec 折叠决策；不是跳过规格直接交付代码。
+  - from: diagnosing-bugs
+    to: retro
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 修复后由用户选择在同一 session 复盘；这是 ask-matt 的条件性教学建议，不是自动收尾调用。
+  - from: diagnosing-bugs
+    to: improve-codebase-architecture
+    type: feeds
+    note: 仅当缺少可观察和锁定行为的 seam 时，由用户选择架构 survey；不是自动重构。
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+  - from: retro
+    to: writing-for-agents
+    type: uses
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/retro/SKILL.md
+    note: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+  - from: prototype
+    to: handoff
+    type: feeds
+    note: 仅当跨目录、新 harness、交给同事或阶段中分出的侧任务需要 portability 时，交接原型问题、结论及来源指针；普通返回讨论不需要 handoff。
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+  - from: handoff
+    to: prototype
+    type: feeds
+    note: 只有需要 portable context 的 prototype detour 才经 handoff；独立原型源码要求代码靠近相关模块或页面。
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+  - from: prototype
+    to: grill-with-docs
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 原型回答设计问题后，可将结论（必要时经 handoff）带回原讨论；不自动调用用户入口。
+  - from: research
+    to: grill-with-docs
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 带引用的研究结果供原讨论继续澄清；研究不能代替需求决策，不自动调用用户入口。
+  - from: to-questionnaire
+    to: grill-with-docs
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 取得外部回答后，用户可选择继续设计讨论；问卷不是自动发送或自动启动讨论。
+  - from: to-questionnaire
+    to: to-spec
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 取得回答且决策足够清晰后，可作为规格输入；用户显式启动 to-spec。
+  - from: improve-codebase-architecture
+    to: grill-with-docs
+    type: feeds
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/ask-matt/SKILL.md
+    note: 用户选中 survey 候选后，将它作为新的 idea 带回主流程；不自动实施全部建议。
+  - from: tdd
+    to: codebase-design
+    type: uses
+    note: 明确引用同一套 seam/deep-module 词汇；仅当公共测试界面的形状还需讨论时查阅，不是每片都运行的阶段。
+    source_refs:
+      - source: mattpocock-skills-1-3-1-dd400c3a
+        path: engineering/tdd/SKILL.md

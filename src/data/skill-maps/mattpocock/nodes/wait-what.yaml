@@ -1,0 +1,42 @@
+title: wait-what
+summary: 当上一条信息没有被理解时，用缺失上下文和共享词汇重新解释。
+type: workflow
+status: active
+layer: workflow
+primary_cluster: communication-tooling
+secondary_clusters:
+  - alignment-domain
+tags:
+  - productivity
+  - user-invoked
+  - stable
+mechanism: 用户表示上一条消息未被理解后，回看缺少的前置概念，用 GLOSSARY.md 的共享词汇及更普通的语言重新解释，暂停向前推进。固定正文要求采用 ASD-STE100 Simplified Technical English 的写作方向；这项来源指令不等于文本已通过 STE 合规核验。
+when_to_use:
+  - 用户明确表示上一条解释没听懂。
+solves:
+  - 防止误解在后续对话中继续累积。
+  - 降低技术沟通的术语负担。
+inputs:
+  - 上一条消息
+  - 项目 glossary（如存在）
+outputs:
+  - 重新表述的解释
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/wait-what/SKILL.md
+handoffs: []
+official_description: "Stop. That last message did not land: re-pitch it."
+text_languages:
+  title: en
+  summary: zh-Hans
+  mechanism: zh-Hans
+  official_description: en
+  when_to_use.0: zh-Hans
+  solves.0: zh-Hans
+  solves.1: zh-Hans
+  inputs.0: zh-Hans
+  inputs.1: zh-Hans
+  outputs.0: zh-Hans
+  tags.0: en
+  tags.1: en
+  tags.2: en

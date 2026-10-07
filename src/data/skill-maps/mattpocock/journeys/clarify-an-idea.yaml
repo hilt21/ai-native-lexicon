@@ -1,0 +1,133 @@
+title: 我有个想法，想把它做清楚
+summary: 通过结构化追问消除隐含决策，并在有仓库时沉淀领域词汇和 ADR。
+order: 2
+when_to_use:
+  - 开始一个新 feature、设计或重要计划，但还没有足够清晰的 spec。
+inputs:
+  - 初始想法或设计
+outputs:
+  - 澄清后的设计
+  - 可继续转成 spec 的上下文
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/grill-with-docs/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/grill-me/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/prototype/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/handoff/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+variants:
+  - id: in-repo
+    title: 在 working directory 中工作
+    when: 当前有可记录领域词汇和决策的仓库。
+    steps:
+      - title: 首次使用先完成配置
+        why: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - 可供后续入口读取的项目配置
+        optional: true
+        when: 首次工程工作，或项目配置仍缺失。
+      - title: 追问并建立共享语言
+        why: 用户启动 grill-with-docs；它内部调用 grilling 与 domain-modeling，稳定认识进入 GLOSSARY.md 与 ADR。
+        nodes:
+          - grill-with-docs
+        outputs:
+          - 澄清设计、共享词汇与必要 ADR
+      - title: 将一个探索问题交接出去
+        why: 仅当探索需要新目录、新 harness 或分出侧任务时，用 portable handoff 保留问题和背景。
+        nodes:
+          - handoff
+        outputs:
+          - 原型问题与上下文的 Markdown
+        optional: true
+        when: 关键设计问题需要可运行答案，且需要切换上下文。
+      - title: 运行可抛弃的原型
+        why: prototype 用真实运行回答逻辑、状态或视觉问题；在有关模块或页面附近标明 throwaway，并保留分支及 issue 指针。
+        nodes:
+          - prototype
+        outputs:
+          - 可运行原型、观察和设计结论
+        optional: true
+        when: 对话尚不能解决关键设计问题。
+      - title: 需要 portability 时交接结论
+        why: 只有跨目录、harness、交给同事或阶段中侧任务的返回才使用 handoff；普通回到原讨论直接带入结论指针。
+        nodes:
+          - handoff
+        outputs:
+          - 带来源指针的 portable 结论
+        optional: true
+        when: 原型探索已有结论且实际需要 portability/fork。
+      - title: 继续原设计讨论
+        why: 在原讨论中引用原型结论和保留的分支/issue 指针；原型不直接替代规格，也不必为了普通讨论返回再启动 handoff。
+        nodes:
+          - grill-with-docs
+        outputs:
+          - 更新后的设计
+        optional: true
+        when: 原型 detour 已有结论且需要继续澄清设计。
+      - title: 综合规格并确认测试边界
+        why: 把已讨论的决定写成 durable spec；测试 seam 要先与用户确认。
+        nodes:
+          - to-spec
+        outputs:
+          - 已发布的 agent-ready spec 与确认的 seam
+        optional: true
+        when: 准备进入多 session 工作，且尚无完整 spec。
+  - id: no-repo
+    title: 没有 working directory
+    when: 正在思考计划或设计，没有仓库可存领域文档。
+    steps:
+      - title: 无状态地问清设计
+        why: 用户启动 grill-me，内部使用同一 grilling primitive；不创建 GLOSSARY.md 或 ADR。
+        nodes:
+          - grill-me
+        outputs:
+          - 澄清后的决策树
+text_languages:
+  title: zh-Hans
+  summary: zh-Hans
+  when_to_use.0: zh-Hans
+  inputs.0: zh-Hans
+  outputs.0: zh-Hans
+  outputs.1: zh-Hans
+  variants.0.title: zh-Hans
+  variants.0.when: zh-Hans
+  variants.0.steps.0.title: zh-Hans
+  variants.0.steps.0.why: zh-Hans
+  variants.0.steps.0.when: zh-Hans
+  variants.0.steps.0.outputs.0: zh-Hans
+  variants.0.steps.1.title: zh-Hans
+  variants.0.steps.1.why: zh-Hans
+  variants.0.steps.1.outputs.0: zh-Hans
+  variants.0.steps.2.title: zh-Hans
+  variants.0.steps.2.why: zh-Hans
+  variants.0.steps.2.when: zh-Hans
+  variants.0.steps.2.outputs.0: zh-Hans
+  variants.0.steps.3.title: zh-Hans
+  variants.0.steps.3.why: zh-Hans
+  variants.0.steps.3.when: zh-Hans
+  variants.0.steps.3.outputs.0: zh-Hans
+  variants.0.steps.4.title: zh-Hans
+  variants.0.steps.4.why: zh-Hans
+  variants.0.steps.4.when: zh-Hans
+  variants.0.steps.4.outputs.0: zh-Hans
+  variants.0.steps.5.title: zh-Hans
+  variants.0.steps.5.why: zh-Hans
+  variants.0.steps.5.when: zh-Hans
+  variants.0.steps.5.outputs.0: zh-Hans
+  variants.0.steps.6.title: zh-Hans
+  variants.0.steps.6.why: zh-Hans
+  variants.0.steps.6.when: zh-Hans
+  variants.0.steps.6.outputs.0: zh-Hans
+  variants.1.title: zh-Hans
+  variants.1.when: zh-Hans
+  variants.1.steps.0.title: zh-Hans
+  variants.1.steps.0.why: zh-Hans
+  variants.1.steps.0.outputs.0: zh-Hans
