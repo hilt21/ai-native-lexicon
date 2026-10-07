@@ -1,0 +1,29 @@
+title: build-the-lever
+summary: 优先构建可重复执行或验证任务的工具。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 优先构建可重复执行或验证任务的工具。
+when_to_use:
+- 'Apply to any non-trivial work, not just bulk work: edits, migrations, analyses,
+  checks. Build the tool that does it or proves it instead of working by hand. The
+  tool is the artifact a reviewer can rerun.'
+solves:
+- 优先构建可重复执行或验证任务的工具。
+inputs:
+- repetitive or non-trivial work
+outputs:
+- rerunnable script/codemod/skill
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-build-the-lever/SKILL.md
+handoffs:
+- 交接说明：verification
+official_description: 'Apply to any non-trivial work, not just bulk work: edits, migrations,
+  analyses, checks. Build the tool that does it or proves it (codemod, script, generator,
+  or a skill your subagents follow) instead of working by hand. The tool is the artifact
+  a reviewer can rerun.'

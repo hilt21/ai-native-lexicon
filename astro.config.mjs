@@ -34,7 +34,8 @@ export default defineConfig({
       disable404Route: true,
       sidebar: [
         { label: 'Start', items: [{ label: 'Home', link: '/' }, { label: 'All concepts', link: '/concepts/' }, { label: 'Search', link: '/search/' }] },
-        { label: 'Explore', items: [{ label: 'Categories', link: '/categories/' }, { label: 'Primitives', link: '/primitives/' }, { label: 'Speaking Card', link: '/speaking-card/' }, { label: 'About the lexicon', link: '/about/' }] },
+        { label: 'Explore', items: [{ label: 'Categories', link: '/categories/' }, { label: 'Primitives', link: '/primitives/' }, { label: 'About the lexicon', link: '/about/' }] },
+        { label: 'Applications', items: [{ label: 'Speaking Cards', link: '/speaking-card/' }, { label: 'Skill Maps', link: '/skill-maps/' }] },
       ],
     }),
   ],

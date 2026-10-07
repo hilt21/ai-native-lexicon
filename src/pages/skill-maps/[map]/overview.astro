@@ -1,0 +1,16 @@
+---
+import SkillMapPage from '../../../components/SkillMapPage.astro';
+import { getSkillMaps, mapLink, type SkillMap } from '../../../lib/skill-maps';
+export async function getStaticPaths() { return (await getSkillMaps()).map((map) => ({ params: { map: map.id }, props: { map } })); }
+interface Props { map: SkillMap }
+const { map } = Astro.props;
+const active = map.data.nodes.filter((n) => n.status === 'active');
+const layers = map.data.taxonomy.layers.length ? map.data.taxonomy.layers : map.data.taxonomy.types;
+---
+<SkillMapPage map={map} title={`${map.data.title} — Structure`} description="Understand how this ecosystem is organized." section="overview">
+  <p class="page-intro">{map.data.scope}</p>
+  <div class="map-structure">{layers.map((layer) => { const nodes = active.filter((n) => map.data.taxonomy.layers.length ? n.layer === layer.id : n.type === layer.id); return <section><h2>{layer.label}</h2><p>{layer.description}</p><p class="map-scope">{nodes.length} items</p><ul>{nodes.map((n) => <li><a href={mapLink(map.id, `nodes/${n.id}/`)}>{n.title}</a></li>)}</ul></section>; })}</div>
+  {map.data.taxonomy.layers.length > 0 && active.some((n) => !n.layer) && <section><h2>Other items</h2><ul>{active.filter((n) => !n.layer).map((n) => <li><a href={mapLink(map.id, `nodes/${n.id}/`)}>{n.title}</a></li>)}</ul></section>}
+  {map.data.taxonomy.clusters.length > 0 && <section><h2>能力簇</h2><div class="map-structure">{map.data.taxonomy.clusters.map((cluster) => <section><h3>{cluster.label}</h3><p>{cluster.description}</p><ul>{active.filter((n) => n.primary_cluster === cluster.id || n.secondary_clusters.includes(cluster.id)).map((n) => <li><a href={mapLink(map.id, `nodes/${n.id}/`)}>{n.title}</a></li>)}</ul></section>)}</div></section>}
+  {map.data.relations.some((e) => active.some((n) => n.id === e.from) && active.some((n) => n.id === e.to)) && <section><h2>关系如何阅读</h2><p>条目详情按关系类型区分使用、交接与原则约束；这些连接不代表固定执行顺序。</p><dl>{map.data.taxonomy.relation_types.map((type) => <><dt>{type.outgoing_label}</dt><dd>{type.description}</dd></>)}</dl></section>}
+</SkillMapPage>

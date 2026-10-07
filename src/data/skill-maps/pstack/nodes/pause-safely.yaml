@@ -1,0 +1,28 @@
+title: pause-safely
+summary: 把进行中的任务停在冷启动 Agent 可恢复的安全边界。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: 完成或回退当前 atomic step → 不启动新工作 → WIP commit 保持 durable → 写 off-context resume
+  note → 指向 decision trail。
+when_to_use:
+- 用户显式要求暂停
+- context compaction 前需要 checkpoint
+solves:
+- 暂停后工作只存在模型脑中
+- 下次 session 无法恢复
+inputs:
+- active work
+- current worktree
+- optional decision trail
+outputs:
+- durable WIP commit
+- resume note
+- clean stop
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/pause-safely.md
+handoffs: []

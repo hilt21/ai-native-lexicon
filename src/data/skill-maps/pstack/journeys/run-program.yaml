@@ -1,0 +1,58 @@
+title: 我想批量并行推进
+summary: 我想批量并行推进：从任务入口到可检查的产物。
+order: 5
+when_to_use:
+- Plan and run this multi-PR migration
+- Orchestrate this project
+inputs:
+- 明确的任务目标与相关上下文。
+outputs:
+- continuously verified program / merged queue / verified stack
+variants:
+- id: standard
+  title: 推荐路径
+  steps:
+  - title: 选择项目入口
+    why: pstack 的总路由器与工作风格入口。 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
+    nodes:
+    - poteto-mode
+    - multi-phase-plan
+  - title: 协调与分工
+    why: 用持久 coordinator 管理跨天、几十到几百 Agent 的 program。 把可分任务并行分发给多个 worker，再聚合结果。
+    nodes:
+    - orchestrate
+    - swarm
+  - title: 保留决策依据
+    why: 把长时间 Agent 活动压缩成可审计 decision trail。
+    nodes:
+    - show-me-your-work
+  - title: 发布已验证结果
+    why: 用独立 verifier 决定哪些 PR 可以真正 land。
+    nodes:
+    - shipping
+    optional: true
+    when: 已获得发布授权且结果满足验证条件时。
+- id: alternative-1
+  title: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
+  when: 项目的交付结构适合 autopilot-full 时。
+  steps:
+  - title: multi-phase-plan
+    why: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
+    nodes:
+    - multi-phase-plan
+  - title: autopilot-full
+    why: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
+    nodes:
+    - autopilot-full
+- id: alternative-2
+  title: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
+  when: 项目的交付结构适合 autopilot-stack 时。
+  steps:
+  - title: multi-phase-plan
+    why: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
+    nodes:
+    - multi-phase-plan
+  - title: autopilot-stack
+    why: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
+    nodes:
+    - autopilot-stack

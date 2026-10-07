@@ -1,0 +1,27 @@
+title: autopilot-stack
+summary: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: 沿用 one-owner lifecycle；root hourly audit；root 是 topology single writer；verified
+  PR 依序 append 到线性 stack；不 merge。
+when_to_use:
+- 多个相关 PR 要自动构建
+- 需要人工最终 review/land
+solves:
+- 多 owner 同时改 stack topology
+- 自动 merge 超出 operator gate
+inputs:
+- PR queue
+- target stack order
+outputs:
+- verified linear stack
+- stack-ready SHAs
+- operator handoff
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/autopilot-stack.md
+handoffs: []

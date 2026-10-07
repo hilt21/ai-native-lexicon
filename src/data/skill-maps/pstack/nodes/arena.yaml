@@ -1,0 +1,36 @@
+title: arena
+summary: 用并行候选和盲评扩大设计空间。
+type: capability
+status: active
+layer: skill
+primary_cluster: design-decision
+secondary_clusters: []
+tags:
+- parallel
+- design-space
+- judge
+mechanism: 多个 Agent 在相同输入下独立产出；cross-judge 盲评；选择 base，并把其它方案的强项 graft 进最终方案。
+when_to_use:
+- 设计空间大
+- 第一次选择代价高
+- 需要比较不同实现/文案/架构
+solves:
+- 降低 premature commitment
+- 避免单一路径偏见
+inputs:
+- same task
+- rubric or success criteria
+- N candidate slots
+outputs:
+- ranked candidates
+- judge verdict
+- synthesized artifact
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/arena/SKILL.md
+handoffs:
+- 交接说明：design decision
+official_description: Spawn N parallel candidates at the same task, pick a base, graft
+  the strongest parts of the losers into it. Use for /arena, 'arena this', 'throw
+  it in the arena', or when one attempt at a non-trivial artifact would lock in the
+  wrong shape.

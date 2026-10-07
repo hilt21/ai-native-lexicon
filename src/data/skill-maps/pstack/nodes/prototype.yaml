@@ -1,0 +1,27 @@
+title: prototype
+summary: 用可丢弃原型快速决定设计方向。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: design-decision
+secondary_clusters: []
+tags: []
+mechanism: 明确要做的 decision → 必要时找 references → scratch dir 构建多个 variant → 真实观察 → 比较
+  tradeoff → 把选择交给 Feature/Architect。
+when_to_use:
+- 视觉/交互/行为方向不确定
+- 需要快速比较多个方案
+solves:
+- 在生产代码中试错
+- 未经比较就锁定设计
+inputs:
+- design question
+- optional references
+outputs:
+- throwaway artifact
+- screenshots/observations
+- recommendation
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/prototype.md
+handoffs: []

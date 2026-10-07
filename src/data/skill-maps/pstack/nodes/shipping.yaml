@@ -1,0 +1,28 @@
+title: shipping
+summary: 用独立 verifier 决定哪些 PR 可以真正 land。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: 每个 PR fresh verifier 在真实 surface 验证 parent vs head → verdict 绑定 SHA/base/patch-id
+  → 只 landing 从底部开始的连续 verified run → 每次只处理一个 PR。
+when_to_use:
+- PR 已 merge-ready
+- 用户要求 land/ship
+solves:
+- writer 自证
+- 旧 SHA 绿灯被误复用
+- 上层 PR 跳过未验证底层
+inputs:
+- merge-ready PR stack
+- current forge state
+outputs:
+- independent verdicts
+- landed verified PRs
+- land ceiling
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/shipping.md
+handoffs: []

@@ -1,0 +1,28 @@
+title: migrate-callers-then-delete-legacy-apis
+summary: 新 API 与 caller 迁移同一波完成，并删除旧 API。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 新 API 与 caller 迁移同一波完成，并删除旧 API。
+when_to_use:
+- Apply when introducing a new internal API while old callers still exist. Migrate
+  callers and delete the old API in the same wave instead of preserving compatibility
+  layers.
+solves:
+- 新 API 与 caller 迁移同一波完成，并删除旧 API。
+inputs:
+- old and new API
+outputs:
+- single target API
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-migrate-callers-then-delete-legacy-apis/SKILL.md
+handoffs:
+- 交接说明：migration
+official_description: Apply when introducing a new internal API while old callers
+  still exist. Migrate callers and delete the old API in the same wave instead of
+  preserving compatibility layers.

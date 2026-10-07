@@ -1,0 +1,41 @@
+title: correct
+summary: 把重复的人类纠正升级为结构性约束。
+type: capability
+status: active
+layer: skill
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags:
+- learning
+- self-hardening
+- feedback
+mechanism: 识别重复 mistake class，按 architecture → types → lint/CI → test → docs 的强度顺序寻找
+  remedy，并用真实历史错误证明 guard 会失败。
+when_to_use:
+- 同类 Agent 错误出现两次以上
+- 用户反复纠正同一个问题
+solves:
+- 减少重复监督
+- 把知识从 prompt 下沉到结构
+inputs:
+- corrections
+- failure examples
+- repository structure
+outputs:
+- structural guard
+- proof against past mistake
+- reduced future correction load
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/correct/SKILL.md
+handoffs:
+- 输入背景：human correction
+- 交接说明：architecture
+- 交接说明：types
+- 交接说明：lint
+- 交接说明：tests
+- 交接说明：skills
+official_description: Find the mistakes agents keep repeating in this repo and make
+  each one impossible. Try architecture first, then types, then a lint whose error
+  names the fix, then a test, and write docs last. Prove each check fails on a real
+  past mistake. Repeat this each time the operator corrects you. Use for /correct.

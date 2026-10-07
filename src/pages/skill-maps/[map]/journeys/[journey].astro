@@ -1,0 +1,17 @@
+---
+import SkillMapPage from '../../../../components/SkillMapPage.astro';
+import { getSkillMaps, mapLink, sourceLink, type SkillMap, type TaskJourney } from '../../../../lib/skill-maps';
+export async function getStaticPaths() { return (await getSkillMaps()).flatMap((map) => map.data.journeys.map((journey) => ({ params: { map: map.id, journey: journey.id }, props: { map, journey } }))); }
+interface Props { map: SkillMap; journey: TaskJourney }
+const { map, journey } = Astro.props;
+---
+<SkillMapPage map={map} title={journey.title} description={journey.summary} section="tasks">
+  <p class="page-intro">{journey.summary}</p>
+  {journey.status === 'retired' && <aside class="map-retirement"><h2>Retired</h2><p>{journey.retirement_note}</p></aside>}
+  <h2>适用情境</h2><ul>{journey.when_to_use.map((s) => <li>{s}</li>)}</ul>
+  {journey.inputs.length > 0 && <section><h2>准备什么</h2><ul>{journey.inputs.map((s) => <li>{s}</li>)}</ul></section>}
+  <p class="map-scope">以下为编辑策划的指导步骤。条件由使用者判断，同一步中的技能不要求依次执行。</p>
+  {journey.variants.map((variant) => <section><h2>{variant.title}</h2>{variant.when && <p>{variant.when}</p>}<ol class="map-steps">{variant.steps.map((step) => <li><h3>{step.title}{step.optional && <span class="map-optional"> 可选</span>}</h3>{step.when && <p class="map-condition">{step.when}</p>}<p>{step.why}</p><ul>{step.nodes.map((id) => { const n = map.data.nodes.find((n) => n.id === id)!; return <li><a href={mapLink(map.id, `nodes/${id}/`)}>{n.title}</a>{n.status === 'retired' && ' · Retired'}</li>; })}</ul>{step.outputs.length > 0 && <p>产物：{step.outputs.join(' / ')}</p>}</li>)}</ol></section>)}
+  {journey.outputs.length > 0 && <section><h2>完成后应得到什么</h2><ul>{journey.outputs.map((s) => <li>{s}</li>)}</ul></section>}
+  {journey.source_refs.length > 0 && <section><h2>Sources</h2><ul>{journey.source_refs.map((ref) => <li><a href={sourceLink(map, ref)}>{ref.path}</a></li>)}</ul></section>}
+</SkillMapPage>

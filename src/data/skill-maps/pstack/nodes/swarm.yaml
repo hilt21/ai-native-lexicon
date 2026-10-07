@@ -1,0 +1,35 @@
+title: swarm
+summary: 把可分任务并行分发给多个 worker，再聚合结果。
+type: capability
+status: active
+layer: skill
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags:
+- parallel
+- workers
+- coverage
+mechanism: 按 slice/race/coverage 等模式 fan-out，隔离工作单元，等待完成并 drain，最后由父 Agent 综合 verdict。
+when_to_use:
+- 大范围 coverage
+- 多个独立调查
+- 验证 gauntlet
+- 并行候选
+solves:
+- 降低串行等待
+- 扩大独立检查覆盖
+inputs:
+- work matrix
+- N worker slots
+- acceptance criteria
+outputs:
+- worker results
+- aggregated report
+- PASS/ISSUES/BLOCKED
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/swarm/SKILL.md
+handoffs:
+- 交接说明：verification
+official_description: Fan out N parallel workers, drain them, and return one report.
+  Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration.

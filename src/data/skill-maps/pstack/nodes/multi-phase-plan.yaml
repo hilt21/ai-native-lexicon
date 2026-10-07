@@ -1,0 +1,28 @@
+title: multi-phase-plan
+summary: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: design-decision
+secondary_clusters: []
+tags: []
+mechanism: prototype 解决未知 → subagent 探索 → 每 PR 一段 executable checklist → live/perf/unit
+  verification blocks → plan checker → handoff，不实施。
+when_to_use:
+- 大型 multi-PR change
+- 需要先规划再执行
+solves:
+- 计划只有主题没有执行接口
+- 把未知假设带进执行阶段
+inputs:
+- program goal
+- open questions
+- repo conventions
+outputs:
+- validated plan file
+- PR-by-PR checklist
+- chosen execution playbook
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/multi-phase-plan.md
+handoffs: []

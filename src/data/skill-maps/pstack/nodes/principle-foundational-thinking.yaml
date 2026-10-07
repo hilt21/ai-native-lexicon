@@ -1,0 +1,27 @@
+title: foundational-thinking
+summary: 先选对核心数据结构和共享状态模型。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 先选对核心数据结构和共享状态模型。
+when_to_use:
+- 'Apply before writing logic: choosing core types and data structures, sequencing
+  scaffold-vs-feature work, asking what concurrent actors share. Get the data structures
+  right so downstream code becomes obvious.'
+solves:
+- 先选对核心数据结构和共享状态模型。
+inputs:
+- requirements / domain
+outputs:
+- foundational data model
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-foundational-thinking/SKILL.md
+handoffs: []
+official_description: 'Apply before writing logic: choosing core types and data structures,
+  sequencing scaffold-vs-feature work, asking what concurrent actors share. Get the
+  data structures right so downstream code becomes obvious.'

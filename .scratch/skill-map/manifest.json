@@ -1,0 +1,63 @@
+{
+  "feature": "skill-map",
+  "tracker": "github",
+  "repository": "hilt21/ai-native-lexicon",
+  "status": "published",
+  "created_on": "2026-10-07",
+  "approved_spec": {
+    "file": "docs/design/skill-map.md",
+    "baseline_commit": "30c49ee4dd7f0d3df3d645211af08f75abbc29fa",
+    "sha256": "2a4c11ebc85c363b94f925071fe165925774901f8f3dd0c6cc24dc4793fc333b",
+    "embedded_in_ticket": true
+  },
+  "source_material": {
+    "name": "pstack_skill_map_v0.1.yaml",
+    "local_path": "/Users/taolu/Downloads/pstack_skill_map_v0.1.yaml",
+    "sha256": "b261bb1c149283c9c2b97e785ed9cbb10c1b6f19685f5e1e21fb6896a267303f",
+    "publication": "keep_local"
+  },
+  "decomposition": {
+    "initial_candidate_count": 1,
+    "hard_constraint_violations_found": [],
+    "prefactoring_required": false,
+    "expand_contract_required": false,
+    "after_split_count": 1,
+    "merge_pass": "no_pairs_in_single_node_DAG",
+    "final_ticket_count": 1
+  },
+  "tickets": [
+    {
+      "id": "SM-01",
+      "title": "从独立 YAML 到网站与机器投影交付可扩充 Skill Map，以 pstack 跑通",
+      "file": "issues/01-skill-map-end-to-end.md",
+      "deps": [],
+      "proposed_labels": [
+        "ready-for-agent"
+      ],
+      "body_sha256": "c898a2758b9b35eb523d862cc101344be7537e40875cbd4140c898653de3703a",
+      "remote_number": 28,
+      "remote_url": "https://github.com/hilt21/ai-native-lexicon/issues/28",
+      "publication_verified": true,
+      "remote_id": "I_kwDOT7J2B88AAAABVgYjDw",
+      "remote_state": "OPEN",
+      "remote_labels": [
+        "ready-for-agent"
+      ],
+      "published_at": "2026-10-07T02:08:16Z",
+      "remote_body_sha256": "c898a2758b9b35eb523d862cc101344be7537e40875cbd4140c898653de3703a"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-07",
+    "scope": "User confirmed the reviewed single-ticket breakdown and publication to hilt21/ai-native-lexicon in this conversation."
+  },
+  "verification_summary": {
+    "tickets": 1,
+    "dependency_edges": 0,
+    "ready_for_agent": [
+      "SM-01"
+    ],
+    "title_body_labels_state_verified": true,
+    "no_parent_issue_modified": true
+  }
+}

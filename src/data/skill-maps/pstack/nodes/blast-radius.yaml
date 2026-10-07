@@ -1,0 +1,37 @@
+title: blast-radius
+summary: 识别 diff 之外的潜在影响并用真实运行证明安全前提。
+type: capability
+status: active
+layer: skill
+primary_cluster: design-decision
+secondary_clusters:
+- verification-evidence
+tags:
+- risk
+- verification
+- review
+mechanism: 寻找改动安全性依赖的核心事实，追踪 callers/consumers/implicit assumptions，并构造脚本或真实运行验证该事实。
+when_to_use:
+- 小 diff 但不确定风险
+- API/数据结构变化
+- shipping 前安全检查
+solves:
+- 避免只看 diff 的局部审查
+- 识别隐藏依赖
+inputs:
+- diff
+- repository graph
+- runtime or data surface
+outputs:
+- blast-radius map
+- critical safety fact
+- proof
+- residual risks
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/blast-radius/SKILL.md
+handoffs: []
+official_description: Find what a change could break somewhere else before it ships,
+  beyond the diff, and prove the one fact it's safe because of by running real code
+  instead of writing it up. Use for 'blast radius of X', 'what could this break',
+  or reviewing a small diff you don't trust.

@@ -1,0 +1,28 @@
+title: sequence-verifiable-units
+summary: 把大任务拆成每一步都可验证的单元。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 把大任务拆成每一步都可验证的单元。
+when_to_use:
+- Apply to multi-step work and to how you stack commits and PRs. Break work into small
+  units that each end in a verifiable state, check each before the next, and order
+  delivery so the sequence proves itself.
+solves:
+- 把大任务拆成每一步都可验证的单元。
+inputs:
+- multi-step task
+outputs:
+- ordered verified units
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-sequence-verifiable-units/SKILL.md
+handoffs: []
+official_description: Apply to multi-step work (sweeps, migrations, runs of similar
+  edits) and to how you stack commits and PRs. Break work into small units that each
+  end in a verifiable state, check each before the next, and order delivery so the
+  sequence proves itself to a reviewer.

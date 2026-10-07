@@ -1,0 +1,33 @@
+title: reflect
+summary: 复盘一次 Agent 工作，把经验路由成具体 skill 改进。
+type: capability
+status: active
+layer: skill
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags:
+- reflection
+- learning
+- skills
+mechanism: 三个并行 reviewer 从不同角度分析 active transcript，综合 learnings，并把每条落到现有 skill 的可执行修改或
+  backlog。
+when_to_use:
+- 复杂任务完成后
+- 用户显式说 reflect
+- 想从一次运行中沉淀方法
+solves:
+- 避免经验只留在对话
+- 把操作经验转成可维护 skill
+inputs:
+- active transcript
+- task outcome
+outputs:
+- accepted/rejected/backlog learnings
+- skill-edit proposals
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/reflect/SKILL.md
+handoffs: []
+official_description: Spawn three parallel review subagents over the active transcript,
+  surface learnings, and route each to a concrete edit on an existing skill. Use when
+  the user says reflect.

@@ -1,0 +1,36 @@
+title: interrogate
+summary: 对代码或设计做多模型 adversarial review。
+type: capability
+status: active
+layer: skill
+primary_cluster: design-decision
+secondary_clusters: []
+tags:
+- review
+- adversarial
+- multi-model
+mechanism: 让不同模型从独立角度攻击同一 diff/design，lead reviewer 将问题分类为 Act on / Consider / Noted
+  / Dismissed。
+when_to_use:
+- 复杂 diff
+- 有争议设计
+- 准备 shipping 前寻找盲点
+solves:
+- 降低单模型 confirmation bias
+- 提前暴露隐藏风险
+inputs:
+- intent
+- diff or design
+- review context
+outputs:
+- adversarial findings
+- triaged verdict
+- action items
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/interrogate/SKILL.md
+handoffs:
+- 交接说明：fix round
+official_description: Use for "interrogate", "adversarial review", "multi-model review",
+  "challenge this", "stress test this code", "find blind spots", or "tear this apart".
+  Multiple LLM reviewers challenge changes from independent angles.

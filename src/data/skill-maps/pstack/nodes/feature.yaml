@@ -1,0 +1,27 @@
+title: feature
+summary: 新功能的设计、并行实现、真实验证和审查。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: how grounding → architect → throughput checkpoint → 分离 workstreams → delegate/arena
+  → live verify → interrogate if contested → PR。
+when_to_use:
+- 新增用户行为或 capability
+solves:
+- 直接写代码导致错误结构
+- 并行写共享状态
+inputs:
+- feature requirement
+- affected subsystem
+outputs:
+- implemented feature
+- design rationale
+- verification evidence
+- PR
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/feature.md
+handoffs: []

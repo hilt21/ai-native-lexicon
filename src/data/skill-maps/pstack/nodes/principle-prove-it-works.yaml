@@ -1,0 +1,26 @@
+title: prove-it-works
+summary: 完成前验证真实 artifact 和真实行为。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 完成前验证真实 artifact 和真实行为。
+when_to_use:
+- Apply after completing a task, before declaring done. Verify against the real artifact,
+  not a proxy, self-report, or "it compiles."
+solves:
+- 完成前验证真实 artifact 和真实行为。
+inputs:
+- candidate result
+outputs:
+- real-surface evidence
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-prove-it-works/SKILL.md
+handoffs: []
+official_description: Apply after completing a task, before declaring done. Verify
+  against the real artifact (run the feature, read the actual value, inspect the diff),
+  not a proxy, self-report, or 'it compiles.'

@@ -1,0 +1,29 @@
+title: type-system-discipline
+summary: 用类型系统让非法状态难以表达。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 用类型系统让非法状态难以表达。
+when_to_use:
+- Apply when designing types, reviewing a function signature, or writing code in any
+  statically-typed language. Make illegal states unrepresentable, brand semantic primitives,
+  parse external data at boundaries, refuse to lie to the compiler, exhaust variants,
+  derive from authoritative schemas.
+solves:
+- 用类型系统让非法状态难以表达。
+inputs:
+- domain constraints / external data
+outputs:
+- strong types / parsed boundaries
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-type-system-discipline/SKILL.md
+handoffs: []
+official_description: Apply when designing types, reviewing a function signature,
+  or writing code in any statically-typed language. Make illegal states unrepresentable,
+  brand semantic primitives, parse external data at boundaries, refuse to lie to the
+  compiler, exhaust variants, derive from authoritative schemas.

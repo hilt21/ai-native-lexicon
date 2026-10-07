@@ -1,0 +1,34 @@
+title: technical-writing
+summary: 用统一工程写作规则降低文档和 PR 的歧义。
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+- writing
+- documentation
+- clarity
+mechanism: 按 Diátaxis、Google developer style、STE 和 Global English 组合约束结构、句法和操作描述。
+when_to_use:
+- README/RFC/docs
+- PR description
+- commit message
+- 执行计划
+solves:
+- 减少技术文本歧义
+- 提高可读性和跨团队一致性
+inputs:
+- technical draft
+- document purpose
+outputs:
+- clearer technical artifact
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/technical-writing/SKILL.md
+handoffs:
+- 交接说明：human reviewer
+official_description: 'Layered technical-writing standard: Diátaxis structure, Google
+  developer style sentences, STE instruction rules, Global English syntax. Use for
+  /technical-writing or when writing or reviewing docs, RFCs, readmes, PR descriptions,
+  or commit messages.'

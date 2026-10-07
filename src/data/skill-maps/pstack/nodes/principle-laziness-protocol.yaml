@@ -1,0 +1,27 @@
+title: laziness-protocol
+summary: 优先删除和最小充分变化。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 优先删除和最小充分变化。
+when_to_use:
+- Apply when refactoring, evaluating diff size, or tempted to add abstractions, layers,
+  or signal threading. Bias toward deletion and the smallest change that solves the
+  problem.
+solves:
+- 优先删除和最小充分变化。
+inputs:
+- candidate change
+outputs:
+- smaller simpler diff
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-laziness-protocol/SKILL.md
+handoffs: []
+official_description: Apply when refactoring, evaluating diff size, or tempted to
+  add abstractions, layers, or signal threading. Bias toward deletion and the smallest
+  change that solves the problem.

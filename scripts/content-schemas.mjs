@@ -5,11 +5,16 @@ import { z } from 'zod';
 import { conceptInputSchema } from '../src/domain/content/concept-input.mjs';
 import { primitiveInputSchema } from '../src/domain/content/primitive-input.mjs';
 import { speakingCardInputSchema } from '../src/domain/content/speaking-card-input.mjs';
+import { skillMapInputSchema, skillMapNodeInputSchema, skillMapJourneyInputSchema, skillMapRelationsInputSchema } from '../src/domain/content/skill-map-input.mjs';
 
 const contracts = {
   concept: { schema: conceptInputSchema, title: 'AI Native Lexicon concept' },
   primitive: { schema: primitiveInputSchema, title: 'AI Native Lexicon primitive' },
   'speaking-card': { schema: speakingCardInputSchema, title: 'AI Native Lexicon speaking card' },
+  'skill-map': { schema: skillMapInputSchema, title: 'AI Native Lexicon skill map' },
+  'skill-map-node': { schema: skillMapNodeInputSchema, title: 'Skill map node' },
+  'skill-map-journey': { schema: skillMapJourneyInputSchema, title: 'Skill map task journey' },
+  'skill-map-relations': { schema: skillMapRelationsInputSchema, title: 'Skill map relationships' },
 };
 
 function generated(name) {

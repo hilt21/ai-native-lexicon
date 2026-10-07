@@ -1,0 +1,28 @@
+title: session-pickup
+summary: 从 prior trail 恢复执行点，避免重做。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: understanding-context
+secondary_clusters: []
+tags: []
+mechanism: 读 transcript/cloud URL/branch → 重建 branch/worktree/todos/decisions → done
+  vs pending diff → 路由剩余工作 → 仅对继承 claim 做真实 artifact 验证。
+when_to_use:
+- 接手上一 session/agent
+- 恢复长期任务
+solves:
+- 从头再调查
+- 重复已经完成的工作
+inputs:
+- prior trail
+- branch
+- plan
+outputs:
+- resume point
+- inherited state
+- next playbook
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/session-pickup.md
+handoffs: []

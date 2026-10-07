@@ -1,0 +1,27 @@
+title: attack-the-premise
+summary: 连续修复失败时，停止沿用共同前提，重新检查前提。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 连续修复失败时，停止沿用共同前提，重新检查前提。
+when_to_use:
+- Apply when two or more fixes that share one premise have failed the same gate. Take
+  a census of which actors hold the imbalance before the next fix, then question the
+  premise instead of writing another fix that assumes it.
+solves:
+- 连续修复失败时，停止沿用共同前提，重新检查前提。
+inputs:
+- repeated failed fixes
+outputs:
+- reframed premise / new hypothesis
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-attack-the-premise/SKILL.md
+handoffs: []
+official_description: Apply when two or more fixes that share one premise have failed
+  the same gate. Take a census of which actors hold the imbalance before the next
+  fix, then question the premise instead of writing another fix that assumes it.

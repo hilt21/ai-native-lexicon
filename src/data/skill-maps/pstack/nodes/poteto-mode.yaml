@@ -1,0 +1,37 @@
+title: poteto-mode
+summary: pstack 的总路由器与工作风格入口。
+type: router
+status: active
+layer: router
+primary_cluster: entry-routing
+secondary_clusters: []
+tags:
+- routing
+- core
+- orchestration
+mechanism: 判断任务类型与所需严谨度，选择 playbook，并组合适当 skill、principle、subagent 和验证步骤。
+when_to_use:
+- 需要 pstack 风格处理一个工程任务
+- 不知道该调用哪个 playbook 或 skill
+- 希望默认获得简洁代码与可验证结果
+solves:
+- 降低技能选择成本
+- 把复杂工作流封装成单一入口
+- 维持跨任务一致的工程纪律
+inputs:
+- user task
+- repository context
+- pstack model configuration
+outputs:
+- selected playbook
+- task plan / todo
+- skill and principle chain
+- verified result
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/SKILL.md
+handoffs:
+- 交接说明：all playbooks
+official_description: poteto's agent style for concise, detailed responses, deliberate
+  subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode,
+  or requests to work in this style.
