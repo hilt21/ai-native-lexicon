@@ -1,0 +1,30 @@
+title: orchestrate
+summary: 用持久 coordinator 管理跨天、几十到几百 Agent 的 program。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: coordinator 只管 program 不写代码；brief 是产品；workers/sub-coordinators 经 queue/inbox
+  回报；durable state 管 frontier；每个 writer 独占 worktree/branch。
+when_to_use:
+- 工作超出单 Agent session
+- multi-day program
+- 大量子任务与 PR
+solves:
+- coordinator context 崩溃
+- completion interrupt 风暴
+- 共享写冲突
+inputs:
+- program goal
+- tracks
+- durable state store
+outputs:
+- rolling verified units
+- program ledger/frontier
+- human report
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/orchestrate.md
+handoffs: []

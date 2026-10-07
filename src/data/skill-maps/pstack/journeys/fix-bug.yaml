@@ -1,0 +1,51 @@
+title: 我想修 bug
+summary: 我想修 bug：从任务入口到可检查的产物。
+order: 1
+when_to_use:
+- Fix this regression
+- Why does this crash?
+inputs:
+- 明确的任务目标与相关上下文。
+outputs:
+- root-cause fix with same-surface evidence and landed PR
+variants:
+- id: standard
+  title: 推荐路径
+  steps:
+  - title: 选择修复入口
+    why: pstack 的总路由器与工作风格入口。 科学式 bug 修复。
+    nodes:
+    - poteto-mode
+    - bug-fix
+  - title: 调查问题
+    why: 建立系统如何工作的 mental model。 解释系统为什么变成现在这样，并给出证据。
+    nodes:
+    - how
+    - why
+  - title: 建立回归依据
+    why: 在存在廉价可靠测试入口时，用 failing test 固化 bug 后再修复。
+    nodes:
+    - tdd
+    optional: true
+    when: 存在适合的局部测试目标时。
+  - title: 确定结构
+    why: 在写代码前确定类型、接口、模块和数据结构。
+    nodes:
+    - architect
+    optional: true
+    when: 修复涉及模块或接口变化时。
+  - title: 检查影响
+    why: 识别 diff 之外的潜在影响并用真实运行证明安全前提。
+    nodes:
+    - blast-radius
+  - title: 准备 PR
+    why: 把已验证 diff 整理成可审阅 PR。
+    nodes:
+    - opening-a-pr
+  - title: 审查与发布
+    why: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    nodes:
+    - babysit
+    - shipping
+    optional: true
+    when: 需要推进发布且已获得相应授权时。

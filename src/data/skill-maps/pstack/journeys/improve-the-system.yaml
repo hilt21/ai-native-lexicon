@@ -1,0 +1,33 @@
+title: 我想让系统从这次运行中进化
+summary: 我想让系统从这次运行中进化：从任务入口到可检查的产物。
+order: 6
+when_to_use:
+- Reflect
+- Agents keep making this mistake
+- Automate my way of working
+inputs:
+- 明确的任务目标与相关上下文。
+outputs:
+- structural guard or improved skill that reduces future supervision
+variants:
+- id: standard
+  title: 推荐路径
+  steps:
+  - title: 查看决策记录
+    why: 把长时间 Agent 活动压缩成可审计 decision trail。
+    nodes:
+    - show-me-your-work
+  - title: 复盘与纠正
+    why: 复盘一次 Agent 工作，把经验路由成具体 skill 改进。 把重复的人类纠正升级为结构性约束。
+    nodes:
+    - reflect
+    - correct
+  - title: 形成技能改进
+    why: 创建或修改 pstack/Cursor skill。 用盲测验证 skill/prompt 是否真的改善 Agent 行为。 把稳定的个人工作偏好编码成可复用
+      mode skill。
+    nodes:
+    - authoring-a-skill
+    - eval
+    - automate-me
+    optional: true
+    when: 复盘结果需要落到技能或工作方式时。

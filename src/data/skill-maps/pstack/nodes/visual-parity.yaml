@@ -1,0 +1,27 @@
+title: visual-parity
+summary: 以 baseline screenshot 为规范做 pixel-exact 迁移。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: 先建立不可修改 baseline → component-by-component 迁移 → worktree 隔离 → image diff
+  → 非零即失败 → loop 到零差异。
+when_to_use:
+- UI migration
+- 两个实现要视觉一致
+solves:
+- 肉眼判断 parity
+- 修改 baseline 让测试通过
+inputs:
+- baseline screenshots
+- target implementation
+outputs:
+- pixel-diff evidence
+- migrated components
+- PRs
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/visual-parity.md
+handoffs: []

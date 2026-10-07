@@ -1,0 +1,28 @@
+title: opening-a-pr
+summary: 把已验证 diff 整理成可审阅 PR。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: fresh worktree → 小而有序 commits → deslop/no-comments → technical-writing
+  + unslop → concise PR body with scope/blast radius/verification。
+when_to_use:
+- 几乎所有写代码 playbook 的结尾
+solves:
+- 大杂烩 commit
+- PR body 变成实验日志
+- AI slop
+inputs:
+- verified diff
+- evidence
+- scope
+outputs:
+- reviewable commits
+- PR
+- verification summary
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/opening-a-pr.md
+handoffs: []

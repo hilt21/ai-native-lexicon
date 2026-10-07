@@ -2,6 +2,17 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import { createDatasetVersion } from '../src/lib/dataset-version.mjs';
 
+test('skill map record order is insignificant while task step order is semantic', () => {
+  const base = { concepts: [], primitives: [], speaking_cards: [], taxonomy: { categories: [], layers: [] } };
+  const map = { id: 'example', sources: [], current_sources: [], taxonomy: { types: [], layers: [], clusters: [], relation_types: [] }, nodes: [{ id: 'b', tags: ['second', 'first'], secondary_clusters: [], source_refs: [] }, { id: 'a', tags: [], secondary_clusters: [], source_refs: [] }], journeys: [{ id: 'task', source_refs: [], variants: [{ id: 'standard', steps: [{ title: 'First', nodes: ['a'] }, { title: 'Second', nodes: ['b'] }] }] }], relations: [{ from: 'b', type: 'uses', to: 'a', source_refs: [] }, { from: 'a', type: 'uses', to: 'b', source_refs: [] }] };
+  const version = createDatasetVersion({ ...base, skill_maps: [map] });
+  const reordered = structuredClone(map);
+  reordered.nodes.reverse(); reordered.relations.reverse(); reordered.nodes[1].tags.reverse();
+  assert.equal(createDatasetVersion({ ...base, skill_maps: [reordered] }), version);
+  reordered.journeys[0].variants[0].steps.reverse();
+  assert.notEqual(createDatasetVersion({ ...base, skill_maps: [reordered] }), version);
+});
+
 const content = {
   concepts: [{ slug: 'context', term: 'Context', added: new Date('2026-10-06T00:00:00Z') }, { slug: 'agent', term: 'Agent' }],
   primitives: [{ slug: 'state', term: 'State' }],

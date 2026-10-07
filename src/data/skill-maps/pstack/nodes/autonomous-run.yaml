@@ -1,0 +1,30 @@
+title: autonomous-run
+summary: 单一任务无人值守推进到固定 exit predicate。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: 开始前冻结 checkable predicate → /loop wake → smallest justified change → verify
+  → commit if progress / discard if not → decision log → plateau 时换方法。
+when_to_use:
+- overnight single task
+- 一个目标可以定义明确 Done
+solves:
+- Agent 过早宣告完成
+- 无效改动累积
+- 人频繁被问
+inputs:
+- goal
+- exit predicate
+- verification surface
+outputs:
+- completed predicate
+- accepted iterations
+- discarded attempts
+- decision trail
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/autonomous-run.md
+handoffs: []

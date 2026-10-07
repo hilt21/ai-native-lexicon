@@ -1,0 +1,29 @@
+title: bug-fix
+summary: 科学式 bug 修复。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: 真实 surface 复现 → how/why 形成假设 → 二分排除 → 证明 mechanism → architect/tdd → 最小修复
+  → 同 surface 验证 → PR。
+when_to_use:
+- 明确 bug/回归
+- 可以构造 repro
+solves:
+- 猜测式 patch
+- tests green 但真实 bug 未消失
+inputs:
+- bug report
+- repro
+- affected subsystem
+outputs:
+- root cause
+- minimal fix
+- failing-before/passing-after evidence
+- PR
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/bug-fix.md
+handoffs: []

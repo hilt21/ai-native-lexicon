@@ -1,0 +1,37 @@
+title: recall
+summary: 从历史记录和当前状态恢复工作上下文。
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+- memory
+- resume
+- context
+mechanism: 读取近期 transcript、分支/PR 等 live state 和 shared record，压缩成当前状态、已完成事项、待办和关键决策。
+when_to_use:
+- 接手几天前的工作
+- 继续长期项目
+- 用户说 catch me up / where did I leave off
+solves:
+- 降低重复解释
+- 避免重新做已经完成的调查
+inputs:
+- topic
+- time window
+- chat history
+- repository live state
+outputs:
+- current-state capsule
+- resume point
+- open items
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/recall/SKILL.md
+handoffs: []
+official_description: Reconstruct your recent working context from your own chat history,
+  live state, and the shared record (user reports, prior fixes, incidents), then hand
+  back a tight current-state brief. Use for 'recall my work on X', 'catch me up',
+  'what have I been working on', 'where did I leave off', before starting or resuming
+  work.

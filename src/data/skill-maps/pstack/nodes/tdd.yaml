@@ -1,0 +1,32 @@
+title: tdd
+summary: 在存在廉价可靠测试入口时，用 failing test 固化 bug 后再修复。
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters:
+- verification-evidence
+tags:
+- testing
+- regression
+mechanism: 先构造最窄可执行 regression，证明其失败；再做最小修改；最后用同一测试证明通过。
+when_to_use:
+- 明确要求 TDD
+- bug 有明显本地测试目标
+solves:
+- 防止修复无法复现
+- 形成 failing-before / passing-after 证据
+inputs:
+- bug behavior
+- local test target
+outputs:
+- failing regression
+- minimal fix
+- passing regression
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/tdd/SKILL.md
+handoffs: []
+official_description: Use only when the user explicitly asks for TDD, a failing test,
+  or a regression test, OR when the bug has an obvious cheap local test target. Skip
+  when the test path is unclear, expensive, integration-heavy, or not requested.

@@ -1,0 +1,40 @@
+title: create-verification-skill
+summary: 为项目建立可复用的真实产品验证接口。
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+- verification
+- feature-map
+- evidence
+- core
+mechanism: 调查 Surface / Run / Drive / Observe / Isolate，生成 Launch、Doctor、Drive、Evidence、Cleanup
+  和 Feature Map，并实际跑通一次。
+when_to_use:
+- 项目没有 scripted real-surface verification
+- Agent 只能靠测试或自报 done
+- 想建立长期验证基础设施
+solves:
+- verification bottleneck
+- 真实结果不可直接观察
+- 每次验证都要重新摸索
+inputs:
+- repository
+- application surface
+- run commands
+- observable outcomes
+outputs:
+- project-local verification skill
+- feature map
+- control workflow
+- first proof
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/create-verification-skill/SKILL.md
+handoffs: []
+official_description: Generate a project-local verification skill that drives your
+  app the way a user does — any language, framework, or platform. Use for /create-verification-skill,
+  "make a control skill for this repo", or when a project has no scripted way to prove
+  UI/CLI/service behavior.

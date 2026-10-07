@@ -1,0 +1,35 @@
+title: setup-pstack
+summary: 为不同 pstack 角色配置模型与推理预算。
+type: utility
+status: active
+layer: skill
+primary_cluster: entry-routing
+secondary_clusters: []
+tags:
+- setup
+- models
+- cost
+mechanism: 检测可用模型，按角色和成本/能力需求写入持续生效的模型路由规则。
+when_to_use:
+- 首次安装 pstack
+- 需要控制成本
+- 想更换 feature/bug-fix/swarm/judge 等角色模型
+solves:
+- 模型选择漂移
+- 多 Agent 工作流成本不可控
+inputs:
+- available models
+- budget preference
+- role requirements
+outputs:
+- role-to-model map
+- reasoning budgets
+- persistent pstack model rule
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/setup-pstack/SKILL.md
+handoffs: []
+official_description: Configure which models pstack uses per role and at what reasoning
+  budget. Detects your available models and writes an always-applied rule that overrides
+  the skill defaults. Use for /setup-pstack, "configure pstack models", "pstack budget",
+  or changing pstack's model choices.

@@ -1,0 +1,26 @@
+title: subtract-before-you-add
+summary: 新增前先删除死代码和冗余结构。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 新增前先删除死代码和冗余结构。
+when_to_use:
+- Apply when sequencing an addition, refactor, or rewrite. Remove dead code, redundant
+  validators, and stub references first, then build on the simpler base.
+solves:
+- 新增前先删除死代码和冗余结构。
+inputs:
+- existing complexity
+outputs:
+- simpler base
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-subtract-before-you-add/SKILL.md
+handoffs: []
+official_description: Apply when sequencing an addition, refactor, or rewrite. Remove
+  dead code, redundant validators, and stub references first, then build on the simpler
+  base.

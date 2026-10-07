@@ -1,0 +1,26 @@
+title: model-the-domain
+summary: 用结构、state machine、registry、typed model 表达领域。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 用结构、state machine、registry、typed model 表达领域。
+when_to_use:
+- Apply when writing stateful logic, or when code branches a lot or repeats a shape
+  assumption across files. Encode the domain in a structure instead of scattered conditionals.
+solves:
+- 用结构、state machine、registry、typed model 表达领域。
+inputs:
+- stateful / branch-heavy logic
+outputs:
+- explicit domain model
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-model-the-domain/SKILL.md
+handoffs: []
+official_description: Apply when writing stateful logic, or when code branches a lot
+  or repeats a shape assumption across files. Encode the domain in a structure instead
+  of scattered conditionals.

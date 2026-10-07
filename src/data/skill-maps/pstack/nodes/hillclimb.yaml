@@ -1,0 +1,29 @@
+title: hillclimb
+summary: 围绕单一 metric 做持续、可回滚的迭代优化。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: 冻结 measurement harness；one hypothesis → one change → one measurement →
+  keep/revert；记录 decision trail，直到 stop predicate。
+when_to_use:
+- 需要持续把一个指标推到目标
+- 多轮性能/质量优化
+solves:
+- 多个改动混在一起无法归因
+- 偶然一次数字改善
+inputs:
+- metric
+- target
+- realistic workload
+outputs:
+- accepted improvements
+- reverted attempts
+- decision log
+- final metric
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/hillclimb.md
+handoffs: []

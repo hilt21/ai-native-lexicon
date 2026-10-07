@@ -1,0 +1,27 @@
+title: authoring-a-skill
+summary: 创建或修改 pstack/Cursor skill。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags: []
+mechanism: 用 create-skill 生成 SKILL.md → 校验 frontmatter/引用/链接 → structural test → PR；重复规则优先链接结构
+  source。
+when_to_use:
+- 要创建新 skill
+- 修改现有 skill
+solves:
+- skill 文本膨胀
+- 重复解释已有规则
+inputs:
+- workflow knowledge
+- skill requirement
+outputs:
+- validated SKILL.md
+- design notes
+- PR
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/authoring-a-skill.md
+handoffs: []

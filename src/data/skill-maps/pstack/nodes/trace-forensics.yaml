@@ -1,0 +1,28 @@
+title: trace-forensics
+summary: 对已有 trace/heap/profile 做离线取证。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+- read-only
+- forensics
+mechanism: 识别格式 → 转成 queryable form → 找 hot path/retainer/wait reason → source mapping
+  → paired diff。
+when_to_use:
+- 已经有 trace、heapsnapshot、cpuprofile 或 spindump
+solves:
+- 大 artifact 直接肉眼阅读
+- 无 source attribution 的模糊结论
+inputs:
+- trace artifact
+outputs:
+- reduced finding
+- source location
+- confidence
+- artifact references
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/trace-forensics.md
+handoffs: []

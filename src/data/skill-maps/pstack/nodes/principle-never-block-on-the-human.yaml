@@ -1,0 +1,27 @@
+title: never-block-on-the-human
+summary: 可逆工作先做，只有不可逆或无法实验解决的偏好才阻塞人。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 可逆工作先做，只有不可逆或无法实验解决的偏好才阻塞人。
+when_to_use:
+- Apply when tempted to ask "should I do X?" on reversible work. Proceed, present
+  the result, let the human course-correct after the fact; reserve confirmation for
+  irreversible actions.
+solves:
+- 可逆工作先做，只有不可逆或无法实验解决的偏好才阻塞人。
+inputs:
+- reversible decision
+outputs:
+- executed result / escalated irreversible choice
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-never-block-on-the-human/SKILL.md
+handoffs: []
+official_description: Apply when tempted to ask 'should I do X?' on reversible work.
+  Proceed, present the result, let the human course-correct after the fact; reserve
+  confirmation for irreversible actions.

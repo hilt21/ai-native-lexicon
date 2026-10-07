@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { normalizeSkillMaps } from '../domain/content/skill-map-export.mjs';
 
 function orderedKeys(value) {
   if (Array.isArray(value)) return value.map(orderedKeys);
@@ -13,13 +14,14 @@ function byField(field) {
 }
 
 /**
- * @param {{ concepts: {slug: string}[], primitives: {slug: string}[], speaking_cards: {number: number}[], taxonomy: {categories: {slug: string}[], layers: {anchor: string}[]} }} content
+ * @param {{ concepts: {slug: string}[], primitives: {slug: string}[], speaking_cards: {number: number}[], skill_maps?: import('../domain/content/skill-map-export.mjs').ExportedSkillMap[], taxonomy: {categories: {slug: string}[], layers: {anchor: string}[]} }} content
  */
-export function createDatasetVersion({ concepts, primitives, speaking_cards, taxonomy }) {
+export function createDatasetVersion({ concepts, primitives, speaking_cards, skill_maps = [], taxonomy }) {
   const payload = {
     concepts: [...concepts].sort(byField('slug')),
     primitives: [...primitives].sort(byField('slug')),
     speaking_cards: [...speaking_cards].sort((a, b) => a.number - b.number),
+    skill_maps: normalizeSkillMaps(skill_maps),
     taxonomy: {
       categories: [...taxonomy.categories].sort(byField('slug')),
       layers: [...taxonomy.layers].sort(byField('anchor')),

@@ -1,0 +1,27 @@
+title: worktree-cleanup
+summary: 安全清理旧 worktree、simulator 和大型缓存。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: audit script 分类 → 与 pinned/active chats 交叉确认 → 有 WIP 或 in-use 就暂停 → 删除
+  confirmed set → before/after disk proof。
+when_to_use:
+- 磁盘压力
+- 大量 Agent worktree/simulator 堆积
+solves:
+- 误删正在使用或未提交状态
+inputs:
+- git worktrees
+- chat activity
+- disk state
+outputs:
+- reclaimed space
+- pruned worktrees
+- held-back reasons
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/worktree-cleanup.md
+handoffs: []

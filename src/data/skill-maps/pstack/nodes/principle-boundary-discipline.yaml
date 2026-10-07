@@ -1,0 +1,27 @@
+title: boundary-discipline
+summary: 把 validation 和 adapter 集中在系统边界，内部依赖可信类型。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 把 validation 和 adapter 集中在系统边界，内部依赖可信类型。
+when_to_use:
+- Apply when wiring validation, error handling, or framework adapters. Concentrate
+  guards at system boundaries (CLI, config, network, external APIs); trust internal
+  types and keep business logic in pure functions.
+solves:
+- 把 validation 和 adapter 集中在系统边界，内部依赖可信类型。
+inputs:
+- boundary input / external API
+outputs:
+- clean boundary adapter / pure core
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-boundary-discipline/SKILL.md
+handoffs: []
+official_description: Apply when wiring validation, error handling, or framework adapters.
+  Concentrate guards at system boundaries (CLI, config, network, external APIs); trust
+  internal types and keep business logic in pure functions.

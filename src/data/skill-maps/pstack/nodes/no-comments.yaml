@@ -1,0 +1,31 @@
+title: no-comments
+summary: 删除 AI 常见的解释性注释，并把真正约束转成结构。
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+- code-quality
+- comments
+- structural-encoding
+mechanism: 审查 comment；删除代码本身能表达的说明；如果 comment 描述真实 invariant，则建议 type/test/lint/runtime
+  check。
+when_to_use:
+- AI 生成大量注释
+- PR review 前清理
+- comment 声称某约束必须成立
+solves:
+- 减少过时注释
+- 防止 comment 成为错误 precedent
+inputs:
+- diff or source files
+outputs:
+- cleaner code
+- structural encodings for real constraints
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/no-comments/SKILL.md
+handoffs: []
+official_description: Spawn Comment Sicko, fix accepted findings, and offer encodings
+  for claimed constraints.

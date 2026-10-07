@@ -1,0 +1,26 @@
+title: experience-first
+summary: 产品取舍优先用户体验和完整度。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 产品取舍优先用户体验和完整度。
+when_to_use:
+- Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight
+  over implementation convenience; ship fewer polished features over more rough ones.
+solves:
+- 产品取舍优先用户体验和完整度。
+inputs:
+- product tradeoff
+outputs:
+- experience-oriented choice
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-experience-first/SKILL.md
+handoffs: []
+official_description: Apply when product, UX, or feature-scope tradeoffs come up.
+  Choose user delight over implementation convenience; ship fewer polished features
+  over more rough ones.

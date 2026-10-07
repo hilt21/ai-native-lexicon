@@ -1,0 +1,32 @@
+title: teach
+summary: 把 how 与 why 的结果组织成人真正能理解的解释。
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+- education
+- mental-model
+mechanism: 先调查系统工作机制与设计动机，再按学习者已有知识重组概念、机制和例子。
+when_to_use:
+- 用户想真正理解 subsystem/change
+- 需要 onboarding explanation
+solves:
+- 降低技术理解成本
+- 把碎片化代码知识变成 mental model
+inputs:
+- topic
+- learner question
+outputs:
+- teaching narrative
+- mental model
+- key concepts
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/teach/SKILL.md
+handoffs: []
+official_description: Explain a body of work plainly so a person actually understands
+  it. Runs the `how` and `why` skills and weaves what they find into one clear explanation.
+  Use for 'teach me this', 'help me really understand X', 'explain this change or
+  subsystem to me'.

@@ -1,0 +1,27 @@
+title: minimize-reader-load
+summary: 用减少读者必须跨越的层和隐藏状态衡量代码质量。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 用减少读者必须跨越的层和隐藏状态衡量代码质量。
+when_to_use:
+- Apply when reviewing or shaping code that's hard to trace. Count layers between
+  question and answer, and hidden state in the reader's head; collapse one-caller
+  wrappers and shrink mutable scope.
+solves:
+- 用减少读者必须跨越的层和隐藏状态衡量代码质量。
+inputs:
+- hard-to-trace code
+outputs:
+- lower reader load
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-minimize-reader-load/SKILL.md
+handoffs: []
+official_description: Apply when reviewing or shaping code that's hard to trace. Count
+  layers between question and answer, and hidden state in the reader's head; collapse
+  one-caller wrappers and shrink mutable scope.

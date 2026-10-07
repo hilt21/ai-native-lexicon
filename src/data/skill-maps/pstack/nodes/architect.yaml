@@ -1,0 +1,37 @@
+title: architect
+summary: 在写代码前确定类型、接口、模块和数据结构。
+type: capability
+status: active
+layer: skill
+primary_cluster: design-decision
+secondary_clusters:
+- implementation-quality
+tags:
+- architecture
+- design
+mechanism: 用 how/why grounding 现状，用 arena 探索多个形状，选择可解释的 target architecture，并在实现中保持设计约束。
+when_to_use:
+- 跨函数/模块变更
+- 新 feature
+- 非平凡 refactor
+- 数据模型改变
+solves:
+- 避免局部 patch 锁死错误结构
+- 降低返工和读者负担
+inputs:
+- requirements
+- current architecture
+- constraints
+outputs:
+- types/signatures
+- module map
+- design rationale
+- implementation constraints
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/architect/SKILL.md
+handoffs: []
+official_description: Sketch types, signatures, and module structure before code,
+  then stay in the loop while implementation fills in. Use for /architect, 'architect
+  this', 'design this', or non-trivial work where jumping to code would lock in the
+  wrong shape.

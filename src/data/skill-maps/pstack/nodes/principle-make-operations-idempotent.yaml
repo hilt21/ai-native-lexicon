@@ -1,0 +1,27 @@
+title: make-operations-idempotent
+summary: 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。
+when_to_use:
+- Apply when designing commands, lifecycle steps, or processing loops that run amid
+  crashes, restarts, and retries. Converge to the same end state regardless of partial
+  prior runs.
+solves:
+- 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。
+inputs:
+- retryable operation
+outputs:
+- idempotent operation
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-make-operations-idempotent/SKILL.md
+handoffs: []
+official_description: Apply when designing commands, lifecycle steps, or processing
+  loops that run amid crashes, restarts, and retries. Converge to the same end state
+  regardless of partial prior runs.

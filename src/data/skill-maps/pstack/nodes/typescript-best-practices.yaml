@@ -1,0 +1,31 @@
+title: typescript-best-practices
+summary: 用类型系统和边界解析减少 TypeScript 的非法状态。
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+- typescript
+- types
+- quality
+mechanism: 强调 discriminated union、branded types、unknown、schema validation、exhaustiveness
+  和 authoritative schemas。
+when_to_use:
+- 任何 .ts/.tsx 修改
+solves:
+- 减少 any/cast/隐式状态
+- 把 runtime 错误前移到类型层
+inputs:
+- TypeScript code
+- domain constraints
+outputs:
+- stronger types
+- safer boundaries
+- exhaustive code
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/typescript-best-practices/SKILL.md
+handoffs: []
+official_description: TypeScript best practices. Use when reading or editing any .ts
+  or .tsx file.

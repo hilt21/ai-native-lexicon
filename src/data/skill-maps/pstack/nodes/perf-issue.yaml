@@ -1,0 +1,27 @@
+title: perf-issue
+summary: 一次性性能问题的测量、修复与证明。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: baseline trace → benchmark-checklist → how → 按性能 mantra 排序假设 → 修改 → post
+  trace → artifact diff → PR。
+when_to_use:
+- 一次性 latency/throughput/slowness 问题
+solves:
+- 读代码代替测量
+- 无基线 speedup claim
+inputs:
+- performance complaint
+- real workload
+outputs:
+- baseline/post metric
+- artifact paths
+- verified perf fix
+- PR
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/perf-issue.md
+handoffs: []

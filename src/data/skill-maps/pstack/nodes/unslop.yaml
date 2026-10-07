@@ -1,0 +1,26 @@
+title: unslop
+summary: 清理 AI 痕迹、模板化语言和无信息文字。
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+- writing
+- editing
+mechanism: 压缩重复、空泛 heading、套话、抽象比喻和明显机器腔，同时保留事实与操作信息。
+when_to_use:
+- 几乎所有 Agent 生成的最终文字
+solves:
+- 降低 AI 味
+- 提高信噪比
+inputs:
+- draft text
+outputs:
+- concise human-readable text
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/unslop/SKILL.md
+handoffs:
+- 交接说明：final response
+official_description: Cut AI tells from any writing. Must always apply.

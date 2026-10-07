@@ -1,0 +1,27 @@
+title: babysit
+summary: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: 声明 drive/background/threads-only/check 模式 → 只处理 merge frontier → conflicts
+  → review → CI → forge verdict → 批量 fix wave。
+when_to_use:
+- PR 已开，需要 green/merge-ready
+- 需要处理 review/CI
+solves:
+- 同时处理整个 stack 导致 churn
+- 把 green checks 当 merge verdict
+inputs:
+- open PR or stack
+- forge state
+outputs:
+- merge-ready frontier
+- resolved reviews/CI
+- blocker report
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/babysit.md
+handoffs: []

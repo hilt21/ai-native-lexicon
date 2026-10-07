@@ -1,0 +1,27 @@
+title: exhaust-the-design-space
+summary: 重要新设计先比较多个原型。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 重要新设计先比较多个原型。
+when_to_use:
+- Apply when facing a novel UI interaction or architectural decision with no precedent
+  in the codebase. Build 2-3 competing prototypes and compare side by side before
+  committing.
+solves:
+- 重要新设计先比较多个原型。
+inputs:
+- novel design decision
+outputs:
+- compared alternatives / chosen direction
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-exhaust-the-design-space/SKILL.md
+handoffs: []
+official_description: Apply when facing a novel UI interaction or architectural decision
+  with no precedent in the codebase. Build 2-3 competing prototypes and compare side
+  by side before committing.

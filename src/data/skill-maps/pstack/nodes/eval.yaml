@@ -1,0 +1,28 @@
+title: eval
+summary: 用盲测验证 skill/prompt 是否真的改善 Agent 行为。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags: []
+mechanism: 定义 rubric 但不泄漏给 candidates → sanitized env → organic prompt → 多候选 → 不同模型
+  family blind judge → transcript 验证真实 chain → 综合。
+when_to_use:
+- 修改 skill/prompt 后
+- 需要判断 behavioral improvement
+solves:
+- 自报遵循规则
+- judge 知道模型身份带来的偏见
+inputs:
+- variant
+- organic prompt
+- hidden rubric
+outputs:
+- candidate outputs
+- blind judge verdict
+- promotion recommendation
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/eval.md
+handoffs: []

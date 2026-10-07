@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
-import { access, cp, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
+import { access, cp, mkdtemp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import test from 'node:test';
@@ -9,6 +9,39 @@ import { promisify } from 'node:util';
 import { parse, stringify } from 'yaml';
 import { categoryRegistry } from '../src/domain/taxonomy/categories.mjs';
 import { layerRegistry } from '../src/domain/taxonomy/layers.mjs';
+
+test('a second skill map appears across page and machine projections using only YAML additions', async () => {
+  await inIsolatedProject(async (directory) => {
+    const root = join(directory, 'src/data/skill-maps/example');
+    await mkdir(join(root, 'nodes'), { recursive: true });
+    await mkdir(join(root, 'journeys'), { recursive: true });
+    const originalMap = await yaml(directory, 'src/data/skill-maps/pstack/map.yaml');
+    await writeFile(join(root, 'map.yaml'), stringify({ ...originalMap, title: 'Example Skill Map', scope: 'Synthetic test ecosystem', taxonomy: { types: [{ id: 'tool', label: 'Tool', description: 'A custom capability.' }], relation_types: [] } }));
+    await writeFile(join(root, 'relations.yaml'), stringify({ relations: [] }));
+    const node = await yaml(directory, 'src/data/skill-maps/pstack/nodes/how.yaml');
+    delete node.layer; delete node.primary_cluster; node.secondary_clusters = [];
+    await writeFile(join(root, 'nodes/how.yaml'), stringify({ ...node, type: 'tool' }));
+    await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
+    const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
+    assert.equal(dataset.counts.skill_maps, 2);
+    assert.equal(dataset.skill_maps.find((m) => m.id === 'example').nodes[0].id, 'how');
+    const page = await readFile(join(directory, 'dist/skill-maps/example/nodes/how/index.html'), 'utf8');
+    assert.match(page, /Example Skill Map/);
+    assert.match(page, /\/ai-native-lexicon\/skill-maps\/example\/nodes\//);
+    const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');
+    assert.match(search, /\/ai-native-lexicon\/skill-maps\/example\/nodes\/how\//);
+    assert.match(await readFile(join(directory, 'dist/llms.txt'), 'utf8'), /Example Skill Map/);
+    const pstack = await readFile(join(directory, 'dist/skill-maps/pstack/journeys/fix-bug/index.html'), 'utf8');
+    assert.match(pstack, /修复涉及模块或接口变化时/);
+    await writeFile(join(root, 'nodes/how.yaml'), stringify({ title: 'Old how', summary: 'Retired test entry.', type: 'tool', status: 'retired', retirement_note: 'Use current tools.', source_refs: node.source_refs }));
+    await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
+    const retired = await readFile(join(directory, 'dist/skill-maps/example/nodes/how/index.html'), 'utf8');
+    assert.match(retired, /Retired/);
+    assert.match(retired, new RegExp(originalMap.sources[0].commit));
+    const second = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
+    assert.equal(second.skill_maps.find((m) => m.id === 'example').nodes[0].status, 'retired');
+  });
+});
 
 const run = promisify(execFile);
 const repository = fileURLToPath(new URL('../', import.meta.url));
@@ -390,8 +423,8 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     const exported = first.speaking_cards?.find((card) => card.number === number);
     assert.deepEqual(exported, guide);
     assert.equal(first.version, '0.2.0');
-    assert.equal(first.schema_version, '1.0.0');
-    assert.deepEqual(first.counts, { concepts: first.concepts.length, primitives: first.primitives.length, speaking_cards: numbers.length + 1 });
+    assert.equal(first.schema_version, '1.1.0');
+    assert.deepEqual(first.counts, { concepts: first.concepts.length, primitives: first.primitives.length, speaking_cards: numbers.length + 1, skill_maps: first.skill_maps.length });
     const href = `/ai-native-lexicon/speaking-card/#card-${String(number).padStart(2, '0')}`;
     const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');
     assert.ok(search.includes(`href="${href}"`));

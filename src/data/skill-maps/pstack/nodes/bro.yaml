@@ -1,0 +1,25 @@
+title: bro
+summary: 把上一条技术回复翻成普通人语言。
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+- explanation
+- plain-language
+mechanism: 保留结论与因果，删除术语和复杂表达。
+when_to_use:
+- 上一条回复太技术
+- 用户要求通俗解释
+solves:
+- 降低即时理解成本
+inputs:
+- previous assistant message
+outputs:
+- plain-language restatement
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/bro/SKILL.md
+handoffs: []
+official_description: Restate the last message in plain human language, with no jargon.

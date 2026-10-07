@@ -1,0 +1,35 @@
+title: benchmark-checklist
+summary: 验证性能数字是否真的测到了目标工作。
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+- performance
+- measurement
+- verification
+mechanism: 检查 limiter、配置、物理上限、错误率、重复性、端到端相关性和 work count，避免把噪声当 speedup。
+when_to_use:
+- 性能优化
+- benchmark
+- 报告 latency/throughput/speedup/regression
+solves:
+- 避免错误性能结论
+- 提高实验可重复性
+inputs:
+- benchmark harness
+- measurements
+- workload
+outputs:
+- measurement verdict
+- validated baseline
+- known limitations
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/benchmark-checklist/SKILL.md
+handoffs:
+- 交接说明：performance claim
+official_description: Vet a perf measurement (limiter, tuning, limits, errors, repeatability,
+  relevance, and whether the work happened) before you report or act on it. Use when
+  you run a benchmark or report a speedup or regression you measured.

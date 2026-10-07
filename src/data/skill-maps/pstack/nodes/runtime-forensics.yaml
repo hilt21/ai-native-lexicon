@@ -1,0 +1,28 @@
+title: runtime-forensics
+summary: 从正在运行的进程采集信号并做只读诊断。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+- read-only
+- forensics
+mechanism: 采集 CPU/heap/CDP 等真实 artifact → 缩小 smoking gun → 在 live process 中验证 mechanism
+  → 映射 source。
+when_to_use:
+- live leak/spin/glitch
+- 症状只能在运行时观察
+solves:
+- 从源码猜 runtime 问题
+inputs:
+- live process
+- control surface
+outputs:
+- cited diagnosis
+- source location
+- artifact paths
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/runtime-forensics.md
+handoffs: []

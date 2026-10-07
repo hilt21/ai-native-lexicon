@@ -1,0 +1,32 @@
+title: make-bot-ui
+summary: 为 Agent automation 建一个简单可触发的控制 UI。
+type: capability
+status: active
+layer: skill
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags:
+- automation
+- ui
+- webhook
+mechanism: 本地页面经 server/webhook 唤醒 bot，secret 留在 server，并可通过 Tailscale 暴露。
+when_to_use:
+- 需要按钮/仪表盘触发 Grok Bot
+- 需要远程控制自动化流程
+solves:
+- 降低非技术用户触发自动化的门槛
+inputs:
+- UI requirement
+- webhook endpoint
+- sender key
+- network exposure choice
+outputs:
+- working bot UI
+- webhook flow
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/make-bot-ui/SKILL.md
+handoffs: []
+official_description: Use when building a custom UI (page, dashboard, buttons) that
+  should wake a Grok Bot over a webhook, when the user must provide a webhook sender
+  key, or when exposing that UI on Tailscale.

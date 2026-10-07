@@ -1,0 +1,27 @@
+title: encode-lessons-in-structure
+summary: 重复指令第二次出现时，把规则下沉成结构。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 重复指令第二次出现时，把规则下沉成结构。
+when_to_use:
+- Apply when you catch yourself writing the same instruction a second time, or notice
+  a recurring correction. Encode the rule as a lint, metadata flag, runtime check,
+  or script instead of more text.
+solves:
+- 重复指令第二次出现时，把规则下沉成结构。
+inputs:
+- recurring instruction/correction
+outputs:
+- lint/metadata/runtime check/script
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-encode-lessons-in-structure/SKILL.md
+handoffs: []
+official_description: Apply when you catch yourself writing the same instruction a
+  second time, or notice a recurring correction. Encode the rule as a lint, metadata
+  flag, runtime check, or script instead of more text.

@@ -1,0 +1,37 @@
+title: 我想先看懂系统
+summary: 我想先看懂系统：从任务入口到可检查的产物。
+order: 0
+when_to_use:
+- How does X work?
+- Why is this designed this way?
+- Catch me up on X.
+inputs:
+- 明确的任务目标与相关上下文。
+outputs:
+- evidence-backed mental model / explanation
+variants:
+- id: standard
+  title: 推荐路径
+  steps:
+  - title: 选择理解入口
+    why: 帮助用户理解 pstack，并选择正确入口。 pstack 的总路由器与工作风格入口。 只读调查，输出带证据的解释或建议。
+    nodes:
+    - poteto-help
+    - poteto-mode
+    - investigation
+  - title: 理解行为
+    why: 建立系统如何工作的 mental model。
+    nodes:
+    - how
+  - title: 查明设计理由
+    why: 解释系统为什么变成现在这样，并给出证据。
+    nodes:
+    - why
+    optional: true
+    when: 需要追溯设计动机时。
+  - title: 组织解释
+    why: 把 how 与 why 的结果组织成人真正能理解的解释。
+    nodes:
+    - teach
+    optional: true
+    when: 需要面向他人讲解时。

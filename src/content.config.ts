@@ -6,6 +6,8 @@ import { conceptSchema } from './lib/concept-schema.mjs';
 import { yamlContentLoader } from './lib/yaml-content-loader.mjs';
 import { speakingCardSchema } from './lib/speaking-card-schema.mjs';
 import { primitiveSchema } from './lib/primitive-schema.mjs';
+import { skillMapLoader } from './lib/skill-map-loader.mjs';
+import { skillMapSchema } from './domain/content/skill-map-input.mjs';
 
 export { categories, conceptStatuses, conceptSchema };
 
@@ -26,6 +28,7 @@ const speakingCards = defineCollection({
   schema: speakingCardSchema,
 });
 
-export const collections = { concepts, primitives, speakingCards, docs };
+const skillMaps = defineCollection({ loader: skillMapLoader(), schema: skillMapSchema });
+export const collections = { concepts, primitives, speakingCards, skillMaps, docs };
 
 export type Category = (typeof categories)[number];

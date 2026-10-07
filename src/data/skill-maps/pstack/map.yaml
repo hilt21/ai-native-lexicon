@@ -1,0 +1,94 @@
+schema_version: 1.0.0
+title: pstack Skill Map
+summary: 从工作目标出发，选择和组合 pstack 的技能、操作手册与工程原则。
+scope: pstack 0.15.15 的技能体系；用途和任务路径是编辑解读。
+audience:
+- 第一次使用 pstack 的开发者
+- 需要选择工程工作流的 Agent 使用者
+sources:
+- id: pstack-0-15-15-df581122
+  repository: https://github.com/cursor/plugins
+  root_path: pstack
+  version: 0.15.15
+  commit: df581122cde17e6e27686b5a448bde23e4ad4318
+  observed_at: '2026-10-07'
+  verification_status: verified
+  verified_at: '2026-10-07'
+current_sources:
+- pstack-0-15-15-df581122
+taxonomy:
+  types:
+  - id: router
+    label: 入口路由
+    description: pstack 的入口路由条目。
+  - id: utility
+    label: 辅助技能
+    description: pstack 的辅助技能条目。
+  - id: capability
+    label: 能力技能
+    description: pstack 的能力技能条目。
+  - id: playbook
+    label: 操作手册
+    description: pstack 的操作手册条目。
+  - id: principle
+    label: 工程原则
+    description: pstack 的工程原则条目。
+  layers:
+  - id: router
+    label: Router
+    description: Route a user task to an appropriate workflow.
+  - id: playbook
+    label: Playbook
+    description: Task-specific operating procedure that composes skills and principles.
+  - id: skill
+    label: Skill
+    description: Reusable capability that performs or supports a class of work.
+  - id: principle
+    label: Principle
+    description: Cross-cutting engineering rule that constrains decisions and execution.
+  clusters:
+  - id: entry-routing
+    label: 入口与路由
+    description: Where do I start and which workflow should run?
+  - id: understanding-context
+    label: 理解与上下文
+    description: How does this system work and why is it this way?
+  - id: design-decision
+    label: 设计与决策
+    description: What shape should the solution take and what could it affect?
+  - id: implementation-quality
+    label: 实现与质量
+    description: How should the change be implemented cleanly?
+  - id: verification-evidence
+    label: 验证与证据
+    description: How do we prove the real result works?
+  - id: parallel-autonomy
+    label: 并行与自治
+    description: How can more work run with less human supervision?
+  - id: learning-evolution
+    label: 复盘与进化
+    description: How does the environment become better after each run?
+  - id: principles
+    label: 工程原则
+    description: Which reusable rules constrain all workflows?
+  relation_types:
+  - id: uses
+    outgoing_label: 使用的能力
+    incoming_label: 使用此能力的流程
+    description: 流程调用或使用一个能力。
+  - id: routes_to
+    outgoing_label: 可选择的入口
+    incoming_label: 路由到此处的入口
+    description: 入口为任务选择下一条流程。
+  - id: feeds
+    outgoing_label: 可交接给
+    incoming_label: 可接收来自
+    description: 一个条目的产物可交接给另一个条目。
+  - id: governed_by
+    outgoing_label: 遵循的原则
+    incoming_label: 受此原则约束的条目
+    description: 工程原则约束工作中的判断。
+  - id: resumes
+    outgoing_label: 可恢复的工作
+    incoming_label: 由此处恢复的工作
+    description: 通过恢复入口继续先前的工作。

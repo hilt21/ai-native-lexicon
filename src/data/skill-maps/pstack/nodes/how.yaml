@@ -1,0 +1,35 @@
+title: how
+summary: 建立系统如何工作的 mental model。
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+- grounding
+- architecture
+- read-only
+mechanism: 简单问题直接分析；复杂系统并行调查关键路径、所有权、运行流和层次，再综合成结构化解释。
+when_to_use:
+- 修改前理解 subsystem
+- 代码 walkthrough
+- 询问某代码应该放在哪一层
+solves:
+- 避免盲改
+- 减少错误的模块归属和边界判断
+inputs:
+- subsystem or code area
+- runtime question
+outputs:
+- architecture overview
+- runtime flow
+- key files and ownership
+- gotchas
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/how/SKILL.md
+handoffs: []
+official_description: Use for "how does X work", code walkthroughs before changing
+  something, and placement / ownership / layering questions ("where should this live",
+  "which package owns this", "is this the right layer"). Explains subsystem architecture,
+  runtime flow, onboarding mental models. Use why for motivation.

@@ -91,6 +91,16 @@ L2 verifies structured YAML expansion. It does not ingest raw articles, generate
 
 GitHub edit links use the `master` content branch by default. Set `CONTENT_BRANCH` when the canonical files live on another branch; this applies to both concept pages and Starlight documentation links.
 
+## Skill Maps
+
+Create `src/data/skill-maps/<map-id>/map.yaml`, `relations.yaml`, `nodes/` and `journeys/`. Map, node and journey filename slugs are stable identities. Modify independent YAML records rather than pages or indexes. Map-local taxonomy defines types, optional layers/clusters and relationship labels; empty collections/layers and principles without input/output are valid.
+
+Use the [approved field contract](docs/design/skill-map.md). Strict input rules live in `src/domain/content/skill-map-input.mjs`; fixed directory assembly and internal reference checks are shared by the CLI and Astro. Run `npm run schema:generate` after field changes; `schema:check` detects drift without writing. After data/code changes run `npm run check`, `npm test`, `npm run build` and `npm run test:extension`.
+
+Relationships belong only in `relations.yaml`; handoffs are explanatory text. Journeys express guidance, reasons, conditions, optional steps and expected outputs, not execution or authority. Before accepting public content pin source commits and verify inventory/official descriptions, separately from editorial interpretations. New commits get new source IDs; preserve old snapshots still referenced by retired records. `current_sources` selects current snapshots. During update review use `validateSkillMapSnapshotChanges(previousRecords,currentRecords)` to detect repointed source IDs; a single schema parse cannot prove historical immutability. Pending sources are valid development inputs but rejected by publication checks.
+
+Rename a title without renaming its ID. Retire removed entries with status/retirement_note and an optional confirmed active replaced_by. Adjust active journeys to remove retired recommendations; old detail routes and sources remain available. New maps appear automatically across pages, Search, JSON and LLM navigation. Concept/Primitive/Speaking Guide mapping remains a future contract: do not add knowledge_refs before its validation and projections are activated.
+
 ## Scope of changes
 
 Keep pull requests focused. Do not mix a terminology proposal with unrelated styling, dependency, or architecture changes. When changing a definition, explain the practical ambiguity the change resolves.

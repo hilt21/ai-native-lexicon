@@ -4,12 +4,18 @@ import { getConcepts, getPrimitives, pathWithBase } from '../lib/catalog';
 import ConceptRow from '../components/ConceptRow.astro';
 import CatalogRow from '../components/CatalogRow.astro';
 import { getSpeakingCards } from '../lib/speaking-cards';
-const [concepts, primitives, speakingCards] = await Promise.all([getConcepts(), getPrimitives(), getSpeakingCards()]);
+import { getSkillMaps, mapLink } from '../lib/skill-maps';
+const [concepts, primitives, speakingCards, maps] = await Promise.all([getConcepts(), getPrimitives(), getSpeakingCards(), getSkillMaps()]);
+const mapResults = maps.flatMap((map) => [
+  { href: mapLink(map.id), title: map.data.title, summary: map.data.summary, secondary: 'Skill Map', marker: 'MAP', number: 'M', search: `${map.data.scope} ${map.data.audience.join(' ')}` },
+  ...map.data.nodes.map((n) => ({ href: mapLink(map.id, `nodes/${n.id}/`), title: n.title, summary: n.summary, secondary: `${map.data.title} · ${map.data.taxonomy.types.find((t) => t.id === n.type)?.label}${n.status === 'retired' ? ' · Retired' : ''}`, marker: 'ITEM', number: 'N', search: `${n.when_to_use.join(' ')} ${n.tags.join(' ')} ${map.data.taxonomy.clusters.filter((c) => c.id === n.primary_cluster || n.secondary_clusters.includes(c.id)).map((c) => c.label).join(' ')}` })),
+  ...map.data.journeys.map((j) => ({ href: mapLink(map.id, `journeys/${j.id}/`), title: j.title, summary: j.summary, secondary: `${map.data.title} · Task journey${j.status === 'retired' ? ' · Retired' : ''}`, marker: 'TASK', number: 'J', search: j.when_to_use.join(' ') })),
+]);
 const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
 const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
 ---
 
-<StarlightPage frontmatter={{ title: 'Search', description: 'Search concepts, primitives and speaking guides by name, idea, or relationships.', editUrl: false, tableOfContents: false }}>
+<StarlightPage frontmatter={{ title: 'Search', description: 'Search knowledge, speaking guides and skill maps by name, idea, or relationships.', editUrl: false, tableOfContents: false }}>
   <div class="search-panel">
     <label for="concept-search">Search the working vocabulary</label>
     <div class="search-input-wrap">
@@ -17,10 +23,11 @@ const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} $
       <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" />
       <kbd>/</kbd>
     </div>
-    <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length + speakingCards.length} entries</p>
+    <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length + speakingCards.length + mapResults.length} entries</p>
   </div>
 
   <div class="search-results" id="search-results">
+    {mapResults.map((result) => <CatalogRow {...result} searchText={`${result.title} ${result.summary} ${result.secondary} ${result.search}`.toLowerCase()} />)}
     {concepts.map((concept) => (
       <ConceptRow
         concept={concept}

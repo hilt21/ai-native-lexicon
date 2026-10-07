@@ -1,0 +1,26 @@
+title: guard-the-context-window
+summary: 把大 payload 放到 subagent，主 context 只保留摘要。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 把大 payload 放到 subagent，主 context 只保留摘要。
+when_to_use:
+- 'Apply when context is filling up: large outputs, long files, repeated reads, fan-out
+  planning. Route bulk to subagents; keep summaries in the main thread, not raw payloads.'
+solves:
+- 把大 payload 放到 subagent，主 context 只保留摘要。
+inputs:
+- large context payload
+outputs:
+- compressed summary
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-guard-the-context-window/SKILL.md
+handoffs: []
+official_description: 'Apply when context is filling up: large outputs, long files,
+  repeated reads, fan-out planning. Route bulk to subagents; keep summaries in the
+  main thread, not raw payloads.'

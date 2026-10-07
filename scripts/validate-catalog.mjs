@@ -8,5 +8,5 @@ if (errors.length) {
   process.exitCode = 1;
 } else {
   const distribution = Object.entries(categoryCounts).map(([category, count]) => `${category}: ${count}`).join(', ');
-  console.log(`Validated ${catalog.concepts.length} concepts, ${catalog.primitives.length} primitives and ${catalog.speakingCards.length} speaking cards (${distribution}).`);
+  console.log(`Validated ${catalog.concepts.length} concepts, ${catalog.primitives.length} primitives, ${catalog.speakingCards.length} speaking cards and ${catalog.skillMaps.length} skill maps (${distribution}).`);
 }

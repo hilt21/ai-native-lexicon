@@ -1,0 +1,27 @@
+title: autopilot-full
+summary: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: one owner per PR → durable trail → self-proof/CI/babysit 并行 → root swarm
+  verify exact head → clean verdict 后 owner merge → 周期 audit/replacement。
+when_to_use:
+- 多个独立 PR 要全自动做到 merged
+solves:
+- root 成为执行瓶颈
+- PR owner 丢失生命周期责任
+- 无独立 countersign
+inputs:
+- PR queue
+- operator gates
+outputs:
+- merged verified PRs
+- decision/children trails
+- audit verdicts
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/poteto-mode/playbooks/autopilot-full.md
+handoffs: []

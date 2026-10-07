@@ -1,0 +1,27 @@
+title: redesign-from-first-principles
+summary: 新 requirement 当作从第一天就存在，重新推导结构。
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+- principle
+mechanism: 新 requirement 当作从第一天就存在，重新推导结构。
+when_to_use:
+- Apply when integrating a new requirement into an existing design. Redesign as if
+  the requirement had been a foundational assumption from day one, instead of bolting
+  it on.
+solves:
+- 新 requirement 当作从第一天就存在，重新推导结构。
+inputs:
+- new requirement + legacy design
+outputs:
+- redesigned target shape
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/principle-redesign-from-first-principles/SKILL.md
+handoffs: []
+official_description: Apply when integrating a new requirement into an existing design.
+  Redesign as if the requirement had been a foundational assumption from day one,
+  instead of bolting it on.

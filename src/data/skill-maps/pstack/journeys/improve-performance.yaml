@@ -1,0 +1,68 @@
+title: 我想优化性能
+summary: 我想优化性能：从任务入口到可检查的产物。
+order: 3
+when_to_use:
+- This is slow
+- Make latency 50% lower
+inputs:
+- 明确的任务目标与相关上下文。
+outputs:
+- measurement-backed performance improvement
+variants:
+- id: standard
+  title: 推荐路径
+  steps:
+  - title: 选择测量入口
+    why: pstack 的总路由器与工作风格入口。 一次性性能问题的测量、修复与证明。
+    nodes:
+    - poteto-mode
+    - perf-issue
+  - title: 确认测量
+    why: 验证性能数字是否真的测到了目标工作。
+    nodes:
+    - benchmark-checklist
+  - title: 理解瓶颈
+    why: 建立系统如何工作的 mental model。
+    nodes:
+    - how
+  - title: 设计改动
+    why: 在写代码前确定类型、接口、模块和数据结构。
+    nodes:
+    - architect
+    optional: true
+    when: 优化影响系统结构时。
+  - title: 准备 PR
+    why: 把已验证 diff 整理成可审阅 PR。
+    nodes:
+    - opening-a-pr
+  - title: 审查与发布
+    why: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    nodes:
+    - babysit
+    - shipping
+    optional: true
+    when: 需要推进发布且已获得相应授权时。
+- id: alternative-1
+  title: 持续改进一个指标
+  when: 需要针对单一指标反复测量和改进时。
+  steps:
+  - title: poteto-mode
+    why: pstack 的总路由器与工作风格入口。
+    nodes:
+    - poteto-mode
+  - title: hillclimb
+    why: 围绕单一 metric 做持续、可回滚的迭代优化。
+    nodes:
+    - hillclimb
+  - title: benchmark-checklist
+    why: 验证性能数字是否真的测到了目标工作。
+    nodes:
+    - benchmark-checklist
+  - title: show-me-your-work
+    why: 把长时间 Agent 活动压缩成可审计 decision trail。
+    nodes:
+    - show-me-your-work
+  - title: opening-a-pr
+    why: 把已验证 diff 整理成可审阅 PR。
+    nodes:
+    - opening-a-pr

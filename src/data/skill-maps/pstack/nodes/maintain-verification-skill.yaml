@@ -1,0 +1,37 @@
+title: maintain-verification-skill
+summary: 持续校准 verification skill 和 Feature Map，防止它们随代码漂移。
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+- verification
+- maintenance
+- drift
+mechanism: 每个 feature 并行读 source，再用一个 live session 驱动全部 feature，区分 documentation drift、harness
+  gap 和 product regression。
+when_to_use:
+- verification skill 已存在且产品持续演进
+- 定期 audit verify skill
+solves:
+- 防止 verifier 腐化
+- 防止用错误文档掩盖产品回归
+inputs:
+- verification skill
+- feature map
+- current source
+- live product
+outputs:
+- clean/changed/blocked verdict
+- proven corrections
+- optional PR
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/maintain-verification-skill/SKILL.md
+handoffs:
+- 交接说明：future verification runs
+official_description: 'Periodic pass that keeps a project''s verification skill and
+  feature map honest: parallel source readers per feature, one live session driving
+  every feature, at most one PR of proven corrections. Use for /maintain-verification-skill
+  or "audit the verify skill".'

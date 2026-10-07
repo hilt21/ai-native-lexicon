@@ -1,0 +1,43 @@
+title: 我想做新 feature
+summary: 我想做新 feature：从任务入口到可检查的产物。
+order: 2
+when_to_use:
+- Add X
+- Implement Y
+inputs:
+- 明确的任务目标与相关上下文。
+outputs:
+- verified feature PR / landed change
+variants:
+- id: standard
+  title: 推荐路径
+  steps:
+  - title: 选择功能入口
+    why: pstack 的总路由器与工作风格入口。 新功能的设计、并行实现、真实验证和审查。
+    nodes:
+    - poteto-mode
+    - feature
+  - title: 理解现状
+    why: 建立系统如何工作的 mental model。
+    nodes:
+    - how
+  - title: 设计方案
+    why: 在写代码前确定类型、接口、模块和数据结构。 用并行候选和盲评扩大设计空间。
+    nodes:
+    - architect
+    - arena
+  - title: 挑战方案
+    why: 对代码或设计做多模型 adversarial review。
+    nodes:
+    - interrogate
+  - title: 准备 PR
+    why: 把已验证 diff 整理成可审阅 PR。
+    nodes:
+    - opening-a-pr
+  - title: 审查与发布
+    why: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    nodes:
+    - babysit
+    - shipping
+    optional: true
+    when: 需要推进发布且已获得相应授权时。

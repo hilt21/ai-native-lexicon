@@ -1,0 +1,34 @@
+title: automate-me
+summary: 把稳定的个人工作偏好编码成可复用 mode skill。
+type: capability
+status: active
+layer: skill
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags:
+- personalization
+- automation
+- memory
+mechanism: 从近期工作历史提取稳定偏好，经 create-skill 和 unslop 形成个人 `<name>-mode`，后续 Agent 可直接继承。
+when_to_use:
+- 希望 Agent 长期遵循个人工作方式
+- 重复表达相同偏好
+solves:
+- 减少重复提示
+- 把个人 workflow 外部化
+inputs:
+- user preferences
+- recent transcripts
+- existing mode skill
+outputs:
+- personal mode skill
+- updated working-style rules
+source_refs:
+- source: pstack-0-15-15-df581122
+  path: skills/automate-me/SKILL.md
+handoffs:
+- 交接说明：future poteto-mode/custom mode
+official_description: Use for "automate me", "create/update/refresh my -mode skill",
+  "turn/capture my preferences or working style into a skill", or wanting agents to
+  follow how the user works. Drafts or revises a personal -mode skill via create-skill
+  + unslop, optionally pulling fresh evidence from recent transcripts.
