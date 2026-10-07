@@ -11,6 +11,7 @@ import { mapInput, nodeInput } from '../tests/skill-map-fixture.mjs';
 
 const run = promisify(execFile);
 const base = '/ai-native-lexicon';
+const channel = process.env.PLAYWRIGHT_CHANNEL || 'chromium';
 const repository = resolve('.');
 const evidence = resolve(process.env.WEB_EVIDENCE ?? 'work/web-browser');
 const buildEnvironment = { ...process.env, BASE_PATH: base, SKIP_PAGEFIND: 'false', GITHUB_ACTIONS: 'true', GITHUB_REPOSITORY: 'hilt21/ai-native-lexicon', GITHUB_REPOSITORY_OWNER: 'hilt21' };
@@ -18,7 +19,7 @@ let root = resolve('dist');
 let fixtureDirectory;
 let browser;
 await mkdir(evidence, { recursive: true });
-const report = { base, pagefind: true, environment: { node: process.version, channel: process.env.PLAYWRIGHT_CHANNEL || 'chromium' }, checks: [], failures: [], optional: { zoom400: 'unverified; 320px reflow is not a 400% zoom test', screenReader: 'unverified; requires an assistive-technology session', lighthouse: 'measured independently outside this behavior suite' } };
+const report = { base, pagefind: true, environment: { node: process.version, channel }, checks: [], failures: [], optional: { zoom400: 'unverified; 320px reflow is not a 400% zoom test', screenReader: 'unverified; requires an assistive-technology session', lighthouse: 'measured independently outside this behavior suite' } };
 report.buildCommit = (await run('git', ['rev-parse', 'HEAD'])).stdout.trim();
 async function build(directory) { await run('npm', ['run', 'build'], { cwd: directory, env: buildEnvironment, maxBuffer: 8 * 1024 * 1024 }); }
 if (!process.argv.includes('--reuse-build')) await build(repository);
@@ -92,7 +93,7 @@ async function histories(browser, mapId, mode) {
   await context.close();
 }
 try {
-  browser = await chromium.launch({ channel: process.env.PLAYWRIGHT_CHANNEL || undefined, ignoreDefaultArgs: ['--disable-back-forward-cache'] });
+  browser = await chromium.launch({ channel, ignoreDefaultArgs: ['--disable-back-forward-cache'] });
   report.browser = browser.version();
   const context = await browser.newContext({ viewport: { width: 1440, height: 960 } });
   const page = await context.newPage();
@@ -190,8 +191,8 @@ try {
   await check('reduced motion',async()=>{const state=await page.evaluate(()=>({scroll:getComputedStyle(document.documentElement).scrollBehavior,animations:document.getAnimations().length}));assert.equal(state.scroll,'auto');assert.equal(state.animations,0);});await page.emulateMedia({reducedMotion:'no-preference'});
   assert.deepEqual(errors, []); await context.close();
   await histories(browser,'pstack','bfcache');
-  await browser.close(); browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||undefined}); await histories(browser,'pstack','reload');
-  await browser.close(); browser = await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||undefined,ignoreDefaultArgs:['--disable-back-forward-cache']});
+  await browser.close(); browser = await chromium.launch({channel}); await histories(browser,'pstack','reload');
+  await browser.close(); browser = await chromium.launch({channel,ignoreDefaultArgs:['--disable-back-forward-cache']});
 
   fixtureDirectory=await mkdtemp(join(tmpdir(),'lexicon-web-fixture-'));
   for(const path of ['src','scripts','schemas','tests','public','package.json','package-lock.json','astro.config.mjs','tsconfig.json','node_modules']) await cp(join(repository,path),join(fixtureDirectory,path),{recursive:true,verbatimSymlinks:true});
@@ -211,7 +212,7 @@ try {
   for(const id of ['english','empty']) {await fixturePage.goto(`${origin}/skill-maps/${id}/nodes/`);await check('unannotated custom taxonomy and empty directory',async()=>{await directoryState(fixturePage);assert.equal(await fixturePage.locator('[data-map-cluster]').count(),0);await language(fixturePage.locator('h1'),'en');},{mapId:id});await fixturePage.goto(`${origin}/skill-maps/${id}/overview/`);assert.equal(await fixturePage.locator('[data-relationship-examples]').count(),0);}
   await fixturePage.goto(`${origin}/concepts/web-empty-source/`);assert.equal(await fixturePage.locator('.concept-sources').count(),0);assert.equal(await fixturePage.locator('.practice-grid').count(),1);
   await fixturePage.goto(`${origin}/concepts/web-unusual-source/`);assert.equal(await fixturePage.locator('.concept-sources a').getAttribute('href'),'urn:example:web-source');
-  await synthetic.close();await histories(browser,'mixed','bfcache');await browser.close();browser=await chromium.launch({channel:process.env.PLAYWRIGHT_CHANNEL||undefined});await histories(browser,'mixed','reload');
+  await synthetic.close();await histories(browser,'mixed','bfcache');await browser.close();browser=await chromium.launch({channel});await histories(browser,'mixed','reload');
   const nojs=await browser.newContext({javaScriptEnabled:false});const staticPage=await nojs.newPage();
   for(const route of ['skill-maps/mixed/overview/','skill-maps/empty/overview/','skill-maps/mixed/nodes/','skill-maps/mixed/nodes/old/']) {await staticPage.goto(`${origin}/${route}`);await check('no-JavaScript canonical reading',async()=>{assert.equal(await staticPage.locator('h1:visible').count(),1);assert.ok(await staticPage.locator('main a:visible').count()>0);},{route});}
   await nojs.close();
