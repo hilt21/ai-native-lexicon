@@ -1,7 +1,7 @@
 ---
 import { routeLocale, localePath, uiFor } from '../lib/locale';
 import { unitLang, getLocalizedCatalog } from '../lib/localized-catalog';
-import type { Concept } from '../lib/catalog';
+import type { LocalizedConcept as Concept } from '../lib/localized-catalog';
 import { categoryRegistry } from '../lib/catalog';
 
 interface Props { concepts: Concept[]; headingLevel?: 'h2' | 'h3' }

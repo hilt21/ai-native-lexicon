@@ -113,7 +113,7 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.pri
       <ul>{data.sources.map((source) => (
         <li>
           {source.url ? <a href={source.url} lang={source.title === "系统设计哲学的跨学科理论框架与可组合原语集" ? "zh-CN" : "en"}>{source.title}</a> : <cite lang={source.title === "系统设计哲学的跨学科理论框架与可组合原语集" ? "zh-CN" : "en"}>{source.title}</cite>}
-          <span lang="en">. {source.section}. </span>{ui(source.basis === "report-synthesis" ? "Adapted research synthesis" : "Editorial synthesis")}; {ui(source.verification === "unverified" ? "not independently verified" : "verified")}.
+          <span lang={source.section.startsWith("最终原语集") || source.section.startsWith("C. 来自旧标签") ? "zh-CN" : "en"}>. {source.section}. </span>{ui(source.basis === "report-synthesis" ? "Adapted research synthesis" : "Editorial synthesis")}; {ui(source.verification === "unverified" ? "not independently verified" : "verified")}.
         </li>
       ))}</ul>
     </details>

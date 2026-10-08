@@ -97,12 +97,14 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
     const routes = ['', 'concepts/', 'concepts/context-engineering/', 'concepts/harness/', 'concepts/mcp/', 'categories/', 'categories/context/', 'primitives/', 'primitives/harness/', 'primitives/state/', 'search/', 'speaking-card/', 'skill-maps/', 'skill-maps/pstack/', 'skill-maps/pstack/nodes/', 'skill-maps/pstack/nodes/tdd/', 'skill-maps/pstack/journeys/fix-bug/', 'skill-maps/pstack/overview/'];
     for (const theme of ['light', 'dark']) for (const width of [390, 1440]) for (const route of routes) {
       await page.setViewportSize({ width, height: 960 }); await page.goto(localeUrl(route)); await page.evaluate((value) => { document.documentElement.dataset.theme = value; }, theme);
+      await page.evaluate(async () => { await document.fonts.ready; await Promise.all(document.getAnimations().filter((animation) => animation.effect?.getTiming().iterations !== Infinity).map((animation) => animation.finished.catch(() => {}))); });
       await check('Chinese shell screenshot, native links, original language and narrow/wide geometry', async () => {
         assert.equal(await page.locator('html').getAttribute('lang'), 'zh-CN');
         const geometry = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth })); assert.ok(geometry.scroll <= geometry.width, JSON.stringify(geometry)); assert.equal(await page.locator('h1:visible').count(), 1);
         const internal = await page.locator('main a[href]').evaluateAll((links) => links.map((link) => link.getAttribute('href')).filter((href) => href.startsWith('/') && !href.endsWith('/dataset.json')));
         assert.ok(internal.every((href) => href.startsWith(`${base}/zh-cn/`) && !href.includes('/zh-cn/zh-cn/') && !href.includes(`${base}${base}`)), JSON.stringify(internal));
-        const filename = `zh-cn-${route.replaceAll('/', '-') || 'home-'}${width}-${theme}.png`; await page.screenshot({ path: join(evidence, filename), fullPage: true });
+        const filename = `zh-cn-${route.replaceAll('/', '-') || 'home-'}${width}-${theme}.png`; await page.screenshot({ path: join(evidence, filename), fullPage: true, animations: 'disabled' });
+        if (route === 'categories/context/') { const category = localized.categories.find((entry) => entry.id === 'context'); assert.equal(await page.locator('meta[name=robots]').count(), category.coreTranslated ? 0 : 1); assert.equal(await page.locator('h1').getAttribute('lang'), category.units.label.actualLang); }
         if (route === 'speaking-card/') { assert.equal(await page.locator('.speaking-card h2').first().getAttribute('lang'), 'en'); assert.ok(await page.locator('[data-resource-language-note]').isVisible()); }
         if (route === 'skill-maps/pstack/nodes/tdd/') { assert.equal(await page.locator('.map-summary').getAttribute('lang'), 'zh-Hans'); assert.equal(await page.locator('details p[lang="en"]').first().getAttribute('lang'), 'en'); assert.ok(await page.locator('[data-resource-language-note]').isVisible()); }
       }, { route, width, theme });

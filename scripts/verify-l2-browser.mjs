@@ -160,7 +160,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
         await page.evaluate(() => { Object.defineProperty(navigator.clipboard, 'writeText', { value: async () => { throw new DOMException('Permission denied', 'NotAllowedError'); } }); });
         await page.getByRole('button', { name: `Copy definition: ${primitive.term}: ${concept.term}`, exact: true }).click();
         await page.waitForFunction(() => document.querySelector('[data-copy-status]').textContent.startsWith('Could not copy'));
-        assert.doesNotMatch(await page.locator('[data-copy-status]').textContent(), /Definition copied/);
+        assert.doesNotMatch(await page.locator('.primitive-definition').first().locator('[data-copy-status]').textContent(), /Definition copied/);
         result.reading = { examples: true, distinctions: true, referencedCopy: true, actualClipboard: true, denial: true };
         await overflow('primitive');
         await page.locator(`main a[href="${base}/primitives/#${layer.anchor}"]`).first().click();
@@ -200,7 +200,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
             await page.locator('[data-copy-status]').getByText('定义已复制。',{exact:true}).waitFor();
             assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),translations.conceptDefinition);
             await overflow(`translated concept ${theme}`);
-            await page.screenshot({path:join(evidence,`translation-concept-${theme}-${width}.png`),fullPage:true});
+            await page.screenshot({path:join(evidence,`translation-concept-${theme}-${width}.png`),fullPage:true,animations:'disabled'});
 
             await page.goto(chinesePrimitive);
             const definitions = page.locator('[data-definition-body]');
@@ -219,7 +219,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
             assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),translations.referenceConcept.definition);
             for (const old of translations.retiredText) assert.ok(!(await page.locator('main').innerText()).includes(old));
             await overflow(`translated primitive ${theme}`);
-            await page.screenshot({path:join(evidence,`translation-primitive-${theme}-${width}.png`),fullPage:true});
+            await page.screenshot({path:join(evidence,`translation-primitive-${theme}-${width}.png`),fullPage:true,animations:'disabled'});
           }
           for (const [id,state] of [['l2-partial-concept','missing'],['l2-draft-concept','draft'],['l2-stale-concept','stale']]) {
             await page.goto(`${url}/zh-cn/concepts/${id}/`);
@@ -232,9 +232,9 @@ export async function verifyBrowser(directory, evidence, fixture) {
             assert.ok(!(await page.locator('main').innerText()).includes('L2过期定义不得发布'));
           }
           await page.goto(`${chineseConcept}?q=HanOverlayFixture&type=concept#_top`);
-          await page.locator('lexicon-language-select select').first().selectOption(`${base}/concepts/${conceptSlug}/`);
+          await page.locator('lexicon-language-select select:visible').first().selectOption(`${base}/concepts/${conceptSlug}/`);
           await page.waitForURL(`${url}/concepts/${conceptSlug}/?q=HanOverlayFixture&type=concept#_top`);
-          await page.locator('lexicon-language-select select').first().selectOption(`${base}/zh-cn/concepts/${conceptSlug}/`);
+          await page.locator('lexicon-language-select select:visible').first().selectOption(`${base}/zh-cn/concepts/${conceptSlug}/`);
           await page.waitForURL(`${chineseConcept}?q=HanOverlayFixture&type=concept#_top`);
           assert.equal(await page.locator('[data-definition-body]').innerText(),translations.conceptDefinition);
 
