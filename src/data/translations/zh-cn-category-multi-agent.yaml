@@ -6,12 +6,15 @@ units:
   - path: label
     translation: 多智能体
     source_fingerprint: sha256:de15a5af7f5858ae7425cde972b8f31b20ad56ae790ab06e339069a0d107d66d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: description
     translation: 管理智能体之间的责任、共享信息和依赖关系。
     source_fingerprint: sha256:d05bb6e414204a31b53314a5e6029bc5512ad3f9338d569956dc12c789c196b3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: question
     translation: 智能体如何协同工作？
     source_fingerprint: sha256:179a477354ed35b6bf800ec98108b9baf97f8bf7da102be2f857858c4618d731
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

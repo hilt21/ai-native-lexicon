@@ -6,12 +6,15 @@ units:
   - path: label
     translation: 能力
     source_fingerprint: sha256:7eaa43f9bd32b98738a6f9f3296bea4da8bb7201c7d8f6e02a52342968ad6536
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: description
     translation: 为智能体配备工具、操作流程和可互操作的连接。
     source_fingerprint: sha256:7a333094c0ea4a13b66b64e2e4aa7e6fea5d9160dc61739f9ddf3e800a0c7d69
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: question
     translation: 智能体可以使用什么？
     source_fingerprint: sha256:9e55e9f7a136282fc130bd09e9971d9e95c250859085b9bc1768ce4026f98c29
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

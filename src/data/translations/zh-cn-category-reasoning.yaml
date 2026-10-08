@@ -6,12 +6,15 @@ units:
   - path: label
     translation: 推理
     source_fingerprint: sha256:8613a9d5887e4c305f66194c881be6f3a2e1819172df9b75ed908dd5f4fddfea
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: description
     translation: 随着证据变化，选择步骤、修订计划并评估决策。
     source_fingerprint: sha256:f7c4f30d484fdf48246a6fde3273009eec22f16ee44ed0d87e7863ec23728ecf
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: question
     translation: 接下来应该发生什么？
     source_fingerprint: sha256:11c829f61322c1f05113d4bf893ad99d872945d0cbf52389bcb0b4a45d9200b0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

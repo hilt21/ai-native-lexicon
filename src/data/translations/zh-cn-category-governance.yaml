@@ -6,12 +6,15 @@ units:
   - path: label
     translation: 治理
     source_fingerprint: sha256:3eca38ef8e3ad78c0c1b6b118a556ebe1b145d0750f4cd686eb9f56560dc04c4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: description
     translation: 将信任、决策权、监督和政策转化为可执行的边界。
     source_fingerprint: sha256:a7dc0fab07e91f33c86c38ee79eb21dd4deccc1e4a5cf4615f2cd65d93ccee9a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: question
     translation: 谁可以作出决定和介入？
     source_fingerprint: sha256:fee123c2f4a78e7817b8d1d614e5a0e610c3653a77d18e400ce40fdf2e34d025
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

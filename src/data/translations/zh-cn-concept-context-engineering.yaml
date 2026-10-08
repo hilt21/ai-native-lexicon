@@ -6,35 +6,43 @@ units:
   - path: summary
     translation: 有意识地设计 AI 系统能看到什么、何时看到，以及如何围绕任务组织这些信息。
     source_fingerprint: sha256:8bc36c9b30a9361cf9a5b5b3870ea5d19427eb0a400cf4ec99120edc48f33acd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: definition
     translation: 上下文工程将提示、检索到的知识、工具结果、记忆、约束和示例视为一个经过设计的运行环境。其目标是在每一步提供足以帮助模型正确行动的最小信息集。
     source_fingerprint: sha256:eedbccf862316f42e2de5bf943e06b193e1e40e8277302b836536a068f4145a5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: why_it_matters
     translation: 模型的能力受可用上下文的质量和提供时机限制。更好的上下文可以在不改变底层模型的情况下，提高可靠性、降低成本，并让问题更容易调试。
     source_fingerprint: sha256:76f04c87e80fcb9f3784ea6231b00476d857b4117ce3a6eaba9e76123233fa62
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: when_to_use
     translation: 当 AI 工作流程依赖多个信息来源、长期运行的状态、工具或针对特定角色的指令时，使用上下文工程。
     source_fingerprint: sha256:fd4ecff880c5c87ccfbac8edddc99e49e552ca9a4b040364cdc197badb3d9328
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: anti_pattern
     translation: 把一个过度庞大的系统提示当作解决所有信息问题的完整方案。
     source_fingerprint: sha256:080ad20032ba2f351b45381e492cd599b5aa9abb33861300e10d4726c7510022
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: examples.context
     translation:
       - 一个编码智能体正在代码仓库中修复失败的单元测试。
     source_fingerprint: sha256:28ddecaa24d583fbdb9081dba59ed62d187ffc3099fd7e390dad6aeeefcc18f0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: examples.example
     translation:
       - 为下一次模型调用提供失败的断言、相关函数和已接受的任务约束；只有在智能体需要其他文件时才加载它们。
     source_fingerprint: sha256:e7e40fd27ce651ba55825a079a7061f12f5aa26f4c1a6607e4dab929cec7ecde
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: distinguish_from.distinction
     translation:
       - 上下文是模型在某一步可用的信息。上下文工程则是在各步骤之间选择、组织和更新这些信息的工作。
     source_fingerprint: sha256:ef2f822a5bf41f0edb239c3de1ffdf361bd37007ff7804a656ba0a2a4fd6d6dd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

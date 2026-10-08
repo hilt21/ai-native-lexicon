@@ -7,6 +7,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
 import { chromium } from 'playwright';
 import { parse, stringify } from 'yaml';
+import { verifySitemap } from './verify-sitemap.mjs';
 import { verifyTranslationBrowser } from './verify-translations-browser.mjs';
 import { mapInput, nodeInput } from '../tests/skill-map-fixture.mjs';
 
@@ -27,6 +28,7 @@ if (!process.argv.includes('--reuse-build')) await build(repository);
 assert.ok((await readFile(join(root, 'search/index.html'), 'utf8')).includes('data-open-modal'), 'Production build must expose Header Search');
 assert.ok((await readFile(join(root, 'pagefind/pagefind.js'), 'utf8')).length > 0, 'Production build must include Pagefind');
 const dataset = JSON.parse(await readFile(join(root, 'dataset.json'), 'utf8'));
+report.sitemap = await verifySitemap(root, { base });
 const server = createServer(async (request, response) => {
   try {
     const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);

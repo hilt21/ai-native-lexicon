@@ -6,4 +6,5 @@ units:
   - path: label
     translation: 认知与行动
     source_fingerprint: sha256:d969f527ee108f26beb1d65cd7f65ca4eb98fc18f1bbfef4474c84a765c24b64
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

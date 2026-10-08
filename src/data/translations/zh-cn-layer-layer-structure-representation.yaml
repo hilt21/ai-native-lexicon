@@ -6,4 +6,5 @@ units:
   - path: label
     translation: 结构与表示
     source_fingerprint: sha256:47db1deac0720e70d73fa522dedd452d7fb7ddaf239a897df494b7a134ffe8b8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

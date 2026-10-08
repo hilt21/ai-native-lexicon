@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
+import { localizedSitemap } from './src/integrations/localized-sitemap.mjs';
 import { fileURLToPath } from 'node:url';
 import { contentBranch } from './src/lib/repository.mjs';
 
@@ -21,6 +22,7 @@ export default defineConfig({
   base: process.env.BASE_PATH ?? (isPagesBuild ? `/${repository}` : '/'),
   trailingSlash: 'always',
   integrations: [
+    localizedSitemap(),
     starlight({
       title: 'AI Native Lexicon',
       defaultLocale: 'root',

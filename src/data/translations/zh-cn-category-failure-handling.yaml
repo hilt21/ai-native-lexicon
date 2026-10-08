@@ -6,12 +6,15 @@ units:
   - path: label
     translation: 失败处理
     source_fingerprint: sha256:e02188fb74df1614f07e0ee4f8c99b14932e45f653a32284de4a96bf625779d9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: description
     translation: 处理未成功的行动，并在中断后恢复有效进展。
     source_fingerprint: sha256:c08bbc543eb07b875b7a7c7464bdf3c40fb000a76ae92ac8e07f9c9737e4ee28
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: question
     translation: 工作如何恢复？
     source_fingerprint: sha256:44557d4b8b4773e91b97c7f05014792af9fa3f6d3189104e327710d315b5a605
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

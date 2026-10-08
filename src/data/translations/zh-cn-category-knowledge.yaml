@@ -6,12 +6,15 @@ units:
   - path: label
     translation: 知识
     source_fingerprint: sha256:5de32a16912628e10fc17dd3a387078bd841b8e72b799693d0219e7e5d0b7218
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: description
     translation: 在不同决策之间保留证据、记忆、时效性和来源信息。
     source_fingerprint: sha256:eeff9242357ab404dec1118917bf04014c2502f76dda23272cfe0dc8f3ba1aee
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08
   - path: question
     translation: 系统能为哪些判断提供依据？
     source_fingerprint: sha256:0228dc11f10b1a50ddd72b28142dce0aa85cb675564c6286195346c9645812bc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-08

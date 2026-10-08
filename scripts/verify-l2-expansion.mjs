@@ -8,6 +8,7 @@ import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse as parseHtml } from 'parse5';
 import { parse, stringify } from 'yaml';
+import { verifySitemap } from './verify-sitemap.mjs';
 import { translationUnits } from '../src/domain/content/translation-units.mjs';
 import { mapInput, nodeInput } from '../tests/skill-map-fixture.mjs';
 
@@ -175,6 +176,7 @@ try {
   const baseline = await pages();
   const baselineLinks = await checkLinks(baseline);
   const baselineDataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
+  report.sitemap = { baseline: await verifySitemap(join(directory,'dist'),{base}) };
   stage('absent translation directory through public catalog, CLI/build and baseline routes/links');
 
   const categories = await Promise.all((await files(join(directory, 'src/data/taxonomy/categories'))).map(async (file) => parse(await readFile(file, 'utf8'))));
@@ -361,6 +363,8 @@ try {
   };
   const translationRoot = 'src/data/translations/l2-fixture';
   await mkdir(join(directory,translationRoot),{recursive:true});
+  const transitionFile = 'src/data/concepts/context-engineering.yaml';
+  const transitionOriginal = await readFile(join(directory,transitionFile),'utf8');
   const fixtureCatalog = await publicCatalog();
   assert.deepEqual(fixtureCatalog.errors,[]);
   const overlays = [
@@ -377,6 +381,7 @@ try {
   for (const [index,entry] of fixtureCatalog.categories.entries()) if (entry.slug !== category.slug) overlays.push(fixtureOverlay(fixtureCatalog,'category',entry.slug,{label:`L2分类${index}`,description:`L2分类${index}的独立夹具说明。`,question:`L2分类${index}的夹具问题？`}));
   for (const [index,entry] of fixtureCatalog.layers.entries()) if (entry.anchor !== layer.anchor) overlays.push(fixtureOverlay(fixtureCatalog,'layer',entry.anchor,{label:`L2层级${index}`}));
 
+  overlays.push(fixtureOverlay(fixtureCatalog,'concept','context-engineering',{summary:'L2核心变更夹具摘要：供静态发布策略验收。',definition:'L2核心变更夹具定义：它仅用于验证译文从当前变为过期后的投影行为。'}));
   const overlayPaths = overlays.map((overlay,index) => `${translationRoot}/${index}-${overlay.kind}.yaml`);
   for (const path of overlayPaths) assert.ok(!originalData.has(join(directory,path)), `Fixture translation file already exists: ${path}`);
   for (const [index,overlay] of overlays.entries()) {await save(overlayPaths[index],overlay); added.push(overlayPaths[index]);}
@@ -433,6 +438,8 @@ try {
   assertTranslationPolicy(await html(`zh-cn/categories/${category.slug}`),`categories/${category.slug}`,true);
   assertUnitLanguage(await html(`categories/${category.slug}`),category.name,'en');
   report.translations = { reviewedFixtureOnly:true,coreSEO:true,partialDraftStale:true,exportShape:dataset.schema_version,datasetVersionUnchanged:translatedDataset.dataset_version,canonicalArraysUnchanged:true,llmsUnchanged:true };
+  report.sitemap.reviewed = await verifySitemap(join(directory,'dist'),{base});
+  assertTranslationPolicy(await html('zh-cn/concepts/context-engineering'),'concepts/context-engineering',true);
   if (browser) {
     await mkdir(evidence,{recursive:true});
     const {verifyBrowser} = await import('./verify-l2-browser.mjs');
@@ -491,8 +498,15 @@ try {
       else await rm(join(directory,overlayPaths[overlayIndex]));
     }
   }
+  const transition = parse(transitionOriginal);
+  transition.definition = 'SitemapCoreFreshnessFixture changes the current English definition after its synthetic translation was reviewed. The older translated definition must fall back and lose Chinese publication eligibility.';
+  await save(transitionFile,transition);
   assert.deepEqual((await publicCatalog()).errors,[]);
   await npm(['run','build']);
+  report.sitemap.coreStale = await verifySitemap(join(directory,'dist'),{base});
+  const transitioned = await html('zh-cn/concepts/context-engineering');
+  assertTranslationPolicy(transitioned,'concepts/context-engineering',false);
+  assertUnitLanguage(transitioned,transition.definition,'en');
   for (const route of ['', 'categories', 'primitives']) assertTranslationPolicy(await html(`zh-cn/${route}`),route,false);
   for (const [index,entry] of taxonomyCases.categories.entries()) {
     const coverage = assertTranslationPolicy(await html(`zh-cn/categories/${entry.slug}`),`categories/${entry.slug}`,false);
@@ -524,6 +538,8 @@ try {
     report.viewports = report.browserResult.viewports;
     stage('real browser search, disclosure, relationship navigation and overflow');
   }
+  // Restore the copied canonical scalar used for the real freshness transition.
+  await writeFile(join(directory,transitionFile),transitionOriginal);
   // Restore copied formal overlay bytes before checking every original input.
   if (hadTranslations) await cp(savedTranslations, translationInputRoot, { recursive: true });
   for (const [file, source] of originalData) assert.equal(await readFile(file, 'utf8'), source, file);
