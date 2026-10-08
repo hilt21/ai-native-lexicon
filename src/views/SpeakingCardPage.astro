@@ -1,0 +1,46 @@
+---
+import { getLocalizedConcepts, getLocalizedPrimitives } from '../lib/localized-catalog';
+import { routeLocale, uiFor } from '../lib/locale';
+import StarlightPage from '../components/LocalizedPage.astro';
+import SpeakingCard from '../components/SpeakingCard.astro';
+import { getSpeakingCards } from '../lib/speaking-cards';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+
+const cards = await getSpeakingCards();
+
+const [concepts, primitives] = await Promise.all([getLocalizedConcepts(locale), getLocalizedPrimitives(locale)]);
+const conceptsById = new Map(concepts.map((concept) => [concept.id, concept]));
+const primitivesById = new Map(primitives.map((primitive) => [primitive.id, primitive]));
+const cardsWithRelations = cards.map((card) => ({
+  card,
+  concepts: card.concepts.map((slug) => {
+    const concept = conceptsById.get(slug);
+    if (!concept) throw new Error(`Card ${card.number}: missing concept ${slug}`);
+    return concept;
+  }),
+  primitives: card.primitives.map((slug) => {
+    const primitive = primitivesById.get(slug);
+    if (!primitive) throw new Error(`Card ${card.number}: missing primitive ${slug}`);
+    return primitive;
+  }),
+}));
+
+---
+
+<StarlightPage frontmatter={{ title: ui('Speaking Card'), description: locale === "zh-CN" ? `${cards.length} 张关于 AI、智能体与企业工作流的讲解卡。` : `${cards.length} speaking cards for conversations about AI, agents and enterprise workflows.`, editUrl: false, tableOfContents: false }}>
+  <div class="page-intro">
+    <p class="eyebrow">{cards.length} {ui("CARDS FOR CONVERSATION")}</p>
+    <p>{ui("Choose a topic. Open the speaking notes for key lines, a real case and a question to discuss.")}</p>
+  </div>
+  <div class="speaking-grid">
+    {cardsWithRelations.map(({ card, concepts: relatedConcepts, primitives: relatedPrimitives }) => (
+      <SpeakingCard card={card} concepts={relatedConcepts} primitives={relatedPrimitives} />
+    ))}
+  </div>
+</StarlightPage>
+
+<style>
+  .speaking-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; gap: var(--lex-space-6); }
+  @media (max-width: 50rem) { .speaking-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>

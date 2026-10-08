@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: context
+units:
+  - path: label
+    translation: 上下文
+    source_fingerprint: sha256:941eca5e699934b18e1dffb3aaec76801b5ca7054fa68a01a5f59566eb0f14ce
+    review_status: draft
+  - path: description
+    translation: 设计 AI 系统可使用的信息，并保护不能丢失的信息。
+    source_fingerprint: sha256:1993853463f1f99b4d6f84033203b207307b7ca85a225aef15fe63c2227a6ee1
+    review_status: draft
+  - path: question
+    translation: 系统现在应该知道什么？
+    source_fingerprint: sha256:26ef4a555e0edb8652753aaa387b591a1bd5c2e2b0bb4ad23071d75a9ee455e9
+    review_status: draft

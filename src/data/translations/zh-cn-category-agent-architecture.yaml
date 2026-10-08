@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: agent-architecture
+units:
+  - path: label
+    translation: 智能体架构
+    source_fingerprint: sha256:5dea9518bb52bb95507f73dc014966873611359b9c162606da3a6fd9f3e07f6d
+    review_status: draft
+  - path: description
+    translation: 将智能体构建为具有明确循环、边界、角色和控制流的系统。
+    source_fingerprint: sha256:ca2510ad60a4fa4a9db0b2a13d06018a276162070aed6f7b5939da74c7bf67e4
+    review_status: draft
+  - path: question
+    translation: 智能体的自主行动能力如何组织？
+    source_fingerprint: sha256:e341a11f33cca81946bb4d57842e1b4668d07a683ce0e7cfb8f6616bcf6f74a5
+    review_status: draft

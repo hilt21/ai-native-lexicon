@@ -1,0 +1,13 @@
+---
+import { routeLocale, uiFor } from '../lib/locale';
+import SkillMapPage from '../components/SkillMapPage.astro';
+import SkillMapDirectory from '../components/SkillMapDirectory.astro';
+import { textLang, type SkillMap } from '../lib/skill-maps';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+
+interface Props { map: SkillMap }
+const { map } = Astro.props;
+
+---
+<SkillMapPage map={map} title={`${map.data.title} — ${ui("All items")}`} titleParts={[{ text: map.data.title, lang: textLang(map.data, "title") }, { text: ui(" — All items"), lang: locale }]} description={ui("Find skills, playbooks and principles.")} section="nodes"><SkillMapDirectory map={map} /></SkillMapPage>

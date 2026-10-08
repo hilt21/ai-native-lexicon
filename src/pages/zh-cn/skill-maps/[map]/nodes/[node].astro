@@ -1,0 +1,6 @@
+---
+import View from '../../../../../views/MapNodePage.astro';
+import { MapNodePaths } from '../../../../../lib/page-paths';
+export const getStaticPaths = MapNodePaths;
+---
+<View {...Astro.props} />

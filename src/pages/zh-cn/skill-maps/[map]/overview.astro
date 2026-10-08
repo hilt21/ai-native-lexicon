@@ -1,0 +1,6 @@
+---
+import View from '../../../../views/MapOverviewPage.astro';
+import { MapOverviewPaths } from '../../../../lib/page-paths';
+export const getStaticPaths = MapOverviewPaths;
+---
+<View {...Astro.props} />

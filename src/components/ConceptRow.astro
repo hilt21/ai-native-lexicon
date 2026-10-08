@@ -1,6 +1,8 @@
 ---
-import type { Concept } from '../lib/catalog';
-import { categoryMeta, pathWithBase } from '../lib/catalog';
+import { routeLocale, localePath } from '../lib/locale';
+import { unitLang } from '../lib/localized-catalog';
+import type { LocalizedConcept as Concept } from '../lib/localized-catalog';
+import { categoryMeta } from '../lib/catalog';
 import CatalogRow from './CatalogRow.astro';
 
 interface Props {
@@ -11,11 +13,17 @@ interface Props {
 }
 
 const { concept, number, showCategory = true, searchText } = Astro.props;
+
+const locale = routeLocale(Astro.url);
+const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 <CatalogRow
   href={pathWithBase(`/concepts/${concept.id}/`)}
   title={concept.data.term}
+  titleLanguage="en"
+  summaryLanguage={unitLang(concept, "summary")}
+  secondaryParts={[{ text: concept.data.zh, lang: "zh-CN" }]}
   secondary={concept.data.zh}
   marker={categoryMeta[concept.data.category].code}
   summary={concept.data.summary}

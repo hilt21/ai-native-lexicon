@@ -1,0 +1,28 @@
+---
+import { getLocalizedCatalog, unitLang } from '../lib/localized-catalog';
+import { routeLocale, uiFor } from '../lib/locale';
+import StarlightPage from '../components/LocalizedPage.astro';
+import ConceptList from '../components/ConceptList.astro';
+import { getCategoryBySlug } from '../lib/catalog';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+
+
+
+const { category, meta: canonicalMeta } = Astro.props;
+const catalog = await getLocalizedCatalog(locale);
+const translated = catalog.categories.find((entry: { id: string }) => entry.id === canonicalMeta.slug)!;
+const meta = { ...canonicalMeta, ...translated.data };
+const concepts = catalog.concepts.filter((entry) => entry.data.category === category);
+if (!getCategoryBySlug(meta.slug)) throw new Error(`Unknown category: ${meta.slug}`);
+
+---
+
+<StarlightPage frontmatter={{ title: meta.label, description: meta.description, editUrl: false, tableOfContents: false }}>
+  <div class="category-masthead">
+    <span>{meta.code}</span>
+    <p lang={unitLang(translated, "question")}>{meta.question}</p>
+    <strong>{String(concepts.length).padStart(2, '0')} {ui("concepts")}</strong>
+  </div>
+  <ConceptList concepts={concepts} showCategory={false} />
+</StarlightPage>

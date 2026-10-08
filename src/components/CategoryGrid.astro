@@ -1,21 +1,29 @@
 ---
+import { routeLocale, localePath, uiFor } from '../lib/locale';
+import { unitLang, getLocalizedCatalog } from '../lib/localized-catalog';
 import type { Concept } from '../lib/catalog';
-import { categoryRegistry, pathWithBase } from '../lib/catalog';
+import { categoryRegistry } from '../lib/catalog';
 
 interface Props { concepts: Concept[]; headingLevel?: 'h2' | 'h3' }
 const { concepts, headingLevel: Heading = 'h3' } = Astro.props;
+
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const pathWithBase = (path: string) => localePath(path, locale);
+const categories = (await getLocalizedCatalog(locale)).categories;
 ---
 
 <div class="category-grid">
   {categoryRegistry.map((meta, index) => {
     const category = meta.name;
+    const display = categories.find((entry: { id: string }) => entry.id === meta.slug)!;
     const count = concepts.filter((concept) => concept.data.category === category).length;
     return (
       <a class="category-cell" href={pathWithBase(`/categories/${meta.slug}/`)}>
         <span class="category-index">{String(index + 1).padStart(2, '0')} / {meta.code}</span>
-        <Heading>{category}</Heading>
-        <p>{meta.description}</p>
-        <span class="category-foot"><span>{count} concepts</span><span>Explore ↗</span></span>
+        <Heading lang={unitLang(display, "label")}>{display.data.label}</Heading>
+        <p lang={unitLang(display, "description")}>{display.data.description}</p>
+        <span class="category-foot"><span>{count} {ui("concepts")}</span><span>{ui("Explore ↗")}</span></span>
       </a>
     );
   })}

@@ -1,0 +1,6 @@
+---
+import View from '../../../../../views/MapJourneyPage.astro';
+import { MapJourneyPaths } from '../../../../../lib/page-paths';
+export const getStaticPaths = MapJourneyPaths;
+---
+<View {...Astro.props} />

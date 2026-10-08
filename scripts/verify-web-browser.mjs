@@ -7,6 +7,7 @@ import { tmpdir } from 'node:os';
 import { join, resolve, sep } from 'node:path';
 import { chromium } from 'playwright';
 import { parse, stringify } from 'yaml';
+import { verifyTranslationBrowser } from './verify-translations-browser.mjs';
 import { mapInput, nodeInput } from '../tests/skill-map-fixture.mjs';
 
 const run = promisify(execFile);
@@ -60,16 +61,16 @@ async function directoryState(page) {
     const rows = [...directory.querySelectorAll('[data-map-item]')];
     const expected = rows.filter((row) => (retired || row.dataset.retired !== 'true') && (!type || row.dataset.type === type) && (!cluster || row.dataset.clusters.split(' ').includes(cluster)) && query.every((word) => row.dataset.text.includes(word)));
     const visible = rows.filter((row) => row.getBoundingClientRect().height > 0);
-    return { expected: expected.map((r) => r.getAttribute('href')), visible: visible.map((r) => r.getAttribute('href')), count: directory.querySelector('[data-map-count]').textContent, empty: !directory.querySelector('[data-map-empty]').hidden };
+    return { expected: expected.map((r) => r.getAttribute('href')), visible: visible.map((r) => r.getAttribute('href')), count: directory.querySelector('[data-map-count]').textContent, locale: directory.dataset.locale, empty: !directory.querySelector('[data-map-empty]').hidden };
   });
-  assert.deepEqual(state.visible, state.expected); assert.equal(state.count, `${state.expected.length} matching ${state.expected.length === 1 ? 'item' : 'items'}`); assert.equal(state.empty, state.expected.length === 0);
+  assert.deepEqual(state.visible, state.expected); assert.equal(state.count, state.locale === 'zh-CN' ? `${state.expected.length} 个匹配条目` : `${state.expected.length} matching ${state.expected.length === 1 ? 'item' : 'items'}`); assert.equal(state.empty, state.expected.length === 0);
   return state;
 }
-async function histories(browser, mapId, mode) {
+async function histories(browser, mapId, mode, locale = 'en') {
   const context = await browser.newContext();
   await context.addInitScript(() => { window.historyShows = []; window.addEventListener('pageshow', (e) => window.historyShows.push(e.persisted)); });
   const page = await context.newPage();
-  const route = `${origin}/skill-maps/${mapId}/nodes/`;
+  const route = `${origin}/${locale === 'zh-CN' ? 'zh-cn/' : ''}skill-maps/${mapId}/nodes/`;
   await page.goto(route);
   await page.locator('[data-map-query]').fill(mapId === 'pstack' ? 'tdd' : 'target');
   await page.locator('[data-map-type]').selectOption(mapId === 'pstack' ? 'capability' : 'custom');
@@ -94,29 +95,31 @@ async function histories(browser, mapId, mode) {
   report.checks.push({ name: 'history, reload, empty return and Clear', mapId, mode, persisted, passed: true });
   await context.close();
 }
-async function searchHistory(browser, mode) {
+async function searchHistory(browser, mode, locale = 'en') {
   const context = await browser.newContext();
   await context.addInitScript(() => { window.historyShows = []; window.addEventListener('pageshow', (event) => window.historyShows.push(event.persisted)); });
   const page = await context.newPage();
-  const route = `${origin}/search/?q=persistence&type=concept&keep=1`;
+  const localizedOrigin = `${origin}${locale === 'zh-CN' ? '/zh-cn' : ''}`;
+  const query = locale === 'zh-CN' ? 'Harness' : 'persistence';
+  const route = `${localizedOrigin}/search/?q=${query}&type=concept&keep=1`;
   const input = page.locator('#concept-search');
   const type = page.locator('#search-type');
   const visible = () => page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.getAttribute('href')));
   await page.goto(route);
-  const expected = await visible(); assert.ok(expected.includes(`${base}/concepts/harness/`));
-  await page.locator(`[data-search][href="${base}/concepts/harness/"]`).click();
-  await page.waitForURL(`${origin}/concepts/harness/`);
+  const expected = await visible(); assert.ok(expected.includes(`${base}/${locale === 'zh-CN' ? 'zh-cn/' : ''}concepts/harness/`));
+  await page.locator(`[data-search][href="${base}/${locale === 'zh-CN' ? 'zh-cn/' : ''}concepts/harness/"]`).click();
+  await page.waitForURL(`${localizedOrigin}/concepts/harness/`);
   await page.evaluate(() => history.back()); await page.waitForURL(route, { waitUntil: 'commit' }); await page.waitForTimeout(30);
-  assert.equal(await input.inputValue(), 'persistence'); assert.equal(await type.inputValue(), 'concept');
+  assert.equal(await input.inputValue(), query); assert.equal(await type.inputValue(), 'concept');
   assert.deepEqual(await visible(), expected);
   const persisted = await page.evaluate(() => window.historyShows.at(-1));
   assert.equal(persisted, mode === 'bfcache', `Search return must actually exercise ${mode}`);
   await page.reload(); assert.deepEqual(await visible(), expected);
   await input.fill('no-such-search-result'); assert.equal((await visible()).length, 0);
-  await page.locator(`a[href="${base}/concepts/"]`).first().click(); await page.waitForURL(`${origin}/concepts/`);
+  await page.locator(`a[href="${base}/${locale === 'zh-CN' ? 'zh-cn/' : ''}concepts/"]`).first().click(); await page.waitForURL(`${localizedOrigin}/concepts/`);
   await page.evaluate(() => history.back()); await page.waitForURL(/search\//, { waitUntil: 'commit' }); await page.waitForTimeout(30);
   assert.equal(await input.inputValue(), 'no-such-search-result'); assert.equal(await type.inputValue(), 'concept');
-  assert.equal((await visible()).length, 0); assert.equal(await page.locator('#search-count').textContent(), '0 matching entries');
+  assert.equal((await visible()).length, 0); assert.equal(await page.locator('#search-count').textContent(), locale === 'zh-CN' ? '0 条匹配记录' : '0 matching entries');
   assert.ok(await page.locator('#search-empty').isVisible());
   await page.locator('#search-clear').click();
   assert.equal(await input.inputValue(), ''); assert.equal(await type.inputValue(), '');
@@ -124,11 +127,11 @@ async function searchHistory(browser, mode) {
   assert.equal((await visible()).length, await page.locator('[data-search]').count());
   // Push a native same-document history entry, then traverse it to fire real popstate.
   await input.fill('mcp');
-  await page.evaluate(() => history.pushState(null, '', '?q=persistence&type=concept&keep=1'));
+  await page.evaluate((query) => history.pushState(null, '', `?q=${query}&type=concept&keep=1`), query);
   await page.evaluate(() => history.back()); await page.waitForURL(/q=mcp/, { waitUntil: 'commit' }); await page.waitForTimeout(30);
   assert.equal(await input.inputValue(), 'mcp'); assert.equal(await type.inputValue(), '');
-  await page.evaluate(() => history.forward()); await page.waitForURL(/q=persistence/, { waitUntil: 'commit' }); await page.waitForTimeout(30);
-  assert.equal(await input.inputValue(), 'persistence'); assert.equal(await type.inputValue(), 'concept');
+  await page.evaluate(() => history.forward()); await page.waitForURL((url) => url.searchParams.get('q') === query, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  assert.equal(await input.inputValue(), query); assert.equal(await type.inputValue(), 'concept');
   assert.deepEqual(await visible(), expected);
   report.checks.push({ name: 'catalog URL, empty return, Clear, native popstate and reload', mode, persisted, passed: true });
   await context.close();
@@ -465,10 +468,11 @@ try {
   await check('splash skip link', async()=>{await page.locator('.lex-skip-link').focus();await page.keyboard.press('Enter');assert.equal(await page.locator('#lexicon-content').evaluate((e)=>e===document.activeElement),true);});
   await page.emulateMedia({reducedMotion:'reduce'});await page.goto(`${origin}/`);
   await check('reduced motion',async()=>{const state=await page.evaluate(()=>({scroll:getComputedStyle(document.documentElement).scrollBehavior,animations:document.getAnimations().length}));assert.equal(state.scroll,'auto');assert.equal(state.animations,0);});await page.emulateMedia({reducedMotion:'no-preference'});
+  await verifyTranslationBrowser({ browser, origin, base, repository, evidence, check, report });
   assert.deepEqual(errors, []); await context.close();
-  await searchHistory(browser, 'bfcache');
+  await searchHistory(browser, 'bfcache'); await searchHistory(browser, 'bfcache', 'zh-CN'); await histories(browser, 'pstack', 'bfcache', 'zh-CN');
   await histories(browser,'pstack','bfcache');
-  await browser.close(); browser = await chromium.launch({channel}); await searchHistory(browser, 'reload'); await histories(browser,'pstack','reload');
+  await browser.close(); browser = await chromium.launch({channel}); await searchHistory(browser, 'reload'); await searchHistory(browser, 'reload', 'zh-CN'); await histories(browser, 'pstack', 'reload', 'zh-CN'); await histories(browser,'pstack','reload');
   await browser.close(); browser = await chromium.launch({channel,ignoreDefaultArgs:['--disable-back-forward-cache']});
 
   fixtureDirectory=await mkdtemp(join(tmpdir(),'lexicon-web-fixture-'));

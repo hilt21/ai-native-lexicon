@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: layer
+target_id: layer-runtime-trust
+units:
+  - path: label
+    translation: 运行时与信任
+    source_fingerprint: sha256:60d537084e6d7b63599d85f1cb220d3a6798ef273e9246ed11144d78daa6d73a
+    review_status: draft

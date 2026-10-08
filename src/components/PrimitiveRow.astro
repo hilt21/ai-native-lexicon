@@ -1,6 +1,7 @@
 ---
-import type { Primitive } from '../lib/catalog';
-import { pathWithBase } from '../lib/catalog';
+import { routeLocale, localePath, uiFor } from '../lib/locale';
+import { unitLang } from '../lib/localized-catalog';
+import type { LocalizedPrimitive as Primitive } from '../lib/localized-catalog';
 import { primitiveOwners, primitivePriorities } from '../lib/primitive-presentation';
 
 interface Props {
@@ -9,17 +10,21 @@ interface Props {
 
 const { primitive } = Astro.props;
 const { data } = primitive;
+
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 <a class="primitive-row" id={primitive.id} href={pathWithBase(`/primitives/${primitive.id}/`)}>
   <span class="primitive-row-name">
-    <strong>{data.term}</strong>
-    <span lang="zh">{data.zh}</span>
+    <strong lang="en">{data.term}</strong>
+    <span lang="zh-CN">{data.zh}</span>
   </span>
-  <span class="primitive-row-summary">{data.summary}</span>
+  <span class="primitive-row-summary" lang={unitLang(primitive, "summary")}>{data.summary}</span>
   <span class="primitive-row-meta">
-    <span>{data.priority.level} {primitivePriorities[data.priority.level].label}</span>
-    <span>{primitiveOwners[data.ownership.kind].label}</span>
+    <span>{data.priority.level} {ui(primitivePriorities[data.priority.level].label)}</span>
+    <span>{ui(primitiveOwners[data.ownership.kind].label)}</span>
   </span>
   <span class="primitive-row-arrow" aria-hidden="true">↗</span>
 </a>

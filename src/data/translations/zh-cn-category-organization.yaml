@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: organization
+units:
+  - path: label
+    translation: 组织
+    source_fingerprint: sha256:f3a0cc9acfe0bf9858141adf82c62fb3dba0b9380ef72af7aac9679027f32a1a
+    review_status: draft
+  - path: description
+    translation: 重新设计委派、问责和运作方式，让智能体参与其中。
+    source_fingerprint: sha256:05a8856402c7fb65b4750761245ebba048883a9951dbab201463c3aa972c8636
+    review_status: draft
+  - path: question
+    translation: 什么让团队具备接纳智能体的条件？
+    source_fingerprint: sha256:69ad74e33111da9c6eeda1f1152691474e4e8a9089bcdade50ea1f489cfb4ba4
+    review_status: draft

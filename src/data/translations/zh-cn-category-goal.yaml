@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: goal
+units:
+  - path: label
+    translation: 目标
+    source_fingerprint: sha256:174c94b5790e8bb5032315060133422633e9a2e29bd9a179162faf69f0daea2d
+    review_status: draft
+  - path: description
+    translation: 定义结果，并将责任划分为可以完成的单元。
+    source_fingerprint: sha256:3a34642f4a8cb5dd8070df5c84baa4c7647518e8966f25214d15103919d141d9
+    review_status: draft
+  - path: question
+    translation: 怎样才算完成？
+    source_fingerprint: sha256:6752fa6a65a95f51325640baf81a57f6293ebb455ef3c6edca7bbb44a6276cad
+    review_status: draft

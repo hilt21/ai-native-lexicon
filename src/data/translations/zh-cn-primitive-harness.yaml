@@ -1,0 +1,13 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: harness
+units:
+  - path: summary
+    translation: 协调 AI 推理与上下文、工具、状态、权限和检查的运行时层。
+    source_fingerprint: sha256:e2280e499b3d0c4c5cad84a2775a220094d456c88990016d02a7e1a756c1f5ad
+    review_status: draft
+  - path: scope
+    translation: 协调模型推理、工具、状态和运行控制的 AI 智能体运行时。
+    source_fingerprint: sha256:615c55b81feccc7e74bb34d1c2765ce1446541616ba4bb5a2c2393504ca1f6b5
+    review_status: draft

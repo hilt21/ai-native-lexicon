@@ -1,0 +1,19 @@
+---
+import { getLocalizedConcepts } from '../lib/localized-catalog';
+import { routeLocale, uiFor } from '../lib/locale';
+import StarlightPage from '../components/LocalizedPage.astro';
+import CategoryGrid from '../components/CategoryGrid.astro';
+import { categoryRegistry } from '../lib/catalog';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const concepts = await getLocalizedConcepts(locale);
+
+---
+
+<StarlightPage frontmatter={{ title: ui('Categories'), description: locale === "zh-CN" ? `${categoryRegistry.length} 个 AI 原生软件工程实践领域。` : `${categoryRegistry.length} domains for navigating AI-native software engineering.`, editUrl: false, tableOfContents: false }}>
+  <div class="page-intro">
+    <p class="eyebrow">{String(categoryRegistry.length).padStart(2, '0')} {ui("DOMAINS OF PRACTICE")}</p>
+    <p>{ui("The categories are navigation aids, not hard boundaries. Mature concepts usually connect technical mechanisms, product experience, and organizational accountability.")}</p>
+  </div>
+  <CategoryGrid concepts={concepts} headingLevel="h2" />
+</StarlightPage>

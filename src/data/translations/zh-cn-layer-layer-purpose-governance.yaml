@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: layer
+target_id: layer-purpose-governance
+units:
+  - path: label
+    translation: 目的与治理
+    source_fingerprint: sha256:5ea25f630b16cca4ae0f5b2c4b332a6b2ce0efe1bff471dd6007d1d7850aa699
+    review_status: draft

@@ -1,23 +1,28 @@
 ---
-import { taxonomyLang, textLang, mapLink, type SkillMap } from '../lib/skill-maps';
+import { routeLocale, uiFor } from '../lib/locale';
+import { taxonomyLang, textLang, mapLink as canonicalMapLink, type SkillMap } from '../lib/skill-maps';
 interface Props { map: SkillMap }
 const { map } = Astro.props;
+
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const mapLink = (map: string, suffix = "") => canonicalMapLink(map, suffix, locale);
 ---
-<section class="map-directory" data-map-directory>
+<section class="map-directory" data-map-directory data-locale={locale}>
   <div class="map-filters">
-    <label>Search items<input data-map-query type="search" placeholder="Name, task or idea…" /></label>
-    <label>Type<select data-map-type><option value="">All types</option>{map.data.taxonomy.types.map((t) => <option value={t.id} lang={taxonomyLang(map, "types", t.id, "label")}>{t.label}</option>)}</select></label>
-    {map.data.taxonomy.clusters.length > 0 && <label>Cluster<select data-map-cluster><option value="">All clusters</option>{map.data.taxonomy.clusters.map((c) => <option value={c.id} lang={taxonomyLang(map, "clusters", c.id, "label")}>{c.label}</option>)}</select></label>}
-    <label class="map-retired-control"><input data-map-retired type="checkbox" /> Include retired</label>
-    <button data-map-clear type="button">Clear filters</button>
+    <label>{ui("Search items")}<input data-map-query type="search" placeholder={ui('Name, task or idea…')} /></label>
+    <label>{ui("Type")}<select data-map-type><option value="">{ui("All types")}</option>{map.data.taxonomy.types.map((t) => <option value={t.id} lang={taxonomyLang(map, "types", t.id, "label")}>{t.label}</option>)}</select></label>
+    {map.data.taxonomy.clusters.length > 0 && <label>{ui("Cluster")}<select data-map-cluster><option value="">{ui("All clusters")}</option>{map.data.taxonomy.clusters.map((c) => <option value={c.id} lang={taxonomyLang(map, "clusters", c.id, "label")}>{c.label}</option>)}</select></label>}
+    <label class="map-retired-control"><input data-map-retired type="checkbox" /> {ui("Include retired")}</label>
+    <button data-map-clear type="button">{ui("Clear filters")}</button>
   </div>
-  <p data-map-count aria-live="polite">{map.data.nodes.filter((n) => n.status === 'active').length} active items</p>
+  <p data-map-count aria-live="polite">{map.data.nodes.filter((n) => n.status === 'active').length} {ui("active items")}</p>
   <div class="map-item-list">
     {map.data.nodes.map((node) => <a class="map-item" href={mapLink(map.id, `nodes/${node.id}/`)} data-map-item data-type={node.type} data-clusters={[node.primary_cluster, ...node.secondary_clusters].filter(Boolean).join(' ')} data-retired={node.status === 'retired' ? 'true' : 'false'} data-text={`${node.title} ${node.summary} ${node.when_to_use.join(' ')} ${node.tags.join(' ')} ${map.data.taxonomy.types.find((t) => t.id === node.type)?.label} ${map.data.taxonomy.clusters.filter((c) => c.id === node.primary_cluster || node.secondary_clusters.includes(c.id)).map((c) => c.label).join(' ')}`.toLowerCase()}>
-      <strong lang={textLang(node, "title")}>{node.title}</strong><span class="map-item-type"><span lang={taxonomyLang(map, "types", node.type, "label")}>{map.data.taxonomy.types.find((t) => t.id === node.type)?.label}</span>{node.status === 'retired' && ' · Retired'}</span><span lang={textLang(node, "summary")}>{node.summary}</span>
+      <strong lang={textLang(node, "title")}>{node.title}</strong><span class="map-item-type"><span lang={taxonomyLang(map, "types", node.type, "label")}>{map.data.taxonomy.types.find((t) => t.id === node.type)?.label}</span>{node.status === 'retired' && ui(' · Retired')}</span><span lang={textLang(node, "summary")}>{node.summary}</span>
     </a>)}
   </div>
-  <p data-map-empty hidden>No matching items. Clear the filters or try a broader word.</p>
+  <p data-map-empty hidden>{ui("No matching items. Clear the filters or try a broader word.")}</p>
 </section>
 <script>
   for (const directory of document.querySelectorAll<HTMLElement>('[data-map-directory]')) {
@@ -33,7 +38,7 @@ const { map } = Astro.props;
         const match = (retired.checked || item.dataset.retired !== 'true') && (!type.value || item.dataset.type === type.value) && (!cluster?.value || item.dataset.clusters?.split(' ').includes(cluster.value)) && words.every((word) => item.dataset.text?.includes(word));
         item.hidden = !match; if (match) count += 1;
       }
-      directory.querySelector('[data-map-count]')!.textContent = `${count} matching ${count === 1 ? 'item' : 'items'}`;
+      directory.querySelector('[data-map-count]')!.textContent = directory.dataset.locale === "zh-CN" ? `${count} 个匹配条目` : `${count} matching ${count === 1 ? 'item' : 'items'}`;
       directory.querySelector<HTMLElement>('[data-map-empty]')!.hidden = count !== 0;
     }
     directory.addEventListener('input', update);

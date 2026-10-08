@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: layer
+target_id: layer-dynamics-control
+units:
+  - path: label
+    translation: 动态与控制
+    source_fingerprint: sha256:4a5ad50ad44b583621b13d67919aecebf274e1304d4d18097de229d60bbe6972
+    review_status: draft

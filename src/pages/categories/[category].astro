@@ -1,25 +1,6 @@
 ---
-import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import ConceptList from '../../components/ConceptList.astro';
-import { categoryRegistry, getCategoryBySlug, getConcepts } from '../../lib/catalog';
-
-export async function getStaticPaths() {
-  const concepts = await getConcepts();
-  return categoryRegistry.map((meta) => ({
-    params: { category: meta.slug },
-    props: { category: meta.name, meta, concepts: concepts.filter((concept) => concept.data.category === meta.name) },
-  }));
-}
-
-const { category, meta, concepts } = Astro.props;
-if (!getCategoryBySlug(meta.slug)) throw new Error(`Unknown category: ${meta.slug}`);
+import View from '../../views/CategoryDetailPage.astro';
+import { CategoryDetailPaths } from '../../lib/page-paths';
+export const getStaticPaths = CategoryDetailPaths;
 ---
-
-<StarlightPage frontmatter={{ title: category, description: meta.description, editUrl: false, tableOfContents: false }}>
-  <div class="category-masthead">
-    <span>{meta.code}</span>
-    <p>{meta.question}</p>
-    <strong>{String(concepts.length).padStart(2, '0')} concepts</strong>
-  </div>
-  <ConceptList concepts={concepts} showCategory={false} />
-</StarlightPage>
+<View {...Astro.props} />

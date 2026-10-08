@@ -1,9 +1,6 @@
 ---
-import SkillMapPage from '../../../../components/SkillMapPage.astro';
-import SkillMapDirectory from '../../../../components/SkillMapDirectory.astro';
-import { textLang, getSkillMaps, type SkillMap } from '../../../../lib/skill-maps';
-export async function getStaticPaths() { return (await getSkillMaps()).map((map) => ({ params: { map: map.id }, props: { map } })); }
-interface Props { map: SkillMap }
-const { map } = Astro.props;
+import View from '../../../../views/MapNodesPage.astro';
+import { MapNodesPaths } from '../../../../lib/page-paths';
+export const getStaticPaths = MapNodesPaths;
 ---
-<SkillMapPage map={map} title={`${map.data.title} — All items`} titleParts={[{ text: map.data.title, lang: textLang(map.data, "title") }, { text: " — All items" }]} description="Find skills, playbooks and principles." section="nodes"><SkillMapDirectory map={map} /></SkillMapPage>
+<View {...Astro.props} />

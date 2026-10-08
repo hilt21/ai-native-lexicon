@@ -1,0 +1,29 @@
+---
+import StarlightPage, { type StarlightPageProps } from '@astrojs/starlight/components/StarlightPage.astro';
+import TranslationCoverage from './TranslationCoverage.astro';
+import { getLocalizedCatalog } from '../lib/localized-catalog';
+import { routeLocale, rootPath, uiFor } from '../lib/locale';
+type Props = StarlightPageProps;
+const locale = routeLocale(Astro.url);
+const route = rootPath(Astro.url);
+const ui = uiFor(locale);
+const catalog = await getLocalizedCatalog('zh-CN');
+const conceptId = /^\/concepts\/([^/]+)\/$/.exec(route)?.[1];
+const primitiveId = /^\/primitives\/([^/]+)\/$/.exec(route)?.[1];
+const categoryId = /^\/categories\/([^/]+)\/$/.exec(route)?.[1];
+const categoryRecord = categoryId ? catalog.categories.find((entry: { id: string }) => entry.id === categoryId) : undefined;
+const record = conceptId ? catalog.concepts.find((entry) => entry.id === conceptId) : primitiveId ? catalog.primitives.find((entry) => entry.id === primitiveId) : undefined;
+if ((conceptId || primitiveId) && !record) throw new Error(`Unknown record route: ${route}`);
+const resource = route === '/speaking-card/' || (route.startsWith('/skill-maps/') && route !== '/skill-maps/');
+Astro.locals.lexiconPage = { rootPath: route, chineseIndexable: record ? record.coreTranslated : !resource, titleLanguage: record ? 'en' : categoryRecord?.units.label.actualLang };
+const taxonomy = route === '/' || route === '/categories/' ? catalog.categories : route === '/primitives/' ? catalog.layers : [];
+const taxonomyCoverage = taxonomy.reduce((total, entry) => { for (const key of ['translated', 'total', 'missing', 'draft', 'stale'] as const) total[key] += entry.coverage[key]; return total; }, { translated: 0, total: 0, missing: 0, draft: 0, stale: 0 });
+const frontmatter = { ...Astro.props.frontmatter, title: ui(Astro.props.frontmatter.title), description: Astro.props.frontmatter.description ? ui(Astro.props.frontmatter.description) : undefined };
+---
+<StarlightPage {...Astro.props} frontmatter={frontmatter}>
+  {locale === 'zh-CN' && categoryRecord && <TranslationCoverage coverage={categoryRecord.coverage} />}
+  {locale === 'zh-CN' && taxonomyCoverage.total > 0 && <TranslationCoverage coverage={taxonomyCoverage} />}
+  {locale === 'zh-CN' && record && <TranslationCoverage coverage={record.coverage} />}
+  {locale === 'zh-CN' && resource && <aside class="translation-coverage" data-resource-language-note>当前页面提供中文导航；讲解指南与技能地图正文保留原始语言版本，尚未纳入首批翻译。来源版本与语言注释保持不变。</aside>}
+  <slot />
+</StarlightPage>

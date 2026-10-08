@@ -1,5 +1,5 @@
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { pathWithBase } from './catalog';
+import { localePath, type Locale } from './locale';
 
 export type SkillMap = CollectionEntry<'skillMaps'>;
 export type MapNode = SkillMap['data']['nodes'][number];
@@ -9,8 +9,8 @@ export async function getSkillMaps() {
   return (await getCollection('skillMaps')).sort((a, b) => (a.data.order ?? 0) - (b.data.order ?? 0) || a.id.localeCompare(b.id));
 }
 
-export function mapLink(map: string, suffix = '') {
-  return pathWithBase(`/skill-maps/${map}/${suffix}`);
+export function mapLink(map: string, suffix = '', locale: Locale = 'en') {
+  return localePath(`/skill-maps/${map}/${suffix}`, locale);
 }
 
 export function sourceLink(map: SkillMap, ref: { source: string; path: string }) {
@@ -25,7 +25,7 @@ export function orderedJourneys(map: SkillMap) {
 
 /** Language hints belong to the displayed field, including reused labels. */
 export function textLang(record: { text_languages?: Record<string, string> }, path: string) {
-  return record.text_languages?.[path];
+  return record.text_languages?.[path] ?? 'en';
 }
 
 export function taxonomyLang(map: SkillMap, kind: 'types' | 'layers' | 'clusters' | 'relation_types', id: string, field: 'label' | 'description' | 'outgoing_label' | 'incoming_label') {

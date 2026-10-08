@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: harness
+units:
+  - path: label
+    translation: 智能体支架
+    source_fingerprint: sha256:ccd0a35553492054c9ef03ab94e477e349baf89708c6a0f879fcfa9fe894595b
+    review_status: draft
+  - path: description
+    translation: 围绕模型的概率性行为，构建确定性的支持系统。
+    source_fingerprint: sha256:b58a0a093ab35bc372cc7a4a385c68c5f71a02e84e08e5c335adbcf49ab6fd25
+    review_status: draft
+  - path: question
+    translation: 什么让模型能够实际运行？
+    source_fingerprint: sha256:7c32675f7360c1649d4dfa2e112cbfede2eb191f9115471bf7cb717db3a0c01f
+    review_status: draft

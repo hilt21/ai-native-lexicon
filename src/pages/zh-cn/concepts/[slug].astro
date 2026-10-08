@@ -1,0 +1,6 @@
+---
+import View from '../../../views/ConceptDetailPage.astro';
+import { ConceptDetailPaths } from '../../../lib/page-paths';
+export const getStaticPaths = ConceptDetailPaths;
+---
+<View {...Astro.props} />

@@ -1,17 +1,6 @@
 ---
-import SkillMapPage from '../../../../components/SkillMapPage.astro';
-import { textLang, getSkillMaps, mapLink, sourceLink, type SkillMap, type TaskJourney } from '../../../../lib/skill-maps';
-export async function getStaticPaths() { return (await getSkillMaps()).flatMap((map) => map.data.journeys.map((journey) => ({ params: { map: map.id, journey: journey.id }, props: { map, journey } }))); }
-interface Props { map: SkillMap; journey: TaskJourney }
-const { map, journey } = Astro.props;
+import View from '../../../../views/MapJourneyPage.astro';
+import { MapJourneyPaths } from '../../../../lib/page-paths';
+export const getStaticPaths = MapJourneyPaths;
 ---
-<SkillMapPage map={map} title={journey.title} titleLanguage={textLang(journey, "title")} description={journey.summary} section="tasks">
-  <p class="map-summary" lang={textLang(journey, "summary")}>{journey.summary}</p>
-  {journey.status === 'retired' && <aside class="map-retirement"><h2>Retired</h2><p lang={textLang(journey, "retirement_note")}>{journey.retirement_note}</p></aside>}
-  <h2 lang="zh-Hans">适用情境</h2><ul>{journey.when_to_use.map((s, i) => <li lang={textLang(journey, `when_to_use.${i}`)}>{s}</li>)}</ul>
-  {journey.inputs.length > 0 && <section><h2 lang="zh-Hans">准备什么</h2><ul>{journey.inputs.map((s, i) => <li lang={textLang(journey, `inputs.${i}`)}>{s}</li>)}</ul></section>}
-  <p class="map-scope" lang="zh-Hans">以下为编辑策划的指导步骤。条件由使用者判断，同一步中的技能不要求依次执行。</p>
-  {journey.variants.map((variant, vi) => <section><h2 lang={textLang(journey, `variants.${vi}.title`)}>{variant.title}</h2>{variant.when && <p lang={textLang(journey, `variants.${vi}.when`)}>{variant.when}</p>}<ol class="map-steps">{variant.steps.map((step, si) => <li><h3><span lang={textLang(journey, `variants.${vi}.steps.${si}.title`)}>{step.title}</span>{step.optional && <span class="map-optional" lang="zh-Hans"> 可选</span>}</h3>{step.when && <p class="map-condition" lang={textLang(journey, `variants.${vi}.steps.${si}.when`)}>{step.when}</p>}<p lang={textLang(journey, `variants.${vi}.steps.${si}.why`)}>{step.why}</p><ul>{step.nodes.map((id) => { const n = map.data.nodes.find((n) => n.id === id)!; return <li><a href={mapLink(map.id, `nodes/${id}/`)} lang={textLang(n, "title")}>{n.title}</a>{n.status === 'retired' && ' · Retired'}</li>; })}</ul>{step.outputs.length > 0 && <p><span lang="zh-Hans">产物：</span>{step.outputs.map((text, i) => <>{i > 0 && ' / '}<span lang={textLang(journey, `variants.${vi}.steps.${si}.outputs.${i}`)}>{text}</span></>)}</p>}</li>)}</ol></section>)}
-  {journey.outputs.length > 0 && <section><h2 lang="zh-Hans">完成后应得到什么</h2><ul>{journey.outputs.map((s, i) => <li lang={textLang(journey, `outputs.${i}`)}>{s}</li>)}</ul></section>}
-  {journey.source_refs.length > 0 && <section><h2>Sources</h2><ul>{journey.source_refs.map((ref) => <li><a href={sourceLink(map, ref)}>{ref.path}</a></li>)}</ul></section>}
-</SkillMapPage>
+<View {...Astro.props} />

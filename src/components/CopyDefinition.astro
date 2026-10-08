@@ -1,12 +1,16 @@
 ---
+import { routeLocale, uiFor } from '../lib/locale';
 interface Props { name: string; statusId: string }
 const { name, statusId } = Astro.props;
+
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
 ---
 
-<copy-definition>
+<copy-definition data-success={ui("Definition copied.")} data-failure={ui("Could not copy the definition. Select the text and copy it manually.")}>
   <slot />
   <div class="definition-actions">
-    <button type="button" aria-label={`Copy definition: ${name}`} aria-describedby={statusId}>Copy definition</button>
+    <button type="button" aria-label={`${ui("Copy definition")}: ${name}`} aria-describedby={statusId}>{ui("Copy definition")}</button>
     <span id={statusId} role="status" aria-live="polite" data-copy-status></span>
   </div>
 </copy-definition>
@@ -22,9 +26,9 @@ const { name, statusId } = Astro.props;
         status.textContent = '';
         try {
           await navigator.clipboard.writeText(body.innerText.trim());
-          status.textContent = 'Definition copied.';
+          status.textContent = this.dataset.success!;
         } catch {
-          status.textContent = 'Could not copy the definition. Select the text and copy it manually.';
+          status.textContent = this.dataset.failure!;
         }
       });
     }

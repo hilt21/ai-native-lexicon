@@ -1,0 +1,19 @@
+---
+import { getLocalizedConcepts } from '../lib/localized-catalog';
+import { routeLocale, localePath, uiFor } from '../lib/locale';
+import StarlightPage from '../components/LocalizedPage.astro';
+import ConceptList from '../components/ConceptList.astro';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const pathWithBase = (path: string) => localePath(path, locale);
+const concepts = await getLocalizedConcepts(locale);
+
+---
+
+<StarlightPage frontmatter={{ title: ui('All concepts'), description: ui('The complete A–Z index of AI-native software engineering concepts.'), editUrl: false, tableOfContents: false }}>
+  <div class="page-intro">
+    <p class="eyebrow">A–Z / {concepts.length} {ui("ENTRIES")}</p>
+    <p>{ui("Browse the complete working vocabulary, or")} <a href={pathWithBase('/search/')}>{ui("search by definition, category, or related idea")}</a>.</p>
+  </div>
+  <ConceptList concepts={concepts} />
+</StarlightPage>

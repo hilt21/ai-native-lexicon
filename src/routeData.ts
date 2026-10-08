@@ -1,0 +1,20 @@
+import { getCollection } from 'astro:content';
+import { defineRouteMiddleware } from '@astrojs/starlight/route-data';
+import { localePath, rootPath, routeLocale } from './lib/locale';
+export const onRequest = defineRouteMiddleware(async (context, next) => {
+  await next();
+  const route = context.locals.starlightRoute;
+  const locale = routeLocale(context.url);
+  const policy = context.locals.lexiconPage;
+  const root = policy?.rootPath ?? rootPath(context.url);
+  const docs = policy ? [] : await getCollection('docs');
+  const docId = root.replace(/^\/|\/$/g, '');
+  const chineseIndexable = policy?.chineseIndexable ?? docs.some((entry) => entry.id === `zh-cn/${docId}`);
+  const english = new URL(localePath(root, 'en'), context.site ?? context.url).href;
+  const chinese = new URL(localePath(root, 'zh-CN'), context.site ?? context.url).href;
+  const canonical = locale === 'zh-CN' && chineseIndexable ? chinese : english;
+  route.head = route.head.filter((entry) => !(entry.tag === 'link' && (entry.attrs?.rel === 'canonical' || entry.attrs?.hreflang)) && !(entry.tag === 'meta' && (entry.attrs?.name === 'robots' || entry.attrs?.property === 'og:url')));
+  route.head.push({ tag: 'link', attrs: { rel: 'canonical', href: canonical } }, { tag: 'meta', attrs: { property: 'og:url', content: canonical } }, { tag: 'link', attrs: { rel: 'alternate', hreflang: 'en', href: english } }, { tag: 'link', attrs: { rel: 'alternate', hreflang: 'x-default', href: english } });
+  if (chineseIndexable) route.head.push({ tag: 'link', attrs: { rel: 'alternate', hreflang: 'zh-CN', href: chinese } });
+  if (locale === 'zh-CN' && !chineseIndexable) route.head.push({ tag: 'meta', attrs: { name: 'robots', content: 'noindex,follow' } });
+});

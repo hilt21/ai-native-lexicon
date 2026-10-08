@@ -1,0 +1,17 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: verification
+units:
+  - path: label
+    translation: 验证
+    source_fingerprint: sha256:3393893492ad24b3f8712dd8d8310f1108cf202220c9b0ca3c3d36a7aff5aded
+    review_status: draft
+  - path: description
+    translation: 将关于表现和完成情况的声明与可检查的验证相联系。
+    source_fingerprint: sha256:6cb3fed2a37f210058aa2a76bee2d9d7a271c2a71d6a1700ecbbf386161c1787
+    review_status: draft
+  - path: question
+    translation: 我们如何知道它奏效了？
+    source_fingerprint: sha256:f1221828037ca31e51db8dedfafe299096606e2fc8584e9f09631dc9de28d2d9
+    review_status: draft

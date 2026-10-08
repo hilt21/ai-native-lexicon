@@ -23,19 +23,22 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'AI Native Lexicon',
+      defaultLocale: 'root',
+      locales: { root: { label: 'English', lang: 'en' }, 'zh-cn': { label: '简体中文', lang: 'zh-CN' } },
+      routeMiddleware: './src/routeData.ts',
       description:
         'An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.',
       favicon: '/favicon.svg',
       customCss: ['./src/styles/custom.css'],
-      components: { SkipLink: './src/components/SkipLink.astro', PageTitle: './src/components/PageTitle.astro' },
+      components: { SkipLink: './src/components/SkipLink.astro', PageTitle: './src/components/PageTitle.astro', LanguageSelect: './src/components/LanguageSelect.astro' },
       social: hasRepository ? [{ icon: 'github', label: 'GitHub', href: repositoryUrl }] : [],
       ...(hasRepository ? { editLink: { baseUrl: `${repositoryUrl}/edit/${contentBranch}/` } } : {}),
       pagefind: usePagefind,
       disable404Route: true,
       sidebar: [
-        { label: 'Start', items: [{ label: 'Home', link: '/' }, { label: 'All concepts', link: '/concepts/' }, { label: 'Search', link: '/search/' }] },
-        { label: 'Explore', items: [{ label: 'Categories', link: '/categories/' }, { label: 'Primitives', link: '/primitives/' }, { label: 'About the lexicon', link: '/about/' }] },
-        { label: 'Applications', items: [{ label: 'Speaking Cards', link: '/speaking-card/' }, { label: 'Skill Maps', link: '/skill-maps/' }] },
+        { label: 'Start', translations: { 'zh-CN': '开始' }, items: [{ label: 'Home', translations: { 'zh-CN': '首页' }, link: '/' }, { label: 'All concepts', translations: { 'zh-CN': '全部概念' }, link: '/concepts/' }, { label: 'Search', translations: { 'zh-CN': '搜索' }, link: '/search/' }] },
+        { label: 'Explore', translations: { 'zh-CN': '探索' }, items: [{ label: 'Categories', translations: { 'zh-CN': '分类' }, link: '/categories/' }, { label: 'Primitives', translations: { 'zh-CN': '原语' }, link: '/primitives/' }, { label: 'About the lexicon', translations: { 'zh-CN': '关于词库' }, link: '/about/' }] },
+        { label: 'Applications', translations: { 'zh-CN': '应用资源' }, items: [{ label: 'Speaking Cards', translations: { 'zh-CN': '讲解卡' }, link: '/speaking-card/' }, { label: 'Skill Maps', translations: { 'zh-CN': '技能地图' }, link: '/skill-maps/' }] },
       ],
     }),
   ],
