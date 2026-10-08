@@ -1,5 +1,5 @@
 ---
-import { getLocalizedCatalog, getLocalizedConcepts, getLocalizedPrimitives, unitLang } from '../lib/localized-catalog';
+import { getLocalizedCatalog, unitLang } from '../lib/localized-catalog';
 import { routeLocale, localePath, uiFor } from '../lib/locale';
 import StarlightPage from '../components/LocalizedPage.astro';
 import RecordNavigation from '../components/RecordNavigation.astro';
@@ -13,8 +13,8 @@ const pathWithBase = (path: string) => localePath(path, locale);
 
 
 
-const primitives = await getLocalizedPrimitives(locale);
-const concepts = await getLocalizedConcepts(locale);
+const catalog = await getLocalizedCatalog(locale);
+const { primitives, concepts } = catalog;
 const primitive = primitives.find((entry) => entry.id === Astro.props.primitive.id)!;
 const index = primitives.indexOf(primitive);
 const previous = primitives[index - 1], next = primitives[index + 1];
@@ -23,7 +23,7 @@ const linkedConcepts = concepts.filter((entry) => entry.data.primitives.includes
 const definitions = primitive.definitions;
 const { data } = primitive;
 const layerId = primitiveLayerId(data.layer);
-const layer = (await getLocalizedCatalog(locale)).layers.find((entry: { id: string }) => entry.id === layerId)!;
+const layer = catalog.layers.find((entry: { id: string }) => entry.id === layerId)!;
 const owner = primitiveOwners[data.ownership.kind];
 const priority = primitivePriorities[data.priority.level];
 const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.primitives.includes(primitive.id));

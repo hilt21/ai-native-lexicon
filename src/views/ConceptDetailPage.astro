@@ -1,5 +1,5 @@
 ---
-import { getLocalizedCatalog, getLocalizedConcepts, getLocalizedPrimitives, unitLang } from '../lib/localized-catalog';
+import { getLocalizedCatalog, unitLang } from '../lib/localized-catalog';
 import { routeLocale, localePath, uiFor } from '../lib/locale';
 import StarlightPage from '../components/LocalizedPage.astro';
 import RecordNavigation from '../components/RecordNavigation.astro';
@@ -15,13 +15,13 @@ const pathWithBase = (path: string) => localePath(path, locale);
 
 
 
-const concepts = await getLocalizedConcepts(locale);
-const allPrimitives = await getLocalizedPrimitives(locale);
+const catalog = await getLocalizedCatalog(locale);
+const { concepts, primitives: allPrimitives } = catalog;
 const concept = concepts.find((entry) => entry.id === Astro.props.concept.id)!;
 const index = concepts.indexOf(concept);
 const previous = concepts[index - 1], next = concepts[index + 1];
 const primitives = concept.data.primitives.map((id) => allPrimitives.find((entry) => entry.id === id)!);
-const category = (await getLocalizedCatalog(locale)).categories.find((entry: { id: string }) => entry.id === categoryMeta[concept.data.category].slug)!;
+const category = catalog.categories.find((entry: { id: string }) => entry.id === categoryMeta[concept.data.category].slug)!;
 const meta = categoryMeta[concept.data.category];
 const repository = process.env.GITHUB_REPOSITORY;
 const editUrl = repository
