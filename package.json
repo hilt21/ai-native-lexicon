@@ -23,6 +23,7 @@
     "test:browser": "node scripts/verify-web-browser.mjs"
   },
   "dependencies": {
+    "@astrojs/sitemap": "3.7.3",
     "@astrojs/starlight": "^0.41.3",
     "ajv-formats": "3.0.1",
     "astro": "^7.1.6",

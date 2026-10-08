@@ -1,0 +1,6 @@
+---
+import View from '../../../../views/MapTasksPage.astro';
+import { MapTasksPaths } from '../../../../lib/page-paths';
+export const getStaticPaths = MapTasksPaths;
+---
+<View {...Astro.props} />

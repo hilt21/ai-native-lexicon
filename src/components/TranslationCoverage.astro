@@ -1,0 +1,8 @@
+---
+interface Props { coverage: { translated: number; total: number; missing: number; draft: number; stale: number } }
+const { coverage } = Astro.props;
+---
+<aside class="translation-coverage" data-translation-coverage data-translated={coverage.translated} data-total={coverage.total} data-missing={coverage.missing} data-draft={coverage.draft} data-stale={coverage.stale}>
+  <strong>译文覆盖：{coverage.translated}/{coverage.total} 个单元已审查且与当前英文一致。</strong>
+  {(coverage.missing + coverage.draft + coverage.stale > 0) && <p>未覆盖 {coverage.missing}；草稿 {coverage.draft}；过期 {coverage.stale}。这些单元显示当前英文，并标注语言。译文审查不代表知识或来源已核验。</p>}
+</aside>

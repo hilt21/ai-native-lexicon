@@ -1,0 +1,6 @@
+---
+import View from '../../../views/CategoryDetailPage.astro';
+import { CategoryDetailPaths } from '../../../lib/page-paths';
+export const getStaticPaths = CategoryDetailPaths;
+---
+<View {...Astro.props} />

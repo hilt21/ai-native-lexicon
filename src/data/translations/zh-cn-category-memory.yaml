@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: memory
+units:
+  - path: label
+    translation: 记忆
+    source_fingerprint: sha256:f9a371fb11ca8cce919b1eb3fcfcf1317fc602bc49b8d4a47fe67ba6a033aef8
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: description
+    translation: 在不同步骤和任务之间保留、完善和淘汰信息。
+    source_fingerprint: sha256:ab03ad38c74b6d8b25f6944ca74ad1be0b46cf1f4adb96a797514928ff2cd4a7
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: question
+    translation: 什么应该持续保留？
+    source_fingerprint: sha256:693799da9e012ab803b28e43acb0e2143b106e27c8e354b89f3a88109a9cdd41
+    review_status: reviewed
+    reviewed_at: 2026-10-08

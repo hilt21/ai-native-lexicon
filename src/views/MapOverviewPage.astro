@@ -1,0 +1,36 @@
+---
+import { routeLocale, uiFor } from '../lib/locale';
+import SkillMapPage from '../components/SkillMapPage.astro';
+import { textLang, taxonomyLang, mapLink as canonicalMapLink, type SkillMap } from '../lib/skill-maps';
+import { skillMapOverview } from '../domain/content/skill-map-overview.mjs';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+
+interface Props { map: SkillMap }
+const { map } = Astro.props;
+const { groups, clusters, relationships } = skillMapOverview(map.data);
+
+
+const mapLink = (map: string, suffix = "") => canonicalMapLink(map, suffix, locale);
+---
+<SkillMapPage map={map} title={`${map.data.title} — ${ui("Structure")}`} titleParts={[{ text: map.data.title, lang: textLang(map.data, "title") }, { text: ui(" — Structure"), lang: locale }]} description={ui("Understand how this ecosystem is organized.")} section="overview">
+  <p class="map-summary" lang={textLang(map.data, 'scope')}>{map.data.scope}</p>
+  <div class="map-structure">{groups.map((group) => <section data-structure-group={group.id}>
+    <h2 lang={group.kind ? taxonomyLang(map, group.kind, group.id, 'label') : undefined}>{group.label}</h2>
+    {group.description && group.kind && <p lang={taxonomyLang(map, group.kind, group.id, 'description')}>{group.description}</p>}
+    <p class="map-scope">{group.count} {ui("active items")} · <a href={mapLink(map.id, 'nodes/')}>{ui("All items")}</a></p>
+    {group.examples.length > 0 && <><p>{ui("Examples")}</p><ul>{group.examples.map((node) => <li><a href={mapLink(map.id, `nodes/${node.id}/`)} lang={textLang(node, 'title')}>{node.title}</a></li>)}</ul></>}
+  </section>)}</div>
+  {clusters.length > 0 && <section><h2 lang="zh-Hans">能力簇</h2><div class="map-structure">{clusters.map((cluster) => <section data-structure-cluster={cluster.id}>
+    <h3 lang={taxonomyLang(map, 'clusters', cluster.id, 'label')}>{cluster.label}</h3><p lang={taxonomyLang(map, 'clusters', cluster.id, 'description')}>{cluster.description}</p>
+    <p class="map-scope">{cluster.count} {ui("active items")} · <a href={mapLink(map.id, 'nodes/')}>{ui("All items")}</a></p>
+    {cluster.examples.length > 0 && <><p>{ui("Examples")}</p><ul>{cluster.examples.map((node) => <li><a href={mapLink(map.id, `nodes/${node.id}/`)} lang={textLang(node, 'title')}>{node.title}</a></li>)}</ul></>}
+  </section>)}</div></section>}
+  {relationships.length > 0 && <section data-relationship-examples><h2>{ui("Relationship examples")}</h2>
+    <p lang="zh-Hans">条目详情按关系类型区分使用、交接与原则约束；这些连接是编辑指导，不代表固定执行顺序或自动执行授权。</p>
+    <ul>{relationships.map(({ type, edge, from, to }) => <li data-relation-type={type.id}>
+      <a href={mapLink(map.id, `nodes/${from.id}/`)} lang={textLang(from, 'title')}>{from.title}</a>{' → '}<span lang={taxonomyLang(map, 'relation_types', type.id, 'outgoing_label')}>{type.outgoing_label}</span>{' → '}<a href={mapLink(map.id, `nodes/${to.id}/`)} lang={textLang(to, 'title')}>{to.title}</a>
+      <p lang={taxonomyLang(map, 'relation_types', type.id, 'description')}>{type.description}</p>{edge.note && <p lang={textLang(map.data, "scope")}>{edge.note}</p>}
+    </li>)}</ul>
+  </section>}
+</SkillMapPage>

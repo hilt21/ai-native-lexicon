@@ -17,18 +17,18 @@ test('search result styles preserve the hidden attribute', async () => {
 
 test('listing surfaces omit empty tables of contents', async () => {
   const paths = [
-    '../src/pages/concepts/index.astro',
-    '../src/pages/categories/index.astro',
-    '../src/pages/categories/[category].astro',
-    '../src/pages/search.astro',
+    '../src/views/ConceptIndexPage.astro',
+    '../src/views/CategoryIndexPage.astro',
+    '../src/views/CategoryDetailPage.astro',
+    '../src/views/SearchPage.astro',
   ];
   const sources = await Promise.all(paths.map(readSource));
   for (const source of sources) assert.match(source, /tableOfContents: false/);
 });
 
 test('the splash page exposes primary navigation without a sidebar', async () => {
-  const home = await readSource('../src/pages/index.astro');
-  assert.match(home, /<nav aria-label="Primary">/);
+  const home = await readSource('../src/views/HomePage.astro');
+  assert.match(home, /<nav aria-label=\{ui\('Primary'\)\}>/);
   for (const path of ['/concepts/', '/categories/', '/search/']) {
     assert.match(home, new RegExp(`pathWithBase\\('${path}'\\)`));
   }
@@ -37,12 +37,12 @@ test('the splash page exposes primary navigation without a sidebar', async () =>
 test('primitive catalog and concept links resolve to stable detail routes', async () => {
   const [row, detail, concept] = await Promise.all([
     '../src/components/PrimitiveRow.astro',
-    '../src/pages/primitives/[slug].astro',
-    '../src/pages/concepts/[slug].astro',
+    '../src/lib/page-paths.ts',
+    '../src/views/ConceptDetailPage.astro',
   ].map(readSource));
 
   assert.match(row, /id=\{primitive\.id\}/);
   assert.match(row, /href=\{pathWithBase\(`\/primitives\/\$\{primitive\.id\}\/`\)\}/);
-  assert.match(detail, /params: \{ slug: primitive\.id \}/);
+  assert.match(detail, /params: \{ slug: id \}/);
   assert.match(concept, /`\/primitives\/\$\{primitive\.id\}\/`/);
 });

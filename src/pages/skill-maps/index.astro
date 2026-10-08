@@ -1,12 +1,4 @@
 ---
-import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { textLang, getSkillMaps, mapLink } from '../../lib/skill-maps';
-const maps = await getSkillMaps();
+import View from '../../views/SkillMapIndexPage.astro';
 ---
-<StarlightPage frontmatter={{ title: 'Skill Maps', description: 'Choose and combine skills from a task.', editUrl: false, tableOfContents: false }}>
-  <div class="skill-map">
-    <p class="map-summary" lang="zh-Hans">从你要完成的工作出发，了解一套技能体系的入口、能力与实践路径。</p>
-    <div class="map-index">{maps.map((map) => <a class="map-index-item" href={mapLink(map.id)}><h2 lang={textLang(map.data, "title")}>{map.data.title}</h2><p lang={textLang(map.data, "summary")}>{map.data.summary}</p><p class="map-scope">{map.data.audience.map((text, i) => <>{i > 0 && ' / '}<span lang={textLang(map.data, `audience.${i}`)}>{text}</span></>)}</p><span>{map.data.nodes.filter((n) => n.status === 'active').length} items · {map.data.journeys.filter((j) => j.status === 'active').length} task journeys</span><p class="map-scope">{map.data.current_sources.map((id) => { const s = map.data.sources.find((s) => s.id === id)!; return `${s.version ?? id} · Checked ${s.verified_at}`; }).join('; ')}</p></a>)}</div>
-    {maps.length === 0 && <p>No maps yet.</p>}
-  </div>
-</StarlightPage>
+<View {...Astro.props} />

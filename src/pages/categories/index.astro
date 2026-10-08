@@ -1,14 +1,4 @@
 ---
-import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import CategoryGrid from '../../components/CategoryGrid.astro';
-import { categoryRegistry, getConcepts } from '../../lib/catalog';
-const concepts = await getConcepts();
+import View from '../../views/CategoryIndexPage.astro';
 ---
-
-<StarlightPage frontmatter={{ title: 'Categories', description: `${categoryRegistry.length} domains for navigating AI-native software engineering.`, editUrl: false, tableOfContents: false }}>
-  <div class="page-intro">
-    <p class="eyebrow">{String(categoryRegistry.length).padStart(2, '0')} DOMAINS OF PRACTICE</p>
-    <p>The categories are navigation aids, not hard boundaries. Mature concepts usually connect technical mechanisms, product experience, and organizational accountability.</p>
-  </div>
-  <CategoryGrid concepts={concepts} headingLevel="h2" />
-</StarlightPage>
+<View {...Astro.props} />

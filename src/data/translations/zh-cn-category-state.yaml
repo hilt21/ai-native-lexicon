@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: state
+units:
+  - path: label
+    translation: 状态
+    source_fingerprint: sha256:424994e43046bb22d255851233e902c355f3d04d0d5ce8e63171604eea5b5a7d
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: description
+    translation: 表达进度，并保留继续工作所需的输出。
+    source_fingerprint: sha256:8b20e898666b65a48251319d2a8322933959e36f008a24e1b2f4c0a361a22809
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: question
+    translation: 工作进行到哪一步？
+    source_fingerprint: sha256:0912ea71f6ded00ed0ca2e10b5a977537d0c5e47b9faea73f197fe1b55b18f42
+    review_status: reviewed
+    reviewed_at: 2026-10-08

@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: instruction
+units:
+  - path: label
+    translation: 指令
+    source_fingerprint: sha256:3e6854a45b8cf26312fdc87746ebccfe9925e8366dd4f63a34906e2acb1ad8bd
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: description
+    translation: 表达请求、行为规则和引导智能体的优先级。
+    source_fingerprint: sha256:0bf585d5456274d77f024873cef57d49bb69dc7c4dcad4d26535e9a32e2c2f91
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: question
+    translation: 智能体应该遵循什么？
+    source_fingerprint: sha256:f4df0a63f3331e96a15153bc2d03973c6d26a030a07c66a01bbff8abbefc0606
+    review_status: reviewed
+    reviewed_at: 2026-10-08

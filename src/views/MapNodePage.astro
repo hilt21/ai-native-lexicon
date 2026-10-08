@@ -1,0 +1,34 @@
+---
+import { routeLocale, uiFor } from '../lib/locale';
+import SkillMapPage from '../components/SkillMapPage.astro';
+import { taxonomyLang, textLang, mapLink as canonicalMapLink, sourceLink, orderedJourneys, type SkillMap, type MapNode } from '../lib/skill-maps';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+
+interface Props { map: SkillMap; node: MapNode }
+const { map, node } = Astro.props;
+const groups = map.data.taxonomy.relation_types.flatMap((type) => ['outgoing', 'incoming'].map((direction) => ({ language: taxonomyLang(map, 'relation_types', type.id, direction === 'outgoing' ? 'outgoing_label' : 'incoming_label'), label: direction === 'outgoing' ? type.outgoing_label : type.incoming_label, edges: map.data.relations.filter((edge) => edge.type === type.id && (direction === 'outgoing' ? edge.from : edge.to) === node.id).map((edge) => ({ edge, target: map.data.nodes.find((n) => n.id === (direction === 'outgoing' ? edge.to : edge.from))! })) }))).filter((group) => group.edges.length);
+const journeys = orderedJourneys(map).filter((j) => j.variants.some((v) => v.steps.some((s) => s.nodes.includes(node.id))));
+
+
+const mapLink = (map: string, suffix = "") => canonicalMapLink(map, suffix, locale);
+---
+<SkillMapPage map={map} title={node.title} titleLanguage={textLang(node, "title")} description={node.summary} section="nodes">
+  <div class="map-detail">
+    <article>
+      <p class="map-item-type"><span lang={taxonomyLang(map, "types", node.type, "label")}>{map.data.taxonomy.types.find((t) => t.id === node.type)?.label}</span> {node.status === 'retired' && ui('Retired')}</p>
+      <p class="map-summary" lang={textLang(node, "summary")}>{node.summary}</p>
+      {node.status === 'retired' && <aside class="map-retirement"><h2>{ui("Retired")}</h2><p lang={textLang(node, "retirement_note")}>{node.retirement_note}</p>{node.replaced_by && <a href={mapLink(map.id, `nodes/${node.replaced_by}/`)}><span lang="zh-Hans">替代条目：</span><span lang={textLang(map.data.nodes.find((n) => n.id === node.replaced_by)!, "title")}>{map.data.nodes.find((n) => n.id === node.replaced_by)!.title}</span></a>}</aside>}
+      {node.when_to_use.length > 0 && <section><h2 lang="zh-Hans">什么时候用</h2><ul>{node.when_to_use.map((text, i) => <li lang={textLang(node, `when_to_use.${i}`)}>{text}</li>)}</ul></section>}
+      {node.solves.length > 0 && <section><h2 lang="zh-Hans">解决什么问题</h2><ul>{node.solves.map((text, i) => <li lang={textLang(node, `solves.${i}`)}>{text}</li>)}</ul></section>}
+      {node.mechanism && <section><h2 lang="zh-Hans">工作机制</h2><p lang={textLang(node, "mechanism")}>{node.mechanism}</p></section>}
+      {(node.inputs.length > 0 || node.outputs.length > 0) && <div class="map-io">{[{ title: ui('输入'), field: 'inputs', items: node.inputs }, { title: ui('输出'), field: 'outputs', items: node.outputs }].filter((g) => g.items.length).map((g) => <section><h2 lang="zh-Hans">{g.title}</h2><ul>{g.items.map((s, i) => <li lang={textLang(node, `${g.field}.${i}`)}>{s}</li>)}</ul></section>)}</div>}
+      {groups.map((group) => <section><h2 lang={group.language}>{group.label}</h2><ul>{group.edges.map(({ edge, target }) => <li><a href={mapLink(map.id, `nodes/${target.id}/`)} lang={textLang(target, "title")}>{target.title}</a>{target.status === 'retired' && ui(' · Retired')}{edge.note && <span lang={textLang(map.data, "scope")}> — {edge.note}</span>}</li>)}</ul></section>)}
+      {journeys.length > 0 && <section><h2 lang="zh-Hans">相关任务路径</h2><ul>{journeys.map((j) => <li><a href={mapLink(map.id, `journeys/${j.id}/`)} lang={textLang(j, "title")}>{j.title}</a>{j.status === 'retired' && ui(' · Retired')}</li>)}</ul></section>}
+      {node.handoffs.length > 0 && <details><summary lang="zh-Hans">交接说明</summary><ul>{node.handoffs.map((s, i) => <li lang={textLang(node, `handoffs.${i}`)}>{s}</li>)}</ul></details>}
+      {node.official_description && <details><summary>{ui("Official description")}</summary><p lang={textLang(node, "official_description")}>{node.official_description}</p></details>}
+      {node.source_refs.length > 0 && <section><h2>{ui("Sources")}</h2><ul>{node.source_refs.map((ref) => <li><a href={sourceLink(map, ref)}>{ref.path}</a></li>)}</ul><p class="map-scope" lang="zh-Hans">官方描述已对照来源；机制与用途为编辑解读。</p></section>}
+    </article>
+    <nav class="map-local-index" aria-label={ui('Items in this map')}><h2>{ui("In this map")}</h2><a href={mapLink(map.id, 'nodes/')}>{ui("Search all items")}</a><ul>{map.data.nodes.filter((n) => n.status === 'active' || n.id === node.id).map((n) => <li><a href={mapLink(map.id, `nodes/${n.id}/`)} aria-current={n.id === node.id ? 'page' : undefined} lang={textLang(n, "title")}>{n.title}</a></li>)}</ul></nav>
+  </div>
+</SkillMapPage>

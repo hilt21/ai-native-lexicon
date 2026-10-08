@@ -254,3 +254,6 @@ copy-definition { display: block; }
 .record-navigation a span { color: var(--lex-muted); font-size: var(--lex-text-small); }
 
 .definition-actions button:focus-visible { outline: 2px solid var(--lex-focus); outline-offset: 3px; }
+
+.translation-coverage { margin-bottom: var(--lex-space-6); padding: var(--lex-space-4); border-inline-start: 3px solid var(--lex-focus); background: var(--lex-paper-deep); color: var(--lex-muted); font-size: var(--lex-text-small); }
+.translation-coverage p { margin: var(--lex-space-2) 0 0; }

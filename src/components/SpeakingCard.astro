@@ -1,7 +1,7 @@
 ---
+import { routeLocale, localePath, uiFor } from '../lib/locale';
 import type { SpeakingCardData } from '../lib/speaking-cards';
-import type { Concept, Primitive } from '../lib/catalog';
-import { pathWithBase } from '../lib/catalog';
+import type { LocalizedConcept as Concept, LocalizedPrimitive as Primitive } from '../lib/localized-catalog';
 
 interface Props {
   card: SpeakingCardData;
@@ -11,48 +11,52 @@ interface Props {
 
 const { card, concepts, primitives } = Astro.props;
 const id = `card-${String(card.number).padStart(2, '0')}`;
+
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 <article class="speaking-card" id={id} aria-labelledby={`${id}-title`}>
   <header>
-    <a class="card-number" href={pathWithBase(`/speaking-card/#${id}`)} aria-label={`Link to card ${card.number}: ${card.title}`}>Card {String(card.number).padStart(2, '0')}</a>
-    <h2 id={`${id}-title`}>{card.title}</h2>
-    <p class="core-idea">{card.coreIdea}</p>
+    <a class="card-number" href={pathWithBase(`/speaking-card/#${id}`)} aria-label={`${ui("Link to card")} ${card.number}: ${card.title}`}>{ui("Card")} {String(card.number).padStart(2, '0')}</a>
+    <h2 id={`${id}-title`} lang="en">{card.title}</h2>
+    <p class="core-idea" lang="en">{card.coreIdea}</p>
   </header>
-  <p class="relation-counts" aria-label={`Related entries: ${concepts.length} concepts, ${primitives.length} primitives`}>
-    <span>{concepts.length} concepts</span>
-    <span>{primitives.length} primitives</span>
+  <p class="relation-counts" aria-label={`${ui("Related entries")}: ${concepts.length} ${ui("concepts")}, ${primitives.length} ${ui("primitives")}`}>
+    <span>{concepts.length} {ui("concepts")}</span>
+    <span>{primitives.length} {ui("primitives")}</span>
   </p>
   <details>
-    <summary>Speaking notes<span class="sr-only">: {card.title}</span></summary>
+    <summary>{ui("Speaking notes")}<span class="sr-only" lang="en">: {card.title}</span></summary>
     <div class="notes">
       <section aria-labelledby={`${id}-lines`}>
-        <h3 id={`${id}-lines`}>Key Lines</h3>
-        <ul>{card.keyLines.map((line) => <li>{line}</li>)}</ul>
+        <h3 id={`${id}-lines`}>{ui("Key Lines")}</h3>
+        <ul>{card.keyLines.map((line) => <li lang="en">{line}</li>)}</ul>
       </section>
       <section aria-labelledby={`${id}-case`}>
-        <h3 id={`${id}-case`}>Real Case</h3>
-        {card.realCase.map((paragraph) => <p>{paragraph}</p>)}
+        <h3 id={`${id}-case`}>{ui("Real Case")}</h3>
+        {card.realCase.map((paragraph) => <p lang="en">{paragraph}</p>)}
       </section>
       <section class="discussion" aria-labelledby={`${id}-question`}>
-        <h3 id={`${id}-question`}>Discussion Question</h3>
-        <p>{card.discussionQuestion}</p>
+        <h3 id={`${id}-question`}>{ui("Discussion Question")}</h3>
+        <p lang="en">{card.discussionQuestion}</p>
       </section>
       <section aria-labelledby={`${id}-ending`}>
-        <h3 id={`${id}-ending`}>{card.endingLabel}</h3>
-        <p>{card.ending}</p>
+        <h3 id={`${id}-ending`} lang="en">{card.endingLabel}</h3>
+        <p lang="en">{card.ending}</p>
       </section>
       <nav class="related-links" aria-labelledby={`${id}-concepts`}>
-        <h3 id={`${id}-concepts`}>Related concepts / 相关概念</h3>
+        <h3 id={`${id}-concepts`}>{ui("Related concepts / 相关概念")}</h3>
         {concepts.length > 0
-          ? <ul>{concepts.map((concept) => <li><a href={pathWithBase(`/concepts/${concept.id}/`)}>{concept.data.term}</a></li>)}</ul>
-          : <p class="no-relations">No direct concept links.</p>}
+          ? <ul>{concepts.map((concept) => <li><a href={pathWithBase(`/concepts/${concept.id}/`)} lang="en">{concept.data.term}</a></li>)}</ul>
+          : <p class="no-relations">{ui("No direct concept links.")}</p>}
       </nav>
       <nav class="related-links" aria-labelledby={`${id}-primitives`}>
-        <h3 id={`${id}-primitives`}>Related primitives / 相关原语</h3>
+        <h3 id={`${id}-primitives`}>{ui("Related primitives / 相关原语")}</h3>
         {primitives.length > 0
-          ? <ul>{primitives.map((primitive) => <li><a href={pathWithBase(`/primitives/${primitive.id}/`)}>{primitive.data.term}</a></li>)}</ul>
-          : <p class="no-relations">No direct primitive links.</p>}
+          ? <ul>{primitives.map((primitive) => <li><a href={pathWithBase(`/primitives/${primitive.id}/`)} lang="en">{primitive.data.term}</a></li>)}</ul>
+          : <p class="no-relations">{ui("No direct primitive links.")}</p>}
       </nav>
     </div>
   </details>

@@ -1,0 +1,6 @@
+---
+import View from '../../../views/PrimitiveDetailPage.astro';
+import { PrimitiveDetailPaths } from '../../../lib/page-paths';
+export const getStaticPaths = PrimitiveDetailPaths;
+---
+<View {...Astro.props} />

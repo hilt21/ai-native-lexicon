@@ -1,11 +1,11 @@
 import assert from 'node:assert/strict';
-import { readFile } from 'node:fs/promises';
+import { readFile, writeFile } from 'node:fs/promises';
 import { createServer } from 'node:http';
 import { join, resolve, sep } from 'node:path';
 import { chromium } from 'playwright';
 
 export async function verifyBrowser(directory, evidence, fixture) {
-  const { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId, audience } = fixture;
+  const { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId, audience, translations, taxonomyOnly } = fixture;
   const root = resolve(directory, 'dist');
   const server = createServer(async (request, response) => {
     try {
@@ -33,6 +33,19 @@ export async function verifyBrowser(directory, evidence, fixture) {
         const page = await context.newPage();
         const errors = [];
         page.on('pageerror', (error) => errors.push(error.message));
+        if (taxonomyOnly) {
+          for (const theme of ['light','dark']) for (const route of ['', 'categories/', 'primitives/', `categories/${category.slug}/`]) {
+            await page.goto(`${url}/zh-cn/${route}`);
+            await page.evaluate((value) => { document.documentElement.dataset.theme=value; },theme);
+            assert.equal(await page.locator('meta[name="robots"]').count(),0);
+            assert.equal(await page.locator('link[hreflang="zh-CN"]').count(),1);
+            assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`https://hilt21.github.io${base}/zh-cn/${route}`);
+            await page.screenshot({path:join(evidence,`translation-reviewed-nav-${route.replaceAll('/','-') || 'home-'}${theme}-${width}.png`),fullPage:true,animations:'disabled'});
+          }
+          assert.deepEqual(errors,[]);
+          results.push({width,taxonomyReviewedNavigation:true,themes:['light','dark']});
+          continue;
+        }
         await page.goto(`${url}/search/?keep=fixture`);
         await page.waitForFunction(() => !!document.querySelector('#concept-search'));
         const input = page.locator('#concept-search');
@@ -160,7 +173,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
         await page.evaluate(() => { Object.defineProperty(navigator.clipboard, 'writeText', { value: async () => { throw new DOMException('Permission denied', 'NotAllowedError'); } }); });
         await page.getByRole('button', { name: `Copy definition: ${primitive.term}: ${concept.term}`, exact: true }).click();
         await page.waitForFunction(() => document.querySelector('[data-copy-status]').textContent.startsWith('Could not copy'));
-        assert.doesNotMatch(await page.locator('[data-copy-status]').textContent(), /Definition copied/);
+        assert.doesNotMatch(await page.locator('.primitive-definition').first().locator('[data-copy-status]').textContent(), /Definition copied/);
         result.reading = { examples: true, distinctions: true, referencedCopy: true, actualClipboard: true, denial: true };
         await overflow('primitive');
         await page.locator(`main a[href="${base}/primitives/#${layer.anchor}"]`).first().click();
@@ -173,6 +186,151 @@ export async function verifyBrowser(directory, evidence, fixture) {
         await page.locator(`main a[href="${base}/speaking-card/#${anchor}"]`).first().click();
         await page.waitForURL(`${url}/speaking-card/#${anchor}`);
         await overflow('category and backlink navigation');
+        if (translations) {
+          const chineseConcept = `${url}/zh-cn/concepts/${conceptSlug}/`;
+          const chinesePrimitive = `${url}/zh-cn/primitives/${primitiveSlug}/`;
+          async function renderedUnit(selector, expected, lang) {
+            const body = page.locator(selector).filter({hasText:expected}).first();
+            assert.equal((await body.innerText()).trim(),expected);
+            assert.equal(await body.getAttribute('lang'),lang);
+          }
+          for (const theme of ['light','dark']) {
+            await page.emulateMedia({colorScheme:theme});
+            await page.goto(chineseConcept);
+            assert.equal(await page.locator('html').getAttribute('lang'),'zh-CN');
+            assert.equal(await page.locator('h1').getAttribute('lang'),'en');
+            await renderedUnit('.concept-deck',translations.conceptSummary,'zh-CN');
+            await renderedUnit('[data-definition-body]',translations.conceptDefinition,'zh-CN');
+            await renderedUnit('.reading-examples p',concept.examples[0].example,'en');
+            assert.equal(await page.locator('.reading-distinction').count(),0);
+            const coverage = page.locator('[data-translation-coverage]');
+            assert.ok(Number(await coverage.getAttribute('data-stale'))>=2);
+            assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`https://hilt21.github.io${base}/zh-cn/concepts/${conceptSlug}/`);
+            assert.equal(await page.locator('meta[name="robots"][content*="noindex"]').count(),0);
+            assert.equal(await page.locator('link[hreflang="zh-CN"]').count(),1);
+            for (const old of translations.retiredText) assert.ok(!(await page.locator('main').innerText()).includes(old));
+            await page.locator('copy-definition button').click();
+            await page.locator('[data-copy-status]').getByText('定义已复制。',{exact:true}).waitFor();
+            assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),translations.conceptDefinition);
+            await overflow(`translated concept ${theme}`);
+            await page.screenshot({path:join(evidence,`translation-concept-${theme}-${width}.png`),fullPage:true,animations:'disabled'});
+
+            await page.goto(chinesePrimitive);
+            const definitions = page.locator('[data-definition-body]');
+            assert.equal(await definitions.count(),3);
+            assert.equal(await definitions.nth(0).getAttribute('lang'),'zh-CN');
+            assert.equal(await definitions.nth(0).innerText(),translations.conceptDefinition);
+            assert.equal(await definitions.nth(1).getAttribute('lang'),'en');
+            assert.equal(await definitions.nth(1).innerText(),translations.referenceConcept.definition);
+            assert.equal(await definitions.nth(2).getAttribute('lang'),'en');
+            assert.equal(await definitions.nth(2).innerText(),primitive.definitions[2].text);
+            await page.locator('copy-definition').nth(0).locator('button').click();
+            await page.locator('copy-definition').nth(0).locator('[data-copy-status]').getByText('定义已复制。',{exact:true}).waitFor();
+            assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),translations.conceptDefinition);
+            await page.locator('copy-definition').nth(1).locator('button').click();
+            await page.locator('copy-definition').nth(1).locator('[data-copy-status]').getByText('定义已复制。',{exact:true}).waitFor();
+            assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),translations.referenceConcept.definition);
+            for (const old of translations.retiredText) assert.ok(!(await page.locator('main').innerText()).includes(old));
+            await overflow(`translated primitive ${theme}`);
+            await page.screenshot({path:join(evidence,`translation-primitive-${theme}-${width}.png`),fullPage:true,animations:'disabled'});
+          }
+          for (const [id,state] of [['l2-partial-concept','missing'],['l2-draft-concept','draft'],['l2-stale-concept','stale']]) {
+            await page.goto(`${url}/zh-cn/concepts/${id}/`);
+            assert.equal(await page.locator('meta[name="robots"][content*="noindex"]').count(),1);
+            assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`https://hilt21.github.io${base}/concepts/${id}/`);
+            assert.equal(await page.locator('link[hreflang="zh-CN"]').count(),0);
+            assert.equal(await page.locator('[data-definition-body]').getAttribute('lang'),'en');
+            assert.ok(Number(await page.locator('[data-translation-coverage]').getAttribute(`data-${state}`))>0);
+            assert.ok(!(await page.locator('main').innerText()).includes('L2草稿定义不得发布'));
+            assert.ok(!(await page.locator('main').innerText()).includes('L2过期定义不得发布'));
+          }
+          await page.goto(`${chineseConcept}?q=HanOverlayFixture&type=concept#_top`);
+          async function selectLanguage(target) {
+            const select=page.locator('lexicon-language-select select:visible').first();
+            if (!(await select.count())) {
+              await page.locator('starlight-menu-button button').click();
+              assert.equal(await page.locator('starlight-menu-button').getAttribute('aria-expanded'),'true');
+            }
+            await select.selectOption(target);
+          }
+          await selectLanguage(`${base}/concepts/${conceptSlug}/`);
+          await page.waitForURL(`${url}/concepts/${conceptSlug}/?q=HanOverlayFixture&type=concept#_top`);
+          await selectLanguage(`${base}/zh-cn/concepts/${conceptSlug}/`);
+          await page.waitForURL(`${chineseConcept}?q=HanOverlayFixture&type=concept#_top`);
+          assert.equal(await page.locator('[data-definition-body]').innerText(),translations.conceptDefinition);
+
+          await page.goto(`${url}/zh-cn/search/?q=HanOverlayFixture&type=concept&keep=translation`);
+          const chineseInput = page.locator('#concept-search'), chineseType = page.locator('#search-type');
+          assert.equal(await chineseInput.inputValue(),'HanOverlayFixture');
+          assert.equal(await chineseType.inputValue(),'concept');
+          assert.deepEqual(await page.locator('[data-search]:visible').evaluateAll((rows)=>rows.map((row)=>row.getAttribute('href'))),[`${base}/zh-cn/concepts/${conceptSlug}/`]);
+          for (const old of translations.retiredText) {
+            await chineseInput.fill(old);
+            assert.equal(await page.locator('[data-search]:visible').count(),0,`Stale vector searchable: ${old}`);
+          }
+          await chineseInput.fill('HanOverlayFixture');
+          await page.reload();
+          assert.equal(await chineseInput.inputValue(),'HanOverlayFixture');
+          assert.equal(await chineseType.inputValue(),'concept');
+          await page.locator('#search-clear').click();
+          assert.equal(await chineseInput.inputValue(),'');
+          assert.equal(await chineseType.inputValue(),'');
+          assert.equal(new URL(page.url()).searchParams.get('keep'),'translation');
+          const identities = await page.locator('[data-search]').evaluateAll((rows)=>rows.map((row)=>row.dataset.searchIdentity));
+          assert.equal(new Set(identities).size,identities.length,'Field search counts each canonical identity once');
+          const chinesePagefind = await page.evaluate(async ({base})=>{
+            const index=await import(`${location.origin}${base}/pagefind/pagefind.js`); await index.init();
+            const translated=await index.search('HanOverlayFixture');
+            const fallback=await index.search('NebulaFallbackFixture');
+            const stale=await index.search('L2旧示例甲');
+            const current=await index.search('survives owner deletion');
+            return {translated:await Promise.all(translated.results.map((result)=>result.data())),fallback:await Promise.all(fallback.results.map((result)=>result.data())),stale:stale.results.length,staleData:await Promise.all(stale.results.map((result)=>result.data())),currentData:await Promise.all(current.results.map((result)=>result.data()))};
+          },{base});
+          for (const key of ['translated','fallback']) {
+            assert.ok(chinesePagefind[key].some((entry)=>new URL(entry.url,url).pathname===`${base}/zh-cn/concepts/${conceptSlug}/`),`Chinese Pagefind ${key} context`);
+            assert.ok(chinesePagefind[key].every((entry)=>new URL(entry.url,url).pathname.startsWith(`${base}/zh-cn/`)),`Chinese Pagefind ${key} mixes languages`);
+          }
+          await writeFile(join(evidence,`pagefind-stale-diagnostic-${width}.json`),`${JSON.stringify({query:'L2旧示例甲',context:page.url(),retiredTexts:translations.retiredText,actual:chinesePagefind},null,2)}\n`);
+          for (const [index,entry] of chinesePagefind.staleData.entries()) {
+            const response=await page.request.get(new URL(entry.url,url).href);
+            await writeFile(join(evidence,`pagefind-stale-source-${width}-${index}.html`),await response.text());
+          }
+          console.log('PAGEFIND_STALE_DIAGNOSTIC',JSON.stringify(chinesePagefind.staleData.map((entry)=>({url:entry.url,excerpt:entry.excerpt}))));
+          // Chinese tokenization can match retained “L2” titles from the old phrase.
+          // Inspect real indexed prose instead of equating a fuzzy hit with stale text.
+          for (const entry of chinesePagefind.staleData) {
+            assert.ok(new URL(entry.url,url).pathname.startsWith(`${base}/zh-cn/`));
+            for (const text of translations.retiredText) assert.ok(!entry.content.includes(text) && !entry.plain_excerpt.includes(text),`Pagefind exposed retired text ${text} at ${entry.url}`);
+          }
+          const currentOwner = chinesePagefind.currentData.find((entry)=>new URL(entry.url,url).pathname===`${base}/zh-cn/concepts/${conceptSlug}/`);
+          assert.ok(currentOwner,'Pagefind must return the current English owner fallback in the Chinese index');
+          assert.ok(currentOwner.content.includes(concept.examples[0].example),'Pagefind must contain the actual current owner example');
+          await page.goto(`${url}/search/`);
+          const englishPagefind=await page.evaluate(async ({base})=>{
+            const index=await import(`${location.origin}${base}/pagefind/pagefind.js`); await index.init();
+            const result=await index.search('NebulaFallbackFixture');
+            return Promise.all(result.results.map((entry)=>entry.data()));
+          },{base});
+          assert.ok(englishPagefind.some((entry)=>new URL(entry.url,url).pathname===`${base}/concepts/${conceptSlug}/`));
+          assert.ok(englishPagefind.every((entry)=>!new URL(entry.url,url).pathname.startsWith(`${base}/zh-cn/`)));
+          for (const route of ['', 'categories/', 'primitives/']) {
+            await page.goto(`${url}/zh-cn/${route}`);
+            assert.equal(await page.locator('meta[name="robots"][content*="noindex"]').count(),1);
+            assert.equal(await page.locator('link[hreflang="zh-CN"]').count(),0);
+            assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`https://hilt21.github.io${base}/${route}`);
+          }
+          for (const [index,entry] of translations.taxonomyCases.categories.entries()) {
+            await page.goto(`${url}/zh-cn/categories/${entry.slug}/`);
+            assert.equal(await page.locator('meta[name="robots"][content*="noindex"]').count(),1);
+            assert.ok(Number(await page.locator('[data-translation-coverage]').getAttribute(`data-${['draft','stale','missing'][index]}`))>0);
+          }
+          await page.goto(`${url}/categories/${category.slug}/`);
+          assert.equal(await page.locator('h1').getAttribute('lang'),'en');
+          await page.goto(`${url}/zh-cn/categories/${category.slug}/`);
+          assert.equal(await page.locator('h1').getAttribute('lang'),'zh-CN');
+          assert.equal(await page.locator('meta[name="robots"]').count(),0);
+          result.translations={themes:['light','dark'],actualLanguage:true,coreSEO:true,partialDraftStale:true,staleVectorsUnpublished:true,clipboard:true,referenceClipboard:true,selectorQueryAndFragment:true,fieldIdentity:true,fieldRestoration:true,pagefindLanguages:true,pagefindFallback:true,pagefindStaleAbsent:true,pagefindCurrentOwner:true,staleQueryResultURLs:chinesePagefind.staleData.map((entry)=>entry.url)};
+        }
         assert.deepEqual(errors, []);
         result.navigation = ['search→guide', 'guide→concept', 'concept→primitive', 'primitive→layer', 'category→concept', 'concept→guide'];
         result.aliases = true; result.sixTypes = true; result.ranking = true; result.retired = true;

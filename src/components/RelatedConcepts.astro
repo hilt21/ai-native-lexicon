@@ -1,18 +1,23 @@
 ---
-import type { Concept } from '../lib/catalog';
-import { categoryMeta, pathWithBase } from '../lib/catalog';
+import { routeLocale, localePath } from '../lib/locale';
+import { unitLang } from '../lib/localized-catalog';
+import type { LocalizedConcept as Concept } from '../lib/localized-catalog';
+import { categoryMeta } from '../lib/catalog';
 
 interface Props { concepts: Concept[] }
 const { concepts } = Astro.props;
+
+const locale = routeLocale(Astro.url);
+const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 <div class="related-grid">
   {concepts.map((concept) => (
     <a href={pathWithBase(`/concepts/${concept.id}/`)} class="related-item">
       <span class="related-category">{categoryMeta[concept.data.category].code}</span>
-      <strong>{concept.data.term}</strong>
-      <small>{concept.data.zh}</small>
-      <p class="related-summary">{concept.data.summary}</p>
+      <strong lang="en">{concept.data.term}</strong>
+      <small lang="zh-CN">{concept.data.zh}</small>
+      <p class="related-summary" lang={unitLang(concept, "summary")}>{concept.data.summary}</p>
       <i aria-hidden="true">↗</i>
     </a>
   ))}

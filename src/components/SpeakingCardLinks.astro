@@ -1,6 +1,6 @@
 ---
+import { routeLocale, localePath, uiFor } from '../lib/locale';
 import type { SpeakingCardData } from '../lib/speaking-cards';
-import { pathWithBase } from '../lib/catalog';
 
 interface Props {
   cards: SpeakingCardData[];
@@ -8,19 +8,23 @@ interface Props {
 }
 
 const { cards: linkedCards, headingId } = Astro.props;
+
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 {linkedCards.length > 0 && (
   <section class="related-section speaking-card-backlinks" aria-labelledby={headingId}>
-    <h2 id={headingId}>Speaking cards / 讲解与练习</h2>
+    <h2 id={headingId}>{ui("Speaking cards / 讲解与练习")}</h2>
     <ul>
       {linkedCards.map((card) => {
         const cardId = `card-${String(card.number).padStart(2, '0')}`;
         return (
           <li>
             <a href={pathWithBase(`/speaking-card/#${cardId}`)}>
-              <span class="card-number">Card {String(card.number).padStart(2, '0')}</span>
-              <span>{card.title}</span>
+              <span class="card-number">{ui("Card")} {String(card.number).padStart(2, '0')}</span>
+              <span lang="en">{card.title}</span>
               <span class="card-arrow" aria-hidden="true">↗</span>
             </a>
           </li>

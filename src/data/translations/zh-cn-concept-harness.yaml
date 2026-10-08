@@ -1,0 +1,48 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: harness
+units:
+  - path: summary
+    translation: 围绕 AI 模型构建的系统，为模型提供完成有用工作所需的工具、约束、状态、反馈和可观测性。
+    source_fingerprint: sha256:05fa2ca6c47b72bd653dc077ade3ecf16707eeb5f18d01767148126ab00ed5ef
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: definition
+    translation: 智能体支架将通用模型转变为可实际运行的智能体。它负责工具接口、执行循环、上下文组装、权限、追踪、持久化和评估钩子，同时保持模型行为可以替换。
+    source_fingerprint: sha256:22d910afc0cbe90ed491c1249739a94593ad0dbb43f3cc12beafab8426f4d756
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: why_it_matters
+    translation: 生产环境中的能力同样取决于智能体支架和模型。明确智能体支架的职责，可以让工程工作聚焦于能够测试和控制的部分。
+    source_fingerprint: sha256:66eab8806bec49b48c6c5e6af5dd3fe48bb60143ffcacca5f21ca5772348d609
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: when_to_use
+    translation: 当讨论模型周围的运行层，而非模型本身的原始能力时，使用这个术语。
+    source_fingerprint: sha256:dd306da38291b31f1cc75e3dd8ba0e15150b306a90c7b3f137ff75d19edd134e
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: anti_pattern
+    translation: 把每次成功或失败都归因于模型，却不检查周围的运行时。
+    source_fingerprint: sha256:1e4d8547234458ee2c1ac84ca35ae1560f1913c8835de8e5343530d29e58dfa3
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: examples.context
+    translation:
+      - 一个编码智能体在上一次会话结束后恢复工作。
+    source_fingerprint: sha256:e7bb7981c4208f643f3d65ae423040e8c0c9429318434aeba2a6f491963fdf91
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: examples.example
+    translation:
+      - 运行时加载进度文件，提供文件操作和测试工具，记录工具结果，并检查选定的功能，然后保存供下一次会话使用的检查点。
+    source_fingerprint: sha256:c8d4fa1e3c8b511d48072642cc7182f839721f53c7389c44ea553dbd9190f8b4
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: distinguish_from.distinction
+    translation:
+      - 智能体循环描述反复进行的观察、行动和反馈周期。智能体支架为这个周期提供周围的运行时，包括工具、上下文管理、已保存的状态和测试支持。
+    source_fingerprint: sha256:a43977689a4d2d77c6aac275d9404b25115ba1cffad2bcb9ea843110bfc2b073
+    review_status: reviewed
+    reviewed_at: 2026-10-08

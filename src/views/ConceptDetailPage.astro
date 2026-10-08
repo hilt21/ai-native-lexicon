@@ -1,0 +1,107 @@
+---
+import { getLocalizedCatalog, unitLang } from '../lib/localized-catalog';
+import { routeLocale, localePath, uiFor } from '../lib/locale';
+import StarlightPage from '../components/LocalizedPage.astro';
+import RecordNavigation from '../components/RecordNavigation.astro';
+import CopyDefinition from '../components/CopyDefinition.astro';
+import RelatedConcepts from '../components/RelatedConcepts.astro';
+import SpeakingCardLinks from '../components/SpeakingCardLinks.astro';
+import { getSpeakingCards } from '../lib/speaking-cards';
+import { contentBranch } from '../lib/repository.mjs';
+import { categoryMeta } from '../lib/catalog';
+const locale = routeLocale(Astro.url);
+const ui = uiFor(locale);
+const pathWithBase = (path: string) => localePath(path, locale);
+
+
+
+const catalog = await getLocalizedCatalog(locale);
+const { concepts, primitives: allPrimitives } = catalog;
+const concept = concepts.find((entry) => entry.id === Astro.props.concept.id)!;
+const index = concepts.indexOf(concept);
+const previous = concepts[index - 1], next = concepts[index + 1];
+const primitives = concept.data.primitives.map((id) => allPrimitives.find((entry) => entry.id === id)!);
+const category = catalog.categories.find((entry: { id: string }) => entry.id === categoryMeta[concept.data.category].slug)!;
+const meta = categoryMeta[concept.data.category];
+const repository = process.env.GITHUB_REPOSITORY;
+const editUrl = repository
+  ? `https://github.com/${repository}/edit/${contentBranch}/src/data/concepts/${concept.id}.yaml`
+  : false;
+const related = concept.data.related
+  .map((slug: string) => concepts.find((entry: typeof concept) => entry.id === slug))
+  .filter((entry: typeof concept | undefined): entry is typeof concept => entry !== undefined);
+const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.concepts.includes(concept.id));
+
+---
+
+<StarlightPage frontmatter={{
+  title: concept.data.term,
+  description: concept.data.summary,
+  editUrl,
+  tableOfContents: false,
+}}>
+  <article class="concept-detail">
+    <header class="concept-masthead">
+      <div>
+        <a href={pathWithBase(`/categories/${meta.slug}/`)} lang={unitLang(category, "label")}>{meta.code} / {category.data.label}</a>
+        <p class="concept-zh" lang="zh-CN">{concept.data.zh}</p>
+      </div>
+      <span lang="en" class:list={['status-stamp', `status-${concept.data.status}`]}>{concept.data.status}</span>
+    </header>
+
+    <p class="concept-deck" lang={unitLang(concept, "summary")}>{concept.data.summary}</p>
+
+    <div class="definition-grid">
+      <h2>{ui("Working definition")}</h2>
+      <CopyDefinition name={concept.data.term} statusId={`${concept.id}-definition-copy`}><p data-definition-body lang={unitLang(concept, "definition")}>{concept.data.definition}</p></CopyDefinition>
+    </div>
+    <div class="definition-grid">
+      <h2>{ui("Why it matters")}</h2>
+      <p lang={unitLang(concept, "why_it_matters")}>{concept.data.why_it_matters}</p>
+    </div>
+    <div class="practice-grid">
+      <div><span>{ui("USE IT WHEN")}</span><p lang={unitLang(concept, "when_to_use")}>{concept.data.when_to_use}</p></div>
+      <div><span>{ui("WATCH FOR")}</span><p lang={unitLang(concept, "anti_pattern")}>{concept.data.anti_pattern}</p></div>
+    </div>
+
+    {concept.data.examples.length > 0 && (
+      <section class="reading-examples">
+        <h2>{ui("Examples")}</h2>
+        <p class="reading-note">{ui("Editorial illustrations; these examples are not verified factual reports.")}</p>
+        {concept.data.examples.map((item) => <div class="definition-grid"><h3 lang={unitLang(concept, "examples.context")}>{item.context}</h3><p lang={unitLang(concept, "examples.example")}>{item.example}</p></div>)}
+      </section>
+    )}
+    {concept.data.distinguish_from.length > 0 && (
+      <section class="reading-distinction">
+        <h2>{ui("Distinguish from")}</h2>
+        {concept.data.distinguish_from.map((item) => {
+          const target = concepts.find((entry) => entry.id === item.target);
+          if (!target) throw new Error(`${concept.id}: missing distinction target ${item.target}`);
+          return <div class="definition-grid"><h3><a href={pathWithBase(`/concepts/${target.id}/`)} lang="en">{target.data.term}</a></h3><p lang={unitLang(concept, "distinguish_from.distinction")}>{item.distinction}</p></div>;
+        })}
+      </section>
+    )}
+
+    {concept.data.sources.length > 0 && <section class="concept-sources"><h2>{ui("Sources")}</h2><ul>{concept.data.sources.map((source) => <li><a href={source.url} lang="en">{source.title}</a></li>)}</ul></section>}
+
+    {primitives.length > 0 && (
+      <nav class="primitive-tags" aria-label={ui('Related primitives')}>
+        <p class="eyebrow">{ui("PRIMITIVES / 原语")}</p>
+        <div class="tag-line">
+          {primitives.map((primitive) => (
+            <a href={pathWithBase(`/primitives/${primitive.id}/`)} lang="en">{primitive.data.term}</a>
+          ))}
+        </div>
+      </nav>
+    )}
+
+    <SpeakingCardLinks cards={linkedSpeakingCards} headingId={`${concept.id}-speaking-cards`} />
+
+    <section class="related-section">
+      <p class="eyebrow">{ui("FOLLOW THE THREAD")}</p>
+      <h2>{ui("Related concepts")}</h2>
+      <RelatedConcepts concepts={related} />
+    </section>
+    <RecordNavigation kind="concepts" previous={previous} next={next} />
+  </article>
+</StarlightPage>

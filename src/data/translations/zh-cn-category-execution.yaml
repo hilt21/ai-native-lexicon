@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: execution
+units:
+  - path: label
+    translation: 执行
+    source_fingerprint: sha256:f812a0fb251e9ad3e94cfe198c5834dd13d9f78d1c0c2f3b0a9d74d5155a600c
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: description
+    translation: 在不确定的世界中，让行动、恢复和副作用可靠。
+    source_fingerprint: sha256:7debf9cffcc305ca7a1f8edbfae1b8a144cd7b1be3b0fd596cb06adb968f7b9f
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: question
+    translation: 如何将意图转化为安全的行动？
+    source_fingerprint: sha256:2d3dbf69d9dbcee8a2546c0b293061936bf74c3c0b4473c7a4e80acce1604253
+    review_status: reviewed
+    reviewed_at: 2026-10-08

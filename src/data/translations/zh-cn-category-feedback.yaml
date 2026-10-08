@@ -1,0 +1,20 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: category
+target_id: feedback
+units:
+  - path: label
+    translation: 反馈
+    source_fingerprint: sha256:34cc7d9e1f0ac6666688d5db63c85a9f840b11dedfd760aa61a69fdbffdc3f7f
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: description
+    translation: 观察结果，并利用外部信号改进下一步行动。
+    source_fingerprint: sha256:b61c9101e5a5a5571903b67b591edaa1e3a896fda263b8af2313d175d2357dc4
+    review_status: reviewed
+    reviewed_at: 2026-10-08
+  - path: question
+    translation: 外部世界揭示了什么？
+    source_fingerprint: sha256:f1430c3b6b73234e1832a1b7d02622a6028f3708acd106feed3912cc762d6b83
+    review_status: reviewed
+    reviewed_at: 2026-10-08
