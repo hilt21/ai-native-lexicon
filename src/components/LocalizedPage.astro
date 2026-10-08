@@ -15,7 +15,10 @@ const categoryRecord = categoryId ? catalog.categories.find((entry: { id: string
 const record = conceptId ? catalog.concepts.find((entry) => entry.id === conceptId) : primitiveId ? catalog.primitives.find((entry) => entry.id === primitiveId) : undefined;
 if ((conceptId || primitiveId) && !record) throw new Error(`Unknown record route: ${route}`);
 const resource = route === '/speaking-card/' || (route.startsWith('/skill-maps/') && route !== '/skill-maps/');
-Astro.locals.lexiconPage = { rootPath: route, chineseIndexable: record ? record.coreTranslated : categoryRecord ? categoryRecord.coreTranslated : !resource, titleLanguage: record ? 'en' : categoryRecord?.units.label.actualLang };
+const categoryNavigation = route === '/' || route === '/categories/';
+const layerNavigation = route === '/primitives/';
+const navigationTranslated = categoryNavigation ? catalog.categories.every((entry) => ['label', 'description'].every((path) => entry.units[path].status === 'reviewed')) : layerNavigation ? catalog.layers.every((entry) => entry.units.label.status === 'reviewed') : true;
+Astro.locals.lexiconPage = { rootPath: route, chineseIndexable: record ? record.coreTranslated : categoryRecord ? categoryRecord.coreTranslated : !resource && navigationTranslated, titleLanguage: record ? 'en' : categoryRecord ? locale === 'en' ? 'en' : categoryRecord.units.label.actualLang : undefined };
 const taxonomy = route === '/' || route === '/categories/' ? catalog.categories : route === '/primitives/' ? catalog.layers : [];
 const taxonomyCoverage = taxonomy.reduce((total, entry) => { for (const key of ['translated', 'total', 'missing', 'draft', 'stale'] as const) total[key] += entry.coverage[key]; return total; }, { translated: 0, total: 0, missing: 0, draft: 0, stale: 0 });
 const frontmatter = { ...Astro.props.frontmatter, title: ui(Astro.props.frontmatter.title), description: Astro.props.frontmatter.description ? ui(Astro.props.frontmatter.description) : undefined };

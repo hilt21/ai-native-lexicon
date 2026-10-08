@@ -80,6 +80,14 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       const identities = await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.dataset.searchIdentity)); assert.equal(identities.length, new Set(identities).size);
       for (const kind of ['concept', 'primitive', 'speaking-guide', 'skill-map', 'map-node', 'task-journey']) { await page.locator('#search-type').selectOption(kind); assert.ok(await page.locator('[data-search]:visible').count()); assert.ok((await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.dataset.searchType))).every((value) => value === kind)); }
     });
+    await check('Chinese guide core-idea match preserves its original English excerpt language', async () => {
+      const guide = catalog.speakingCards[0].data;
+      await page.goto(localeUrl(`search/?type=speaking-guide&q=${encodeURIComponent(guide.coreIdea)}`));
+      const row = page.locator(`[data-search-identity="speaking-guide:${guide.number}"]`);
+      assert.ok(await row.isVisible());
+      assert.equal(await row.locator('[data-match-context]').evaluate((element) => element.closest('[lang]')?.getAttribute('lang')), 'en');
+      assert.ok((await row.locator('[data-match-context]').textContent()).includes(guide.coreIdea.slice(0, 25)));
+    });
     await check('Pagefind executes separate real English and Chinese indexes including English fallback', async () => {
       async function search(prefix, query) {
         await page.goto(`${origin}/${prefix}search/`);
@@ -104,6 +112,11 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
         const internal = await page.locator('main a[href]').evaluateAll((links) => links.map((link) => link.getAttribute('href')).filter((href) => href.startsWith('/') && !href.endsWith('/dataset.json')));
         assert.ok(internal.every((href) => href.startsWith(`${base}/zh-cn/`) && !href.includes('/zh-cn/zh-cn/') && !href.includes(`${base}${base}`)), JSON.stringify(internal));
         const filename = `zh-cn-${route.replaceAll('/', '-') || 'home-'}${width}-${theme}.png`; await page.screenshot({ path: join(evidence, filename), fullPage: true, animations: 'disabled' });
+        if (route === '' || route === 'categories/' || route === 'primitives/') {
+          const eligible = route === 'primitives/' ? localized.layers.every((entry) => entry.units.label.status === 'reviewed') : localized.categories.every((entry) => ['label', 'description'].every((path) => entry.units[path].status === 'reviewed'));
+          assert.equal(await page.locator('meta[name=robots]').count(), eligible ? 0 : 1);
+          assert.equal(await page.locator('link[hreflang="zh-CN"]').count(), eligible ? 1 : 0);
+        }
         if (route === 'categories/context/') { const category = localized.categories.find((entry) => entry.id === 'context'); assert.equal(await page.locator('meta[name=robots]').count(), category.coreTranslated ? 0 : 1); assert.equal(await page.locator('h1').getAttribute('lang'), category.units.label.actualLang); }
         if (route === 'speaking-card/') { assert.equal(await page.locator('.speaking-card h2').first().getAttribute('lang'), 'en'); assert.ok(await page.locator('[data-resource-language-note]').isVisible()); }
         if (route === 'skill-maps/pstack/nodes/tdd/') { assert.equal(await page.locator('.map-summary').getAttribute('lang'), 'zh-Hans'); assert.equal(await page.locator('details p[lang="en"]').first().getAttribute('lang'), 'en'); assert.ok(await page.locator('[data-resource-language-note]').isVisible()); }

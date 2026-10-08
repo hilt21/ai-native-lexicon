@@ -5,7 +5,7 @@ import { join, resolve, sep } from 'node:path';
 import { chromium } from 'playwright';
 
 export async function verifyBrowser(directory, evidence, fixture) {
-  const { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId, audience, translations } = fixture;
+  const { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId, audience, translations, taxonomyOnly } = fixture;
   const root = resolve(directory, 'dist');
   const server = createServer(async (request, response) => {
     try {
@@ -33,6 +33,19 @@ export async function verifyBrowser(directory, evidence, fixture) {
         const page = await context.newPage();
         const errors = [];
         page.on('pageerror', (error) => errors.push(error.message));
+        if (taxonomyOnly) {
+          for (const theme of ['light','dark']) for (const route of ['', 'categories/', 'primitives/', `categories/${category.slug}/`]) {
+            await page.goto(`${url}/zh-cn/${route}`);
+            await page.evaluate((value) => { document.documentElement.dataset.theme=value; },theme);
+            assert.equal(await page.locator('meta[name="robots"]').count(),0);
+            assert.equal(await page.locator('link[hreflang="zh-CN"]').count(),1);
+            assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`https://hilt21.github.io${base}/zh-cn/${route}`);
+            await page.screenshot({path:join(evidence,`translation-reviewed-nav-${route.replaceAll('/','-') || 'home-'}${theme}-${width}.png`),fullPage:true,animations:'disabled'});
+          }
+          assert.deepEqual(errors,[]);
+          results.push({width,taxonomyReviewedNavigation:true,themes:['light','dark']});
+          continue;
+        }
         await page.goto(`${url}/search/?keep=fixture`);
         await page.waitForFunction(() => !!document.querySelector('#concept-search'));
         const input = page.locator('#concept-search');
@@ -277,6 +290,22 @@ export async function verifyBrowser(directory, evidence, fixture) {
           },{base});
           assert.ok(englishPagefind.some((entry)=>new URL(entry.url,url).pathname===`${base}/concepts/${conceptSlug}/`));
           assert.ok(englishPagefind.every((entry)=>!new URL(entry.url,url).pathname.startsWith(`${base}/zh-cn/`)));
+          for (const route of ['', 'categories/', 'primitives/']) {
+            await page.goto(`${url}/zh-cn/${route}`);
+            assert.equal(await page.locator('meta[name="robots"][content*="noindex"]').count(),1);
+            assert.equal(await page.locator('link[hreflang="zh-CN"]').count(),0);
+            assert.equal(await page.locator('link[rel="canonical"]').getAttribute('href'),`https://hilt21.github.io${base}/${route}`);
+          }
+          for (const [index,entry] of translations.taxonomyCases.categories.entries()) {
+            await page.goto(`${url}/zh-cn/categories/${entry.slug}/`);
+            assert.equal(await page.locator('meta[name="robots"][content*="noindex"]').count(),1);
+            assert.ok(Number(await page.locator('[data-translation-coverage]').getAttribute(`data-${['draft','stale','missing'][index]}`))>0);
+          }
+          await page.goto(`${url}/categories/${category.slug}/`);
+          assert.equal(await page.locator('h1').getAttribute('lang'),'en');
+          await page.goto(`${url}/zh-cn/categories/${category.slug}/`);
+          assert.equal(await page.locator('h1').getAttribute('lang'),'zh-CN');
+          assert.equal(await page.locator('meta[name="robots"]').count(),0);
           result.translations={themes:['light','dark'],actualLanguage:true,coreSEO:true,partialDraftStale:true,staleVectorsUnpublished:true,clipboard:true,referenceClipboard:true,selectorQueryAndFragment:true,fieldIdentity:true,fieldRestoration:true,pagefindLanguages:true,pagefindFallback:true,pagefindStaleAbsent:true};
         }
         assert.deepEqual(errors, []);

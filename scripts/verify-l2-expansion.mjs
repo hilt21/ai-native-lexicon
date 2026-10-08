@@ -118,7 +118,7 @@ function assertTranslationPolicy(source, route, indexable) {
     if (attrs.name === 'robots') robots.push(attrs.content);
     if ('data-translation-coverage' in attrs) coverage.push(attrs);
   });
-  assert.deepEqual(canonical, [`${origin}${base}/${indexable ? 'zh-cn/' : ''}${route}/`]);
+  assert.deepEqual(canonical, [`${origin}${base}/${indexable ? 'zh-cn/' : ''}${route}${route ? '/' : ''}`]);
   assert.equal(new Set(alternates.map((entry) => entry.hreflang)).size, alternates.length, 'hreflang must not duplicate');
   assert.equal(alternates.some((entry) => entry.hreflang === 'zh-CN'), indexable);
   assert.equal(robots.some((value) => value.includes('noindex')), !indexable);
@@ -201,6 +201,8 @@ try {
   const emptyLayers = await html('primitives');
   assert.ok(emptyLayers.includes(`id="${layer.anchor}"`));
   assert.match(emptyLayers.slice(emptyLayers.indexOf(`id="${layer.anchor}"`)), /0 primitives/);
+  for (const route of ['', 'categories', 'primitives']) assertTranslationPolicy(await html(`zh-cn/${route}`),route,false);
+  assertTranslationPolicy(await html(`zh-cn/categories/${category.slug}`),`categories/${category.slug}`,false);
   stage('empty category/layer and generated portable enums');
 
   const concept = { ...await yaml('src/data/concepts/verification.yaml'), examples: [{ context: 'A reader checks an isolated expansion.', example: 'The same definition is visible on the Concept and referenced Primitive.' }, { context: 'A reader checks an isolated expansion.', example: 'A second current example survives owner deletion.' }], distinguish_from: [{ target: 'verification', distinction: 'This fixture exercises projections rather than verification practice.' }], aliases: ['Quasar acceptance alias'], term: 'L2 Acceptance Concept', zh: '扩充验收概念', category: category.name, related: ['verification', 'evidence'], primitives: [primitiveSlug], why_it_matters: 'An isolated expansion exercises real canonical projections and their translation fallbacks. NebulaFallbackFixture is an untranslated fixture marker.', definition: 'An isolated acceptance concept verifies that configuration and canonical records produce consistent projections.' };
@@ -371,6 +373,10 @@ try {
     fixtureOverlay(fixtureCatalog,'concept','l2-stale-concept',{summary:'L2过期摘要不得发布',definition:'L2过期定义不得发布'}),
   ];
   for (const unit of overlays.at(-1).units) unit.source_fingerprint = 'sha256:'+'0'.repeat(64);
+  const taxonomyCases = { categories: fixtureCatalog.categories.filter((entry) => entry.slug !== category.slug).slice(0,3), layers: fixtureCatalog.layers.filter((entry) => entry.anchor !== layer.anchor).slice(0,3) };
+  for (const [index,entry] of fixtureCatalog.categories.entries()) if (entry.slug !== category.slug) overlays.push(fixtureOverlay(fixtureCatalog,'category',entry.slug,{label:`L2分类${index}`,description:`L2分类${index}的独立夹具说明。`,question:`L2分类${index}的夹具问题？`}));
+  for (const [index,entry] of fixtureCatalog.layers.entries()) if (entry.anchor !== layer.anchor) overlays.push(fixtureOverlay(fixtureCatalog,'layer',entry.anchor,{label:`L2层级${index}`}));
+
   const overlayPaths = overlays.map((overlay,index) => `${translationRoot}/${index}-${overlay.kind}.yaml`);
   for (const path of overlayPaths) assert.ok(!originalData.has(join(directory,path)), `Fixture translation file already exists: ${path}`);
   for (const [index,overlay] of overlays.entries()) {await save(overlayPaths[index],overlay); added.push(overlayPaths[index]);}
@@ -423,7 +429,15 @@ try {
     assertUnitLanguage(page,canonical.definition,'en');
     assert.ok(!page.includes('L2草稿定义不得发布') && !page.includes('L2过期定义不得发布'));
   }
+  for (const route of ['', 'categories', 'primitives']) assertTranslationPolicy(await html(`zh-cn/${route}`),route,true);
+  assertTranslationPolicy(await html(`zh-cn/categories/${category.slug}`),`categories/${category.slug}`,true);
+  assertUnitLanguage(await html(`categories/${category.slug}`),category.name,'en');
   report.translations = { reviewedFixtureOnly:true,coreSEO:true,partialDraftStale:true,exportShape:dataset.schema_version,datasetVersionUnchanged:translatedDataset.dataset_version,canonicalArraysUnchanged:true,llmsUnchanged:true };
+  if (browser) {
+    await mkdir(evidence,{recursive:true});
+    const {verifyBrowser} = await import('./verify-l2-browser.mjs');
+    report.translations.taxonomyReviewedBrowser = await verifyBrowser(directory,evidence,{base,category,taxonomyOnly:true});
+  }
   stage('reviewed/partial/draft/stale projections, actual language, core SEO and translation-only export invariance');
 
   // Unrelated metadata does not expire units; test this through the shared public resolver before restoring it.
@@ -468,8 +482,23 @@ try {
   primitive.definitions = [{concept:conceptSlug},{concept:referenceSlug},primitive.definitions[2]];
   primitive.considerations = primitive.considerations.slice(1);
   await save(conceptFile,concept); await save(primitiveFile,primitive);
+  for (const [kind,entries] of [['category',taxonomyCases.categories],['layer',taxonomyCases.layers]]) {
+    for (const [index,entry] of entries.entries()) {
+      const id = entry.slug ?? entry.anchor, overlayIndex = overlays.findIndex((overlay) => overlay.kind === kind && overlay.target_id === id);
+      const overlay = overlays[overlayIndex];
+      if (index === 0) { overlay.units[0].review_status = 'draft'; delete overlay.units[0].reviewed_at; await save(overlayPaths[overlayIndex],overlay); }
+      else if (index === 1) { overlay.units[0].source_fingerprint = 'sha256:'+'0'.repeat(64); await save(overlayPaths[overlayIndex],overlay); }
+      else await rm(join(directory,overlayPaths[overlayIndex]));
+    }
+  }
   assert.deepEqual((await publicCatalog()).errors,[]);
   await npm(['run','build']);
+  for (const route of ['', 'categories', 'primitives']) assertTranslationPolicy(await html(`zh-cn/${route}`),route,false);
+  for (const [index,entry] of taxonomyCases.categories.entries()) {
+    const coverage = assertTranslationPolicy(await html(`zh-cn/categories/${entry.slug}`),`categories/${entry.slug}`,false);
+    assert.ok(Number(coverage[`data-${['draft','stale','missing'][index]}`]) > 0);
+  }
+  report.translations.taxonomyNavigation = { missingNoOverlay:true, reviewedIndexable:true, draftStaleMissingNoindex:true, englishTitleLanguage:true };
   const mutatedConcept = await html(`zh-cn/concepts/${conceptSlug}`), mutatedPrimitive = await html(`zh-cn/primitives/${primitiveSlug}`);
   assertTranslationPolicy(mutatedConcept,`concepts/${conceptSlug}`,true);
   assertTranslationPolicy(mutatedPrimitive,`primitives/${primitiveSlug}`,true);
@@ -491,14 +520,14 @@ try {
   if (browser) {
     await mkdir(evidence, { recursive: true });
     const { verifyBrowser } = await import('./verify-l2-browser.mjs');
-    report.browserResult = await verifyBrowser(directory, evidence, { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId: 'l2-acceptance-map', audience, translations: { ...fixtureTranslations,referenceConcept,referenceSlug,retiredText } });
+    report.browserResult = await verifyBrowser(directory, evidence, { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId: 'l2-acceptance-map', audience, translations: { ...fixtureTranslations,referenceConcept,referenceSlug,retiredText,taxonomyCases } });
     report.viewports = report.browserResult.viewports;
     stage('real browser search, disclosure, relationship navigation and overflow');
   }
   // Restore copied formal overlay bytes before checking every original input.
   if (hadTranslations) await cp(savedTranslations, translationInputRoot, { recursive: true });
   for (const [file, source] of originalData) assert.equal(await readFile(file, 'utf8'), source, file);
-  for (const path of added) await rm(join(directory, path));
+  for (const path of added) await rm(join(directory, path), { force: true });
   await rm(join(directory,translationRoot),{recursive:true});
   assert.equal(await digest(join(directory, 'src')), sourceBefore, 'Expansion must not edit source or existing data');
   assert.equal(await digest(join(repository, 'src/data')), canonicalBefore, 'Formal data must remain unchanged');
