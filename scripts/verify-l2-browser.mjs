@@ -5,7 +5,7 @@ import { join, resolve, sep } from 'node:path';
 import { chromium } from 'playwright';
 
 export async function verifyBrowser(directory, evidence, fixture) {
-  const { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor } = fixture;
+  const { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId } = fixture;
   const root = resolve(directory, 'dist');
   const server = createServer(async (request, response) => {
     try {
@@ -14,7 +14,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
       const path = resolve(root, pathname.slice(base.length + 1));
       if (!path.startsWith(`${root}${sep}`) && path !== root) { response.writeHead(404).end(); return; }
       const file = pathname.endsWith('/') ? join(path, 'index.html') : path;
-      const contentType = file.endsWith('.html') ? 'text/html' : file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : 'application/octet-stream';
+      const contentType = file.endsWith('.html') ? 'text/html' : file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : file.endsWith('.json') ? 'application/json' : file.endsWith('.wasm') ? 'application/wasm' : 'application/octet-stream';
       const content = await readFile(file);
       response.writeHead(200, { 'Content-Type': contentType }); response.end(content);
     } catch { response.writeHead(404).end(); }
@@ -49,12 +49,38 @@ export async function verifyBrowser(directory, evidence, fixture) {
           if ([primitive.term, primitive.zh].includes(query)) await page.locator(`[data-search][href="${base}/primitives/#${primitiveSlug}"]`).waitFor({ state: 'visible' });
           await overflow(query); result.queries.push(query);
         }
+        await input.fill(concept.aliases[0]);
+        const conceptRow = page.locator(`[data-search][href="${base}/concepts/${conceptSlug}/"]`);
+        assert.equal(await page.locator('[data-search]:visible').count(), 1);
+        assert.match(await conceptRow.locator('[data-match-label]').textContent(), /Aliases/);
+        await input.fill('Quasar');
+        assert.deepEqual(await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.getAttribute('href'))), [
+          `${base}/skill-maps/${mapId}/`, `${base}/skill-maps/${mapId}/journeys/journey/`, `${base}/skill-maps/${mapId}/nodes/node/`,
+          `${base}/concepts/${conceptSlug}/`, `${base}/speaking-card/#${anchor}`, `${base}/primitives/#${primitiveSlug}`, `${base}/skill-maps/${mapId}/nodes/retired/`,
+        ]);
+        assert.match(await page.locator(`[data-search][href="${base}/skill-maps/${mapId}/nodes/retired/"]`).textContent(), /Retired/);
+        const type = page.locator('#search-type');
+        for (const kind of ['concept', 'primitive', 'speaking-guide', 'skill-map', 'map-node', 'task-journey']) {
+          await type.selectOption(kind);
+          const visible = await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.dataset.searchType));
+          assert.equal(visible.length, kind === 'map-node' ? 2 : 1);
+          assert.ok(visible.every((actual) => actual === kind));
+          assert.equal(await page.locator('#search-count').textContent(), `${visible.length} matching ${visible.length === 1 ? 'entry' : 'entries'}`);
+        }
+        await type.selectOption('');
         await input.fill('zzzz-no-acceptance-match');
         await page.locator('#search-empty').waitFor({ state: 'visible' });
         assert.equal(await page.locator('[data-search]:visible').count(), 0);
-        await input.fill('');
+        await page.locator('#search-clear').click();
         await page.waitForFunction((total) => document.querySelector('#search-count').textContent === `Showing all ${total} entries`, total);
         assert.equal(await page.locator('[data-search]:visible').count(), total);
+        const pagefind = await page.evaluate(async () => {
+          const index = await import(`${location.origin}${location.pathname.split('/search/')[0]}/pagefind/pagefind.js`);
+          const result = await index.search('Quasar');
+          return Promise.all(result.results.map((record) => record.data()));
+        });
+        assert.ok(pagefind.some((record) => new URL(record.url, url).pathname.includes(`/skill-maps/${mapId}/`)), 'Pagefind indexes the actual added map pages');
+        result.pagefind = true;
         await input.fill(guide.title);
         await guideLink.waitFor({ state: 'visible' });
         await page.screenshot({ path: join(evidence, `search-${width}.png`), fullPage: true });
@@ -86,6 +112,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
         await overflow('category and backlink navigation');
         assert.deepEqual(errors, []);
         result.navigation = ['search→guide', 'guide→concept', 'concept→primitive', 'primitive→layer', 'category→concept', 'concept→guide'];
+        result.aliases = true; result.sixTypes = true; result.ranking = true; result.retired = true;
         result.clear = true; result.noResults = true; result.notes = true; result.overflow = false;
         results.push(result);
       } finally { await context.close(); }

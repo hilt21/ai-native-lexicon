@@ -3,11 +3,12 @@ import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { cp, mkdir, mkdtemp, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join, relative } from 'node:path';
+import { dirname, join, relative } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse as parseHtml } from 'parse5';
 import { parse, stringify } from 'yaml';
+import { mapInput, nodeInput } from '../tests/skill-map-fixture.mjs';
 
 const run = promisify(execFile);
 const repository = fileURLToPath(new URL('../', import.meta.url));
@@ -139,11 +140,17 @@ try {
   assert.match(emptyLayers.slice(emptyLayers.indexOf(`id="${layer.anchor}"`)), /0 primitives/);
   stage('empty category/layer and generated portable enums');
 
-  const concept = { ...await yaml('src/data/concepts/verification.yaml'), term: 'L2 Acceptance Concept', zh: '扩充验收概念', category: category.name, related: ['verification', 'evidence'], primitives: [primitiveSlug], definition: 'An isolated acceptance concept verifies that configuration and canonical records produce consistent projections.' };
-  const primitive = { ...await yaml('src/data/primitives/state.yaml'), term: 'L2 Acceptance Primitive', zh: '扩充验收原语', layer: layer.name, definitions: [{ concept: conceptSlug }], related: ['state'] };
+  const concept = { aliases: ['Quasar acceptance alias'], ...await yaml('src/data/concepts/verification.yaml'), term: 'L2 Acceptance Concept', zh: '扩充验收概念', category: category.name, related: ['verification', 'evidence'], primitives: [primitiveSlug], definition: 'An isolated acceptance concept verifies that configuration and canonical records produce consistent projections.' };
+  const primitive = { ...await yaml('src/data/primitives/state.yaml'), summary: 'Quasar acceptance verifies the canonical catalog across fields, typed filters and public projections.', term: 'L2 Acceptance Primitive', zh: '扩充验收原语', layer: layer.name, definitions: [{ concept: conceptSlug }], related: ['state'] };
   const guide = { ...await yaml('src/data/speaking-cards/card-01.yaml'), number: Math.max(...baselineDataset.speaking_cards.map(({ number }) => number)) + 7, title: 'L2 Acceptance Guide', coreIdea: 'Quasar acceptance connects new canonical content and taxonomy to every projection.', concepts: [conceptSlug], primitives: [primitiveSlug] };
   const anchor = `card-${String(guide.number).padStart(2, '0')}`;
   await save(conceptFile, concept); await save(primitiveFile, primitive); await save(cardFile, guide);
+  const mapRoot = 'src/data/skill-maps/l2-acceptance-map';
+  const acceptanceMap = { ...mapInput, title: 'Quasar', summary: 'Quasar acceptance map.' };
+  const acceptanceNode = { ...nodeInput, title: 'Quasar Node', summary: 'Quasar acceptance capability.' };
+  const acceptanceJourney = { title: 'Quasar Journey', summary: 'Quasar acceptance guidance.', when_to_use: ['Validate canonical projections.'], outputs: ['A checked catalog.'], variants: [{ id: 'normal', title: 'Validate', steps: [{ title: 'Read', why: 'Inspect canonical inputs.', nodes: ['node'] }] }] };
+  const mapFiles = [[`${mapRoot}/map.yaml`, acceptanceMap], [`${mapRoot}/relations.yaml`, { relations: [] }], [`${mapRoot}/nodes/node.yaml`, acceptanceNode], [`${mapRoot}/nodes/retired.yaml`, { title: 'Retained Quasar Node', summary: 'A retained capability.', type: 'tool', status: 'retired', retirement_note: 'Use the current capability.' }], [`${mapRoot}/journeys/journey.yaml`, acceptanceJourney]];
+  for (const [path, data] of mapFiles) { assert.ok(!originalData.has(join(directory, path)), path); await mkdir(dirname(join(directory, path)), { recursive: true }); await save(path, data); added.push(path); }
   const { stdout: boundaryOutput } = await run(process.execPath, ['--input-type=module', '-e', `
     import assert from 'node:assert/strict';
     import { readFile } from 'node:fs/promises';
@@ -170,7 +177,7 @@ try {
     for (const record of baselineDataset[type]) assert.deepEqual(dataset[type].find((entry) => type === 'speaking_cards' ? entry.number === record.number : entry.slug === record.slug), record);
   }
   assert.deepEqual(dataset.speaking_cards.find(({ number }) => number === guide.number), guide);
-  assert.deepEqual(dataset.concepts.find(({ slug }) => slug === conceptSlug), { slug: conceptSlug, ...concept, added: `${concept.added}T00:00:00.000Z` });
+  assert.deepEqual(dataset.concepts.find(({ slug }) => slug === conceptSlug), { slug: conceptSlug, aliases: [], ...concept, added: `${concept.added}T00:00:00.000Z` });
   assert.deepEqual(dataset.primitives.find(({ slug }) => slug === primitiveSlug), { slug: primitiveSlug, ...primitive, added: `${primitive.added}T00:00:00.000Z` });
   assert.ok((await html('concepts')).includes(`${base}/concepts/${conceptSlug}/`));
   for (const path of ['', 'categories']) assert.ok((await html(path)).includes(`${base}/categories/${category.slug}/`), `${path}: new category entry`);
@@ -211,10 +218,17 @@ try {
     assert.ok(expanded.get('primitives/index.html').ids.has(anchor));
   }
   report.routes = { baseline: baseline.size, expanded: expanded.size, baselineLinks, expandedLinks: await checkLinks(expanded) };
+  assert.equal(dataset.schema_version, '1.3.0');
+  assert.deepEqual(dataset.concepts.find(({ slug }) => slug === conceptSlug).aliases, ['Quasar acceptance alias']);
+  assert.equal(dataset.counts.skill_maps, baselineDataset.skill_maps.length + 1);
+  assert.equal(dataset.skill_maps.find(({ id }) => id === 'l2-acceptance-map').nodes.find(({ id }) => id === 'retired').status, 'retired');
   stage('complete content, relationships, projections and preserved public targets');
 
   for (const [file, changed, expected] of [
     [conceptFile, { ...concept, category: 'Unconfigured Domain' }, /category/],
+    [conceptFile, { ...concept, aliases: [' '] }, /aliases/],
+    [conceptFile, { ...concept, aliases: [concept.term] }, /aliases/],
+    [conceptFile, { ...concept, aliases: ['Alias', ' alias '] }, /aliases/],
     [primitiveFile, { ...primitive, layer: 'Unconfigured Layer' }, /layer/],
     [cardFile, { ...guide, concepts: ['missing-concept'] }, /missing-concept/],
     [cardFile, { ...guide, primitives: ['missing-primitive'] }, /missing-primitive/],
@@ -242,7 +256,7 @@ try {
   if (browser) {
     await mkdir(evidence, { recursive: true });
     const { verifyBrowser } = await import('./verify-l2-browser.mjs');
-    report.browserResult = await verifyBrowser(directory, evidence, { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor });
+    report.browserResult = await verifyBrowser(directory, evidence, { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId: 'l2-acceptance-map' });
     report.viewports = report.browserResult.viewports;
     stage('real browser search, disclosure, relationship navigation and overflow');
   }

@@ -79,3 +79,24 @@ test('portable schemas generate deterministically and drift-check only reads fil
   await run(process.execPath, [script, 'check', directory]);
   assert.deepEqual(await Promise.all(files.map((file) => readFile(join(directory, file), 'utf8'))), first);
 });
+
+
+test('independent Concept YAML accepts aliases, preserves defaults and rejects ambiguous aliases', async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), 'lexicon-aliases-'));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  await cp(new URL('../src/data/', import.meta.url), directory, { recursive: true });
+  const file = join(directory, 'concepts/context.yaml');
+  const original = parse(await readFile(file, 'utf8'));
+  await writeFile(file, stringify({ ...original, aliases: ['Prompt Context', 'Working Context'] }));
+  const accepted = await readCatalog(directory);
+  assert.deepEqual(validateCatalog(accepted).errors, []);
+  assert.deepEqual(accepted.concepts.find(({ slug }) => slug === 'context').data.aliases, ['Prompt Context', 'Working Context']);
+  for (const aliases of [[''], ['  '], ['Working Context', 'Working Context'], ['Working Context', ' working context '], [original.term], [original.term.toUpperCase()], [original.zh]]) {
+    await writeFile(file, stringify({ ...original, aliases }));
+    assert.match(validateCatalog(await readCatalog(directory)).errors.join('\n'), /aliases/, JSON.stringify(aliases));
+  }
+  await writeFile(file, stringify(original));
+  const legacy = await readCatalog(directory);
+  assert.deepEqual(validateCatalog(legacy).errors, []);
+  assert.deepEqual(legacy.concepts.find(({ slug }) => slug === 'context').data.aliases, []);
+});

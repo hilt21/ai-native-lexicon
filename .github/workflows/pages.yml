@@ -37,7 +37,7 @@ jobs:
       - name: Verify isolated extension regressions
         run: npm run test:extension
       - name: Verify complete L2 expansion
-        run: npm run test:l2
+        run: npm run test:l2 -- --browser
       - name: Build site
         run: npm run build
       - name: Verify production browser behavior
@@ -47,7 +47,9 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: web-browser-evidence
-          path: work/web-browser
+          path: |
+            work/web-browser
+            output/playwright/l2-10
           if-no-files-found: warn
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
