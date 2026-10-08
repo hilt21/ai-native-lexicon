@@ -13,6 +13,27 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
   const localeUrl = (path) => `${origin}/zh-cn/${path}`;
   const errors = []; page.on('pageerror', (error) => errors.push(error.message));
   try {
+    await check('mobile splash exposes native language and theme controls with query/fragment round-trip', async () => {
+      await page.setViewportSize({ width: 390, height: 960 });
+      await page.goto(`${origin}/?q=harness&type=concept&keep=1#lexicon-content`);
+      const theme = page.locator('starlight-theme-select select:visible');
+      const language = page.locator('lexicon-language-select select:visible');
+      assert.equal(await theme.count(), 1); assert.equal(await language.count(), 1);
+      await language.focus(); assert.ok(await language.evaluate((element) => element === document.activeElement));
+      await theme.selectOption('dark'); assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+      await language.selectOption(`${base}/zh-cn/`);
+      await page.waitForURL(`${origin}/zh-cn/?q=harness&type=concept&keep=1#lexicon-content`);
+      assert.equal(await page.locator('html').getAttribute('lang'), 'zh-CN');
+      assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+      assert.equal(await page.locator('#lexicon-content').count(), 1);
+      await theme.selectOption('light');
+      await language.selectOption(`${base}/`);
+      await page.waitForURL(`${origin}/?q=harness&type=concept&keep=1#lexicon-content`);
+      assert.equal(await page.locator('html').getAttribute('lang'), 'en');
+      assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
+      await page.setViewportSize({ width: 1440, height: 960 });
+      assert.equal(await language.count(), 1); assert.equal(await theme.count(), 1);
+    });
     await check('bilingual shared records, unit languages, reference definition, Copy and core SEO', async () => {
       for (const [kind, records, ids] of [['concepts', localized.concepts, ['context-engineering', 'harness', 'mcp']], ['primitives', localized.primitives, ['harness', 'state']]]) {
         for (const id of ids) {
