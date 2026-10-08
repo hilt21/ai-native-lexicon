@@ -396,7 +396,7 @@ test('adding category YAML publishes an empty route and then its first Concept w
       const html = await readFile(join(directory, file), 'utf8');
       assert.ok(html.includes(`href="${route}"`));
       const count = String(categoryRegistry.length + 1).padStart(2, '0');
-      if (file === 'dist/index.html') assert.match(html, new RegExp(`<strong>${count}</strong>\\s*<span>domains of practice</span>`));
+      if (file === 'dist/index.html') assert.match(html, new RegExp(`<strong(?:\\s[^>]*)?>${count}</strong>\\s*<span(?:\\s[^>]*)?>domains of practice</span>`));
       else assert.ok(html.includes(`${count} DOMAINS OF PRACTICE`));
       const links = [...html.matchAll(/href="\/ai-native-lexicon\/categories\/([^/"\s]+)\/"/g)].map((match) => match[1]);
       assert.deepEqual(links, [...categoryRegistry.map(({ slug }) => slug), category.slug]);
