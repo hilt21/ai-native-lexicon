@@ -3,7 +3,7 @@ import { execFile } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { cp, mkdir, mkdtemp, readFile, readdir, rename, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { dirname, join, relative } from 'node:path';
+import { dirname, join, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse as parseHtml } from 'parse5';
@@ -17,7 +17,7 @@ const base = '/ai-native-lexicon';
 const origin = 'https://hilt21.github.io';
 const browser = process.argv.includes('--browser');
 assert.ok(process.argv.slice(2).every((arg) => arg === '--browser'), 'Only --browser is supported');
-const evidence = join(repository, 'output/playwright/l2-10');
+const evidence = resolve(process.env.L2_EVIDENCE ?? join(repository, 'output/playwright/l2-10'));
 const directory = await mkdtemp(join(tmpdir(), 'lexicon-l2-acceptance-'));
 const report = { base, browser, stages: [], viewports: [] };
 
@@ -476,7 +476,7 @@ try {
 
   // Positional mutation retains historical overlay bytes: stale vectors must never reach any display projection.
   const referenceSlug = 'l2-reference-branch-concept', referenceFile = `src/data/concepts/${referenceSlug}.yaml`;
-  const referenceConcept = {...concept,term:'L2 Reference Branch Concept',zh:'夹具引用分支概念',aliases:[],examples:[],distinguish_from:[],definition:'ReferenceBranchFixture is the current English referenced definition.'};
+  const referenceConcept = {...concept,term:'L2 Reference Branch Concept',zh:'夹具引用分支概念',aliases:[],examples:[],distinguish_from:[],definition:'ReferenceBranchFixture is the current English referenced definition. The Primitive resolves this Concept at the shared catalog boundary without maintaining a duplicate definition.'};
   await save(referenceFile,referenceConcept); added.push(referenceFile);
   concept.examples = concept.examples.slice(1); concept.distinguish_from = [];
   primitive.definitions = [{concept:conceptSlug},{concept:referenceSlug},primitive.definitions[2]];
