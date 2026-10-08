@@ -91,12 +91,18 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
     await check('Pagefind executes separate real English and Chinese indexes including English fallback', async () => {
       async function search(prefix, query) {
         await page.goto(`${origin}/${prefix}search/`);
-        return page.evaluate(async ({ base, query }) => { const pagefind = await import(`${base}/pagefind/pagefind.js`); const result = await pagefind.search(query); return Promise.all(result.results.map(async (item) => { const data = await item.data(); return { url: data.url, excerpt: data.excerpt }; })); }, { base, query });
+        return page.evaluate(async ({ base, query }) => { const pagefind = await import(`${base}/pagefind/pagefind.js`); const result = await pagefind.search(query); return Promise.all(result.results.map(async (item) => { const data = await item.data(); return { url: data.url, excerpt: data.excerpt, content: data.content }; })); }, { base, query });
       }
-      const chinese = await search('zh-cn/', '上下文工程'); assert.ok(chinese.length); assert.ok(chinese.every((item) => item.url.includes('/zh-cn/')), JSON.stringify(chinese)); assert.ok(chinese.some((item) => item.url.includes('/concepts/context-engineering/')));
+      const chinese = await search('zh-cn/', '上下文工程'); assert.ok(chinese.length); assert.ok(chinese.every((item) => item.url.includes('/zh-cn/')), JSON.stringify(chinese));
+      // Native Chinese segmentation can prefer a directory's complete token over a detail's split tokens.
+      // Prove the accepted Chinese definition itself is indexed, independently of that alias query.
+      const translatedBody = await search('zh-cn/', '最小信息集');
+      const pilot = translatedBody.find((item) => item.url.includes('/zh-cn/concepts/context-engineering/'));
+      assert.ok(pilot, JSON.stringify(translatedBody));
+      assert.ok(pilot.content.includes(localized.concepts.find((record) => record.id === 'context-engineering').data.definition));
       const fallback = await search('zh-cn/', 'protocol'); assert.ok(fallback.some((item) => item.url.includes('/zh-cn/concepts/mcp/')), JSON.stringify(fallback));
       const english = await search('', 'protocol'); assert.ok(english.length); assert.ok(english.every((item) => !item.url.includes('/zh-cn/')), JSON.stringify(english));
-      report.checks.push({ name: 'actual Pagefind localized result targets', chinese, fallback, english, passed: true });
+      report.checks.push({ name: 'actual Pagefind localized result targets', chinese, translatedBody, fallback, english, passed: true });
     });
     await check('Chinese native header search dialog keyboard and punctuation', async () => {
       await page.goto(localeUrl('search/')); await page.keyboard.press('Control+k'); const dialog = page.locator('dialog'); await dialog.waitFor({ state: 'visible' });
