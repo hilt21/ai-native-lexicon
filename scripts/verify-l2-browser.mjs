@@ -245,9 +245,17 @@ export async function verifyBrowser(directory, evidence, fixture) {
             assert.ok(!(await page.locator('main').innerText()).includes('L2过期定义不得发布'));
           }
           await page.goto(`${chineseConcept}?q=HanOverlayFixture&type=concept#_top`);
-          await page.locator('lexicon-language-select select:visible').first().selectOption(`${base}/concepts/${conceptSlug}/`);
+          async function selectLanguage(target) {
+            const select=page.locator('lexicon-language-select select:visible').first();
+            if (!(await select.count())) {
+              await page.locator('starlight-menu-button button').click();
+              assert.equal(await page.locator('starlight-menu-button').getAttribute('aria-expanded'),'true');
+            }
+            await select.selectOption(target);
+          }
+          await selectLanguage(`${base}/concepts/${conceptSlug}/`);
           await page.waitForURL(`${url}/concepts/${conceptSlug}/?q=HanOverlayFixture&type=concept#_top`);
-          await page.locator('lexicon-language-select select:visible').first().selectOption(`${base}/zh-cn/concepts/${conceptSlug}/`);
+          await selectLanguage(`${base}/zh-cn/concepts/${conceptSlug}/`);
           await page.waitForURL(`${chineseConcept}?q=HanOverlayFixture&type=concept#_top`);
           assert.equal(await page.locator('[data-definition-body]').innerText(),translations.conceptDefinition);
 
