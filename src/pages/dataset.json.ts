@@ -22,7 +22,7 @@ export async function GET() {
         name: 'AI Native Lexicon',
         description: 'An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.',
         version: '0.2.0',
-        schema_version: '1.2.0',
+        schema_version: '1.3.0',
         dataset_version: createDatasetVersion({ ...records, taxonomy: { categories: categoryRegistry, layers: layerRegistry } }),
         counts: { concepts: concepts.length, primitives: primitives.length, speaking_cards: speakingCards.length, skill_maps: maps.length },
         license: 'CC BY 4.0',

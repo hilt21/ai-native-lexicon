@@ -1,5 +1,10 @@
 ---
+import type { SearchField, SearchKind } from '../lib/field-search';
+
 interface Props {
+  searchIdentity?: string;
+  searchType?: SearchKind;
+  searchFields?: SearchField[];
   titleLanguage?: string;
   summaryLanguage?: string;
   secondaryParts?: { text: string; lang?: string }[];
@@ -13,17 +18,22 @@ interface Props {
   showMarker?: boolean;
 }
 
-const { titleLanguage, summaryLanguage, secondaryParts, href, title, secondary, marker, summary, searchText, number, showMarker = true } = Astro.props;
+const { searchIdentity, searchType, searchFields, titleLanguage, summaryLanguage, secondaryParts, href, title, secondary, marker, summary, searchText, number, showMarker = true } = Astro.props;
 ---
 
 <a
-  class:list={['concept-row', { 'concept-row-unclassified': !showMarker, 'concept-row-search': number === undefined }]}
+  class:list={['concept-row', { 'concept-row-unclassified': !showMarker, 'concept-row-search': number === undefined, 'catalog-search-row': !!searchFields }]}
   href={href}
   data-search={searchText}
+  data-search-identity={searchIdentity}
+  data-search-type={searchType}
+  data-search-title={searchFields ? title : undefined}
+  data-search-fields={searchFields ? JSON.stringify(searchFields) : undefined}
 >
   {number !== undefined && <span class="concept-number">{number}</span>}
   <span class="concept-name"><strong lang={titleLanguage}>{title}</strong><span>{secondaryParts ? secondaryParts.map((part) => <span lang={part.lang}>{part.text}</span>) : secondary}</span></span>
   {showMarker && <span class="concept-category">{marker}</span>}
   <span class="concept-summary" lang={summaryLanguage}>{summary}</span>
+  {searchFields && <span class="search-match" hidden><span data-match-label></span><span data-match-context></span></span>}
   <span class="concept-arrow" aria-hidden="true">↗</span>
 </a>

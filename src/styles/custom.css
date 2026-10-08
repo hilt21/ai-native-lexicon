@@ -220,3 +220,20 @@ main h1 { font-family: var(--lex-font-display); line-height: 1.08; letter-spacin
 .map-summary { display: block; width: min(100%, var(--lex-reading-width)); max-width: 100%; }
 
 .map-filters input::placeholder { color: var(--lex-muted); opacity: 1; }
+
+/* Catalog search keeps kind labels distinct from editorial metadata. */
+.search-controls { display: flex; flex-wrap: wrap; align-items: end; gap: var(--lex-space-4); margin-top: var(--lex-space-6); }
+.search-controls label { display: flex; flex-direction: column; gap: var(--lex-space-2); margin: 0; letter-spacing: normal; text-transform: none; }
+.search-controls select, .search-controls button { min-height: var(--lex-control-height); max-width: 100%; padding: var(--lex-space-2) var(--lex-space-3); border: 1px solid var(--lex-control-border); background: var(--lex-paper); color: var(--lex-ink); border-radius: var(--lex-radius-control); font: inherit; }
+.catalog-search-row { grid-template-columns: 7.5rem minmax(0, 1fr) minmax(0, 1.3fr) 1rem; }
+.catalog-search-row .concept-category { white-space: normal; font-size: var(--lex-text-small); }
+.search-match { grid-column: 2 / 4; color: var(--lex-muted); font-size: var(--lex-text-small); line-height: var(--lex-leading-body); }
+.search-match [data-match-label], .search-match [data-match-context] { display: block; }
+.search-match [data-match-label] { font-weight: 700; }
+.search-match[hidden] { display: none; }
+@container (max-width: 40rem) {
+  .catalog-search-row { grid-template-columns: minmax(0, 1fr) 1rem; }
+  .catalog-search-row .search-match { grid-column: 1; }
+}
+
+.search-controls select:focus-visible, .search-controls button:focus-visible { outline: 2px solid var(--lex-focus); outline-offset: 3px; }

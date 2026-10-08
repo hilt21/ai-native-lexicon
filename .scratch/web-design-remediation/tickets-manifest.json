@@ -1,0 +1,78 @@
+{
+  "status": "published",
+  "parent_spec": "https://github.com/hilt21/ai-native-lexicon/issues/31",
+  "parent_spec_body_sha256": "da6130812dd80c7df73d24fa62b2bb60fb22c2ac2beac852af0602de53eabe9d",
+  "minimum_ticket_invariant": true,
+  "ticket_count": 1,
+  "tickets": [
+    {
+      "id": "WEB-01",
+      "title": "端到端修复网页审查问题，交付稳定检索、可读地图与语言投影",
+      "path": "issues/01-web-design-remediation.md",
+      "blocked_by": [],
+      "publication_label": "ready-for-agent",
+      "published": true,
+      "issue_url": "https://github.com/hilt21/ai-native-lexicon/issues/32",
+      "required_requirements": [
+        "R01",
+        "R02",
+        "R03",
+        "R04",
+        "R05",
+        "R06",
+        "R07",
+        "R08",
+        "R09"
+      ],
+      "acceptance_ids": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "A07",
+        "A08",
+        "A09",
+        "A10",
+        "A11",
+        "A12",
+        "A13",
+        "A14",
+        "A15",
+        "A16",
+        "A17",
+        "A18",
+        "A19",
+        "A20",
+        "A21",
+        "A22",
+        "A23",
+        "A24",
+        "A25",
+        "A26",
+        "A27",
+        "A28"
+      ],
+      "issue_number": 32,
+      "state": "OPEN",
+      "labels": [
+        "ready-for-agent"
+      ],
+      "published_body_verified": true,
+      "local_body_sha256": "057cc59b78cc421076a5091b59c71e0fd932f3ff0cc42ce0c8a24fb3b1bed286",
+      "remote_body_sha256": "057cc59b78cc421076a5091b59c71e0fd932f3ff0cc42ce0c8a24fb3b1bed286"
+    }
+  ],
+  "dag": {
+    "nodes": [
+      "WEB-01"
+    ],
+    "edges": []
+  },
+  "implementation_started": false,
+  "parent_mutated": false,
+  "publication_approved": true,
+  "publication_date": "2026-10-07",
+  "parent_verified_unchanged": true
+}

@@ -9,7 +9,7 @@ Speaking Guide identity is its positive `number`. Its canonical page target is `
 | Field | Meaning |
 | --- | --- |
 | `version` | Retained legacy edition metadata, currently `0.2.0`; existing consumers may continue reading it. |
-| `schema_version` | Version of the dataset export shape, currently `1.2.0`, adding optional Skill Map text language annotations while retaining previous arrays/fields and version/count metadata. Change deliberately when the export contract changes. |
+| `schema_version` | Version of the dataset export shape, currently `1.3.0`, adding Concept `aliases` (default `[]`) while retaining Skill Map text language annotations, previous arrays/fields and version/count metadata. Change deliberately when the export contract changes. |
 | `dataset_version` | `sha256:` digest of normalized formal content and both taxonomy configurations. It identifies content, independently of export time or deployment location. |
 | `generated_at` | UTC build timestamp. A new build may change it even when content is identical. |
 | `counts` | Actual array lengths keyed by `concepts`, `primitives`, `speaking_cards`, `skill_maps`. |
@@ -18,14 +18,20 @@ The digest uses all validated record fields and category/layer metadata, sorts c
 
 `llms.txt` retains its Concept and Primitive sections and appends Speaking Guide title/core idea links with the deployment base and stable card anchor. The custom `/search/` reads the same collection and searches Guide titles, core ideas and referenced Concept/Primitive names (English/Chinese) and slugs.
 
-After adding a valid Guide YAML, run `npm run check`, `npm test`, `npm run build` and `npm run test:extension`. No manual search/export index is maintained. Schema rule changes additionally require `npm run schema:generate`; `npm run schema:check` only detects drift. Skill Map knowledge mappings remain a future contract and are not exported in 1.2.0.
+After adding a valid Guide YAML, run `npm run check`, `npm test`, `npm run build` and `npm run test:extension`. No manual search/export index is maintained. Schema rule changes additionally require `npm run schema:generate`; `npm run schema:check` only detects drift. Skill Map knowledge mappings remain a future contract and are not exported in 1.3.0.
 
 ## Skill Map projections
 
-`skill_maps` contains assembled map records with id, metadata, taxonomy, nodes, journeys and a single relationship table. Public identities use map/node/journey filename slugs. Map input editions 1.0.0 (unannotated) and 1.1.0 (language-aware) are distinct from dataset export shape 1.2.0. Optional `text_languages` dictionaries remain at Map/Node/Journey positions; absent hints remain absent. Existing Concept/Primitive/Guide fields and date/identity semantics remain unchanged. Retired records remain exported; individual source references pin commits even after the current source changes.
+`skill_maps` contains assembled map records with id, metadata, taxonomy, nodes, journeys and a single relationship table. Public identities use map/node/journey filename slugs. Map input editions 1.0.0 (unannotated) and 1.1.0 (language-aware) are distinct from dataset export shape 1.3.0. Optional `text_languages` dictionaries remain at Map/Node/Journey positions; absent hints remain absent. Existing Concept/Primitive/Guide fields and date/identity semantics remain unchanged. Retired records remain exported; individual source references pin commits even after the current source changes.
 
 Normalization sorts maps/nodes/journeys by ID, relations by `(from,type,to)`, sources by ID, source_refs by `(source,path)`, tags/secondary_clusters as sets. Taxonomy/current_sources/variants/steps and explanatory arrays preserve editorial order. Map content and taxonomy participate in dataset_version; generated_at, base/site and derived URLs do not. Changes to semantic step order change the digest, while file discovery or unordered relation order does not.
 
 Search includes maps, nodes and journeys with their owner and marks retired entries. llms.txt adds map links and current source version/verification status; full records are available in dataset.json. No manual index, knowledge_refs or knowledge backlink projection is maintained.
 
 Language dictionary keys are sorted deterministically. Annotation values participate in `dataset_version`; key enumeration order does not. When unordered node tags are normalized, `tags.N` annotations follow their original tag strings to the sorted indexes. Other prose arrays retain editorial order. Language hints do not change `llms.txt`, source snapshots or legacy `version: 0.2.0`.
+
+## Catalog field search
+
+`/search/` projects six explicit record kinds: Concept, Primitive, Speaking Guide, Skill Map, Map Node and Task Journey. Each canonical identity contributes one result, including retained retired map records. Map results keep their owning map and annotated prose languages. English titles, existing Chinese terms and Concept aliases remain searchable alongside the previously supported fields and relation names. Related-name matches express relevance, not dependency.
+
+The native query and type controls share a URL state (`q`, `type`), preserved across result visits, history and reloads; other query parameters survive edits and Clear. Complete canonical title matches rank before title prefixes, then other field matches; each group sorts by canonical title and stable identity. Matching fields and a direct prose excerpt explain the result. Header Pagefind still searches full rendered page text and counts pages/fragments, while the field search counts canonical records.

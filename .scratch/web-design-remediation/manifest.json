@@ -1,0 +1,13 @@
+{
+  "issue": "https://github.com/hilt21/ai-native-lexicon/issues/31",
+  "number": 31,
+  "state": "OPEN",
+  "labels": [
+    "ready-for-agent"
+  ],
+  "spec_sha256": "da6130812dd80c7df73d24fa62b2bb60fb22c2ac2beac852af0602de53eabe9d",
+  "published_body_verified": true,
+  "baseline_commit": "4d7e90453f818bdbec09efbfee952cc807385d37",
+  "implementation_started": false,
+  "source_audit": "/Users/taolu/.codex/visualizations/2026/10/07/01a114b7-e990-73f3-9805-3dc3ea1242c9/lexicon-design-audit/report.md"
+}

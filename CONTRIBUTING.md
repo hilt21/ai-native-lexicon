@@ -24,6 +24,8 @@ Do not fabricate a first use, author, or citation. The lexicon may define a usef
 
 Concept inputs reject unknown fields. Omitted `sources` becomes `[]`; each provided source needs a title and an absolute URI. Text length limits count Unicode code points, consistently with the portable schema. Source URIs must encode spaces and use valid percent escapes.
 
+Concept `aliases` is optional and defaults to `[]`. Use independently edited English alternative names; aliases are trimmed, nonblank and unique ignoring case, and must differ from the record's `term` and `zh` ignoring case. Alias syntax and exact uniqueness are represented in the portable schema; normalized uniqueness and sibling-name comparisons require the shared Node/CLI/Astro input boundary. Always use `readCatalog` followed by `validateCatalog` before publishing portable-schema inputs. Adding an alias changes the canonical content digest and exports it in `dataset.json`.
+
 To add a category, create one direct `.yaml` or `.yml` record in `src/data/taxonomy/categories/` with `name`, `slug`, `code`, `description`, `question` and a unique positive integer `order`. The name is the existing Concept reference value; the slug is its public URL. Keep both stable. Records display by `order`, which is not a public identity. Run `npm run schema:generate`, then the full verification suite and `npm run test:extension`; derived JSON schemas are generated, never hand-edited. A configured category may have zero members: its route remains available and shows zero. Adding its first Concept requires only a new Concept YAML record. Unknown category names and duplicate names/slugs/orders are rejected. Reuse existing concept slugs when updating or reclassifying entries. Restart a running dev server after taxonomy changes so its loaded input contracts refresh.
 
 ## Primitive entries
@@ -74,16 +76,16 @@ Run the combined production-subpath acceptance:
 npm run test:l2
 ```
 
-It builds a baseline, creates an empty category and layer, generates portable schemas, adds one Concept, one Primitive and one Speaking Guide with legal relationships, and runs check/test/build. It validates all records through the public Node catalog and portable schemas, checks rendered projections, preserves every baseline HTML route/ID, and resolves all internal navigation links. Invalid references, duplicate identities, unknown taxonomy and schema drift must fail. Source and existing records are compared byte-for-byte; temporary records are removed even on failure. Run it twice to confirm repeatability.
+It builds a baseline, creates an empty category and layer, generates portable schemas, adds one Concept with aliases, one Primitive, one Speaking Guide and an independent Skill Map with a node, retired node and journey, and runs check/test/build. It validates all records through the public Node catalog and portable schemas, checks rendered projections, preserves every baseline HTML route/ID, and resolves all internal navigation links. Invalid references, duplicate identities, unknown taxonomy and schema drift must fail. Source and existing records are compared byte-for-byte; temporary records are removed even on failure. Run it twice to confirm repeatability.
 
-The browser portion uses a separate optional runner so ordinary CI does not need a browser installation:
+Local callers can omit the browser flag for catalog/build checks. CI includes the browser portion of the same expansion scenario:
 
 ```sh
 npx playwright install chromium
 npm run test:l2 -- --browser
 ```
 
-This runs the same full scenario and adds real Chromium interaction at 1440px and 390px: title/idea and English/Chinese related-name search, no results, clearing, guide notes, associated navigation and horizontal overflow checks. Evidence is written to `output/playwright/l2-10/` as JSON reports and screenshots. The fixture uses the GitHub Pages `/ai-native-lexicon` base. Reports are execution evidence, not formal content; inspect screenshots when presentation changes. CI runs `test:l2` and the smaller extension regressions before deployment. See [the L2 verification record](docs/audits/l2-10-verification.md) for actual runs.
+This runs the same full scenario and adds real Chromium interaction at 1440px and 390px: title/idea, English/Chinese related-name and alias search, all six types, exact/prefix/other-field ranking, match explanations, retained records, real Pagefind queries, no results, clearing, guide notes, associated navigation and horizontal overflow checks. Evidence is written to `output/playwright/l2-10/` as JSON reports and screenshots. The fixture uses the GitHub Pages `/ai-native-lexicon` base. Reports are execution evidence, not formal content; inspect screenshots when presentation changes. CI runs `test:l2 -- --browser`, the smaller extension regressions and the production browser suite before deployment. See [the L2 verification record](docs/audits/l2-10-verification.md) for actual runs.
 
 If Chromium downloads are unavailable and Google Chrome is already installed, run `PLAYWRIGHT_CHANNEL=chrome npm run test:l2 -- --browser` instead. The same assertions run against the installed browser; the evidence report records its version.
 

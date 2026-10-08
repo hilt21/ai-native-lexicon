@@ -1,18 +1,13 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
-import { getConcepts, getPrimitives, pathWithBase } from '../lib/catalog';
-import ConceptRow from '../components/ConceptRow.astro';
+import { getConcepts, getPrimitives } from '../lib/catalog';
 import CatalogRow from '../components/CatalogRow.astro';
 import { getSpeakingCards } from '../lib/speaking-cards';
-import { textLang, taxonomyLang, getSkillMaps, mapLink } from '../lib/skill-maps';
+import { getSkillMaps } from '../lib/skill-maps';
+import { catalogSearchRecords } from '../lib/search-catalog';
+import { searchKinds } from '../lib/field-search';
 const [concepts, primitives, speakingCards, maps] = await Promise.all([getConcepts(), getPrimitives(), getSpeakingCards(), getSkillMaps()]);
-const mapResults = maps.flatMap((map) => [
-  { href: mapLink(map.id), title: map.data.title, summary: map.data.summary, titleLanguage: textLang(map.data, 'title'), summaryLanguage: textLang(map.data, 'summary'), secondary: 'Skill Map', marker: 'MAP', number: 'M', search: `${map.data.scope} ${map.data.audience.join(' ')}` },
-  ...map.data.nodes.map((n) => ({ href: mapLink(map.id, `nodes/${n.id}/`), title: n.title, summary: n.summary, titleLanguage: textLang(n, 'title'), summaryLanguage: textLang(n, 'summary'), secondaryParts: [{ text: map.data.title, lang: textLang(map.data, 'title') }, { text: ' · ' }, { text: map.data.taxonomy.types.find((t) => t.id === n.type)?.label ?? '', lang: taxonomyLang(map, 'types', n.type, 'label') }, { text: n.status === 'retired' ? ' · Retired' : '' }], secondary: `${map.data.title} · ${map.data.taxonomy.types.find((t) => t.id === n.type)?.label}${n.status === 'retired' ? ' · Retired' : ''}`, marker: 'ITEM', number: 'N', search: `${n.when_to_use.join(' ')} ${n.tags.join(' ')} ${map.data.taxonomy.clusters.filter((c) => c.id === n.primary_cluster || n.secondary_clusters.includes(c.id)).map((c) => c.label).join(' ')}` })),
-  ...map.data.journeys.map((j) => ({ href: mapLink(map.id, `journeys/${j.id}/`), title: j.title, summary: j.summary, titleLanguage: textLang(j, 'title'), summaryLanguage: textLang(j, 'summary'), secondaryParts: [{ text: map.data.title, lang: textLang(map.data, 'title') }, { text: ` · Task journey${j.status === 'retired' ? ' · Retired' : ''}` }], secondary: `${map.data.title} · Task journey${j.status === 'retired' ? ' · Retired' : ''}`, marker: 'TASK', number: 'J', search: j.when_to_use.join(' ') })),
-]);
-const primitiveNames = new Map(primitives.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
-const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} ${data.zh}`]));
+const records = catalogSearchRecords(concepts, primitives, speakingCards, maps);
 ---
 
 <StarlightPage frontmatter={{ title: 'Search', description: 'Search knowledge, speaking guides and skill maps by name, idea, or relationships.', editUrl: false, tableOfContents: false }}>
@@ -22,63 +17,84 @@ const conceptNames = new Map(concepts.map(({ id, data }) => [id, `${data.term} $
       <span aria-hidden="true">⌕</span>
       <input id="concept-search" type="search" placeholder="Try “context”, “permission”, or “handoff”…" autocomplete="off" aria-describedby="search-help" />
     </div>
-    <p id="search-help">This catalog matches record fields, including concept definitions and linked terms. Header Search, when available, searches full page text.</p>
-    <p id="search-count" aria-live="polite">Showing all {concepts.length + primitives.length + speakingCards.length + mapResults.length} entries</p>
+    <div class="search-controls">
+      <label for="search-type">Content type
+        <select id="search-type"><option value="">All types</option>{searchKinds.map((kind) => <option value={kind.value}>{kind.label}</option>)}</select>
+      </label>
+      <button id="search-clear" type="button">Clear</button>
+    </div>
+    <p id="search-help">Find English and Chinese names, aliases, concept definitions and linked terms. Results count unique records. Header Search, when available, searches full page text and counts pages or fragments.</p>
+    <p id="search-count" aria-live="polite">Showing all {records.length} entries</p>
   </div>
-
   <div class="search-results" id="search-results">
-    {mapResults.map((result) => <CatalogRow {...result} searchText={`${result.title} ${result.summary} ${result.secondary} ${result.search}`.toLowerCase()} />)}
-    {concepts.map((concept) => (
-      <ConceptRow
-        concept={concept}
-        searchText={`${concept.data.term} ${concept.data.zh} ${concept.data.category} ${concept.data.summary} ${concept.data.definition} ${concept.data.related.map((id) => `${id} ${conceptNames.get(id)}`).join(' ')} ${concept.data.primitives.map((id) => `${id} ${primitiveNames.get(id)}`).join(' ')}`.toLowerCase()}
-      />
-    ))}
-    {primitives.map((primitive) => (
-      <CatalogRow
-        href={pathWithBase(`/primitives/#${primitive.id}`)}
-        title={primitive.data.term}
-        secondary={primitive.data.zh}
-        marker={primitive.data.priority.level}
-        summary={primitive.data.summary}
-        searchText={`${primitive.data.term} ${primitive.data.zh} ${primitive.data.summary} ${primitive.data.layer} ${primitive.id}`.toLowerCase()}
-        number="P"
-      />
-    ))}
-    {speakingCards.map((card) => (
-      <CatalogRow
-        href={pathWithBase(`/speaking-card/#card-${String(card.number).padStart(2, '0')}`)}
-        title={card.title}
-        secondary={`Speaking Guide · Card ${String(card.number).padStart(2, '0')}`}
-        marker="GUIDE"
-        summary={card.coreIdea}
-        searchText={`${card.title} ${card.coreIdea} ${card.concepts.map((slug) => `${slug} ${conceptNames.get(slug)}`).join(' ')} ${card.primitives.map((slug) => `${slug} ${primitiveNames.get(slug)}`).join(' ')}`.toLowerCase()}
-        number="S"
-      />
-    ))}
+    {records.map((record) => <CatalogRow
+      {...record}
+      marker={searchKinds.find((kind) => kind.value === record.type)!.label}
+      searchIdentity={record.identity} searchType={record.type} searchFields={record.fields}
+      searchText={record.fields.map((field) => field.value).join(' ').toLowerCase()}
+    />)}
   </div>
-
   <p class="search-empty" id="search-empty" hidden>No matching entry yet. Try a broader word or propose a missing term.</p>
-
   <script>
-    const input = document.querySelector<HTMLInputElement>('#concept-search');
-    const count = document.querySelector<HTMLElement>('#search-count');
-    const empty = document.querySelector<HTMLElement>('#search-empty');
-    const entries = [...document.querySelectorAll<HTMLElement>('[data-search]')];
-
-    function updateSearch() {
-      const words = (input?.value ?? '').toLowerCase().trim().split(/\s+/).filter(Boolean);
-      let visible = 0;
-      for (const entry of entries) {
-        const haystack = entry.dataset.search ?? '';
-        const match = words.every((word) => haystack.includes(word));
-        entry.hidden = !match;
-        if (match) visible += 1;
-      }
-      if (count) count.textContent = words.length ? `${visible} matching ${visible === 1 ? 'entry' : 'entries'}` : `Showing all ${entries.length} entries`;
-      if (empty) empty.hidden = visible !== 0;
+    import { matchRecords, validSearchKind, type SearchRecord, type SearchField } from '../lib/field-search';
+    const input = document.querySelector<HTMLInputElement>('#concept-search')!;
+    const type = document.querySelector<HTMLSelectElement>('#search-type')!;
+    const count = document.querySelector<HTMLElement>('#search-count')!;
+    const empty = document.querySelector<HTMLElement>('#search-empty')!;
+    const container = document.querySelector<HTMLElement>('#search-results')!;
+    const entries = [...container.querySelectorAll<HTMLElement>('[data-search]')];
+    function isSearchField(value: unknown): value is SearchField {
+      return typeof value === 'object' && value !== null
+        && 'label' in value && typeof value.label === 'string'
+        && 'value' in value && typeof value.value === 'string'
+        && (!('context' in value) || typeof value.context === 'boolean')
+        && (!('lang' in value) || typeof value.lang === 'string');
     }
-
-    input?.addEventListener('input', updateSearch);
+    function readSearchRecord(entry: HTMLElement): SearchRecord {
+      const { searchIdentity: identity, searchTitle: title, searchFields: serialized } = entry.dataset;
+      const kind = validSearchKind(entry.dataset.searchType ?? '');
+      const context = `Catalog search record "${identity ?? '(missing identity)'}"`;
+      if (!identity || title === undefined || serialized === undefined || !kind) throw new Error(`${context}: missing metadata or invalid content type`);
+      let fields: unknown;
+      try { fields = JSON.parse(serialized); }
+      catch (error) { throw new Error(`${context}: malformed serialized fields`, { cause: error }); }
+      if (!Array.isArray(fields) || !fields.every(isSearchField)) throw new Error(`${context}: invalid serialized field shape`);
+      return { identity, title, type: kind, fields };
+    }
+    const records = entries.map(readSearchRecord);
+    const byIdentity = new Map(records.map((record, index) => [record.identity, entries[index]!]));
+    function updateSearch() {
+      const matches = matchRecords(records, input.value, type.value);
+      for (const entry of entries) entry.hidden = true;
+      for (const match of matches) {
+        const entry = byIdentity.get(match.record.identity)!;
+        entry.hidden = false;
+        const explanation = entry.querySelector<HTMLElement>('.search-match')!;
+        explanation.hidden = !input.value.trim();
+        entry.querySelector<HTMLElement>('[data-match-label]')!.textContent = `Matched: ${match.label}`;
+        const context = entry.querySelector<HTMLElement>('[data-match-context]')!;
+        context.textContent = match.excerpt;
+        if (match.language) context.lang = match.language; else context.removeAttribute('lang');
+        container.append(entry);
+      }
+      count.textContent = input.value.trim() || type.value ? `${matches.length} matching ${matches.length === 1 ? 'entry' : 'entries'}` : `Showing all ${matches.length} entries`;
+      empty.hidden = matches.length !== 0;
+      const url = new URL(location.href);
+      if (input.value) url.searchParams.set('q', input.value); else url.searchParams.delete('q');
+      if (type.value) url.searchParams.set('type', type.value); else url.searchParams.delete('type');
+      if (url.href !== location.href) history.replaceState(history.state, '', url);
+    }
+    function restoreSearch() {
+      const url = new URL(location.href);
+      input.value = url.searchParams.get('q') ?? '';
+      type.value = validSearchKind(url.searchParams.get('type') ?? '');
+      updateSearch();
+    }
+    input.addEventListener('input', updateSearch);
+    type.addEventListener('change', updateSearch);
+    document.querySelector('#search-clear')!.addEventListener('click', () => { input.value = ''; type.value = ''; updateSearch(); input.focus(); });
+    window.addEventListener('popstate', restoreSearch);
+    window.addEventListener('pageshow', restoreSearch);
+    restoreSearch();
   </script>
 </StarlightPage>

@@ -32,7 +32,7 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     await writeFile(join(root, 'nodes/how.yaml'), stringify({ ...node, type: 'tool' }));
     await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
     const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
-    assert.equal(dataset.schema_version, '1.2.0');
+    assert.equal(dataset.schema_version, '1.3.0');
     assert.equal(dataset.counts.skill_maps, baseline.skillMaps.length + 1);
     const exportedMatt = dataset.skill_maps.find((map) => map.id === 'mattpocock');
     assert.equal(exportedMatt.schema_version, '1.1.0');
@@ -459,7 +459,7 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     const exported = first.speaking_cards?.find((card) => card.number === number);
     assert.deepEqual(exported, guide);
     assert.equal(first.version, '0.2.0');
-    assert.equal(first.schema_version, '1.2.0');
+    assert.equal(first.schema_version, '1.3.0');
     assert.deepEqual(first.counts, { concepts: first.concepts.length, primitives: first.primitives.length, speaking_cards: numbers.length + 1, skill_maps: first.skill_maps.length });
     const href = `/ai-native-lexicon/speaking-card/#card-${String(number).padStart(2, '0')}`;
     const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');

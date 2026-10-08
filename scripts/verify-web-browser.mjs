@@ -92,12 +92,156 @@ async function histories(browser, mapId, mode) {
   report.checks.push({ name: 'history, reload, empty return and Clear', mapId, mode, persisted, passed: true });
   await context.close();
 }
+async function searchHistory(browser, mode) {
+  const context = await browser.newContext();
+  await context.addInitScript(() => { window.historyShows = []; window.addEventListener('pageshow', (event) => window.historyShows.push(event.persisted)); });
+  const page = await context.newPage();
+  const route = `${origin}/search/?q=persistence&type=concept&keep=1`;
+  const input = page.locator('#concept-search');
+  const type = page.locator('#search-type');
+  const visible = () => page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.getAttribute('href')));
+  await page.goto(route);
+  const expected = await visible(); assert.ok(expected.includes(`${base}/concepts/harness/`));
+  await page.locator(`[data-search][href="${base}/concepts/harness/"]`).click();
+  await page.waitForURL(`${origin}/concepts/harness/`);
+  await page.evaluate(() => history.back()); await page.waitForURL(route, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  assert.equal(await input.inputValue(), 'persistence'); assert.equal(await type.inputValue(), 'concept');
+  assert.deepEqual(await visible(), expected);
+  const persisted = await page.evaluate(() => window.historyShows.at(-1));
+  assert.equal(persisted, mode === 'bfcache', `Search return must actually exercise ${mode}`);
+  await page.reload(); assert.deepEqual(await visible(), expected);
+  await input.fill('no-such-search-result'); assert.equal((await visible()).length, 0);
+  await page.locator(`a[href="${base}/concepts/"]`).first().click(); await page.waitForURL(`${origin}/concepts/`);
+  await page.evaluate(() => history.back()); await page.waitForURL(/search\//, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  assert.equal(await input.inputValue(), 'no-such-search-result'); assert.equal(await type.inputValue(), 'concept');
+  assert.equal((await visible()).length, 0); assert.equal(await page.locator('#search-count').textContent(), '0 matching entries');
+  assert.ok(await page.locator('#search-empty').isVisible());
+  await page.locator('#search-clear').click();
+  assert.equal(await input.inputValue(), ''); assert.equal(await type.inputValue(), '');
+  assert.equal(new URL(page.url()).searchParams.get('keep'), '1');
+  assert.equal((await visible()).length, await page.locator('[data-search]').count());
+  // Push a native same-document history entry, then traverse it to fire real popstate.
+  await input.fill('mcp');
+  await page.evaluate(() => history.pushState(null, '', '?q=persistence&type=concept&keep=1'));
+  await page.evaluate(() => history.back()); await page.waitForURL(/q=mcp/, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  assert.equal(await input.inputValue(), 'mcp'); assert.equal(await type.inputValue(), '');
+  await page.evaluate(() => history.forward()); await page.waitForURL(/q=persistence/, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  assert.equal(await input.inputValue(), 'persistence'); assert.equal(await type.inputValue(), 'concept');
+  assert.deepEqual(await visible(), expected);
+  report.checks.push({ name: 'catalog URL, empty return, Clear, native popstate and reload', mode, persisted, passed: true });
+  await context.close();
+}
 try {
   browser = await chromium.launch({ channel, ignoreDefaultArgs: ['--disable-back-forward-cache'] });
   report.browser = browser.version();
   const context = await browser.newContext({ viewport: { width: 1440, height: 960 } });
   const page = await context.newPage();
   const errors = []; page.on('pageerror', (error) => errors.push(error.message));
+  await page.goto(`${origin}/`);
+  await check('homepage begins with canonical Concept examples', async () => {
+    const sections = await page.locator('.home-section').evaluateAll((items) => items.map((item) => item.textContent));
+    assert.match(sections[0], /START HERE/);
+    assert.match(sections[1], /ORIENTATION/);
+    const featured = ['context-engineering', 'thin-kernel', 'bounded-autonomy', 'harness', 'inspectable-agency'];
+    for (const slug of featured) {
+      const record = dataset.concepts.find((record) => record.slug === slug);
+      assert.equal(await page.locator(`.home-featured [href="${base}/concepts/${slug}/"] .concept-summary`).textContent(), record.summary);
+    }
+    assert.match(await page.locator('.hero-ledger').textContent(), /canonical content/);
+    assert.equal(await page.locator(`[href="${base}/categories/"]`).count() > 0, true);
+  });
+  await page.goto(`${origin}/search/?q=persistence&type=concept&keep=1`);
+  await check('catalog query, type, match context and URL form one state', async () => {
+    const input = page.locator('#concept-search');
+    const type = page.locator('#search-type');
+    assert.equal(await type.count(), 1);
+    assert.equal(await input.inputValue(), 'persistence');
+    assert.equal(await type.inputValue(), 'concept');
+    assert.deepEqual(await type.locator('option').evaluateAll((options) => options.map((option) => option.value)), ['', 'concept', 'primitive', 'speaking-guide', 'skill-map', 'map-node', 'task-journey']);
+    const harness = page.locator(`[data-search][href="${base}/concepts/harness/"]`);
+    assert.ok(await harness.isVisible());
+    assert.match(await harness.locator('[data-match-label]').textContent(), /Definition/);
+    assert.match((await harness.locator('[data-match-context]').textContent()).toLowerCase(), /persistence/);
+    await input.fill('mcp');
+    const first = page.locator('[data-search]:visible').first();
+    assert.equal(await first.getAttribute('href'), `${base}/concepts/mcp/`);
+    assert.match(await first.locator('[data-match-label]').textContent(), /Title/);
+    assert.equal(new URL(page.url()).searchParams.get('q'), 'mcp');
+    await input.fill('');
+    for (const kind of ['concept', 'primitive', 'speaking-guide', 'skill-map', 'map-node', 'task-journey']) {
+      await type.selectOption(kind);
+      const kinds = await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.dataset.searchType));
+      assert.ok(kinds.length > 0);
+      assert.ok(kinds.every((actual) => actual === kind));
+      assert.equal(await page.locator('#search-count').textContent(), `${kinds.length} matching ${kinds.length === 1 ? 'entry' : 'entries'}`);
+    }
+    await input.fill('no-such-search-result');
+    assert.equal(await page.locator('[data-search]:visible').count(), 0);
+    assert.ok(await page.locator('#search-empty').isVisible());
+    await page.locator('#search-clear').click();
+    assert.equal(await input.inputValue(), '');
+    assert.equal(await type.inputValue(), '');
+    assert.equal(await input.evaluate((element) => element === document.activeElement), true);
+    assert.equal(await page.locator('[data-search]:visible').count(), await page.locator('[data-search]').count());
+    assert.equal(new URL(page.url()).searchParams.get('keep'), '1');
+    assert.equal(new URL(page.url()).searchParams.has('q'), false);
+    assert.equal(new URL(page.url()).searchParams.has('type'), false);
+    await page.goto(`${origin}/search/?q=模型上下文协议&type=unknown&keep=1`);
+    assert.equal(await type.inputValue(), '');
+    assert.ok(await page.locator(`[data-search][href="${base}/concepts/mcp/"]`).isVisible());
+    assert.equal(new URL(page.url()).searchParams.get('keep'), '1');
+  });
+  await check('malformed serialized catalog fields fail with record context', async () => {
+    for (const [attribute, corrupted] of [['data-search-fields', 'not-json'], ['data-search-fields', '[{&quot;label&quot;:&quot;Title&quot;,&quot;value&quot;:42}]'], ['data-search-type', 'unknown-kind']]) {
+      const negative = await browser.newContext();
+      try {
+        const damaged = await negative.newPage(); const failures = [];
+        damaged.on('pageerror', (error) => failures.push(error.message));
+        await damaged.route(`${origin}/search/`, async (route) => {
+          const response = await route.fetch(); const html = await response.text();
+          const replaced = html.replace(/<a[^>]*data-search-identity="concept:context"[^>]*>/, (row) => row.replace(new RegExp(`${attribute}="[^"]*"`), `${attribute}="${corrupted}"`));
+          assert.notEqual(replaced, html);
+          await route.fulfill({ response, body: replaced });
+        });
+        await damaged.goto(`${origin}/search/`);
+        await damaged.waitForTimeout(30);
+        assert.match(failures.join('\n'), /Catalog search record "concept:context"/);
+      } finally { await negative.close(); }
+    }
+  });
+  for (const theme of ['light', 'dark']) for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 960 });
+    for (const route of ['', 'search/?q=persistence&type=concept']) {
+      await page.goto(`${origin}/${route}`);
+      await page.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme);
+      await settled(page);
+      const screenshot = `${route ? 'search' : 'home'}-${width}-${theme}.png`;
+      await check('discovery screenshot and reflow', async () => { await geometry(page); await page.screenshot({ path: join(evidence, screenshot), fullPage: true }); if (!route) await page.locator('.home-featured').screenshot({ path: join(evidence, `featured-${width}-${theme}.png`) }); }, { route, width, theme, screenshot });
+    }
+  }
+  await page.goto(`${origin}/search/`);
+  for (const theme of ['light', 'dark']) await check('computed catalog-control contrast and keyboard focus', async () => {
+    await page.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme);
+    const ratios = await page.locator('.search-controls select, .search-controls button').evaluateAll((controls) => {
+      const lum = (color) => color.match(/[\d.]+/g).slice(0, 3).map(Number).map((v) => { v /= 255; return v <= 0.04045 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; }).reduce((sum, value, i) => sum + value * [0.2126, 0.7152, 0.0722][i], 0);
+      const contrast = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+      return controls.map((e) => { const style = getComputedStyle(e); return { border: contrast(style.borderTopColor, style.backgroundColor), text: contrast(style.color, style.backgroundColor) }; });
+    });
+    for (const ratio of ratios) { assert.ok(ratio.border >= 3, JSON.stringify(ratio)); assert.ok(ratio.text >= 4.5, JSON.stringify(ratio)); }
+    for (const selector of ['#concept-search', '#search-type', '#search-clear']) {
+      const control = page.locator(selector); await control.focus();
+      assert.equal(await control.evaluate((element) => element === document.activeElement), true);
+      assert.ok(await control.isVisible());
+    }
+    await page.locator('#concept-search').focus(); await page.keyboard.press('Tab');
+    assert.equal(await page.locator('#search-type').evaluate((element) => element === document.activeElement), true);
+    for (const selector of ['#search-type', '#search-clear']) {
+      const control = page.locator(selector); await control.focus();
+      const outline = await control.evaluate((element) => { const style = getComputedStyle(element); return { width: parseFloat(style.outlineWidth), style: style.outlineStyle }; });
+      assert.ok(outline.width >= 2 && outline.style !== 'none', JSON.stringify(outline));
+    }
+    report.checks.push({ name: 'catalog contrast ratios', theme, ratios, passed: true });
+  }, { theme });
   const routes = ['', 'concepts/', 'categories/', 'categories/context/', 'search/', 'concepts/mcp/', 'primitives/', 'primitives/state/', 'speaking-card/', 'skill-maps/', 'skill-maps/pstack/', 'skill-maps/pstack/nodes/', 'skill-maps/pstack/nodes/tdd/', 'skill-maps/pstack/journeys/fix-bug/', 'skill-maps/pstack/overview/', 'about/', '404.html'];
   const summaries = ['skill-maps/', 'skill-maps/pstack/', 'skill-maps/pstack/overview/', 'skill-maps/pstack/nodes/tdd/', 'skill-maps/pstack/journeys/fix-bug/'];
   for (const width of [390, 1440]) {
@@ -142,6 +286,13 @@ try {
     await page.keyboard.press('Escape'); assert.equal(await trigger.evaluate((e) => e === document.activeElement), true);
     const link = page.locator('main a').first(); await link.focus(); await page.keyboard.press('/'); assert.equal(await link.evaluate((e) => e === document.activeElement), true);
     await page.keyboard.press('Control+k'); assert.equal(await page.locator('dialog').evaluate((d) => d.open), true); await page.keyboard.press('Escape');
+  });
+  await page.goto(`${origin}/search/?type=skill-map`);
+  await check('map scope language follows the canonical annotation', async () => {
+    for (const map of dataset.skill_maps) {
+      const row = page.locator(`[data-search][href="${base}/skill-maps/${map.id}/"]`);
+      await language(row.locator('.concept-name > span > span').first(), map.text_languages?.scope ?? 'en');
+    }
   });
   for (const slug of ['mcp','skill']) {
     await page.goto(`${origin}/concepts/${slug}/`);
@@ -190,8 +341,9 @@ try {
   await page.emulateMedia({reducedMotion:'reduce'});await page.goto(`${origin}/`);
   await check('reduced motion',async()=>{const state=await page.evaluate(()=>({scroll:getComputedStyle(document.documentElement).scrollBehavior,animations:document.getAnimations().length}));assert.equal(state.scroll,'auto');assert.equal(state.animations,0);});await page.emulateMedia({reducedMotion:'no-preference'});
   assert.deepEqual(errors, []); await context.close();
+  await searchHistory(browser, 'bfcache');
   await histories(browser,'pstack','bfcache');
-  await browser.close(); browser = await chromium.launch({channel}); await histories(browser,'pstack','reload');
+  await browser.close(); browser = await chromium.launch({channel}); await searchHistory(browser, 'reload'); await histories(browser,'pstack','reload');
   await browser.close(); browser = await chromium.launch({channel,ignoreDefaultArgs:['--disable-back-forward-cache']});
 
   fixtureDirectory=await mkdtemp(join(tmpdir(),'lexicon-web-fixture-'));

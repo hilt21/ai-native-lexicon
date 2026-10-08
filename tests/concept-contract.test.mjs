@@ -34,6 +34,10 @@ test('Astro, CLI and portable schema agree on concept field acceptance', async (
   const { sources: omitted, ...withoutSources } = context;
   const cases = [
     ['current input', context, true],
+    ['aliases', { ...context, aliases: ['Working Context'] }, true],
+    ['empty aliases', { ...context, aliases: [] }, true],
+    ['blank alias', { ...context, aliases: ['   '] }, false],
+    ['duplicate alias', { ...context, aliases: ['Working Context', 'Working Context'] }, false],
     ['sources default', withoutSources, true],
     ['leap date', { ...context, added: '2024-02-29' }, true],
     ['empty primitive associations', { ...context, primitives: [] }, true],
@@ -73,7 +77,7 @@ test('the Astro compatibility schema retains Date output and source defaults', (
   assert.deepEqual(data.sources, []);
   assert.ok(data.added instanceof Date);
   assert.equal(data.added.toISOString(), '2026-09-09T00:00:00.000Z');
-  assert.deepEqual({ ...data, added: context.added }, context);
+  assert.deepEqual({ ...data, added: context.added }, { ...context, aliases: [] });
   assert.equal(conceptSchema.safeParse({ ...context, unexpected: true }).success, false);
 });
 
@@ -106,4 +110,17 @@ test('the schema generation command writes the committed portable contract', asy
   assert.equal(generated.required.includes('sources'), false);
   assert.deepEqual(generated.properties.sources.default, []);
   assert.equal(generated.properties.related.uniqueItems, true);
+});
+
+
+test('Astro and the public catalog reject normalized and sibling-name alias conflicts', async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), 'lexicon-alias-semantics-'));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  await cp(new URL('../src/data/concepts/', import.meta.url), directory, { recursive: true });
+  for (const aliases of [[context.term], [context.term.toUpperCase()], [context.zh], ['Working Context', ' working context ']]) {
+    const input = { ...context, aliases };
+    assert.equal(conceptSchema.safeParse(input).success, false);
+    await writeFile(join(directory, 'context.yaml'), stringify(input));
+    assert.match((await validateConceptDirectory(directory)).errors.join('\n'), /aliases/);
+  }
 });
