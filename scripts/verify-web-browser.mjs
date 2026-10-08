@@ -76,16 +76,18 @@ async function histories(browser, mapId, mode) {
   if (mapId !== 'pstack') { await page.locator('[data-map-cluster]').selectOption('second'); await page.locator('[data-map-retired]').check(); }
   const initial = await directoryState(page); assert.equal(initial.visible.length, mapId === 'pstack' ? 1 : 2);
   await page.locator('[data-map-item]:visible').first().click();
-  await page.goBack({ waitUntil: 'commit' }); const restored = await directoryState(page);
+  const targetUrl = page.url();
+  async function back() { await page.evaluate(() => history.back()); await page.waitForURL(route, { waitUntil: 'commit' }); }
+  await back(); const restored = await directoryState(page);
   assert.deepEqual(restored.visible, initial.visible);
   const persisted = await page.evaluate(() => window.historyShows.at(-1));
   if (mode === 'bfcache') assert.equal(persisted, true, 'This traversal must actually exercise BFCache');
   else assert.equal(persisted, false, 'This traversal must exercise a reload return');
-  await page.goForward({ waitUntil: 'commit' }); await page.goBack({ waitUntil: 'commit' }); await directoryState(page);
+  await page.evaluate(() => history.forward()); await page.waitForURL(targetUrl, { waitUntil: 'commit' }); await back(); await directoryState(page);
   await page.reload(); await directoryState(page);
   await page.locator('[data-map-query]').fill('no-such-filter-result'); await directoryState(page);
   // Keep an empty result while navigating via a different, native map link.
-  await page.locator('.map-tabs a').first().click(); await page.goBack({ waitUntil: 'commit' }); await directoryState(page);
+  await page.locator('.map-tabs a').first().click(); await back(); await directoryState(page);
   await page.locator('[data-map-clear]').click(); const cleared = await directoryState(page);
   assert.ok(cleared.visible.length > 0); assert.equal(await page.locator('[data-map-query]').evaluate((e) => e === document.activeElement), true);
   await page.goto(route); await directoryState(page);
@@ -137,6 +139,129 @@ try {
   const context = await browser.newContext({ viewport: { width: 1440, height: 960 } });
   const page = await context.newPage();
   const errors = []; page.on('pageerror', (error) => errors.push(error.message));
+  await context.grantPermissions(['clipboard-read', 'clipboard-write']);
+  await page.goto(`${origin}/concepts/context-engineering/`);
+  await check('Copy definition reads the displayed Concept body', async () => {
+    const record = dataset.concepts.find(({ slug }) => slug === 'context-engineering');
+    const button = page.getByRole('button', { name: `Copy definition: ${record.term}`, exact: true });
+    assert.equal(await button.count(), 1);
+    await button.focus(); await page.keyboard.press('Enter');
+    await page.waitForFunction(() => document.querySelector('[data-copy-status]')?.textContent === 'Definition copied.');
+    assert.equal(await page.evaluate(() => navigator.clipboard.readText()), record.definition);
+    assert.equal(await page.locator('[data-definition-body]').textContent(), record.definition);
+    assert.equal(await button.evaluate((element) => element === document.activeElement), true);
+  });
+  await check('Concept example and distinction prose are searchable with direct match context', async () => {
+    for (const [query, label] of [['checkpoint', 'Example'], ['recurring', 'Distinction']]) {
+      await page.goto(`${origin}/search/?q=${encodeURIComponent(query)}&type=concept`);
+      const row = page.locator(`[data-search][href="${base}/concepts/harness/"]`);
+      assert.ok(await row.isVisible());
+      assert.match(await row.locator('[data-match-label]').textContent(), new RegExp(label));
+      assert.ok((await row.locator('[data-match-context]').textContent()).includes(query));
+    }
+  });
+  await check('canonical examples, distinctions, sources and per-definition Primitive copy', async () => {
+    for (const slug of ['context-engineering', 'harness']) {
+      const record = dataset.concepts.find((entry) => entry.slug === slug);
+      await page.goto(`${origin}/concepts/${slug}/`);
+      for (const example of record.examples) { assert.ok(await page.getByText(example.context, { exact: true }).isVisible()); assert.ok(await page.getByText(example.example, { exact: true }).isVisible()); }
+      assert.match(await page.locator('.reading-note').textContent(), /not verified factual reports/);
+      for (const distinction of record.distinguish_from) {
+        const target = dataset.concepts.find((entry) => entry.slug === distinction.target);
+        assert.equal(await page.locator(`.reading-distinction a[href="${base}/concepts/${target.slug}/"]`).textContent(), target.term);
+        assert.ok(await page.getByText(distinction.distinction, { exact: true }).isVisible());
+      }
+      assert.deepEqual(await page.locator('.concept-sources a').evaluateAll((links) => links.map((link) => ({ title: link.textContent, url: link.href }))), record.sources);
+      for (const source of record.sources) { await page.getByRole('link', { name: source.title, exact: true }).focus(); assert.equal(await page.getByRole('link', { name: source.title, exact: true }).evaluate((element) => element === document.activeElement), true); }
+    }
+    for (const slug of ['context', 'verification-evaluation', 'state']) {
+      const record = dataset.primitives.find((entry) => entry.slug === slug);
+      await page.goto(`${origin}/primitives/${slug}/`);
+      assert.equal(await page.getByRole('button', { name: /^Copy definition:/ }).count(), record.definitions.length);
+      for (const [index, definition] of record.definitions.entries()) {
+        const concept = definition.concept && dataset.concepts.find((entry) => entry.slug === definition.concept);
+        const expected = concept ? concept.definition : definition.text;
+        const name = concept ? concept.term : definition.name;
+        assert.equal(await page.locator('[data-definition-body]').nth(index).textContent(), expected);
+        const button = page.getByRole('button', { name: `Copy definition: ${record.term}: ${name}`, exact: true });
+        await button.focus(); await button.press('Enter');
+        const status = page.locator('[data-copy-status]').nth(index);
+        await status.getByText('Definition copied.', { exact: true }).waitFor();
+        assert.equal(await page.evaluate(() => navigator.clipboard.readText()), expected);
+        assert.equal(await button.evaluate((element) => element === document.activeElement), true);
+        assert.equal(await status.getAttribute('role'), 'status');
+        assert.equal(await status.getAttribute('aria-live'), 'polite');
+      }
+      assert.equal(await page.locator('.primitive-sources li').count(), record.sources.length);
+      await page.locator('.primitive-sources summary').click();
+      assert.ok(await page.getByText(/not independently verified/).first().isVisible());
+    }
+  });
+  await check('clipboard rejection clears success and reports accessible failure', async () => {
+    await page.goto(`${origin}/concepts/harness/`);
+    const button = page.getByRole('button', { name: 'Copy definition: Harness', exact: true });
+    await button.click(); await page.locator('[data-copy-status]').getByText('Definition copied.', { exact: true }).waitFor();
+    await page.evaluate(() => { Object.defineProperty(navigator.clipboard, 'writeText', { value: async () => { throw new DOMException('Clipboard permission denied', 'NotAllowedError'); } }); });
+    await button.click();
+    await page.waitForFunction(() => document.querySelector('[data-copy-status]').textContent.startsWith('Could not copy'));
+    assert.doesNotMatch(await page.locator('[data-copy-status]').textContent(), /Definition copied/);
+    assert.equal(await button.isEnabled(), true);
+    assert.equal(await page.locator('[data-copy-status]').getAttribute('role'), 'status');
+  });
+  await check('same-type English A–Z neighbors and canonical related previews', async () => {
+    for (const kind of ['concepts', 'primitives']) {
+      const records = [...dataset[kind]].sort((a, b) => a.term.localeCompare(b.term, 'en') || a.slug.localeCompare(b.slug, 'en'));
+      for (const index of [0, Math.floor(records.length / 2), records.length - 1]) {
+        await page.goto(`${origin}/${kind}/${records[index].slug}/`);
+        const neighbors = page.getByRole('navigation', { name: `${kind === 'concepts' ? 'Concept' : 'Primitive'} A–Z` });
+        assert.equal(await neighbors.count(), 1);
+        for (const [direction, target] of [['previous', records[index - 1]], ['next', records[index + 1]]]) {
+          const link = neighbors.locator(`[rel="${direction === 'previous' ? 'prev' : 'next'}"]`);
+          assert.equal(await link.count(), target ? 1 : 0);
+          if (target) { assert.equal(await link.getAttribute('href'), `${base}/${kind}/${target.slug}/`); assert.ok((await link.textContent()).includes(target.term)); }
+        }
+      }
+    }
+    await page.goto(`${origin}/concepts/context-engineering/`);
+    const record = dataset.concepts.find(({ slug }) => slug === 'context-engineering');
+    for (const slug of record.related) {
+      const related = dataset.concepts.find((entry) => entry.slug === slug);
+      assert.equal(await page.locator(`.related-item[href="${base}/concepts/${slug}/"] .related-summary`).textContent(), related.summary);
+    }
+  });
+  for (const theme of ['light', 'dark']) for (const width of [390, 1440]) {
+    await page.setViewportSize({ width, height: 960 });
+    for (const route of ['concepts/context-engineering/', 'concepts/harness/', 'primitives/context/', 'primitives/verification-evaluation/']) {
+      await page.goto(`${origin}/${route}`); await page.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme); await settled(page);
+      await check('reading screenshot, reflow, control contrast and keyboard focus', async () => {
+        await geometry(page);
+        const button = page.getByRole('button', { name: /^Copy definition:/ }).first();
+        await button.focus(); await page.keyboard.press('Tab'); await page.keyboard.press('Shift+Tab');
+        const focus = await button.evaluate((element) => { const style = getComputedStyle(element); return { active: element === document.activeElement, width: parseFloat(style.outlineWidth), style: style.outlineStyle }; });
+        assert.ok(focus.active && focus.width >= 2 && focus.style !== 'none', JSON.stringify(focus));
+        const ratios = await button.evaluate((element) => {
+          const lum = (color) => color.match(/[\d.]+/g).slice(0, 3).map(Number).map((value) => { value /= 255; return value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4; }).reduce((sum, value, index) => sum + value * [0.2126, 0.7152, 0.0722][index], 0);
+          const contrast = (a, b) => { const x = lum(a), y = lum(b); return (Math.max(x, y) + 0.05) / (Math.min(x, y) + 0.05); };
+          const style = getComputedStyle(element); return { border: contrast(style.borderTopColor, style.backgroundColor), text: contrast(style.color, style.backgroundColor), focus: contrast(style.outlineColor, style.backgroundColor) };
+        });
+        assert.ok(ratios.border >= 3 && ratios.text >= 4.5 && ratios.focus >= 3, JSON.stringify(ratios));
+        const next = page.locator('.record-navigation a').first(); await next.focus(); assert.equal(await next.evaluate((element) => element === document.activeElement), true);
+        await page.screenshot({ path: join(evidence, `reading-${route.replaceAll('/', '-')}${width}-${theme}.png`), fullPage: true });
+        report.checks.push({ name: 'reading control contrast ratios', route, width, theme, ratios, passed: true });
+      }, { route, width, theme });
+    }
+  }
+  await page.goto(`${origin}/concepts/harness/`);
+  await check('reading skip link and reduced motion', async () => {
+    const skip = page.locator('a[href="#_top"]'); await skip.focus(); await skip.press('Enter');
+    assert.equal(new URL(page.url()).hash, '#_top');
+    assert.ok(await page.locator('#_top').isVisible());
+    await page.keyboard.press('Tab');
+    assert.equal(await page.locator('.concept-masthead a').evaluate((element) => element === document.activeElement), true);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto');
+    assert.equal(await page.evaluate(() => document.getAnimations().length), 0); await page.emulateMedia({ reducedMotion: 'no-preference' });
+  });
   await page.goto(`${origin}/`);
   await check('homepage begins with canonical Concept examples', async () => {
     const sections = await page.locator('.home-section').evaluateAll((items) => items.map((item) => item.textContent));
@@ -355,8 +480,64 @@ try {
     const directory=join(fixtureDirectory,'src/data/skill-maps',id);await mkdir(join(directory,'nodes'),{recursive:true});await mkdir(join(directory,'journeys'),{recursive:true});await writeFile(join(directory,'map.yaml'),stringify(map));await writeFile(join(directory,'relations.yaml'),stringify({relations}));for(const [slug,node] of Object.entries(nodes))await writeFile(join(directory,'nodes',`${slug}.yaml`),stringify(node));
   }
   const conceptPath=join(fixtureDirectory,'src/data/concepts/verification.yaml');const concept=parse(await readFile(conceptPath,'utf8'));await writeFile(join(fixtureDirectory,'src/data/concepts/web-empty-source.yaml'),stringify({...concept,term:'Empty Source Fixture',sources:[]}));await writeFile(join(fixtureDirectory,'src/data/concepts/web-unusual-source.yaml'),stringify({...concept,term:'Unusual Source Fixture',sources:[{title:'URN source',url:'urn:example:web-source'}]}));
+  const readingDefinition = 'The initial canonical reading fixture definition is shared by its Concept and the Primitive reference without a maintained copy.';
+  const readingConcept = { ...concept, term: 'Reading Source Fixture', definition: readingDefinition, summary: 'The initial canonical summary explains the independently authored reading fixture.', primitives: ['web-reading-primitive'], related: ['verification', 'evidence'], examples: [{ context: 'A fixture reader compares the same definition.', example: 'StarlarkReadingExample demonstrates the shared visible definition.' }], distinguish_from: [{ target: 'verification', distinction: 'CopperfinReadingDistinction describes this projection fixture.' }] };
+  const readingConceptPath = join(fixtureDirectory, 'src/data/concepts/web-reading-source.yaml');
+  const readingPrimitivePath = join(fixtureDirectory, 'src/data/primitives/web-reading-primitive.yaml');
+  const primitiveTemplate = parse(await readFile(join(fixtureDirectory, 'src/data/primitives/state.yaml'), 'utf8'));
+  await writeFile(readingConceptPath, stringify(readingConcept));
+  await writeFile(join(fixtureDirectory, 'src/data/concepts/web-reading-neighbor.yaml'), stringify({ ...concept, term: 'Reading Neighbor Fixture', related: ['web-reading-source', 'verification'], primitives: [] }));
+  await writeFile(readingPrimitivePath, stringify({ ...primitiveTemplate, term: 'Reading Reference Fixture', definitions: [{ concept: 'web-reading-source' }], related: [] }));
+  const readingPrimitiveSource = await readFile(readingPrimitivePath, 'utf8');
+  for (const [id, term] of [['a', 'Reading Café'], ['b', 'Reading Café']]) {
+    await writeFile(join(fixtureDirectory, `src/data/concepts/web-reading-tie-${id}.yaml`), stringify({ ...concept, term, primitives: [] }));
+    await writeFile(join(fixtureDirectory, `src/data/primitives/web-reading-tie-${id}.yaml`), stringify({ ...primitiveTemplate, term, definitions: [{ name: 'Reading tie', text: 'An independent inline reading definition.' }], related: [] }));
+  }
   await build(fixtureDirectory); root=join(fixtureDirectory,'dist');
   const synthetic=await browser.newContext();const fixturePage=await synthetic.newPage();
+  await synthetic.grantPermissions(['clipboard-read', 'clipboard-write']);
+  async function fixtureDefinition(expected) {
+    for (const [route, name] of [['concepts/web-reading-source/', 'Reading Source Fixture'], ['primitives/web-reading-primitive/', 'Reading Reference Fixture: Reading Source Fixture']]) {
+      await fixturePage.goto(`${origin}/${route}`);
+      assert.equal(await fixturePage.locator('[data-definition-body]').textContent(), expected);
+      await fixturePage.getByRole('button', { name: `Copy definition: ${name}`, exact: true }).click();
+      await fixturePage.waitForFunction(() => document.querySelector('[data-copy-status]').textContent === 'Definition copied.');
+      assert.equal(await fixturePage.evaluate(() => navigator.clipboard.readText()), expected);
+    }
+  }
+  await check('independent YAML definitions and clipboard share a canonical reference', async () => { await fixtureDefinition(readingDefinition); });
+  await fixturePage.goto(`${origin}/search/?type=concept`);
+  await check('independent example/distinction-only search uses direct context', async () => {
+    for (const [query, label] of [['StarlarkReadingExample', 'Example'], ['CopperfinReadingDistinction', 'Distinction']]) {
+      await fixturePage.locator('#concept-search').fill(query);
+      const row = fixturePage.locator(`[data-search][href="${base}/concepts/web-reading-source/"]`);
+      assert.equal(await fixturePage.locator('[data-search]:visible').count(), 1);
+      assert.match(await row.locator('[data-match-label]').textContent(), new RegExp(label));
+      assert.ok((await row.locator('[data-match-context]').textContent()).includes(query));
+    }
+  });
+  await check('English title ties use public slugs in both same-type navigations', async () => {
+    for (const kind of ['concepts', 'primitives']) {
+      await fixturePage.goto(`${origin}/${kind}/web-reading-tie-a/`);
+      assert.equal(await fixturePage.locator('.record-navigation [rel="next"]').getAttribute('href'), `${base}/${kind}/web-reading-tie-b/`);
+      await fixturePage.locator('.record-navigation [rel="next"]').click();
+      assert.equal(await fixturePage.locator('.record-navigation [rel="prev"]').getAttribute('href'), `${base}/${kind}/web-reading-tie-a/`);
+    }
+  });
+  const updatedDefinition = 'The updated canonical reading fixture definition now reaches its own detail, the referencing Primitive, and the actual clipboard together.';
+  const updatedSummary = 'The updated canonical summary also reaches the neighboring Related Concept preview.';
+  await writeFile(readingConceptPath, stringify({ ...readingConcept, definition: updatedDefinition, summary: updatedSummary }));
+  await build(fixtureDirectory);
+  await check('editing the Concept synchronizes own/ref definition, clipboard, related preview and canonical export', async () => {
+    await fixtureDefinition(updatedDefinition);
+    await fixturePage.goto(`${origin}/concepts/web-reading-neighbor/`);
+    assert.equal(await fixturePage.locator(`.related-item[href="${base}/concepts/web-reading-source/"] .related-summary`).textContent(), updatedSummary);
+    const rebuilt = JSON.parse(await readFile(join(root, 'dataset.json'), 'utf8'));
+    const exported = rebuilt.concepts.find(({ slug }) => slug === 'web-reading-source');
+    assert.equal(exported.definition, updatedDefinition); assert.deepEqual(exported.examples, readingConcept.examples); assert.deepEqual(exported.distinguish_from, readingConcept.distinguish_from);
+    assert.deepEqual(rebuilt.primitives.find(({ slug }) => slug === 'web-reading-primitive').definitions, [{ concept: 'web-reading-source' }]);
+    assert.equal(await readFile(readingPrimitivePath, 'utf8'), readingPrimitiveSource);
+  });
   await fixturePage.goto(`${origin}/skill-maps/mixed/nodes/`);
   await check('mixed-language composite headings and filters',async()=>{await language(fixturePage.locator('h1 span').first(),'zh-Hans');await language(fixturePage.locator('h1 span').nth(1),'en');await language(fixturePage.locator('option[value="custom"]'),'zh-Hans');await language(fixturePage.locator('option[value="second"]'),'zh-Hans');await language(fixturePage.locator('[data-map-item] strong').first(),'zh-Hans');});
   await fixturePage.goto(`${origin}/search/`);

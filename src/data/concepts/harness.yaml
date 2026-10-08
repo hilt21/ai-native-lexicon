@@ -9,5 +9,19 @@ when_to_use: Use the term when discussing the operational layer around a model r
 anti_pattern: Attributing every success or failure to the model while leaving the surrounding runtime unexamined.
 related: [thin-kernel, deterministic-shell, eval-driven-development, agent-loop]
 primitives: ["capability-tool", "harness", "context", "permission", "observation-trace"]
-sources: []
+sources:
+  - title: Effective harnesses for long-running agents — Anthropic
+    url: https://www.anthropic.com/engineering/effective-harnesses-for-long-running-agents
+  - title: "Scaling Managed Agents: Decoupling the brain from the hands — Anthropic"
+    url: https://www.anthropic.com/engineering/managed-agents
 added: 2026-08-14
+examples:
+  - context: A coding agent resumes work after its previous session ended.
+    example: The runtime loads the progress file, exposes file and test tools,
+      records tool results, and checks the selected feature before saving a
+      checkpoint for the next session.
+distinguish_from:
+  - target: agent-loop
+    distinction: An agent loop describes the recurring observe, act, and feedback
+      cycle. A harness provides the runtime around that cycle, including tools,
+      context management, saved state, and testing support.

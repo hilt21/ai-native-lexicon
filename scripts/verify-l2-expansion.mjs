@@ -140,7 +140,7 @@ try {
   assert.match(emptyLayers.slice(emptyLayers.indexOf(`id="${layer.anchor}"`)), /0 primitives/);
   stage('empty category/layer and generated portable enums');
 
-  const concept = { aliases: ['Quasar acceptance alias'], ...await yaml('src/data/concepts/verification.yaml'), term: 'L2 Acceptance Concept', zh: '扩充验收概念', category: category.name, related: ['verification', 'evidence'], primitives: [primitiveSlug], definition: 'An isolated acceptance concept verifies that configuration and canonical records produce consistent projections.' };
+  const concept = { examples: [{ context: 'A reader checks an isolated expansion.', example: 'The same definition is visible on the Concept and referenced Primitive.' }], distinguish_from: [{ target: 'verification', distinction: 'This fixture exercises projections rather than verification practice.' }], aliases: ['Quasar acceptance alias'], ...await yaml('src/data/concepts/verification.yaml'), term: 'L2 Acceptance Concept', zh: '扩充验收概念', category: category.name, related: ['verification', 'evidence'], primitives: [primitiveSlug], definition: 'An isolated acceptance concept verifies that configuration and canonical records produce consistent projections.' };
   const primitive = { ...await yaml('src/data/primitives/state.yaml'), summary: 'Quasar acceptance verifies the canonical catalog across fields, typed filters and public projections.', term: 'L2 Acceptance Primitive', zh: '扩充验收原语', layer: layer.name, definitions: [{ concept: conceptSlug }], related: ['state'] };
   const guide = { ...await yaml('src/data/speaking-cards/card-01.yaml'), number: Math.max(...baselineDataset.speaking_cards.map(({ number }) => number)) + 7, title: 'L2 Acceptance Guide', coreIdea: 'Quasar acceptance connects new canonical content and taxonomy to every projection.', concepts: [conceptSlug], primitives: [primitiveSlug] };
   const anchor = `card-${String(guide.number).padStart(2, '0')}`;
@@ -178,7 +178,7 @@ try {
     for (const record of baselineDataset[type]) assert.deepEqual(dataset[type].find((entry) => type === 'speaking_cards' ? entry.number === record.number : entry.slug === record.slug), record);
   }
   assert.deepEqual(dataset.speaking_cards.find(({ number }) => number === guide.number), guide);
-  assert.deepEqual(dataset.concepts.find(({ slug }) => slug === conceptSlug), { slug: conceptSlug, aliases: [], ...concept, added: `${concept.added}T00:00:00.000Z` });
+  assert.deepEqual(dataset.concepts.find(({ slug }) => slug === conceptSlug), { slug: conceptSlug, aliases: [], examples: [], distinguish_from: [], ...concept, added: `${concept.added}T00:00:00.000Z` });
   assert.deepEqual(dataset.primitives.find(({ slug }) => slug === primitiveSlug), { slug: primitiveSlug, ...primitive, added: `${primitive.added}T00:00:00.000Z` });
   assert.ok((await html('concepts')).includes(`${base}/concepts/${conceptSlug}/`));
   for (const path of ['', 'categories']) assert.ok((await html(path)).includes(`${base}/categories/${category.slug}/`), `${path}: new category entry`);
@@ -187,6 +187,10 @@ try {
   for (const page of [conceptPage, primitivePage]) assert.ok(page.includes(`${base}/speaking-card/#${anchor}`));
   assert.ok(conceptPage.includes(`${base}/primitives/${primitiveSlug}/`));
   assert.ok(conceptPage.includes(`${base}/categories/${category.slug}/`));
+  assert.ok(conceptPage.includes(concept.examples[0].context));
+  assert.ok(conceptPage.includes(concept.examples[0].example));
+  assert.ok(conceptPage.includes(concept.distinguish_from[0].distinction));
+  assert.ok(conceptPage.includes(`${base}/concepts/verification/`));
   assert.ok(primitivePage.includes(concept.definition));
   assert.ok(primitivePage.includes(`${base}/concepts/${conceptSlug}/`));
   assert.ok(primitivePage.includes(`${base}/primitives/#${layer.anchor}`));
@@ -219,13 +223,17 @@ try {
     assert.ok(expanded.get('primitives/index.html').ids.has(anchor));
   }
   report.routes = { baseline: baseline.size, expanded: expanded.size, baselineLinks, expandedLinks: await checkLinks(expanded) };
-  assert.equal(dataset.schema_version, '1.3.0');
+  assert.equal(dataset.schema_version, '1.4.0');
   assert.deepEqual(dataset.concepts.find(({ slug }) => slug === conceptSlug).aliases, ['Quasar acceptance alias']);
   assert.equal(dataset.counts.skill_maps, baselineDataset.skill_maps.length + 1);
   assert.equal(dataset.skill_maps.find(({ id }) => id === 'l2-acceptance-map').nodes.find(({ id }) => id === 'retired').status, 'retired');
   stage('complete content, relationships, projections and preserved public targets');
 
   for (const [file, changed, expected] of [
+    [conceptFile, { ...concept, examples: [{ context: ' ', example: 'An illustration.' }] }, /examples/],
+    [conceptFile, { ...concept, distinguish_from: [{ target: 'missing-concept', distinction: 'A difference.' }] }, /distinguish_from target/],
+    [conceptFile, { ...concept, distinguish_from: [{ target: conceptSlug, distinction: 'A difference.' }] }, /distinguish_from cannot reference itself/],
+    [conceptFile, { ...concept, distinguish_from: [{ target: 'verification', distinction: 'First.' }, { target: 'verification', distinction: 'Second.' }] }, /duplicate distinguish_from target/],
     [conceptFile, { ...concept, category: 'Unconfigured Domain' }, /category/],
     [conceptFile, { ...concept, aliases: [' '] }, /aliases/],
     [conceptFile, { ...concept, aliases: [concept.term] }, /aliases/],

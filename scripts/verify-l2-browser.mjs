@@ -28,6 +28,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
     for (const width of [1440, 390]) {
       const context = await browser.newContext({ viewport: { width, height: 960 }, isMobile: width === 390, hasTouch: width === 390 });
       try {
+        await context.grantPermissions(['clipboard-read', 'clipboard-write']);
         await context.addInitScript(() => { window.l2HistoryShows = []; window.addEventListener('pageshow', (event) => window.l2HistoryShows.push(event.persisted)); });
         const page = await context.newPage();
         const errors = [];
@@ -143,10 +144,24 @@ export async function verifyBrowser(directory, evidence, fixture) {
         await card.locator(`a[href="${base}/concepts/${conceptSlug}/"]`).click();
         await page.waitForURL(`${url}/concepts/${conceptSlug}/`);
         assert.ok(await page.locator('h1').filter({ hasText: concept.term }).isVisible());
+        for (const example of concept.examples) { assert.ok(await page.getByText(example.context, { exact: true }).isVisible()); assert.ok(await page.getByText(example.example, { exact: true }).isVisible()); }
+        for (const distinction of concept.distinguish_from) { assert.ok(await page.getByText(distinction.distinction, { exact: true }).isVisible()); assert.equal(await page.locator(`.reading-distinction a[href="${base}/concepts/${distinction.target}/"]`).count(), 1); }
+        await page.getByRole('button', { name: `Copy definition: ${concept.term}`, exact: true }).click();
+        await page.locator('[data-copy-status]').getByText('Definition copied.', { exact: true }).waitFor();
+        assert.equal(await page.evaluate(() => navigator.clipboard.readText()), concept.definition);
+        assert.equal(await page.locator('[data-definition-body]').textContent(), concept.definition);
         await overflow('concept');
         await page.locator(`main a[href="${base}/primitives/${primitiveSlug}/"]`).first().click();
         await page.waitForURL(`${url}/primitives/${primitiveSlug}/`);
         await page.locator('.primitive-definition p').filter({ hasText: concept.definition }).waitFor({ state: 'visible' });
+        await page.getByRole('button', { name: `Copy definition: ${primitive.term}: ${concept.term}`, exact: true }).click();
+        await page.locator('[data-copy-status]').getByText('Definition copied.', { exact: true }).waitFor();
+        assert.equal(await page.evaluate(() => navigator.clipboard.readText()), concept.definition);
+        await page.evaluate(() => { Object.defineProperty(navigator.clipboard, 'writeText', { value: async () => { throw new DOMException('Permission denied', 'NotAllowedError'); } }); });
+        await page.getByRole('button', { name: `Copy definition: ${primitive.term}: ${concept.term}`, exact: true }).click();
+        await page.waitForFunction(() => document.querySelector('[data-copy-status]').textContent.startsWith('Could not copy'));
+        assert.doesNotMatch(await page.locator('[data-copy-status]').textContent(), /Definition copied/);
+        result.reading = { examples: true, distinctions: true, referencedCopy: true, actualClipboard: true, denial: true };
         await overflow('primitive');
         await page.locator(`main a[href="${base}/primitives/#${layer.anchor}"]`).first().click();
         await page.waitForURL(`${url}/primitives/#${layer.anchor}`);

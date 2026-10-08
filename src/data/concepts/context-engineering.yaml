@@ -9,5 +9,17 @@ when_to_use: Use it when an AI workflow depends on multiple information sources,
 anti_pattern: Treating a single oversized system prompt as the complete solution to every information problem.
 related: [context-budget, progressive-disclosure, context-hygiene, retrieval-contract]
 primitives: ["context", "interface"]
-sources: []
+sources:
+  - title: Effective context engineering for AI agents — Anthropic
+    url: https://www.anthropic.com/engineering/effective-context-engineering-for-ai-agents
 added: 2026-08-14
+examples:
+  - context: A coding agent is fixing a failing unit test in a repository.
+    example: For the next model call, supply the failing assertion, the relevant
+      function, and the accepted task constraints; load other files only when
+      the agent needs them.
+distinguish_from:
+  - target: context
+    distinction: Context is the information available to the model at a particular
+      step. Context engineering is the work of selecting, structuring, and
+      updating that information across steps.

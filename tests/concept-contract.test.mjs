@@ -34,6 +34,15 @@ test('Astro, CLI and portable schema agree on concept field acceptance', async (
   const { sources: omitted, ...withoutSources } = context;
   const cases = [
     ['current input', context, true],
+    ['reading example', { ...context, examples: [{ context: 'A reader compares terms.', example: 'Explain the information used at this step.' }] }, true],
+    ['distinction', { ...context, distinguish_from: [{ target: 'context-window', distinction: 'Information differs from its available capacity.' }] }, true],
+    ['blank example context', { ...context, examples: [{ context: '   ', example: 'A useful illustration.' }] }, false],
+    ['blank example', { ...context, examples: [{ context: 'A setting.', example: '\t ' }] }, false],
+    ['unknown example field', { ...context, examples: [{ context: 'A setting.', example: 'An illustration.', source: 'extra' }] }, false],
+    ['missing example context', { ...context, examples: [{ example: 'An illustration.' }] }, false],
+    ['blank distinction', { ...context, distinguish_from: [{ target: 'context-window', distinction: '   ' }] }, false],
+    ['invalid distinction target shape', { ...context, distinguish_from: [{ target: 'Bad Target', distinction: 'A difference.' }] }, false],
+    ['unknown distinction field', { ...context, distinguish_from: [{ target: 'context-window', distinction: 'A difference.', extra: true }] }, false],
     ['aliases', { ...context, aliases: ['Working Context'] }, true],
     ['empty aliases', { ...context, aliases: [] }, true],
     ['blank alias', { ...context, aliases: ['   '] }, false],
@@ -77,7 +86,7 @@ test('the Astro compatibility schema retains Date output and source defaults', (
   assert.deepEqual(data.sources, []);
   assert.ok(data.added instanceof Date);
   assert.equal(data.added.toISOString(), '2026-09-09T00:00:00.000Z');
-  assert.deepEqual({ ...data, added: context.added }, { ...context, aliases: [] });
+  assert.deepEqual({ ...data, added: context.added }, { ...context, aliases: [], examples: [], distinguish_from: [] });
   assert.equal(conceptSchema.safeParse({ ...context, unexpected: true }).success, false);
 });
 

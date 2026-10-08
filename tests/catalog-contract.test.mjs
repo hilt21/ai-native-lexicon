@@ -32,6 +32,9 @@ test('the public catalog boundary rejects cross-record failures and malformed in
   const cases = [
     ['concepts/context.yaml', (data) => ({ ...data, related: [data.related[0], 'missing-concept'] }), /related concept "missing-concept"/],
     ['concepts/context.yaml', (data) => ({ ...data, related: [data.related[0], 'context'] }), /cannot relate to itself/],
+    ['concepts/context.yaml', (data) => ({ ...data, distinguish_from: [{ target: 'missing-concept', distinction: 'A meaningful difference.' }] }), /distinguish_from target "missing-concept" does not exist/],
+    ['concepts/context.yaml', (data) => ({ ...data, distinguish_from: [{ target: 'context', distinction: 'A meaningful difference.' }] }), /distinguish_from cannot reference itself/],
+    ['concepts/context.yaml', (data) => ({ ...data, distinguish_from: [{ target: 'context-window', distinction: 'First distinction.' }, { target: 'context-window', distinction: 'Another distinction.' }] }), /duplicate distinguish_from target/],
     ['concepts/context.yaml', (data) => ({ ...data, primitives: [] }), /defining concept "context" must link back/],
     ['primitives/context.yaml', (data) => ({ ...data, related: ['missing-primitive'] }), /related target "missing-primitive"/],
     ['primitives/context.yaml', (data) => ({ ...data, definitions: [{ concept: 'missing-concept' }] }), /definitions target "missing-concept"/],
@@ -99,4 +102,24 @@ test('independent Concept YAML accepts aliases, preserves defaults and rejects a
   const legacy = await readCatalog(directory);
   assert.deepEqual(validateCatalog(legacy).errors, []);
   assert.deepEqual(legacy.concepts.find(({ slug }) => slug === 'context').data.aliases, []);
+});
+
+test('independent Concept YAML projects optional reading examples and distinctions with legacy defaults', async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), 'lexicon-reading-fields-'));
+  t.after(() => rm(directory, { recursive: true, force: true }));
+  await cp(new URL('../src/data/', import.meta.url), directory, { recursive: true });
+  const file = join(directory, 'concepts/context.yaml');
+  const original = parse(await readFile(file, 'utf8'));
+  const examples = [{ context: 'A reader compares terms.', example: 'Use the current information to explain the next step.' }];
+  const distinguish_from = [{ target: 'context-window', distinction: 'Information differs from the capacity available to hold it.' }];
+  await writeFile(file, stringify({ ...original, examples, distinguish_from }));
+  const catalog = await readCatalog(directory);
+  assert.deepEqual(validateCatalog(catalog).errors, []);
+  const data = catalog.concepts.find(({ slug }) => slug === 'context').data;
+  assert.deepEqual(data.examples, examples);
+  assert.deepEqual(data.distinguish_from, distinguish_from);
+  await writeFile(file, stringify(original));
+  const legacy = (await readCatalog(directory)).concepts.find(({ slug }) => slug === 'context').data;
+  assert.deepEqual(legacy.examples, []);
+  assert.deepEqual(legacy.distinguish_from, []);
 });

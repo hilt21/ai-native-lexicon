@@ -10,7 +10,7 @@ export const categoryMeta: Record<Category, (typeof categoryRegistry)[number]> =
 export type Concept = CollectionEntry<'concepts'>;
 
 export async function getConcepts() {
-  return (await getCollection('concepts')).sort((a, b) => a.data.term.localeCompare(b.data.term));
+  return (await getCollection('concepts')).sort((a, b) => a.data.term.localeCompare(b.data.term, 'en') || a.id.localeCompare(b.id, 'en'));
 }
 
 export function getCategoryBySlug(slug: string) {
@@ -27,7 +27,7 @@ export function pathWithBase(path: string) {
 export type Primitive = CollectionEntry<'primitives'>;
 
 export async function getPrimitives() {
-  return (await getCollection('primitives')).sort((a, b) => a.data.term.localeCompare(b.data.term));
+  return (await getCollection('primitives')).sort((a, b) => a.data.term.localeCompare(b.data.term, 'en') || a.id.localeCompare(b.id, 'en'));
 }
 
 export function getPrimitiveDefinitions(primitive: Primitive, conceptsById: Map<string, Concept>) {

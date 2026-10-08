@@ -148,7 +148,7 @@ main h1 { font-family: var(--lex-font-display); line-height: 1.08; letter-spacin
 .related-section h2 { margin: 0 0 var(--lex-space-8); font-weight: 600; font-family: var(--lex-font-display); font-size: var(--lex-text-section); line-height: 1.15; letter-spacing: -0.035em; }
 .related-grid { display: grid; border-top: 1px solid var(--lex-line); border-left: 1px solid var(--lex-line); grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .related-item { position: relative; display: grid; min-height: 9rem; color: var(--lex-ink) !important; border-right: 1px solid var(--lex-line); border-bottom: 1px solid var(--lex-line); text-decoration: none !important; transition: background var(--lex-duration) ease; padding: var(--lex-space-6); gap: var(--lex-space-2); }
-.related-item span { color: var(--lex-muted); font-weight: 700; font-family: var(--sl-font-mono); font-size: var(--lex-text-label); line-height: 1.4; }
+.related-item .related-category { color: var(--lex-muted); font-weight: 700; font-family: var(--sl-font-mono); font-size: var(--lex-text-label); line-height: 1.4; }
 .related-item strong { align-self: end; font-weight: 600; font-family: var(--lex-font-display); font-size: var(--lex-text-item); line-height: 1.25; overflow-wrap: anywhere; }
 .related-item small { margin-top: 0.3rem; color: var(--lex-muted); font-size: var(--lex-text-small); line-height: 1.5; }
 .not-found h1 { margin: 0 0 var(--lex-space-8); font-weight: 700; font-family: var(--lex-font-display); font-size: var(--lex-text-display); line-height: 0.95; letter-spacing: -0.055em; }
@@ -237,3 +237,20 @@ main h1 { font-family: var(--lex-font-display); line-height: 1.08; letter-spacin
 }
 
 .search-controls select:focus-visible, .search-controls button:focus-visible { outline: 2px solid var(--lex-focus); outline-offset: 3px; }
+
+/* Reading controls share the catalog's control and focus tokens. */
+copy-definition { display: block; }
+.definition-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--lex-space-2) var(--lex-space-4); margin-top: var(--lex-space-4); }
+.definition-actions button { min-height: var(--lex-control-height); max-width: 100%; padding: var(--lex-space-2) var(--lex-space-3); border: 1px solid var(--lex-control-border); background: var(--lex-paper); color: var(--lex-ink); border-radius: var(--lex-radius-control); font: inherit; cursor: pointer; }
+.definition-actions [role="status"], .reading-note { color: var(--lex-muted); font-size: var(--lex-text-small); }
+.reading-examples h3, .reading-distinction h3 { margin: 0; font-size: var(--lex-text-body); line-height: var(--lex-leading-body); }
+
+.related-item .related-summary { margin: 0; color: var(--lex-muted); font-size: var(--lex-text-small); line-height: var(--lex-leading-body); }
+.record-navigation { margin-top: var(--lex-space-12); padding-top: var(--lex-space-6); border-top: 1px solid var(--lex-line); }
+.record-navigation > div { display: flex; flex-wrap: wrap; gap: var(--lex-space-4); }
+.record-navigation a { display: grid; flex: 1 1 14rem; gap: var(--lex-space-2); min-height: var(--lex-control-height); padding: var(--lex-space-4); border: 1px solid var(--lex-control-border); color: var(--lex-ink); text-decoration: none; overflow-wrap: anywhere; }
+.record-navigation a[rel="next"] { text-align: end; }
+.record-navigation a:hover { background: color-mix(in srgb, var(--lex-acid) 34%, transparent); }
+.record-navigation a span { color: var(--lex-muted); font-size: var(--lex-text-small); }
+
+.definition-actions button:focus-visible { outline: 2px solid var(--lex-focus); outline-offset: 3px; }
