@@ -1,5 +1,7 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import RecordNavigation from '../../components/RecordNavigation.astro';
+import CopyDefinition from '../../components/CopyDefinition.astro';
 import SpeakingCardLinks from '../../components/SpeakingCardLinks.astro';
 import { getSpeakingCards } from '../../lib/speaking-cards';
 import { getConcepts, getPrimitives, getPrimitiveDefinitions, pathWithBase } from '../../lib/catalog';
@@ -14,7 +16,7 @@ export async function getStaticPaths() {
     for (const slug of concept.data.primitives) conceptsByPrimitive.get(slug)?.push(concept);
   }
 
-  return primitives.map((primitive) => {
+  return primitives.map((primitive, index) => {
     const related = primitive.data.related.map((slug) => {
       const entry = primitivesById.get(slug);
       if (!entry) throw new Error(`${primitive.id}: missing related primitive ${slug}`);
@@ -24,6 +26,8 @@ export async function getStaticPaths() {
       params: { slug: primitive.id },
       props: {
         primitive,
+        previous: primitives[index - 1],
+        next: primitives[index + 1],
         related,
         linkedConcepts: conceptsByPrimitive.get(primitive.id) ?? [],
         definitions: getPrimitiveDefinitions(primitive, conceptsById),
@@ -32,7 +36,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { primitive, related, linkedConcepts, definitions } = Astro.props;
+const { primitive, related, linkedConcepts, definitions, previous, next } = Astro.props;
 const { data } = primitive;
 const layerId = primitiveLayerId(data.layer);
 const owner = primitiveOwners[data.ownership.kind];
@@ -58,9 +62,9 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.pri
     <div class="definition-grid">
       <h2>Definition / 定义</h2>
       <div>
-        {definitions.map((definition) => (
+        {definitions.map((definition, index) => (
           <div class="primitive-definition">
-            <p><strong>{definition.name}.</strong> {definition.text}</p>
+            <CopyDefinition name={`${data.term}: ${definition.name}`} statusId={`${primitive.id}-definition-copy-${index}`}><p><strong>{definition.name}.</strong> <span data-definition-body>{definition.text}</span></p></CopyDefinition>
             {definition.concept && <a href={pathWithBase(`/concepts/${definition.concept}/`)}>Read the concept →</a>}
           </div>
         ))}
@@ -129,6 +133,7 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.pri
     </details>
 
     <a class="primitive-back" href={pathWithBase(`/primitives/#${layerId}`)}>Back to primitive directory ↑</a>
+    <RecordNavigation kind="primitives" previous={previous} next={next} />
   </article>
 </StarlightPage>
 

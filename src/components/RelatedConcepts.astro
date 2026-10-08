@@ -9,9 +9,10 @@ const { concepts } = Astro.props;
 <div class="related-grid">
   {concepts.map((concept) => (
     <a href={pathWithBase(`/concepts/${concept.id}/`)} class="related-item">
-      <span>{categoryMeta[concept.data.category].code}</span>
+      <span class="related-category">{categoryMeta[concept.data.category].code}</span>
       <strong>{concept.data.term}</strong>
       <small>{concept.data.zh}</small>
+      <p class="related-summary">{concept.data.summary}</p>
       <i aria-hidden="true">↗</i>
     </a>
   ))}

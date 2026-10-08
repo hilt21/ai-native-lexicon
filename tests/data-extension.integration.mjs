@@ -32,7 +32,7 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     await writeFile(join(root, 'nodes/how.yaml'), stringify({ ...node, type: 'tool' }));
     await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
     const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
-    assert.equal(dataset.schema_version, '1.3.0');
+    assert.equal(dataset.schema_version, '1.4.0');
     assert.equal(dataset.counts.skill_maps, baseline.skillMaps.length + 1);
     const exportedMatt = dataset.skill_maps.find((map) => map.id === 'mattpocock');
     assert.equal(exportedMatt.schema_version, '1.1.0');
@@ -241,6 +241,8 @@ test('inline and concept-defined Primitives use the shared contract in deployed 
     const concept = {
       ...originalConcept,
       term: 'L2 Defining Concept',
+      examples: [{ context: 'An isolated reader compares definitions.', example: 'Read the shared definition on either detail page.' }],
+      distinguish_from: [{ target: 'verification', distinction: 'This fixture demonstrates projection rather than verification practice.' }],
       definition,
       primitives: ['l2-defined-primitive'],
       added: '2026-10-06',
@@ -283,8 +285,16 @@ test('inline and concept-defined Primitives use the shared contract in deployed 
     assert.ok(detail.includes('href="/ai-native-lexicon/primitives/#layer-structure-representation"'));
     const conceptPage = await readFile(join(directory, 'dist/concepts/l2-primitive-concept/index.html'), 'utf8');
     assert.ok(conceptPage.includes('href="/ai-native-lexicon/primitives/l2-defined-primitive/"'));
+    assert.ok(conceptPage.includes(concept.examples[0].context));
+    assert.ok(conceptPage.includes(concept.examples[0].example));
+    assert.ok(conceptPage.includes(concept.distinguish_from[0].distinction));
+    assert.ok(conceptPage.includes('href="/ai-native-lexicon/concepts/verification/"'));
     const dataset = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
     const exported = dataset.primitives.find(({ slug }) => slug === 'l2-defined-primitive');
+    assert.equal(dataset.schema_version, '1.4.0');
+    assert.deepEqual(dataset.concepts.find(({ slug }) => slug === 'l2-primitive-concept').examples, concept.examples);
+    assert.deepEqual(dataset.concepts.find(({ slug }) => slug === 'l2-primitive-concept').distinguish_from, concept.distinguish_from);
+    assert.deepEqual(dataset.concepts.find(({ slug }) => slug === 'context').examples, []);
     assert.equal(exported.added, '2026-10-06T00:00:00.000Z');
     assert.deepEqual(exported.definitions, [{ concept: 'l2-primitive-concept' }]);
 
@@ -459,7 +469,7 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     const exported = first.speaking_cards?.find((card) => card.number === number);
     assert.deepEqual(exported, guide);
     assert.equal(first.version, '0.2.0');
-    assert.equal(first.schema_version, '1.3.0');
+    assert.equal(first.schema_version, '1.4.0');
     assert.deepEqual(first.counts, { concepts: first.concepts.length, primitives: first.primitives.length, speaking_cards: numbers.length + 1, skill_maps: first.skill_maps.length });
     const href = `/ai-native-lexicon/speaking-card/#card-${String(number).padStart(2, '0')}`;
     const search = await readFile(join(directory, 'dist/search/index.html'), 'utf8');

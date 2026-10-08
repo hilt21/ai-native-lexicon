@@ -35,4 +35,15 @@ sources:
     section: 最终原语集 — Verification / Evaluation
     basis: report-synthesis
     verification: unverified
+  - title: NASA Systems Engineering Handbook — 5.3 Product Verification
+    section: 5.3 Product Verification; 5.3.1.1 Inputs; 5.3.1.2.2 Perform Product
+      Verification
+    basis: editorial-synthesis
+    verification: unverified
+    url: https://www.nasa.gov/reference/5-3-product-verification/
+  - title: Evaluation best practices — OpenAI
+    section: What are evals?; How to read evals; Design your eval process
+    basis: editorial-synthesis
+    verification: unverified
+    url: https://developers.openai.com/api/docs/guides/evaluation-best-practices
 added: 2026-09-23

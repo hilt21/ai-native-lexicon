@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import { categoryNames } from '../taxonomy/categories.mjs';
-import { codepointText, isoDate, slugReferences, sourceUri } from './rules.mjs';
+import { codepointText, isoDate, slugReferences, slug, sourceUri } from './rules.mjs';
 
 export const conceptInputSchema = z.object({
   term: codepointText(2),
@@ -8,6 +8,8 @@ export const conceptInputSchema = z.object({
   aliases: z.array(z.string().trim().min(1).regex(/\S/))
     .refine((values) => new Set(values.map((value) => value.toLowerCase())).size === values.length, 'Duplicate aliases are not allowed')
     .meta({ uniqueItems: true }).default([]),
+  examples: z.array(z.object({ context: z.string().min(1).regex(/\S/), example: z.string().min(1).regex(/\S/) }).strict()).default([]),
+  distinguish_from: z.array(z.object({ target: slug, distinction: z.string().min(1).regex(/\S/) }).strict()).default([]),
   category: z.enum(categoryNames),
   status: z.enum(['foundational', 'emerging', 'evolving', 'contested']),
   summary: codepointText(40, 240),

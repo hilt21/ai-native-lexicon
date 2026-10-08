@@ -18,7 +18,7 @@ export function catalogSearchRecords(concepts: Concept[], primitives: Primitive[
     ...concepts.map(({ id, data }) => ({
       identity: `concept:${id}`, type: 'concept' as const, title: data.term,
       href: pathWithBase(`/concepts/${id}/`), summary: data.summary, secondary: `${data.zh} · ${data.category}`,
-      fields: [field('Title', data.term), field('Chinese name', data.zh), field('Aliases', data.aliases.join(' ')), field('Category', data.category), field('Summary', data.summary, true, 'en'), field('Definition', data.definition, true, 'en'), field('Related concepts', references(data.related, conceptNames)), field('Linked primitives', references(data.primitives, primitiveNames))],
+      fields: [field('Title', data.term), field('Chinese name', data.zh), field('Aliases', data.aliases.join(' ')), field('Category', data.category), field('Summary', data.summary, true, 'en'), field('Definition', data.definition, true, 'en'), ...data.examples.flatMap((item) => [field('Example context', item.context, true, 'en'), field('Example', item.example, true, 'en')]), ...data.distinguish_from.map((item) => field('Distinction', item.distinction, true, 'en')), field('Related concepts', references(data.related, conceptNames)), field('Linked primitives', references(data.primitives, primitiveNames))],
     })),
     ...primitives.map(({ id, data }) => ({
       identity: `primitive:${id}`, type: 'primitive' as const, title: data.term,

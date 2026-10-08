@@ -35,6 +35,8 @@ test('semantic changes in each content type and taxonomy change the dataset vers
   const version = createDatasetVersion(content);
   for (const change of [
     (data) => { data.concepts[0].term = 'Changed Concept'; },
+    (data) => { data.concepts[0].examples = [{ context: 'A setting.', example: 'A new illustration.' }]; },
+    (data) => { data.concepts[0].distinguish_from = [{ target: 'agent', distinction: 'A meaningful difference.' }]; },
     (data) => { data.primitives[0].term = 'Changed Primitive'; },
     (data) => { data.speaking_cards[0].coreIdea = 'A changed speaking idea.'; },
     (data) => { data.taxonomy.categories[0].description = 'A changed category boundary.'; },

@@ -1,0 +1,15 @@
+---
+import { pathWithBase } from '../lib/catalog';
+interface Entry { id: string; data: { term: string } }
+interface Props { kind: 'concepts' | 'primitives'; previous?: Entry; next?: Entry }
+const { kind, previous, next } = Astro.props;
+const label = kind === 'concepts' ? 'Concept' : 'Primitive';
+---
+
+<nav class="record-navigation" aria-label={`${label} A–Z`}>
+  <p class="eyebrow">CONTINUE READING / {label.toUpperCase()} A–Z</p>
+  <div>
+    {previous && <a rel="prev" href={pathWithBase(`/${kind}/${previous.id}/`)}><span>← Previous</span><strong>{previous.data.term}</strong></a>}
+    {next && <a rel="next" href={pathWithBase(`/${kind}/${next.id}/`)}><span>Next →</span><strong>{next.data.term}</strong></a>}
+  </div>
+</nav>

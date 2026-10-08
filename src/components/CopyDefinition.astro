@@ -1,0 +1,33 @@
+---
+interface Props { name: string; statusId: string }
+const { name, statusId } = Astro.props;
+---
+
+<copy-definition>
+  <slot />
+  <div class="definition-actions">
+    <button type="button" aria-label={`Copy definition: ${name}`} aria-describedby={statusId}>Copy definition</button>
+    <span id={statusId} role="status" aria-live="polite" data-copy-status></span>
+  </div>
+</copy-definition>
+
+<script>
+  class CopyDefinition extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector('button');
+      const body = this.querySelector<HTMLElement>('[data-definition-body]');
+      const status = this.querySelector<HTMLElement>('[data-copy-status]');
+      if (!button || !body || !status) throw new Error('Copy definition requires a button, displayed body and status');
+      button.addEventListener('click', async () => {
+        status.textContent = '';
+        try {
+          await navigator.clipboard.writeText(body.innerText.trim());
+          status.textContent = 'Definition copied.';
+        } catch {
+          status.textContent = 'Could not copy the definition. Select the text and copy it manually.';
+        }
+      });
+    }
+  }
+  customElements.define('copy-definition', CopyDefinition);
+</script>

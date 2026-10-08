@@ -1,5 +1,7 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+import RecordNavigation from '../../components/RecordNavigation.astro';
+import CopyDefinition from '../../components/CopyDefinition.astro';
 import RelatedConcepts from '../../components/RelatedConcepts.astro';
 import SpeakingCardLinks from '../../components/SpeakingCardLinks.astro';
 import { getSpeakingCards } from '../../lib/speaking-cards';
@@ -9,17 +11,17 @@ import { categoryMeta, getConcepts, getPrimitives, pathWithBase } from '../../li
 export async function getStaticPaths() {
   const [concepts, primitiveCatalog] = await Promise.all([getConcepts(), getPrimitives()]);
   const primitivesById = new Map(primitiveCatalog.map((entry) => [entry.id, entry]));
-  return concepts.map((concept) => {
+  return concepts.map((concept, index) => {
     const primitives = concept.data.primitives.map((slug) => {
       const primitive = primitivesById.get(slug);
       if (!primitive) throw new Error(`${concept.id}: missing primitive ${slug}`);
       return primitive;
     });
-    return { params: { slug: concept.id }, props: { concept, concepts, primitives } };
+    return { params: { slug: concept.id }, props: { concept, concepts, primitives, previous: concepts[index - 1], next: concepts[index + 1] } };
   });
 }
 
-const { concept, concepts, primitives } = Astro.props;
+const { concept, concepts, primitives, previous, next } = Astro.props;
 const meta = categoryMeta[concept.data.category];
 const repository = process.env.GITHUB_REPOSITORY;
 const editUrl = repository
@@ -50,7 +52,7 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.con
 
     <div class="definition-grid">
       <h2>Working definition</h2>
-      <p>{concept.data.definition}</p>
+      <CopyDefinition name={concept.data.term} statusId={`${concept.id}-definition-copy`}><p data-definition-body>{concept.data.definition}</p></CopyDefinition>
     </div>
     <div class="definition-grid">
       <h2>Why it matters</h2>
@@ -60,6 +62,24 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.con
       <div><span>USE IT WHEN</span><p>{concept.data.when_to_use}</p></div>
       <div><span>WATCH FOR</span><p>{concept.data.anti_pattern}</p></div>
     </div>
+
+    {concept.data.examples.length > 0 && (
+      <section class="reading-examples">
+        <h2>Examples</h2>
+        <p class="reading-note">Editorial illustrations; these examples are not verified factual reports.</p>
+        {concept.data.examples.map((item) => <div class="definition-grid"><h3>{item.context}</h3><p>{item.example}</p></div>)}
+      </section>
+    )}
+    {concept.data.distinguish_from.length > 0 && (
+      <section class="reading-distinction">
+        <h2>Distinguish from</h2>
+        {concept.data.distinguish_from.map((item) => {
+          const target = concepts.find((entry) => entry.id === item.target);
+          if (!target) throw new Error(`${concept.id}: missing distinction target ${item.target}`);
+          return <div class="definition-grid"><h3><a href={pathWithBase(`/concepts/${target.id}/`)}>{target.data.term}</a></h3><p>{item.distinction}</p></div>;
+        })}
+      </section>
+    )}
 
     {concept.data.sources.length > 0 && <section class="concept-sources"><h2>Sources</h2><ul>{concept.data.sources.map((source) => <li><a href={source.url}>{source.title}</a></li>)}</ul></section>}
 
@@ -81,5 +101,6 @@ const linkedSpeakingCards = (await getSpeakingCards()).filter((card) => card.con
       <h2>Related concepts</h2>
       <RelatedConcepts concepts={related} />
     </section>
+    <RecordNavigation kind="concepts" previous={previous} next={next} />
   </article>
 </StarlightPage>

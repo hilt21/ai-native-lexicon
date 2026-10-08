@@ -13,6 +13,13 @@ export function validateConceptReferences(records) {
       if (related === slug) errors.push(`${file}: concept cannot relate to itself`);
       if (!slugs.has(related)) errors.push(`${file}: related concept "${related}" does not exist`);
     }
+    const distinctions = new Set();
+    for (const { target } of data.distinguish_from ?? []) {
+      if (target === slug) errors.push(`${file}: distinguish_from cannot reference itself`);
+      if (!slugs.has(target)) errors.push(`${file}: distinguish_from target "${target}" does not exist`);
+      if (distinctions.has(target)) errors.push(`${file}: duplicate distinguish_from target "${target}"`);
+      distinctions.add(target);
+    }
     const normalizedTerm = data.term.trim().toLowerCase();
     if (terms.has(normalizedTerm)) errors.push(`${file}: duplicate term also found in ${terms.get(normalizedTerm)}`);
     terms.set(normalizedTerm, file);

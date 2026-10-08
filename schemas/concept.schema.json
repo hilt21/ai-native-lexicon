@@ -20,6 +20,53 @@
       },
       "uniqueItems": true
     },
+    "examples": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "context": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          },
+          "example": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "context",
+          "example"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "distinguish_from": {
+      "default": [],
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "target": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "distinction": {
+            "type": "string",
+            "minLength": 1,
+            "pattern": "\\S"
+          }
+        },
+        "required": [
+          "target",
+          "distinction"
+        ],
+        "additionalProperties": false
+      }
+    },
     "category": {
       "type": "string",
       "enum": [
