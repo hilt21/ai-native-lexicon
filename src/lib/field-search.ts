@@ -12,7 +12,7 @@ export interface SearchField { label: string; value: string; context?: boolean; 
 export interface SearchRecord { identity: string; type: SearchKind; title: string; fields: SearchField[] }
 
 export function validSearchKind(value: string) {
-  return searchKinds.some((kind) => kind.value === value) ? value : '';
+  return searchKinds.find((kind) => kind.value === value)?.value ?? '';
 }
 
 function normalized(value: string) { return value.toLowerCase().trim(); }

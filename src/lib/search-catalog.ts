@@ -34,7 +34,7 @@ export function catalogSearchRecords(concepts: Concept[], primitives: Primitive[
   for (const map of maps) {
     records.push({ identity: `skill-map:${map.id}`, type: 'skill-map', title: map.data.title, href: mapLink(map.id), summary: map.data.summary, secondary: map.data.scope,
       titleLanguage: textLang(map.data, 'title'), summaryLanguage: textLang(map.data, 'summary'), secondaryParts: [{ text: map.data.scope, lang: textLang(map.data, 'scope') }],
-      fields: [field('Title', map.data.title), field('Summary', map.data.summary, true, textLang(map.data, 'summary')), field('Scope', map.data.scope, true, textLang(map.data, 'scope')), ...map.data.audience.map((value, index) => field('Audience', value, false, textLang(map.data, `audience.${index}`)))],
+      fields: [field('Title', map.data.title), field('Summary', map.data.summary, true, textLang(map.data, 'summary')), field('Scope', map.data.scope, true, textLang(map.data, 'scope')), ...map.data.audience.map((value, index) => field('Audience', value, true, textLang(map.data, `audience.${index}`)))],
     });
     for (const node of map.data.nodes) {
       const typeLabel = map.data.taxonomy.types.find((type) => type.id === node.type)?.label ?? '';

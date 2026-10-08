@@ -9,7 +9,7 @@ Speaking Guide identity is its positive `number`. Its canonical page target is `
 | Field | Meaning |
 | --- | --- |
 | `version` | Retained legacy edition metadata, currently `0.2.0`; existing consumers may continue reading it. |
-| `schema_version` | Version of the dataset export shape, currently `1.3.0`, adding Concept `aliases` (default `[]`) while retaining Skill Map text language annotations while retaining previous arrays/fields and version/count metadata. Change deliberately when the export contract changes. |
+| `schema_version` | Version of the dataset export shape, currently `1.3.0`, adding Concept `aliases` (default `[]`) while retaining Skill Map text language annotations, previous arrays/fields and version/count metadata. Change deliberately when the export contract changes. |
 | `dataset_version` | `sha256:` digest of normalized formal content and both taxonomy configurations. It identifies content, independently of export time or deployment location. |
 | `generated_at` | UTC build timestamp. A new build may change it even when content is identical. |
 | `counts` | Actual array lengths keyed by `concepts`, `primitives`, `speaking_cards`, `skill_maps`. |

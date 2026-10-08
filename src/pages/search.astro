@@ -36,15 +36,33 @@ const records = catalogSearchRecords(concepts, primitives, speakingCards, maps);
   </div>
   <p class="search-empty" id="search-empty" hidden>No matching entry yet. Try a broader word or propose a missing term.</p>
   <script>
-    import { matchRecords, validSearchKind, type SearchRecord, type SearchKind } from '../lib/field-search';
+    import { matchRecords, validSearchKind, type SearchRecord, type SearchField } from '../lib/field-search';
     const input = document.querySelector<HTMLInputElement>('#concept-search')!;
     const type = document.querySelector<HTMLSelectElement>('#search-type')!;
     const count = document.querySelector<HTMLElement>('#search-count')!;
     const empty = document.querySelector<HTMLElement>('#search-empty')!;
     const container = document.querySelector<HTMLElement>('#search-results')!;
     const entries = [...container.querySelectorAll<HTMLElement>('[data-search]')];
-    const byIdentity = new Map(entries.map((entry) => [entry.dataset.searchIdentity!, entry]));
-    const records: SearchRecord[] = entries.map((entry) => ({ identity: entry.dataset.searchIdentity!, type: entry.dataset.searchType as SearchKind, title: entry.dataset.searchTitle!, fields: JSON.parse(entry.dataset.searchFields!) }));
+    function isSearchField(value: unknown): value is SearchField {
+      return typeof value === 'object' && value !== null
+        && 'label' in value && typeof value.label === 'string'
+        && 'value' in value && typeof value.value === 'string'
+        && (!('context' in value) || typeof value.context === 'boolean')
+        && (!('lang' in value) || typeof value.lang === 'string');
+    }
+    function readSearchRecord(entry: HTMLElement): SearchRecord {
+      const { searchIdentity: identity, searchTitle: title, searchFields: serialized } = entry.dataset;
+      const kind = validSearchKind(entry.dataset.searchType ?? '');
+      const context = `Catalog search record "${identity ?? '(missing identity)'}"`;
+      if (!identity || title === undefined || serialized === undefined || !kind) throw new Error(`${context}: missing metadata or invalid content type`);
+      let fields: unknown;
+      try { fields = JSON.parse(serialized); }
+      catch (error) { throw new Error(`${context}: malformed serialized fields`, { cause: error }); }
+      if (!Array.isArray(fields) || !fields.every(isSearchField)) throw new Error(`${context}: invalid serialized field shape`);
+      return { identity, title, type: kind, fields };
+    }
+    const records = entries.map(readSearchRecord);
+    const byIdentity = new Map(records.map((record, index) => [record.identity, entries[index]!]));
     function updateSearch() {
       const matches = matchRecords(records, input.value, type.value);
       for (const entry of entries) entry.hidden = true;

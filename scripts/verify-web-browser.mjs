@@ -191,6 +191,24 @@ try {
     assert.ok(await page.locator(`[data-search][href="${base}/concepts/mcp/"]`).isVisible());
     assert.equal(new URL(page.url()).searchParams.get('keep'), '1');
   });
+  await check('malformed serialized catalog fields fail with record context', async () => {
+    for (const [attribute, corrupted] of [['data-search-fields', 'not-json'], ['data-search-fields', '[{&quot;label&quot;:&quot;Title&quot;,&quot;value&quot;:42}]'], ['data-search-type', 'unknown-kind']]) {
+      const negative = await browser.newContext();
+      try {
+        const damaged = await negative.newPage(); const failures = [];
+        damaged.on('pageerror', (error) => failures.push(error.message));
+        await damaged.route(`${origin}/search/`, async (route) => {
+          const response = await route.fetch(); const html = await response.text();
+          const replaced = html.replace(/<a[^>]*data-search-identity="concept:context"[^>]*>/, (row) => row.replace(new RegExp(`${attribute}="[^"]*"`), `${attribute}="${corrupted}"`));
+          assert.notEqual(replaced, html);
+          await route.fulfill({ response, body: replaced });
+        });
+        await damaged.goto(`${origin}/search/`);
+        await damaged.waitForTimeout(30);
+        assert.match(failures.join('\n'), /Catalog search record "concept:context"/);
+      } finally { await negative.close(); }
+    }
+  });
   for (const theme of ['light', 'dark']) for (const width of [390, 1440]) {
     await page.setViewportSize({ width, height: 960 });
     for (const route of ['', 'search/?q=persistence&type=concept']) {

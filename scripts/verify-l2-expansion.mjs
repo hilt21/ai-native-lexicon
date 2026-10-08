@@ -146,7 +146,8 @@ try {
   const anchor = `card-${String(guide.number).padStart(2, '0')}`;
   await save(conceptFile, concept); await save(primitiveFile, primitive); await save(cardFile, guide);
   const mapRoot = 'src/data/skill-maps/l2-acceptance-map';
-  const acceptanceMap = { ...mapInput, title: 'Quasar', summary: 'Quasar acceptance map.' };
+  const audience = '为首次验证 CelestialAudience 的读者提供参考。';
+  const acceptanceMap = { ...mapInput, schema_version: '1.1.0', title: 'Quasar', summary: 'Quasar acceptance map.', audience: [audience], text_languages: { 'audience.0': 'zh-Hans' } };
   const acceptanceNode = { ...nodeInput, title: 'Quasar Node', summary: 'Quasar acceptance capability.' };
   const acceptanceJourney = { title: 'Quasar Journey', summary: 'Quasar acceptance guidance.', when_to_use: ['Validate canonical projections.'], outputs: ['A checked catalog.'], variants: [{ id: 'normal', title: 'Validate', steps: [{ title: 'Read', why: 'Inspect canonical inputs.', nodes: ['node'] }] }] };
   const mapFiles = [[`${mapRoot}/map.yaml`, acceptanceMap], [`${mapRoot}/relations.yaml`, { relations: [] }], [`${mapRoot}/nodes/node.yaml`, acceptanceNode], [`${mapRoot}/nodes/retired.yaml`, { title: 'Retained Quasar Node', summary: 'A retained capability.', type: 'tool', status: 'retired', retirement_note: 'Use the current capability.' }], [`${mapRoot}/journeys/journey.yaml`, acceptanceJourney]];
@@ -256,7 +257,7 @@ try {
   if (browser) {
     await mkdir(evidence, { recursive: true });
     const { verifyBrowser } = await import('./verify-l2-browser.mjs');
-    report.browserResult = await verifyBrowser(directory, evidence, { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId: 'l2-acceptance-map' });
+    report.browserResult = await verifyBrowser(directory, evidence, { base, category, layer, conceptSlug, primitiveSlug, concept, primitive, guide, anchor, mapId: 'l2-acceptance-map', audience });
     report.viewports = report.browserResult.viewports;
     stage('real browser search, disclosure, relationship navigation and overflow');
   }
