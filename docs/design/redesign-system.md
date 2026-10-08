@@ -1,65 +1,51 @@
 # Editorial field guide design system
 
-Approved direction: preserve the paper/ink/acid-green identity and existing information architecture while making the lexicon easier to scan and read. This document describes the implemented primitives, not a new feature roadmap.
+Preserve the paper/ink/acid-green identity while making the lexicon easy to scan and read. This document describes current display and interaction contracts; verification reports in `docs/audits/` describe particular runs.
 
 ## Sources of truth
 
-- `src/styles/tokens.css`: theme colors, typography scale, spacing, reading width, control size, focus color, motion duration and action shadow. Starlight variables map into this palette.
-- `src/styles/custom.css`: shared display rules and responsive layouts. No page imports its own competing stylesheet.
-- `src/data/concepts/*.yaml`: unchanged canonical content.
+- `src/styles/tokens.css` owns semantic theme, typography, spacing, reading-width, control, focus and motion tokens, including the Starlight palette mapping.
+- `src/styles/custom.css` owns shared layouts. Component-scoped styles handle local structure using the same tokens.
+- Canonical YAML supplies content and taxonomy; [the content boundary](../../src/domain/content/README.md) supplies validated inputs. [Translation overlays](translation-overlay.md) supply reviewed display prose separately.
 
-Use semantic tokens (`--lex-text-small`, `--lex-space-6`, `--lex-muted`) instead of introducing a new local scale. Preserve the existing Starlight navigation and theme controls.
+Use semantic tokens rather than a competing local scale. Preserve native Starlight navigation, theme controls, focus, skip links and reduced-motion behavior.
 
-## Reusable primitives
+## Shared components
 
-| Primitive | Consumers | Contract |
+| Component | Consumers | Contract |
 | --- | --- | --- |
-| `ConceptRow` | `ConceptList`, Search | One link per record. `number` supplies an optional ordinal; `showCategory` controls category display; `searchText` passes the existing search index through unchanged. Mobile keeps the summary. |
-| `ConceptList` | Home, all concepts, category details | Iterates records without changing their ordering or filtering. |
-| `CategoryGrid` | Home, categories | `headingLevel` defaults to h3 below the homepage h2, and uses h2 on the category index. |
-| `RelatedConcepts` | Concept details | Existing relationship links, shared typography, border and spacing tokens. |
-| `.button-primary`, `.button-dark`, `.text-link` | Home, 404 | Shared size, type, focus and pressed states. |
-| `.map-summary` | Five Skill Map single-paragraph summary surfaces | Block text limited by the available width and existing reading measure. |
-| `.page-intro`, `.category-masthead`, `.definition-grid` | Listing and reading pages | Shared lead text, reading measure and spacing. |
-| `.search-input-wrap` | Search | Existing label, native search input, visible focus-within and live count. |
-| `SkipLink` | Starlight shell | Keeps the default inner-page link; splash pages target their visible focusable content instead of the hidden generated title. |
+| `CatalogRow` | Knowledge, resource and search directories | One primary record link, explicit text languages, visible summary and optional marker/ordinal. |
+| `ConceptRow`, `PrimitiveRow` | Knowledge directories | Receive localized records; retain English terms, existing Chinese names and actual summary language. |
+| `ConceptList` | Home, all concepts, category details | Preserve caller ordering and filtering; optional category markers. |
+| `CategoryGrid` | Home, categories | Preserve taxonomy order, derive member counts, resolve label/description languages; h3 below Home's h2, h2 on the category index. |
+| `RelatedConcepts` | Concept details | Resolve linked summaries from the same localized catalog; preserve target identities. |
+| `CopyDefinition`, `RecordNavigation` | Concept/Primitive details | Copy the rendered definition body with named actions and success/failure feedback; canonical English A–Z neighbors stay within the same type. |
+| `TranslationCoverage`, `LocalizedPage` | Localized reading views | Expose missing/draft/stale fallback and resource edition boundaries; use shared publication eligibility. |
+| `LanguageSelect` | Header, mobile splash Home | Reuse native Select; preserve query parameters and only valid destination fragments. Home exposes native theme/language controls below 50rem because splash has no sidebar menu. |
+| `SkipLink` | Starlight shell | Splash pages focus visible content; ordinary pages keep the native inner-page target. |
 
-Rows switch at a **40rem container width**, so they also adapt when a desktop sidebar reduces the available space. Overall page layouts switch at 50rem, category grids at 72rem and 30rem. Breakpoints are CSS query boundaries; CSS variables cannot be used directly in these conditions.
+Catalog rows switch at a 40rem container width and Primitive rows at 44rem, adapting to sidebar-constrained desktop space. Page layouts switch at 50rem; category grids also use 72rem and 30rem boundaries. Keep summaries visible at narrow widths. CSS media/container query boundaries remain literal values.
 
-## Migration and verification — 2026-09-08
+## Layout and reading
 
-| Page group | Reused system | Desktop/mobile checks |
-| --- | --- | --- |
-| Home | Globalized approved tokens, buttons, grid and rows | Preserved content, sections, navigation and responsive summaries; splash skip link focuses visible content. |
-| All concepts | `ConceptList` → `ConceptRow` | 30 entries; summaries remain visible; no overflow. |
-| Category index | `CategoryGrid` | Eight categories; h1 → h2 hierarchy; no overflow. |
-| Category details | `ConceptList` without category column | Correct summary placement on desktop; stacked mobile layout. Representative route: `/categories/context/`. |
-| Search | `ConceptRow` | Slash shortcut, `context engineering` returns one result, unmatched query returns zero and exposes empty state; clearing restores all records. |
-| Concept details | Reading tokens, practice grid, `RelatedConcepts` | Definition and practice content remain readable; related links retained. Representative route: `/concepts/context-engineering/`. |
-| About | Shared reading measure and Starlight heading-wrapper styling | Desktop table of contents and mobile layout retained. |
-| 404 | Shared display type and button | Return-home link and visible splash skip target retained. |
+Home presents navigation and the primary browse action, then featured concepts, category orientation and canonical-data projections. Feature selection belongs to the view; record bodies and taxonomy enums come from YAML. Counts reflect the current catalog. The dataset action always targets the canonical root endpoint, including from Chinese Home.
 
-Browser validation used actual Astro pages from a clean dependency installation, not the earlier static mock preview. Eight representative routes were checked at 390, 768, 1024 and 1440 CSS pixels in light mode, and 390/1440 in dark mode (48 combinations). All had one visible h1, one main landmark, no unnamed visible links, no document overflow, and no hidden concept summaries. Screenshots were inspected for each page group on desktop and mobile.
+Concept detail pages present the working definition, purpose/use/anti-pattern, optional ordered examples and distinctions, sources and relationships. Examples remain editorial illustrations. Distinctions link existing Concept targets. Primitive details resolve referenced Concept definitions without copying their prose into Primitive records. Sources project their canonical arrays; Copy preserves the displayed language and body.
 
-Accessibility checks included search labels/live count, keyboard search shortcut, visible focus, both splash skip targets, category heading hierarchy and reduced-motion emulation. Reduced motion produced no hero animation, zero-duration transitions and automatic scrolling. Measured token contrast ratios:
+Single-paragraph map leads use `.map-summary`; `.page-intro` retains its two-child layout. Scope UI grid margin resets to direct children so ordinary Markdown spacing survives. Use `--lex-control-border` for interactive filter borders and `--lex-line` for decorative separators. Shared buttons retain readable labels, visible focus and pressed states.
 
-| Pair | Light | Dark |
-| --- | --- | --- |
-| Primary text / canvas | 15.52:1 | 15.68:1 |
-| Secondary text / canvas | 5.40:1 | 8.31:1 |
-| Focus / canvas | 5.89:1 | 15.32:1 |
-| Button text / acid fill | 15.02:1 | 15.02:1 |
+## Search and map interaction
 
-These checks are not a full screen-reader or WCAG certification. Dynamic concept/category routes share verified templates; every individual record was validated by the content tests and static build.
+Catalog field search counts unique records across six kinds, explains matching fields and preserves q/type state on initial render, edits, Clear, history and reload. The full matching/ranking contract is in [exports](../exports.md#catalog-field-search). Header Pagefind searches rendered pages/fragments, preserving native Cmd/Ctrl+K and ordinary punctuation input. Use native search controls rather than a global typing shortcut.
 
-## CSS retirement
+Skill Map directory controls own the displayed rows, count and empty state, including history restoration. Structure preserves taxonomy order, complete active membership counts and bounded examples of actual directed active-node relations. Journey order expresses guidance. Read [the map contract](skill-map.md) before changing those projections.
 
-- Removed `home.css` only after removing its sole import and promoting its approved styles.
-- Removed the old search-result presentation after Search switched to `ConceptRow`; retained the `[hidden]` rule used by filtering.
-- Removed the previous viewport rules that hid summaries and the legacy fixed-minimum row columns after container-based layouts were verified.
-- Removed duplicate declarations only where a later unconditional rule for the same selector/property superseded them. Kept shell, print and navigation styles supplied by Starlight.
-- No changes to concept schema, content records, search matching, exports or routes. The prior dataset differs only by its generated timestamp; `llms.txt` is byte-identical.
+## Language and publication
 
-Final verification: `npm run check`, `npm test` (6 tests), `npm run build` (44 pages), and `git diff --check` passed. After reinstalling from the unchanged lockfile, the original workspace also completed the full check/test/build chain. Its live Astro preview is available at `http://127.0.0.1:4324/`; the earlier port 4321 visual mock should no longer be used.
+Shared views in `src/views/` render English root and Chinese `zh-cn` routes after the deployment base. Use the same resolver for prose, reused summaries, search excerpts and Copy; annotate the smallest actual-language span. UI translations are separate from knowledge overlays. Application Resource bodies retain their source editions in Chinese chrome.
 
-WEB-01 keeps two-child `.page-intro` layouts and ordinary Markdown margins. UI grid direct children (`practice-grid`, `map-io`, `map-structure`) reset only block-start margins. Map filter borders use `--lex-control-border`; decorative separators retain `--lex-line`. Catalog field search includes Concept definitions and related names, explains its scope beside the input, and uses native input behavior with Starlight Cmd/Ctrl+K. The historical Slash shortcut checks above describe the earlier implementation.
+Keep native Head and locale configuration. HTML canonical/noindex/alternate policy and sitemap eligibility follow [the overlay contract](translation-overlay.md#routes-and-publication), including untranslated documentation fallbacks. Reader availability and Pagefind indexing are independent of crawler eligibility.
+
+## Verification
+
+Follow [repository verification](../../CONTRIBUTING.md#validation). Inspect changed pages in both themes at narrow/wide widths, keyboard focus and computed contrast, plus real BFCache/reload restoration when state changes. A static assertion or historical screenshot does not establish current rendered behavior. Keep unavailable screen-reader and actual 400% zoom checks explicitly unverified.

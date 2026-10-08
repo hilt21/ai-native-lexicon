@@ -16,8 +16,10 @@ them when terms or decisions are resolved.
 - `docs/adr/NNNN-short-title.md`: architecture decision records.
 
 These documents describe project terminology and decisions.
-Concepts, Primitives, and Speaking Cards remain canonical in their
-existing YAML collections; do not duplicate their records here.
+Knowledge and Application Resource records remain canonical in their
+own YAML collections; translation overlays remain separate display assets.
+Keep definitions and resource content in those records; use the glossary
+for shared vocabulary and ADRs for decisions.
 
 ## Vocabulary
 

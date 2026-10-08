@@ -20,7 +20,7 @@ The digest uses all validated record fields and category/layer metadata, sorts c
 
 `llms.txt` retains its Concept and Primitive sections and appends Speaking Guide title/core idea links with the deployment base and stable card anchor. The custom `/search/` reads the same collection and searches Guide titles, core ideas and referenced Concept/Primitive names (English/Chinese) and slugs.
 
-After adding a valid Guide YAML, run `npm run check`, `npm test`, `npm run build` and `npm run test:extension`. No manual search/export index is maintained. Schema rule changes additionally require `npm run schema:generate`; `npm run schema:check` only detects drift. Skill Map knowledge mappings remain a future contract and are not exported in 1.4.0.
+After Guide or export changes, follow [repository verification](../CONTRIBUTING.md#validation). No manual search/export index is maintained. Skill Map knowledge mappings remain a future contract and are not exported in 1.4.0.
 
 ## Skill Map projections
 
@@ -37,6 +37,8 @@ Language dictionary keys are sorted deterministically. Annotation values partici
 `/search/` projects six explicit record kinds: Concept, Primitive, Speaking Guide, Skill Map, Map Node and Task Journey. Each canonical identity contributes one result, including retained retired map records. Map results keep their owning map and annotated prose languages. English titles, existing Chinese terms and Concept aliases remain searchable alongside the previously supported fields and relation names. Concept example context/body and distinction prose produce direct match excerpts with field labels. Related-name matches express relevance, not dependency.
 
 The native query and type controls share a URL state (`q`, `type`), preserved across result visits, history and reloads; other query parameters survive edits and Clear. Complete canonical title matches rank before title prefixes, then other field matches; each group sorts by canonical title and stable identity. Matching fields and a direct prose excerpt explain the result. Header Pagefind still searches full rendered page text and counts pages/fragments, while the field search counts canonical records.
+
+Chinese field search uses the shared resolved display prose while retaining canonical English terms, aliases and existing Chinese names; excerpts carry actual-language annotations, including English fallback. Reader links stay in the requested locale. Native Pagefind indexes both rendered locales independently; crawler noindex does not exclude a page from reader search. These display/search projections are separate from canonical machine export data.
 
 ## Translation projections
 
