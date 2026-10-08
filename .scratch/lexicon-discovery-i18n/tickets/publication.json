@@ -1,0 +1,62 @@
+{
+  "repository": "hilt21/ai-native-lexicon",
+  "verified_date": "2026-10-08",
+  "issues": [
+    {
+      "body": "## What to build\n\n读者从首页更早看到具体 Concept，并能用英文名称、中文术语或 aliases 查找内容，按类型筛选并理解命中原因；访问结果后返回时能继续原来的查询。\n\n这是一条从 canonical 内容输入、公共目录验证、机器投影到首页／搜索和真实浏览器验收的完整路径。保留现有全局 Pagefind 与 Sources 展示。覆盖精简 spec 的 user stories 1–4、12。\n\n## Acceptance criteria\n\n- [ ] 实施前核对当前发布基线，不用较早模板覆盖已完成的 Sources、搜索范围说明、Skill Map inventory 或语言注释。保持现有领域类型、公开 slug／number／anchor、Starlight 壳及 paper／ink／acid-green 设计系统。\n- [ ] 首页精选 Concept 及 canonical summary 位于完整分类网格之前，保留全部概念／分类入口。数量从正式数据派生，不新增 collection ontology 或复制定义。首页将来源承诺限定为 canonical content，taxonomy 枚举继续从 YAML registry 生成。\n- [ ] Concept 支持可省略、默认空集合的英文 aliases；空白、重复及重复自身 term／zh 的值被拒绝。Node、CLI、portable Schema、Astro、搜索和正式 dataset 对新增字段的契约一致，未使用该字段的旧记录保持合法。\n- [ ] 字段搜索明确展示 Concept、Primitive、Speaking Guide、Skill Map、Map Node、Task Journey 六种内容类型；地图内容显示 owning map，退役状态保留。priority、category 和地图内类型作为附属信息，不代替通用类型标签。\n- [ ] All 与六种类型单选筛选、结果行、计数和空状态使用同一状态。q／type 写入 URL；未知 type 回退 All；输入、Clear、初始化、popstate、真实 BFCache／reload 恢复一致，其他无关参数保留。\n- [ ] 保持既有检索字段，并加入 aliases；canonical 英文名称与既有 zh 可搜索。完整标题命中优先于前缀，再显示其他字段匹配，组内按 canonical 标题和稳定身份确定性排序。\n- [ ] 结果说明命中的字段；直接正文命中有一段匹配上下文，既有关系名命中有相应说明。不得把 related 推断为依赖关系。按 canonical identity 去重，计数等于实际可见记录。\n- [ ] 保留现有 header Pagefind，不创建第三套索引；字段检索与全文检索的范围和计数单位说明准确。项目快捷键不干扰编辑控件、Pagefind 弹窗或正常标点输入。\n- [ ] aliases 的正式 export shape 变化按兼容性规则升级 schema_version；以现行 1.1.0 为基线可升级为 1.2.0。若另一票已扩展字段或升级版本，保留其字段、重新生成共享 Schema 并按同一规则递增，不回退或静默覆盖。\n- [ ] 复用 L2 隔离扩充主验收边界：独立 YAML → readCatalog／validateCatalog → CLI／Astro 生产子路径构建 → Pagefind enabled 的真实浏览器。混合六类型夹具验证 aliases、排序、命中上下文、筛选、空结果、Clear、URL 与历史恢复。\n- [ ] 相关 check／test／build／extension／L2 验收通过；检查 390px／1440px 与 light／dark 截图、键盘焦点、跳过链接、reduced-motion 和实际对比度。400% zoom 与屏幕阅读器检查按能力完成，缺失项明确 unverified。\n- [ ] 不改变顶级 IA，不加入复杂 facets、语义搜索、typed relations、knowledge_refs、额外机器接口或客户端框架。所需共享搜索记录整理在本票内先完成，无需单独预重构票。\n\n## Blocked by\n\nNone (can start immediately).\n\n",
+      "html_url": "https://github.com/hilt21/ai-native-lexicon/issues/37",
+      "labels": [
+        "ready-for-agent"
+      ],
+      "number": 37,
+      "state": "open",
+      "title": "首页与字段搜索：更快找到正确词条",
+      "blocked_by": [],
+      "verification": {
+        "body_matches_local": true,
+        "normalized_body_sha256": "61adcb55eac1c7e3169f96a10920f40593bff828890f1c0aee8488bfbfc3c8b9"
+      }
+    },
+    {
+      "body": "## What to build\n\n读者在 Concept／Primitive 详情中理解定义、案例、常见区别和来源限制，复制正在阅读的定义，并沿同类型 A–Z 或相关内容继续阅读。维护者获得四条记录的可审查证据结论。\n\n从新增 canonical 内容及来源，经共享字段／引用校验、正式导出、详情投影到真实阅读动作完整交付。覆盖精简 spec 的 user stories 5–9、12；不依赖首页或字段筛选改版。\n\n## Acceptance criteria\n\n- [ ] 在当前发布基线上保留既有 Sources、相关原语、Speaking Guide backlinks 和完整领域边界。所有引用、公开 slug／number／anchor 和既有可选字段保持兼容。\n- [ ] Concept 新增可省略、默认空集合的 examples 与 distinguish_from。examples 使用 context／example；distinguish_from 使用 target／distinction。未知字段、空白正文、悬空目标、自引用和重复目标被拒绝，Node、CLI、portable Schema、Astro 与正式导出一致。\n- [ ] context-engineering 与 harness 各有至少一个有意义的例子；存在真实混淆对象时给出区别说明，否则记录理由。详情从 canonical 数据投影，不复制到 Markdown；示例不冒充已核验事实。保留 summary 作为短说明，不新增 one-line definition。\n- [ ] Copy definition 复制当前详情实际展示的正文；Primitive 的 Concept 引用定义从该 Concept 取得，不手工维护副本。真实浏览器验证复制内容、可访问名称及成功／失败反馈；剪贴板拒绝不显示成功。\n- [ ] Concept 与 Primitive 各自采用同类型 canonical 英文标题的 A–Z 前后导航，slug 作为平局排序；首末边界正确，不同时新增第二套分类顺序导航。\n- [ ] Related Concept 预览显示目标 canonical summary；表达相关性，不添加未经策划的依赖／实现关系。\n- [ ] 证据试点覆盖 context-engineering、harness、context、verification-evaluation。每条有可定位来源、支持字段、限制、编辑综合说明和核验结果的审查摘要。\n- [ ] 使用各类型现有 sources 契约，保留原始报告来源和未核验状态。不把格式通过、来源链接存在、编辑接受或示例表达等同于事实认证；无法核实或仅部分支持时明确限制，可保留 unverified。\n- [ ] 内容语义提案与 Editorial Acceptance 分别记录；未经接受的候选内容不冒充正式知识。交付证据明确区分技术结果、内容审查与实际接受；不能以自动 verified 或全库来源覆盖率作为本票门槛。\n- [ ] 新字段引起正式 export shape 变化时按兼容性规则递增 schema_version，以 1.1.0 基线可升级为 1.2.0。若另一票已增加 aliases 或升级版本，保留其字段与版本迁移，并更新确定性 normalization，不冻结旧字段集合。\n- [ ] 通过 L2 隔离 YAML 扩充与公共目录边界，验证合法／非法输入、旧记录缺省行为、区别目标解析、正式 dataset 与详情内容一致。修改 Concept 定义后，它自己、Primitive 引用及 Copy 同步。\n- [ ] 相关 check／test／build／extension／L2 验收通过；生产子路径、Pagefind enabled 条件下检查 Sources、例子、区别、复制、A–Z 和相关链接，以及两主题／宽窄屏、键盘与可访问性。人工语义审查不被自动测试替代。\n- [ ] 不引入统一 Evidence／逐句 Claim 系统、typed relations、knowledge_refs、新复制格式或新学习路径类型。相关投影复用现有组件，无需独立重构票。\n\n## Blocked by\n\nNone (can start immediately).\n\n",
+      "html_url": "https://github.com/hilt21/ai-native-lexicon/issues/38",
+      "labels": [
+        "ready-for-agent"
+      ],
+      "number": 38,
+      "state": "open",
+      "title": "词条阅读：示例、区别、复制与证据试点",
+      "blocked_by": [],
+      "verification": {
+        "body_matches_local": true,
+        "normalized_body_sha256": "3bb36c4a3a420f526397ab465211b4e0cd580cddb6631a83224506e46a53a300"
+      }
+    },
+    {
+      "body": "## What to build\n\n读者能在相同知识记录上切换 English／简体中文，使用本语言的首页、目录、搜索、详情和复制动作；缺失、草稿或过期译文回退当前英文并清楚标注。译者独立维护、审查译文，来源变化只影响真正需要更新的翻译单元。\n\n以已完成的 canonical 字段、英文发现／阅读交互为基线，完整打通 overlay 输入、公共目录解析、Astro／Starlight 静态语言路由、真实页面与搜索、SEO、机器兼容和生产子路径验收。覆盖 user stories 10–11，并将 2–6、8、12 延伸到两种语言。首版仅 en／zh-CN，不承诺全站正文翻译完成。\n\n## Acceptance criteria\n\n- [ ] English Canonical 适用于 Concept／Primitive 正文与 taxonomy 语义；既有 zh 继续提供中文术语名与搜索兼容，来源标题保留原文。Translation Overlay 是独立编辑资产，渲染结果是 Content Projection。\n- [ ] 自动发现独立 YAML overlay，以 locale／kind／target_id 唯一定位。输入 schema_version 为 1.0.0；kind 支持 concept／primitive／category／layer，首版 locale 仅 zh-CN；Concept／Primitive 绑定 slug、category 绑定公开 slug、layer 绑定公开 anchor。重复身份、未知 locale、悬空目标和未知字段被公共输入边界拒绝。\n- [ ] units 使用 path、translation、source_fingerprint、review_status、reviewed_at。path 唯一且受对应内容契约的白名单约束；translation 是单元要求的文字或完整有序文字数组；draft／reviewed 状态合法，reviewed 有真实 ISO 审查日期，提供的译文不可空白，不照搬英文字符下限。\n- [ ] 支持 Concept 的正文、examples 正文与区别说明；Primitive 的正文、inline definition、composition、considerations、distinctions、ownership／priority 的 rationale 与 scope；taxonomy 的展示 label、description、question。禁止翻译改写身份、关系值、优先级枚举、ownership kind、来源 URL 和治理／核验状态。canonical term／zh 不再建立第二份中文名称。\n- [ ] 源 fingerprint 绑定目标身份、翻译单元与其定位上下文，使用确定性归一。排版、发现顺序、对象键顺序和无关 metadata 不使译文 stale；被翻译文字变化使相关单元 stale；数组位置依赖覆盖整个拥有数组，增删／重排不能把旧译文附到新成员。\n- [ ] 仅 reviewed 且 fingerprint 当前的单元进入发布正文。missing／draft／stale 回退当前英文并提供覆盖／过期提示，stale 由比较派生。自动生成只可产生 draft；reviewed 不意味着知识已核验。\n- [ ] 一个共享本地化目录解析边界驱动列表、详情、关系摘要、搜索和 Copy，返回实际语言及覆盖状态，不修改 canonical 输入。Primitive 引用 Concept 定义解析该 Concept 的当前本地化 definition，禁止把它复制到 Primitive overlay；英文 fallback 使用 lang=en，中文使用 lang=zh-CN。\n- [ ] Astro 静态预渲染与 Starlight 原生 i18n 只使用一套配置：英文 root locale、lang=en；中文路由键 zh-cn、lang=zh-CN。复用内置 UI 翻译，项目 UI 字典与知识 overlay 分开；不增加 SSR、翻译服务或浏览器语言自动跳转。\n- [ ] 保留无 en 前缀的旧英文 URL；中文前缀位于部署 base 之后。语言切换保留身份、有效 fragment 与 q／type；所有路由只含一次 base／locale。生成中文 home、知识列表／详情、category、搜索和 Primitive layer 页面，不复制知识记录或维护手工页面索引。\n- [ ] Starlight 说明页使用原生关联／fallback；custom YAML 投影自行执行字段级 fallback。Speaking Guide／Skill Map／Map Node／Task Journey 的中文壳保留原始 edition、最小元素语言注释，并注明正文不在首批覆盖范围；不把混合语言应用资源未经审查改写为英文。\n- [ ] 中文搜索使用 resolved 正文，并保留 canonical 英文名、aliases、zh 与既有相关名称；每个 canonical identity 一个结果，结果链接使用当前 locale，状态恢复沿用已完成的搜索契约。真实 Pagefind 验证页面语言、索引、结果目标和英文 fallback，不依赖源码断言。\n- [ ] Concept 的中文 summary／definition、Primitive 的中文 summary／scope 都有当前 reviewed 译文时才将该详情作为可索引中文版本；否则 noindex、canonical 指向英文且提示覆盖状态。可索引译文自指 canonical，hreflang 仅指真实可访问、有当前核心译文的页面；英文及 x-default 关系正确。中文目录说明与导航完整翻译、语言标注正确后可索引。\n- [ ] 未知记录／locale 正确 404，fallback 不掩盖悬空引用。既有 dataset／llms 仍使用原始 canonical records 和各类型 edition；translation-only 编辑不改变它们或 canonical dataset_version，不新增翻译导出 endpoint。\n- [ ] 两个试点 Concept 和至少一个 Primitive 具有经审查的中文核心译文，taxonomy 展示与中文 UI 可用。内容语义与译文接受分别留证；技术测试不替代 Editorial Acceptance 或事实核验。\n- [ ] 复用 L2 隔离输入 → 公共目录／CLI → Astro 生产子路径构建 → Pagefind enabled 的真实浏览器完整验收，覆盖 missing／partial／draft／stale、无关 metadata、数组重排、引用定义、非法 overlay 和无 overlay 的兼容场景。\n- [ ] 两语言实际页面中的选择器、搜索／Clear／历史恢复、Copy、A–Z、关系链接、lang、canonical／noindex／hreflang 和 export 均符合契约；相关 check／test／build／extension／L2 通过。检查 light／dark、390px／1440px、键盘、reduced-motion、计算对比度、实际 BFCache／reload／400% zoom；不可用的屏幕阅读器等检查明确 unverified。\n- [ ] 不启用 knowledge_refs、typed graph、应用资源完整翻译、第三语言、localized dataset、MCP 或新客户端框架。必要的 locale-aware 解析与链接整理作为本票前置工作完成，不单独拆框架票。\n\n## Blocked by\n\n- [#37 — 首页与字段搜索：更快找到正确词条](https://github.com/hilt21/ai-native-lexicon/issues/37)。需要稳定的 aliases／筛选／URL 状态、结果标签与搜索范围契约来实现中文投影。\n- [#38 — 词条阅读：示例、区别、复制与证据试点](https://github.com/hilt21/ai-native-lexicon/issues/38)。需要稳定的正文单元、examples／distinguish_from、Copy／A–Z 与来源呈现契约来实现翻译及 freshness。\n",
+      "html_url": "https://github.com/hilt21/ai-native-lexicon/issues/39",
+      "labels": [
+        "ready-for-agent"
+      ],
+      "number": 39,
+      "state": "open",
+      "title": "Astro 双语阅读：English Canonical + Translation Overlay",
+      "blocked_by": [
+        {
+          "html_url": "https://github.com/hilt21/ai-native-lexicon/issues/37",
+          "number": 37,
+          "state": "open"
+        },
+        {
+          "html_url": "https://github.com/hilt21/ai-native-lexicon/issues/38",
+          "number": 38,
+          "state": "open"
+        }
+      ],
+      "verification": {
+        "body_matches_local": true,
+        "normalized_body_sha256": "68e61f6509b7b9edd4e37970966f51213f44d02523a5f64a9af498ea448a8c2f"
+      }
+    }
+  ]
+}

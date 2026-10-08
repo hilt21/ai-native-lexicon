@@ -15,12 +15,14 @@ This repository is a data-first lexicon. Concepts and Primitives are knowledge r
 
 ## Skill Maps
 
-When adding or updating a map, use the [Skill Maps contribution guide](CONTRIBUTING.md#skill-maps) for the editing workflow and [approved field contract](docs/design/skill-map.md) for fields and UI behavior. Do not apply pstack's taxonomy to every ecosystem.
+When adding or updating a map, use the [Skill Maps contribution guide](CONTRIBUTING.md#skill-maps) for the editing workflow and [field contract](docs/design/skill-map.md) for fields and UI behavior. Each map, including pstack and mattpocock, owns its taxonomy and inventory. Read current scope and source editions from its canonical records.
 
 - Canonical records live in `src/data/skill-maps/<map-id>/map.yaml`, `relations.yaml`, `nodes/*.{yaml,yml}` and `journeys/*.{yaml,yml}`. Map directory names and node/journey filename slugs are stable public identities scoped to their map; title changes do not rename IDs.
 - Define types, optional layers/clusters and relationship labels in each map's `taxonomy`. New maps are discovered automatically; do not add ecosystem-specific routes, handwritten indexes or conditional branches. Empty collections/layers and nodes without a layer are valid.
 - Maintain node relationships only in `relations.yaml`; derive incoming/outgoing lists from it. Handoffs are explanatory text. Task Journeys express guidance and conditions, not executable workflows or authority. Internal references must resolve within the map; relationship cycles are valid.
 - Pin verified source commits before publication and distinguish official descriptions from editorial interpretations. For a new upstream revision, add a source snapshot ID and update `current_sources`; preserve existing snapshot targets and sources referenced by retained records. Compare previous/current assembled records with `validateSkillMapSnapshotChanges` during update review, because a single parse cannot prove historical immutability. Pending sources are development inputs rejected by publication checks. Preserve applicable upstream license notices.
+- For Matt Pocock inventory, distribution or invocation changes, read [the source audit](docs/audits/skill-map-mp-01.md) before reviewing the new pinned snapshot. Keep upstream inventory, plugin-distributed skills and locally installed skills distinct. Map prose is reference content; user-invoked skills require the user's invocation.
+- For multilingual Map, Node or Journey prose, follow the [text-language contract](docs/design/skill-map.md#text-language-annotations-map-input-110). Maintain explicit `text_languages` paths with their strings when arrays move, respect the owning map edition, and apply each hint to the smallest text element wherever reused.
 - Retire removed nodes/journeys with `status: retired` and `retirement_note` so detail URLs, evidence and exports survive. A node's optional `replaced_by` must target another active node; active journeys cannot recommend retired nodes.
 - Concept/Primitive/Speaking Guide mappings are a future contract. Do not add `knowledge_refs` or manual backlinks before their schema, reference validation and projections are explicitly activated; do not copy knowledge definitions into map records.
 
@@ -34,7 +36,15 @@ When adding or updating a map, use the [Skill Maps contribution guide](CONTRIBUT
 - Skill Map fields live in `src/domain/content/skill-map-input.mjs`; fixed-directory assembly lives in `read-skill-maps.mjs` and internal/source checks in `validate-skill-map-references.mjs` in the same directory. CLI and Astro share this reader; pages query the `skillMaps` collection via `src/lib/skill-maps.ts`. Keep input rules, all four portable Skill Map schemas, validators and documentation synchronized; regenerate with `npm run schema:generate` after field changes.
 - Keep the runtime thin: do not add a database, client framework, or generator unless the existing content collections cannot satisfy a demonstrated requirement.
 - Do not duplicate canonical records into Markdown pages or handwritten indexes. Pages and machine-readable endpoints should query the existing content collections.
-- Keep changes surgical and follow the established visual and content style.
+
+## Web design and interaction
+
+Before changing page layout, styling or interaction, read the [editorial design system](docs/design/redesign-system.md) and inspect the current components. Historical audit results describe earlier implementations, not current behavior.
+
+- Reuse semantic tokens in `src/styles/tokens.css` and shared layouts in `src/styles/custom.css`; preserve the paper/ink/acid-green identity and Starlight navigation, theme, focus, skip links and reduced-motion behavior.
+- Single-paragraph map leads use `.map-summary`; `.page-intro` retains its two-child layout. Scope UI grid margin resets to direct children so ordinary Markdown spacing survives.
+- Directory controls are authoritative state: keep rows, count and empty state synchronized on initial render, edits, Clear and history restoration. Structure shows bounded examples with complete membership counts and actual directed active-node relations.
+- Keep catalog field search and header Pagefind scopes explicit. Preserve Starlight's dialog shortcuts and normal punctuation input; project Concept Sources from their canonical array.
 
 ## Verification
 
@@ -46,7 +56,11 @@ npm test
 npm run build
 ```
 
-`npm run check` runs read-only portable-schema drift detection, Astro checks and catalog reference/source validation. `npm test` runs data-integrity and UI-regression tests. For Skill Map data or implementation changes, also run `npm run test:extension` to verify automatic discovery, custom taxonomy and retained identities. The GitHub Actions workflow runs these checks before deployment. Documentation-only edits require checking referenced paths, commands and consistency with the implementation; they do not require a site rebuild.
+For data, taxonomy or Skill Map changes, also run `npm run test:extension`. For collection, identity or projection changes, run `npm run test:l2`; see [L2 acceptance](CONTRIBUTING.md#repeatable-l2-expansion-acceptance) for the production-subpath scenario.
+
+For layout, styling, search, map interaction or language projection changes, run `npm run test:browser` against the production subpath with Pagefind enabled. Inspect changed-page screenshots in both themes and at narrow/wide widths; check keyboard focus, computed contrast and actual BFCache/reload restoration. Source assertions alone do not establish rendered behavior. Record unavailable screen-reader or zoom checks as unverified; 320px reflow does not substitute for 400% zoom.
+
+Documentation-only edits require checking referenced paths, commands and consistency with the implementation; they do not require a site rebuild. Derive record counts and versions from data/configuration rather than historical audit totals.
 
 ## Architecture direction
 
