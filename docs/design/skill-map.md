@@ -1,73 +1,26 @@
 # Skill Map 数据与展示设计
 
-状态：已确认。2026-10-07，用户确认完整设计符合共同理解，作为后续实现依据。本文区分设计契约、附件检查结果和未来功能，不构成开发或发布授权。
+状态：已实现。本文维护当前数据与展示契约，保留已确认设计和原始附件检查作为历史依据。当前地图身份、分类、清单及来源版本以各自 canonical YAML 为准；历史附件数量不是运行约束。
 
 ## 目标与范围
 
-为 AI Native Lexicon 设计可持续更新和扩充的 Skill Map 数据契约、网页导航及页面 UI。pstack 是首张地图，后续增加 mattpocock skills、compound-engineering skills 等体系。
+Skill Map 使用独立 YAML 记录、共享 CLI/Astro 读取与验证、静态页面、字段搜索及机器导出。pstack 与 mattpocock 已接入；新增地图由数据发现，保留各自分类和清单。
 
 Skill Map 是独立策划的应用资源，网页是内容投影，遵循 ADR-0006。现有 Concept、Primitive、Speaking Guide 的定义与内容身份继续由各自 YAML 记录维护。
 
-本次交付为设计文档与确定的领域术语、架构决策。地图与现有知识及 Speaking Guide 的实际关联、反向展示和跨集合投影扩展留到后续；本次设计须说明其适配边界。功能代码开发、上游自动同步、内容发布和宣传图片制作均不在本次工作范围内。
+Concept/Primitive/Speaking Guide 的 `knowledge_refs` 尚未启用；完整交互图、历史版本切换与上游自动同步也不属于当前实现。更新 pstack 来源时查阅 [SM-01](../audits/skill-map-sm-01.md) 的适配证据；更新 Matt Pocock 清单、分发或调用说明时先读 [MP-01](../audits/skill-map-mp-01.md)，区分上游清单、plugin 分发与本地安装。地图文字是参考内容，用户调用的技能仍需用户实际调用。
 
-## 已确认决策
-
-2026-10-07，用户确认 Q1 A、Q2 A、Q3 A：
-
-- 单张地图以任务选择与技能组合为主要入口，整体结构和技能查阅为辅助入口。
-- 首版每个技能体系对应一张持续维护的地图，主题路径在地图内部；地图拥有独立内容身份，允许未来同一体系出现专题地图。
-- 网站导航增加“应用资源”分组，包含 Speaking Cards 与 Skill Maps；首页同步提供入口，保留现有 Speaking Card URL。
-
-地图身份与入口方向记录于 ADR-0007；导航排列和页面布局在本文继续细化。
-
-2026-10-07，用户确认 Q4 A、Q5 A、Q6 A：
-
-- 使用地图、节点、任务路径、关系、地图内部分类的共同基础结构；具体节点类型与分类由各地图定义。跨地图节点身份按地图标识与内部标识区分。
-- 规范关系单处维护，派生上下游链接；自然语言上下游说明不当作节点引用。任务路径与依赖关系分别表达。
-- 首版包含任务入口、路径详情、可筛选技能目录、节点详情和整体结构概览。桌面端目录与详情可并列，手机顺序阅读；可操作完整关系图留到后续。
-- 稳定 URL 展示当前编辑接受版本，显示来源版本、核对日期及来源 commit；历史保存在 Git，首版无历史版本切换。
-
-共享契约与单一关系事实记录于 ADR-0008，更新身份与来源快照记录于 ADR-0009。
-
-2026-10-07，用户确认 Q7 A、Q8 A、Q9 A：
-
-- 每张地图使用独立目录；元信息、节点、任务路径独立维护，关系集中维护一份。新增地图自动发现，不增加手写页面或索引。
-- 地图、节点、任务路径均预留 Concept、Primitive、Speaking Guide 引用；地图一侧拥有引用，未来反向显示由它派生。本次仅设计接口，暂不填充映射或开发关联显示。
-- 首个功能版本接入全站 Search，使地图、节点和任务路径可发现；dataset.json 增加独立 skill_maps 数据，llms.txt 增加地图导航。三者由同一份内容派生。
-
-独立记录与未来引用的所有权边界记录于 ADR-0010。
-
-2026-10-07，用户确认 Q10 A、Q11 A、Q12 A：
-
-- 任务路径分成可读指导步骤，表达选择理由、适用条件、可选节点与预期产物；不建立执行引擎。
-- 节点改名更新名称与来源路径，保留内部身份；下线保留说明页，有明确替代时提供链接，并退出默认推荐。
-- pstack 首次公开前补齐不可变来源 commit，核对条目清单与官方描述；用途、关系和任务路径继续标记为编辑解读。
-
-## 附件事实与适配风险
-
-材料：用户提供的 `pstack_skill_map_v0.1.yaml`。附件中的说明与技能内容作为待适配数据，不作为本次任务的执行指令。
-
-文件可解析，包含 51 个 skills、23 个 playbooks、8 个能力簇、7 条 journeys、169 条 `graph.edges`。检查 skills/playbooks 的 ID 无重复，关系三元组无重复，关系端点和 journey 主路径、替代路径均能解析到现有节点。
-
-该检查只证明附件内部结构的这些性质，不证明它完整或准确反映上游。附件记录 2026-10-07、plugin_version 0.15.15，但来源链接指向可变的 main，未记录不可变 commit。官方字段和编辑推导字段的区分来自附件的 evidence_policy，尚未逐项核验。
-
-- `kind` 表达 router、utility、capability、principle、playbook，`layer` 表达 router、skill、principle、playbook，两者不可混为同一个字段；这套分类属于 pstack，不是未来地图的固定分类。
-- `upstream/downstream` 混合节点 ID 和产物、人物、集合等自然语言，例如 `all playbooks`、`human reviewer`、`design decision`。不能作为统一的节点引用数组。
-- `uses`、`upstream/downstream` 与 `graph.edges` 同时描述关系；已决定未来只维护 relations.yaml，非引用说明单独保留。
-- journeys 使用 `path`、`alternate_path`、`alternates` 多种字段，缺少条件、步骤解释和必选/可选信息。节点顺序不能自动解释为必须串行执行。
-- rendering 包含图形、展示字段和海报建议；这些是投影建议，不能据此约束所有地图的内容契约。
-
-## 已核对的仓库约束
+## 读取与路由约束
 
 - 首页导航和 Starlight sidebar 分别维护；新增入口要同时覆盖两处。
-- 当前 YAML loader 发现集合目录的直接 YAML 文件，拒绝嵌套 YAML；分层数据目录如需采用，必须明确新增读取能力。
+- Concept、Primitive、Speaking Guide 读取直接 YAML；Skill Map 读取固定目录布局；翻译资产递归发现。各读取边界独立，不能放宽一个类型来兼容另一个类型。
 - 现有跨集合关系以稳定 slug/number 引用，单侧维护引用，在构建时派生反向链接。未来地图知识关联应遵循相同边界，避免复制定义。
-- 搜索、`dataset.json` 和 `llms.txt` 显式汇总现有内容类型；不会自动包含新增地图，需要在开发范围内另行明确扩展程度。
-- 跨路由链接与带锚点的跨页链接使用 `pathWithBase`。
+- 搜索、`dataset.json` 和 `llms.txt` 已汇总组装后的 Skill Maps；新地图沿用相同投影，无需增加手写索引。
+- 地图读者路由使用 `mapLink(map, suffix, locale)`，既应用部署 base 又保留请求语言；canonical 根链接使用 `pathWithBase`。
 
-## 数据组织提案
+## 数据组织
 
-以下布局与字段用于收敛设计，尚未作为运行中的 schema 安装。首张地图建议公开标识 `pstack`；附件 dataset_id 是原始材料标识，不直接作为网站记录身份。
+以下布局已经用于运行中的共享输入契约。`pstack` 和 `mattpocock` 是独立地图身份；附件 dataset_id 是原始材料标识，不作为网站记录身份。
 
 ```text
 src/data/skill-maps/
@@ -98,7 +51,7 @@ src/data/skill-maps/
 | Relation | from、to、type，必要的解释与来源定位 | from/to 为本地图节点；首版不表达跨地图调用，后续另行设计 |
 | Taxonomy | 本地图类型、可选层次、能力簇、关系类型的标识和解释 | 放在 map.yaml；排序与展示名称由数据提供，新增分类不改页面枚举 |
 
-关系表首版只需要附件实际使用的 uses、routes_to、feeds、governed_by、resumes，定义方向和阅读标签；不因附件预声明额外类型而构造不存在的产物节点。允许引用拓扑含环，uses/feeds 图不被当作可执行 DAG。关系重复按 `(from, type, to)` 拒绝，关系说明不能取代类型与方向。
+关系类型及出入方向标签由每张地图的 `taxonomy.relation_types` 定义；pstack 使用的类型不是全站固定枚举。允许引用拓扑含环，关系图不被当作可执行 DAG。关系重复按 `(from, type, to)` 拒绝，关系说明不能取代类型与方向。
 
 自然语言输入、输出与交接说明继续是文字。UI 按关系类型和入/出方向显示“使用哪些能力”“被哪些流程使用”“遵循哪些原则”等明确标签，不能将所有入边/出边简化为执行前后顺序。
 
@@ -106,7 +59,7 @@ src/data/skill-maps/
 
 map.yaml 维护不可变来源快照：快照标识、仓库 URL、仓库内根路径、commit、来源版本、观测/核对日期及核验状态。节点、路径与关系按快照标识加相对文件路径定位；网站源码链接由该快照的 commit 与文件路径派生。current_sources 指出地图当前采用哪些快照；仍被退役记录或历史依据引用的旧快照留在 sources 中。更新来源时新增快照标识，不把既有标识的 commit 换成新版本，否则退役页的源码链接可能失效。完整地图历史仍由 Git 保存；保留被引用快照不意味着建立网站历史版本切换。未来多来源专题可使用多个来源条目，不复制快照到所有节点。
 
-沿用 ADR-0002、0005，官方原文、编辑综合与使用示例分别表达；官方描述保持可定位来源，中文机制/用途/任务路径标明编辑解读。类型、关系和路径即使格式有效也不自动得到事实核验标记。当前附件缺失 commit 的事实不能由实现补成已核验。
+沿用 ADR-0002、0005，官方原文、编辑综合与使用示例分别表达；官方描述保持可定位来源，中文机制/用途/任务路径标明编辑解读。类型、关系和路径即使格式有效也不自动得到事实核验标记。原始附件缺失 commit 的事实不能由实现补成已核验；公开内容的来源基线以固定快照审计为准。
 
 附件的 kind 与 layer 保留不同语义；skills/playbooks 归一到 nodes。uses 转为关系表中的规范边后不再双写，upstream/downstream 逐项区分明确关系与文字交接，禁止仅因字符串碰巧匹配 ID 而自动判定方向和类型。rendering 的字段清单与图形配置不进入知识内容字段，页面采用共同展示规则。
 
@@ -116,11 +69,11 @@ Map、Node、Journey 均预留同一 knowledge_refs 结构：concepts 使用 fil
 
 未来启用时：验证目标存在与引用唯一；删除目标前检查入向引用；Concept、Primitive、Speaking Guide 的反向列表从地图引用生成，不新增人工 backlink 字段，也不复制目标定义。本 feature 中不启用这些引用的输入、导出或 UI，避免出现有字段却不检查目标的半实现。接口先保留于本设计，后续启用时升级对应 schema。
 
-## 导航与页面提案
+## 导航与页面
 
-保留 Starlight 外壳与主题控制，sidebar 在 Start、Explore 之后新增 Applications；Speaking Cards 从 Explore 移到 Applications，同组增加 Skill Maps。首版不单独建设 Applications 聚合页。首页保持现有导航风格，增加 Skill Maps 直达入口；应用资源分组下的子入口直接打开对应资源索引。
+保留 Starlight 外壳与主题控制；Applications 分组包含 Speaking Cards 和 Skill Maps，首页也提供资源索引直达链接。没有独立 Applications 聚合页。中文路由使用中文导航外壳，地图正文保留自身版本与 `text_languages`；见 [翻译契约](translation-overlay.md#framework-and-ui-behavior)。
 
-| 页面 | 候选稳定路由 | 主要内容 |
+| 页面 | 英文稳定路由（中文在部署 base 后加 `/zh-cn`） | 主要内容 |
 | --- | --- | --- |
 | 地图索引 | `/skill-maps/` | 自动列出地图的范围、适用任务、来源版本与核对状态；只有 pstack 时也提供正式索引，不跳过层级 |
 | 单图任务入口 | `/skill-maps/pstack/` | 地图简介、阅读方式、按任务组织的路径入口、简短结构概览 |
@@ -170,9 +123,9 @@ architect               | 类型明确的关系链接
 
 ### 视觉与交互约束
 
-沿用 `src/styles/tokens.css` 的纸色、墨色、酸绿色与暗色主题。目录用现有 CatalogRow 风格的平面分隔行，任务入口使用短标题、适用情境与产物摘要，重点颜色用于当前导航与主要行动，不为每个分类新增任意颜色。官方技能名称保持原文，解释内容沿用附件中文；页面导航与站点现有英文标签一致。
+沿用 [editorial design system](redesign-system.md) 的 token 和共享组件。目录用 CatalogRow 风格的平面分隔行，任务入口使用短标题、适用情境与产物摘要，重点颜色用于当前导航与主要行动。官方技能名称保持原文，编辑解释及其语言来自 owning map；导航外壳随请求语言变化。
 
-过滤使用原生输入和选择控件、可见标签、结果计数与空状态；文本与类型名称共同表达分类，不仅靠颜色。布局依据可用容器宽度切换，保持可见焦点、键盘可达、减少动态效果及 65ch 左右阅读宽度。结构概览使用可阅读的文本分组，连线不承载唯一信息；JavaScript 未运行时仍显示内容与有效链接。
+过滤使用原生输入和选择控件、可见标签、结果计数与空状态；控件状态统一决定行、计数与空状态，并在初始加载、编辑、Clear、历史恢复与 reload 时保持一致。文本与类型名称共同表达分类，不仅靠颜色。布局依据可用容器宽度切换，保持可见焦点、键盘可达、减少动态效果及阅读宽度。结构概览使用可阅读的文本分组；JavaScript 未运行时仍显示内容与有效链接。
 
 不引入客户端框架、图数据库或图谱布局依赖；静态内容与路径链接由构建产出，轻量筛选使用现有脚本模式。首版不执行技能、不假设网站访客已经安装某个宿主插件。
 
@@ -180,9 +133,9 @@ architect               | 类型明确的关系链接
 
 Search 增加 Map、Node、Journey 三类记录，分别显示资源类别与所属地图，结果链接到各自稳定路由。检索名称、摘要、适用场景、类型与能力簇标签；不把每条关系当成搜索记录。地图内过滤范围始终是本地图，不能因同名节点混入其他地图。
 
-dataset.json 增加独立 skill_maps 数组，每张地图包含组装后的元信息、分类、节点、任务路径、关系。保留既有 concepts、primitives、speaking_cards 的身份与字段，不创建统一 opaque resources 数组。新增导出形状须显式升级 schema_version 并更新 docs/exports.md；dataset_version 的内容哈希包含地图内容及其内部分类，计数从真实组装数据派生，不能使用附件声明数量。
+dataset.json 的独立 skill_maps 数组包含组装后的元信息、分类、节点、任务路径与关系。保留既有 concepts、primitives、speaking_cards 的身份与字段。导出版本、内容哈希与归一规则由 [export contract](../exports.md#skill-map-projections) 维护；变更导出形状时显式升级 schema_version，计数从真实数据派生。
 
-哈希与导出采用确定性归一：maps、nodes、journeys 按身份排序，relations 按 `(from, type, to)` 排序；对象键递归排序。sources 按快照 id 排序，source_refs 按 `(source, path)` 排序，作为无顺序语义的引用集合；secondary_clusters 与 tags 按文字排序。taxonomy 数组、current_sources、variants、steps、inputs/outputs 及说明数组保留编辑顺序，因为影响读者理解或展示。显式 order 值作为内容参与哈希，不能用文件发现顺序替代。digest 不包含 generated_at、部署 base/site、派生 URL、文件路径或原始 YAML 排版；身份本身参与哈希。现有 createDatasetVersion 必须显式扩展这套规则，不假设新增数据会被自动规范化。
+保留任务步骤、分类与解释数组的编辑顺序；无序关系和引用集合按 export contract 归一。Skill Map 自身的 `text_languages` 属于 canonical 内容，参与 digest；中文外壳与知识翻译覆盖层不改变这份 canonical 导出。
 
 llms.txt 增加 Skill Maps 分节，包含地图链接、简述、来源版本/核对状态，并指向完整 dataset；保留既有章节，不把所有 74 个节点硬写入文本导航。公开投影只包含可发布内容，原始附件和私有材料不因参与策划而自动公开。
 
@@ -194,7 +147,7 @@ llms.txt 增加 Skill Maps 分节，包含地图链接、简述、来源版本/�
 
 | 字段 | 形状与规则 |
 | --- | --- |
-| schema_version | 当前设计输入契约 `1.0.0`；不是附件的 `0.1.0`，不声称兼容原始 YAML |
+| schema_version | 支持 `1.0.0`（无 text_languages）与 `1.1.0`（允许标注）；不是附件版本或 dataset 导出版本 |
 | title、summary、scope | 必填文字；scope 说明地图覆盖哪套体系与使用目标 |
 | audience | 非空文字数组，说明适用读者 |
 | order | 可选非负整数，用于地图索引；缺省同级按稳定 id 排序 |
@@ -250,7 +203,7 @@ steps.when 和 variants.when 都是人可读条件，不包含表达式、运行
 
 ### 字段级示例
 
-以下均为设计示例，不是已经接受的 pstack 内容，也不是可直接发布的完整数据集。source 示例保留 pending 与缺失 commit，准确表达当前附件尚未补证；正式公开时须满足 Q12 的来源门槛。示例引用的节点与分类须由完整地图提供。
+以下均为设计示例，不是已经接受的 pstack 内容，也不是可直接发布的完整数据集。source 示例保留 pending 与缺失 commit，保留原始附件当时尚未补证的事实；正式公开时须满足 Q12 的来源门槛。示例引用的节点与分类须由完整地图提供。
 
 来源条目（嵌入 map.yaml 的 sources）：
 
@@ -343,11 +296,11 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 
 地图读取器只识别规定形状：直接子目录下 map.yaml、relations.yaml、nodes/*.{yaml,yml}、journeys/*.{yaml,yml}。根目录若存在地图文件但缺失清单，应报错；不静默跳过损坏地图，也不递归收集任意嵌套文件。nodes/journeys 目录需存在，可为空；无节点的地图显示说明与空目录，不伪造工作流。没有路径时显示条目与整体结构入口，不从关系图自动生成路径。
 
-读取器组装统一对象 `{id, ...map, nodes, journeys, relations}`，nodes 与 journeys 注入文件 ID。Astro collection、CLI 校验和导出共享输入规则、读取及关系验证；不把 Astro 页面里的临时组装结果变成 CLI 的另一套实现。组装对象是构建产物，不落地第二份 canonical JSON。
+读取器返回 `{id, data: {...map, nodes, journeys, relations}}` 记录，nodes 与 journeys 注入文件 ID。Astro collection、CLI 校验和导出共享输入规则、读取及关系验证；导出把记录身份与 data 组装到同一地图对象。组装对象是构建产物，不落地第二份 canonical JSON。
 
-建议新增地图领域输入与读取模块，而不是放宽现有三类记录的嵌套目录限制：map/node/journey/relation 输入规则、固定目录读取、地图内部引用校验各自负责明确边界。schema:generate/schema:check 管理对应便携 schema；未来知识映射启用时，再扩展跨集合验证层。没有实际跨地图调用需求时，不增加通用 graph API 或资源注册框架。
+地图输入与读取模块保持独立于三类直接记录：map/node/journey/relation 输入规则、固定目录读取、地图内部引用校验各自负责明确边界。schema:generate/schema:check 管理对应便携 schema；未来知识映射启用时，再扩展跨集合验证层。
 
-建议的最小实现落点（尚未创建）：
+当前实现职责：
 
 | 位置 | 职责 |
 | --- | --- |
@@ -356,7 +309,7 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 | `src/domain/content/validate-skill-map-references.mjs` | 地图内部分类、来源、关系、路径与替代引用验证 |
 | `src/lib/skill-map-loader.mjs`、`src/content.config.ts` | Astro 接入同一读取器，一个 skillMaps collection 以每张地图为记录；节点/路径路由读取组装对象，不再建内容副本 |
 | `src/lib/skill-maps.ts` | 查询地图、节点、路径与派生关系的页面接口；返回既有数据，不维护手写索引 |
-| `src/pages/skill-maps/` | 上文六种页面投影与动态路由；共用现有外壳、token 和可复用展示组件 |
+| `src/views/Map*.astro`、`src/views/SkillMapIndexPage.astro`、两种语言的 `src/pages/` 路由 | 上文六种页面投影；共用现有外壳、token 和可复用展示组件 |
 | 现有 schema/catalog 脚本、Search/JSON/LLM 投影与导航 | 扩展新类型的检查和输出，保留现有契约 |
 
 单地图 collection 不意味着单 YAML 文件，也不要求将所有节点合并维护；它是独立记录组装后的构建表示。
@@ -373,7 +326,7 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 
 ## 更新、退役与扩充流程
 
-### 首次 pstack 适配
+### 首次适配流程（pstack 历史范例）
 
 1. 保存用户附件为本地原始材料，核对确切来源版本与 commit；如果无法恢复该附件对应 commit，应明确以新取得的快照重新核对，不冒充原快照。
 2. 对照不可变来源核对技能/手册清单和官方描述，完成来源基线；51/23 是附件数量，不是永远固定的 schema 限制。
@@ -383,7 +336,7 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 
 ### 更新来源或内容
 
-比较来源快照的新增、变化与删除，按 ADR-0003/0004 形成可审查的内容提案。新增 sources 快照条目，更新 current_sources 与受影响节点、路径、关系共同接受；仍引用旧快照的记录保留其原 source_refs，只有明确依据新版本重写的记录才改用新快照。不可覆盖既有快照 id 的 commit；未来更新审查须比较现有 Git 基线来检查这条跨版本不变量，单次 schema 校验不能证明它。完整旧地图在 Git 中保留，不从远端自动覆盖编辑策划。
+比较来源快照的新增、变化与删除，按 ADR-0003/0004 形成可审查的内容提案。新增 sources 快照条目，更新 current_sources 与受影响节点、路径、关系共同接受；仍引用旧快照的记录保留其原 source_refs，只有明确依据新版本重写的记录才改用新快照。不可覆盖既有快照 id 的 commit；审查时用 `validateSkillMapSnapshotChanges(previousRecords, currentRecords)` 比较两版组装记录，单次 schema 校验不能证明历史不变量。完整旧地图在 Git 中保留，不从远端自动覆盖编辑策划。
 
 改名保留 node ID，仅更新名称与来源定位。删除上游技能时先将节点置为 retired，写明原因并调整 active 路径；旧地址仍可直接访问。关系指向退役节点时显式显示状态，默认目录、任务推荐和结构概览只展示 active 内容；目录可切换“包含已下线条目”，Search 的退役命中单独标记，不与当前推荐混淆。导出保留退役记录与关系，不让机器消费者丢失引用。
 
@@ -397,9 +350,9 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 
 未来为 map/node/journey 启用 knowledge_refs 的独立 schema 版本后，在编辑审查中添加具体目标；引用验证读取既有 canonical 集合，反向展示与导出由同一引用派生。节点机制或摘要可以表达其使用方式，Concept/Primitive 的定义只链接原记录。Speaking Guide 的历史 number 与 card-XX 地址不变化。
 
-## 实施顺序与验收标准
+## 维护验收标准
 
-下表是未来开发工作的边界与验收，当前没有执行功能实现或测试。
+以下能力已经实现；变更相应边界时保持这些验收条件。实际运行证据在来源审计及 L2/browser 报告中，不从本表推断每次修改已经通过验证。
 
 | 阶段 | 交付 | 最小可信验收 |
 | --- | --- | --- |
@@ -409,15 +362,9 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 | 4 搜索与导出 | Search、skill_maps JSON、llms 分节、版本/计数/哈希文档 | 地图/节点/路径可检索；既有导出字段保留；真实数量一致；改变地图字段改变 digest，格式/遍历顺序不改变 digest |
 | 5 扩充与部署验证 | 新图夹具、下线夹具、子路径与键盘验证 | 仅新增 YAML 就出现第二张不同分类地图；同名节点不串图；下线链接保留且源码指向仍有效的旧 commit；BASE_PATH 下所有内部链接正确 |
 
-未来功能修改后按 AGENTS.md 执行 npm run check、npm test、npm run build；同时扩展并运行 npm run test:extension，覆盖本功能承诺的数据扩充行为。portable schema 新增/改动时运行 schema:generate，check 保持只读。
+按 [repository verification](../../CONTRIBUTING.md#validation) 执行适用检查，覆盖数据扩充、投影和交互分支。
 
 重点 UI 检查覆盖 390px 手机与宽屏、明暗主题、键盘导航、焦点、无结果状态、退役详情，以及 JavaScript 未执行时的正文与路由。截图用于检查真实渲染，不把本文件的文本线框当作运行验证证据。
-
-## 完成状态与剩余边界
-
-Q1–Q12 的关键选择及完整设计均已由用户确认；数据身份与关系、导航、页面线框、来源/更新边界、扩充流程和验收均已记录。本稿的具体字段与路由作为后续实现依据，设计阶段已结束。
-
-当前只修改设计文档、领域术语与 ADR；没有创建 Skill Map canonical 数据、修改运行 schema、实现页面或执行发布。附件通过结构检查，但 Q12 的上游来源基线尚未完成；这个事实不妨碍完成本次设计，也不能据此声称 pstack 已可发布。
 
 ## Text language annotations (Map input 1.1.0)
 
@@ -425,8 +372,59 @@ Map, Node and Journey may include `text_languages`, a flat dictionary from an ex
 
 Map paths: `title`, `summary`, `scope`, `audience.N`; taxonomy `types/layers/clusters.N.label/description`; `relation_types.N.outgoing_label/incoming_label/description`. Node paths: `title`, `summary`, `mechanism`, `retirement_note`, `official_description`; `when_to_use/solves/inputs/outputs/handoffs/tags.N`. Journey paths: `title`, `summary`, `retirement_note`, `when_to_use/inputs/outputs.N`; `variants.N.title/when`; `variants.N.steps.N.title/why/when/outputs.N`.
 
-IDs, references, sources, dates, URLs, nonexistent fields and out-of-bounds indexes are rejected by the shared assembled reader. Maintain hints when editorial array order changes. A map with any annotations requires `schema_version: 1.1.0`; Nodes/Journeys inherit this edition. Unannotated 1.0.0 maps remain accepted; empty dictionaries are valid only in 1.1.0. Missing hints inherit document `en`, with no character detection or automatic translation.
+IDs, references, sources, dates, URLs, nonexistent fields and out-of-bounds indexes are rejected by the shared assembled reader. Maintain hints when editorial array order changes. A map with any annotations requires `schema_version: 1.1.0`; Nodes/Journeys inherit this edition. Unannotated 1.0.0 maps remain accepted; empty dictionaries are valid only in 1.1.0. Missing hints use the original `en` prose default, with no character detection or automatic translation.
 
-Templates apply each hint to the smallest text element, including reused titles, taxonomy labels, directory options and Search summaries. Composite labels keep separate spans when languages differ. Literal Chinese UI is explicitly `zh-Hans`; official English prose stays English. Relations and source snapshots carry no new language fields.
+Templates apply each hint to the smallest text element, including reused titles, taxonomy labels, directory options and Search summaries. Composite labels keep separate spans when languages differ. Unannotated map prose retains its original English default even in Chinese chrome; explicitly Chinese literals use their maintained language tag. UI follows the route dictionary separately from map annotations. Relations and source snapshots carry no new language fields; editorial relation notes use the owning map scope language.
 
 Structure retains taxonomy order, complete active counts and up to three examples per group in node-ID order. Secondary cluster membership counts. Each relationship type with an active-to-active edge shows one canonical directed example selected by `(from,to)` order. Guidance and Journey order do not confer execution authority.
+
+## 设计历史
+
+以下确认与附件检查记录来自设计阶段。当前输入、页面和来源基线以本文前述契约及 canonical 记录为准；这些历史记录不替代后续变更的接受与核验。
+
+### 已确认决策
+
+2026-10-07，用户确认 Q1 A、Q2 A、Q3 A：
+
+- 单张地图以任务选择与技能组合为主要入口，整体结构和技能查阅为辅助入口。
+- 首版每个技能体系对应一张持续维护的地图，主题路径在地图内部；地图拥有独立内容身份，允许未来同一体系出现专题地图。
+- 网站导航增加“应用资源”分组，包含 Speaking Cards 与 Skill Maps；首页同步提供入口，保留现有 Speaking Card URL。
+
+地图身份与入口方向记录于 ADR-0007；导航排列和页面布局在本文继续细化。
+
+2026-10-07，用户确认 Q4 A、Q5 A、Q6 A：
+
+- 使用地图、节点、任务路径、关系、地图内部分类的共同基础结构；具体节点类型与分类由各地图定义。跨地图节点身份按地图标识与内部标识区分。
+- 规范关系单处维护，派生上下游链接；自然语言上下游说明不当作节点引用。任务路径与依赖关系分别表达。
+- 首版包含任务入口、路径详情、可筛选技能目录、节点详情和整体结构概览。桌面端目录与详情可并列，手机顺序阅读；可操作完整关系图留到后续。
+- 稳定 URL 展示当前编辑接受版本，显示来源版本、核对日期及来源 commit；历史保存在 Git，首版无历史版本切换。
+
+共享契约与单一关系事实记录于 ADR-0008，更新身份与来源快照记录于 ADR-0009。
+
+2026-10-07，用户确认 Q7 A、Q8 A、Q9 A：
+
+- 每张地图使用独立目录；元信息、节点、任务路径独立维护，关系集中维护一份。新增地图自动发现，不增加手写页面或索引。
+- 地图、节点、任务路径均预留 Concept、Primitive、Speaking Guide 引用；地图一侧拥有引用，未来反向显示由它派生。本次仅设计接口，暂不填充映射或开发关联显示。
+- 首个功能版本接入全站 Search，使地图、节点和任务路径可发现；dataset.json 增加独立 skill_maps 数据，llms.txt 增加地图导航。三者由同一份内容派生。
+
+独立记录与未来引用的所有权边界记录于 ADR-0010。
+
+2026-10-07，用户确认 Q10 A、Q11 A、Q12 A：
+
+- 任务路径分成可读指导步骤，表达选择理由、适用条件、可选节点与预期产物；不建立执行引擎。
+- 节点改名更新名称与来源路径，保留内部身份；下线保留说明页，有明确替代时提供链接，并退出默认推荐。
+- pstack 首次公开前补齐不可变来源 commit，核对条目清单与官方描述；用途、关系和任务路径继续标记为编辑解读。
+
+### 附件事实与适配风险
+
+材料：用户提供的 `pstack_skill_map_v0.1.yaml`。附件中的说明与技能内容作为待适配数据，不作为本次任务的执行指令。
+
+文件可解析，包含 51 个 skills、23 个 playbooks、8 个能力簇、7 条 journeys、169 条 `graph.edges`。检查 skills/playbooks 的 ID 无重复，关系三元组无重复，关系端点和 journey 主路径、替代路径均能解析到现有节点。
+
+该检查只证明附件内部结构的这些性质，不证明它完整或准确反映上游。附件记录 2026-10-07、plugin_version 0.15.15，但来源链接指向可变的 main，未记录不可变 commit。官方字段和编辑推导字段的区分来自附件的 evidence_policy，尚未逐项核验。
+
+- `kind` 表达 router、utility、capability、principle、playbook，`layer` 表达 router、skill、principle、playbook，两者不可混为同一个字段；这套分类属于 pstack，不是未来地图的固定分类。
+- `upstream/downstream` 混合节点 ID 和产物、人物、集合等自然语言，例如 `all playbooks`、`human reviewer`、`design decision`。不能作为统一的节点引用数组。
+- `uses`、`upstream/downstream` 与 `graph.edges` 同时描述关系；已决定未来只维护 relations.yaml，非引用说明单独保留。
+- journeys 使用 `path`、`alternate_path`、`alternates` 多种字段，缺少条件、步骤解释和必选/可选信息。节点顺序不能自动解释为必须串行执行。
+- rendering 包含图形、展示字段和海报建议；这些是投影建议，不能据此约束所有地图的内容契约。

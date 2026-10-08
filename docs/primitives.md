@@ -1,11 +1,11 @@
 # Primitive content
 
-A primitive is a basic unit of understanding or construction within a stated domain and abstraction level. The catalog has 42 entries: 40 groups adapted from the supplied research report, plus Goal and Evidence. This is an editorial design language, not a claim of universal consensus.
+A primitive is a basic unit of understanding or construction within a stated domain and abstraction level. The catalog adapts groups from the supplied research report and includes editorial additions such as Goal and Evidence; current records determine its inventory. This is an editorial design language, not a claim of universal consensus.
 
 ## Single source of truth
 
 - Concepts remain in `src/data/concepts/*.yaml`. Their `primitives` array replaces `tags` and may be empty.
-- Primitive metadata lives in `src/data/primitives/*.yaml`. Filenames are stable `/primitives/#slug` targets.
+- Primitive metadata lives in `src/data/primitives/*.yaml`. Filename slugs identify `/primitives/<slug>/` details; the existing `/primitives/#slug` directory targets remain available.
 - A primitive definition already held by a concept uses a `concept` reference. The page resolves the current definition at build time; do not copy it into another record.
 - New meanings use inline `{ name, text }` definitions. A grouped entry can contain several definitions and must explain their differences.
 - Concept backlinks derive from concept `primitives` arrays. Primitive `related` references point only to other primitives.
@@ -17,7 +17,7 @@ See [the State record](../src/data/primitives/state.yaml) for a referenced defin
 | Field | Content |
 |---|---|
 | `term`, `zh` | English display name and Chinese name |
-| `layer` | One of the five layers in `src/domain/content/primitive-input.mjs` |
+| `layer` | A configured name from `src/data/taxonomy/layers/`; the shared contract and portable enum derive from this registry |
 | `summary` | A concise orientation for search and machine-readable discovery |
 | `definitions` | Nonempty list of `{ concept: slug }` or `{ name, text }`; a referenced concept must link back |
 | `scope` | Applicable domain, abstraction level, and conditions |
@@ -39,18 +39,14 @@ The supplied report is located by title and section. Its external references rem
 
 ## Projection and compatibility
 
-`/primitives/` renders descriptions, anchor targets, and derived concept backlinks. Concepts link to the relevant anchors. Search includes primitive names (English and Chinese) for linked concepts and standalone primitive results. Both `/dataset.json` and `/llms.txt` expose the new entries. Dataset version `0.2.0` replaces concept `tags` with `primitives`; consumers must resolve primitive definition references against the dataset's concepts.
+`/primitives/` groups rows by configured layer and preserves layer/record anchors. `/primitives/<slug>/` renders definitions, scope, practice, derived Concept/Speaking Card backlinks and same-type A–Z neighbors. Copy has one named action per displayed definition and reports success/failure. Search includes English/Chinese names, linked names and resolved prose. Both `/dataset.json` and `/llms.txt` expose canonical entries; consumers resolve referenced definitions against canonical Concepts. Current export version semantics are in [the export contract](exports.md#version-fields).
+
+Chinese reader routes share these views through [Translation Overlay](design/translation-overlay.md). Referenced definitions reuse the Concept's resolved unit and actual language. Current reviewed units appear in Chinese; other units display current English with coverage status. Primitive review, source verification and translation acceptance stay independent. Translation-only edits leave canonical machine exports and their content digest unchanged.
 
 Field rules are defined once in `src/domain/content/primitive-input.mjs`. The CLI reads this contract; `src/lib/primitive-schema.mjs` adapts validated date strings to UTC Date values for Astro. Text is trimmed and must contain non-whitespace characters. Unknown fields are rejected at every object boundary. Source URLs require an absolute HTTP(S) URI with a hostname or explicit IP address, a port from 0 through 65535 when supplied, and valid percent escapes. Numeric IPv4 hosts use four decimal octets; IPv6 hosts use brackets.
 
-After changing field rules, run `npm run schema:primitive` to regenerate `schemas/primitive.schema.json`. Related-reference uniqueness is a field rule; missing targets, self-links, repeated defining-concept references and required Concept backlinks are checked across the canonical collections. Layer vocabularies and anchors remain unchanged.
+After changing field rules, regenerate `schemas/primitive.schema.json`. Related-reference uniqueness is a field rule; missing targets, self-links, repeated defining-concept references and required Concept backlinks are checked across canonical collections. Layer editing preserves configured names and explicit public anchors; see [the contribution workflow](../CONTRIBUTING.md#primitive-entries).
 
-Keep the shared contract, generated portable schema, reference validation, tests, and this guide synchronized. Run:
-
-```sh
-npm run check
-npm test
-npm run build
-```
+Keep the shared contract, generated portable schema, reference validation, tests, and this guide synchronized. Follow [repository verification](../CONTRIBUTING.md#validation).
 
 The migration decisions are recorded in [the original audit](./audits/primitive-tag-mapping.md). It is the pre-implementation proposal; current YAML is authoritative for the implemented associations.

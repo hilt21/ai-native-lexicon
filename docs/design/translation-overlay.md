@@ -66,7 +66,7 @@ Canonical exports (`dataset.json`, `llms.txt`, dataset version) continue reading
 
 ## Verification
 
-Run `npm run schema:generate` after contract edits and `npm run schema:check` to detect drift without writing. `tests/translations.test.mjs` exercises public catalog, resolver and Astro adapter behavior using real filesystem fixtures. Full repository and production-subpath browser acceptance remains required by `AGENTS.md`, including rendered language, fallback, SEO, search and Copy behavior; unit tests alone do not establish those outcomes.
+Run schema generation/drift checks and the applicable suites from [repository verification](../../CONTRIBUTING.md#validation). `tests/translations.test.mjs` exercises public catalog, resolver and Astro adapter behavior using real filesystem fixtures. Production-subpath acceptance includes rendered language, fallback, SEO, search and Copy; unit tests alone do not establish those outcomes. The [Issue 39 acceptance record](../audits/issue-39-translation-acceptance.md) documents the accepted translation scope; future wording or fingerprint changes require a new concrete review.
 
 ### Framework and UI behavior
 
