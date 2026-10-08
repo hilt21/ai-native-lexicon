@@ -131,7 +131,7 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       }
       await page.emulateMedia({ reducedMotion: 'reduce' }); await page.goto(localeUrl('')); assert.equal(await page.evaluate(() => getComputedStyle(document.documentElement).scrollBehavior), 'auto'); assert.equal(await page.evaluate(() => document.getAnimations().length), 0);
     });
-    await check('unknown locale and nonexistent localized record return actual 404', async () => { for (const path of ['fr/concepts/harness/', 'zh-cn/concepts/no-such-record/', 'zh-cn/skill-maps/no-such-map/']) { const response = await page.goto(`${origin}/${path}`); assert.equal(response.status(), 404); } });
+    await check('unknown locale and nonexistent localized record return actual 404', async () => { for (const path of ['fr/concepts/harness/', 'zh-cn/concepts/no-such-record/', 'zh-cn/skill-maps/no-such-map/']) { const response = await page.request.get(`${origin}/${path}`); assert.equal(response.status(), 404); } });
     assert.deepEqual(errors, []);
   } finally { await context.close(); }
 }
