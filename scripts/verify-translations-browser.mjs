@@ -25,6 +25,8 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       await page.waitForURL(`${origin}/zh-cn/?q=harness&type=concept&keep=1#lexicon-content`);
       assert.equal(await page.locator('html').getAttribute('lang'), 'zh-CN');
       assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
+      const labelFits = await language.evaluate((element) => { const style = getComputedStyle(element); const canvas = document.createElement('canvas').getContext('2d'); canvas.font = style.font; return element.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) >= canvas.measureText(element.selectedOptions[0].text).width; });
+      assert.ok(labelFits, 'Mobile Home language label must fit the native select');
       assert.equal(await page.locator('#lexicon-content').count(), 1);
       await theme.selectOption('light');
       await language.selectOption(`${base}/`);
