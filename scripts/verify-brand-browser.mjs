@@ -42,7 +42,7 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
         const image = new Image(); image.src = source; await image.decode();
         return { source, width: image.naturalWidth };
       });
-      assert.ok(loaded.source.includes(`/brand/hero-v2/rider-${theme}-`));
+      assert.ok(loaded.source.includes(`/brand/${theme === 'dark' ? 'hero-v3' : 'hero-v2'}/rider-${theme}-`));
       assert.equal(loaded.width, 340);
       assert.ok((await artwork.boundingBox()).width >= 220 && (await artwork.boundingBox()).width <= 240);
       await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });

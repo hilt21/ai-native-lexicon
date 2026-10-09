@@ -1,6 +1,9 @@
 ---
 import { pathWithBase } from '../lib/catalog';
-const imageSet = (theme: 'light' | 'dark') => `image-set(url("${pathWithBase(`/brand/hero-v2/rider-${theme}-340.webp`)}") 1x, url("${pathWithBase(`/brand/hero-v2/rider-${theme}-680.webp`)}") 2x)`;
+const imageSet = (theme: 'light' | 'dark') => {
+  const directory = theme === 'dark' ? 'hero-v3' : 'hero-v2';
+  return `image-set(url("${pathWithBase(`/brand/${directory}/rider-${theme}-340.webp`)}") 1x, url("${pathWithBase(`/brand/${directory}/rider-${theme}-680.webp`)}") 2x)`;
+};
 ---
 <div
   class="hero-artwork"
