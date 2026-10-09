@@ -1,13 +1,13 @@
 import { pathWithBase } from './catalog';
 import type { SearchKind } from './field-search';
 
-export const resourceIcons: Record<SearchKind, { file: string; label: string }> = {
-  concept: { file: 'concept', label: 'Concept' },
-  primitive: { file: 'primitive', label: 'Primitive' },
-  'speaking-guide': { file: 'speaking-guide', label: 'Speaking Guide' },
-  'skill-map': { file: 'skill-map', label: 'Skill Map' },
-  'map-node': { file: 'map-node', label: 'Map Node' },
-  'task-journey': { file: 'task-journey', label: 'Task Journey' },
+export const resourceIcons: Record<SearchKind, string> = {
+  concept: 'concept',
+  primitive: 'primitive',
+  'speaking-guide': 'speaking-guide',
+  'skill-map': 'skill-map',
+  'map-node': 'map-node',
+  'task-journey': 'task-journey',
 };
 
 export function resourceKindForRoute(path: string): SearchKind | undefined {
