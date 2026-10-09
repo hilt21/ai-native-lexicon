@@ -156,7 +156,7 @@ function stage(name) { report.stages.push(name); console.log(`PASS ${name}`); }
 
 const canonicalBefore = await digest(join(repository, 'src/data'));
 try {
-  for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
+  for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'docs/design/brand', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
     await cp(join(repository, path), join(directory, path), { recursive: true });
   }
   // Keep dependency paths inside the fixture so Astro can resolve virtual CSS modules.
@@ -312,7 +312,7 @@ try {
   assertUnitLanguage(missingPage, concept.definition, 'en');
   assertUnitLanguage(await html(`zh-cn/primitives/${primitiveSlug}`), concept.definition, 'en');
   for (const [path] of expanded) {
-    if (path === '404.html' || path.startsWith('zh-cn/')) continue;
+    if (path === '404.html' || path.startsWith('zh-cn/') || path === 'brand/preview.html' || path.startsWith('share/speaking-card/')) continue;
     assert.ok(expanded.has(`zh-cn/${path}`), `Missing Chinese counterpart ${path}`);
   }
   stage('no-overlay Chinese route parity, missing core SEO and current English reference fallback');

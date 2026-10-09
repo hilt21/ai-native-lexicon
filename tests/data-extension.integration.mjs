@@ -1,5 +1,6 @@
 import assert from 'node:assert/strict';
 import { execFile } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { access, cp, mkdtemp, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -7,6 +8,7 @@ import test from 'node:test';
 import { fileURLToPath } from 'node:url';
 import { promisify } from 'node:util';
 import { parse, stringify } from 'yaml';
+import sharp from 'sharp';
 import { categoryRegistry } from '../src/domain/taxonomy/categories.mjs';
 import { layerRegistry } from '../src/domain/taxonomy/layers.mjs';
 import { readCatalog, validateCatalog } from '../src/domain/content/catalog.mjs';
@@ -85,7 +87,7 @@ const repository = fileURLToPath(new URL('../', import.meta.url));
 async function inIsolatedProject(verify) {
   const directory = await mkdtemp(join(tmpdir(), 'lexicon-extension-'));
   try {
-    for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
+    for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'docs/design/brand', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
       await cp(join(repository, path), join(directory, path), { recursive: true });
     }
     // External dependency symlinks break Astro's virtual CSS module paths on Linux.
@@ -461,9 +463,35 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     const number = Math.max(...numbers) + 7;
     const guide = { ...original, number, title: 'L2 Projection Guide', coreIdea: 'Quasar signal demonstrates projection coverage.', concepts: ['context'], primitives: ['state'] };
     const file = join(directory, 'src/data/speaking-cards/l2-projection-guide.yml');
+    const id = `card-${String(number).padStart(2, '0')}`;
+    const shareFile = join(directory, 'dist/share/speaking-card', id, 'index.html');
+    const social = join(directory, 'dist/brand/social');
+    async function sharingProjection(record) {
+      const share = await readFile(shareFile, 'utf8');
+      assert.ok(share.includes(record.title));
+      assert.ok(share.includes(record.coreIdea));
+      assert.ok(share.includes(`href="/ai-native-lexicon/speaking-card/#${id}"`));
+      const cards = await readFile(join(directory, 'dist/speaking-card/index.html'), 'utf8');
+      assert.ok(cards.includes(`href="/ai-native-lexicon/share/speaking-card/${id}/"`));
+      const manifest = JSON.parse(await readFile(join(social, 'manifest.json'), 'utf8'));
+      const hashes = [];
+      for (const format of ['landscape', 'portrait']) {
+        const filename = `${id}-${format}.png`;
+        for (const page of [share, cards]) assert.ok(page.includes(`href="/ai-native-lexicon/brand/social/${filename}"`));
+        const image = manifest.images.find((image) => image.file === filename);
+        assert.equal(image.title, record.title); assert.equal(image.coreIdea, record.coreIdea);
+        const bytes = await readFile(join(social, filename));
+        const metadata = await sharp(bytes).metadata();
+        assert.equal(metadata.width, format === 'landscape' ? 1200 : 1080);
+        assert.equal(metadata.height, format === 'landscape' ? 630 : 1350);
+        hashes.push(createHash('sha256').update(bytes).digest('hex'));
+      }
+      return hashes;
+    }
     await writeFile(file, stringify(guide));
     await npm(directory, ['run', 'check']);
     await npm(directory, ['run', 'build']);
+    const initialImages = await sharingProjection(guide);
     const datasetPath = join(directory, 'dist/dataset.json');
     const first = JSON.parse(await readFile(datasetPath, 'utf8'));
     const exported = first.speaking_cards?.find((card) => card.number === number);
@@ -487,10 +515,15 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     assert.ok(llms.includes('## Concepts') && llms.includes('## Primitives'));
     await npm(directory, ['run', 'build']);
     const repeated = JSON.parse(await readFile(datasetPath, 'utf8'));
+    assert.deepEqual(await sharingProjection(guide), initialImages);
     assert.equal(repeated.dataset_version, first.dataset_version);
     assert.notEqual(repeated.generated_at, first.generated_at);
-    await writeFile(file, stringify({ ...guide, coreIdea: 'Changed canonical speaking content.' }));
+    const updated = { ...guide, title: 'Updated L2 Projection Guide', coreIdea: 'Changed canonical speaking content.' };
+    await writeFile(file, stringify(updated));
     await npm(directory, ['run', 'build']);
+    const updatedImages = await sharingProjection(updated);
+    for (let index = 0; index < initialImages.length; index++) assert.notEqual(updatedImages[index], initialImages[index]);
+    assert.equal((await readFile(shareFile, 'utf8')).includes(guide.coreIdea), false);
     const changed = JSON.parse(await readFile(datasetPath, 'utf8'));
     assert.notEqual(changed.dataset_version, repeated.dataset_version);
     const categoryFile = join(directory, 'src/data/taxonomy/categories/context.yaml');
@@ -498,5 +531,11 @@ test('new Speaking Guide YAML reaches search, dataset and llms with stable conte
     await writeFile(categoryFile, stringify({ ...category, description: `${category.description} A revised domain boundary.` }));
     await npm(directory, ['run', 'build']);
     assert.notEqual(JSON.parse(await readFile(datasetPath, 'utf8')).dataset_version, changed.dataset_version);
+    await rm(file);
+    await npm(directory, ['run', 'build']);
+    await assert.rejects(access(shareFile), { code: 'ENOENT' });
+    for (const format of ['landscape', 'portrait']) await assert.rejects(access(join(social, `${id}-${format}.png`)), { code: 'ENOENT' });
+    assert.equal(JSON.parse(await readFile(join(social, 'manifest.json'), 'utf8')).images.some((image) => image.number === number), false);
+    assert.equal((await readFile(join(directory, 'dist/speaking-card/index.html'), 'utf8')).includes(`/share/speaking-card/${id}/`), false);
   });
 });

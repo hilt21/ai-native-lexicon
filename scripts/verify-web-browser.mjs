@@ -38,7 +38,7 @@ const server = createServer(async (request, response) => {
     assert.ok(path === root || path.startsWith(`${root}${sep}`));
     const file = pathname.endsWith('/') ? join(path, 'index.html') : path;
     const content = await readFile(file);
-    const type = file.endsWith('.html') ? 'text/html' : file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : file.endsWith('.json') ? 'application/json' : file.endsWith('.wasm') ? 'application/wasm' : 'application/octet-stream';
+    const type = file.endsWith('.html') ? 'text/html' : file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : file.endsWith('.json') ? 'application/json' : file.endsWith('.wasm') ? 'application/wasm' : file.endsWith('.svg') ? 'image/svg+xml' : file.endsWith('.png') ? 'image/png' : file.endsWith('.webp') ? 'image/webp' : 'application/octet-stream';
     response.writeHead(200, { 'Content-Type': type }); response.end(content);
   } catch { response.writeHead(404).end(); }
 });
@@ -472,7 +472,7 @@ try {
   await page.emulateMedia({reducedMotion:'reduce'});await page.goto(`${origin}/`);
   await check('reduced motion',async()=>{const state=await page.evaluate(()=>({scroll:getComputedStyle(document.documentElement).scrollBehavior,animations:document.getAnimations().length}));assert.equal(state.scroll,'auto');assert.equal(state.animations,0);});await page.emulateMedia({reducedMotion:'no-preference'});
   await verifyTranslationBrowser({ browser, origin, base, repository, evidence, check, report });
-  await verifyBrandBrowser({ browser, page, origin, base, evidence, check });
+  await verifyBrandBrowser({ browser, page, origin, base, evidence, check, settled });
   assert.deepEqual(errors, []); await context.close();
   await searchHistory(browser, 'bfcache'); await searchHistory(browser, 'bfcache', 'zh-CN'); await histories(browser, 'pstack', 'bfcache', 'zh-CN');
   await histories(browser,'pstack','bfcache');

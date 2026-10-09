@@ -2,15 +2,30 @@ import assert from 'node:assert/strict';
 import { join } from 'node:path';
 import sharp from 'sharp';
 
-export async function verifyBrandBrowser({ browser, page, origin, base, evidence, check }) {
+async function visibleImagesLoaded(locator) {
+  assert.ok(await locator.count(), 'at least one visible brand image exists');
+  for (const image of await locator.all()) {
+    assert.ok(await image.evaluate((element) => element.complete && element.naturalWidth > 0), await image.getAttribute('src'));
+  }
+}
+
+export async function verifyBrandBrowser({ browser, page, origin, base, evidence, check, settled }) {
   for (const locale of ['', 'zh-cn/']) for (const theme of ['light', 'dark']) {
     await check('brand homepage primary action and task discovery', async () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${origin}/${locale}`);
       await page.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme);
+      await settled(page);
+      await visibleImagesLoaded(page.locator('.site-title img:visible'));
+      await visibleImagesLoaded(page.locator('.resource-icon img:visible'));
       const primary = page.locator('.hero-actions .button-primary');
       const box = await primary.boundingBox();
-      assert.ok(box && box.y >= 0 && box.y + box.height <= 844, 'the entire primary action is in the first viewport');
+      assert.ok(box && box.x >= 0 && box.x + box.width <= 390 && box.y >= 0 && box.y + box.height <= 844, 'the entire primary action is in the first viewport');
+      assert.equal(await primary.evaluate((element) => getComputedStyle(element).opacity), '1');
+      const description = page.locator('.hero-manifesto > p');
+      const descriptionBox = await description.boundingBox();
+      assert.ok(descriptionBox && descriptionBox.y >= 0 && descriptionBox.y + descriptionBox.height <= 844);
+      assert.equal(await description.evaluate((element) => getComputedStyle(element).opacity), '1');
       assert.equal(await page.locator('[data-task-entry]').count(), 4);
       for (const [kind, suffix] of [['concept', 'concepts/'], ['primitive', 'primitives/'], ['speaking-guide', 'speaking-card/'], ['skill-map', 'skill-maps/']]) {
         const link = page.locator(`[data-task-entry="${kind}"]`);
@@ -21,18 +36,30 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
       const image = page.locator('.brand-mascot');
       assert.ok(await image.evaluate((element) => element.complete && element.naturalWidth > 0));
       assert.ok((await image.boundingBox()).width <= 245);
+      await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });
+      await settled(page);
       await page.screenshot({ path: join(evidence, `brand-home-${locale ? 'zh' : 'en'}-${theme}-390.png`), fullPage: true });
       await page.setViewportSize({ width: 1440, height: 900 });
+      await settled(page);
+      const wide = await primary.boundingBox();
+      assert.ok(wide && wide.x >= 0 && wide.x + wide.width <= 1440 && wide.y >= 0 && wide.y + wide.height <= 900);
+      const wideDescription = await description.boundingBox();
+      assert.ok(wideDescription && wideDescription.y >= 0 && wideDescription.y + wideDescription.height <= 900);
       await page.screenshot({ path: join(evidence, `brand-home-${locale ? 'zh' : 'en'}-${theme}-1440.png`), fullPage: true });
+      await page.setViewportSize({ width: 320, height: 844 });
+      await settled(page);
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '320px homepage has no horizontal overflow');
     }, { locale: locale || 'en', theme });
   }
 
   await check('six resource identities retain search result labels', async () => {
     await page.goto(`${origin}/search/`);
+    await settled(page);
     for (const kind of ['concept', 'primitive', 'speaking-guide', 'skill-map', 'map-node', 'task-journey']) {
       const result = page.locator(`[data-search-type="${kind}"]`).first();
       assert.ok(await result.count());
       assert.equal(await result.locator('[data-resource-icon]').getAttribute('data-resource-icon'), kind);
+      await visibleImagesLoaded(result.locator('.resource-icon img:visible'));
       assert.ok((await result.locator('.concept-category').innerText()).trim());
     }
   });
