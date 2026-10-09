@@ -28,8 +28,8 @@ const mapLink = (map: string, suffix = "") => canonicalMapLink(map, suffix, loca
   </section>)}</div></section>}
   {relationships.length > 0 && <section data-relationship-examples><h2>{ui("Relationship examples")}</h2>
     <p lang="zh-Hans">条目详情按关系类型区分使用、交接与原则约束；这些连接是编辑指导，不代表固定执行顺序或自动执行授权。</p>
-    <ul>{relationships.map(({ type, edge, from, to }) => <li data-relation-type={type.id}>
-      <a href={mapLink(map.id, `nodes/${from.id}/`)} lang={textLang(from, 'title')}>{from.title}</a>{' → '}<span lang={taxonomyLang(map, 'relation_types', type.id, 'outgoing_label')}>{type.outgoing_label}</span>{' → '}<a href={mapLink(map.id, `nodes/${to.id}/`)} lang={textLang(to, 'title')}>{to.title}</a>
+    <ul class="map-relations">{relationships.map(({ type, edge, from, to }) => <li data-relation-type={type.id}>
+      <a href={mapLink(map.id, `nodes/${from.id}/`)} lang={textLang(from, 'title')}>{from.title}</a>{' → '}<span class="relation-label" lang={taxonomyLang(map, 'relation_types', type.id, 'outgoing_label')}>{type.outgoing_label}</span>{' → '}<a href={mapLink(map.id, `nodes/${to.id}/`)} lang={textLang(to, 'title')}>{to.title}</a>
       <p lang={taxonomyLang(map, 'relation_types', type.id, 'description')}>{type.description}</p>{edge.note && <p lang={textLang(map.data, "scope")}>{edge.note}</p>}
     </li>)}</ul>
   </section>}

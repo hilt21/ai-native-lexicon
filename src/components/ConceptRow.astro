@@ -19,6 +19,7 @@ const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 <CatalogRow
+  resourceType="concept"
   href={pathWithBase(`/concepts/${concept.id}/`)}
   title={concept.data.term}
   titleLanguage="en"

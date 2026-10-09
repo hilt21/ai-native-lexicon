@@ -3,6 +3,7 @@ import starlight from '@astrojs/starlight';
 import { localizedSitemap } from './src/integrations/localized-sitemap.mjs';
 import { fileURLToPath } from 'node:url';
 import { contentBranch } from './src/lib/repository.mjs';
+import { brandProjections } from './src/integrations/brand-projections.mjs';
 
 const repository = process.env.GITHUB_REPOSITORY?.split('/')[1] ?? 'ai-native-lexicon';
 const owner = process.env.GITHUB_REPOSITORY_OWNER ?? 'example';
@@ -23,14 +24,16 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     localizedSitemap(),
+    brandProjections(),
     starlight({
       title: 'AI Native Lexicon',
+      logo: { light: './public/brand/wordmark.svg', dark: './public/brand/wordmark-dark.svg', replacesTitle: true, alt: '' },
       defaultLocale: 'root',
       locales: { root: { label: 'English', lang: 'en' }, 'zh-cn': { label: '简体中文', lang: 'zh-CN' } },
       routeMiddleware: './src/routeData.ts',
       description:
         'An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.',
-      favicon: '/favicon.svg',
+      favicon: '/brand/north-star.svg',
       customCss: ['./src/styles/custom.css'],
       components: { SkipLink: './src/components/SkipLink.astro', PageTitle: './src/components/PageTitle.astro', LanguageSelect: './src/components/LanguageSelect.astro' },
       social: hasRepository ? [{ icon: 'github', label: 'GitHub', href: repositoryUrl }] : [],

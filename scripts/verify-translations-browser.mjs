@@ -138,8 +138,13 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       await check('Chinese shell screenshot, native links, original language and narrow/wide geometry', async () => {
         assert.equal(await page.locator('html').getAttribute('lang'), 'zh-CN');
         const geometry = await page.evaluate(() => ({ width: innerWidth, scroll: document.documentElement.scrollWidth })); assert.ok(geometry.scroll <= geometry.width, JSON.stringify(geometry)); assert.equal(await page.locator('h1:visible').count(), 1);
-        const internal = await page.locator('main a[href]').evaluateAll((links) => links.map((link) => link.getAttribute('href')).filter((href) => href.startsWith('/') && !href.endsWith('/dataset.json')));
-        assert.ok(internal.every((href) => href.startsWith(`${base}/zh-cn/`) && !href.includes('/zh-cn/zh-cn/') && !href.includes(`${base}${base}`)), JSON.stringify(internal));
+        const internal = await page.locator('main a[href]').evaluateAll((links) => links.map((link) => ({ href: link.getAttribute('href'), card: link.closest('.speaking-card')?.id, download: link.hasAttribute('download'), shareAction: !!link.closest('.card-share-actions') })).filter(({ href }) => href.startsWith('/') && !href.endsWith('/dataset.json')));
+        assert.ok(internal.every(({ href, card, download, shareAction }) => {
+          if (shareAction && card) return download
+            ? [`${base}/brand/social/${card}-landscape.png`, `${base}/brand/social/${card}-portrait.png`].includes(href)
+            : href === `${base}/share/speaking-card/${card}/`;
+          return href.startsWith(`${base}/zh-cn/`) && !href.includes('/zh-cn/zh-cn/') && !href.includes(`${base}${base}`);
+        }), JSON.stringify(internal));
         const filename = `zh-cn-${route.replaceAll('/', '-') || 'home-'}${width}-${theme}.png`; await page.screenshot({ path: join(evidence, filename), fullPage: true, animations: 'disabled' });
         if (route === '' || route === 'categories/' || route === 'primitives/') {
           const eligible = route === 'primitives/' ? localized.layers.every((entry) => entry.units.label.status === 'reviewed') : localized.categories.every((entry) => ['label', 'description'].every((path) => entry.units[path].status === 'reviewed'));

@@ -58,10 +58,11 @@ Requires Node.js 22.12 or newer. The GitHub Actions workflow uses Node.js 24.
 git clone https://github.com/hilt21/ai-native-lexicon.git
 cd ai-native-lexicon
 npm ci
+npx playwright install chromium
 npm run dev
 ```
 
-The site opens at `http://localhost:4321/`. Before submitting a change, run the checks used by CI:
+The site opens at `http://localhost:4321/`. Chromium renders the static brand preview and Speaking Guide images during development/build; the bundled Inter font keeps image typography consistent across environments. Before submitting a change, run the checks used by CI:
 
 ```sh
 npm run check
@@ -87,6 +88,7 @@ Help improve a term's boundary, example or evidence, or propose a meaningful new
 
 - [Content editing and validation](./CONTRIBUTING.md), including [Speaking Guides](./CONTRIBUTING.md#scope-of-changes) and [Skill Maps](./CONTRIBUTING.md#skill-maps).
 - [Primitive content guide](./docs/primitives.md).
+- [Brand visual language](./docs/design/brand/visual-language.md) and [website design system](./docs/design/redesign-system.md).
 - [Skill Map field and UI contract](./docs/design/skill-map.md), [pstack source-verification record](./docs/audits/skill-map-sm-01.md) and [Matt Pocock source and semantic audit](./docs/audits/skill-map-mp-01.md).
 - [Shared content boundary](./src/domain/content/README.md) and [machine-readable projections](./docs/exports.md).
 - [Domain glossary](./GLOSSARY.md) and [application-resource architecture](./docs/adr/0006-application-resources-and-projections.md).

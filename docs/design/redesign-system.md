@@ -4,6 +4,7 @@ Preserve the paper/ink/acid-green identity while making the lexicon easy to scan
 
 ## Sources of truth
 
+- [Brand visual language](brand/visual-language.md) owns the identity, color, graphic, pattern, icon and branded-application rules derived from the owner-provided v1.0 boards. Read it before changing brand expression; the contracts below describe the current implementation.
 - `src/styles/tokens.css` owns semantic theme, typography, spacing, reading-width, control, focus and motion tokens, including the Starlight palette mapping.
 - `src/styles/custom.css` owns shared layouts. Component-scoped styles handle local structure using the same tokens.
 - Canonical YAML supplies content and taxonomy; [the content boundary](../../src/domain/content/README.md) supplies validated inputs. [Translation overlays](translation-overlay.md) supply reviewed display prose separately.
@@ -30,6 +31,8 @@ Catalog rows switch at a 40rem container width and Primitive rows at 44rem, adap
 
 Home presents navigation and the primary browse action, then featured concepts, category orientation and canonical-data projections. Feature selection belongs to the view; record bodies and taxonomy enums come from YAML. Counts reflect the current catalog. The dataset action always targets the canonical root endpoint, including from Chinese Home.
 
+The native Header uses the standard AI Lexicon wordmark while preserving AI Native Lexicon as its accessible product identity. Home adds the original-pixel mascot at bounded size and a four-task entry section before featured concepts. Resource icons share the existing six record kinds across directories, title areas and catalog search; labels and independent record states remain visible.
+
 Concept detail pages present the working definition, purpose/use/anti-pattern, optional ordered examples and distinctions, sources and relationships. Examples remain editorial illustrations. Distinctions link existing Concept targets. Primitive details resolve referenced Concept definitions without copying their prose into Primitive records. Sources project their canonical arrays; Copy preserves the displayed language and body.
 
 Single-paragraph map leads use `.map-summary`; `.page-intro` retains its two-child layout. Scope UI grid margin resets to direct children so ordinary Markdown spacing survives. Use `--lex-control-border` for interactive filter borders and `--lex-line` for decorative separators. Shared buttons retain readable labels, visible focus and pressed states.
@@ -45,6 +48,8 @@ Skill Map directory controls own the displayed rows, count and empty state, incl
 Shared views in `src/views/` render English root and Chinese `zh-cn` routes after the deployment base. Use the same resolver for prose, reused summaries, search excerpts and Copy; annotate the smallest actual-language span. UI translations are separate from knowledge overlays. Application Resource bodies retain their source editions in Chinese chrome.
 
 Keep native Head and locale configuration. HTML canonical/noindex/alternate policy and sitemap eligibility follow [the overlay contract](translation-overlay.md#routes-and-publication), including untranslated documentation fallbacks. Reader availability and Pagefind indexing are independent of crawler eligibility.
+
+Default OG images and Speaking Guide share images are build-time projections. Each guide has two downloadable image formats and an English static sharing page; these links are canonical root assets/projections even in Chinese chrome. Original card anchors remain reading identities. Share pages point canonical to the original guide directory, retain a distinct OG URL/image, and are excluded from sitemap/Pagefind. They reuse semantic tokens and the native theme provider. Image generation reads validated canonical records, uses the bundled licensed font and publishes a complete replacement only after rendering succeeds; see [BRAND-01](https://github.com/hilt21/ai-native-lexicon/issues/44).
 
 ## Verification
 

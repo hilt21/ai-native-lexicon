@@ -1,6 +1,13 @@
 ---
 import DefaultPageTitle from '@astrojs/starlight/components/PageTitle.astro';
+import ResourceIcon from './ResourceIcon.astro';
+import { resourceKindForRoute } from '../lib/brand';
+import { searchKinds } from '../lib/field-search';
+import { rootPath, routeLocale, uiFor } from '../lib/locale';
+const kind = resourceKindForRoute(rootPath(Astro.url));
+const ui = uiFor(routeLocale(Astro.url));
 ---
+{kind && <p class="resource-heading"><ResourceIcon kind={kind} /><span>{ui(searchKinds.find((entry) => entry.value === kind)!.label)}</span></p>}
 {Astro.locals.skillMapTitleParts ? <h1 id="_top">{Astro.locals.skillMapTitleParts.map((part) => <span lang={part.lang}>{part.text}</span>)}</h1> : Astro.locals.lexiconPage?.titleLanguage ? <h1 id="_top" lang={Astro.locals.lexiconPage.titleLanguage}>{Astro.locals.starlightRoute.entry.data.title}</h1> : <DefaultPageTitle />}
 <style>
   @layer starlight.core {

@@ -50,6 +50,12 @@ A reviewer should be able to answer yes to each question:
 4. Is the maturity label honest about consensus?
 5. Do the relationships form useful paths through the lexicon?
 
+## Brand and interface changes
+
+For brand identity, colors, graphics, patterns, icons or branded applications, read the [brand visual language](docs/design/brand/visual-language.md) and the relevant source board. For website layout, styling or interaction, also read the [editorial design system](docs/design/redesign-system.md). Use actual project content in application examples and follow [Validation](#validation) for the affected implementation; brand-reference documentation alone does not establish rendered behavior.
+
+Install Chromium with `npx playwright install chromium` before development, tests or builds: brand images are generated locally using the existing Playwright runtime. Speaking Guide sharing keeps canonical English prose and adds image/page projections without changing Guide records or machine exports. Image downloads and English sharing pages use canonical root paths; localized reading links keep the requested locale.
+
 ## Validation
 
 After data, schema, validation, route, component, configuration or styling changes, run:

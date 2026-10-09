@@ -1,0 +1,299 @@
+{
+  "version": 1,
+  "source_edition": "1.0",
+  "assets": [
+    {
+      "id": "wordmark",
+      "source": "01-brand-identity.jpg",
+      "section": "03",
+      "source_sha256": "6bea2912d9dfa7ae619a38627b4540b5d9d5ecc52136fce8622eb81d6fc7821a",
+      "crop": [
+        531,
+        315,
+        856,
+        377
+      ],
+      "native_size": [
+        325,
+        62
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "wordmark.svg",
+        "wordmark-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/wordmark-source.png"
+    },
+    {
+      "id": "north-star",
+      "source": "01-brand-identity.jpg",
+      "section": "07",
+      "source_sha256": "6bea2912d9dfa7ae619a38627b4540b5d9d5ecc52136fce8622eb81d6fc7821a",
+      "crop": [
+        1042,
+        457,
+        1157,
+        603
+      ],
+      "native_size": [
+        115,
+        146
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "north-star.svg",
+        "north-star-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/north-star-source.png",
+      "note": "Visible inner cutout rendered white in both themes, following board 01 geometry rules.",
+      "excluded_source_geometry": "two isolated dimension-guide arrowheads at native (7,144) and (105,144)",
+      "view_box": [
+        -15.5,
+        0,
+        146,
+        146
+      ]
+    },
+    {
+      "id": "unicorn-symbol",
+      "source": "01-brand-identity.jpg",
+      "section": "04",
+      "source_sha256": "6bea2912d9dfa7ae619a38627b4540b5d9d5ecc52136fce8622eb81d6fc7821a",
+      "crop": [
+        1050,
+        106,
+        1257,
+        369
+      ],
+      "native_size": [
+        207,
+        263
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "unicorn-symbol.svg",
+        "unicorn-symbol-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/unicorn-symbol-source.png",
+      "note": "Visible inner cutout rendered white in both themes, following board 01 geometry rules."
+    },
+    {
+      "id": "concept",
+      "source": "04-iconography.jpg",
+      "section": "04/01",
+      "source_sha256": "e61a1ef72f6d49fb3586f387a6d8af84f6f007644f90245ef0af17b5b70b534a",
+      "crop": [
+        523,
+        105,
+        626,
+        203
+      ],
+      "native_size": [
+        103,
+        98
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "concept.svg",
+        "concept-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/concept-source.png",
+      "view_box": [
+        0,
+        -2.5,
+        103,
+        103
+      ]
+    },
+    {
+      "id": "primitive",
+      "source": "04-iconography.jpg",
+      "section": "04/02",
+      "source_sha256": "e61a1ef72f6d49fb3586f387a6d8af84f6f007644f90245ef0af17b5b70b534a",
+      "crop": [
+        680,
+        108,
+        776,
+        199
+      ],
+      "native_size": [
+        96,
+        91
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "primitive.svg",
+        "primitive-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/primitive-source.png",
+      "view_box": [
+        0,
+        -2.5,
+        96,
+        96
+      ]
+    },
+    {
+      "id": "speaking-guide",
+      "source": "04-iconography.jpg",
+      "section": "04/03",
+      "source_sha256": "e61a1ef72f6d49fb3586f387a6d8af84f6f007644f90245ef0af17b5b70b534a",
+      "crop": [
+        832,
+        110,
+        929,
+        202
+      ],
+      "native_size": [
+        97,
+        92
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "speaking-guide.svg",
+        "speaking-guide-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/speaking-guide-source.png",
+      "view_box": [
+        0,
+        -2.5,
+        97,
+        97
+      ]
+    },
+    {
+      "id": "skill-map",
+      "source": "04-iconography.jpg",
+      "section": "04/04",
+      "source_sha256": "e61a1ef72f6d49fb3586f387a6d8af84f6f007644f90245ef0af17b5b70b534a",
+      "crop": [
+        982,
+        108,
+        1082,
+        205
+      ],
+      "native_size": [
+        100,
+        97
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "skill-map.svg",
+        "skill-map-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/skill-map-source.png",
+      "view_box": [
+        0,
+        -1.5,
+        100,
+        100
+      ]
+    },
+    {
+      "id": "map-node",
+      "source": "04-iconography.jpg",
+      "section": "04/13",
+      "source_sha256": "e61a1ef72f6d49fb3586f387a6d8af84f6f007644f90245ef0af17b5b70b534a",
+      "crop": [
+        832,
+        426,
+        929,
+        529
+      ],
+      "native_size": [
+        97,
+        103
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "map-node.svg",
+        "map-node-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/map-node-source.png",
+      "view_box": [
+        -3,
+        0,
+        103,
+        103
+      ]
+    },
+    {
+      "id": "task-journey",
+      "source": "04-iconography.jpg",
+      "section": "04/18",
+      "source_sha256": "e61a1ef72f6d49fb3586f387a6d8af84f6f007644f90245ef0af17b5b70b534a",
+      "crop": [
+        829,
+        581,
+        929,
+        693
+      ],
+      "native_size": [
+        100,
+        112
+      ],
+      "method": "two-ink raster masks traced with VTracer 0.6.15 to self-contained SVG; paper omitted; semantic ink and acid palette; speckle filtering disabled to preserve small cutouts",
+      "files": [
+        "task-journey.svg",
+        "task-journey-dark.svg"
+      ],
+      "status": "source-derived-reviewed",
+      "reference": "docs/design/brand/assets/task-journey-source.png",
+      "view_box": [
+        -6,
+        0,
+        112,
+        112
+      ]
+    },
+    {
+      "id": "rider-mascot",
+      "source": "01-brand-identity.jpg",
+      "section": "01",
+      "crop": [
+        18,
+        54,
+        509,
+        680
+      ],
+      "native_size": [
+        491,
+        626
+      ],
+      "source_sha256": "6bea2912d9dfa7ae619a38627b4540b5d9d5ecc52136fce8622eb81d6fc7821a",
+      "method": "original JPEG pixels retained under native SVG contour clipping; excluded board typography; no generative redraw",
+      "files": [
+        "rider-mascot.png",
+        "rider-mascot-320.webp",
+        "rider-mascot-491.webp"
+      ],
+      "status": "source-derived-reviewed",
+      "max_display_width_css_px": 245,
+      "note": "491 source pixels support 245 CSS pixels at 2x. Original JPEG pixels preserved; generated extraction was rejected for redraw. No claimed new detail."
+    }
+  ],
+  "derivation": {
+    "vector_tool": "VTracer 0.6.15",
+    "ink_threshold_max_channel": 135,
+    "accent_threshold": {
+      "green_min": 140,
+      "red_max": 225,
+      "blue_max": 130,
+      "green_red_difference_min": 22
+    },
+    "fit_mode": "spline",
+    "filter_speckle": 0,
+    "length_threshold": 1,
+    "path_precision": 2,
+    "mascot": "original JPEG embedded in SVG and clipped to source-derived silhouette before raster export",
+    "generation": "Rejected imagegen candidate; no generated pixels are included in production assets."
+  }
+}
