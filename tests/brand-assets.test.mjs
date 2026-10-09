@@ -27,16 +27,21 @@ test('brand SVGs render at target sizes without external resources', async () =>
   for (const asset of manifest.assets.filter((asset) => asset.id !== 'rider-mascot')) {
     for (const file of asset.files) {
       const source = await readFile(new URL(file, assets), 'utf8');
-      assert.match(source, /viewBox="0 0 \d+ \d+"/);
+      assert.match(source, /viewBox="-?[\d.]+ -?[\d.]+ \d+ \d+"/);
       assert.doesNotMatch(source, /<(?:script|foreignObject|image)\b|\bon\w+=|\bhref=/i);
       for (const width of asset.id === 'north-star' ? [16, 32] : asset.id === 'wordmark' ? [120] : [24, 64]) {
         const result = await sharp(Buffer.from(source)).resize({ width }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
         assert.equal(result.info.width, width);
+        if (asset.id !== 'wordmark' && asset.id !== 'unicorn-symbol') assert.equal(result.info.height, width, `${file} renders on a square target canvas`);
         const alpha = result.data.filter((_, index) => index % 4 === 3);
         assert.ok(alpha.some((value) => value > 0), `${file} has visible pixels`);
         assert.ok(alpha.some((value) => value === 0), `${file} has transparent background`);
       }
     }
+  }
+  const star = await sharp(await readFile(new URL('north-star.svg', assets))).ensureAlpha().raw().toBuffer();
+  for (let index = 0; index < star.length; index += 4) {
+    if (star[index + 3] > 0) assert.ok(Math.max(star[index], star[index + 1], star[index + 2]) > 100, 'the standalone accent has no ink construction artifacts');
   }
 });
 

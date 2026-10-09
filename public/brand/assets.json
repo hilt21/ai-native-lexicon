@@ -47,7 +47,14 @@
       ],
       "status": "source-derived-reviewed",
       "reference": "docs/design/brand/assets/north-star-source.png",
-      "note": "Visible inner cutout rendered white in both themes, following board 01 geometry rules."
+      "note": "Visible inner cutout rendered white in both themes, following board 01 geometry rules.",
+      "excluded_source_geometry": "two isolated dimension-guide arrowheads at native (7,144) and (105,144)",
+      "view_box": [
+        -15.5,
+        0,
+        146,
+        146
+      ]
     },
     {
       "id": "unicorn-symbol",
@@ -94,7 +101,13 @@
         "concept-dark.svg"
       ],
       "status": "source-derived-reviewed",
-      "reference": "docs/design/brand/assets/concept-source.png"
+      "reference": "docs/design/brand/assets/concept-source.png",
+      "view_box": [
+        0,
+        -2.5,
+        103,
+        103
+      ]
     },
     {
       "id": "primitive",
@@ -117,7 +130,13 @@
         "primitive-dark.svg"
       ],
       "status": "source-derived-reviewed",
-      "reference": "docs/design/brand/assets/primitive-source.png"
+      "reference": "docs/design/brand/assets/primitive-source.png",
+      "view_box": [
+        0,
+        -2.5,
+        96,
+        96
+      ]
     },
     {
       "id": "speaking-guide",
@@ -140,7 +159,13 @@
         "speaking-guide-dark.svg"
       ],
       "status": "source-derived-reviewed",
-      "reference": "docs/design/brand/assets/speaking-guide-source.png"
+      "reference": "docs/design/brand/assets/speaking-guide-source.png",
+      "view_box": [
+        0,
+        -2.5,
+        97,
+        97
+      ]
     },
     {
       "id": "skill-map",
@@ -163,7 +188,13 @@
         "skill-map-dark.svg"
       ],
       "status": "source-derived-reviewed",
-      "reference": "docs/design/brand/assets/skill-map-source.png"
+      "reference": "docs/design/brand/assets/skill-map-source.png",
+      "view_box": [
+        0,
+        -1.5,
+        100,
+        100
+      ]
     },
     {
       "id": "map-node",
@@ -186,7 +217,13 @@
         "map-node-dark.svg"
       ],
       "status": "source-derived-reviewed",
-      "reference": "docs/design/brand/assets/map-node-source.png"
+      "reference": "docs/design/brand/assets/map-node-source.png",
+      "view_box": [
+        -3,
+        0,
+        103,
+        103
+      ]
     },
     {
       "id": "task-journey",
@@ -209,7 +246,13 @@
         "task-journey-dark.svg"
       ],
       "status": "source-derived-reviewed",
-      "reference": "docs/design/brand/assets/task-journey-source.png"
+      "reference": "docs/design/brand/assets/task-journey-source.png",
+      "view_box": [
+        -6,
+        0,
+        112,
+        112
+      ]
     },
     {
       "id": "rider-mascot",
