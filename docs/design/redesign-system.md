@@ -22,7 +22,7 @@ Use semantic tokens rather than a competing local scale. Preserve native Starlig
 | `RelatedConcepts` | Concept details | Resolve linked summaries from the same localized catalog; preserve target identities. |
 | `CopyDefinition`, `RecordNavigation` | Concept/Primitive details | Copy the rendered definition body with named actions and success/failure feedback; canonical English A–Z neighbors stay within the same type. |
 | `TranslationCoverage`, `LocalizedPage` | Localized reading views | Expose missing/draft/stale fallback and resource edition boundaries; use shared publication eligibility. |
-| `LanguageSelect` | Header, mobile splash Home | Reuse native Select; preserve query parameters and only valid destination fragments. Home exposes native theme/language controls below 50rem because splash has no sidebar menu. |
+| `LanguageSelect` | Header, mobile splash Home | Reuse native Select; preserve query parameters and only valid destination fragments. Below 50rem, Home exposes the existing header selectors as 44px icon controls on the Logo/search row, because splash has no sidebar menu. The native menus retain full option labels and accessible names; Home has no duplicate selectors in its content. |
 | `SkipLink` | Starlight shell | Splash pages focus visible content; ordinary pages keep the native inner-page target. |
 
 Catalog rows switch at a 40rem container width and Primitive rows at 44rem, adapting to sidebar-constrained desktop space. Page layouts switch at 50rem; category grids also use 72rem and 30rem boundaries. Keep summaries visible at narrow widths. CSS media/container query boundaries remain literal values.

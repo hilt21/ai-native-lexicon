@@ -14,7 +14,7 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
     await check('brand homepage primary action and task discovery', async () => {
       await page.setViewportSize({ width: 390, height: 844 });
       await page.goto(`${origin}/${locale}`);
-      await page.evaluate((theme) => { document.documentElement.dataset.theme = theme; }, theme);
+      await page.locator('.header starlight-theme-select select:visible').selectOption(theme);
       await settled(page);
       await visibleImagesLoaded(page.locator('.site-title img:visible'));
       await visibleImagesLoaded(page.locator('.resource-icon img:visible'));
@@ -67,6 +67,31 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
       await page.setViewportSize({ width: 320, height: 844 });
       await settled(page);
       assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth), '320px homepage has no horizontal overflow');
+      for (const width of [320, 360, 390, 799]) {
+        await page.setViewportSize({ width, height: 844 });
+        await settled(page);
+        const controls = page.locator('.header .right-group select:visible');
+        assert.equal(await controls.count(), 2, 'both native selectors are visible in the mobile header');
+        assert.equal(await page.locator('.lexicon-home select').count(), 0, 'Home has no duplicate content selectors');
+        const items = [page.locator('.header .site-title img:visible'), page.locator('.header [data-open-modal]'), ...await controls.all()];
+        const boxes = await Promise.all(items.map((item) => item.boundingBox()));
+        assert.ok(boxes.every(Boolean));
+        assert.ok(boxes[0].width >= 120, 'the wordmark meets its brand minimum width');
+        for (let index = 1; index < boxes.length; index++) {
+          const box = boxes[index];
+          assert.ok(box.width >= 44 && box.height >= 44, 'mobile controls retain 44px targets');
+          assert.ok(box.x >= boxes[index - 1].x + boxes[index - 1].width, 'header items do not overlap');
+          assert.ok(box.x + box.width <= width, 'header items fit the viewport');
+          assert.ok(Math.abs(box.y + box.height / 2 - (boxes[0].y + boxes[0].height / 2)) < 1, 'header items share one row');
+        }
+        for (const control of await controls.all()) {
+          assert.ok(await control.evaluate((element) => element.labels[0].querySelector('.sr-only').textContent.trim()), 'icon selectors retain accessible names');
+          await control.focus();
+          assert.equal(await control.evaluate((element) => element === document.activeElement), true);
+        }
+        await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });
+        await page.screenshot({ path: join(evidence, `header-home-${locale ? 'zh' : 'en'}-${theme}-${width}.png`) });
+      }
     }, { locale: locale || 'en', theme });
   }
 

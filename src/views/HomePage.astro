@@ -2,8 +2,6 @@
 import { getLocalizedConcepts } from '../lib/localized-catalog';
 import { routeLocale, localePath, uiFor } from '../lib/locale';
 import StarlightPage from '../components/LocalizedPage.astro';
-import ThemeSelect from '@astrojs/starlight/components/ThemeSelect.astro';
-import LanguageSelect from '../components/LanguageSelect.astro';
 import CategoryGrid from '../components/CategoryGrid.astro';
 import ConceptList from '../components/ConceptList.astro';
 import ResourceIcon from '../components/ResourceIcon.astro';
@@ -38,7 +36,6 @@ const tasks = [
           <a href={pathWithBase('/skill-maps/')}>{ui("Skill Maps")}</a>
         </nav>
         <span>{ui("EDITION 0.1")}</span>
-        <div class="home-native-controls" data-pagefind-ignore><ThemeSelect /><LanguageSelect /></div>
       </div>
       <div class="hero-grid brand-hero-grid">
         <div class="brand-hero-copy">
@@ -100,17 +97,3 @@ const tasks = [
     </section>
   </div>
 </StarlightPage>
-
-<style>
-  /* Native splash pages have no sidebar menu to expose these mobile controls. */
-  .home-native-controls {
-    display: flex;
-    flex-basis: 100%;
-    align-items: center;
-    gap: var(--lex-space-4);
-    font-family: var(--sl-font);
-    font-size: var(--sl-text-base);
-    letter-spacing: normal;
-  }
-  @media (min-width: 50rem) { .home-native-controls { display: none; } }
-</style>

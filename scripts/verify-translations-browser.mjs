@@ -25,8 +25,8 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       await page.waitForURL(`${origin}/zh-cn/?q=harness&type=concept&keep=1#lexicon-content`);
       assert.equal(await page.locator('html').getAttribute('lang'), 'zh-CN');
       assert.equal(await page.locator('html').getAttribute('data-theme'), 'dark');
-      const labelFits = await language.evaluate((element) => { const style = getComputedStyle(element); const canvas = document.createElement('canvas').getContext('2d'); canvas.font = style.font; return element.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) >= canvas.measureText(element.selectedOptions[0].text).width; });
-      assert.ok(labelFits, 'Mobile Home language label must fit the native select');
+      assert.equal(await page.locator('.header lexicon-language-select select:visible').count(), 1);
+      assert.equal(await language.locator('option:checked').textContent(), '简体中文', 'the compact control retains the full native option label');
       assert.equal(await page.locator('#lexicon-content').count(), 1);
       await theme.selectOption('light');
       await language.selectOption(`${base}/`);
@@ -35,6 +35,18 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
       await page.setViewportSize({ width: 1440, height: 960 });
       assert.equal(await language.count(), 1); assert.equal(await theme.count(), 1);
+      const labelFits = await language.evaluate((element) => { const style = getComputedStyle(element); const canvas = document.createElement('canvas').getContext('2d'); canvas.font = style.font; return element.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) >= canvas.measureText(element.selectedOptions[0].text).width; });
+      assert.ok(labelFits, 'Desktop language label still fits the native select');
+      await page.setViewportSize({ width: 360, height: 844 });
+      await theme.selectOption('auto');
+      await page.emulateMedia({ colorScheme: 'dark' });
+      await page.waitForFunction(() => document.documentElement.dataset.theme === 'dark');
+      await page.emulateMedia({ colorScheme: 'light' });
+      await page.waitForFunction(() => document.documentElement.dataset.theme === 'light');
+      await page.reload();
+      assert.equal(await theme.inputValue(), 'auto');
+      assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
+      await page.setViewportSize({ width: 1440, height: 960 });
     });
     await check('bilingual shared records, unit languages, reference definition, Copy and core SEO', async () => {
       for (const [kind, records, ids] of [['concepts', localized.concepts, ['context-engineering', 'harness', 'mcp']], ['primitives', localized.primitives, ['harness', 'state']]]) {
