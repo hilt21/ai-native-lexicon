@@ -1,0 +1,47 @@
+{
+  "channel": "chromium",
+  "images": [
+    {
+      "source": "../../../../../public/brand/hero-v2/rider-light.svg",
+      "complete": true,
+      "naturalWidth": 1111,
+      "width": 330,
+      "height": 420.59375
+    },
+    {
+      "source": "../../../../../public/brand/hero-v2/rider-light-680.webp",
+      "complete": true,
+      "naturalWidth": 680,
+      "width": 340,
+      "height": 433.5
+    },
+    {
+      "source": "../../../../../public/brand/hero-v2/rider-light.svg",
+      "complete": true,
+      "naturalWidth": 1111,
+      "width": 240,
+      "height": 305.875
+    },
+    {
+      "source": "../../../../../public/brand/hero-v2/rider-dark.svg",
+      "complete": true,
+      "naturalWidth": 1111,
+      "width": 330,
+      "height": 420.59375
+    },
+    {
+      "source": "../../../../../public/brand/hero-v2/rider-dark-680.webp",
+      "complete": true,
+      "naturalWidth": 680,
+      "width": 340,
+      "height": 433.5
+    },
+    {
+      "source": "../../../../../public/brand/hero-v2/rider-dark.svg",
+      "complete": true,
+      "naturalWidth": 1111,
+      "width": 240,
+      "height": 305.875
+    }
+  ]
+}

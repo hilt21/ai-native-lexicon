@@ -1,0 +1,30 @@
+---
+import { pathWithBase } from '../lib/catalog';
+const imageSet = (theme: 'light' | 'dark') => `image-set(url("${pathWithBase(`/brand/hero-v2/rider-${theme}-340.webp`)}") 1x, url("${pathWithBase(`/brand/hero-v2/rider-${theme}-680.webp`)}") 2x)`;
+---
+<div
+  class="hero-artwork"
+  data-hero-artwork
+  aria-hidden="true"
+  style={`--hero-artwork-light:${imageSet('light')};--hero-artwork-dark:${imageSet('dark')}`}
+></div>
+<style>
+  .hero-artwork {
+    width: var(--hero-artwork-width);
+    max-width: 100%;
+    aspect-ratio: 1111 / 1416;
+    justify-self: start;
+    transform: translateY(-20px);
+    background-image: var(--hero-artwork-light);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  :global([data-theme='dark']) .hero-artwork { background-image: var(--hero-artwork-dark); }
+  @media (max-width: 50rem) {
+    .hero-artwork { justify-self: center; transform: none; }
+  }
+  @media (min-width: 50rem) and (max-width: 75rem) {
+    .hero-artwork { transform: none; }
+  }
+</style>

@@ -1,0 +1,142 @@
+{
+  "version": 2,
+  "identity": "rider-mascot",
+  "status": "generated-derived-verified",
+  "method": "Built-in image_gen identity-guided raster generation followed by two-tone path tracing with VTracer 0.6.15. Shared native-vector light silhouette masks both variants; approved north-star paths composed at the arrow tip.",
+  "references": [
+    "public/brand/rider-mascot.png",
+    "docs/design/brand/v1/01-brand-identity.jpg"
+  ],
+  "masters": [
+    {
+      "file": "docs/design/brand/hero-artwork/v2/generated-master.png",
+      "sha256": "d66c810671bd65fe61235e7a9da30d1cd24118138faeb1f693988cdacd0f53ac",
+      "size": [
+        1111,
+        1416
+      ]
+    },
+    {
+      "file": "docs/design/brand/hero-artwork/v2/generated-dark-master.png",
+      "sha256": "0481ffc74b38fe350f243e8e7d009e6355a2082708012c38e56a79096481201d",
+      "size": [
+        1111,
+        1415
+      ]
+    }
+  ],
+  "artboard": [
+    1111,
+    1416
+  ],
+  "arrow_tip_anchor": [
+    331,
+    368
+  ],
+  "north_star_canvas_width": 86,
+  "target_css_widths": [
+    240,
+    330,
+    340
+  ],
+  "tracing": {
+    "tool": "VTracer 0.6.15",
+    "alpha_threshold": 128,
+    "luma_threshold": 128,
+    "filter_speckle": 2,
+    "length_threshold": 1,
+    "path_precision": 2
+  },
+  "assets": [
+    {
+      "theme": "light",
+      "file": "rider-light.svg",
+      "viewBox": [
+        0,
+        0,
+        1111,
+        1416
+      ],
+      "path_count": 185,
+      "bytes": 408020,
+      "sha256": "ecd83742969fa553a49b1d1ce908bc13fff30d20640634399e30802e68f9ae0f",
+      "palette": [
+        "#171916",
+        "#F3F0E6",
+        "#C8FF3D",
+        "#FFFFFF"
+      ],
+      "raster_embedded": false,
+      "files": [
+        "rider-light.svg",
+        "rider-light-340.webp",
+        "rider-light-680.webp"
+      ],
+      "exports": [
+        {
+          "file": "rider-light-340.webp",
+          "width": 340,
+          "height": 433,
+          "bytes": 38646,
+          "sha256": "fddb0ed51fc6680ff5375e92c178872171679f00b1d302d38864a3fe74e5f77e"
+        },
+        {
+          "file": "rider-light-680.webp",
+          "width": 680,
+          "height": 867,
+          "bytes": 89602,
+          "sha256": "b30ddd028ca02bd2c2ecd26e46dea7d4132ecf5fc13725d68371a1730f8df82f"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "file": "rider-dark.svg",
+      "viewBox": [
+        0,
+        0,
+        1111,
+        1416
+      ],
+      "path_count": 179,
+      "bytes": 490196,
+      "sha256": "fb180fcad9d3f52715cd50bde4c625a788f51d0d41a390881bac42f475a129aa",
+      "palette": [
+        "#151713",
+        "#EEF0E7",
+        "#C8FF3D",
+        "#FFFFFF"
+      ],
+      "raster_embedded": false,
+      "files": [
+        "rider-dark.svg",
+        "rider-dark-340.webp",
+        "rider-dark-680.webp"
+      ],
+      "exports": [
+        {
+          "file": "rider-dark-340.webp",
+          "width": 340,
+          "height": 433,
+          "bytes": 47018,
+          "sha256": "304ffdf99e9db655c0e2ee3fbd6474abc7a3affa5c839c436b01a7a04a03640a"
+        },
+        {
+          "file": "rider-dark-680.webp",
+          "width": 680,
+          "height": 867,
+          "bytes": 110932,
+          "sha256": "25d2e421051c635dde77b7418fe3403062ba54ba5eac45983f418aeead81b10e"
+        }
+      ]
+    }
+  ],
+  "note": "Generated recreation, not original design-source vectors or original pixels. Existing v1 source assets are unchanged. Website integration is separate.",
+  "review": {
+    "date": "2026-10-09",
+    "visual": "Compared full figure and face/hands/unicorn details with brand references; generated recreation preserves recognisable identity and composition, not original pixel identity.",
+    "verification": "docs/design/brand/hero-artwork/v2/verification.json",
+    "browser_verification": "docs/design/brand/hero-artwork/v2/browser-verification.json",
+    "website_integration": "not-yet-implemented"
+  }
+}

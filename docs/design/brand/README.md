@@ -10,6 +10,8 @@
 
 生产素材及质量边界见 [网站品牌素材交付](asset-delivery.md)。
 
+首页主视觉优化见 [方案 A：编辑式主视觉规划](homepage-hero-artwork-plan.md)，生成式重制的 Light/Dark 矢量及 WebP 见 [v2 素材交付](hero-artwork/v2/README.md)。首轮最小实验已本地接入，尚未发布。
+
 ## 图版索引
 
 | 原始附件 | 归档图版 | 内容 |

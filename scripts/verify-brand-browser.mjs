@@ -33,9 +33,18 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
         await link.focus();
         assert.equal(await link.evaluate((element) => element === document.activeElement), true);
       }
-      const image = page.locator('.brand-mascot');
-      assert.ok(await image.evaluate((element) => element.complete && element.naturalWidth > 0));
-      assert.ok((await image.boundingBox()).width <= 245);
+      const artwork = page.locator('[data-hero-artwork]');
+      const loaded = await artwork.evaluate(async (element) => {
+        const background = getComputedStyle(element).backgroundImage;
+        const urls = [...background.matchAll(/url\("([^"]+)"\)/g)].map((match) => match[1]);
+        const source = urls[devicePixelRatio > 1 ? 1 : 0];
+        if (!source) throw new Error(`Missing theme artwork: ${background}`);
+        const image = new Image(); image.src = source; await image.decode();
+        return { source, width: image.naturalWidth };
+      });
+      assert.ok(loaded.source.includes(`/brand/hero-v2/rider-${theme}-`));
+      assert.equal(loaded.width, 340);
+      assert.ok((await artwork.boundingBox()).width >= 220 && (await artwork.boundingBox()).width <= 240);
       await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });
       await settled(page);
       await page.screenshot({ path: join(evidence, `brand-home-${locale ? 'zh' : 'en'}-${theme}-390.png`), fullPage: true });
@@ -45,6 +54,10 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
       assert.ok(wide && wide.x >= 0 && wide.x + wide.width <= 1440 && wide.y >= 0 && wide.y + wide.height <= 900);
       const wideDescription = await description.boundingBox();
       assert.ok(wideDescription && wideDescription.y >= 0 && wideDescription.y + wideDescription.height <= 900);
+      const artBox = await artwork.boundingBox();
+      const copyBox = await page.locator('.brand-hero-copy').boundingBox();
+      assert.ok(artBox && artBox.width >= 310 && artBox.width <= 340 && artBox.y >= 0 && artBox.y + artBox.height <= 900);
+      assert.ok(copyBox && artBox.x >= copyBox.x + copyBox.width, 'artwork does not overlap the text column');
       await page.screenshot({ path: join(evidence, `brand-home-${locale ? 'zh' : 'en'}-${theme}-1440.png`), fullPage: true });
       await page.setViewportSize({ width: 320, height: 844 });
       await settled(page);
