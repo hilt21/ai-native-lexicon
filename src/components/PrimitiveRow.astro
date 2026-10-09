@@ -3,6 +3,7 @@ import { routeLocale, localePath, uiFor } from '../lib/locale';
 import { unitLang } from '../lib/localized-catalog';
 import type { LocalizedPrimitive as Primitive } from '../lib/localized-catalog';
 import { primitiveOwners, primitivePriorities } from '../lib/primitive-presentation';
+import ResourceIcon from './ResourceIcon.astro';
 
 interface Props {
   primitive: Primitive;
@@ -18,7 +19,7 @@ const pathWithBase = (path: string) => localePath(path, locale);
 
 <a class="primitive-row" id={primitive.id} href={pathWithBase(`/primitives/${primitive.id}/`)}>
   <span class="primitive-row-name">
-    <strong lang="en">{data.term}</strong>
+    <strong lang="en"><ResourceIcon kind="primitive" size={20} />{data.term}</strong>
     <span lang="zh-CN">{data.zh}</span>
   </span>
   <span class="primitive-row-summary" lang={unitLang(primitive, "summary")}>{data.summary}</span>

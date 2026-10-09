@@ -15,6 +15,20 @@ export function rootPath(url: URL) {
 export function uiText(locale: Locale, key: string) { return locale === 'zh-CN' ? (chinese[key] ?? key) : key; }
 export const uiFor = (locale: Locale) => (key: string) => uiText(locale, key);
 const chinese: Record<string, string> = {
+  "Navigate AI-native systems.": "导航 AI 原生系统。",
+  "What do you want to do?": "从你想完成的任务开始",
+  "Understand": "理解概念",
+  "Design": "设计系统",
+  "Explain": "讲解交流",
+  "Apply": "选择技能",
+  "Find the meaning and boundaries of a concept.": "查找概念的含义与边界。",
+  "Explore the building blocks of a system.": "了解系统的构成与组合方式。",
+  "Prepare a clear explanation or discussion.": "准备清晰的讲解或讨论。",
+  "Choose skills for the task at hand.": "为当前任务选择合适的技能。",
+  "Download landscape image": "下载横版图片",
+  "Download portrait image": "下载竖版图片",
+  "Share this card": "分享这张卡",
+  "Images retain the original English content.": "图片保留原始英文内容。",
   "Concepts": "概念",
   "Categories": "分类",
   "Primitives": "原语",

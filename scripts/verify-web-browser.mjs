@@ -9,6 +9,7 @@ import { chromium } from 'playwright';
 import { parse, stringify } from 'yaml';
 import { verifySitemap } from './verify-sitemap.mjs';
 import { verifyTranslationBrowser } from './verify-translations-browser.mjs';
+import { verifyBrandBrowser } from './verify-brand-browser.mjs';
 import { mapInput, nodeInput } from '../tests/skill-map-fixture.mjs';
 
 const run = promisify(execFile);
@@ -471,6 +472,7 @@ try {
   await page.emulateMedia({reducedMotion:'reduce'});await page.goto(`${origin}/`);
   await check('reduced motion',async()=>{const state=await page.evaluate(()=>({scroll:getComputedStyle(document.documentElement).scrollBehavior,animations:document.getAnimations().length}));assert.equal(state.scroll,'auto');assert.equal(state.animations,0);});await page.emulateMedia({reducedMotion:'no-preference'});
   await verifyTranslationBrowser({ browser, origin, base, repository, evidence, check, report });
+  await verifyBrandBrowser({ browser, page, origin, base, evidence, check });
   assert.deepEqual(errors, []); await context.close();
   await searchHistory(browser, 'bfcache'); await searchHistory(browser, 'bfcache', 'zh-CN'); await histories(browser, 'pstack', 'bfcache', 'zh-CN');
   await histories(browser,'pstack','bfcache');

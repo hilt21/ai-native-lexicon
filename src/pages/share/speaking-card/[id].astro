@@ -1,0 +1,76 @@
+---
+import { getSpeakingCards, type SpeakingCardData } from '../../../lib/speaking-cards';
+import { cardId, cardImagePath, cardSharePath } from '../../../lib/brand';
+import { pathWithBase } from '../../../lib/catalog';
+import ThemeProvider from '@astrojs/starlight/components/ThemeProvider.astro';
+import '../../../styles/tokens.css';
+export async function getStaticPaths() {
+  return (await getSpeakingCards()).map((card) => ({ params: { id: cardId(card.number) }, props: { card } }));
+}
+interface Props { card: SpeakingCardData }
+const { card } = Astro.props;
+const source = pathWithBase(`/speaking-card/#${cardId(card.number)}`);
+const image = cardImagePath(card.number, 'landscape');
+const absolute = (path: string) => new URL(path, Astro.site ?? Astro.url).href;
+const title = `${card.title} | AI Native Lexicon`;
+---
+<!doctype html>
+<html lang="en" data-pagefind-ignore="all">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <ThemeProvider />
+    <title>{title}</title>
+    <meta name="description" content={card.coreIdea} />
+    <meta name="robots" content="noindex,follow" />
+    <link rel="canonical" href={absolute(pathWithBase('/speaking-card/'))} />
+    <link rel="icon" href={pathWithBase('/brand/north-star.svg')} type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AI Native Lexicon" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={card.coreIdea} />
+    <meta property="og:url" content={absolute(cardSharePath(card.number))} />
+    <meta property="og:image" content={absolute(image)} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content={`${card.title}. ${card.coreIdea}`} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={card.coreIdea} />
+    <meta name="twitter:image" content={absolute(image)} />
+    <meta name="twitter:image:alt" content={`${card.title}. ${card.coreIdea}`} />
+  </head>
+  <body>
+    <header><a href={pathWithBase('/')} aria-label="AI Native Lexicon home"><img class="logo-light" src={pathWithBase('/brand/wordmark.svg')} alt="" width="180" height="35" /><img class="logo-dark" src={pathWithBase('/brand/wordmark-dark.svg')} alt="" width="180" height="35" /></a></header>
+    <main>
+      <p class="label">Speaking Card / {String(card.number).padStart(2, '0')}</p>
+      <h1>{card.title}</h1><p class="lead">{card.coreIdea}</p>
+      <a class="read" href={source}>Read the full speaking guide <span aria-hidden="true">→</span></a>
+      <img class="preview" src={image} alt={`${card.title}. ${card.coreIdea}`} width="1200" height="630" />
+      <nav aria-label="Download images">
+        <a href={image} download={`${cardId(card.number)}-landscape.png`}>Download landscape image</a>
+        <a href={cardImagePath(card.number, 'portrait')} download={`${cardId(card.number)}-portrait.png`}>Download portrait image</a>
+      </nav>
+      <p class="note">Images retain the original English content. A summary image accompanies the full guide; its examples, notes and linked entries remain available there.</p>
+    </main>
+  </body>
+</html>
+<style>
+  :global(body) { margin: 0; background: var(--lex-paper); color: var(--lex-ink); font: var(--lex-text-body)/var(--lex-leading-body) var(--sl-font); }
+  header, main { max-width: 65rem; margin-inline: auto; padding: var(--lex-space-8) var(--lex-space-4); }
+  header { border-bottom: 1px solid var(--lex-line); }
+  header img { display: block; }
+  .logo-dark { display: none; }
+  :global([data-theme='dark']) .logo-light { display: none; }
+  :global([data-theme='dark']) .logo-dark { display: block; }
+  h1 { font: 600 var(--lex-text-display)/1.1 var(--lex-font-display); overflow-wrap: anywhere; }
+  .lead { max-width: var(--lex-reading-width); font-size: var(--lex-text-lead); }
+  .label, .note { color: var(--lex-muted); }
+  a { color: var(--lex-ink); }
+  a:focus-visible { outline: 3px solid var(--lex-focus); outline-offset: 4px; }
+  .read { display: inline-flex; gap: var(--lex-space-4); align-items: center; min-height: var(--lex-control-height); margin-block: var(--lex-space-2) var(--lex-space-8); font-weight: 600; }
+  .preview { display: block; width: 100%; height: auto; border: 1px solid var(--lex-line); }
+  nav { display: flex; flex-wrap: wrap; gap: var(--lex-space-4) var(--lex-space-8); margin-top: var(--lex-space-6); }
+  nav a { display: inline-flex; align-items: center; min-height: var(--lex-control-height); }
+  .note { max-width: var(--lex-reading-width); font-size: var(--lex-text-small); }
+</style>
