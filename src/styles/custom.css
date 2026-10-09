@@ -245,7 +245,7 @@ main h1 { font-family: var(--lex-font-display); line-height: 1.08; letter-spacin
 .card-share-actions a { min-height: var(--lex-control-height); display: inline-flex; align-items: center; }
 .card-share-language { color: var(--lex-muted); font-size: var(--lex-text-small); }
 @media (max-width: 50rem) {
-  .brand-hero-grid { --hero-artwork-width: clamp(220px, 62vw, 240px); grid-template-columns: minmax(0, 1fr); }
+  .brand-hero-grid { --hero-artwork-width: min(100%, 480px); grid-template-columns: minmax(0, 1fr); }
   .task-entries { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .task-entries > a { border-bottom: 1px solid var(--lex-line); }
   .task-entries > a:nth-child(2n) { border-inline-end: 0; }

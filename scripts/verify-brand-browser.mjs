@@ -42,9 +42,13 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
         const image = new Image(); image.src = source; await image.decode();
         return { source, width: image.naturalWidth };
       });
-      assert.ok(loaded.source.includes(`/brand/${theme === 'dark' ? 'hero-v3' : 'hero-v2'}/rider-${theme}-`));
-      assert.equal(loaded.width, 340);
-      assert.ok((await artwork.boundingBox()).width >= 220 && (await artwork.boundingBox()).width <= 240);
+      assert.ok(loaded.source.includes(`/brand/hero-mobile/rider-${theme}-`));
+      assert.equal(loaded.width, 480);
+      const mobileArt = await artwork.boundingBox();
+      const mobileCopy = await page.locator('.brand-hero-copy').boundingBox();
+      assert.ok(mobileArt && mobileCopy && Math.abs(mobileArt.x - mobileCopy.x) < 1, 'mobile artwork shares the text left edge');
+      assert.ok(Math.abs(mobileArt.width - mobileCopy.width) < 1, '390px artwork fills the available text column');
+      assert.ok(mobileArt.y >= box.y + box.height, 'the primary action precedes the artwork');
       await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });
       await settled(page);
       await page.screenshot({ path: join(evidence, `brand-home-${locale ? 'zh' : 'en'}-${theme}-390.png`), fullPage: true });

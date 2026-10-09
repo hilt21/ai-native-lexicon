@@ -1,15 +1,16 @@
 ---
 import { pathWithBase } from '../lib/catalog';
-const imageSet = (theme: 'light' | 'dark') => {
-  const directory = theme === 'dark' ? 'hero-v3' : 'hero-v2';
-  return `image-set(url("${pathWithBase(`/brand/${directory}/rider-${theme}-340.webp`)}") 1x, url("${pathWithBase(`/brand/${directory}/rider-${theme}-680.webp`)}") 2x)`;
+const imageSet = (theme: 'light' | 'dark', mobile = false) => {
+  const directory = mobile ? 'hero-mobile' : theme === 'dark' ? 'hero-v3' : 'hero-v2';
+  const width = mobile ? 480 : 340;
+  return `image-set(url("${pathWithBase(`/brand/${directory}/rider-${theme}-${width}.webp`)}") 1x, url("${pathWithBase(`/brand/${directory}/rider-${theme}-${width * 2}.webp`)}") 2x)`;
 };
 ---
 <div
   class="hero-artwork"
   data-hero-artwork
   aria-hidden="true"
-  style={`--hero-artwork-light:${imageSet('light')};--hero-artwork-dark:${imageSet('dark')}`}
+  style={`--hero-artwork-light:${imageSet('light')};--hero-artwork-dark:${imageSet('dark')};--hero-artwork-mobile-light:${imageSet('light', true)};--hero-artwork-mobile-dark:${imageSet('dark', true)}`}
 ></div>
 <style>
   .hero-artwork {
@@ -25,7 +26,8 @@ const imageSet = (theme: 'light' | 'dark') => {
   }
   :global([data-theme='dark']) .hero-artwork { background-image: var(--hero-artwork-dark); }
   @media (max-width: 50rem) {
-    .hero-artwork { justify-self: center; transform: none; }
+    .hero-artwork { transform: none; background-image: var(--hero-artwork-mobile-light); }
+    :global([data-theme='dark']) .hero-artwork { background-image: var(--hero-artwork-mobile-dark); }
   }
   @media (min-width: 50rem) and (max-width: 75rem) {
     .hero-artwork { transform: none; }
