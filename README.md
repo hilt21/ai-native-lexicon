@@ -87,6 +87,7 @@ Help improve a term's boundary, example or evidence, or propose a meaningful new
 
 - [Content editing and validation](./CONTRIBUTING.md), including [Speaking Guides](./CONTRIBUTING.md#scope-of-changes) and [Skill Maps](./CONTRIBUTING.md#skill-maps).
 - [Primitive content guide](./docs/primitives.md).
+- [Brand visual language](./docs/design/brand/visual-language.md) and [website design system](./docs/design/redesign-system.md).
 - [Skill Map field and UI contract](./docs/design/skill-map.md), [pstack source-verification record](./docs/audits/skill-map-sm-01.md) and [Matt Pocock source and semantic audit](./docs/audits/skill-map-mp-01.md).
 - [Shared content boundary](./src/domain/content/README.md) and [machine-readable projections](./docs/exports.md).
 - [Domain glossary](./GLOSSARY.md) and [application-resource architecture](./docs/adr/0006-application-resources-and-projections.md).

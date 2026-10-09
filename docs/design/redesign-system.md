@@ -4,6 +4,7 @@ Preserve the paper/ink/acid-green identity while making the lexicon easy to scan
 
 ## Sources of truth
 
+- [Brand visual language](brand/visual-language.md) owns the identity, color, graphic, pattern, icon and branded-application rules derived from the owner-provided v1.0 boards. Read it before changing brand expression; the contracts below describe the current implementation.
 - `src/styles/tokens.css` owns semantic theme, typography, spacing, reading-width, control, focus and motion tokens, including the Starlight palette mapping.
 - `src/styles/custom.css` owns shared layouts. Component-scoped styles handle local structure using the same tokens.
 - Canonical YAML supplies content and taxonomy; [the content boundary](../../src/domain/content/README.md) supplies validated inputs. [Translation overlays](translation-overlay.md) supply reviewed display prose separately.
