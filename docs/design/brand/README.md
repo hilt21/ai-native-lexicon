@@ -4,9 +4,9 @@
 
 设计与开发从 [品牌视觉语言规范](visual-language.md) 开始，按任务分支查阅下列原稿。本文只维护附件索引与预览；可执行规则、素材交付和验证边界由规范统一维护。
 
-网站 P0/P1 升级的取舍、实施范围与验收见 [BRAND-01 · Spec #44](https://github.com/hilt21/ai-native-lexicon/issues/44)。该 spec 描述待实施的升级方案，当前界面行为仍以 [设计系统](../redesign-system.md) 为准。
+网站 P0/P1 升级的取舍、实施范围与验收见 [BRAND-01 · Spec #44](https://github.com/hilt21/ai-native-lexicon/issues/44)。当前实现行为以 [设计系统](../redesign-system.md) 为准，本地交付证据及实际首屏截图见 [升级验收记录](../../audits/brand-01-verification.md)。
 
-素材提取范围与开发依赖见 [网站素材计划与拆票草案](website-assets.md)。
+素材提取范围与开发依赖见 [网站素材计划与拆票方案](website-assets.md)。
 
 生产素材及质量边界见 [网站品牌素材交付](asset-delivery.md)。
 
