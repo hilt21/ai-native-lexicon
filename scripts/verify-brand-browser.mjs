@@ -46,9 +46,10 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
       assert.equal(loaded.width, 480);
       const mobileArt = await artwork.boundingBox();
       const mobileCopy = await page.locator('.brand-hero-copy').boundingBox();
+      const mobilePrimary = await primary.boundingBox();
       assert.ok(mobileArt && mobileCopy && Math.abs(mobileArt.x - mobileCopy.x) < 1, 'mobile artwork shares the text left edge');
       assert.ok(Math.abs(mobileArt.width - mobileCopy.width) < 1, '390px artwork fills the available text column');
-      assert.ok(mobileArt.y >= box.y + box.height, 'the primary action precedes the artwork');
+      assert.ok(mobilePrimary && mobileArt.y >= mobilePrimary.y + mobilePrimary.height, 'the primary action precedes the artwork');
       await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });
       await settled(page);
       await page.screenshot({ path: join(evidence, `brand-home-${locale ? 'zh' : 'en'}-${theme}-390.png`), fullPage: true });
