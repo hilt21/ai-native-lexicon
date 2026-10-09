@@ -14,7 +14,7 @@ export async function verifyBrowser(directory, evidence, fixture) {
       const path = resolve(root, pathname.slice(base.length + 1));
       if (!path.startsWith(`${root}${sep}`) && path !== root) { response.writeHead(404).end(); return; }
       const file = pathname.endsWith('/') ? join(path, 'index.html') : path;
-      const contentType = file.endsWith('.html') ? 'text/html' : file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : file.endsWith('.json') ? 'application/json' : file.endsWith('.wasm') ? 'application/wasm' : 'application/octet-stream';
+      const contentType = file.endsWith('.html') ? 'text/html' : file.endsWith('.js') ? 'text/javascript' : file.endsWith('.css') ? 'text/css' : file.endsWith('.json') ? 'application/json' : file.endsWith('.wasm') ? 'application/wasm' : file.endsWith('.svg') ? 'image/svg+xml' : file.endsWith('.png') ? 'image/png' : file.endsWith('.webp') ? 'image/webp' : 'application/octet-stream';
       const content = await readFile(file);
       response.writeHead(200, { 'Content-Type': contentType }); response.end(content);
     } catch { response.writeHead(404).end(); }
