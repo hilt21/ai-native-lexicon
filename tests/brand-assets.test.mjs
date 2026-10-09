@@ -16,6 +16,10 @@ test('brand delivery has ten uniquely identified, source-traceable assets', asyn
     assert.equal(createHash('sha256').update(source).digest('hex'), asset.source_sha256);
     assert.equal(asset.status, 'source-derived-reviewed');
     for (const file of asset.files) assert.ok((await readFile(new URL(file, assets))).length > 0);
+    if (asset.reference) {
+      const reference = await sharp(await readFile(new URL(asset.reference, root))).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+      assert.ok(reference.data.some((value, index) => index % 4 === 3 && value > 0), `${asset.id} source reference must contain visible pixels`);
+    }
   }
 });
 
