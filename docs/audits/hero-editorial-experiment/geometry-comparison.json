@@ -1,0 +1,130 @@
+[
+  {
+    "label": "baseline",
+    "theme": "light",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "art": {
+      "x": 1015,
+      "y": 322.6484375,
+      "width": 245,
+      "height": 312.375,
+      "right": 1260,
+      "bottom": 635.0234375
+    },
+    "copy": {
+      "x": 180,
+      "y": 222.796875,
+      "width": 787,
+      "height": 496.078125,
+      "right": 967,
+      "bottom": 718.875
+    },
+    "cta": {
+      "x": 180,
+      "y": 607.484375,
+      "width": 253.40625,
+      "height": 48.9921875,
+      "right": 433.40625,
+      "bottom": 656.4765625
+    }
+  },
+  {
+    "label": "baseline",
+    "theme": "dark",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "art": {
+      "x": 1015,
+      "y": 322.6484375,
+      "width": 245,
+      "height": 312.375,
+      "right": 1260,
+      "bottom": 635.0234375
+    },
+    "copy": {
+      "x": 180,
+      "y": 222.796875,
+      "width": 787,
+      "height": 496.078125,
+      "right": 967,
+      "bottom": 718.875
+    },
+    "cta": {
+      "x": 180,
+      "y": 607.484375,
+      "width": 253.40625,
+      "height": 48.9921875,
+      "right": 433.40625,
+      "bottom": 656.4765625
+    }
+  },
+  {
+    "label": "experiment",
+    "theme": "light",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "art": {
+      "x": 890,
+      "y": 248.5390625,
+      "width": 330,
+      "height": 420.59375,
+      "right": 1220,
+      "bottom": 669.1328125
+    },
+    "copy": {
+      "x": 180,
+      "y": 222.796875,
+      "width": 662,
+      "height": 496.078125,
+      "right": 842,
+      "bottom": 718.875
+    },
+    "cta": {
+      "x": 180,
+      "y": 607.484375,
+      "width": 253.40625,
+      "height": 48.9921875,
+      "right": 433.40625,
+      "bottom": 656.4765625
+    }
+  },
+  {
+    "label": "experiment",
+    "theme": "dark",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "art": {
+      "x": 890,
+      "y": 248.5390625,
+      "width": 330,
+      "height": 420.59375,
+      "right": 1220,
+      "bottom": 669.1328125
+    },
+    "copy": {
+      "x": 180,
+      "y": 222.796875,
+      "width": 662,
+      "height": 496.078125,
+      "right": 842,
+      "bottom": 718.875
+    },
+    "cta": {
+      "x": 180,
+      "y": 607.484375,
+      "width": 253.40625,
+      "height": 48.9921875,
+      "right": 433.40625,
+      "bottom": 656.4765625
+    }
+  }
+]

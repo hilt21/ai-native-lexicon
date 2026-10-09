@@ -1,0 +1,163 @@
+{
+  "date": "2026-10-09",
+  "baseline": "e5f3cda",
+  "implementation": "64fab4f",
+  "status": "local-experiment-verified-unpublished",
+  "lighthouse": [
+    {
+      "source": "work/hero-experiment/lighthouse-baseline-desktop.json",
+      "fetchTime": "2026-10-09T13:36:16.421Z",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+      "configSettings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility"
+        ],
+        "skipAudits": null
+      },
+      "performance": 100,
+      "accessibility": 100,
+      "LCP_ms": 525.6656,
+      "CLS": 0,
+      "TBT_ms": 0
+    },
+    {
+      "source": "work/hero-experiment/lighthouse-experiment-desktop.json",
+      "fetchTime": "2026-10-09T13:37:58.845Z",
+      "lighthouseVersion": "13.5.0",
+      "browser": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.0.0 Safari/537.36",
+      "configSettings": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility"
+        ],
+        "skipAudits": null
+      },
+      "performance": 100,
+      "accessibility": 100,
+      "LCP_ms": 524.9295,
+      "CLS": 0,
+      "TBT_ms": 0
+    }
+  ],
+  "browser": {
+    "source": "work/hero-experiment/browser/manifest.json",
+    "buildCommit": "64fab4f13204b123a18fa3245dc41df720cec9db",
+    "environment": {
+      "node": "v24.19.0",
+      "channel": "chromium"
+    },
+    "passed": 302,
+    "failures": 0,
+    "optional": {
+      "zoom400": "unverified; 320px reflow is not a 400% zoom test",
+      "screenReader": "unverified; requires an assistive-technology session",
+      "lighthouse": "measured independently outside this behavior suite"
+    }
+  },
+  "layouts": 36,
+  "limitations": [
+    "Single Lighthouse lab run per variant; not a measured speed improvement or real-user INP.",
+    "400% browser zoom and screen reader session not measured.",
+    "Not published; no user recognition or conversion study."
+  ]
+}

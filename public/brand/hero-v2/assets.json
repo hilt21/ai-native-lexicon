@@ -131,12 +131,13 @@
       ]
     }
   ],
-  "note": "Generated recreation, not original design-source vectors or original pixels. Existing v1 source assets are unchanged. Website integration is separate.",
+  "note": "Generated recreation, not original design-source vectors or original pixels. Existing v1 source assets are unchanged. Locally integrated in the homepage editorial experiment; not published.",
   "review": {
     "date": "2026-10-09",
     "visual": "Compared full figure and face/hands/unicorn details with brand references; generated recreation preserves recognisable identity and composition, not original pixel identity.",
     "verification": "docs/design/brand/hero-artwork/v2/verification.json",
     "browser_verification": "docs/design/brand/hero-artwork/v2/browser-verification.json",
-    "website_integration": "not-yet-implemented"
+    "website_integration": "local-experiment-verified",
+    "website_evidence": "docs/audits/hero-editorial-experiment.md"
   }
 }
