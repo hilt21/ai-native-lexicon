@@ -2,6 +2,8 @@
 
 状态：首轮最小设计实验已完成本地接入与工程验证；尚未发布。2026-10-09；源码基线 `e5f3cda`。素材及预览见 [v2 交付](hero-artwork/v2/README.md)。本轮包含尺度/位置、Dark 体块和北极星箭尖三个变量；P2 辅助图形和 P3 新微交互不加入本轮。
 
+第二轮按用户对 Dark 割裂感的反馈，仅调整局部明暗，Light 与布局保持首轮结果；当前 Dark 消费 [v3 暗部融合素材](hero-artwork/v3/README.md)，实际对照与验证见 [第二轮实验记录](../../audits/hero-dark-blend-experiment.md)。
+
 依据：[改进品牌形象呈现访谈](chatgpt-conversation://6ac8d43f-6268-83e8-8893-e706dcc07185)、用户提供的 [Dark 截图](references/2026-10-09-home-dark.png) / [Light 截图](references/2026-10-09-home-light.png)、[品牌规范](visual-language.md)、[素材交付边界](asset-delivery.md) 和 [现有设计系统](../redesign-system.md)。访谈为设计建议；尺寸估计、示意 SVG 和代码占位引用不能替代真实素材与浏览器测量。
 
 ## 设计判断与范围

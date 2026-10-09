@@ -1,0 +1,1200 @@
+{
+  "layouts": 36,
+  "checks": [
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1440,
+      "height": 900,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "art": {
+        "x": 890,
+        "y": 248.5390625,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1220,
+        "bottom": 669.1328125
+      },
+      "copy": {
+        "x": 180,
+        "y": 222.796875,
+        "width": 662,
+        "height": 496.078125,
+        "right": 842,
+        "bottom": 718.875
+      },
+      "cta": {
+        "x": 180,
+        "y": 607.484375,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 433.40625,
+        "bottom": 656.4765625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1920,
+      "height": 1080,
+      "viewport": 1920,
+      "documentWidth": 1920,
+      "art": {
+        "x": 1130,
+        "y": 251.5859375,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1460,
+        "bottom": 672.1796875
+      },
+      "copy": {
+        "x": 420,
+        "y": 222.796875,
+        "width": 662,
+        "height": 502.171875,
+        "right": 1082,
+        "bottom": 724.96875
+      },
+      "cta": {
+        "x": 420,
+        "y": 613.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 673.40625,
+        "bottom": 662.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1280,
+      "height": 800,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "art": {
+        "x": 830,
+        "y": 250.6484375,
+        "width": 310,
+        "height": 395.1015625,
+        "right": 1140,
+        "bottom": 645.75
+      },
+      "copy": {
+        "x": 100,
+        "y": 222.796875,
+        "width": 682,
+        "height": 474.8125,
+        "right": 782,
+        "bottom": 697.609375
+      },
+      "cta": {
+        "x": 100,
+        "y": 586.21875,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 353.40625,
+        "bottom": 635.2109375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 1024,
+      "height": 800,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "art": {
+        "x": 728,
+        "y": 262.984375,
+        "width": 260,
+        "height": 331.375,
+        "right": 988,
+        "bottom": 594.359375
+      },
+      "copy": {
+        "x": 16,
+        "y": 222.796875,
+        "width": 680,
+        "height": 395.75,
+        "right": 696,
+        "bottom": 618.546875
+      },
+      "cta": {
+        "x": 16,
+        "y": 507.15625,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 556.1484375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 800,
+      "height": 900,
+      "viewport": 800,
+      "documentWidth": 800,
+      "art": {
+        "x": 280,
+        "y": 619.375,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 520,
+        "bottom": 925.2578125
+      },
+      "copy": {
+        "x": 16,
+        "y": 206.796875,
+        "width": 768,
+        "height": 364.578125,
+        "right": 784,
+        "bottom": 571.375
+      },
+      "cta": {
+        "x": 16,
+        "y": 459.984375,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 508.9765625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 768,
+      "height": 900,
+      "viewport": 768,
+      "documentWidth": 768,
+      "art": {
+        "x": 264,
+        "y": 698.5703125,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 504,
+        "bottom": 1004.453125
+      },
+      "copy": {
+        "x": 16,
+        "y": 293.9921875,
+        "width": 736,
+        "height": 364.578125,
+        "right": 752,
+        "bottom": 658.5703125
+      },
+      "cta": {
+        "x": 16,
+        "y": 547.1796875,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 596.171875
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 390,
+      "height": 844,
+      "viewport": 390,
+      "documentWidth": 390,
+      "art": {
+        "x": 75,
+        "y": 815.96875,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 315,
+        "bottom": 1121.8515625
+      },
+      "copy": {
+        "x": 16,
+        "y": 382.390625,
+        "width": 358,
+        "height": 393.578125,
+        "right": 374,
+        "bottom": 775.96875
+      },
+      "cta": {
+        "x": 16,
+        "y": 664.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 713.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 360,
+      "height": 800,
+      "viewport": 360,
+      "documentWidth": 360,
+      "art": {
+        "x": 68.3984375,
+        "y": 815.96875,
+        "width": 223.1953125,
+        "height": 284.4609375,
+        "right": 291.59375,
+        "bottom": 1100.4296875
+      },
+      "copy": {
+        "x": 16,
+        "y": 382.390625,
+        "width": 328,
+        "height": 393.578125,
+        "right": 344,
+        "bottom": 775.96875
+      },
+      "cta": {
+        "x": 16,
+        "y": 664.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 713.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "light",
+      "width": 320,
+      "height": 844,
+      "viewport": 320,
+      "documentWidth": 320,
+      "art": {
+        "x": 50,
+        "y": 844.96875,
+        "width": 220,
+        "height": 280.390625,
+        "right": 270,
+        "bottom": 1125.359375
+      },
+      "copy": {
+        "x": 16,
+        "y": 382.390625,
+        "width": 288,
+        "height": 422.578125,
+        "right": 304,
+        "bottom": 804.96875
+      },
+      "cta": {
+        "x": 16,
+        "y": 693.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 742.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1440,
+      "height": 900,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "art": {
+        "x": 890,
+        "y": 248.5390625,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1220,
+        "bottom": 669.1328125
+      },
+      "copy": {
+        "x": 180,
+        "y": 222.796875,
+        "width": 662,
+        "height": 496.078125,
+        "right": 842,
+        "bottom": 718.875
+      },
+      "cta": {
+        "x": 180,
+        "y": 607.484375,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 433.40625,
+        "bottom": 656.4765625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1920,
+      "height": 1080,
+      "viewport": 1920,
+      "documentWidth": 1920,
+      "art": {
+        "x": 1130,
+        "y": 251.5859375,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1460,
+        "bottom": 672.1796875
+      },
+      "copy": {
+        "x": 420,
+        "y": 222.796875,
+        "width": 662,
+        "height": 502.171875,
+        "right": 1082,
+        "bottom": 724.96875
+      },
+      "cta": {
+        "x": 420,
+        "y": 613.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 673.40625,
+        "bottom": 662.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1280,
+      "height": 800,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "art": {
+        "x": 830,
+        "y": 250.6484375,
+        "width": 310,
+        "height": 395.1015625,
+        "right": 1140,
+        "bottom": 645.75
+      },
+      "copy": {
+        "x": 100,
+        "y": 222.796875,
+        "width": 682,
+        "height": 474.8125,
+        "right": 782,
+        "bottom": 697.609375
+      },
+      "cta": {
+        "x": 100,
+        "y": 586.21875,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 353.40625,
+        "bottom": 635.2109375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 1024,
+      "height": 800,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "art": {
+        "x": 728,
+        "y": 262.984375,
+        "width": 260,
+        "height": 331.375,
+        "right": 988,
+        "bottom": 594.359375
+      },
+      "copy": {
+        "x": 16,
+        "y": 222.796875,
+        "width": 680,
+        "height": 395.75,
+        "right": 696,
+        "bottom": 618.546875
+      },
+      "cta": {
+        "x": 16,
+        "y": 507.15625,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 556.1484375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 800,
+      "height": 900,
+      "viewport": 800,
+      "documentWidth": 800,
+      "art": {
+        "x": 280,
+        "y": 619.375,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 520,
+        "bottom": 925.2578125
+      },
+      "copy": {
+        "x": 16,
+        "y": 206.796875,
+        "width": 768,
+        "height": 364.578125,
+        "right": 784,
+        "bottom": 571.375
+      },
+      "cta": {
+        "x": 16,
+        "y": 459.984375,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 508.9765625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 768,
+      "height": 900,
+      "viewport": 768,
+      "documentWidth": 768,
+      "art": {
+        "x": 264,
+        "y": 698.5703125,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 504,
+        "bottom": 1004.453125
+      },
+      "copy": {
+        "x": 16,
+        "y": 293.9921875,
+        "width": 736,
+        "height": 364.578125,
+        "right": 752,
+        "bottom": 658.5703125
+      },
+      "cta": {
+        "x": 16,
+        "y": 547.1796875,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 596.171875
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "viewport": 390,
+      "documentWidth": 390,
+      "art": {
+        "x": 75,
+        "y": 815.96875,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 315,
+        "bottom": 1121.8515625
+      },
+      "copy": {
+        "x": 16,
+        "y": 382.390625,
+        "width": 358,
+        "height": 393.578125,
+        "right": 374,
+        "bottom": 775.96875
+      },
+      "cta": {
+        "x": 16,
+        "y": 664.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 713.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 360,
+      "height": 800,
+      "viewport": 360,
+      "documentWidth": 360,
+      "art": {
+        "x": 68.3984375,
+        "y": 815.96875,
+        "width": 223.1953125,
+        "height": 284.4609375,
+        "right": 291.59375,
+        "bottom": 1100.4296875
+      },
+      "copy": {
+        "x": 16,
+        "y": 382.390625,
+        "width": 328,
+        "height": 393.578125,
+        "right": 344,
+        "bottom": 775.96875
+      },
+      "cta": {
+        "x": 16,
+        "y": 664.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 713.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "en",
+      "theme": "dark",
+      "width": 320,
+      "height": 844,
+      "viewport": 320,
+      "documentWidth": 320,
+      "art": {
+        "x": 50,
+        "y": 844.96875,
+        "width": 220,
+        "height": 280.390625,
+        "right": 270,
+        "bottom": 1125.359375
+      },
+      "copy": {
+        "x": 16,
+        "y": 382.390625,
+        "width": 288,
+        "height": 422.578125,
+        "right": 304,
+        "bottom": 804.96875
+      },
+      "cta": {
+        "x": 16,
+        "y": 693.578125,
+        "width": 253.40625,
+        "height": 48.9921875,
+        "right": 269.40625,
+        "bottom": 742.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 1440,
+      "height": 900,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "art": {
+        "x": 890,
+        "y": 310.9375,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1220,
+        "bottom": 731.53125
+      },
+      "copy": {
+        "x": 180,
+        "y": 302.59375,
+        "width": 662,
+        "height": 461.28125,
+        "right": 842,
+        "bottom": 763.875
+      },
+      "cta": {
+        "x": 180,
+        "y": 652.484375,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 341.5625,
+        "bottom": 701.4765625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 1920,
+      "height": 1080,
+      "viewport": 1920,
+      "documentWidth": 1920,
+      "art": {
+        "x": 1130,
+        "y": 313.984375,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1460,
+        "bottom": 734.578125
+      },
+      "copy": {
+        "x": 420,
+        "y": 302.59375,
+        "width": 662,
+        "height": 467.375,
+        "right": 1082,
+        "bottom": 769.96875
+      },
+      "cta": {
+        "x": 420,
+        "y": 658.578125,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 581.5625,
+        "bottom": 707.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 1280,
+      "height": 800,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "art": {
+        "x": 830,
+        "y": 313.046875,
+        "width": 310,
+        "height": 395.1015625,
+        "right": 1140,
+        "bottom": 708.1484375
+      },
+      "copy": {
+        "x": 100,
+        "y": 302.59375,
+        "width": 682,
+        "height": 440.015625,
+        "right": 782,
+        "bottom": 742.609375
+      },
+      "cta": {
+        "x": 100,
+        "y": 631.21875,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 261.5625,
+        "bottom": 680.2109375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 1024,
+      "height": 800,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "art": {
+        "x": 728,
+        "y": 342.78125,
+        "width": 260,
+        "height": 331.375,
+        "right": 988,
+        "bottom": 674.15625
+      },
+      "copy": {
+        "x": 16,
+        "y": 302.59375,
+        "width": 680,
+        "height": 395.75,
+        "right": 696,
+        "bottom": 698.34375
+      },
+      "cta": {
+        "x": 16,
+        "y": 586.953125,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 635.9453125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 800,
+      "height": 900,
+      "viewport": 800,
+      "documentWidth": 800,
+      "art": {
+        "x": 280,
+        "y": 699.171875,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 520,
+        "bottom": 1005.0546875
+      },
+      "copy": {
+        "x": 16,
+        "y": 286.59375,
+        "width": 768,
+        "height": 364.578125,
+        "right": 784,
+        "bottom": 651.171875
+      },
+      "cta": {
+        "x": 16,
+        "y": 539.78125,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 588.7734375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 768,
+      "height": 900,
+      "viewport": 768,
+      "documentWidth": 768,
+      "art": {
+        "x": 264,
+        "y": 778.3671875,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 504,
+        "bottom": 1084.25
+      },
+      "copy": {
+        "x": 16,
+        "y": 373.7890625,
+        "width": 736,
+        "height": 364.578125,
+        "right": 752,
+        "bottom": 738.3671875
+      },
+      "cta": {
+        "x": 16,
+        "y": 626.9765625,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 675.96875
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 390,
+      "height": 844,
+      "viewport": 390,
+      "documentWidth": 390,
+      "art": {
+        "x": 75,
+        "y": 814.765625,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 315,
+        "bottom": 1120.6484375
+      },
+      "copy": {
+        "x": 16,
+        "y": 410.1875,
+        "width": 358,
+        "height": 364.578125,
+        "right": 374,
+        "bottom": 774.765625
+      },
+      "cta": {
+        "x": 16,
+        "y": 663.375,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 712.3671875
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 360,
+      "height": 800,
+      "viewport": 360,
+      "documentWidth": 360,
+      "art": {
+        "x": 68.3984375,
+        "y": 838.5625,
+        "width": 223.1953125,
+        "height": 284.4609375,
+        "right": 291.59375,
+        "bottom": 1123.0234375
+      },
+      "copy": {
+        "x": 16,
+        "y": 433.984375,
+        "width": 328,
+        "height": 364.578125,
+        "right": 344,
+        "bottom": 798.5625
+      },
+      "cta": {
+        "x": 16,
+        "y": 687.171875,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 736.1640625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "light",
+      "width": 320,
+      "height": 844,
+      "viewport": 320,
+      "documentWidth": 320,
+      "art": {
+        "x": 50,
+        "y": 919.5625,
+        "width": 220,
+        "height": 280.390625,
+        "right": 270,
+        "bottom": 1199.953125
+      },
+      "copy": {
+        "x": 16,
+        "y": 485.984375,
+        "width": 288,
+        "height": 393.578125,
+        "right": 304,
+        "bottom": 879.5625
+      },
+      "cta": {
+        "x": 16,
+        "y": 768.171875,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 817.1640625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 1440,
+      "height": 900,
+      "viewport": 1440,
+      "documentWidth": 1440,
+      "art": {
+        "x": 890,
+        "y": 310.9375,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1220,
+        "bottom": 731.53125
+      },
+      "copy": {
+        "x": 180,
+        "y": 302.59375,
+        "width": 662,
+        "height": 461.28125,
+        "right": 842,
+        "bottom": 763.875
+      },
+      "cta": {
+        "x": 180,
+        "y": 652.484375,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 341.5625,
+        "bottom": 701.4765625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 1920,
+      "height": 1080,
+      "viewport": 1920,
+      "documentWidth": 1920,
+      "art": {
+        "x": 1130,
+        "y": 313.984375,
+        "width": 330,
+        "height": 420.59375,
+        "right": 1460,
+        "bottom": 734.578125
+      },
+      "copy": {
+        "x": 420,
+        "y": 302.59375,
+        "width": 662,
+        "height": 467.375,
+        "right": 1082,
+        "bottom": 769.96875
+      },
+      "cta": {
+        "x": 420,
+        "y": 658.578125,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 581.5625,
+        "bottom": 707.5703125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 1280,
+      "height": 800,
+      "viewport": 1280,
+      "documentWidth": 1280,
+      "art": {
+        "x": 830,
+        "y": 313.046875,
+        "width": 310,
+        "height": 395.1015625,
+        "right": 1140,
+        "bottom": 708.1484375
+      },
+      "copy": {
+        "x": 100,
+        "y": 302.59375,
+        "width": 682,
+        "height": 440.015625,
+        "right": 782,
+        "bottom": 742.609375
+      },
+      "cta": {
+        "x": 100,
+        "y": 631.21875,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 261.5625,
+        "bottom": 680.2109375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 1024,
+      "height": 800,
+      "viewport": 1024,
+      "documentWidth": 1024,
+      "art": {
+        "x": 728,
+        "y": 342.78125,
+        "width": 260,
+        "height": 331.375,
+        "right": 988,
+        "bottom": 674.15625
+      },
+      "copy": {
+        "x": 16,
+        "y": 302.59375,
+        "width": 680,
+        "height": 395.75,
+        "right": 696,
+        "bottom": 698.34375
+      },
+      "cta": {
+        "x": 16,
+        "y": 586.953125,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 635.9453125
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 800,
+      "height": 900,
+      "viewport": 800,
+      "documentWidth": 800,
+      "art": {
+        "x": 280,
+        "y": 699.171875,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 520,
+        "bottom": 1005.0546875
+      },
+      "copy": {
+        "x": 16,
+        "y": 286.59375,
+        "width": 768,
+        "height": 364.578125,
+        "right": 784,
+        "bottom": 651.171875
+      },
+      "cta": {
+        "x": 16,
+        "y": 539.78125,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 588.7734375
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 768,
+      "height": 900,
+      "viewport": 768,
+      "documentWidth": 768,
+      "art": {
+        "x": 264,
+        "y": 778.3671875,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 504,
+        "bottom": 1084.25
+      },
+      "copy": {
+        "x": 16,
+        "y": 373.7890625,
+        "width": 736,
+        "height": 364.578125,
+        "right": 752,
+        "bottom": 738.3671875
+      },
+      "cta": {
+        "x": 16,
+        "y": 626.9765625,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 675.96875
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 390,
+      "height": 844,
+      "viewport": 390,
+      "documentWidth": 390,
+      "art": {
+        "x": 75,
+        "y": 814.765625,
+        "width": 240,
+        "height": 305.8828125,
+        "right": 315,
+        "bottom": 1120.6484375
+      },
+      "copy": {
+        "x": 16,
+        "y": 410.1875,
+        "width": 358,
+        "height": 364.578125,
+        "right": 374,
+        "bottom": 774.765625
+      },
+      "cta": {
+        "x": 16,
+        "y": 663.375,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 712.3671875
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 360,
+      "height": 800,
+      "viewport": 360,
+      "documentWidth": 360,
+      "art": {
+        "x": 68.3984375,
+        "y": 838.5625,
+        "width": 223.1953125,
+        "height": 284.4609375,
+        "right": 291.59375,
+        "bottom": 1123.0234375
+      },
+      "copy": {
+        "x": 16,
+        "y": 433.984375,
+        "width": 328,
+        "height": 364.578125,
+        "right": 344,
+        "bottom": 798.5625
+      },
+      "cta": {
+        "x": 16,
+        "y": 687.171875,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 736.1640625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    },
+    {
+      "locale": "zh",
+      "theme": "dark",
+      "width": 320,
+      "height": 844,
+      "viewport": 320,
+      "documentWidth": 320,
+      "art": {
+        "x": 50,
+        "y": 919.5625,
+        "width": 220,
+        "height": 280.390625,
+        "right": 270,
+        "bottom": 1199.953125
+      },
+      "copy": {
+        "x": 16,
+        "y": 485.984375,
+        "width": 288,
+        "height": 393.578125,
+        "right": 304,
+        "bottom": 879.5625
+      },
+      "cta": {
+        "x": 16,
+        "y": 768.171875,
+        "width": 161.5625,
+        "height": 48.9921875,
+        "right": 177.5625,
+        "bottom": 817.1640625
+      },
+      "background": "image-set(url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-340.webp\") 1dppx, url(\"http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp\") 2dppx)"
+    }
+  ],
+  "auto": {
+    "theme": "dark",
+    "requests": [
+      "http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp",
+      "http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp"
+    ]
+  }
+}
