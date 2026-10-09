@@ -18,6 +18,11 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
       await settled(page);
       await visibleImagesLoaded(page.locator('.site-title img:visible'));
       await visibleImagesLoaded(page.locator('.resource-icon img:visible'));
+      const edition = page.locator('[data-home-edition]');
+      assert.equal(await edition.count(), 1);
+      assert.equal(await edition.textContent(), locale ? '版本 0.1' : 'EDITION 0.1');
+      assert.equal(await page.locator('.lexicon-hero').getByText(locale ? '版本 0.1' : 'EDITION 0.1', { exact: true }).count(), 0);
+      assert.ok(await edition.evaluate((element) => element.getBoundingClientRect().top >= document.querySelector('.pagination-links').getBoundingClientRect().bottom), 'edition metadata follows the bottom navigation');
       const primary = page.locator('.hero-actions .button-primary');
       const box = await primary.boundingBox();
       assert.ok(box && box.x >= 0 && box.x + box.width <= 390 && box.y >= 0 && box.y + box.height <= 844, 'the entire primary action is in the first viewport');
@@ -59,6 +64,7 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
       assert.ok(wide && wide.x >= 0 && wide.x + wide.width <= 1440 && wide.y >= 0 && wide.y + wide.height <= 900);
       const wideDescription = await description.boundingBox();
       assert.ok(wideDescription && wideDescription.y >= 0 && wideDescription.y + wideDescription.height <= 900);
+      assert.ok(await edition.evaluate((element) => element.getBoundingClientRect().top >= document.querySelector('.pagination-links').getBoundingClientRect().bottom), 'desktop edition metadata also follows the bottom navigation');
       const artBox = await artwork.boundingBox();
       const copyBox = await page.locator('.brand-hero-copy').boundingBox();
       assert.ok(artBox && artBox.width >= 310 && artBox.width <= 340 && artBox.y >= 0 && artBox.y + artBox.height <= 900);
@@ -91,6 +97,11 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
         }
         await page.evaluate(() => { document.activeElement?.blur(); window.scrollTo({ top: 0, behavior: 'instant' }); });
         await page.screenshot({ path: join(evidence, `header-home-${locale ? 'zh' : 'en'}-${theme}-${width}.png`) });
+        if (width === 360) {
+          await page.locator('.home-footer').screenshot({ path: join(evidence, `edition-footer-${locale ? 'zh' : 'en'}-${theme}-360.png`) });
+          await page.evaluate(() => window.scrollTo({ top: 0, behavior: 'instant' }));
+          await settled(page);
+        }
       }
     }, { locale: locale || 'en', theme });
   }
