@@ -10,7 +10,7 @@
 
 生产素材及质量边界见 [网站品牌素材交付](asset-delivery.md)。
 
-首页主视觉优化见 [方案 A：编辑式主视觉规划](homepage-hero-artwork-plan.md)，生成式重制的 Light/Dark 矢量及 WebP 见 [v2 素材交付](hero-artwork/v2/README.md)。首轮最小实验已完成本地验证，实际页面与对照结果见 [实验记录](../../audits/hero-editorial-experiment.md)，尚未发布。第二轮仅调整 Dark 明暗，见 [v3 暗部融合实验](hero-artwork/v3/README.md)。手机排版修正及实际页面见 [对齐记录](../../audits/hero-mobile-alignment.md)。
+首页主视觉、手机页头和版本号位置开发前先读 [方案 A：已验收实施规范](homepage-hero-artwork-plan.md)。2026-10-10 用户已验收本地最小实验；当前采用 Light v2、Dark v3、左对齐满列宽手机人物、单行页头控件和底部版本号，尚未发布。实际页面、源码基线及历史对照统一见 [验收记录](../../audits/hero-editorial-acceptance.md)。素材制作细节由 [v2](hero-artwork/v2/README.md)、[v3](hero-artwork/v3/README.md) 和 [手机导出](hero-artwork/mobile/README.md) 各自维护。
 
 ## 图版索引
 

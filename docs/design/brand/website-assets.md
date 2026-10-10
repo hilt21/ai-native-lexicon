@@ -1,6 +1,8 @@
 # BRAND-01 网站素材计划与拆票方案
 
-状态：**两票已确认并发布，素材及网站已本地实现并通过验收**；[素材票 #45](https://github.com/hilt21/ai-native-lexicon/issues/45) 的交付见 [素材记录](asset-delivery.md)，[网站票 #46](https://github.com/hilt21/ai-native-lexicon/issues/46) 原生依赖 #45，结果见 [升级验收记录](../../audits/brand-01-verification.md)。依据：[Spec #44](https://github.com/hilt21/ai-native-lexicon/issues/44)、[品牌视觉规范](visual-language.md) 和 [原稿索引](README.md#图版索引)。本文件负责素材需求和交付顺序；产品范围与验收以 spec 为准。
+状态：**原始 BRAND-01 已随 [PR #47](https://github.com/hilt21/ai-native-lexicon/pull/47) 合并，Spec #44 与素材/网站票 #45/#46 已关闭**，2026-10-10 核对。该两票的素材需求和交付顺序保留在本文件；[素材票 #45](https://github.com/hilt21/ai-native-lexicon/issues/45) 的交付见 [素材记录](asset-delivery.md)，[网站票 #46](https://github.com/hilt21/ai-native-lexicon/issues/46) 的原生依赖为 #45，结果见 [升级验收记录](../../audits/brand-01-verification.md)。依据：[Spec #44](https://github.com/hilt21/ai-native-lexicon/issues/44)、[品牌视觉规范](visual-language.md) 和 [原稿索引](README.md#图版索引)。
+
+随后完成的首页方案 A 最小实验已获用户验收，仍为未发布的本地结果；后续首页开发从 [已验收实施规范](homepage-hero-artwork-plan.md) 读取素材选择和页面约束。本表的 `rider-mascot` 与 245px 质量边界描述 v1 基础交付，当前首页独立消费 v2 Light / v3 Dark 及手机导出，既有 OG/卡片消费者继续使用 v1。
 
 ## 网站所需素材
 
@@ -58,6 +60,6 @@
 
 ## 发布与执行
 
-两票已在项目 GitHub Issues 按依赖顺序发布，并标记 `ready-for-agent`；#46 的原生 blocked-by 为 #45，正文保留同一引用。远程正文与本地审查稿、标签和关系均已核对。Spec #44 保持不修改、不关闭。
+原始交付按 T01 → T02 推进，两票及 Spec #44 随已授权的 PR #47 合并而关闭；其拆票理由、原生依赖与 v1 交付记录保留作追溯。Spec #44 的 2026-10-10 首页补充约束记录了后续本地实验的用户验收；不改写原始交付正文或把旧票重开。
 
-执行已按 T01 → T02 推进，素材、原稿与页面实现已纳入本地版本控制。开发授权来自本次任务；push、创建 PR、部署或关闭 Issue 按后续明确授权处理。远程两票保持开放，不以本地提交或检查结果宣称线上交付完成。
+当前首页方案 A 的本地代码与验收记录已保存。后续开发以该已验收基线继续，推送、PR、合并与线上发布按对应授权及实际状态处理。本次文档同步没有新增实施票或开始下一阶段产品修改。
