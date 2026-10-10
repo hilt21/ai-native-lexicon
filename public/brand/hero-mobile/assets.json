@@ -1,0 +1,47 @@
+{
+  "purpose": "Mobile artwork at up to 480 CSS px with 1x/2x exports; existing vector geometry and colors preserved.",
+  "assets": [
+    {
+      "theme": "light",
+      "source": "public/brand/hero-v2/rider-light.svg",
+      "source_sha256": "ecd83742969fa553a49b1d1ce908bc13fff30d20640634399e30802e68f9ae0f",
+      "exports": [
+        {
+          "file": "rider-light-480.webp",
+          "width": 480,
+          "height": 612,
+          "bytes": 58902,
+          "sha256": "a6441945ec7795b0875447f2fdb71a587894e8b4010b9209ee806fff7f3b4a5d"
+        },
+        {
+          "file": "rider-light-960.webp",
+          "width": 960,
+          "height": 1224,
+          "bytes": 128738,
+          "sha256": "0e58c244312bd6e6a18283c427d5a1ba279030506ff7c72365de33ae3d6fda30"
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "source": "public/brand/hero-v3/rider-dark.svg",
+      "source_sha256": "0f7228056d5afb45c6f3b78ccee1c9e3f43d40a384c4e6b414de229a67aea799",
+      "exports": [
+        {
+          "file": "rider-dark-480.webp",
+          "width": 480,
+          "height": 612,
+          "bytes": 59450,
+          "sha256": "99f8cabdce741bfac3f3842e4417f2fe238e54b5f828e121efe811544bf5e2b9"
+        },
+        {
+          "file": "rider-dark-960.webp",
+          "width": 960,
+          "height": 1224,
+          "bytes": 127682,
+          "sha256": "04a609352d65ecb9c76aa983c2fb6fb7f97934baaa79c35b4f56802fabd529b2"
+        }
+      ]
+    }
+  ]
+}

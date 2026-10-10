@@ -1,0 +1,97 @@
+{
+  "version": 3,
+  "status": "local-dark-blend-experiment",
+  "source": "public/brand/hero-v2/rider-dark.svg",
+  "source_sha256": "fb180fcad9d3f52715cd50bde4c625a788f51d0d41a390881bac42f475a129aa",
+  "method": "Native SVG recoloring of existing path geometry with internal paint references; no new image generation or raster embedding.",
+  "svg": {
+    "file": "rider-dark.svg",
+    "bytes": 492001,
+    "sha256": "0f7228056d5afb45c6f3b78ccee1c9e3f43d40a384c4e6b414de229a67aea799",
+    "viewBox": [
+      0,
+      0,
+      1111,
+      1416
+    ]
+  },
+  "palette": [
+    "#151713",
+    "#999E91",
+    "#6C7165",
+    "#41473A",
+    "#383C34",
+    "#E3E6DA",
+    "#C7CABF",
+    "#C8FF3D",
+    "#FFFFFF"
+  ],
+  "highlights": [
+    {
+      "id": "face",
+      "cx": 750,
+      "cy": 355,
+      "radius": 180,
+      "color": "#E3E6DA"
+    },
+    {
+      "id": "front-hand",
+      "cx": 410,
+      "cy": 485,
+      "radius": 100,
+      "color": "#C7CABF"
+    },
+    {
+      "id": "back-hand",
+      "cx": 835,
+      "cy": 490,
+      "radius": 100,
+      "color": "#C7CABF"
+    },
+    {
+      "id": "unicorn",
+      "cx": 955,
+      "cy": 990,
+      "radius": 245,
+      "color": "#C7CABF"
+    }
+  ],
+  "exports": [
+    {
+      "file": "rider-dark-340.webp",
+      "width": 340,
+      "height": 433,
+      "bytes": 38600,
+      "sha256": "d082ebb7be4fd900b7e274c11a1608d1a6fed5b9725277b69d0561de1048c6e7"
+    },
+    {
+      "file": "rider-dark-680.webp",
+      "width": 680,
+      "height": 867,
+      "bytes": 90110,
+      "sha256": "80cb9df6387de58a649917d5d7e007ab7df933391c04ae857b6d08cba3ecc6b0"
+    }
+  ],
+  "alphaChecks": [
+    {
+      "width": 240,
+      "before": "94ef8cb617aa98fa1d83cff2ae0efbecc2b52a86e96729c3c87a29f4b2c2774d",
+      "after": "94ef8cb617aa98fa1d83cff2ae0efbecc2b52a86e96729c3c87a29f4b2c2774d"
+    },
+    {
+      "width": 330,
+      "before": "3c141c2a8e89e3a13590b908e358fc47d4bd4e48637e0fbfe9acd8205477d6af",
+      "after": "3c141c2a8e89e3a13590b908e358fc47d4bd4e48637e0fbfe9acd8205477d6af"
+    },
+    {
+      "width": 340,
+      "before": "39d7ea70dd0241c88fe2c637b60873772761a211bf485ed26f0819d9d2ea1ff7",
+      "after": "39d7ea70dd0241c88fe2c637b60873772761a211bf485ed26f0819d9d2ea1ff7"
+    },
+    {
+      "width": 680,
+      "before": "d152502ffd74a64751cf8f01731b84dc03b4b271b583b3d0ae0bf4a707aaabc8",
+      "after": "d152502ffd74a64751cf8f01731b84dc03b4b271b583b3d0ae0bf4a707aaabc8"
+    }
+  ]
+}

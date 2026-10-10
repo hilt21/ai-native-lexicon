@@ -1,0 +1,167 @@
+{
+  "date": "2026-10-09",
+  "baseline": "10727c2",
+  "implementation": "2d9ba6c",
+  "status": "local-verified-unpublished",
+  "geometryComparison": {
+    "checks": 36,
+    "art_copy_cta_document": "exactly unchanged"
+  },
+  "auto": {
+    "theme": "dark",
+    "requests": [
+      "http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v2/rider-light-680.webp",
+      "http://127.0.0.1:8090/ai-native-lexicon/brand/hero-v3/rider-dark-680.webp"
+    ]
+  },
+  "browser": {
+    "buildCommit": "2d9ba6c838e777ed0acccba4910009f6d3c2dfe2",
+    "environment": {
+      "node": "v24.19.0",
+      "channel": "chromium"
+    },
+    "passed": 302,
+    "failed": 0
+  },
+  "lighthouse": [
+    {
+      "variant": "v2",
+      "source": "work/hero-experiment/lighthouse-experiment-desktop.json",
+      "fetchTime": "2026-10-09T13:37:58.845Z",
+      "version": "13.5.0",
+      "config": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility"
+        ],
+        "skipAudits": null
+      },
+      "performance": 100,
+      "accessibility": 100,
+      "LCP_ms": 524.9295,
+      "CLS": 0,
+      "TBT_ms": 0
+    },
+    {
+      "variant": "v3",
+      "source": "work/hero-blend/lighthouse-desktop.json",
+      "fetchTime": "2026-10-09T15:11:58.330Z",
+      "version": "13.5.0",
+      "config": {
+        "output": [
+          "json"
+        ],
+        "maxWaitForFcp": 30000,
+        "maxWaitForLoad": 45000,
+        "pauseAfterFcpMs": 1000,
+        "pauseAfterLoadMs": 1000,
+        "networkQuietThresholdMs": 1000,
+        "cpuQuietThresholdMs": 1000,
+        "formFactor": "desktop",
+        "throttling": {
+          "rttMs": 40,
+          "throughputKbps": 10240,
+          "requestLatencyMs": 0,
+          "downloadThroughputKbps": 0,
+          "uploadThroughputKbps": 0,
+          "cpuSlowdownMultiplier": 1
+        },
+        "throttlingMethod": "simulate",
+        "screenEmulation": {
+          "mobile": false,
+          "width": 1350,
+          "height": 940,
+          "deviceScaleFactor": 1,
+          "disabled": false
+        },
+        "emulatedUserAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36",
+        "auditMode": false,
+        "gatherMode": false,
+        "clearStorageTypes": [
+          "file_systems",
+          "shader_cache",
+          "service_workers",
+          "cache_storage"
+        ],
+        "disableStorageReset": false,
+        "debugNavigation": false,
+        "channel": "cli",
+        "usePassiveGathering": false,
+        "disableFullPageScreenshot": false,
+        "skipAboutBlank": false,
+        "blankPage": "about:blank",
+        "ignoreStatusCode": false,
+        "locale": "en-US",
+        "blockedUrlPatterns": null,
+        "additionalTraceCategories": null,
+        "extraHeaders": null,
+        "precomputedLanternData": null,
+        "onlyAudits": null,
+        "onlyCategories": [
+          "performance",
+          "accessibility"
+        ],
+        "skipAudits": null
+      },
+      "performance": 100,
+      "accessibility": 100,
+      "LCP_ms": 522.6265,
+      "CLS": 0,
+      "TBT_ms": 0
+    }
+  ],
+  "limitations": [
+    "Single lab run per variant at different times; not evidence of speed improvement or real-user INP.",
+    "400% zoom and screen reader session unverified.",
+    "Visual integration remains a design judgment, not a user-study result."
+  ]
+}

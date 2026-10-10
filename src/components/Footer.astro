@@ -1,0 +1,22 @@
+---
+import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
+import { rootPath, routeLocale, uiFor } from '../lib/locale';
+const isHome = rootPath(Astro.url) === '/';
+const ui = uiFor(routeLocale(Astro.url));
+---
+
+{isHome ? <div class="home-footer">
+  <DefaultFooter />
+  <p class="home-edition" data-home-edition>{ui('EDITION 0.1')}</p>
+</div> : <DefaultFooter />}
+
+<style>
+  .home-edition {
+    margin: var(--lex-space-4) 0 0;
+    color: var(--lex-muted);
+    font-family: var(--sl-font-mono);
+    font-size: var(--lex-text-label);
+    line-height: 1.5;
+    letter-spacing: 0.06em;
+  }
+</style>

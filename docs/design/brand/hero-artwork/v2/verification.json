@@ -1,0 +1,76 @@
+{
+  "sizes": [
+    {
+      "theme": "light",
+      "width": 240,
+      "height": 306,
+      "transparent": true
+    },
+    {
+      "theme": "light",
+      "width": 330,
+      "height": 421,
+      "transparent": true
+    },
+    {
+      "theme": "light",
+      "width": 340,
+      "height": 433,
+      "transparent": true
+    },
+    {
+      "theme": "light",
+      "width": 680,
+      "height": 867,
+      "transparent": true
+    },
+    {
+      "theme": "dark",
+      "width": 240,
+      "height": 306,
+      "transparent": true
+    },
+    {
+      "theme": "dark",
+      "width": 330,
+      "height": 421,
+      "transparent": true
+    },
+    {
+      "theme": "dark",
+      "width": 340,
+      "height": 433,
+      "transparent": true
+    },
+    {
+      "theme": "dark",
+      "width": 680,
+      "height": 867,
+      "transparent": true
+    }
+  ],
+  "assertions": [
+    "SVG contains native paths only, no raster embedding/scripts/foreignObject/external references",
+    "Both variants use the same source silhouette and arrow-tip anchor",
+    "Alpha silhouettes match exactly at 240/330/340/680 px",
+    "1x/2x WebP exports have alpha and correct dimensions"
+  ],
+  "silhouetteAgreement": {
+    "240": {
+      "light": "94ef8cb617aa98fa1d83cff2ae0efbecc2b52a86e96729c3c87a29f4b2c2774d",
+      "dark": "94ef8cb617aa98fa1d83cff2ae0efbecc2b52a86e96729c3c87a29f4b2c2774d"
+    },
+    "330": {
+      "light": "3c141c2a8e89e3a13590b908e358fc47d4bd4e48637e0fbfe9acd8205477d6af",
+      "dark": "3c141c2a8e89e3a13590b908e358fc47d4bd4e48637e0fbfe9acd8205477d6af"
+    },
+    "340": {
+      "light": "39d7ea70dd0241c88fe2c637b60873772761a211bf485ed26f0819d9d2ea1ff7",
+      "dark": "39d7ea70dd0241c88fe2c637b60873772761a211bf485ed26f0819d9d2ea1ff7"
+    },
+    "680": {
+      "light": "d152502ffd74a64751cf8f01731b84dc03b4b271b583b3d0ae0bf4a707aaabc8",
+      "dark": "d152502ffd74a64751cf8f01731b84dc03b4b271b583b3d0ae0bf4a707aaabc8"
+    }
+  }
+}

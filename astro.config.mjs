@@ -35,7 +35,7 @@ export default defineConfig({
         'An open lexicon of concepts, patterns and mental models shaping AI-native software engineering.',
       favicon: '/brand/north-star.svg',
       customCss: ['./src/styles/custom.css'],
-      components: { SkipLink: './src/components/SkipLink.astro', PageTitle: './src/components/PageTitle.astro', LanguageSelect: './src/components/LanguageSelect.astro' },
+      components: { SkipLink: './src/components/SkipLink.astro', PageTitle: './src/components/PageTitle.astro', LanguageSelect: './src/components/LanguageSelect.astro', Footer: './src/components/Footer.astro' },
       social: hasRepository ? [{ icon: 'github', label: 'GitHub', href: repositoryUrl }] : [],
       ...(hasRepository ? { editLink: { baseUrl: `${repositoryUrl}/edit/${contentBranch}/` } } : {}),
       pagefind: usePagefind,
