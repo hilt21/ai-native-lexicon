@@ -106,6 +106,62 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
     }, { locale: locale || 'en', theme });
   }
 
+  for (const locale of ['', 'zh-cn/']) for (const theme of ['light', 'dark']) {
+    for (const width of [800, 1200]) await check('homepage exact responsive boundary', async () => {
+      await page.setViewportSize({ width, height: 960 });
+      await page.goto(`${origin}/${locale}`);
+      await page.locator('.header starlight-theme-select select:visible').selectOption(theme);
+      await settled(page);
+      const artwork = page.locator('[data-hero-artwork]');
+      const art = await artwork.boundingBox();
+      const copy = await page.locator('.brand-hero-copy').boundingBox();
+      const primary = await page.locator('.hero-actions .button-primary').boundingBox();
+      assert.ok(art && copy && primary);
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      assert.equal(await artwork.evaluate((element) => getComputedStyle(element).transform), 'none', 'neither exact boundary shifts the artwork vertically');
+      assert.ok(Math.abs(art.width - (width === 800 ? 480 : 310)) < 1);
+      if (width === 800) {
+        assert.ok(Math.abs(art.x - copy.x) < 1, '800px retains the single-column left edge');
+        assert.ok(art.y >= primary.y + primary.height, '800px artwork follows the primary action');
+      } else assert.ok(art.x >= copy.x + copy.width, '1200px artwork stays beside the text');
+      const controls = page.locator('.header .right-group select:visible');
+      assert.equal(await controls.count(), 2);
+      for (const control of await controls.all()) {
+        assert.notEqual(await control.evaluate((element) => getComputedStyle(element).color), 'rgba(0, 0, 0, 0)', '800px and 1200px retain desktop selector text');
+      }
+      await page.locator('.brand-hero-grid').screenshot({ path: join(evidence, `hero-boundary-${locale ? 'zh' : 'en'}-${theme}-${width}.png`) });
+    }, { locale: locale || 'en', theme, width });
+  }
+
+  for (const locale of ['', 'zh-cn/']) for (const dpr of [1, 2]) await check('homepage native Auto selects and decodes theme and DPR artwork', async () => {
+    const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: dpr, colorScheme: 'light' });
+    try {
+      const home = await context.newPage();
+      async function assetAfter(path, action, theme, width) {
+        const responsePromise = home.waitForResponse((response) => new URL(response.url()).pathname === `${base}/brand/${path}`);
+        await action();
+        const response = await responsePromise;
+        assert.ok(response.ok());
+        const metadata = await sharp(await response.body()).metadata();
+        assert.equal(metadata.width, width);
+        assert.equal(metadata.hasAlpha, true);
+        await home.waitForFunction((expected) => document.documentElement.dataset.theme === expected, theme);
+        await settled(home);
+      }
+      const mobileWidth = dpr === 1 ? 480 : 960;
+      const desktopWidth = dpr === 1 ? 340 : 680;
+      await assetAfter(`hero-mobile/rider-light-${mobileWidth}.webp`, () => home.goto(`${origin}/${locale}`), 'light', mobileWidth);
+      const select = home.locator('.header starlight-theme-select select:visible');
+      await select.selectOption('auto');
+      assert.equal(await select.inputValue(), 'auto');
+      await assetAfter(`hero-mobile/rider-dark-${mobileWidth}.webp`, () => home.emulateMedia({ colorScheme: 'dark' }), 'dark', mobileWidth);
+      await assetAfter(`hero-v3/rider-dark-${desktopWidth}.webp`, () => home.setViewportSize({ width: 1440, height: 960 }), 'dark', desktopWidth);
+      await assetAfter(`hero-v2/rider-light-${desktopWidth}.webp`, () => home.emulateMedia({ colorScheme: 'light' }), 'light', desktopWidth);
+      await assetAfter(`hero-v2/rider-light-${desktopWidth}.webp`, () => home.reload(), 'light', desktopWidth);
+      assert.equal(await select.inputValue(), 'auto', 'Auto survives reload without a second theme controller');
+    } finally { await context.close(); }
+  }, { locale: locale || 'en', dpr });
+
   await check('six resource identities retain search result labels', async () => {
     await page.goto(`${origin}/search/`);
     await settled(page);

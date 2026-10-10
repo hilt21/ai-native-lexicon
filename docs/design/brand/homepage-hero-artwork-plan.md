@@ -1,6 +1,6 @@
 # 首页主视觉方案 A：已验收实施规范
 
-状态：**2026-10-10 用户验收最小实验通过**。后续首页开发以本文件为基线；对应 [BRAND-01 Spec #44](https://github.com/hilt21/ai-native-lexicon/issues/44) 的同日首页补充约束。产品源码基线为本地 `44f4b23`，分支 `codex/hero-editorial-experiment`；本轮结果尚未推送或发布。验收依据与实际页面见 [验收记录](../../audits/hero-editorial-acceptance.md)。
+状态：**2026-10-10 用户验收最小实验通过**。后续首页开发以本文件为基线；对应 [BRAND-01 Spec #44](https://github.com/hilt21/ai-native-lexicon/issues/44) 的同日首页补充约束。设计验收时的产品源码基线为本地 `44f4b23`、分支 `codex/hero-editorial-experiment`；当时尚未推送或发布。后续正式交付由 [Ticket #48](https://github.com/hilt21/ai-native-lexicon/issues/48) 跟踪，当前工程证据与发布状态见 [交付记录](../../audits/hero-editorial-release.md)；实验页面和历史基线见 [验收记录](../../audits/hero-editorial-acceptance.md)。
 
 依据：[方案 A 访谈](chatgpt-conversation://6ac8d43f-6268-83e8-8893-e706dcc07185)、[原 Dark](references/2026-10-09-home-dark.png) / [原 Light](references/2026-10-09-home-light.png)、[品牌规范](visual-language.md) 与用户在本会话中的逐轮反馈及验收。访谈的尺寸估计与示意 SVG 是建议，当前约束以实际素材、源码和已验收页面为准。
 
@@ -56,7 +56,7 @@ v2 是经用户授权的生成式重制加路径描摹，v3 在既有 SVG 内部
 
 - 检查两语言 × Light/Dark、桌面与单栏边界；主视觉不相交、不拉伸、不裁切。390 × 844、360 × 800 的说明与主 CTA 优先完整可见。
 - 保留原生主题/语言、Pagefind、菜单、键盘焦点、跳至内容、计算对比度和 reduced-motion；图片可解码，DPR 1/2 与 Auto 请求正确素材。
-- 产品变更按 [贡献要求](../../../CONTRIBUTING.md#validation) 执行 check、test、生产子路径 build 和现有 browser 套件，保留严格 BFCache/reload 断言。本次仅同步文档，检查链接、命令、源码与记录的一致性即可。
+- 产品变更按 [贡献要求](../../../CONTRIBUTING.md#validation) 执行 check、test、生产子路径 build 和现有 browser 套件，保留严格 BFCache/reload 断言。纯文档变更检查链接、命令、源码与记录的一致性；正式产品交付执行上述完整验证。
 - 既有性能测量仅是当时的本地实验室证据；真实用户 INP、实际 400% 缩放、屏幕阅读器和真机菜单仍未验证。上线后用户任务/识别测试属于效果评估，不追加为本轮工程验收门槛，也不据此承诺增长或品牌记忆提升。
 
 本轮用户验收代表本地设计结果获认可；主分支合并、线上发布和上线效果各自需要对应的实际证据。历史迭代和最新工程结果统一从 [验收记录](../../audits/hero-editorial-acceptance.md) 查阅。
