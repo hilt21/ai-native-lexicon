@@ -1,4 +1,14 @@
-<img src="./public/favicon.svg" alt="AI Native Lexicon icon" width="48" height="48" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./public/brand/wordmark-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="./public/brand/wordmark.svg" />
+  <img src="./public/brand/wordmark.svg" alt="AI Lexicon — AI Native Lexicon" width="280" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./public/brand/hero-v3/rider-dark-680.webp" />
+  <source media="(prefers-color-scheme: light)" srcset="./public/brand/hero-v2/rider-light-680.webp" />
+  <img src="./public/brand/hero-v2/rider-light-680.webp" alt="A young archer riding a unicorn at full draw, with an acid-green North Star at the arrow tip" width="240" />
+</picture>
 
 # AI Native Lexicon
 
