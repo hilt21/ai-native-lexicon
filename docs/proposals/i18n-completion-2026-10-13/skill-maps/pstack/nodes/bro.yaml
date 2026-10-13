@@ -1,0 +1,25 @@
+title: bro
+summary: Explain the previous technical reply in plain language.
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+  - explanation
+  - plain-language
+mechanism: Keep conclusions and causality while removing jargon and complex wording.
+when_to_use:
+  - The previous reply is too technical.
+  - The user requests a plain explanation.
+solves:
+  - Reduce immediate comprehension effort.
+inputs:
+  - previous assistant message
+outputs:
+  - plain-language restatement
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/bro/SKILL.md
+handoffs: []
+official_description: Restate the last message in plain human language, with no jargon.

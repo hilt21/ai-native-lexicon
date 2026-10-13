@@ -1,0 +1,30 @@
+title: bug-fix
+summary: Fix bugs through reproducible, evidence-based investigation.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: Reproduce on the actual surface, use how and why to form hypotheses, narrow alternatives, prove the
+  mechanism, use architect or tdd where appropriate, apply a minimal fix, verify on the same surface and
+  prepare the PR.
+when_to_use:
+  - A specific bug or regression needs fixing.
+  - A reproduction can be constructed.
+solves:
+  - Replace speculative patches with evidence.
+  - Verify the actual bug rather than relying only on green tests.
+inputs:
+  - bug report
+  - repro
+  - affected subsystem
+outputs:
+  - root cause
+  - minimal fix
+  - failing-before/passing-after evidence
+  - PR
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/bug-fix.md
+handoffs: []

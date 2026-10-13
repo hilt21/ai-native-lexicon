@@ -1,0 +1,32 @@
+title: research
+summary: Delegate primary-source research to a background agent and retain a referenceable repository file.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: debugging-research
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: Read primary sources first, compare them in the background and record findings, citations and
+  uncertainty in a Markdown artifact for the main workflow.
+when_to_use:
+  - Find external API, standards, framework or technical facts.
+  - Keep reading from consuming the main session.
+solves:
+  - Reduce reading load in the main context.
+  - Make research a durable artifact that later design can cite.
+inputs:
+  - research question
+  - Available primary sources
+outputs:
+  - cited Markdown research note
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/research/SKILL.md
+handoffs: []
+official_description: Investigate a question against high-trust primary sources and capture the findings as a
+  Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or
+  reading legwork delegated to a background agent.

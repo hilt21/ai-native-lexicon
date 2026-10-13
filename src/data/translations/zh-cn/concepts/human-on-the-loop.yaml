@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: human-on-the-loop
+units:
+  - path: summary
+    translation: 智能体在边界内独立行动，人通过监测证据进行监督，并可干预或改变策略的监督模式。
+    source_fingerprint: sha256:1d8147e0b1d221cc2dc05fb7435478aa82d7fd3f99cb8424cb2737973105a55a
+    review_status: draft
+  - path: definition
+    translation: 人在环上监督与逐项批准不同。人获得有意义的状态、异常和审计证据；系统在合适位置提供暂停、转向、回滚和升级控制。
+    source_fingerprint: sha256:2bc1c74fc15234846f3103e49bba34216f465b67e8c23fa678cd924e5d893086
+    review_status: draft
+  - path: why_it_matters
+    translation: 逐项批准无法随规模扩展，但取消人的控制能力会造成不可接受风险。人在环上设计保留监督，同时避免人变成只点确认的瓶颈。
+    source_fingerprint: sha256:458f9d7bda8e5b1b726bffa38a8493a43657c0d5b896ac3fee7269ee68ae7520
+    review_status: draft
+  - path: when_to_use
+    translation: 用于多数行动常规化、但异常影响重大的高吞吐操作。
+    source_fingerprint: sha256:d2beb3d24ddeec2ce0f42aa9ab47b8d7acc575f34520018eb172b33513a5e46b
+    review_status: draft
+  - path: anti_pattern
+    translation: 将无法暂停智能体、也无法解释何处需要关注的仪表盘称为监督。
+    source_fingerprint: sha256:1551a38543d922f82293fa7c1279f92385bddc2cdbc9abf4511cf03de9068d2b
+    review_status: draft

@@ -1,0 +1,29 @@
+title: refactoring
+summary: Reshape structure while preserving behavior.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: Pin behavior, name the missing structure and target shape, subtract, migrate in small steps, check
+  old/new equivalence and reader load, then prepare the PR.
+when_to_use:
+  - focused-to-medium refactor
+  - API reshape
+  - Structure is hard to read but behavior is correct.
+solves:
+  - Refactoring also changes behavior.
+  - Compatibility layers become permanent.
+inputs:
+  - current behavior
+  - target structural goal
+outputs:
+  - behavior-preserving refactor
+  - equivalence proof
+  - lower reader load
+  - PR
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/refactoring.md
+handoffs: []

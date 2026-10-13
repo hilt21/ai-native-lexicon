@@ -1,0 +1,34 @@
+title: technical-writing
+summary: Reduce ambiguity in documents and PRs through shared engineering-writing rules.
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+  - writing
+  - documentation
+  - clarity
+mechanism: Combine Diataxis, Google developer style, STE and Global English guidance for structure, syntax and
+  operational descriptions.
+when_to_use:
+  - README/RFC/docs
+  - PR description
+  - commit message
+  - Execution plan
+solves:
+  - Reduce technical-text ambiguity.
+  - Improve readability and consistency across teams.
+inputs:
+  - technical draft
+  - document purpose
+outputs:
+  - clearer technical artifact
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/technical-writing/SKILL.md
+handoffs:
+  - "Handoff guidance: human reviewer"
+official_description: "Layered technical-writing standard: Diátaxis structure, Google developer style
+  sentences, STE instruction rules, Global English syntax. Use for /technical-writing or when writing or
+  reviewing docs, RFCs, readmes, PR descriptions, or commit messages."

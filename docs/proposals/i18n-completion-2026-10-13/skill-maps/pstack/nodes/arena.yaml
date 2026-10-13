@@ -1,0 +1,36 @@
+title: arena
+summary: Expand the design space through independent candidates and blind judging.
+type: capability
+status: active
+layer: skill
+primary_cluster: design-decision
+secondary_clusters: []
+tags:
+  - parallel
+  - design-space
+  - judge
+mechanism: Agents produce independent candidates from the same input. Cross-judge blindly, choose a base and
+  graft strengths from other candidates into the result.
+when_to_use:
+  - The design space is broad.
+  - An early choice is costly.
+  - Compare implementations, copy or architectures.
+solves:
+  - Reduce premature commitment.
+  - Avoid bias toward one path.
+inputs:
+  - same task
+  - rubric or success criteria
+  - N candidate slots
+outputs:
+  - ranked candidates
+  - judge verdict
+  - synthesized artifact
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/arena/SKILL.md
+handoffs:
+  - "Handoff guidance: design decision"
+official_description: Spawn N parallel candidates at the same task, pick a base, graft the strongest parts of
+  the losers into it. Use for /arena, 'arena this', 'throw it in the arena', or when one attempt at a
+  non-trivial artifact would lock in the wrong shape.

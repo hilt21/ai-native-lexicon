@@ -1,0 +1,31 @@
+title: orchestrate
+summary: Coordinate a multi-day program with dozens or hundreds of agents through durable state.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: The coordinator manages the program without writing code; the brief is its product. Workers and
+  sub-coordinators report through queues/inboxes. Durable state tracks the frontier and each writer
+  exclusively owns a worktree/branch.
+when_to_use:
+  - Work exceeds one agent session.
+  - multi-day program
+  - Many subtasks and PRs
+solves:
+  - Coordinator context overload
+  - Completion-interrupt storms
+  - Shared-write conflicts
+inputs:
+  - program goal
+  - tracks
+  - durable state store
+outputs:
+  - rolling verified units
+  - program ledger/frontier
+  - human report
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/orchestrate.md
+handoffs: []

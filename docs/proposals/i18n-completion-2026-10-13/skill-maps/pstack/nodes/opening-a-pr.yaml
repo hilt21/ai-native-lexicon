@@ -1,0 +1,28 @@
+title: opening-a-pr
+summary: Turn a verified diff into a reviewable PR.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: Use a fresh worktree and small ordered commits; apply deslop and no-comments, then
+  technical-writing and unslop. Write a concise PR body that states scope, blast radius and verification.
+when_to_use:
+  - Finish most playbooks that modify code.
+solves:
+  - Keep unrelated changes out of the same commit.
+  - Keep the PR body focused on review rather than an experiment log.
+  - Remove AI writing and code clutter.
+inputs:
+  - verified diff
+  - evidence
+  - scope
+outputs:
+  - reviewable commits
+  - PR
+  - verification summary
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/opening-a-pr.md
+handoffs: []

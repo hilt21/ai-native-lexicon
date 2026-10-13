@@ -1,0 +1,34 @@
+title: Improve the system from this run
+summary: "Improve the system from this run: from task entry to inspectable output."
+order: 6
+when_to_use:
+  - Reflect
+  - Agents keep making this mistake
+  - Automate my way of working
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - structural guard or improved skill that reduces future supervision
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Inspect decision records
+        why: Condense long agent activity into an auditable decision trail.
+        nodes:
+          - show-me-your-work
+      - title: Reflect and correct
+        why: Reflect on the run to propose concrete skill improvements and turn repeated human corrections into
+          structural constraints.
+        nodes:
+          - reflect
+          - correct
+      - title: Produce skill improvements
+        why: Create or modify pstack/Cursor skills, blind-test whether skills/prompts improve behavior and encode
+          stable preferences in a reusable mode.
+        nodes:
+          - authoring-a-skill
+          - eval
+          - automate-me
+        optional: true
+        when: Retrospective findings need changes to skills or work style.

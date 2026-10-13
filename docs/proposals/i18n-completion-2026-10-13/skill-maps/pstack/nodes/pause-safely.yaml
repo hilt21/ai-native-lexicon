@@ -1,0 +1,28 @@
+title: pause-safely
+summary: Pause work at a safe boundary recoverable by a cold-start agent.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: Finish or roll back the current atomic step, start no new work, preserve progress in a durable WIP
+  commit, write an off-context resume note and point to the decision trail.
+when_to_use:
+  - The user explicitly requests a pause.
+  - Checkpoint before context compaction.
+solves:
+  - Paused progress exists only in model context.
+  - The next session cannot resume.
+inputs:
+  - active work
+  - current worktree
+  - optional decision trail
+outputs:
+  - durable WIP commit
+  - resume note
+  - clean stop
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/pause-safely.md
+handoffs: []

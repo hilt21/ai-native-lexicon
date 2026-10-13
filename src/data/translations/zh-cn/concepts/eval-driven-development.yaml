@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: eval-driven-development
+units:
+  - path: summary
+    translation: 通过明确任务示例、评分标准和回归评估开发 AI 行为，减少对直觉的单独依赖。
+    source_fingerprint: sha256:4fa86bdb1287f95f4a6b0257fac2254dd4b547886107508ca76153ef9722a91f
+    review_status: draft
+  - path: definition
+    translation: 评估驱动开发把代表性案例和可衡量结果纳入设计循环。发布前，针对相同的行为预期比较提示、模型、工具、检索或编排的变更。
+    source_fingerprint: sha256:0f92d97570af682072b05881e7a30f6d013f10ce737e41c10b1f97c65d64cfc4
+    review_status: draft
+  - path: why_it_matters
+    translation: AI 故障与输入分布有关，改善一个案例可能让故障转移。评估使主观质量主张成为可重复证据，并提前揭示回归。
+    source_fingerprint: sha256:a14da28d7b4607304b1ab034845ee727cc94489a04285f99d53009e3123960c3
+    review_status: draft
+  - path: when_to_use
+    translation: 用于质量依赖行为表现，且无法仅靠确定性代码路径判断的 AI 功能。
+    source_fingerprint: sha256:640c21b49afe5109fe9ccbec0ecc62753f24a5f6ce296f3a61946fd674cf1fdd
+    review_status: draft
+  - path: anti_pattern
+    translation: 根据开发者挑选的少量精彩演示就发布。
+    source_fingerprint: sha256:1d5d946136cb0515622efc17b661541a90499504382c8275ad619759b3bc0ec1
+    review_status: draft

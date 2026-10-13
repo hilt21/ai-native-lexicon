@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: reflection
+units:
+  - path: summary
+    translation: 检查结果和方法是否合理。
+    source_fingerprint: sha256:f5d815a340ce500f5ad8ad8af4acbe926b979bc63dac5a7d4c1360b929ff1827
+    review_status: draft
+  - path: definition
+    translation: 反思检查结果或过程，以发现错误、缺口和改进机会。它可采用模型批评或明确问题；自我批评无法提供结果正确的独立证据。
+    source_fingerprint: sha256:c84e3cd72cc444699fa40f73c7b83bfff919f9fed1dbbd138b2f92e00972220e
+    review_status: draft
+  - path: why_it_matters
+    translation: 检查方法可在错误假设被重复前发现问题，尤其是在结合外部检查时。
+    source_fingerprint: sha256:c1b58a6431564c346f98b4dfaf68fbbb9fbce788962304a2d71791a9841e009c
+    review_status: draft
+  - path: when_to_use
+    translation: 一次失败尝试后，比较预期结果与观察结果时使用。
+    source_fingerprint: sha256:6279749e2e816c14ef709cac33c54d9ca54be41c6cc678276562f98c773533e3
+    review_status: draft
+  - path: anti_pattern
+    translation: 用模型令人安心的自我评估替代对实际工作的检查。
+    source_fingerprint: sha256:3b7444d016160b3b28f78761188e0a10d1b2ddf7cf65b99baae78494ed89aa9c
+    review_status: draft

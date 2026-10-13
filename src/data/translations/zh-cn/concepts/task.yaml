@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: task
+units:
+  - path: summary
+    translation: 提供智能体一个明确且可完成的工作单元。
+    source_fingerprint: sha256:ae0f3cc0d5679f0778906d3aa9150b52ffdb5c1c2bac7f2d59f66083f86ed0d0
+    review_status: draft
+  - path: definition
+    translation: 任务是具有目标、输入、约束和完成标准的有界工作单元。它可以服务于更大目标，也可以包含子任务，但仍应具有可识别的负责人和结果。
+    source_fingerprint: sha256:08fc5abd23b7ca9405d7c505cdc7747d84ef8a4d6e31c8e4034c4c307794a000
+    review_status: draft
+  - path: why_it_matters
+    translation: 有界工作比没有可观察终点的开放指令更容易分配、验证和恢复。
+    source_fingerprint: sha256:caa9ff26e007e12e7f9ae92c717bb063f537c74c9184a2335409acbcda45073d
+    review_status: draft
+  - path: when_to_use
+    translation: 要求智能体修复可复现问题，并证明所需行为时使用。
+    source_fingerprint: sha256:14486910e3b69f4edfb9e218da921ea8f177ad3d29b3a39971301664cc1059f2
+    review_status: draft
+  - path: anti_pattern
+    translation: 分配宽泛角色，却未明确产物或完成条件。
+    source_fingerprint: sha256:64e339b699dd03616aecce2f6d405e894aeb60bd5749c2caa12c692c4420c062
+    review_status: draft

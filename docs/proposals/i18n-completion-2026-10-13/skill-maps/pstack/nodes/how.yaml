@@ -1,0 +1,35 @@
+title: how
+summary: Build a mental model of how the system works.
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+  - grounding
+  - architecture
+  - read-only
+mechanism: Analyze simple questions directly. For a complex system, investigate critical paths, ownership,
+  runtime flow and layers in parallel, then synthesize a structured explanation.
+when_to_use:
+  - Understand a subsystem before changing it.
+  - Walk through code.
+  - Determine where code belongs in the system's layers.
+solves:
+  - Avoid changes made without understanding.
+  - Reduce incorrect ownership and boundary decisions.
+inputs:
+  - subsystem or code area
+  - runtime question
+outputs:
+  - architecture overview
+  - runtime flow
+  - key files and ownership
+  - gotchas
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/how/SKILL.md
+handoffs: []
+official_description: Use for "how does X work", code walkthroughs before changing something, and placement /
+  ownership / layering questions ("where should this live", "which package owns this", "is this the right
+  layer"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation.

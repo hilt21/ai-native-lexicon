@@ -1,0 +1,29 @@
+title: hillclimb
+summary: Continuously optimize one metric through reversible iterations.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: Freeze the measurement harness. Use one hypothesis, one change and one measurement; keep or revert,
+  retain the decision trail and continue until the stop predicate.
+when_to_use:
+  - Progress a metric toward a target.
+  - Iterative performance or quality optimization
+solves:
+  - Several mixed changes prevent attribution.
+  - One accidental measurement improvement
+inputs:
+  - metric
+  - target
+  - realistic workload
+outputs:
+  - accepted improvements
+  - reverted attempts
+  - decision log
+  - final metric
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/hillclimb.md
+handoffs: []

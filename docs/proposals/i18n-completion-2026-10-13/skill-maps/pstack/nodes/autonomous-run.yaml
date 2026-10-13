@@ -1,0 +1,30 @@
+title: autonomous-run
+summary: Progress one unattended task to a fixed exit predicate.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: Freeze a checkable predicate, wake through /loop, make the smallest justified change, verify,
+  commit progress or discard ineffective work, log decisions and change methods at a plateau.
+when_to_use:
+  - overnight single task
+  - One objective has an explicit Done condition.
+solves:
+  - The agent declares completion prematurely.
+  - Ineffective changes accumulate.
+  - The person is repeatedly interrupted with questions.
+inputs:
+  - goal
+  - exit predicate
+  - verification surface
+outputs:
+  - completed predicate
+  - accepted iterations
+  - discarded attempts
+  - decision trail
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/autonomous-run.md
+handoffs: []

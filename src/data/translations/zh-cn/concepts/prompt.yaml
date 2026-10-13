@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: prompt
+units:
+  - path: summary
+    translation: 说明希望智能体完成什么。
+    source_fingerprint: sha256:f8232d2a9dfe5486f0ffa0a31d3e50b978b8daa113e37cd43cfcd9906551455c
+    review_status: draft
+  - path: definition
+    translation: 提示是请求模型或智能体响应或行动的输入。它可包含请求、示例和任务数据，但不一定是持久规则或全部上下文。
+    source_fingerprint: sha256:561073cfdd63281420a06d7ef7e0acd81e90c2b73e6948d19873de9fe8ea8588
+    review_status: draft
+  - path: why_it_matters
+    translation: 清晰请求减少所需结果的歧义，并为智能体选择下一步提供具体依据。
+    source_fingerprint: sha256:a7db5ae093c525374d32ffc247a0681600cd4e7395cd3784a902b598ffc538f2
+    review_status: draft
+  - path: when_to_use
+    translation: 请求智能体按指定受众和输出格式总结文档时使用。
+    source_fingerprint: sha256:d3136791b09743514f3affc32a319047e931c41b30ab2377392fcffe994abe5d
+    review_status: draft
+  - path: anti_pattern
+    translation: 只要求变得更好，却未说明重要结果或约束。
+    source_fingerprint: sha256:b6d60685539771dce00c5570afcef64483a7a7f631c6e405c929d32d7835705e
+    review_status: draft

@@ -1,0 +1,41 @@
+title: correct
+summary: Turn repeated human corrections into structural constraints.
+type: capability
+status: active
+layer: skill
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags:
+  - learning
+  - self-hardening
+  - feedback
+mechanism: "Identify the recurring mistake class. Seek remedies in order of strength: architecture, types,
+  lint/CI, tests, then documents. Prove the guard would fail on an actual historical mistake."
+when_to_use:
+  - The same agent error occurs more than once.
+  - The user repeatedly corrects one issue.
+solves:
+  - Reduce repeated supervision.
+  - Move knowledge from prompts into structure.
+inputs:
+  - corrections
+  - failure examples
+  - repository structure
+outputs:
+  - structural guard
+  - proof against past mistake
+  - reduced future correction load
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/correct/SKILL.md
+handoffs:
+  - "Input context: human correction"
+  - "Handoff guidance: architecture"
+  - "Handoff guidance: types"
+  - "Handoff guidance: lint"
+  - "Handoff guidance: tests"
+  - "Handoff guidance: skills"
+official_description: Find the mistakes agents keep repeating in this repo and make each one impossible. Try
+  architecture first, then types, then a lint whose error names the fix, then a test, and write docs last.
+  Prove each check fails on a real past mistake. Repeat this each time the operator corrects you. Use for
+  /correct.

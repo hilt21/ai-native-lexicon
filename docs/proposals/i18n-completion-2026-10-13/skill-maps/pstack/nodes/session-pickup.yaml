@@ -1,0 +1,29 @@
+title: session-pickup
+summary: Resume from a prior trail without repeating work.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: understanding-context
+secondary_clusters: []
+tags: []
+mechanism: Read transcripts, cloud URLs and branch state. Reconstruct branch/worktree, tasks and decisions;
+  compare completed and pending work, route the remainder and verify inherited claims against actual
+  artifacts.
+when_to_use:
+  - Take over a previous session or agent.
+  - Resume long-running work.
+solves:
+  - Investigation restarts from scratch.
+  - Completed work is repeated.
+inputs:
+  - prior trail
+  - branch
+  - plan
+outputs:
+  - resume point
+  - inherited state
+  - next playbook
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/session-pickup.md
+handoffs: []

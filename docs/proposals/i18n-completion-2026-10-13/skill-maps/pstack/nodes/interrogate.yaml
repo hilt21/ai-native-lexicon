@@ -1,0 +1,36 @@
+title: interrogate
+summary: Use multiple models for adversarial code or design review.
+type: capability
+status: active
+layer: skill
+primary_cluster: design-decision
+secondary_clusters: []
+tags:
+  - review
+  - adversarial
+  - multi-model
+mechanism: Have different models challenge the same diff or design independently. The lead classifies findings
+  as Act on, Consider, Noted or Dismissed.
+when_to_use:
+  - Complex diff
+  - Contested design
+  - Find blind spots before shipping.
+solves:
+  - Reduce single-model confirmation bias.
+  - Expose hidden risk early.
+inputs:
+  - intent
+  - diff or design
+  - review context
+outputs:
+  - adversarial findings
+  - triaged verdict
+  - action items
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/interrogate/SKILL.md
+handoffs:
+  - "Handoff guidance: fix round"
+official_description: Use for "interrogate", "adversarial review", "multi-model review", "challenge this",
+  "stress test this code", "find blind spots", or "tear this apart". Multiple LLM reviewers challenge changes
+  from independent angles.

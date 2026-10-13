@@ -1,0 +1,26 @@
+title: encode-lessons-in-structure
+summary: When an instruction repeats a second time, move the rule into structure.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: When an instruction repeats a second time, move the rule into structure.
+when_to_use:
+  - Apply when you catch yourself writing the same instruction a second time, or notice a recurring
+    correction. Encode the rule as a lint, metadata flag, runtime check, or script instead of more text.
+solves:
+  - When an instruction repeats a second time, move the rule into structure.
+inputs:
+  - recurring instruction/correction
+outputs:
+  - lint/metadata/runtime check/script
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-encode-lessons-in-structure/SKILL.md
+handoffs: []
+official_description: Apply when you catch yourself writing the same instruction a second time, or notice a
+  recurring correction. Encode the rule as a lint, metadata flag, runtime check, or script instead of more
+  text.

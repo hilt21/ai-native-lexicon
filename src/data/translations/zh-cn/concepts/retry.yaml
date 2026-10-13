@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: retry
+units:
+  - path: summary
+    translation: 在适当情况下再次尝试未成功的操作。
+    source_fingerprint: sha256:96f3a2f95393840e33f7610e2c3aa0322bbeae6b2b83f45a29ed3ac6e92ca42f
+    review_status: draft
+  - path: definition
+    translation: 重试在失败或结果不确定后，按照有界策略重复操作。它适用于可能暂时性的问题，但必须考虑操作可能已经产生的副作用。
+    source_fingerprint: sha256:f0c5d8fc52604957ad221aacc56a0703aed6cb708b7a86ebe099024307604e64
+    review_status: draft
+  - path: why_it_matters
+    translation: 受控的再次尝试可克服临时失败，避免将短暂故障变成重复写入或无限流量。
+    source_fingerprint: sha256:176373fe4a46ad7169d5b6c952d035e10944f636fed9139211a6e24dc183022a
+    review_status: draft
+  - path: when_to_use
+    translation: 用于暂时性读取失败，并设置次数上限和尝试间延迟。
+    source_fingerprint: sha256:d09f55b92bc6671f630bd36943c22cbf7aba49124dbb1b10c251cffa3d9176ad
+    review_status: draft
+  - path: anti_pattern
+    translation: 付款或写入超时后，未检查首次尝试是否成功就重复操作。
+    source_fingerprint: sha256:0bd311007e7bb05a76d4b83ac05d47649a23e270ea849de815c2b95687799052
+    review_status: draft

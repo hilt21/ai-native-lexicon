@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: constraint
+units:
+  - path: summary
+    translation: 明确限制哪些方案、行动或状态可接受的条件。
+    source_fingerprint: sha256:f92b60b088dac114f23f6432edfad4b40f122bd86229d2d2f6211edbd432c168
+    review_status: draft
+  - path: scope
+    translation: 对行为、资源、输出或可接受结果有限制的系统。
+    source_fingerprint: sha256:6788ac135702fcab52bd051c3a701d5e9cbdbcb28f9add6b0b28bdf8907c1381
+    review_status: draft
+  - path: usage
+    translation: 在执行或承诺之前排除不允许的选择。
+    source_fingerprint: sha256:9f1be61af9fb64b856e56f1a0a2c1e820ea7cabb8acdf428a0a0f0c2c7a958c2
+    review_status: draft
+  - path: distinctions
+    translation: 约束限制可行空间；不变量是在规定转换中必须保持为真的属性。
+    source_fingerprint: sha256:fb0a807f25f9eb72cc0f3e1340296fd7ee42edc946659f4b1ff274c72a8d572d
+    review_status: draft
+  - path: composition.pattern
+    translation: 目标 + 约束 → 可行行动
+    source_fingerprint: sha256:fa7d70ad2601441235f09ab4c8818a0dcea020d13718c7620e7064a01d1d0947
+    review_status: draft
+  - path: composition.example
+    translation: 智能体可以总结私有文件，但不能将内容发送给外部服务。
+    source_fingerprint: sha256:89086890b513eac01f37409508f0fab949af70be20bcf785854d7f9c34c24d1a
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 约束
+    source_fingerprint: sha256:8333b306516d51d30624c1698cbb9aaf01777c6fa85c9ef1d409fd5b46401c89
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 限制哪些方案、行动或状态被允许的条件。
+    source_fingerprint: sha256:1d49bde32d21eeddc22f986594aff1e0109842e823371e86ea3a3b2e35747111
+    review_status: draft
+  - path: considerations
+    translation:
+      - 将可执行约束表达为在影响发生点实施的检查。
+      - 仅用自然语言表述限制不能构成执行约束机制。
+    source_fingerprint: sha256:f00c0ca848345827f04280003fc42ad12b52456a0830d90b1f5b4f33bc0ec61f
+    review_status: draft
+  - path: ownership.rationale
+    translation: 代码、策略、预算和访问检查执行可形式化的限制；不确定解释应在承诺前解决。
+    source_fingerprint: sha256:fe7a85af60402185f9ba20841ff2e0e11ef2e406ffe50e7c8443c11d1279b409
+    review_status: draft
+  - path: priority.scope
+    translation: 对行为、资源、输出或可接受结果有限制的系统。
+    source_fingerprint: sha256:b9772c290c5a9a619fb1efe584d41ccf3392904ad360ea3a0f9d491ad4de084b
+    review_status: draft
+  - path: priority.rationale
+    translation: 设计必须考虑排除某些行动的条件，才能识别允许的行动。
+    source_fingerprint: sha256:394a53753f1374f84d2274cbd0532db38b9b9af6851cf4f0a38ed8c1c0129d20
+    review_status: draft

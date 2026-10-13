@@ -1,0 +1,46 @@
+title: Build a new feature
+summary: "Build a new feature: from task entry to inspectable output."
+order: 2
+when_to_use:
+  - Add X
+  - Implement Y
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - verified feature PR / landed change
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the feature entry
+        why: Enter through pstack's main router and work style, then design, implement concurrently, verify on the
+          real surface and review the feature.
+        nodes:
+          - poteto-mode
+          - feature
+      - title: Understand the current system
+        why: Build a mental model of how the system works.
+        nodes:
+          - how
+      - title: Design the solution
+        why: Define types, interfaces, modules and data structures before coding. Expand alternatives through
+          independent candidates and blind judging.
+        nodes:
+          - architect
+          - arena
+      - title: Challenge the design
+        why: Use multiple models for adversarial code or design review.
+        nodes:
+          - interrogate
+      - title: Prepare the PR
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr
+      - title: Review and ship
+        why: Progress the open PR/stack to merge-ready without final landing, then use independent verifiers to decide
+          what may land.
+        nodes:
+          - babysit
+          - shipping
+        optional: true
+        when: Delivery needs progression and the required authorization exists.

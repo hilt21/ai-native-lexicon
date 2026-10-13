@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: deterministic-shell
+units:
+  - path: summary
+    translation: 对概率模型提出的操作进行验证、执行、记录和限制的可预测软件边界。
+    source_fingerprint: sha256:832f660edadb857d46883a167f12bcf0518fc82917101c83dd8802789e25fee0
+    review_status: draft
+  - path: definition
+    translation: 确定性外壳将模型提议转换为带类型的操作，检查权限和不变量，施加超时与预算，并记录结果。模型可判断应发生什么；外壳决定操作是否允许，以及具体如何发生。
+    source_fingerprint: sha256:8d76b7bd288c1a6268848290b10932ebc90f6c76bd46ea2d9426eaadc36fc8b3
+    review_status: draft
+  - path: why_it_matters
+    translation: 概率推理具有价值，但副作用需要可重复的控制。外壳为保证条件和事件证据提供稳定位置。
+    source_fingerprint: sha256:ef639fd7b17840e08bd34b3a5afb90e4dd85d6a94c0df8c73cd02fd95c8437c4
+    review_status: draft
+  - path: when_to_use
+    translation: 用于文件变更、API 调用、付款、部署、消息或其他有重大影响的工具操作。
+    source_fingerprint: sha256:1d2246fb40a547c4bd4227f40835117b7e5311427612f3d65789a261d078cc7f
+    review_status: draft
+  - path: anti_pattern
+    translation: 未经验证，就让自由格式的模型文字直接进入特权执行。
+    source_fingerprint: sha256:50b9457425026c32c7aeb32652c777f5ee05a8589d16cadee7c30d28d8814416
+    review_status: draft

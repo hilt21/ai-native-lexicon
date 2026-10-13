@@ -1,0 +1,59 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: view-projection
+units:
+  - path: summary
+    translation: 针对特定目的的信息表示，以及从底层记录或模型派生该表示的转换。
+    source_fingerprint: sha256:0ca98995aec7f1bde6c1666a92f311e157e5cff2b46ba513cc1e49a6ace450c0
+    review_status: draft
+  - path: scope
+    translation: 通过共享记录服务多个受众或界面的系统。
+    source_fingerprint: sha256:b4a3d27ca24e6f82e36eb7ce8212e82676c1cb55fdf5eac10bb1857ae83cec49
+    review_status: draft
+  - path: usage
+    translation: 呈现每个读者所需的信息，避免创建相互竞争的事实来源。
+    source_fingerprint: sha256:5e3e3cb715dfccbeee590f5dee011e85288b0e595667f19363917351ebb397d2
+    review_status: draft
+  - path: distinctions
+    translation: 视图是使用方采用的表示；投影是派生过程，但软件有时也把其输出称为投影。
+    source_fingerprint: sha256:a66d8a0e18ee04b1ef4f00add451bb755413df6bc1354f12fe1737e07c5c96c7
+    review_status: draft
+  - path: composition.pattern
+    translation: 模型 + 利益相关方 + 目的 → 投影 → 视图
+    source_fingerprint: sha256:c77091d329143b58dfede07e0c8f4f853bad0333826c88149564e8d8545bc565
+    review_status: draft
+  - path: composition.example
+    translation: 概念记录生成详情页、搜索结果和原语关联清单。
+    source_fingerprint: sha256:8fe76dbe5ea6f0edc352971ee64eeb0cc0c1321e53a5d592fc6eff523d97e828
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 视图
+      - 投影
+    source_fingerprint: sha256:b5969743e17eeac26543048d1f315beba6c6bcbdb783841550e49ad0d3602c05
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 针对特定目的呈现底层模型或记录集信息的表示。
+      - 从底层信息派生选定表示的转换。
+    source_fingerprint: sha256:dab1d319928a83fac47681dd78a1ebd1eea5fe725c13878dbbe00dc5c4e017d2
+    review_status: draft
+  - path: considerations
+    translation:
+      - 投影可能遗漏重要上下文或变得过时。
+      - 编辑 canonical 记录，避免独立编辑派生副本。
+    source_fingerprint: sha256:a887bc4909147787644959ea71d951334cecbaa406356015e6497ecf77374dea
+    review_status: draft
+  - path: ownership.rationale
+    translation: 模板与查询从 canonical 数据派生可重复表示。
+    source_fingerprint: sha256:6d2a740b2a6266e4951dc4ade426a5594075e7bc1ce2147365f5696aaadaff76
+    review_status: draft
+  - path: priority.scope
+    translation: 通过共享记录服务多个受众或界面的系统。
+    source_fingerprint: sha256:7427ff2710bd64a8a755965be7a73124fae28a60414284f1e32a96d46847e066
+    review_status: draft
+  - path: priority.rationale
+    translation: 多个界面必须与同一权威表示保持一致时，通常应明确投影。
+    source_fingerprint: sha256:56d37db565b8c13bacd619a6a68f17fa87fbd8c747089d26fe450d0d67c8bbab
+    review_status: draft

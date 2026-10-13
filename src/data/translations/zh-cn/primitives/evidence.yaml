@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: evidence
+units:
+  - path: summary
+    translation: 用来支持或质疑某项具体主张的可追溯信息。
+    source_fingerprint: sha256:35b25a6e30c2fab81c660f556d46dbdd6516d8ab0755549dd581d33a956283ee
+    review_status: draft
+  - path: scope
+    translation: 提出主张、作出验收决策或重大变更，且需要可检查支撑的系统。
+    source_fingerprint: sha256:c4afb550e1b82ab3cc840c9f4d1e6e604f699ae4f4994baab5f14ecf924fb086
+    review_status: draft
+  - path: usage
+    translation: 为具体主张提供相关且可追溯的支撑，减少对自信措辞的依赖。
+    source_fingerprint: sha256:3b5af6443ec9960714dda84d70b095df88675858157233d9d38de94f6b6678a5
+    review_status: draft
+  - path: distinctions
+    translation: 观察是获得的信息；证据是用于支持或质疑主张的信息。验证使用证据判断要求是否满足。
+    source_fingerprint: sha256:1aa443bc644f5d61e4fdb4bbaf16470d06d98a886718072ef9ae1022f39d6589
+    review_status: draft
+  - path: composition.pattern
+    translation: 观察 + 主张 + 来源 → 证据 → 验证
+    source_fingerprint: sha256:2ede557f389ad8316029bc7412cf47f98c8c58209f64ff09c24b990caf52c3ae
+    review_status: draft
+  - path: composition.example
+    translation: 关联到被测试提交的结果，仅支撑有关该提交的主张，无法证明后续未测试修订。
+    source_fingerprint: sha256:da7390fe52b6602ae6795537124b16358a5bae71a5218dc53a76a8dbeba9d434
+    review_status: draft
+  - path: considerations
+    translation:
+      - 复用证据前检查相关性、时效性和来源。
+      - 没有记录到失败不能证明成功。
+    source_fingerprint: sha256:2567f08915987de3a0fa25cff878893e03661ee3213d4ab7eb8b07a26a647695
+    review_status: draft
+  - path: ownership.rationale
+    translation: 软件捕获并保留来源记录；大语言模型协助解释相关性，结论仍需连接可检查支撑。
+    source_fingerprint: sha256:79adf9099833a5842b0ba729f9d4ac7b4e8ee90343a015c2c45a8c1351833270
+    review_status: draft
+  - path: priority.scope
+    translation: 提出主张、作出验收决策或重大变更，且需要可检查支撑的系统。
+    source_fingerprint: sha256:476ea631612b190c8172f6692b889e3978126c92d137877f61421d9a393f19d8
+    review_status: draft
+  - path: priority.rationale
+    translation: 主张和验收决策需要可检查支撑，以区分已展示结果与自信描述。
+    source_fingerprint: sha256:1f9e90faa76b625b999a1ed3945f35516e4e2825217130ed4f1315e0ba045e13
+    review_status: draft

@@ -1,0 +1,25 @@
+title: model-the-domain
+summary: Express the domain through structures, state machines, registries and typed models.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Express the domain through structures, state machines, registries and typed models.
+when_to_use:
+  - Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files.
+    Encode the domain in a structure instead of scattered conditionals.
+solves:
+  - Express the domain through structures, state machines, registries and typed models.
+inputs:
+  - stateful / branch-heavy logic
+outputs:
+  - explicit domain model
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-model-the-domain/SKILL.md
+handoffs: []
+official_description: Apply when writing stateful logic, or when code branches a lot or repeats a shape
+  assumption across files. Encode the domain in a structure instead of scattered conditionals.

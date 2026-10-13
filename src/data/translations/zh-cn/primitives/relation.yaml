@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: relation
+units:
+  - path: summary
+    translation: 可识别对象之间有含义、有类型的连接，并在含义需要时明确方向。
+    source_fingerprint: sha256:130221b35972f5804d2f97f3002955e79a8aa65a233d8ebce917b9e9308394e7
+    review_status: draft
+  - path: scope
+    translation: 依赖或关联影响行为与解释的系统。
+    source_fingerprint: sha256:b7615ba151d596c9f13e2d876504e3cff42e47eeee23ea20a6096dc76f95b284
+    review_status: draft
+  - path: usage
+    translation: 使依赖和来源可检查，避免只隐含在文字中。
+    source_fingerprint: sha256:364ac1d588d34db43325c687d700dd319c7cbbc7822c9e74b2b44b70ea9bd330
+    review_status: draft
+  - path: distinctions
+    translation: 关系是有含义的连接；流描述沿连接或通过连接的移动。
+    source_fingerprint: sha256:e9d9d56ae5c5317919740022a0c9882b4159ab12cb6e3088a56915635d20f5d9
+    review_status: draft
+  - path: composition.pattern
+    translation: 实体 A → 带类型关系 → 实体 B
+    source_fingerprint: sha256:10e60a04415f34b9c591bc30638e3c620533ea1bb82590ee177a312ee5d4edf3
+    review_status: draft
+  - path: composition.example
+    translation: 生成的主张连接到支持它的来源片段及包含它的报告。
+    source_fingerprint: sha256:a949474392ab5446407bba0225a44b431ebcf0ee1440180dcdfe887320c5fb3e
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 关系
+    source_fingerprint: sha256:74bf01d45bd18c8fcba33b946d1221aca1c37b463a73506960f96ee93b96eef1
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 可识别对象之间含义、类型明确，并在适用时具有方向的连接。
+    source_fingerprint: sha256:fa853a295601aad2158658e0de2d4ef756f5adbfd294012c3a5424feefc236fd
+    review_status: draft
+  - path: considerations
+    translation:
+      - 说明关系是否有方向，以及删除意味着什么。
+      - 链接本身无法证明所声称的语义关系。
+    source_fingerprint: sha256:1c955fc528496aeeea8102eef2dcb875f15b18fa3d29745a6160e30e1f6c2e53
+    review_status: draft
+  - path: ownership.rationale
+    translation: 结构化引用和完整性检查维持链接；语义主张仍可能需要审阅。
+    source_fingerprint: sha256:c99310a42b0f171668c772143e4127ac87f021f3605eae730ecc92607d72056c
+    review_status: draft
+  - path: priority.scope
+    translation: 依赖或关联影响行为与解释的系统。
+    source_fingerprint: sha256:de47e2c052751fc291af7b6502774f042c11f7e476fb24cf75987b8c967b88a1
+    review_status: draft
+  - path: priority.rationale
+    translation: 依赖和关联塑造系统行为，含义不明确会削弱正确性和可追溯性。
+    source_fingerprint: sha256:910c24c46bd2686a21ee26998f91ca08e17a9736cabc34451ce96e5a6aa32d1b
+    review_status: draft

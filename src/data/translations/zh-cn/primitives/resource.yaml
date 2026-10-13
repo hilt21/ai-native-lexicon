@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: resource
+units:
+  - path: summary
+    translation: 行动会消耗、预留、共享或争夺的有限容量或资产。
+    source_fingerprint: sha256:10393b45d00e4e16f02b5f656979cfd2b94b33fc4de7351422dc359b15a1a915
+    review_status: draft
+  - path: scope
+    translation: 时间、资金、计算、存储或注意力容量有限的系统。
+    source_fingerprint: sha256:486d2827bd5cb2769e57434caa2e676ae292e2955e329fc6cbfe359d876bfb41
+    review_status: draft
+  - path: usage
+    translation: 明确分配稀缺容量，并规定耗尽后的处理方式。
+    source_fingerprint: sha256:e5a7b70286ce3c7a5ac941f990e23b863309c8ca40430933b0bf69334012496e
+    review_status: draft
+  - path: distinctions
+    translation: 资源是可用容量；预算限制消耗；上下文是占用部分容量的信息。
+    source_fingerprint: sha256:4898921b0afdf01e6ae07372bdd3056979cd433394253322dbdefb81306fe14f
+    review_status: draft
+  - path: composition.pattern
+    translation: 主体 + 资源预算 → 受限执行
+    source_fingerprint: sha256:a3776c415f038de5686b307fd32df28f777603686fb63c4c471f52d5e6204942
+    review_status: draft
+  - path: composition.example
+    translation: 研究智能体获得令牌额度、API 支出上限和截止时间。
+    source_fingerprint: sha256:f0561d5b14470ee20ff0e20d60c83acc2b580de6a98be0081acc9a08d56760f5
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 资源
+    source_fingerprint: sha256:46f2e3ec70f6c6b0b653e9853082b9115893cf7b997831ccef8659062bcfb7ca
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 能够被消耗、分配、预留或争夺的有限容量或资产。
+    source_fingerprint: sha256:2df1387d1e20e74b65c842eccaea1161cbec039640f8e58290d02dfd89dad9f4
+    review_status: draft
+  - path: considerations
+    translation:
+      - 应根据实际用量检查预算，不能仅用模型估计。
+      - 为恢复和最终验证预留余量。
+    source_fingerprint: sha256:9c7fabeb204074521a012cb833cefb18b100d59b88970aa297ca828e74d1ca2e
+    review_status: draft
+  - path: ownership.rationale
+    translation: 计数器、配额、调度器和计费记录管理分配与消耗。
+    source_fingerprint: sha256:2828bbdce4d4e4925e96691ca73f4e5f97d09f19b5727eeb854e1605f981c465
+    review_status: draft
+  - path: priority.scope
+    translation: 时间、资金、计算、存储或注意力容量有限的系统。
+    source_fingerprint: sha256:dff04d982ed54e6dba46a0f7d67257280195c4583cc46d151283f51fef326949
+    review_status: draft
+  - path: priority.rationale
+    translation: 每种运行设计都面临有限容量，未经检查的消耗可能阻止任务完成和故障恢复。
+    source_fingerprint: sha256:4194b3c045737c99e241c832d663c46f2e9c0b10ea39386a7737226043a7f5b8
+    review_status: draft

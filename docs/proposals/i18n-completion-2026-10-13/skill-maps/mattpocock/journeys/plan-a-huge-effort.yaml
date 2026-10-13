@@ -1,0 +1,56 @@
+title: Explore an effort too large to clarify at once
+summary: Use decision tickets to resolve unknowns until the effort can become a normal specification and tickets.
+order: 5
+when_to_use:
+  - A greenfield project or huge feature exceeds one agent session's cognitive capacity.
+inputs:
+  - Long-term objective
+  - Current unknowns
+outputs:
+  - decision map
+  - Resolved unknowns
+  - Specification input ready for the main development flow
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/wayfinder/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-tickets/SKILL.md
+variants:
+  - id: standard
+    title: Resolve unknowns gradually, then return to the specification
+    steps:
+      - title: Configure the project on first use
+        why: Engineering entries require issue-tracker, triage-label and domain-document configuration; configured
+          projects continue directly.
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - Project configuration available to subsequent entries
+        optional: true
+        when: The first engineering task or missing project configuration.
+      - title: Create and progress a decision map
+        why: The user starts wayfinder, which manages unknowns as tracker decision tickets and uses research,
+          prototype or grilling according to the question. Its output is decisions rather than engineering
+          delivery.
+        nodes:
+          - wayfinder
+        outputs:
+          - Shared decision map and resolved unknowns
+      - title: Fold clear decisions into a specification
+        why: When the route is clear, the user starts to-spec to synthesize linked decisions into a buildable plan and
+          agree the test seam. Do not jump directly to implementation of the entire huge effort.
+        nodes:
+          - to-spec
+        outputs:
+          - Durable specification and agreed test boundary
+      - title: Confirm and publish execution tickets
+        why: The user starts to-tickets to agree vertical tracer-bullet granularity and the blocking graph, then
+          selects per-ticket or whole-graph implementation.
+        nodes:
+          - to-tickets
+        outputs:
+          - Agent-ready tickets and blocking relationships

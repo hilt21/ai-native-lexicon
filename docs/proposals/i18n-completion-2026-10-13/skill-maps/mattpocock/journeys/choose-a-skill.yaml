@@ -1,0 +1,34 @@
+title: Choose the right skill
+summary: Use the common entry to identify the work path that fits the current task.
+order: 1
+when_to_use:
+  - A task is clear but the appropriate Matt Pocock skill is uncertain.
+inputs:
+  - Current objective and project state
+outputs:
+  - Recommended skill or work path
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/setup-matt-pocock-skills/SKILL.md
+variants:
+  - id: standard
+    title: Choose an entry from the task
+    steps:
+      - title: Configure the project on first use
+        why: Engineering entries require issue-tracker, triage-label and domain-document configuration; configured
+          projects continue directly.
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - Project configuration available to subsequent entries
+        optional: true
+        when: The first engineering task or missing project configuration.
+      - title: Describe the objective and obtain a recommendation
+        why: ask-matt recommends an entry based on the objective and stage, then stops. The user decides whether to
+          explicitly start the recommendation.
+        nodes:
+          - ask-matt
+        outputs:
+          - Recommended entry, rationale and current conditions

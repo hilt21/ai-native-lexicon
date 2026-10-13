@@ -1,0 +1,229 @@
+title: Build a feature
+summary: Implement small, clear work directly. For work spanning sessions, establish a specification and
+  tickets, then choose per-ticket implementation or whole-graph orchestration. Implementation includes TDD and
+  review.
+order: 3
+when_to_use:
+  - Implement a new product behavior or engineering change.
+inputs:
+  - Feature idea or agent-ready issue
+outputs:
+  - Implemented and verified code
+  - Review results and a commit or integration branch, depending on the implementation path
+  - PR body and environment improvement candidates where applicable
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/setup-matt-pocock-skills/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-tickets/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement-spec/SKILL.md
+variants:
+  - id: multi-session-sequential
+    title: "Multiple sessions: implement per ticket"
+    when: Self-contained tickets exist or will be generated, and the user wants blockers-first manual progression.
+      Choose this or whole-graph implement-spec.
+    steps:
+      - title: Configure the project on first use
+        why: Engineering entries require issue-tracker, triage-label and domain-document configuration; configured
+          projects continue directly.
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - Project configuration available to subsequent entries
+        optional: true
+        when: The first engineering task or missing project configuration.
+      - title: Clarify unresolved design
+        why: Preserve domain terms and design decisions in the working directory. A clear existing specification does
+          not require another interview.
+        nodes:
+          - grill-with-docs
+        outputs:
+          - Clarified design, GLOSSARY.md and necessary ADRs
+        optional: true
+        when: Requirements or design still have open branches.
+      - title: Synthesize the specification and confirm the test boundary
+        why: Write the agreed decisions into a durable specification and agree the test seam with the user first.
+        nodes:
+          - to-spec
+        outputs:
+          - Published agent-ready specification and agreed seam
+        optional: true
+        when: Work will span sessions and no complete specification exists.
+      - title: Confirm tracer-bullet tickets
+        why: Each ticket covers complete demonstrable behavior and fits a fresh context. Confirm granularity and
+          blockers before publishing; do necessary prefactoring first.
+        nodes:
+          - to-tickets
+        outputs:
+          - Approved, published tickets and blocking edges
+        optional: true
+        when: No agent-ready tickets exist.
+      - title: Implement each ticket in a fresh context
+        why: The user explicitly invokes implement. Use the agreed seam for red-to-green work, complete code-review
+          internally and commit. Self-contained tickets allow old context to be cleared between tickets.
+        nodes:
+          - implement
+        outputs:
+          - Code, tests, review and commit for each ticket
+      - title: Write the PR description
+        why: Use this capability when the agent writes a PR body. Creating, pushing or merging still depends on the
+          current task's authorization.
+        nodes:
+          - pr
+        outputs:
+          - PR body and verification evidence
+        optional: true
+        when: Deliver through a pull request.
+      - title: Let the user choose a retrospective
+        why: A retrospective reads the original session and recommends environment improvements. People select
+          candidates; proposals are not applied automatically.
+        nodes:
+          - retro
+        outputs:
+          - Environment improvement candidates ordered by severity
+        optional: true
+        when: The user wants to examine environment friction, especially after difficult implementation.
+  - id: multi-session-orchestrated
+    title: "Multiple sessions: implement the whole graph"
+    when: The user wants an orchestrator to progress the entire specification's ticket graph at its ready
+      frontier. Choose this or per-ticket implement.
+    steps:
+      - title: Configure the project on first use
+        why: Engineering entries require issue-tracker, triage-label and domain-document configuration; configured
+          projects continue directly.
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - Project configuration available to subsequent entries
+        optional: true
+        when: The first engineering task or missing project configuration.
+      - title: Clarify unresolved design
+        why: Preserve domain terms and design decisions in the working directory. A clear existing specification does
+          not require another interview.
+        nodes:
+          - grill-with-docs
+        outputs:
+          - Clarified design, GLOSSARY.md and necessary ADRs
+        optional: true
+        when: Requirements or design still have open branches.
+      - title: Synthesize the specification and confirm the test boundary
+        why: Write the agreed decisions into a durable specification and agree the test seam with the user first.
+        nodes:
+          - to-spec
+        outputs:
+          - Published agent-ready specification and agreed seam
+        optional: true
+        when: Work will span sessions and no complete specification exists.
+      - title: Confirm tracer-bullet tickets
+        why: Each ticket covers complete demonstrable behavior and fits a fresh context. Confirm granularity and
+          blockers before publishing; do necessary prefactoring first.
+        nodes:
+          - to-tickets
+        outputs:
+          - Approved, published tickets and blocking edges
+        optional: true
+        when: No agent-ready tickets exist.
+      - title: Orchestrate the ticket graph
+        why: The user explicitly starts implement-spec. Implementers use TDD in separate worktrees, integrate their
+          changes and complete one final code-review. Do not rerun the alternative implementation entry
+          afterward.
+        nodes:
+          - implement-spec
+        outputs:
+          - Integration branch, ticket completion state and whole-graph review
+      - title: Write the PR description
+        why: Use this capability when the agent writes a PR body. Creating, pushing or merging still depends on the
+          current task's authorization.
+        nodes:
+          - pr
+        outputs:
+          - PR body and verification evidence
+        optional: true
+        when: Deliver through a pull request.
+      - title: Let the user choose a retrospective
+        why: A retrospective reads the original session and recommends environment improvements. People select
+          candidates; proposals are not applied automatically.
+        nodes:
+          - retro
+        outputs:
+          - Environment improvement candidates ordered by severity
+        optional: true
+        when: The user wants to examine environment friction, especially after difficult implementation.
+  - id: single-session
+    title: "Single session: implement directly"
+    when: Work is small and clear, with agreed behavior and test boundaries; separate specification/ticket phases
+      are unnecessary.
+    steps:
+      - title: Implement in the current context
+        why: The user explicitly invokes implement, which includes TDD and code-review. Avoid listing them as repeated
+          later phases.
+        nodes:
+          - implement
+        outputs:
+          - Code, verification, review and commit
+      - title: Write the PR description
+        why: Use this capability when the agent writes a PR body. Creating, pushing or merging still depends on the
+          current task's authorization.
+        nodes:
+          - pr
+        outputs:
+          - PR body and verification evidence
+        optional: true
+        when: Deliver through a pull request.
+      - title: Let the user choose a retrospective
+        why: A retrospective reads the original session and recommends environment improvements. People select
+          candidates; proposals are not applied automatically.
+        nodes:
+          - retro
+        outputs:
+          - Environment improvement candidates ordered by severity
+        optional: true
+        when: The user wants to examine environment friction, especially after difficult implementation.
+  - id: incoming-request
+    title: "Raw external request: triage first"
+    when: An external bug report, feature request or PR not created by to-tickets is not ready. Agent-ready
+      tickets skip this branch.
+    steps:
+      - title: Configure the project on first use
+        why: Engineering entries require issue-tracker, triage-label and domain-document configuration; configured
+          projects continue directly.
+        nodes:
+          - setup-matt-pocock-skills
+        outputs:
+          - Project configuration available to subsequent entries
+        optional: true
+        when: The first engineering task or missing project configuration.
+      - title: Classify and verify external input
+        why: Triage recommends a direction, waits for the maintainer, verifies facts and clarifies design when needed.
+          Outcomes may be needs-info, ready-for-human, wontfix or ready-for-agent. Only the last proceeds to
+          implementation.
+        nodes:
+          - triage
+        outputs:
+          - Confirmed direction and state; brief when ready-for-agent
+      - title: Implement prepared work
+        why: The user explicitly starts implement, which includes TDD at the agreed seam and code-review. Do not
+          repeat triage.
+        nodes:
+          - implement
+        outputs:
+          - Implementation, verification, review and commit
+        optional: true
+        when: Triage reached a maintainer-confirmed ready-for-agent outcome. Other states stop at their corresponding
+          handling direction.
+      - title: Write the PR description
+        why: Use this capability when the agent writes a PR body. Creating, pushing or merging still depends on the
+          current task's authorization.
+        nodes:
+          - pr
+        outputs:
+          - PR body and verification evidence
+        optional: true
+        when: Deliver through a pull request.

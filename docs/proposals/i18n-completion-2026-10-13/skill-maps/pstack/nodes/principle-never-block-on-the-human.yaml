@@ -1,0 +1,28 @@
+title: never-block-on-the-human
+summary: Do reversible work first; involve the person for irreversible choices or preferences experiments
+  cannot resolve.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Do reversible work first; involve the person for irreversible choices or preferences experiments
+  cannot resolve.
+when_to_use:
+  - Apply when tempted to ask "should I do X?" on reversible work. Proceed, present the result, let the human
+    course-correct after the fact; reserve confirmation for irreversible actions.
+solves:
+  - Do reversible work first; involve the person for irreversible choices or preferences experiments cannot
+    resolve.
+inputs:
+  - reversible decision
+outputs:
+  - executed result / escalated irreversible choice
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-never-block-on-the-human/SKILL.md
+handoffs: []
+official_description: Apply when tempted to ask 'should I do X?' on reversible work. Proceed, present the
+  result, let the human course-correct after the fact; reserve confirmation for irreversible actions.

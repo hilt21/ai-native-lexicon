@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: recovery
+units:
+  - path: summary
+    translation: 在中断或失败后继续工作。
+    source_fingerprint: sha256:5bf4c8d2e0a4d22f083588e2e536297849ad64078c900471cd1ed253ebd8f689
+    review_status: draft
+  - path: definition
+    translation: 恢复将保存状态与当前现实核对，使过程在受扰后重新获得进展能力。它可以继续、重试或选择其他路径，但必须考虑中断前已经发生的影响。
+    source_fingerprint: sha256:4335c3af934b94832274d17c2d4b121f7e95f228cec886ac3236c2e5ba8df230
+    review_status: draft
+  - path: why_it_matters
+    translation: 可恢复过程可在执行意外停止时保留已完成工作，并避免重复操作。
+    source_fingerprint: sha256:881cca1f127db42678094a6a441bbe2bccced16c63a2f535b3c7d4919bc09428
+    review_status: draft
+  - path: when_to_use
+    translation: 过程重启后，确定哪些步骤已完成以及下一步哪些操作可安全运行时使用。
+    source_fingerprint: sha256:0fc2e639cc6d42008badd7b9d52cf6e42ccf71024a9772024ac11e2556d7d91c
+    review_status: draft
+  - path: anti_pattern
+    translation: 重启整个工作流，却未检查哪些外部操作已经成功。
+    source_fingerprint: sha256:2aa2ff5a2010fc10d2d379c6ec38a7e132535d20e1fa4f47864c15710b76b093
+    review_status: draft

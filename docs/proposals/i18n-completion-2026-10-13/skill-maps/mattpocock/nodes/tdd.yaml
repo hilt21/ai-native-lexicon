@@ -1,0 +1,36 @@
+title: tdd
+summary: Implement behavior in red-to-green slices at an agreed public seam; handle refactoring during review.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: implementation-feedback
+secondary_clusters:
+  - debugging-research
+  - architecture-quality
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: At a public seam agreed with the user, write one failing vertical-slice test, then the minimum
+  implementation that passes it. Derive expectations from requirements or independent facts. Refactoring
+  belongs to code-review rather than the implementation loop. Agree a seam before standalone use too.
+when_to_use:
+  - Develop behavior expressible through automated tests.
+  - Fix a defect that supports a regression test.
+solves:
+  - Agent code changes lack fast feedback.
+  - A large batch of changes reveals a wrong implementation direction too late.
+inputs:
+  - Target behavior and independent expectations
+  - User-approved public test seam
+  - Runnable test environment
+outputs:
+  - failing test
+  - passing implementation
+  - regression protection
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/tdd/SKILL.md
+handoffs: []
+official_description: Test-driven development. Use when the user wants to build features or fix bugs
+  test-first, mentions "red-green-refactor", or wants integration tests.

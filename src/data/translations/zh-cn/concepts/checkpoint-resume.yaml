@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: checkpoint-resume
+units:
+  - path: summary
+    translation: 持久保存足够的已验证状态，使智能体工作流能够在中断后继续，无需重复不安全或昂贵的工作。
+    source_fingerprint: sha256:5f4e6ad5a08c067af65bd42fc6761087c2dbeedd378d2923c99941b002b8eb1a
+    review_status: draft
+  - path: definition
+    translation: 检查点记录已完成影响、待定决策、承重事实、预算、产物和下一个有效状态转换。恢复逻辑在继续之前验证外部假设是否仍然成立。
+    source_fingerprint: sha256:1038fea84ff93885822bf603d3a05089f63013c8f85924eae6f0c9bc7fcfaaac
+    review_status: draft
+  - path: why_it_matters
+    translation: 长期运行的智能体会遇到重启、批准等待、速率限制和人工暂停。持久检查点使中断成为预期转换，而非异常失败。
+    source_fingerprint: sha256:b1d87942ac9c54183c9e3c07ddc08b3f1d2f3b1fc42782ba1fbd5a97cdab0d88
+    review_status: draft
+  - path: when_to_use
+    translation: 用于持续超过单次请求，或包含高成本、不可逆步骤的工作流。
+    source_fingerprint: sha256:503c91b5afe4b1e3afe82eeb7f48b6c5e1cee292c4eee6533d1421a98e3c093d
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅保存对话记录，并假定它是已提交副作用的权威记录。
+    source_fingerprint: sha256:d402aa827a79b4dd1936f3304388bb978f3fb73900107a287f9de241c4f641ac
+    review_status: draft

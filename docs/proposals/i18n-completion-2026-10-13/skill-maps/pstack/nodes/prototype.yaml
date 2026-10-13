@@ -1,0 +1,27 @@
+title: prototype
+summary: Use disposable prototypes to choose a design quickly.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: design-decision
+secondary_clusters: []
+tags: []
+mechanism: State the decision, find references if needed, build several variants in a scratch directory,
+  observe actual behavior, compare tradeoffs and hand the choice to Feature or Architect.
+when_to_use:
+  - Visual, interaction or behavioral direction is uncertain.
+  - Compare alternatives quickly.
+solves:
+  - Experimentation happens in production code.
+  - Design is fixed without comparison.
+inputs:
+  - design question
+  - optional references
+outputs:
+  - throwaway artifact
+  - screenshots/observations
+  - recommendation
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/prototype.md
+handoffs: []

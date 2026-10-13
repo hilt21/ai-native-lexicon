@@ -1,0 +1,62 @@
+title: Progress work in parallel
+summary: "Progress work in parallel: from task entry to inspectable output."
+order: 5
+when_to_use:
+  - Plan and run this multi-PR migration
+  - Orchestrate this project
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - continuously verified program / merged queue / verified stack
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the program entry
+        why: Enter through pstack's main router and create a multi-phase plan of executable owner checklists and
+          operator audit evidence.
+        nodes:
+          - poteto-mode
+          - multi-phase-plan
+      - title: Coordinate and divide responsibilities
+        why: Use a durable coordinator for multi-day programs with many agents, distribute separable work concurrently
+          and aggregate findings.
+        nodes:
+          - orchestrate
+          - swarm
+      - title: Retain decision evidence
+        why: Condense long agent activity into an auditable decision trail.
+        nodes:
+          - show-me-your-work
+      - title: Publish verified results
+        why: Use independent verifiers to decide which PRs may actually land.
+        nodes:
+          - shipping
+        optional: true
+        when: Publication is authorized and results meet verification conditions.
+  - id: alternative-1
+    title: One owner takes each PR from build to merge; the root performs independent verification, countersigning
+      and audits.
+    when: The delivery structure suits autopilot-full.
+    steps:
+      - title: multi-phase-plan
+        why: Plan large multi-phase work as executable owner checklists and evidence for operator audits.
+        nodes:
+          - multi-phase-plan
+      - title: autopilot-full
+        why: One owner takes each PR from build to merge; the root performs independent verification, countersigning
+          and audits.
+        nodes:
+          - autopilot-full
+  - id: alternative-2
+    title: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+    when: The delivery structure suits autopilot-stack.
+    steps:
+      - title: multi-phase-plan
+        why: Plan large multi-phase work as executable owner checklists and evidence for operator audits.
+        nodes:
+          - multi-phase-plan
+      - title: autopilot-stack
+        why: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+        nodes:
+          - autopilot-stack

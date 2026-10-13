@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: interface
+units:
+  - path: summary
+    translation: 描述系统单元如何交换输入、输出、影响和义务的契约。
+    source_fingerprint: sha256:53f9470721599ea8067e83f63cacc8f5b2904d03b312168c55dfb7d4ce16a616
+    review_status: draft
+  - path: scope
+    translation: 由交互组件或外部服务构成的系统。
+    source_fingerprint: sha256:c5652279cad5fd3fd8e9465d521ad2d8b74ba8e8ce87362f5da489474978ceeb
+    review_status: draft
+  - path: usage
+    translation: 提供小而稳定的契约，同时允许内部实现变化。
+    source_fingerprint: sha256:6c7b7dc600252d39b75b9b60e99dc5788caa1cc6a458a82551292fe24223b3c8
+    review_status: draft
+  - path: distinctions
+    translation: 接口定义交换契约；模块包含接口背后的实现。
+    source_fingerprint: sha256:3851a2ffa5f8bad761447c6ad4d2526628806d642f34d0d50dbde47092c57290
+    review_status: draft
+  - path: composition.pattern
+    translation: 模块 ↔ 接口 ↔ 模块
+    source_fingerprint: sha256:976b87347e914b57c7ef4c71bd393f977bec08b0c80c4b1c85f6bb04f9910c2a
+    review_status: draft
+  - path: composition.example
+    translation: 检索工具接收查询，并返回带来源标识的片段及明确的失败格式。
+    source_fingerprint: sha256:b732c8afba89f73c4fbee0fe8cc6dd0590ebef759c32608bc5fa34903c8e2455
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 接口
+    source_fingerprint: sha256:b9a4c2ebf99be2a5f64db495371c05885c27dfd010f64fc1e72644b8ffe4b924
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 管理系统单元如何交换输入、输出和义务的明确契约。
+    source_fingerprint: sha256:04f2106d357d44aa69494d1b5000776f1ecf21fc73669d7f98283c399e27ecd3
+    review_status: draft
+  - path: considerations
+    translation:
+      - 除成功输出形状外，还应包含错误和副作用。
+      - 暴露内部细节会增加耦合与调用方负担。
+    source_fingerprint: sha256:21af4880927fa96ad72c2bc42b450daa2dc30a09b07081d5361c1aaa2d8b3f4f
+    review_status: draft
+  - path: ownership.rationale
+    translation: Schema、API、验证和协议实现使契约可执行。
+    source_fingerprint: sha256:a1067d6bf7fd1637c323f58e22bdc83bbaaaf96d208ad86533ce8dbc12cb3cf3
+    review_status: draft
+  - path: priority.scope
+    translation: 由交互组件或外部服务构成的系统。
+    source_fingerprint: sha256:e1d08a7934e5bf35afb437d82f60a92a66048cc26c5a2c38dcd569299d3f6efb
+    review_status: draft
+  - path: priority.rationale
+    translation: 相互作用的单元需要明确契约，以协调行为并在边界发现不兼容假设。
+    source_fingerprint: sha256:90f40adf67d0430e80e5730c7757e1fd171fea01500d4ef4c02014cb4cc113b6
+    review_status: draft

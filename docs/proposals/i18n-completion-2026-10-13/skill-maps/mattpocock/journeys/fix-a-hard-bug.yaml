@@ -1,0 +1,63 @@
+title: Fix a difficult bug
+summary: Establish failing feedback that captures the actual symptom, then minimize, hypothesize, instrument
+  and fix. Leave a regression when the correct seam exists; otherwise record the testability gap.
+order: 4
+when_to_use:
+  - The bug resists first-pass analysis or involves flakes, regressions or performance anomalies.
+inputs:
+  - bug symptom
+  - Runnable system
+outputs:
+  - Root-cause evidence and fix
+  - Regression protection at the correct seam, or a missing-seam finding
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/diagnosing-bugs/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/code-review/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/retro/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/improve-codebase-architecture/SKILL.md
+variants:
+  - id: standard
+    title: Fix through observable reproduction
+    steps:
+      - title: Establish feedback and verify the root cause
+        why: diagnosing-bugs requires feedback already failing on this bug, or a fixed high reproduction rate for a
+          flake. Then minimize, hypothesize, instrument and fix. Write the regression first only at a correct
+          seam; otherwise record the gap. Recheck the original scenario and clean up.
+        nodes:
+          - diagnosing-bugs
+        outputs:
+          - Feedback surface, root-cause evidence, fix and regression test or missing-seam record
+      - title: Review the fix from a fixed point
+        why: Use code-review for an independent review when needed, separating repository standards from the original
+          requirements. This is an optional recommendation, not another invocation required by the diagnosis
+          source.
+        nodes:
+          - code-review
+        outputs:
+          - Standards and Spec findings
+        optional: true
+        when: The fix diff needs independent review.
+      - title: Let the user choose a retrospective
+        why: A retrospective reads the original session and recommends environment improvements. People select
+          candidates; proposals are not applied automatically.
+        nodes:
+          - retro
+        outputs:
+          - Environment improvement candidates ordered by severity
+        optional: true
+        when: The user wants to examine environment friction, especially after difficult implementation.
+      - title: Survey architecture when feedback lacks a seam
+        why: This is a conditional editorial recommendation for a user-invoked architecture survey. diagnosing-bugs
+          does not automatically invoke it or refactor.
+        nodes:
+          - improve-codebase-architecture
+        outputs:
+          - Architecture candidates and module boundaries awaiting agreement
+        optional: true
+        when: The underlying issue is the absence of a seam that exposes and protects behavior.

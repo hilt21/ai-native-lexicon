@@ -1,0 +1,33 @@
+title: tdd
+summary: Capture the bug in a failing test when a cheap, reliable test seam exists.
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters:
+  - verification-evidence
+tags:
+  - testing
+  - regression
+mechanism: Create the narrowest executable regression and demonstrate its failure, make the smallest change,
+  then prove success with the same test.
+when_to_use:
+  - The user explicitly requests TDD.
+  - The bug has an obvious cheap local test target.
+solves:
+  - Ensure the fix has a reproducible failure.
+  - Produce failing-before and passing-after evidence.
+inputs:
+  - bug behavior
+  - local test target
+outputs:
+  - failing regression
+  - minimal fix
+  - passing regression
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/tdd/SKILL.md
+handoffs: []
+official_description: Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR
+  when the bug has an obvious cheap local test target. Skip when the test path is unclear, expensive,
+  integration-heavy, or not requested.

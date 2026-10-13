@@ -1,0 +1,27 @@
+title: babysit
+summary: Progress an open PR or stack to merge-ready without final landing.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: Declare drive, background, threads-only or check mode. Work only at the merge frontier through
+  conflicts, review, CI and forge verdict, then batch a fix wave.
+when_to_use:
+  - An open PR needs green checks and merge readiness.
+  - Handle review and CI.
+solves:
+  - Working on the whole stack creates churn.
+  - Green checks are mistaken for a merge verdict.
+inputs:
+  - open PR or stack
+  - forge state
+outputs:
+  - merge-ready frontier
+  - resolved reviews/CI
+  - blocker report
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/babysit.md
+handoffs: []

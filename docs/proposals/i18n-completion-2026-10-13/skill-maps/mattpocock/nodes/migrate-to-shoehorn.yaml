@@ -1,0 +1,30 @@
+title: migrate-to-shoehorn
+summary: Migrate test-data as assertions to @total-typescript/shoehorn.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: implementation-feedback
+secondary_clusters: []
+tags:
+  - misc
+  - model-invoked
+  - stable
+mechanism: Migrate only assertions used to construct test data. Use fromPartial for partial valid data,
+  fromExact for complete objects and fromAny for deliberately invalid values. Install required dependencies
+  and run type checks. Converting an intentionally invalid test value does not make that data valid.
+when_to_use:
+  - Tests extensively use as to construct incomplete data.
+  - The project wants to adopt @total-typescript/shoehorn.
+solves:
+  - Reduce unsafe assertions in test-data construction.
+inputs:
+  - Test files
+  - Existing as assertions
+outputs:
+  - Test-data construction using shoehorn
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: misc/migrate-to-shoehorn/SKILL.md
+handoffs: []
+official_description: Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when
+  user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.

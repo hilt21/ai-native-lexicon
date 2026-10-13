@@ -1,0 +1,25 @@
+title: redesign-from-first-principles
+summary: Treat a new requirement as if it had existed from day one and rederive the structure.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Treat a new requirement as if it had existed from day one and rederive the structure.
+when_to_use:
+  - Apply when integrating a new requirement into an existing design. Redesign as if the requirement had been
+    a foundational assumption from day one, instead of bolting it on.
+solves:
+  - Treat a new requirement as if it had existed from day one and rederive the structure.
+inputs:
+  - new requirement + legacy design
+outputs:
+  - redesigned target shape
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-redesign-from-first-principles/SKILL.md
+handoffs: []
+official_description: Apply when integrating a new requirement into an existing design. Redesign as if the
+  requirement had been a foundational assumption from day one, instead of bolting it on.

@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: permission
+units:
+  - path: summary
+    translation: 决定智能体允许访问什么或执行什么。
+    source_fingerprint: sha256:51bf7b53054c5803891dd342eddea7b243c0e55dfbec4c3da403d76b09cdc580
+    review_status: draft
+  - path: definition
+    translation: 权限授予主体在明确范围内访问资源或操作的能力。它由控制资源的系统执行；任务请求或模型指令本身不会创建这种访问权。
+    source_fingerprint: sha256:4ac728814054001c51771ae207eaec9bebe7b2f1df5d588aef168850533bf794
+    review_status: draft
+  - path: why_it_matters
+    translation: 限定范围的访问可限制错误影响，并使已授权操作的边界在技术上可检查。
+    source_fingerprint: sha256:2bd4a36d94426b289b4080fe6d7e7be82abf0d155a7c017d4fce83b99413f116
+    review_status: draft
+  - path: when_to_use
+    translation: 授予智能体对一个项目的读取权限，同时限制无关资源时使用。
+    source_fingerprint: sha256:328dec52f409596db1b8524d82f53db2b40c4287b0b907edc602cc682e4aed27
+    review_status: draft
+  - path: anti_pattern
+    translation: 任务只需读取一份文档，却授予广泛写入凭据。
+    source_fingerprint: sha256:ae01ac630862ff98e6b1fb2e2a7dab3ed72a404ca03bcc4623fd40c3345d1cd5
+    review_status: draft

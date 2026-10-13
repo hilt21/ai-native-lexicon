@@ -1,0 +1,36 @@
+title: maintain-verification-skill
+summary: Continuously calibrate the verification skill and Feature Map against code changes.
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+  - verification
+  - maintenance
+  - drift
+mechanism: Read source for each feature in parallel, then drive all features through one live session.
+  Distinguish documentation drift, harness gaps and product regressions.
+when_to_use:
+  - A verification skill exists while the product evolves.
+  - Audit the verification skill periodically.
+solves:
+  - Prevent verifier decay.
+  - Prevent incorrect documentation from hiding product regressions.
+inputs:
+  - verification skill
+  - feature map
+  - current source
+  - live product
+outputs:
+  - clean/changed/blocked verdict
+  - proven corrections
+  - optional PR
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/maintain-verification-skill/SKILL.md
+handoffs:
+  - "Handoff guidance: future verification runs"
+official_description: "Periodic pass that keeps a project's verification skill and feature map honest:
+  parallel source readers per feature, one live session driving every feature, at most one PR of proven
+  corrections. Use for /maintain-verification-skill or \"audit the verify skill\"."

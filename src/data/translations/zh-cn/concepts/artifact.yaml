@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: artifact
+units:
+  - path: summary
+    translation: 保存工作过程中产生的有用产物。
+    source_fingerprint: sha256:37637224c9983a779b112f1753bee3e53e0dcee89bf8936bc94f856923cdce15
+    review_status: draft
+  - path: definition
+    translation: 产物是具有明确身份的工作输出，例如报告、补丁、数据集或图像。它能够脱离对话被独立检查或交接；产物存在本身不能证明它满足要求。
+    source_fingerprint: sha256:1bb34fa7aab451d5f96f6cf9a9a0e3316716b5a5b378ee5e76c5a0eb1ec69052
+    review_status: draft
+  - path: why_it_matters
+    translation: 持久保存的输出让人、后续步骤和其他系统能够审阅并复用智能体的工作。
+    source_fingerprint: sha256:cfe9d25c1c42177ed1bd6e7529edd0176a7e801158d26749213892990c798459
+    review_status: draft
+  - path: when_to_use
+    translation: 以保存文件的形式交付报告，并提供稳定引用和适当格式时使用。
+    source_fingerprint: sha256:5662745e33694a0d7f5761d41fec3b3847ccf11538df513741f67aa65c80ed04
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅存在对预期报告的描述，就声称报告已经交付。
+    source_fingerprint: sha256:7429e141ee0df68ef35a2faf1062cc97b08fdbbeec714857508231676929bd50
+    review_status: draft

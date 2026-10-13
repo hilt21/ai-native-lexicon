@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: shared-state
+units:
+  - path: summary
+    translation: 让多个智能体使用同一份可信状态。
+    source_fingerprint: sha256:eebc0c9b373cec68d3ecbed9336f1ef0ee6e45a446f11dee6de95b3c4c5e41d6
+    review_status: draft
+  - path: definition
+    translation: 共享状态是多个主体按明确规则读取或更新的共同表示。一致性、版本和责任归属决定其可信程度；共享访问本身无法防止冲突。
+    source_fingerprint: sha256:f5ed89dc430a17f013359176cbdc47f5fda536e548ca35ae524d95e6f5e95186
+    review_status: draft
+  - path: why_it_matters
+    translation: 共同进度记录帮助工作者协调，避免各自对完成情况形成相互冲突的判断。
+    source_fingerprint: sha256:44f34b347e13eaf98cdbd80160a1afbf50e1b8297ec973dd883bca288ff43c9a
+    review_status: draft
+  - path: when_to_use
+    translation: 在多工作者系统中跟踪任务分配和已接受结果时使用。
+    source_fingerprint: sha256:0506668e6318a8646979b8ba1cf9e94546d9f81d1f8a88077fb5b1d7b1b69ac5
+    review_status: draft
+  - path: anti_pattern
+    translation: 允许智能体覆盖相同状态记录，却未提供冲突检测或责任规则。
+    source_fingerprint: sha256:8e3d86d7736d7a24fcd564c1f5a27710858290a7c1f8624ad354d128dec073df
+    review_status: draft

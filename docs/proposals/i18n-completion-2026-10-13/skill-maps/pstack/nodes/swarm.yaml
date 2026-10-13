@@ -1,0 +1,36 @@
+title: swarm
+summary: Distribute separable work to workers concurrently and aggregate results.
+type: capability
+status: active
+layer: skill
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags:
+  - parallel
+  - workers
+  - coverage
+mechanism: Fan out using slice, race or coverage patterns, isolate work units, wait and drain completions,
+  then let the parent synthesize a verdict.
+when_to_use:
+  - Broad coverage
+  - Independent investigations
+  - Verification gauntlet
+  - Parallel candidates
+solves:
+  - Reduce serial waiting.
+  - Expand independent checking coverage.
+inputs:
+  - work matrix
+  - N worker slots
+  - acceptance criteria
+outputs:
+  - worker results
+  - aggregated report
+  - PASS/ISSUES/BLOCKED
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/swarm/SKILL.md
+handoffs:
+  - "Handoff guidance: verification"
+official_description: Fan out N parallel workers, drain them, and return one report. Use for /swarm, 'swarm
+  this', or parallel coverage, races, gauntlets, and exploration.

@@ -1,0 +1,36 @@
+title: wizard
+summary: Generate an interactive Bash wizard for external steps only a person can perform.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: delivery-human-loop
+secondary_clusters:
+  - communication-tooling
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: For authentication, credentials, third-party dashboards or cutover steps only a person can perform,
+  generate an interactive Bash wizard organizing URLs, prompts, collected values and configuration writes. The
+  agent generates and statically validates the script and provides its command. Values are collected and
+  configuration written when the person runs it. Keep steps the agent can complete out of the wizard.
+when_to_use:
+  - Authentication, credentials or third-party UI require a person.
+  - A one-time migration or cutover needs protection against missed steps.
+solves:
+  - Reduce repeated explanations of manual steps.
+  - Make human participation more repeatable and less error-prone.
+inputs:
+  - Human operation goal
+  - Configuration to collect or write
+outputs:
+  - Interactive Bash wizard
+  - Static validation results and a command for the person to run
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/wizard/SKILL.md
+handoffs: []
+official_description: Generate an interactive bash wizard that walks a human through steps only they can
+  perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar
+  third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can
+  perform itself.

@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: fallback
+units:
+  - path: summary
+    translation: 首选方法失败时采用其他方法。
+    source_fingerprint: sha256:e51dec9552d9375591d9837e05b811884e1243633e20ceb900079e096174916d
+    review_status: draft
+  - path: definition
+    translation: 回退在首选路径无法成功时，改用替代方法或能力。它与重试同一操作不同，必须保留必要约束，或明确说明能力降低。
+    source_fingerprint: sha256:cad5e6f08498084a63a0efeca09414ff4280011758a8bb88b7c6a1f2803522f9
+    review_status: draft
+  - path: why_it_matters
+    translation: 替代路径可以让有用工作继续，同时让保真度或覆盖范围的损失可见。
+    source_fingerprint: sha256:f1668b191bc941ffb8247529601f9727cf4a06cef8b1bcadf88eddc29db60504
+    review_status: draft
+  - path: when_to_use
+    translation: 主要检索服务不可用，但已获准替代来源可以回答请求时使用。
+    source_fingerprint: sha256:16b750ff1cb3cb0356167457a9d582d259a60037f97af2f46c55ffa9cfde5094
+    review_status: draft
+  - path: anti_pattern
+    translation: 悄然用无依据猜测替代权威查询。
+    source_fingerprint: sha256:1fb8d7e0dce8fbb15bf7ab81ff92d54289d76913e888e721a6470a10a8dc2349
+    review_status: draft

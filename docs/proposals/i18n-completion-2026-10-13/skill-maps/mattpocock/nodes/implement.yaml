@@ -1,0 +1,35 @@
+title: implement
+summary: Implement a defined unit of work from a specification or tickets.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: implementation-feedback
+secondary_clusters:
+  - delivery-human-loop
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, implement the specification or ticket in small red-to-green slices
+  using TDD at an agreed public test seam where possible. Run type checks and relevant tests during
+  implementation, run the full tests and code-review at the end, then commit to the current branch. TDD and
+  review are capabilities included in this implementation path.
+when_to_use:
+  - A clear ticket or small specification can be completed in the current session.
+  - Implementation should be constrained by tests and review.
+solves:
+  - Put code generation inside short feedback loops.
+  - Include verification and review before treating implementation as complete.
+inputs:
+  - Specification or ticket
+  - Current repository
+outputs:
+  - Implementation
+  - Test results
+  - Code-review results
+  - Commit
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement/SKILL.md
+handoffs: []
+official_description: Implement a piece of work based on a spec or set of tickets.

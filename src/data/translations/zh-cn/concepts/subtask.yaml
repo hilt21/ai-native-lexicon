@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: subtask
+units:
+  - path: summary
+    translation: 将较大任务划分成更小工作单元。
+    source_fingerprint: sha256:cce3b12b372b854404733678c76860fb4c0dda86fcade1acd963eb069349c803
+    review_status: draft
+  - path: definition
+    translation: 子任务是对父任务有贡献的较小工作单元。其输入、输出和依赖应足够明确，以便集成结果；局部完成不意味着父任务完成。
+    source_fingerprint: sha256:1730fb744fbb1bdd9bacfe1a32bff84097bb8dd3483ca0d92d3a2d02d77521a5
+    review_status: draft
+  - path: why_it_matters
+    translation: 更小单元让复杂工作更容易安排和验证，同时揭示哪些依赖会阻止安全并行。
+    source_fingerprint: sha256:a4ef9808b0ad0fdfeb246825fb90cc3e428516a6abdf0b2650c2eb46a082b4a3
+    review_status: draft
+  - path: when_to_use
+    translation: 综合结果依赖提取发现时，将文档提取与综合分开使用。
+    source_fingerprint: sha256:f49c6bfdb169568cfc61c71a0f80f378d87f5c7125a01ca8ef553379989323d3
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅因每个工作者都提交了内容，就将父任务标记完成。
+    source_fingerprint: sha256:6f23e616fa24f9ecde183d0284adae9a158d2765412ad9854994d712bccd6806
+    review_status: draft

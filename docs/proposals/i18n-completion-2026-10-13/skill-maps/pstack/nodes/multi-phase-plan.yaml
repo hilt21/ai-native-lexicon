@@ -1,0 +1,28 @@
+title: multi-phase-plan
+summary: Plan large multi-phase work as executable owner checklists and evidence for operator audits.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: design-decision
+secondary_clusters: []
+tags: []
+mechanism: Resolve unknowns with prototypes and subagent exploration. Give each PR an executable checklist and
+  live/performance/unit verification blocks. Run a plan checker and hand off without implementing.
+when_to_use:
+  - Large change spanning multiple PRs
+  - Plan before execution.
+solves:
+  - A plan lists themes without an execution interface.
+  - Unknown assumptions reach execution.
+inputs:
+  - program goal
+  - open questions
+  - repo conventions
+outputs:
+  - validated plan file
+  - PR-by-PR checklist
+  - chosen execution playbook
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/multi-phase-plan.md
+handoffs: []

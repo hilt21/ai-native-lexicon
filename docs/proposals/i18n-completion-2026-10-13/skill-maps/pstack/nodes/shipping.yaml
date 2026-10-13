@@ -1,0 +1,28 @@
+title: shipping
+summary: Use independent verifiers to decide which PRs may actually land.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: A fresh verifier tests parent versus head on the real surface for each PR. Bind the verdict to SHA,
+  base and patch-id. Land only the contiguous verified run from the bottom, processing one PR at a time.
+when_to_use:
+  - A PR is merge-ready.
+  - The user requests landing or shipping.
+solves:
+  - The writer certifies its own work.
+  - A green result from an old SHA is reused.
+  - An upper PR skips an unverified lower PR.
+inputs:
+  - merge-ready PR stack
+  - current forge state
+outputs:
+  - independent verdicts
+  - landed verified PRs
+  - land ceiling
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/shipping.md
+handoffs: []

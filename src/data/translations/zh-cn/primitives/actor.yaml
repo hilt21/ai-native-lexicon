@@ -1,0 +1,59 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: actor
+units:
+  - path: summary
+    translation: 能够感知、决策或行动的可识别参与者；智能体则具有围绕目标的委派裁量权。
+    source_fingerprint: sha256:d912d3a612b3fc14bd27b0c883b374fa2b7f770fa0d9efe13b1c0caf12d609ca
+    review_status: draft
+  - path: scope
+    translation: 操作具有可识别执行者和权限的系统。
+    source_fingerprint: sha256:7180b94771ac54f814d24c78e94c173c6a258f0c71cc723ca26500c7f96089a5
+    review_status: draft
+  - path: usage
+    translation: 将每项操作关联到负责主体、可用能力和权限。
+    source_fingerprint: sha256:20642d041bb685e052f20d8d47dce3b8b1a4a72dd4e54894ef08401b5d6c2119
+    review_status: draft
+  - path: distinctions
+    translation: 智能体是一类专门的行动主体，不能将其等同于全部用户、服务或组织。
+    source_fingerprint: sha256:9198c2cbb912644840648034e70f6565aa3d90bed827f87a183834b12403bed1
+    review_status: draft
+  - path: composition.pattern
+    translation: 主体 + 能力 + 权限 → 执行
+    source_fingerprint: sha256:457605869f8bff26e53c620c608372392a010cb233586448199759397697887c
+    review_status: draft
+  - path: composition.example
+    translation: 研究智能体可以搜索文档，而只有发布服务能够发布已批准报告。
+    source_fingerprint: sha256:b78ac1d58c3b7af81f591ee7c060168d4ca546e73e62fe1a8489e40eaeaeb1d3
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 行动主体
+      - 智能体
+    source_fingerprint: sha256:db6807c4627368549d26d8fd788ff80b403b63bf2cc9afedc0c7c1483f5a7d12
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 系统中能够感知、决策或执行操作的可识别参与者。
+      - 在规定限制内获委派权限，可以围绕目标选择并推进操作的行动主体。
+    source_fingerprint: sha256:3be02c8594a6594845a345e2d7ac8ddb5d8c6f5f2de3b4534b3750fbfa714bab
+    review_status: draft
+  - path: considerations
+    translation:
+      - 具有能力不意味着具有权限。
+      - 明确技术身份和人的责任。
+    source_fingerprint: sha256:294a574122d40ee412ab63afe661130df6b95695af4c4e76eb2349aa20b466c1
+    review_status: draft
+  - path: ownership.rationale
+    translation: 模型可提出操作；经过身份验证的服务在分配权限内执行，并记录主体身份。
+    source_fingerprint: sha256:3ada5aec6c7b2e69a963a38e90db40a3b4e9e2b8c7d4ef0b800658fd76baf0c4
+    review_status: draft
+  - path: priority.scope
+    translation: 操作具有可识别执行者和权限的系统。
+    source_fingerprint: sha256:6a56422cb885d331c6e691535d181364b5506bdff255ca31f4290b58301b6604
+    review_status: draft
+  - path: priority.rationale
+    translation: 具有多个执行者的系统需要明确主体，以便分配能力、权限和责任，并避免混淆。
+    source_fingerprint: sha256:fdf4c352fb7caf3155e2f5813fc8d96a45364dd7754213dfad29fc698cd9f58a
+    review_status: draft

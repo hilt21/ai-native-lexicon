@@ -1,0 +1,33 @@
+title: grilling
+summary: Provide a reusable interview primitive that questions a design until its open branches are resolved.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: alignment-domain
+secondary_clusters:
+  - spec-planning
+tags:
+  - productivity
+  - model-invoked
+  - stable
+mechanism: Maintain a frontier of pending decisions. In each round present all ready questions and
+  recommendations, then wait for user answers. Investigate discoverable facts; leave preferences and product
+  decisions to the user. Finish only when the frontier is empty and the user confirms shared understanding. Do
+  not simulate the user's answers.
+when_to_use:
+  - A wrapper needs a structured interview.
+  - The user explicitly asks to stress-test a plan or decision.
+solves:
+  - Avoid a single broad question yielding only a superficial answer.
+  - Break a vague idea into decidable branches.
+inputs:
+  - Plan, decision or idea
+outputs:
+  - Resolved design branches
+  - Remaining unknowns
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/grilling/SKILL.md
+handoffs: []
+official_description: Grill the user relentlessly about a plan, decision, or idea. Use when the user wants to
+  stress-test their thinking, or uses any 'grill' trigger phrases.

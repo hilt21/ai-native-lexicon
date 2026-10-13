@@ -1,0 +1,37 @@
+title: poteto-mode
+summary: Enter pstack through its main router and engineering work style.
+type: router
+status: active
+layer: router
+primary_cluster: entry-routing
+secondary_clusters: []
+tags:
+  - routing
+  - core
+  - orchestration
+mechanism: Assess the task and required rigor, select a playbook and combine suitable skills, principles,
+  subagents and verification steps.
+when_to_use:
+  - Handle an engineering task in the pstack style.
+  - Choose the appropriate playbook or skill.
+  - Use concise code and verifiable outcomes as defaults.
+solves:
+  - Reduce skill-selection effort.
+  - Provide one entry point to complex workflows.
+  - Keep engineering discipline consistent across tasks.
+inputs:
+  - user task
+  - repository context
+  - pstack model configuration
+outputs:
+  - selected playbook
+  - task plan / todo
+  - skill and principle chain
+  - verified result
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/SKILL.md
+handoffs:
+  - "Handoff guidance: all playbooks"
+official_description: poteto's agent style for concise, detailed responses, deliberate subagents, unslopped
+  prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style.

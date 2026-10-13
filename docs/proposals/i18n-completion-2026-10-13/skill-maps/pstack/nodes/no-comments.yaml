@@ -1,0 +1,30 @@
+title: no-comments
+summary: Remove explanatory AI comments and express real constraints structurally.
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+  - code-quality
+  - comments
+  - structural-encoding
+mechanism: Review comments and remove explanations already carried by code. If a comment states an actual
+  invariant, recommend a type, test, lint rule or runtime check.
+when_to_use:
+  - AI generates excessive comments.
+  - Clean up before PR review.
+  - A comment asserts a required constraint.
+solves:
+  - Reduce stale comments.
+  - Prevent comments from setting incorrect precedents.
+inputs:
+  - diff or source files
+outputs:
+  - cleaner code
+  - structural encodings for real constraints
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/no-comments/SKILL.md
+handoffs: []
+official_description: Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints.

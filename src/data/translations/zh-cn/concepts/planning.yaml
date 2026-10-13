@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: planning
+units:
+  - path: summary
+    translation: 判断达到目标可能需要哪些步骤。
+    source_fingerprint: sha256:9c32ebb5456f5ee7949d57be5115fbf8827f706840d1ed5174eac1f7846cdcdb
+    review_status: draft
+  - path: definition
+    translation: 规划依据当前假设提出能够实现目标的行动及依赖。计划是可修订的指导，不能证明行动已发生，也无法保证环境按预期运行。
+    source_fingerprint: sha256:e0f44c5dae7d48aec48eb09b8f53b5a36a84b3a624da47b8bc48247b9f620dae
+    review_status: draft
+  - path: why_it_matters
+    translation: 可见的顺序有助于识别缺少的前提，并在高成本工作开始前选择检查。
+    source_fingerprint: sha256:fa8dc3b040a3b6901922d480825971f80afee391ba8f8cc859cd51173a8e4a9e
+    review_status: draft
+  - path: when_to_use
+    translation: 用于包含有序准备、执行和验证阶段的迁移之前。
+    source_fingerprint: sha256:91ff132cd4e151c85e59fd17dfca756858044f7852bb61394ec7a391b993824a
+    review_status: draft
+  - path: anti_pattern
+    translation: 把详细计划视为已完成工作，或在相反证据出现后拒绝修订。
+    source_fingerprint: sha256:4ba8367bfcf6e9dc75833c56d5b981f770bc0900148e0135b4b1966a040c14ce
+    review_status: draft

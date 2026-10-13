@@ -1,0 +1,27 @@
+title: autopilot-stack
+summary: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: Keep the one-owner lifecycle and root hourly audits. The root alone writes topology, appending
+  verified PRs in order to a linear stack. Do not merge.
+when_to_use:
+  - Automatically build several related PRs.
+  - Keep final review and landing with a person.
+solves:
+  - Several owners mutate stack topology concurrently.
+  - Automatic merge crosses the operator gate.
+inputs:
+  - PR queue
+  - target stack order
+outputs:
+  - verified linear stack
+  - stack-ready SHAs
+  - operator handoff
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/autopilot-stack.md
+handoffs: []

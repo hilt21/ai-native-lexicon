@@ -1,0 +1,29 @@
+title: eval
+summary: Use blind evaluation to test whether a skill or prompt improves agent behavior.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: learning-evolution
+secondary_clusters: []
+tags: []
+mechanism: Define a rubric hidden from candidates. Use a sanitized environment, organic prompt and multiple
+  candidates; blind-judge with a different model family. Verify the actual chain from transcripts, then
+  synthesize findings.
+when_to_use:
+  - A skill or prompt has changed.
+  - Assess behavioral improvement.
+solves:
+  - Compliance is self-reported.
+  - Model identity biases the judge.
+inputs:
+  - variant
+  - organic prompt
+  - hidden rubric
+outputs:
+  - candidate outputs
+  - blind judge verdict
+  - promotion recommendation
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/eval.md
+handoffs: []

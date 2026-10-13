@@ -1,0 +1,24 @@
+title: investigation
+summary: Investigate read-only and provide evidence-backed explanations or recommendations.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: understanding-context
+secondary_clusters: []
+tags: []
+mechanism: Route to how, add why for motivation, keep code unchanged and finish with unslop.
+when_to_use:
+  - Understand a system.
+  - Obtain technical advice without code changes.
+solves:
+  - Keep investigation distinct from implementation.
+inputs:
+  - question
+  - repository/evidence sources
+outputs:
+  - cited explanation
+  - recommendation
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/investigation.md
+handoffs: []

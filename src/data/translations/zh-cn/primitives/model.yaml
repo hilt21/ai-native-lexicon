@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: model
+units:
+  - path: summary
+    translation: 为解释、预测、讨论或控制现实某个方面而作出的有目的简化。
+    source_fingerprint: sha256:2aae9c710f29574d926b452a239599e6137ca0f3716ce224b1e32e8853cbe51c
+    review_status: draft
+  - path: scope
+    translation: 依赖明确工作机制表示的设计和决策。
+    source_fingerprint: sha256:0314340f947ad2fa9e3afb4ffc0c07f493a9149ef4798be5e3bfe2d37c97cc13
+    review_status: draft
+  - path: usage
+    translation: 呈现假设，使预测可与实际结果比较。
+    source_fingerprint: sha256:7646ee394e1dbccc852f275ddcebb31c10b77449d5d557c35579a79ed186f6b8
+    review_status: draft
+  - path: distinctions
+    translation: 本条目关注现实的表示；大语言模型是一种特定学习型计算模型，未涵盖模型的全部含义。
+    source_fingerprint: sha256:1b2622e0a6e606263043d94d4927cbcdbe3f8fa1f79d3f20cee103f3929f01b7
+    review_status: draft
+  - path: composition.pattern
+    translation: 现实 → 模型 → 决策 → 观察
+    source_fingerprint: sha256:0c161677f7e348fe8d19ae2e2db38f220b54e1c5bed59ce1f7d45767bb02ba49
+    review_status: draft
+  - path: composition.example
+    translation: 智能体调度器对任务、依赖和工作者容量建模，以估计可行顺序。
+    source_fingerprint: sha256:95ffc4abb5711c55b0f6447c66a4d0da665e34a36dbe36ee51308065878d8400
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 模型
+    source_fingerprint: sha256:76cbc02f001e1c6fe2bb35e7cbe31c7b8e4fc74046eb77257ecdcde559ad57f9
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 为理解、预测、讨论或控制现实某个方面，而进行的目标导向简化。
+    source_fingerprint: sha256:a22ec1927adbd7aa2f1fc1786961911f57841de5cc3983e111f3e629cd4a9806
+    review_status: draft
+  - path: considerations
+    translation:
+      - 明确模型排除的内容及不再有用的边界。
+      - 令人信服的解释不能证明模型预测良好。
+    source_fingerprint: sha256:b7c7694005a609457fa025c8c411e03f0f223145b81c0dbff6027ddb903d272f
+    review_status: draft
+  - path: ownership.rationale
+    translation: 大语言模型可提出表示；结构化实现和观察检验其运行用途。
+    source_fingerprint: sha256:df97891a54d338987b905addb9a10407ff18c7900ad9bb1e06381d44a2db5e40
+    review_status: draft
+  - path: priority.scope
+    translation: 依赖明确工作机制表示的设计和决策。
+    source_fingerprint: sha256:1b25031ca331493bb392492712b1d1d96d6a0f3cac334391bc2d72ccf3c76ae6
+    review_status: draft
+  - path: priority.rationale
+    translation: 假设会实质影响决策时，应明确模型，以便检查限制及预测用途。
+    source_fingerprint: sha256:967a2ebb3bc1ab5bb77d82c3e109cf2e3f0e24ff54e4f50c417aa9baf68fdece
+    review_status: draft

@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: recovery
+units:
+  - path: summary
+    translation: 故障后恢复有效运行的机制；可逆性说明影响能够被撤销到何种程度。
+    source_fingerprint: sha256:e4ab432c4c64ed8fcf9c8e4a1a86a349dfa338f51a337018aa4cc650367773b4
+    review_status: draft
+  - path: scope
+    translation: 失败、中断或部分影响需要返回有效进展路径的系统。
+    source_fingerprint: sha256:b884f312997950c124002d650bbe0c5e9d28e31935175f9ffd6870b7de7478cf
+    review_status: draft
+  - path: usage
+    translation: 依赖重复执行之前，设计重启、补偿和回滚路径。
+    source_fingerprint: sha256:e9d802a02c29a7e7e53b6259b8c0216486dbeab68138bcc6861740918d5f163e
+    review_status: draft
+  - path: distinctions
+    translation: 恢复使运行或进度重新有效；可逆性是行动属性。恢复可以成功而无需完全逆转。
+    source_fingerprint: sha256:343ed0c06523990a26055c6d3a8690a1a7c849d7ad2f9dd5411a102eedc5db3f
+    review_status: draft
+  - path: composition.pattern
+    translation: 失败 → 检测 → 回滚或补偿 → 恢复执行
+    source_fingerprint: sha256:2fd936f88ef29ccbe7ae08c641738d4518d7f9caee028e4d7fc41ce0c76fa37c
+    review_status: draft
+  - path: composition.example
+    translation: 文档部分上传后，任务记录已完成对象，再继续剩余工作而不重复上传。
+    source_fingerprint: sha256:268121468ba937dd91e7d622aaad520e87742160565747b87fcdc076064a42bf
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 可逆性
+    source_fingerprint: sha256:3b0e8a5ae780cbea229723c237176802dcf9f7e323d3cc74fca987db7ca3db08
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 在规定条件下，操作及其影响能够被撤销的程度。
+    source_fingerprint: sha256:07a77df25c2270f5ac6660e6f5aca522f3f2b72b6e95f727d4ad7a3315850c80
+    review_status: draft
+  - path: considerations
+    translation:
+      - 重试非幂等操作可能重复副作用。
+      - 补偿可以恢复业务一致性，无需撤销每个历史影响。
+    source_fingerprint: sha256:01e6e976b5c1bdd673bae20e189a4019e233d61c7cdb9932a487bc71c015941f
+    review_status: draft
+  - path: ownership.rationale
+    translation: 检查点、事务、重试控制和补偿操作实现已知恢复路径。
+    source_fingerprint: sha256:937c826f496d059d4b66dcf78ee0d03cde4f84cd49d3cc5143522451c59274f7
+    review_status: draft
+  - path: priority.scope
+    translation: 失败、中断或部分影响需要返回有效进展路径的系统。
+    source_fingerprint: sha256:a2f7bcc1b937d43b17931336d148f890c225e1fe97249999d317c05e9c81acae
+    review_status: draft
+  - path: priority.rationale
+    translation: 中断或部分影响可能使工作未完成，或让重复操作不安全时，应明确恢复机制。
+    source_fingerprint: sha256:497d4a15ebb60376baffb2067d49ac0125bf7efe29a41abae217a9a672688c46
+    review_status: draft

@@ -1,0 +1,25 @@
+title: guard-the-context-window
+summary: Put large payloads in subagent context; keep only summaries in the main context.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Put large payloads in subagent context; keep only summaries in the main context.
+when_to_use:
+  - "Apply when context is filling up: large outputs, long files, repeated reads, fan-out planning. Route bulk
+    to subagents; keep summaries in the main thread, not raw payloads."
+solves:
+  - Put large payloads in subagent context; keep only summaries in the main context.
+inputs:
+  - large context payload
+outputs:
+  - compressed summary
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-guard-the-context-window/SKILL.md
+handoffs: []
+official_description: "Apply when context is filling up: large outputs, long files, repeated reads, fan-out
+  planning. Route bulk to subagents; keep summaries in the main thread, not raw payloads."

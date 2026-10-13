@@ -1,0 +1,38 @@
+title: wayfinder
+summary: Turn a large, unclear effort that exceeds one session into a decision map.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - debugging-research
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, create a tracker decision map for work that is both too large and
+  lacks a clear route. Normally resolve one non-research ticket per session; background agents may pursue
+  research tickets concurrently. Use prototypes, grilling or necessary tasks to unblock decisions; human
+  choices require real discussion. Default to decisions that the user takes to to-spec. Source Notes may
+  explicitly override the planning default, but the map is not automatically an implementation backlog.
+when_to_use:
+  - A greenfield project or huge feature cannot yet support a complete specification.
+  - Resolve important unknowns over several sessions.
+solves:
+  - Avoid premature implementation under substantial uncertainty.
+  - Preserve a shareable decision trail during long exploration.
+inputs:
+  - Objective or broad direction
+  - issue tracker
+outputs:
+  - decision map
+  - resolved unknowns
+  - Clear route into to-spec
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/wayfinder/SKILL.md
+handoffs: []
+official_description: Plan a huge chunk of work (more than one agent session can hold) as a shared map of
+  decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is
+  clear.

@@ -1,0 +1,39 @@
+title: create-verification-skill
+summary: Build a reusable interface for verifying the real product.
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+  - verification
+  - feature-map
+  - evidence
+  - core
+mechanism: Investigate Surface, Run, Drive, Observe and Isolate. Create Launch, Doctor, Drive, Evidence,
+  Cleanup and Feature Map assets, then complete one real run.
+when_to_use:
+  - The project lacks scripted real-surface verification.
+  - The agent relies only on tests or self-reported completion.
+  - Establish durable verification infrastructure.
+solves:
+  - verification bottleneck
+  - Actual outcomes cannot be observed directly.
+  - Verification requires rediscovery every time.
+inputs:
+  - repository
+  - application surface
+  - run commands
+  - observable outcomes
+outputs:
+  - project-local verification skill
+  - feature map
+  - control workflow
+  - first proof
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/create-verification-skill/SKILL.md
+handoffs: []
+official_description: Generate a project-local verification skill that drives your app the way a user does —
+  any language, framework, or platform. Use for /create-verification-skill, "make a control skill for this
+  repo", or when a project has no scripted way to prove UI/CLI/service behavior.

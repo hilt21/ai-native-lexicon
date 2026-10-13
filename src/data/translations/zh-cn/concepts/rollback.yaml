@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: rollback
+units:
+  - path: summary
+    translation: 变更造成问题时返回先前状态。
+    source_fingerprint: sha256:9b80604f03a8d350c719d52d032bc31ad661409a30381d5bd86575d4bc211fa0
+    review_status: draft
+  - path: definition
+    translation: 回滚在恢复机制支持的情况下，将有问题的变更恢复到先前已接受状态。它不会自动撤销外部影响；不可逆操作可能需要补偿或人工处理。
+    source_fingerprint: sha256:9a2ce02659eb002655f76d720d6945797b7c8072c2f2737080633bd919052368
+    review_status: draft
+  - path: why_it_matters
+    translation: 明确的撤销路径可限制失败变更造成的损害，并说明哪些状态确实能恢复。
+    source_fingerprint: sha256:a210a8f5ca4e087108f8927b6bf76ccdac2fa96ddf9322028fe7ae43d219a8fc
+    review_status: draft
+  - path: when_to_use
+    translation: 部署检查失败后恢复先前配置时使用。
+    source_fingerprint: sha256:3d1f472254910da6c2bdccec4a6564c155261e670865c1ed158affb8769e3917
+    review_status: draft
+  - path: anti_pattern
+    translation: 假定恢复本地文件也会撤销已经发送的外部消息或事务。
+    source_fingerprint: sha256:19c93679c916e6b1e53991cf942b3cdf1682037ab93da789bd889e96813f4ab5
+    review_status: draft

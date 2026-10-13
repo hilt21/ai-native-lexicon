@@ -1,0 +1,890 @@
+{
+  "schema_version": "1.0.0",
+  "base_commit": "103a02ff7c5a0a5b70189f0fc837815589c207c0",
+  "original_edition": "preserved-in-live-canonical-collection",
+  "target_edition": "English canonical candidate",
+  "records": [
+    {
+      "map_id": "mattpocock",
+      "path": "map.yaml",
+      "original_sha256": "889a608d9dd54cc1feab7b9367edc151da6d3c54bcdbbf90b80468a69c3ecbeb",
+      "english_sha256": "304477d42d67a11f841ec39c4a9c7949ffc9277b9c62cf46876a98506879e9f0",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "relations.yaml",
+      "original_sha256": "22593bd1e615503083c6ae5d1c007d893ade41712e08d989ea699e72ca22c6ab",
+      "english_sha256": "abb11909d0e7d929e257fbf990ac53d0daaf3714e25b3eda38d99d6922900c97",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/ask-matt.yaml",
+      "original_sha256": "237274959938d1b404c22097a3686f2600f674f19496eab24efb640ac1feb8c9",
+      "english_sha256": "03addb94659a52031c5ff83593bb6c9e8020c016ddb0042a79f5343d25165220",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/code-review.yaml",
+      "original_sha256": "6ba74100d640850fd9a7197bba0c09a05f3170388b1e675a7cf8d47158045428",
+      "english_sha256": "9fea76ffc080e7902ddffbe21569c4ff2585120585494f816372c85f11ccf260",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/codebase-design.yaml",
+      "original_sha256": "3577ae800a5b552cd358016a29c1e58c5c509e7c316e783bef45ecebb91275b3",
+      "english_sha256": "442e444eb80b996e32f2f0560df14a7fef56ef60cf56596d80b78976fb6baf90",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/diagnosing-bugs.yaml",
+      "original_sha256": "e6cc2eaa269d65c461bbb2aa5ff309f1dab8c6a432bdd11baf71a8213fa25799",
+      "english_sha256": "783dc64793c3fc26eed676297d548cef138eedaa64e39e6ef22cfe5a536898d1",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/domain-modeling.yaml",
+      "original_sha256": "a171ca47c0b04b060803d626cde04a082ed065285b77ff1a2d1170457896c435",
+      "english_sha256": "8bf5370b5b7ab25369a7efcd1cf2c8ef559084aa7f1d6db0909092f2dbe7651a",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/git-guardrails-claude-code.yaml",
+      "original_sha256": "351cab00eaad09713ed4c094da40082d32ea53cd9ade0f02321995834a689b34",
+      "english_sha256": "805cb407a6eef88741d828a4f0c8c65da05c293e68d82333dcd32b304c661c83",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/grill-me.yaml",
+      "original_sha256": "c2a01ecae41e9064cdc90032ce82e219c1cce86ab0c5f7155a4804f5b651b309",
+      "english_sha256": "7ba483685a94d9e9321af79d9ce54054fa34e401e5b8855a0cb68c8a583e7fde",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/grill-with-docs.yaml",
+      "original_sha256": "bebaecab958c11642f6ce283365492c14d6bad4a8b34190cb28cfa465e5943c3",
+      "english_sha256": "30ade59e4905a864f5431eba5cdaf86884c254b697c27c0f3014e70e04db9fe2",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/grilling.yaml",
+      "original_sha256": "4b0c77cba82a3375c37bc408061d2ad052a92c3d4474ee8f023db358c9a2090a",
+      "english_sha256": "33b73272dd8fab5f1a2f9f9f016cb1132b26004adaa96362eea1bdd4b73bad4d",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/handoff.yaml",
+      "original_sha256": "ed7aa0f79cb925ba38fd1b56c57f49b082612512ef1e229afe320ac0bf2c5677",
+      "english_sha256": "610d1727198a26c5474de9f2997c4aa1aa73f9f1da91f569d85bda216d5d13d8",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/implement-spec.yaml",
+      "original_sha256": "3e4b2b79a78d9488c797203273cb0c5dccbbb133c9d18bc28f18362e378ea443",
+      "english_sha256": "4e5252ba22eee7552857fc72c4cced8785b55ad195869dd6fe1d20d956b19b88",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/implement.yaml",
+      "original_sha256": "7ab07a429d6d0a66a9709595542ad885b0ea3333ca59b6dd1f87fc9e0857428c",
+      "english_sha256": "5f388f7a10a46c48ae1006bdb6f308b729c33051147980fa2e29f3c705337fea",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/improve-codebase-architecture.yaml",
+      "original_sha256": "bb4671120bf98d127f7daff4ec7f5946670016edc76cb10a659e9b6fb4db669a",
+      "english_sha256": "5528b97db41ac3dd1058c953c9ed029cb4ac0458e243bcf7e28b32412ccd053b",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/migrate-to-shoehorn.yaml",
+      "original_sha256": "bcd97251525e2fc1bdfc1ed1ace5dd2cfd0607bdda9fa3717c11c229ccb6fffa",
+      "english_sha256": "bf2fbe9b20ab2a4bd6ee3e2cc41c21a01f5a7f85b82ac83ea2ceb9c3e839ea8f",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/pr.yaml",
+      "original_sha256": "8fcde0924e90fef3b9cb552706beb28ead21f759ad1ebff06079bb37fd58f021",
+      "english_sha256": "3db193a9c3c2ea9b30113f21276179bda14f8a5b2809d5490fefdf0129fd305b",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/prototype.yaml",
+      "original_sha256": "fed42a2340bbda2ba24c15136de22b5e6115e7153363df6f1fe61291403775f2",
+      "english_sha256": "f6c0d821ea06138b6c3e585de804d63ae97ca62369a7501bc5e86d7c86c76925",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/research.yaml",
+      "original_sha256": "baddb95447b4c0a1ecde759047fb3a636eda63fd02fa736a8fdc98572520ed9e",
+      "english_sha256": "84c7c031424397b59f3bd65d15a7ba3dda72f82aeb7f2fffcb795f7442b886c7",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/retro.yaml",
+      "original_sha256": "f02bd3a2711e64688833cf69adeee0f0977cc86430d86c6fc7e85a16ca561424",
+      "english_sha256": "4bc5e664281a9b574fa880ffa7c32d067ec7c717537c6f90febc0b5f1e96a27c",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/scaffold-exercises.yaml",
+      "original_sha256": "c1071cc8c6fc3145aa6f6b7537a4c2debae1e5f932605f1bfae76f9807603ed1",
+      "english_sha256": "85bb8d0b29675be97dd2e31467916a8af490da4c886ad14c743d25143acf641a",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/setup-matt-pocock-skills.yaml",
+      "original_sha256": "08e6e03ff85289c0e0bd61efa7286eeb7caec4ce48edc3ad2f8300cb0c24c7ae",
+      "english_sha256": "dfb97075060ebbc208c0d8946f31e3bd163122302181e9882df72fe842b85ca9",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/setup-pre-commit.yaml",
+      "original_sha256": "8394791d3947d2b9cb7fd597c55d73d73825ee54c08ad983c94b148d78a0d707",
+      "english_sha256": "1f8a21f2e958d9a4317820dd680df85a1cef8c87a11e2cf8ee0fe69aa11b164f",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/tdd.yaml",
+      "original_sha256": "397ecfaa71b4665a277b7ab20c64cae883b2234c08ddf15b89f67477324ba634",
+      "english_sha256": "cb6d3489df7d6837f001841ca0382e259a4b737286e50bc2f0ca9de03557dbb8",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/teach.yaml",
+      "original_sha256": "be6348ae4eaff2fc6cfff0ff15f55e990213045d010d63b683caeffa86d7298f",
+      "english_sha256": "2f7460bdd807e4452c043f7b2f3a6911ab817120e31fa7847c43b69f4ee060e3",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/to-questionnaire.yaml",
+      "original_sha256": "b13f1887d07e1a553484cf812fc763c56cf221852fa6cc50e2a87d26a91e0686",
+      "english_sha256": "3f906dc16affbc965aa8be1d6fce464f46e6f11e421c7e699775d8969e8b1af2",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/to-spec.yaml",
+      "original_sha256": "b487c8cd47ffb56317b7c2d875a8f8acc45373ff45aba0a650837126dfdeb4b2",
+      "english_sha256": "8dcdede9522bf71d3b588aef33fe713f5cbb493738dafb3f251de7daa094f1cf",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/to-tickets.yaml",
+      "original_sha256": "bf24261b83cba417c938704858d18bcddf079f48927593d0710e010fc251f4b2",
+      "english_sha256": "8fe7364955364f65f8df07e91dce96e8d320eb33571a601d95501d93c50e6900",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/triage.yaml",
+      "original_sha256": "4083acec4ed2684fc09b91bbe189d6c9b670dd2eef7744e118d229f0489f4854",
+      "english_sha256": "c0a6887eafda4b2d8cc49a82488399c0745814fbfec0b2c663bd3f2816987670",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/wait-what.yaml",
+      "original_sha256": "ff34148edbb26d424dd1203411b2640183cc0d4c335c697a5cd53024bb1f477c",
+      "english_sha256": "4d3f3894a15470cf0b507b5984754b89ef05c8e34b4a9e783a520d6a587e9b28",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/wayfinder.yaml",
+      "original_sha256": "9cb4e4810ff9b06f5aeb34341315aebbb5fdc9e63259bb23e54a3ea73d43c8d5",
+      "english_sha256": "5c6c670130390f791cbd23d7c97755a2aef84e8e66a2a9501f18405e84b45a50",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/wizard.yaml",
+      "original_sha256": "987b934691a9ec2679054cb252605263160363f92d77c37acefcf6077a16e133",
+      "english_sha256": "129074a8b962df65e16aad4635e3c997b3dae4be10226d2c984c42f8e113dd40",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "nodes/writing-for-agents.yaml",
+      "original_sha256": "3d4d8ff79c5428752699e1be3bc309977465e65cb7a1ea2e8f1a43a43b1b3f1a",
+      "english_sha256": "5b0671db1ada1671a2ab39a713a03989b98d49c07c6775bac21e37ee0ebd47e1",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/build-a-feature.yaml",
+      "original_sha256": "1a9bd00306a0412847e25761a4f22b7623d4866cdaf135a224e9c2f468b3a8cb",
+      "english_sha256": "89a60444773d0c2ade5a61e3ab7114e6a9bce27d42a36041cd41eff687284211",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/choose-a-skill.yaml",
+      "original_sha256": "c5b0c9405b78f403daac7964d7931cbcaf43addfc33698c3ad382b060f9f2eab",
+      "english_sha256": "00ce3cf23a88489751c263658548a67d1eda8c3f72bd68773a3251e59ba07635",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/clarify-an-idea.yaml",
+      "original_sha256": "31cc077563a9dbfcce701adaa886bf529595690c99e4f5062e2078a791c4f2f3",
+      "english_sha256": "76aa7b2742f12a7d71d8fc8475e5d11608960d87030441e919d71385866ba056",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/fix-a-hard-bug.yaml",
+      "original_sha256": "7cf47825cae699f1af6af48cb62c06862dcc9170c3d1b48bf2ac32fea7ab5c37",
+      "english_sha256": "14fdfb6ca8306b167326069a3f89c6fd67d9f51f11935b13aea3050f21e7809c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/handoff-work.yaml",
+      "original_sha256": "2ab211799431e66827a08f2af25f7aafe754183d89c01fbfeacdfab8b145f8ec",
+      "english_sha256": "fe59effc291b95c6068f6d705f68539f64147d338d61f9844e6ea09ac4fb4dec",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/improve-codebase.yaml",
+      "original_sha256": "dd996160f06496cb2a9be31a6b9a4d7e02498abae630ae2ba64022aeb15648f5",
+      "english_sha256": "5ad80673bab4c48321f3bd62fd2bdbf2bf28b808c36e2e846feb78cd4e54ea3b",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "mattpocock",
+      "path": "journeys/plan-a-huge-effort.yaml",
+      "original_sha256": "fffa21140da176a8360bc7ba1a6c3121eb1256743731fc261e0c840bd0b53f9a",
+      "english_sha256": "2a706649b8c88b89e38759cbf5b6aba0713e35a7cdc64e178b3ed8c97458ca95",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "map.yaml",
+      "original_sha256": "c5dbfc4362a48e533e0a53a51fbcfb64ae5004eb93f69eb1c92cf3f579da9412",
+      "english_sha256": "3a84347c340a1c87b741fb391531c965801fac7dd0d2ae7959cbfa2b4ba01d47",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "relations.yaml",
+      "original_sha256": "f8aafc299497243d6985a1fad513c912542d354c87e97cca000752691d92f785",
+      "english_sha256": "fe0d14ec2aff293700e251b4f0a8fc79b31c750ddae62fb468830c0e88a05f5c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/architect.yaml",
+      "original_sha256": "4e43ac0df73d533b5d6e60bbcb94d940322d90761ac4e644c313d34fb77f8e27",
+      "english_sha256": "60ec791b7233061c0d4bb1e3949b4fefcc68643c1a9aebd3514865ab05ef4a3e",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/arena.yaml",
+      "original_sha256": "bc9670d0b2d45e929921f0e9542b47ef9d02e3e9a7258221391161ef3859c3ba",
+      "english_sha256": "4552f788a61138f421ef34ba7ee30d3c319fb597c41cce76c178c09e5e563cc3",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/authoring-a-skill.yaml",
+      "original_sha256": "203b5ee21225cc18714252ed9041d77995af4dd9cc01806880c76d055ed5e7f3",
+      "english_sha256": "f7b32140719e6a7b53e5acf36ff4168a9aaa259fcdb9d19896914c0a32b74dd2",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/automate-me.yaml",
+      "original_sha256": "ccd6909434ef931f988d82ab716d41152608956e0e5776ec32867e02ee2decda",
+      "english_sha256": "25c396a52255722b420de1fdcdefbbde6a6d3e7bb0e2948635686d758b20e4f6",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/autonomous-run.yaml",
+      "original_sha256": "f23e8e2f468bd090080797fb5563fff00415b378f54ad01f7b7293db4684cd40",
+      "english_sha256": "ef4be08ccc6a0762f2713971ac88e8d54b680dc4c568b5bd3387b3a3c4188e4c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/autopilot-full.yaml",
+      "original_sha256": "72f56ad37d310fa93f9b1b9d2ed31982d555d3b87790934351e994a5cf96253c",
+      "english_sha256": "54dd95ae42bb08c333e1c819a9bf63ca592efe83298eef44c16b38a233ade473",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/autopilot-stack.yaml",
+      "original_sha256": "e3c77ebfe97ed3e45d93453ed871641f4972229441cc9c20b7ad95639bde51a6",
+      "english_sha256": "31bbfa5a4fe235194caace98c7e1418aab1f7fac4b3bfb434ed50254e1885f7d",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/babysit.yaml",
+      "original_sha256": "09383f26809da0b0da556a7f98a9a85c182b91437d32dbfcb7d8d0401958ca09",
+      "english_sha256": "8f80520feae1cf49a0297c33af0c5674959252e54ebe0f7978db99c4f5ca21d9",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/benchmark-checklist.yaml",
+      "original_sha256": "621a22161429d6acbed2064e9337f71e88f851def0e0eedfee324a3adb834c7d",
+      "english_sha256": "ecfb224ffea99248184216921cc7482b4496db023e1d8bf2b7cd6688bef96aa2",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/blast-radius.yaml",
+      "original_sha256": "461ccc83ee91504d81b19dff1c22a43b701742c7e7f2e4db99d96fd471813004",
+      "english_sha256": "afa68aea38c1c913b2183330495123f14b0e28f3a9783b180aa772035243c27e",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/bro.yaml",
+      "original_sha256": "6939db59c0189df539e88a5e9f09cbd72432d88dca98366945267bda425e4315",
+      "english_sha256": "632a003bdd7fe1580d890af35657bc16d46d04ab23262a77a42b953e3c061182",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/bug-fix.yaml",
+      "original_sha256": "6794d3741a2145170cd9f12b96a2a3d3e3e7d54fd91f0c3283aad4e82c1ad84c",
+      "english_sha256": "3f635da96206883f1ad58796363a586ce3d08e5bb8fe62156ffad875a775ede7",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/correct.yaml",
+      "original_sha256": "6f674a3509186d39a3b6d74c8ce66718e06929024a1f66efbf8b1d095d4318e8",
+      "english_sha256": "0522f86e80c9eae3453ba38c87ebfb6fa49240c3e73fab350deb16b3557dbd98",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/create-verification-skill.yaml",
+      "original_sha256": "f1e2f2a4c825b1b7a20daf51c56fb7891e7f7ffc0a121284b02e9dc06f6f4f16",
+      "english_sha256": "9d4d51e13c9af197dfbc6da0b9cc43c97f11533f30e7732b7887185bf4c0db2b",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/eval.yaml",
+      "original_sha256": "5234483903a5842aaf82b53a9da4021e2c53bd7ab5c3e01ec50efe41f439d828",
+      "english_sha256": "528b94ab0466ae985768b52354de3e408f1bc644f1ccd349253632518fd10512",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/feature.yaml",
+      "original_sha256": "d3dee03ce789c9cb4a8415ad8c4fac0511fe50fb53c93c9750348f58e4bac79a",
+      "english_sha256": "f20e04aa89c6a31838f8477510c3d5b729b92af07c97b0df4c5344b688dfdc75",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/figure-it-out.yaml",
+      "original_sha256": "2dd9e2365b0965d15cedca8f26ab92994f3276aa92db95eb700b61103e13f997",
+      "english_sha256": "2b7d3519bdbe2561ad331b4e71b524e537ba7433a2dabff4f884a2b43e4437c4",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/hillclimb.yaml",
+      "original_sha256": "aba5d1b96b1c23e783567ae350d7e933b1821c31b7706a0e48d45a8ce9a97368",
+      "english_sha256": "fed9f69e4ab043b0f7b176cc9d56ee5dd6be046f8d57ad950ce905a812b3b8ab",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/how.yaml",
+      "original_sha256": "b36d371cb8aaa4c61ba55838cc130c5112f8a3742b7ed83c4fe2236fc0c75a77",
+      "english_sha256": "63c3ee2c02cec1988c5396a0c0964187a884214026f60d0a532ba1f64763c4b6",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/interrogate.yaml",
+      "original_sha256": "3537fc0ad3bd5459c5c99edb0cf43343825480e8c21b61a0286b60f970f60b30",
+      "english_sha256": "c9805d92717c90c367abd129fdf268293eb46213a58b11e3fb76904635a531bd",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/investigation.yaml",
+      "original_sha256": "d4a7a832b5ea40895d6e7ebdcb5f98a68c8cc6ff5691dd6793fbb574b9cee501",
+      "english_sha256": "c34f334f2a23063ed21e0d02a147dfa2bb2b30fde102ac1e0f429bc1eb9dbc7b",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/maintain-verification-skill.yaml",
+      "original_sha256": "4276e07aa616b1716f7e2cf89714b3713f881ced2fc591f329da57aa40f64ffe",
+      "english_sha256": "26d05459671e887f28c27e5e868e220ba65864e367cc3187ab1fc3adf9546faf",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/make-bot-ui.yaml",
+      "original_sha256": "8da942707387ac0a3d7e5673cc97fc5240492f1c1835198af9f407d096531b5f",
+      "english_sha256": "550c9c3ac1913ccf6cce5db70fd7402019bbec6e8fc718760cf395f85b93d830",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/multi-phase-plan.yaml",
+      "original_sha256": "dd8e737fc659e430fb0121e41fdf66da9bfd883f1c307df995974c163f97eb72",
+      "english_sha256": "5e145069b6ffad5ec1ecd23eaf72a464099dd3db511578eca6564fe81b85bb8c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/no-comments.yaml",
+      "original_sha256": "277478a73d22a8ab47afc23b76684de8ce881e0985de174ea5ab98ba834c4d86",
+      "english_sha256": "05d818aba6366a25a3004c4c0ce8648bcbf9c1f6a0bad341220c1f9f7e0b688b",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/opening-a-pr.yaml",
+      "original_sha256": "477497198ac9e4590a94d4660741d1f23fb1bcdf5b3433b3e994715c93569eb3",
+      "english_sha256": "67dd23a2f74145ae116f4176bbeca7bcaaea6c485cfb3c9cb87f2b2a24020781",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/orchestrate.yaml",
+      "original_sha256": "01a7c4c637a1dd23d137429ca4a89108543e3e20bf069f207c883a276a4f4642",
+      "english_sha256": "04fa3e13ae89ad208267cf6164a09a267f57a6f48e5a65b00dd1fbaa5866a51c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/pause-safely.yaml",
+      "original_sha256": "cc10f72760f4fae8f352a71cc40c037b8a52ff22e68630cae4ce716890081f8d",
+      "english_sha256": "4e2215e525e66ec9b5cbd3a53b52b20746cdfb12efd4e63d5581bc6ce2fe49d6",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/perf-issue.yaml",
+      "original_sha256": "c42753a6f720b2c1ce6574437770aa6a497fc699d8e9a4b04f098323f76e6d56",
+      "english_sha256": "cde6e31f07542e4534b7a5249207ccb8c9bf1242fa1054960316c463ba557403",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/poteto-help.yaml",
+      "original_sha256": "02026603143b2eacd3079c53d52830258d88938edd96dd8231c84fb663f65455",
+      "english_sha256": "56a1b05e25c2f547a974e79734c5af7263957224f14e72454c0e6a39f4fb4708",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/poteto-mode.yaml",
+      "original_sha256": "9496566248c4def8c3aa564c778519e31bb9eab2f0efac39b9a81366654163d0",
+      "english_sha256": "04e2c22ad1f7d29534c5331f385b0de4d75b3ca7b2e3134b8192788d92ac1944",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-attack-the-premise.yaml",
+      "original_sha256": "7af4a02608424e3894d9c278f2c6be9e6446f2c6c471461dc954934ee93be59a",
+      "english_sha256": "f37071510f9edadd0813627092f8c68a3c49f9eda14fe8eb55fe61ec2813c771",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-boundary-discipline.yaml",
+      "original_sha256": "34f0cdfa83091ecd4c12e3c64930f637d597e2d3c0430e069ead098b4853dba3",
+      "english_sha256": "6c95bfca1eb30d2ec94d10de2dc545fd77323da78e5d0a1b3a6f686f4200c5d0",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-build-the-lever.yaml",
+      "original_sha256": "db7c7d739d1c557a1c1bb12c94e36ab3795fdead552bf9e78317d4602cafe220",
+      "english_sha256": "dfb2e64cd14ab273b44484c2b3ca8985f387359987502a57e757b35a05655b05",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-encode-lessons-in-structure.yaml",
+      "original_sha256": "8b48748be7b17fc8014a86aec1f2df9b0635004ac5309c8abcd0263b28cdab96",
+      "english_sha256": "b9209d5f671897c16ec33ccbc3919a54c0c9a2a4b81111cff7ee807552f7afe4",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-exhaust-the-design-space.yaml",
+      "original_sha256": "49aff137c90587dc9e12471b6701b00e13afab606acf27a4e8d1593d977a2eb6",
+      "english_sha256": "c2da5ebf76bdb0d2acb50062ccf78bd592b8e9104552b1657d1f8bb186ccc4d4",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-experience-first.yaml",
+      "original_sha256": "0c82232af55d75f5e9de9c001c4bf56bf86b6ccb95d780a4bbffa85ea66351a8",
+      "english_sha256": "4131f550544cdc47f0063ed7b77c3965a3ddc9a6a9689565884c5a8680fc2892",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-explain-the-number.yaml",
+      "original_sha256": "3bcdad5165fb4da6bb3453cfe2caba912b6c227473d99f4fa68a304e31317353",
+      "english_sha256": "c3d551a3730544d6b699a958029d722c7f98fc0ff0fa4d0891ff1a7e994d9242",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-fix-root-causes.yaml",
+      "original_sha256": "fa4f92ee4f2b893716dbdddcb31cbcba597c081989202be72570257d13bf10c1",
+      "english_sha256": "0d5f9b968f60ba13afb94c6392f1faf20297dfae950eaeaba2cad092a78455f4",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-foundational-thinking.yaml",
+      "original_sha256": "65742b8917abce7768728963645ed20aea82c4bb0d831a4138d3fc139a258128",
+      "english_sha256": "01a764b1b3b6a84af8fb53e01be41614febe5a973541ce6e0d2f174a7a0cf720",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-guard-the-context-window.yaml",
+      "original_sha256": "3977b929cabfb524b43b2c26c6f0119150224f643363d3f8353b51121a1ce4a2",
+      "english_sha256": "de8a6c562026a466940a893209fe39dabf71a9841cb87b9a85e8ad41d0ec739c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-laziness-protocol.yaml",
+      "original_sha256": "31da8394782e2b5a662221f9dc77a4489f60efb16947e382481cbc4ebf9916d7",
+      "english_sha256": "100abe7a6fd4125357f10f96dc077c607ad90c67817354baab809edffb243365",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-make-operations-idempotent.yaml",
+      "original_sha256": "ec1f01d03145217c00640d907d59cecf7628de36a81b5025efdc092cb98f3dcd",
+      "english_sha256": "a50349191dba4147d29715ef9b71cbdaaad308d621f7496f4f15acadf5d6c8e2",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-migrate-callers-then-delete-legacy-apis.yaml",
+      "original_sha256": "0247c8d7febef42d5d662effb499ad915089612e63f8817b94f877c5f3d98400",
+      "english_sha256": "c067ea043c30305b032285776ec2c45b27fd26351e170c1434d192336e472643",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-minimize-reader-load.yaml",
+      "original_sha256": "412bed970399a08993cc33694d0e693933cbd9331b9c1e20d3d5f6ac808bb027",
+      "english_sha256": "0d079c08c4a127f566b749feddd4fafd9c782810b5d8d9795211b92ff65b55aa",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-model-the-domain.yaml",
+      "original_sha256": "b30996a828a442d2537c5f407eb5051459c717df6a4fcac147eb247c21530b4a",
+      "english_sha256": "ad22f9a631497bad7eeb1fa78c62fb15563cd999621f630653f619aead0b1fd6",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-never-block-on-the-human.yaml",
+      "original_sha256": "8ac2a9e1d01ffc5480324c98ba78ee76ba762ea407e264300a1dfbbba0410433",
+      "english_sha256": "5f4afdd2e3764491b0ca2011f4b6728502fd979676c15919b4a402a11d01deac",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-outcome-oriented-execution.yaml",
+      "original_sha256": "109a6e8461b5696d552724fe5e6018a4844c89811999ae19bed06b7368ca9a59",
+      "english_sha256": "907bba49a2790db870e856ce6906b2446a204cf073c8385b56c20ef2075d2bb4",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-prove-it-works.yaml",
+      "original_sha256": "cdbb18426856adfa355a1029e3e2f196e1f0ef672f40a19c0820d4b4a6f1cbf1",
+      "english_sha256": "098d4cf2fd6b27b17c66887426822d93d9f5fc632be7f69978ac622dc3942fb2",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-redesign-from-first-principles.yaml",
+      "original_sha256": "b160896fbc9db71ab76a36f49a8cc3a9893c7d779c0eae51bbb40073771f6b6d",
+      "english_sha256": "9b549e59f1bf538bb8ab66d6f30f41fa9841e4973f42d309dfefe3d65ca926c1",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-separate-before-serializing-shared-state.yaml",
+      "original_sha256": "379ebd1d59a5476754fb3f3b3f34e18a2092c4835fc614c9023d67938fdecbb9",
+      "english_sha256": "53d38a1e54806edf3f3265b2574ecff77bf370981d2443a542f4eec25fd4303a",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-sequence-verifiable-units.yaml",
+      "original_sha256": "b0098fb253eca6e204eb3fab0dc4fa7312f4fd3b828c3997d1dcc201c134f4e4",
+      "english_sha256": "9c34b48c7ed1bfb15d422b6ed73743e6685a2fc98c1dad2aaf53fb4b3c6aa0b1",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-subtract-before-you-add.yaml",
+      "original_sha256": "af747d85f82f1859ec544e6fa01cf2c16a37f184552e094465a9abdd5a044b3c",
+      "english_sha256": "3063943ba69534342a3ed8b626c1aac94619f76761b064d8d06cdae1654feda9",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-test-behavior-not-implementation.yaml",
+      "original_sha256": "779edb5a94ec5f4e018a09854ad8c5a372fc8bde95c6f93102d6e4009acd1b38",
+      "english_sha256": "03d2fa482eaf0acfd839233308f79fab92b6e54236a8b263c74f8bddab729457",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/principle-type-system-discipline.yaml",
+      "original_sha256": "603bc4255ee431db7f55fff655d02bc61521fb4a73c4b9c0b02f698de09180d7",
+      "english_sha256": "97124da774b732542815b063d633188f1b6d2f3f36008ce3a25edbe716f6d210",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/prototype.yaml",
+      "original_sha256": "cc5775900958ad65105915ec464ea21c0770e9bfb71bc361a19c239dc8f9f5ca",
+      "english_sha256": "18f5b16cc450da79db6b6e37a081ff493db3242c22ba077d3b34f808d8daf46c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/recall.yaml",
+      "original_sha256": "e0690f2751a6f296514b5a0130c8863476a2e205e9f1ef59c70450d0be82be10",
+      "english_sha256": "13f76d3733ebbcc0338a4166c469e951b7aa6d5f60b9e895999c42009616c015",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/refactoring.yaml",
+      "original_sha256": "e75879499d14b4550dc02e08478084b693d269d0075a1002e4db581df236a7b2",
+      "english_sha256": "02412029b613f7b61ddf318fc25e02b30c8b40ced3564e3de5d1afe467382c7e",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/reflect.yaml",
+      "original_sha256": "665c5c93205e70ed43835fd30560b750e037137a0679425ed153c91d6a995db6",
+      "english_sha256": "b5a1727534364136510c3dc76cd7a8da31f4fa7435831f29003a2e9d1dbd1c6f",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/runtime-forensics.yaml",
+      "original_sha256": "01aea7727ef0abf6639074ecf93897ca32999be719d02da50b43495c9e383e18",
+      "english_sha256": "509febc529348844357d06c1b73c4b1eaaac7c5dc0cb83da4086f197d155aa74",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/session-pickup.yaml",
+      "original_sha256": "1fdc6b231ef772b04415ed8aa06d299374d21dee2bb14ddc9245b6dd9317433e",
+      "english_sha256": "d6514585fda37167fbd6dc41c332c640c3876a0db3d773121ae33fc993d3a72c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/setup-pstack.yaml",
+      "original_sha256": "9e321e183a7df8cab5f1068bf426d16e59e172b92f37b8d482ada7d1e9c387f0",
+      "english_sha256": "3f4550b2ea6c88e54ffeb82bc1610d010039524c9392adccaf47c63f165a4ab1",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/shipping.yaml",
+      "original_sha256": "08df0ce8527e9c803495fd88a12b1151021683f309f4759d39f4e1aaf1800103",
+      "english_sha256": "f78cc5635feefacc8c87e5d2213526a15845bbc603bfc7353928155db4533b29",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/show-me-your-work.yaml",
+      "original_sha256": "132d049ea371eb09d6139e6b58ea2e0e904324f3017b0cdffa1a3ffae657eb7f",
+      "english_sha256": "8405462c705118225ab32a548f1ba8dd04c0a21f409a4af39188392b211e49fd",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/swarm.yaml",
+      "original_sha256": "52cad50142fe469129a95682d88da2f187e4b2a7bfdaf2ab9fe40a502c3a8cc9",
+      "english_sha256": "febd981f5a183cd470adfe17c2fbda6e4c59ad3387f984d695d1e405097b4b2c",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/tdd.yaml",
+      "original_sha256": "e36aad75fdbcb21afb11a478a346fd67b24540e68ba445423ca73c11bd83dca1",
+      "english_sha256": "723655617a0b4171bd76490ecab8b749478d5c3ee6522c6f08543a74312b4be4",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/teach.yaml",
+      "original_sha256": "df671d31ae914f133b25eccd135ad4a105daecf26a97f1253fdccbc986368c04",
+      "english_sha256": "db79ef0db88ae173576500453d72a6405910dca56058b9c55c23beae5835b47a",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/technical-writing.yaml",
+      "original_sha256": "dea75774fc7ae96d80eeed3891e3d6e6c1700084c913e0497083267724e3aeea",
+      "english_sha256": "a411464d956552107e371db16d4208011b0f566af05103d7c6777932bd677aa5",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/trace-forensics.yaml",
+      "original_sha256": "da6ef80cd022d92a06e0cd1ba4499e91a4d4497b4bf827eed189f7dd8e8dba30",
+      "english_sha256": "15acc6e64220615c9ed8e83039188c8c6c83a40aad722ba3aab9a5a224e1386d",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/typescript-best-practices.yaml",
+      "original_sha256": "3061f4cf6bbca6c07f7d83918183a757ac835691a9e79f80a1ec76e55f1b3b45",
+      "english_sha256": "91d4c189fad54a2383d8d279f9269f5ce000f61279e0c20782f0ec740ed95cc1",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/unslop.yaml",
+      "original_sha256": "752eeede64655c007ef7d6b3ceccbfee8405c3ac0cbb3e9c6003c927f1fc5eaa",
+      "english_sha256": "abaae16454f7f0a141b75dafa8a3d72c0379906c88b48754baee030dd261b355",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/visual-parity.yaml",
+      "original_sha256": "bafcb420370cea0fc779b92b114558fb1009710e7c9d72abfbd0b55f2b2e28b1",
+      "english_sha256": "59785325a3a303cd30b07195458977e1873f4ba76d004f7c9134063c5acd9abe",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/why.yaml",
+      "original_sha256": "ebb062043e107849764a5c595521d99f4ac1e588cbd2516b2b9f63816651283c",
+      "english_sha256": "21d2555dbb2c88710cec216678439708c889fb38884da768d9eec7cc03c27ad1",
+      "review_status": "reviewed",
+      "reviewed_at": "2026-10-13"
+    },
+    {
+      "map_id": "pstack",
+      "path": "nodes/worktree-cleanup.yaml",
+      "original_sha256": "75c3f808c2b38f2c26ce6a22557d7265d089729a66f6080f8e8af262ef52a21b",
+      "english_sha256": "b5392fb1811fa431c806522d58b7cbe5a3e7b2ac714224fcf4ed68c9efe732fd",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/build-feature.yaml",
+      "original_sha256": "cdbca8556069021853e3cca7e7ba2f91da47d517024e6be43681dca3b6156e26",
+      "english_sha256": "6575790f76852652695745f6df3dce9641d113dcd7ac850513340746f915155d",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/fix-bug.yaml",
+      "original_sha256": "410677c294b945ab2fa675c46176b84a6adc5d54fd04dda16a180dcc2c19098d",
+      "english_sha256": "abd6ed0c71cbf267853483645d57e7853a783d50b606cd3a349e7f77a4109af6",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/improve-performance.yaml",
+      "original_sha256": "7dae31576beeb7e44e9b83159c6b693106fe020f52a400c01a86cd58c8a131d7",
+      "english_sha256": "b1545019661cb2866d44236c8d803bf2e7c39ec3b64e13a51eebf39546b7ecc2",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/improve-the-system.yaml",
+      "original_sha256": "2959898fd54b84a8725b40bdabc38d0ed5a5ff1679356a8d00360c97008c72d1",
+      "english_sha256": "60292bdf4acf5ca495b3bf8a528365a47c36a40d59c637c0a7b94defc8b5f8d4",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/run-program.yaml",
+      "original_sha256": "9aaa36ac3a1986bcf679c338e15f7ee43cf78294f485313fbd41161a432f474b",
+      "english_sha256": "77eb12e4ad2e03c19e32448ad271b8aee391fe70d42c5d605732d9f1767dc827",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/run-unattended.yaml",
+      "original_sha256": "5199534147229454f9128eb378df9b97b734835e6f41c343e6724e6dea50c651",
+      "english_sha256": "0c3923410193588403f0af58fb24eb2d1f8038feb7d19b4695ce3722e5f2b942",
+      "review_status": "draft"
+    },
+    {
+      "map_id": "pstack",
+      "path": "journeys/understand-system.yaml",
+      "original_sha256": "021aa0481af4993e1ab4fe5231d3cb6f85ec939988d902c0a35afe4706a4e8e0",
+      "english_sha256": "e093e6a99ee67b32415d939055fc789e156e0fac85909d1c557d073ba8a66406",
+      "review_status": "draft"
+    }
+  ]
+}

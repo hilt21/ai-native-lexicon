@@ -1,0 +1,38 @@
+title: Understand the system first
+summary: "Understand the system first: from task entry to inspectable output."
+order: 0
+when_to_use:
+  - How does X work?
+  - Why is this designed this way?
+  - Catch me up on X.
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - evidence-backed mental model / explanation
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the understanding entry
+        why: Use pstack-help to choose an entry, poteto-mode for routing and investigation for read-only
+          evidence-backed explanations or recommendations.
+        nodes:
+          - poteto-help
+          - poteto-mode
+          - investigation
+      - title: Understand behavior
+        why: Build a mental model of how the system works.
+        nodes:
+          - how
+      - title: Find design rationale
+        why: Explain the system's current form with evidence.
+        nodes:
+          - why
+        optional: true
+        when: Design motivation needs investigation.
+      - title: Organize the explanation
+        why: Organize how and why findings into an explanation people can understand.
+        nodes:
+          - teach
+        optional: true
+        when: Explain the result to another person.

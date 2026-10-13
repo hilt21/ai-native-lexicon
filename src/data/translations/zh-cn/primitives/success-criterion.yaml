@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: success-criterion
+units:
+  - path: summary
+    translation: 用于判断预期结果是否达成的可观察条件。
+    source_fingerprint: sha256:47e031b19735d9ffa2728655648ea9faa6d26c5342ba1c7c24a0298ea09d112f
+    review_status: draft
+  - path: scope
+    translation: 需要有依据的完成或验收决策的系统和任务。
+    source_fingerprint: sha256:223dca665c91ed6cb63d52f42f03749fc8dee63774e0afa71e59db72ff95556f
+    review_status: draft
+  - path: usage
+    translation: 工作开始之前，将预期结果转化为证据要求。
+    source_fingerprint: sha256:ed0617ca769f633e368321913771b64f8479e3efe2d7bbf88c979bc5fd2f5e05
+    review_status: draft
+  - path: distinctions
+    translation: 目标是期望结果；标准说明如何判断目标达成。
+    source_fingerprint: sha256:83b83a9ab12acc5c270d0effe3f0687c38e4c012574f2c095152fc6db6b56e8c
+    review_status: draft
+  - path: composition.pattern
+    translation: 目标 → 成功标准 → 证据 → 判定
+    source_fingerprint: sha256:e24aa8152e4a9b401a27203c85129097d7b31e0191eb710fdeba9dd913ae0f62
+    review_status: draft
+  - path: composition.example
+    translation: 编码智能体只有在所需行为正常且约定回归检查通过后，才算完成。
+    source_fingerprint: sha256:0d4ff859732804340f4d12555db38538c03fbd46040ea5b974f88cf6e2d7111f
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 成功标准
+    source_fingerprint: sha256:bc91bad869595a2f006f870af40b1c5dfcfcc3c299953f09193e924f77ee33ab
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 用于判断预期结果是否达成的可观察条件。
+    source_fingerprint: sha256:871d90990a0eb59ec05829c75a1bfd78c7f011240155614e4f700f868a777932
+    review_status: draft
+  - path: considerations
+    translation:
+      - 代理指标可能改善，而预期结果恶化。
+      - 明确谁负责解决含糊或主观验收问题。
+    source_fingerprint: sha256:cf98a22b1aae7254e4f5796011f179e437949093a37cd448e412df6438ecee72
+    review_status: draft
+  - path: ownership.rationale
+    translation: 人确认验收预期；软件检查客观条件；大语言模型可协助范围受限的语义评估。
+    source_fingerprint: sha256:22e443c75017542b8f0fe68d3cd56d0616c800a129b465be5b1c118f2ea7f39d
+    review_status: draft
+  - path: priority.scope
+    translation: 需要有依据的完成或验收决策的系统和任务。
+    source_fingerprint: sha256:b8914e401a03724adac443d10638c17c258c017d15d066c8e085936d70da281d
+    review_status: draft
+  - path: priority.rationale
+    translation: 完成主张需要明确标准，以避免活动、自信和代理指标替代预期结果。
+    source_fingerprint: sha256:edf62d6c13e34016fd4afccacd3718eaf217f998aea08c750d80a1e114b0670d
+    review_status: draft
