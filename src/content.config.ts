@@ -1,5 +1,6 @@
 import { translationsLoader } from './lib/translations-loader.mjs';
 import { translationInputSchema } from './domain/content/translation-input.mjs';
+import { skillMapTranslationInputSchema } from './domain/content/skill-map-translations.mjs';
 import { defineCollection } from 'astro:content';
 import { docsLoader } from '@astrojs/starlight/loaders';
 import { docsSchema } from '@astrojs/starlight/schema';
@@ -32,6 +33,7 @@ const speakingCards = defineCollection({
 
 const skillMaps = defineCollection({ loader: skillMapLoader(), schema: skillMapSchema });
 const translations = defineCollection({ loader: translationsLoader(), schema: translationInputSchema });
-export const collections = { concepts, primitives, speakingCards, skillMaps, translations, docs };
+const skillMapTranslations = defineCollection({ loader: translationsLoader(undefined, 'skillMapTranslations'), schema: skillMapTranslationInputSchema });
+export const collections = { concepts, primitives, speakingCards, skillMaps, translations, skillMapTranslations, docs };
 
 export type Category = (typeof categories)[number];

@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: interrogate
+provenance:
+  original_sha256: 769d105b401efff508f245e5f7f9d5e30dee2b046ee91efd70a53d1a4a8c0bdf
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: interrogate
+    language: en
+    source_fingerprint: sha256:837e799c2a694163560652eda8a8d90d4f4ada225d00a37b50ff310c9b48190a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 对代码或设计做多模型 adversarial review。
+    language: zh-Hans
+    source_fingerprint: sha256:c074e520ae511546c8285458f7eac3ffefdb6464c462355271e7fac1383db0e7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 审查
+    language: zh-CN
+    source_fingerprint: sha256:43e23e738422e049f771ddf21d08e18103aadd19af26e0a892fd14d384a546de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 对抗式
+    language: zh-CN
+    source_fingerprint: sha256:5451c7e20463b409cf15c1eda54981356295423e6b201ddda63143e5cfb173de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 多模型
+    language: zh-CN
+    source_fingerprint: sha256:2dacedb54cb8ce0d279265f343b07ed88da07fa6407f3244c0cbc3681e758df5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 意图
+    language: zh-CN
+    source_fingerprint: sha256:ac5f4bb889b7c0d89e474c7a1a0dfcf9250436423bf6def34be3f288fa2bad66
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 差异或设计
+    language: zh-CN
+    source_fingerprint: sha256:ab55ad0e0ebc5c0e3c29b748d2653e2c17422d5f832223daea569e72a35e9b4f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 审查上下文
+    language: zh-CN
+    source_fingerprint: sha256:e3e7d39009020f50d578c09c4de61d1fc810cc9c268c4979a8decba8700f0f04
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 对抗式审查发现
+    language: zh-CN
+    source_fingerprint: sha256:07d2a306f8406502f2fb3082d9c1ac3e73c9ff4fa7dc8aa765cfff8d7865deda
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 分诊结论
+    language: zh-CN
+    source_fingerprint: sha256:9117ec71849e43e73f142e34fd854426a0ec50fa168b0d36444ac9f0a6b0e684
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 待办事项
+    language: zh-CN
+    source_fingerprint: sha256:929d2579911bb972d549a1b41df3c3cdeeaead748b52003d6e86ad94c7864b99
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：fix round
+    language: zh-Hans
+    source_fingerprint: sha256:0a0e1fc74c9dc16263ddad79f56199faa1afa606b74a841b1967013b97078c19
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Use for "interrogate", "adversarial review", "multi-model review", "challenge this", "stress test this code", "find blind spots", or "tear this apart". Multiple LLM reviewers challenge changes from independent angles.
+    language: en
+    source_fingerprint: sha256:cf15d1bd7e8a0a93653db6d3d5034809da64febb0d5921867bc1bad0768de9d3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 让不同模型从独立角度攻击同一 diff/design，lead reviewer 将问题分类为 Act on / Consider / Noted / Dismissed。
+    language: zh-Hans
+    source_fingerprint: sha256:aa45e8fdcaac01be7f8f1b16b86e5e9d4d99ec96a3ea3085854fc2e7dca179c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 复杂 diff
+    language: zh-Hans
+    source_fingerprint: sha256:5d5b08a37236ccb4d110997bcadbfb8260b6c17d352e29a5de3b734a83272ac2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 有争议设计
+    language: zh-Hans
+    source_fingerprint: sha256:34591a72b6c7affe316c38c74a3c5a937b746a7b6ce4c64207447297ff199ef8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 准备 shipping 前寻找盲点
+    language: zh-Hans
+    source_fingerprint: sha256:20be057f347dd0c1bd8ab6c81a6c41613c8c40340e929f44833c866a9a415cf4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低单模型 confirmation bias
+    language: zh-Hans
+    source_fingerprint: sha256:180932975c494cb7e990eab3b64ad3e481af6bb5dc77a6162080ae4074763122
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 提前暴露隐藏风险
+    language: zh-Hans
+    source_fingerprint: sha256:2f91199f70691693f556fabfe5829122b993c7fe9c95a6c41635310d77cb5cc2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

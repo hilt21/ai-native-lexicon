@@ -42,6 +42,8 @@ jobs:
         run: npm run test:l2 -- --browser
       - name: Build site
         run: npm run build
+      - name: Verify complete i18n publication
+        run: npm run verify:i18n
       - name: Verify production browser behavior
         run: npm run test:browser -- --reuse-build
       - name: Upload browser evidence
@@ -50,6 +52,7 @@ jobs:
         with:
           name: web-browser-evidence
           path: |
+            work/i18n-publication
             work/web-browser
             output/playwright/l2-10
           if-no-files-found: warn

@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-18
+units:
+  - path: title
+    translation: Power Apps 与 Dataverse
+    source_fingerprint: sha256:41a2c85ff60f55a155ecf9b9c3f708555acf10e12cd46c8ea9b194b61f446d4c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: AI 仍需要结构化数据、明确的状态和良好的人机界面。
+    source_fingerprint: sha256:132760a52fff335a2af39a3ecc8f612e39e7ef445e830de1792067e2f135cda9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 即使 AI 变得更强，你的工作中哪些部分仍需要结构化界面？
+    source_fingerprint: sha256:c09edd3e07b93ade26f7f4cb216fb6787e58e9ca2c60395e13f170a9fb877a52
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:fda5524da154d92b03cedca909d575b0d14c67300f16c7ceebb5d5efcfe48d91
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 这引出了一个非常实用的企业模式：将智能体与 Power Platform 结合。
+    source_fingerprint: sha256:55bbcc769c8d2744ee42a580ede7e2d374ec18b3a09616f2efeb11f73ab0d866
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 对话有用，但不是每项任务都应该放在聊天中。
+      - 业务流程往往需要表单、表格和状态跟踪。
+      - Power Apps 提供用户界面。
+      - Dataverse 可以提供结构化业务数据。
+      - 两者共同为 AI 构建稳定的周边环境。
+    source_fingerprint: sha256:672eff205c498112971e5d47518abe3341fa048811c9ee3549cfceb0a88554d1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设 AI 智能体在识别潜在质量问题。
+      - 员工仍需要一个地方来审查每个问题、指定负责人、改变状态并记录最终决策。
+      - Power App 可以提供这样的工作空间。
+      - AI 支持流程，结构化系统则保存业务状态。
+    source_fingerprint: sha256:21535038476a529432e61b47ab57c31f8c65cef71425dcce8bd31676e9e7c911
+    review_status: reviewed
+    reviewed_at: 2026-10-13

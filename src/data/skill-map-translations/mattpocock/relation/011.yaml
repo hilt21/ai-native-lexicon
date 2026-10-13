@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","handoff"]'
+provenance:
+  original_sha256: 37d67d8baa0edff311498589c723c5634aeca91e237b3da372eb0524cc080ad9
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 需要新 harness、新目录、交给同事或阶段中分出侧任务时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:7b4317535bd5111d4a12ae965228851e1d4bdf1e23ba908b9943381a78112ce7
+    review_status: reviewed
+    reviewed_at: 2026-10-13

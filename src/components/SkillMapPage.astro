@@ -20,8 +20,8 @@ const mapLink = (map: string, suffix = "") => canonicalMapLink(map, suffix, loca
     <slot />
     <footer class="map-provenance">
       <h2>{ui("About this map")}</h2>
-      <p lang="zh-Hans">用途、机制、关系与任务路径为编辑解读；源码链接定位具体版本。使用建议不代表自动执行或授权。</p>
-      {map.data.current_sources.map((id) => { const s = map.data.sources.find((s) => s.id === id)!; return <p><a href={`${s.repository.replace(/\/$/, '')}/tree/${s.commit}/${s.root_path}`}>{ui("Source")} {s.version ?? s.id}</a> · <span lang="zh-Hans">清单与官方描述核对于</span> {s.verified_at}</p>; })}
+      <p lang={locale}>{ui('Uses, mechanisms, relationships and task journeys are editorial interpretations. Source links identify specific versions. Recommendations do not authorize automatic execution.')}</p>
+      {map.data.current_sources.map((id) => { const s = map.data.sources.find((s) => s.id === id)!; return <p><a href={`${s.repository.replace(/\/$/, '')}/tree/${s.commit}/${s.root_path}`}>{ui("Source")} {s.version ?? s.id}</a> · <span lang={locale}>{ui('Inventory and official descriptions checked on')}</span> {s.verified_at}</p>; })}
     </footer>
   </div>
 </StarlightPage>

@@ -6,54 +6,66 @@ units:
   - path: summary
     translation: 主体可以采取的行动，以及帮助发现行动的可感知提示。
     source_fingerprint: sha256:94bdc0022f78390e48467cd165dfb8ee7c139f7845a707546ceeb782c7ebcbc9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 人或智能体通过其发现可用操作的界面。
     source_fingerprint: sha256:7772c7d2597681f5eb88b38df006397f541df7afc641b138fbdabbb1346cd95b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 使受支持操作能够被发现，并让提示符合实际行为。
     source_fingerprint: sha256:1a122a7e10eda9cd80419f039eaf31f7733176dd17078c21a745e099956ec6c1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 可供性关注可能采取的行动；指示符关注让行动能够被发现的提示。
     source_fingerprint: sha256:dedbc36934ce80648e7d9367eb945bc95eeac2301c59c27bcccf8c3a98751a5e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 能力 + 指示符 → 可发现行动
     source_fingerprint: sha256:0392b0e12688dce9cb59d2b17505799f8ff87b8daf7b192612ac372f843853c0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 可见的恢复控件指向真正可恢复的任务；工具文档则说明智能体应调用哪项恢复操作。
     source_fingerprint: sha256:a2765ddc0a7b4d485579e4e5b43322a225c880972c28f6701eb7f0e622372941
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 可供性
       - 指示符
     source_fingerprint: sha256:03fe538e866d813b4a931e5fd442f083c67e2fc15ba133ffb827c6d4d56ed3ff
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 主体与环境或界面的关系所产生的行动可能性。
       - 传达可在何处或如何采取行动的可感知提示。
     source_fingerprint: sha256:a74eab2aa2578dcd63335c828cbac5f860d414b256162ec7e33c94e978d153af
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 可见提示不能保证操作可用或已获授权。
       - 解释禁用或有条件的操作，避免诱导无法执行的尝试。
     source_fingerprint: sha256:1d5809af8bff4d73d78d7ce21231c7b2e576b0af01c893212fd9c33a5da10840
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 界面代码实现操作及其可用性；大语言模型可帮助结合上下文解释选项。
     source_fingerprint: sha256:3a911ce5d4ce50aaa039385bb005d8d5e1a0c6092193076f3db42b472dd49051
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 人或智能体通过其发现可用操作的界面。
     source_fingerprint: sha256:fb81f5985a805e3a5826d7a1c5b66ec882299873a89903e03fe9e60a0f7ef513
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 人或智能体需要发现下一步方法时，界面应明确连接行动可能性与易理解提示。
     source_fingerprint: sha256:80854ff3a01a0b301b45685a3a4bdf2cb0183f3ca00a02247761c9965ea6f754
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

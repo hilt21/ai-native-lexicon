@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement","uses","code-review"]'
+provenance:
+  original_sha256: 8247b2496f4bb8877bc11bac0de6476f64b1c4f294638dd9bf2d8dbee631c02e
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+    language: zh-Hans
+    source_fingerprint: sha256:26e79474ac97d0ab852d0ec25074ac2f3c930d2b13ed9e16c7d5a53020af5a71
+    review_status: reviewed
+    reviewed_at: 2026-10-13

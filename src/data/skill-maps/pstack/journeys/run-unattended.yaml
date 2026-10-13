@@ -1,48 +1,43 @@
-title: 我想让 Agent 自己跑
-summary: 我想让 Agent 自己跑：从任务入口到可检查的产物。
+title: Run an agent autonomously
+summary: "Run an agent autonomously: from task entry to inspectable output."
 order: 4
-when_to_use:
-- Keep going overnight
-- Drive this to completion
 inputs:
-- 明确的任务目标与相关上下文。
+  - Explicit task objective and relevant context
+source_refs: []
+status: active
+when_to_use:
+  - Keep going overnight
+  - Drive this to completion
 outputs:
-- predicate-complete result with audit trail
+  - predicate-complete result with audit trail
 variants:
-- id: standard
-  title: 推荐路径
-  steps:
-  - title: 选择自治入口
-    why: pstack 的总路由器与工作风格入口。 单一任务无人值守推进到固定 exit predicate。
-    nodes:
-    - poteto-mode
-    - autonomous-run
-  - title: 保留决策依据
-    why: 把长时间 Agent 活动压缩成可审计 decision trail。
-    nodes:
-    - show-me-your-work
-  - title: 准备 PR
-    why: 把已验证 diff 整理成可审阅 PR。
-    nodes:
-    - opening-a-pr
-  - title: 审查与发布
-    why: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
-    nodes:
-    - babysit
-    - shipping
-    optional: true
-    when: 需要推进发布且已获得相应授权时。
-text_languages:
-  inputs.0: zh-Hans
-  summary: zh-Hans
-  title: zh-Hans
-  variants.0.steps.0.title: zh-Hans
-  variants.0.steps.0.why: zh-Hans
-  variants.0.steps.1.title: zh-Hans
-  variants.0.steps.1.why: zh-Hans
-  variants.0.steps.2.title: zh-Hans
-  variants.0.steps.2.why: zh-Hans
-  variants.0.steps.3.title: zh-Hans
-  variants.0.steps.3.when: zh-Hans
-  variants.0.steps.3.why: zh-Hans
-  variants.0.title: zh-Hans
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the autonomous entry
+        why: Enter through pstack's main router and progress one unattended task to a fixed exit predicate.
+        nodes:
+          - poteto-mode
+          - autonomous-run
+        optional: false
+        outputs: []
+      - title: Retain decision evidence
+        why: Condense long agent activity into an auditable decision trail.
+        nodes:
+          - show-me-your-work
+        optional: false
+        outputs: []
+      - title: Prepare the PR
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr
+        optional: false
+        outputs: []
+      - title: Review and ship
+        why: Progress the open PR/stack to merge-ready without final landing, then use independent verifiers to decide what may land.
+        nodes:
+          - babysit
+          - shipping
+        optional: true
+        when: Delivery needs progression and the required authorization exists.
+        outputs: []

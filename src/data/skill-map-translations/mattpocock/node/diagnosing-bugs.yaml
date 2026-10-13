@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: diagnosing-bugs
+provenance:
+  original_sha256: 0dc99e0c3cfb7186560e68245c2ad3e0d0c7fb54e9cce968cd353a7025e64292
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: diagnosing-bugs
+    language: en
+    source_fingerprint: sha256:6d4aa5824d2edd432f8cefb392e452291b8725a3250e677e76e23b9a4f07590a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用能捕获真实症状的短反馈寻找根因并修复；正确 seam 上建立回归保护，缺少 seam 时记录发现。
+    language: zh-Hans
+    source_fingerprint: sha256:2189d4ca86f13409b7a8df7af57570aa754735fb664e3cfdf5b58f4b60d94aa9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:eef7b6599d36590417c4902f51d71e296fd4ef21b493ddd3b0f1fc94f7b5a65e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:b35a51d52795f0add8df9e6f2cc15e03c87e61cfda79947f56207f3262165e3e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:8241acac47d4d9b7b74c927ae8bba51beaa052b8355d3a73ed9c2f61fd46b88c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 问题症状
+    language: zh-CN
+    source_fingerprint: sha256:327cf6ea8d09d0fe4a49c8367377186d6c9868cc26ba82b11500eabf54dfe466
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 可运行系统
+    language: zh-Hans
+    source_fingerprint: sha256:f117d85fcc87e5391e8e0d64e779d7efe88304cd2a979f6c0d80b7aa516bab54
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 可重复反馈或固定高复现率的 repro
+    language: zh-Hans
+    source_fingerprint: sha256:0edbb676f4504b9b8ccf4125d7d4feff448aba210217d583311b4349d7a9cad7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 根因证据与修复
+    language: zh-Hans
+    source_fingerprint: sha256:6c2117c35204777f21695696f1135872966e1eca5b58c538c33772fd1f071350
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 正确 seam 上的回归测试，或明确记录缺失 seam
+    language: zh-Hans
+    source_fingerprint: sha256:b2f733a53ba63072e0398c67db3800010c83985da2fe7fcf5e12822dc5968e0e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
+    language: en
+    source_fingerprint: sha256:cc21fa4ddab35602cc4c7864bc8bbf5502ec9540c7a7d5b5e49c074266e04fe6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先实际运行一个能捕获此 bug 精确症状的快速反馈命令并看到失败；flake 先提高并固定复现率。再逐项缩小 repro、列出可证伪假设并 instrument。只有存在能表达真实调用模式的正确 seam 时，才先写失败回归测试、修复并看其通过；否则记录缺少 seam 这一发现。最后重跑原始场景、清理 debug instrumentation 并记录根因。没有反馈入口时先说明尝试与访问缺口，不靠猜测继续。
+    language: zh-Hans
+    source_fingerprint: sha256:f6256cb519dc949d7d44227fca0c42a25ee24fa2aafd984b16572771639b7dc4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: bug 不适合凭代码阅读直接判断。
+    language: zh-Hans
+    source_fingerprint: sha256:d3bf0190c7d7f312d920900b6af8aafc93fa2c50884146cc4458b595dd8efa42
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 问题是间歇性、回归性或性能相关。
+    language: zh-Hans
+    source_fingerprint: sha256:34b2aaecfab491df4e59b00fef4516c23365a0791655f69acf9827d3308f9fe5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 把根因判断建立在能观察真实症状的反馈上。
+    language: zh-Hans
+    source_fingerprint: sha256:d51dfd8bca820b43ecf861a692a1ca0f22fb342859b91c6578c17bf2596d8222
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 在存在正确 seam 时锁定修复，否则揭示架构可测试性缺口。
+    language: zh-Hans
+    source_fingerprint: sha256:a66de623d82ecfa98c7e805fe6fee9de7b9cab9743a58ed0f1e67a5f32f22433
+    review_status: reviewed
+    reviewed_at: 2026-10-13

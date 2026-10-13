@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: wait-what
+provenance:
+  original_sha256: add29e2a7b5c79d1c490a5d48bbc6010a3013ffee6bd961a36146b4a2b7b2d4a
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: wait-what
+    language: en
+    source_fingerprint: sha256:4df480881eb46d084ae54ab285ff3133a245033d9f41a778dc5c5e1978b61856
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 当上一条信息没有被理解时，用缺失上下文和共享词汇重新解释。
+    language: zh-Hans
+    source_fingerprint: sha256:baeb4cb38726ec6bea86e8c4fdb6eeb43ec9044d4ac0220fc484e027e5d3cc5a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 生产力
+    language: zh-CN
+    source_fingerprint: sha256:79729bfde1311e4948562aa2d367da774580a9c24a9a3ae67e51a7b399456268
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:9df3f35bb0429458744ded4858d1fbf8b83962f397b11129c87af80edbd45c9c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:73fb88f49de845d3af67db9e456b61d68b53bf9de2cf7b4de525cfa0ab93169c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 上一条消息
+    language: zh-Hans
+    source_fingerprint: sha256:d915db310d9ec1af4a7cb5b085aa0ffd1eec78bc3bfdc877b7e3d0a8aaa524e9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 项目 glossary（如存在）
+    language: zh-Hans
+    source_fingerprint: sha256:2097a41e4ca2a765f7012079b7d25a3fc259f3bb43a734b2e16786dd154d74cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 重新表述的解释
+    language: zh-Hans
+    source_fingerprint: sha256:2d1aecb5aa040251ce906cd9952f14d62577454c6693c9f31f4c3df6e6ff9c29
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Stop. That last message did not land: re-pitch it."
+    language: en
+    source_fingerprint: sha256:fdec1d874c9129b69e5493820d4de1ad3fe8d0731c957145740f7a3f7c3cb3e1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户表示上一条消息未被理解后，回看缺少的前置概念，用 GLOSSARY.md 的共享词汇及更普通的语言重新解释，暂停向前推进。固定正文要求采用 ASD-STE100 Simplified Technical English 的写作方向；这项来源指令不等于文本已通过 STE 合规核验。
+    language: zh-Hans
+    source_fingerprint: sha256:2118d45e729d53477b3f08c602b5d4af37216c65519eef7e382bfee22235ec48
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 用户明确表示上一条解释没听懂。
+    language: zh-Hans
+    source_fingerprint: sha256:f2de63aff7c941bf14c4ee31781ec531a8edf58aae65b7517f4d759e3e7d880e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 防止误解在后续对话中继续累积。
+    language: zh-Hans
+    source_fingerprint: sha256:0ba8691a39711f5bfdf14de752d315d6d2a87f51943940227aaa4ccb2f1b33d4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 降低技术沟通的术语负担。
+    language: zh-Hans
+    source_fingerprint: sha256:16abf8dba600d2c37ff352bca9eef48fc7e9f38a189200f6ab2615653c251125
+    review_status: reviewed
+    reviewed_at: 2026-10-13

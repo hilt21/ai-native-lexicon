@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","improve-codebase-architecture"]'
+provenance:
+  original_sha256: 4fda9d2798f6acee8246cc9729733e58a1e83421ef6eddb6294fc6835da55665
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 希望调查架构或维护机会时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:1d084e2a0e70a9cdb19707cae6627e3242d4c8ea12af75259f60782cbbec3618
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["refactoring","governed_by","principle-foundational-thinking"]'
+provenance:
+  original_sha256: c69df50a8008acb5e617c42bb6c393800d478e4fe8ba2198773af147cb41bea3
+  retained_at: 2026-10-13
+units: []

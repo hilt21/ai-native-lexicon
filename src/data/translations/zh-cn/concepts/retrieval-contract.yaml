@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 明确约定检索必须返回什么，以及元数据、时效性、信任级别和失败行为。
     source_fingerprint: sha256:30261d043b9f3430a62a55b9e43807f83b4844b0dea1de3ea1e9ed03ff96d0ae
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 检索契约规定查询意图、可用来源、排序预期、引用元数据、时间约束，以及信心不足或证据冲突时调用方收到的内容。它让检索成为带类型的依赖，避免仅作为不透明搜索步骤。
     source_fingerprint: sha256:a15caca6bf0e493e1627ca79c4007b9f7540f08f4a79e12a355331c90c9c5d22
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 检索质量不能仅由是否返回文字判断。契约揭示隐藏缺口，让下游推理区分信息缺失与检索失败。
     source_fingerprint: sha256:b57d945e37046985660a301bb6a94fa479e66d794aedfb81992875e0c4f89079
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于 AI 决策依赖搜索、RAG、企业知识或快速变化外部事实的场景。
     source_fingerprint: sha256:5742450cea45e8fe291f2d8d8dea9c8e0397da93e490f498385e7b555cb44e7c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 向模型传递 top-k 文本块，却不提供来源身份、时间戳或空结果语义。
     source_fingerprint: sha256:ffb77c62e69ddaf7498e3dbc95256532b96b8a7b0b93c237c069bae07d9e4b8d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

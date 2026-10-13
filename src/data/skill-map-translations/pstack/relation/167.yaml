@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["correct","governed_by","principle-encode-lessons-in-structure"]'
+provenance:
+  original_sha256: 882c107e70ec011ac8b1e693ef0f466ebd57f9b531c8c0398ffd05bc38bbf2f4
+  retained_at: 2026-10-13
+units: []

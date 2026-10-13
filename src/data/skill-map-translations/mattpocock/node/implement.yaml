@@ -1,0 +1,111 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: implement
+provenance:
+  original_sha256: db8496831e35b614688dd1a18c041a5015935d109275f3bdc36b12aa3517ea76
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: implement
+    language: en
+    source_fingerprint: sha256:691860e2baa40f1262cc801f4e45935a8a12f3c624edb7972bb0f59215425568
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 实现一个由 spec 或 tickets 描述的具体工作单元。
+    language: zh-Hans
+    source_fingerprint: sha256:8410c2f24d59e649c05cfa73afc67123a422c2d395451228a9e2438c5e3d3b36
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:3bf9a3e9df68c6d129ce02170445e22d83feb1bd00e9f846be2e4a21c9ea1010
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:7a41918c9fbd456bcd7641e295e00f86b25323133c552e3542b5e49803db2870
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:d5b686ae41f05ea6e3f56687c1835276d4e6783fa6f5f21ba60fcde3a0fd37e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: spec 或 ticket
+    language: zh-Hans
+    source_fingerprint: sha256:af7a9f976ee377800a07f9a06273e698e123ba8c86274de53687c6f2f6409493
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 当前仓库
+    language: zh-Hans
+    source_fingerprint: sha256:70d105807f5f28f1ad4a77199608ce4249d38f97bc2cb8e594a39f1ebb59db1e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 实现代码
+    language: zh-Hans
+    source_fingerprint: sha256:6f02b71b3c0e81354f120490a36dc810ef0d3f86b1f317fe9593e57d2a7c5edd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 测试结果
+    language: zh-Hans
+    source_fingerprint: sha256:4e0312a0f3bc8d96a84cce942935a4bb323a76fef1fc862d9459810534cf4b9a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: code review 结果
+    language: zh-Hans
+    source_fingerprint: sha256:416dd1a06100727b820ec6cdc413dd73e7784ec049b8512ffad054f7cd8ccce3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 提交
+    language: zh-CN
+    source_fingerprint: sha256:ef2d33c77bd8277676086d5ebcb8155bb6dcaaf5427b86cec501b698f6d9955e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Implement a piece of work based on a spec or set of tickets.
+    language: en
+    source_fingerprint: sha256:a4f191f919684958f5d5d026cc03e025c6c48918071fd6a5573394d640766525
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动后，按 spec 或票据工作，在已经确认的公共 seam 上尽可能使用 TDD 的 red→green 小片实现，期间运行类型检查和相关测试，末尾运行完整测试并调用 code-review，最后提交到当前分支。TDD 与 review 是这条实施路径包含的能力，不需要用户完成实施后再重复手工启动。
+    language: zh-Hans
+    source_fingerprint: sha256:9ce8b4259ad32ae6ff5228d016866191210efedf6ed6031c28acb4017f4fcd51
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 已有明确 ticket 或小型 spec，可在当前 session 内完成。
+    language: zh-Hans
+    source_fingerprint: sha256:148a2ec1d5eaf953373b06c359b51ee35d63e4901cdf7e3d14b065ecfdf1a788
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 希望以测试和 review 约束 Agent 实现。
+    language: zh-Hans
+    source_fingerprint: sha256:cc1e93eecdd789f2f378670cd5cd4ef274c57121d13d664dd57e20a9353e3008
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 让代码生成进入短反馈循环。
+    language: zh-Hans
+    source_fingerprint: sha256:9b846a4131e1b0323dd9d26872be9c70cb16f7a469d6bda0244fbcf0d07b1197
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 防止“写完即完成”而缺少验证与审查。
+    language: zh-Hans
+    source_fingerprint: sha256:37cab0a06bf78089ce57ec68851a786d672e58e0961338ca6d1843cb3ba1434e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

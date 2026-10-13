@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["pause-safely","feeds","session-pickup"]'
+provenance:
+  original_sha256: 8d57818995733c11f54692c9225a010991d4a1b88be6b257a6f2116b317297c5
+  retained_at: 2026-10-13
+units: []

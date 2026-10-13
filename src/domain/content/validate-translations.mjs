@@ -3,6 +3,7 @@ import { translationInputSchema, translationIdentity } from './translation-input
 
 export function translationTargets(catalog) {
   return {
+    'speaking-guide': new Map((catalog.speakingCards ?? []).map((record) => [`card-${String(record.data.number).padStart(2, '0')}`, record.data])),
     concept: new Map((catalog.concepts ?? []).map((record) => [record.id ?? record.slug, record.data])),
     primitive: new Map((catalog.primitives ?? []).map((record) => [record.id ?? record.slug, record.data])),
     category: new Map((catalog.categories ?? []).map((record) => [record.slug ?? record.id, record.data ?? record])),

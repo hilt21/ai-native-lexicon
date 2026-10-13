@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: unslop
+provenance:
+  original_sha256: 54c7ede97cb06d34f42e753f19f0ded42f8460d4a68d82e5f33aadb320d7dbb4
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: unslop
+    language: en
+    source_fingerprint: sha256:fd17f1b36cb9e52c8050a49314bd11cb9254a1dad3615588b678e2d34e371cb8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 清理 AI 痕迹、模板化语言和无信息文字。
+    language: zh-Hans
+    source_fingerprint: sha256:a0dc7b352e790be58bd5f73e5996626a3859cffe71724694ebf40111135e23b7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 写作
+    language: zh-CN
+    source_fingerprint: sha256:87c2734449a6c4afc06e8f771e24d368bddae254a729ca403b950c893d75123c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 编辑
+    language: zh-CN
+    source_fingerprint: sha256:936e6509b9faae36f10960cdf924ef55ffe65ba206786cc5add6acd2b81e5870
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 文字草稿
+    language: zh-CN
+    source_fingerprint: sha256:e64de3d4fa10665edb79af6fe3c2fda8ac1787516965a1fc7ddbe23bfa8eac00
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 简洁且便于人阅读的文字
+    language: zh-CN
+    source_fingerprint: sha256:0a1eb66c6db9f668f2f4d8f0612a2e91de9df360c9fae2faf6a70cd531bacab8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：final response
+    language: zh-Hans
+    source_fingerprint: sha256:32bfed57cd4f55e3ec1e4c49be0fff5445f05ca86ec0bc801b0720076f34ade0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Cut AI tells from any writing. Must always apply.
+    language: en
+    source_fingerprint: sha256:ae5ef59d17909464cf98740734311489801b6040c8434afd61da052a2b078827
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 压缩重复、空泛 heading、套话、抽象比喻和明显机器腔，同时保留事实与操作信息。
+    language: zh-Hans
+    source_fingerprint: sha256:584478b9c7ea83fd590724e04eca8f122e5b47fed301a2cb3a53e36ae8be21f0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 几乎所有 Agent 生成的最终文字
+    language: zh-Hans
+    source_fingerprint: sha256:f6f9b3b70d45680f451fd0301ea27174af4c96b950cf4a1f62fb51600872e7a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低 AI 味
+    language: zh-Hans
+    source_fingerprint: sha256:af273dab0fb8bb3a0a4e5e036f9e7560c2106e3f34f745ebd50da9456f47ece9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 提高信噪比
+    language: zh-Hans
+    source_fingerprint: sha256:c774c7248487b27163a95b2b64fc546495726e5c790b48c5e2447027119594da
+    review_status: reviewed
+    reviewed_at: 2026-10-13

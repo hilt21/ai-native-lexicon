@@ -1,14 +1,9 @@
-title: 我遇到了一个难 Bug
-summary: 先建立能捕获真实症状的红反馈，再最小化、假设、instrument 和修复；存在正确 seam 时留下回归测试，否则记录可测试性缺口。
+title: Fix a difficult bug
+summary: Establish failing feedback that captures the actual symptom, then minimize, hypothesize, instrument and fix. Leave a regression when the correct seam exists; otherwise record the testability gap.
 order: 4
-when_to_use:
-  - bug 抗拒第一眼分析、存在 flake、回归或性能异常。
 inputs:
   - bug symptom
-  - 可运行系统
-outputs:
-  - 根因证据与修复
-  - 正确 seam 上的回归保护，或记录缺少 seam 的发现
+  - Runnable system
 source_refs:
   - source: mattpocock-skills-1-3-1-dd400c3a
     path: engineering/ask-matt/SKILL.md
@@ -20,61 +15,44 @@ source_refs:
     path: engineering/retro/SKILL.md
   - source: mattpocock-skills-1-3-1-dd400c3a
     path: engineering/improve-codebase-architecture/SKILL.md
+status: active
+when_to_use:
+  - The bug resists first-pass analysis or involves flakes, regressions or performance anomalies.
+outputs:
+  - Root-cause evidence and fix
+  - Regression protection at the correct seam, or a missing-seam finding
 variants:
   - id: standard
-    title: 可观测复现驱动的修复
+    title: Fix through observable reproduction
     steps:
-      - title: 建立反馈并验证根因
-        why: diagnosing-bugs 先要求一个已经能在此 bug 上变红的反馈入口（flake 为固定高复现率），再最小化、假设、instrument 和修复。有正确 seam 才先写回归测试，缺少时明确记录，最后重跑原始场景并清理。
+      - title: Establish feedback and verify the root cause
+        why: diagnosing-bugs requires feedback already failing on this bug, or a fixed high reproduction rate for a flake. Then minimize, hypothesize, instrument and fix. Write the regression first only at a correct seam; otherwise record the gap. Recheck the original scenario and clean up.
         nodes:
           - diagnosing-bugs
+        optional: false
         outputs:
-          - 反馈入口、根因证据、修复及回归测试或缺少 seam 的记录
-      - title: 按固定点审查修复
-        why: 当需要独立审查时可使用 code-review，分别检查仓库标准和原问题要求；这是可选建议，并非诊断正文要求额外调用。
+          - Feedback surface, root-cause evidence, fix and regression test or missing-seam record
+      - title: Review the fix from a fixed point
+        why: Use code-review for an independent review when needed, separating repository standards from the original requirements. This is an optional recommendation, not another invocation required by the diagnosis source.
         nodes:
           - code-review
-        outputs:
-          - Standards 与 Spec 两轴发现
         optional: true
-        when: 需要独立审查修复 diff。
-      - title: 由用户选择是否复盘
-        why: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+        when: The fix diff needs independent review.
+        outputs:
+          - Standards and Spec findings
+      - title: Let the user choose a retrospective
+        why: A retrospective reads the original session and recommends environment improvements. People select candidates; proposals are not applied automatically.
         nodes:
           - retro
-        outputs:
-          - 按严重度排列的环境改进候选
         optional: true
-        when: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
-      - title: 缺少反馈 seam 时调查架构
-        why: 这是条件性的编辑建议，由用户启动架构 survey；不表示 diagnosing-bugs 自动调用或自动重构。
+        when: The user wants to examine environment friction, especially after difficult implementation.
+        outputs:
+          - Environment improvement candidates ordered by severity
+      - title: Survey architecture when feedback lacks a seam
+        why: This is a conditional editorial recommendation for a user-invoked architecture survey. diagnosing-bugs does not automatically invoke it or refactor.
         nodes:
           - improve-codebase-architecture
-        outputs:
-          - 架构候选与待确认的模块边界
         optional: true
-        when: 发现根本问题是缺少能观察和锁定行为的 seam。
-text_languages:
-  title: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  inputs.0: en
-  inputs.1: zh-Hans
-  outputs.0: zh-Hans
-  outputs.1: zh-Hans
-  variants.0.title: zh-Hans
-  variants.0.steps.0.title: zh-Hans
-  variants.0.steps.0.why: zh-Hans
-  variants.0.steps.0.outputs.0: zh-Hans
-  variants.0.steps.1.title: zh-Hans
-  variants.0.steps.1.why: zh-Hans
-  variants.0.steps.1.when: zh-Hans
-  variants.0.steps.1.outputs.0: zh-Hans
-  variants.0.steps.2.title: zh-Hans
-  variants.0.steps.2.why: zh-Hans
-  variants.0.steps.2.when: zh-Hans
-  variants.0.steps.2.outputs.0: zh-Hans
-  variants.0.steps.3.title: zh-Hans
-  variants.0.steps.3.why: zh-Hans
-  variants.0.steps.3.when: zh-Hans
-  variants.0.steps.3.outputs.0: zh-Hans
+        when: The underlying issue is the absence of a seam that exposes and protects behavior.
+        outputs:
+          - Architecture candidates and module boundaries awaiting agreement

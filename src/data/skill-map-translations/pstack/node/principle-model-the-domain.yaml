@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-model-the-domain
+provenance:
+  original_sha256: 314e1be84a43efaaa9b63144e3572de28421d9ad54019e1bcd8cd3a0df7ff2cc
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: model-the-domain
+    language: en
+    source_fingerprint: sha256:eecee25d3e611f19d9e3b6155a57de11094158b75d5d9aefbc6df879f72c3b04
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用结构、state machine、registry、typed model 表达领域。
+    language: zh-Hans
+    source_fingerprint: sha256:fc7f0a767826577c5c603a140a6e1f0e2f4f1f8b0d08487231e8c80e086afe83
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:439eff39f68cf1c5923c0d63fb526104fcea5dd8c29fbe7db3b163fb1f4fed57
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 有状态或分支繁多的逻辑
+    language: zh-CN
+    source_fingerprint: sha256:314eeb392032ae312e665191fd893afbc00cf31c7e6f8274ff1fe74abe9d6a4f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 明确的领域模型
+    language: zh-CN
+    source_fingerprint: sha256:ce918f030fd9c790baa9fcc64880cf4d2e80d6f157418af3cd02b9eeffd9cb03
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files. Encode the domain in a structure instead of scattered conditionals.
+    language: en
+    source_fingerprint: sha256:b37faa7d17b0dfd2d0295424ae472ad14656ca81e5d01ea16e0ccb98f43e2692
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用结构、state machine、registry、typed model 表达领域。
+    language: zh-Hans
+    source_fingerprint: sha256:058f5128c52f952753df8e1c72005010b05d5b1eb62b547cad0fdaa54a62a56a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 编写有状态逻辑，或代码分支很多、多个文件重复假定同一结构时使用。用结构表达领域，而不是分散的条件判断。
+    language: zh-CN
+    source_fingerprint: sha256:6c43bb65d14b343ca4503f8b8b106457d84643c0b7a86ae38b8c9e3032fe9fd8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 用结构、state machine、registry、typed model 表达领域。
+    language: zh-Hans
+    source_fingerprint: sha256:cd85c94fa7f1a03ab0fffaef4147769fcc1445120658e5aceade5e59e4e134e1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

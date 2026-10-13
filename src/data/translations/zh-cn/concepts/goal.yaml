@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 说明工作应达到的结果。
     source_fingerprint: sha256:e61ecacf86666890b6504df70ab8d1b3148927196cee4a233b51153405061f32
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 目标描述期望结果及其满足条件。它指导行动选择，无需规定每个步骤；约束决定哪些实现路径可接受。
     source_fingerprint: sha256:2e712d612116a0f8c6ecaf99858e54cc490756ead194d7b60fef0e6260f3ab08
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 明确目的地帮助智能体评估进度，并在后续活动不再服务请求时停止。
     source_fingerprint: sha256:adac03b687bf7e9f6542061a24f484306b2f3d62c303d3b6d93591c0a8d3f079
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 通过行为保持和验收通过的条件定义迁移成功时使用。
     source_fingerprint: sha256:2980da442798a2ae2cf2fe2926b9490d593d83ad79f783677871053029e5f52e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 仅用持续改进等活动作为成功定义。
     source_fingerprint: sha256:db137c809a43a53fe52da143c7ed9a8e90c1ad61933ca4c5c622ed9631c3b59d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

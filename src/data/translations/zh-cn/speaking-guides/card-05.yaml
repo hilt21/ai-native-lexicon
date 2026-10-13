@@ -1,0 +1,50 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-05
+units:
+  - path: title
+    translation: 工作流与智能体
+    source_fingerprint: sha256:3a078649366fa042ec3359c040abac949a70c4747d6c9492d3b1d618fbcf3b39
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 对可预测的路径使用工作流，对取决于上下文的路径使用智能体。
+    source_fingerprint: sha256:77e7cda1ae8c19282180189c11eb11b29df09bd1cae9e145a8a216be48b912af
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你的团队中哪些流程可以预测，哪些流程需要真正的判断？
+    source_fingerprint: sha256:1388aaa1071faf04c1203536a8627f5429a34720f383e6854db750d36020810d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:82f218814764a2a4b354e22375d56de87c6d2d919d52d932fa3bb62ed06e6443
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 无论使用工作流还是智能体，两者都非常依赖我们提供的信息。
+    source_fingerprint: sha256:9aab5e47f496218c0a4fb885aa3659bdd2b52a79ae3b684d0ef4a321617bd77b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 规则明确时，工作流很有优势。
+      - 下一步取决于判断时，智能体就有用武之地。
+      - 可预测性有价值。
+      - 灵活性也有价值。
+      - 合适的架构往往结合两者。
+    source_fingerprint: sha256:b83b237a102c5ecd868cc36d9e59e614ac86850aea4300727c9a8b1d3e9cb578
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 以发票审批流程为例。
+      - 如果每张发票都遵循相同审批规则，工作流通常就足够了。
+      - 再设想供应商发来一项异常请求，文档不完整，而且可能涉及多种例外。
+      - 智能体可以理解情况，判断缺少哪些信息。
+      - 随后，工作流可以可靠地执行获批流程。
+    source_fingerprint: sha256:a96b383e78556091b7359cf66cebe7d8fdfb420c391f9f577f97eb68466c9a99
+    review_status: reviewed
+    reviewed_at: 2026-10-13

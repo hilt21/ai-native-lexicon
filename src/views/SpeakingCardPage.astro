@@ -7,7 +7,7 @@ import { getSpeakingCards } from '../lib/speaking-cards';
 const locale = routeLocale(Astro.url);
 const ui = uiFor(locale);
 
-const cards = await getSpeakingCards();
+const cards = await getSpeakingCards(locale);
 
 const [concepts, primitives] = await Promise.all([getLocalizedConcepts(locale), getLocalizedPrimitives(locale)]);
 const conceptsById = new Map(concepts.map((concept) => [concept.id, concept]));

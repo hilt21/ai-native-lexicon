@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["grill-me","uses","grilling"]'
+provenance:
+  original_sha256: 38b7d25e2e5ff0cee4206d6bca867deaa53942eb22e8d42b33ef7448c6d53e66
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+    language: zh-Hans
+    source_fingerprint: sha256:6a2656e5a7e623c45df26b3077d2ac604dce5b589ede6a7c830af2f4aa0d6440
+    review_status: reviewed
+    reviewed_at: 2026-10-13

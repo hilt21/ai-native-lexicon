@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 对系统及其后果具有影响、受到影响或有利益关系的个人或群体。
     source_fingerprint: sha256:2763442085a3a6df448f0395c6a9120704936bb735fff1d858d92c2550953c59
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 具有多方利益或外部影响的社会技术系统。
     source_fingerprint: sha256:911ce3e4c76c8f5c12a909bf764c40b9f693084a5a77ced7f9edf254eb52f90d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 明确设计决策必须考虑谁的需求、权限和风险。
     source_fingerprint: sha256:7dff4c1e100310ceb489046c24941b59d94589ac53d2fb8dbf3b4950f06bb8ce
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 利益相关方具有利益或受到影响；行动主体实施操作。同一方可以同时具有两种角色。
     source_fingerprint: sha256:0be15ee8a2f968c6deecfa2d57c156d5534e9685ca7c3e805942d53fd13acfc0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 利益相关方 + 目的 + 边界 → 策略
     source_fingerprint: sha256:35daa47fb386db5821e194064662093770e552821eb7150e955d2ee92dd66730
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 招聘助手考虑候选人、招聘人员、审阅者，以及受不准确推荐影响的人。
     source_fingerprint: sha256:98c63a3fc6edf60a0cd5c29a819510a37ef6a9a8703685f6b321630da469e5de
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 利益相关方
     source_fingerprint: sha256:bc7dce00539b1acb13e8ee357452350d1690b0d6208aa0b95a8ab1eafef3fb67
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 影响系统、受到系统影响或承担系统运行后果的个人或群体。
     source_fingerprint: sha256:7d0bc50ae7bec3f79f0659e62c3ffe66889ab4d3e9c971dbb915c62327945d58
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 受影响方不限于直接用户。
       - 不能从生成的利益相关方清单推断同意或权限。
     source_fingerprint: sha256:800e4e2ee3d7634143eea8157eaabf9d01e313307cc18170c70677ac9a3ae0ab
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 大语言模型可帮助发现不同视角；人确认代表性，软件记录明确责任。
     source_fingerprint: sha256:ef144d1d90424508b5ee7f93c0ca217c6310e45dbdb72a7360b2359d908eb5aa
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 具有多方利益或外部影响的社会技术系统。
     source_fingerprint: sha256:582fb6c152215f889f3da34a1ab2cd7efc661d6e37a38898ea8f663eaa7c68b1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 益处、风险和决策权限分布在不同人之间时，通常应明确建模利益相关方。
     source_fingerprint: sha256:bd50742e420b403c4ff588c616302c344d8a483a6dc5a983180b67a398b202c2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

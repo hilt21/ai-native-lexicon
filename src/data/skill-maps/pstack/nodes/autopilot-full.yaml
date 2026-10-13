@@ -1,34 +1,26 @@
 title: autopilot-full
-summary: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
+summary: One owner takes each PR from build to merge; the root performs independent verification, countersigning and audits.
 type: playbook
-status: active
 layer: playbook
 primary_cluster: parallel-autonomy
 secondary_clusters: []
 tags: []
-mechanism: one owner per PR → durable trail → self-proof/CI/babysit 并行 → root swarm
-  verify exact head → clean verdict 后 owner merge → 周期 audit/replacement。
-when_to_use:
-- 多个独立 PR 要全自动做到 merged
-solves:
-- root 成为执行瓶颈
-- PR owner 丢失生命周期责任
-- 无独立 countersign
 inputs:
-- PR queue
-- operator gates
+  - PR queue
+  - operator gates
 outputs:
-- merged verified PRs
-- decision/children trails
-- audit verdicts
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/poteto-mode/playbooks/autopilot-full.md
+  - merged verified PRs
+  - decision/children trails
+  - audit verdicts
 handoffs: []
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  solves.2: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/autopilot-full.md
+status: active
+mechanism: Use one owner per PR and a durable trail. Run self-proof, CI and babysit concurrently; the root verifies the exact head independently. After a clean verdict the owner merges. Audit or replace owners periodically.
+when_to_use:
+  - Automatically bring several independent PRs to merged state.
+solves:
+  - The root becomes an execution bottleneck.
+  - PR owners lose lifecycle responsibility.
+  - Independent countersigning is absent.

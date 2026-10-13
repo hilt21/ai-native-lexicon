@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","implement"]'
+provenance:
+  original_sha256: 62b33fd604c972ad4e0eb39f52eed1004edd2523364c0b263011025de00e208f
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 小而明确的工作或一张 agent-ready 票时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:9be44ebe9895ffba8a511b61b1aefe788755338a571236c8214c3824c8aa56ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: prototype
+provenance:
+  original_sha256: 894699095a225aaf6ca68ba1a591be2840a88c2a0d1ac34ee1821fb9dc21f6df
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: prototype
+    language: en
+    source_fingerprint: sha256:0e6b045492afbaad368403a0281727032022798dc94acc487895824424691781
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用一次性代码回答纸面讨论难以解决的设计问题。
+    language: zh-Hans
+    source_fingerprint: sha256:50863aa633d641d1e1897a793b66679914b55210a196d566b9c3e02ff188ab56
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:bfdfa0c09de7b774a681573275f61bf08aa0cc5357c696716bc4d9c069686fbc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:a47a9ef29b84e41c7f00c9135c55ee02b5c154e20c7961683a8461f01c6a609b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:9503a40f7b0d59f9c6f2fd73b3c6dc511891af59cafecdd876ba760fdf24c177
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 设计问题
+    language: zh-Hans
+    source_fingerprint: sha256:ee948690908b1f1733ececdae5d673892fe309050eedb1d9dba67dba4ec11007
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 必要的最小上下文
+    language: zh-Hans
+    source_fingerprint: sha256:789bee3eed07f395759cc2599c1b5a5094181fe8ac13ddecbd11df130356d7ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 可运行的 throwaway 原型
+    language: zh-Hans
+    source_fingerprint: sha256:1e156600a8a1469073a39f1c64cb1c9c80311038fa85b2f0e528fc4460e3a8ea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 设计问题与验证结论
+    language: zh-Hans
+    source_fingerprint: sha256:0eb9074f30adfb89ac3d1a3e613059fb08b3c30cecf22da652d12618154f5829
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 原型分支与实施 issue 的来源指针
+    language: zh-Hans
+    source_fingerprint: sha256:70cb1daa343105d327be98d191214a0374d6c930194c1336e600ac13eccbd3a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.
+    language: en
+    source_fingerprint: sha256:d3fdb8117e7946ea6299899f5c9ae836113b99a7d9ce993e4b2f9f2c2268d04f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 围绕一个设计问题快速写出标为 throwaway 的原型，代码放在相关模块或页面附近。逻辑问题用可分享的单文件 HTML，UI 问题在同一路由展示明显不同的方案；默认无持久化，显式显示状态。验证后把结论带回真实工作，把原型提交到 main 之外的临时分支，并在实施 issue 留下问题、结论和分支指针。跨目录或 harness 的探索可经 handoff 往返。
+    language: zh-Hans
+    source_fingerprint: sha256:8acd906de9a244a247a3fc1ef0f6cb3ee6a78c3104d6d9c536bdfb13855f8438
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 状态模型或业务逻辑需要实际运行才能判断。
+    language: zh-Hans
+    source_fingerprint: sha256:4a600f8cf2b6c1850d7437237e4a7051287043b63954ddfdcc1bb2080170ec35
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: UI 方向需要看见并比较多个方案。
+    language: zh-Hans
+    source_fingerprint: sha256:467ced3d8ca80bb12d0fe66f239401044bd86afd6f73d5d1cbf364047cc5c253
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少纯讨论导致的设计猜测。
+    language: zh-Hans
+    source_fingerprint: sha256:30d773aea584c1a4329079ad02aaa44e3741c61d551c6ddad9e116869c823249
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 用廉价实验替代昂贵的生产实现试错。
+    language: zh-Hans
+    source_fingerprint: sha256:88c1addb3a43143d1341433267e382dbcf20272e6863b2b3a105e4910a3851c4
+    review_status: reviewed
+    reviewed_at: 2026-10-13

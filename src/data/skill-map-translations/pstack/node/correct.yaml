@@ -1,0 +1,147 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: correct
+provenance:
+  original_sha256: 4847a0439102a674fd98892f5de6a1fc58d81cc2a22526bf804018ac8f9a0283
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: correct
+    language: en
+    source_fingerprint: sha256:bea865e1714ca607dc0d279109b5bdf360624982be6ae8863abaf632d120895b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把重复的人类纠正升级为结构性约束。
+    language: zh-Hans
+    source_fingerprint: sha256:3ed83da85c6f204a982a0920f80439ec2a4d7dec7b73ffee7fab705c0c81cfcf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 学习
+    language: zh-CN
+    source_fingerprint: sha256:cd4183f3997ffde0c1ceb102ef1fac892d66b1228550948e18b460dc8d291cd3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 自我加固
+    language: zh-CN
+    source_fingerprint: sha256:0ce6e85e35b7e5075ef5d0b957c9785c4e5ed4932e6e8eb95382a1939678d36c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 反馈
+    language: zh-CN
+    source_fingerprint: sha256:3c09b2f73aa2ccdc48b3cd33fe2a888d6ff4761789e33d8ccbc32987e6ca8561
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 纠正事项
+    language: zh-CN
+    source_fingerprint: sha256:d02327471d5df71c1764be101d41b84219a45123ea44225fef45e25e72c2043b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 失败示例
+    language: zh-CN
+    source_fingerprint: sha256:afb588976cfe6cf8317124b0e877e80e77d6a7c68453466869bdc865babc7817
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 仓库结构
+    language: zh-CN
+    source_fingerprint: sha256:25a300c9e033347e17d4f82ed17c2a955b3c00c827f96ded4f3faeae02713f78
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 结构性防护
+    language: zh-CN
+    source_fingerprint: sha256:d6327f8e77d468c484099b06daa3ede89d23f9abfbf21618765011e18db4bbe5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 针对历史错误的验证证据
+    language: zh-CN
+    source_fingerprint: sha256:8a36ec723a59e4c7d6725b4260895a088544c078f507c312bfbae266a98e53b2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 减少未来纠正负担
+    language: zh-CN
+    source_fingerprint: sha256:c95172db21f50c9812e61188775505ba26b844f2b41d33c90512f2e5bf547f69
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 输入背景：human correction
+    language: zh-Hans
+    source_fingerprint: sha256:a049708b5dec7bf3a804ad49f2b34d75167923cdd0b67b936dc1302f7c472833
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.1
+    translation: 交接说明：architecture
+    language: zh-Hans
+    source_fingerprint: sha256:4ed6ae672d02e6a074932b12da003c6aabf32e34e7307f0bb55d39809e60ae4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.2
+    translation: 交接说明：types
+    language: zh-Hans
+    source_fingerprint: sha256:3cc24b8d2197f22e4c7fd2f6477d0df426d90199674efe4d477c8e394547e994
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.3
+    translation: 交接说明：lint
+    language: zh-Hans
+    source_fingerprint: sha256:eff7c9799272e771056f7fd2933a77aa15726063b02cdef79e87b7627170b8f8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.4
+    translation: 交接说明：tests
+    language: zh-Hans
+    source_fingerprint: sha256:b12a4b06c276d116d9aa710a31ff4ea8ee428ee096f608df3cc1fdb5f6e6d6a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.5
+    translation: 交接说明：skills
+    language: zh-Hans
+    source_fingerprint: sha256:93b7e3adea79665df7e3f6a5a9418bdb135e0121477fa433169c2457937f79cc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Find the mistakes agents keep repeating in this repo and make each one impossible. Try architecture first, then types, then a lint whose error names the fix, then a test, and write docs last. Prove each check fails on a real past mistake. Repeat this each time the operator corrects you. Use for /correct.
+    language: en
+    source_fingerprint: sha256:95799d577e08ba5c7d391314d7c79e8fa66ad8bffc1930e19133c27bec3ab1d2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 识别重复 mistake class，按 architecture → types → lint/CI → test → docs 的强度顺序寻找 remedy，并用真实历史错误证明 guard 会失败。
+    language: zh-Hans
+    source_fingerprint: sha256:9f889a8b9e1defa50ec67a65cadfd8bd0eeec2f0c189e63dd0b35edc21c70d1b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 同类 Agent 错误出现两次以上
+    language: zh-Hans
+    source_fingerprint: sha256:85cfaa566f16f177820b32f389b6897a6eb67b2e5ebeec1b6af03cb455f28494
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 用户反复纠正同一个问题
+    language: zh-Hans
+    source_fingerprint: sha256:b251ed6e60ec3db0648300ba1f37252f840dd2b90eaa8eca2e476e3590e368f4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少重复监督
+    language: zh-Hans
+    source_fingerprint: sha256:2b1f9fd7d76b0fb17271e13ba2aa118b0a35f328a0e060a0f1903ba7e97f059e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把知识从 prompt 下沉到结构
+    language: zh-Hans
+    source_fingerprint: sha256:b3d1bc87f214396ec26c9cfb517292e8cbc3111f2edd59bbc7b0f28fefc15ea6
+    review_status: reviewed
+    reviewed_at: 2026-10-13

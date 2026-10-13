@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["orchestrate","governed_by","principle-separate-before-serializing-shared-state"]'
+provenance:
+  original_sha256: beb64f06f585b0b8e0ebf24293043db0abaea3fd1a36cba49260b70b5cfee9c2
+  retained_at: 2026-10-13
+units: []

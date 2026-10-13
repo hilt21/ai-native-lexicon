@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["poteto-mode","routes_to","pause-safely"]'
+provenance:
+  original_sha256: f16d0fdf72ccbc8a799d0d10f59a68e8e1ddd69e266170816c887b4e15cf61aa
+  retained_at: 2026-10-13
+units: []

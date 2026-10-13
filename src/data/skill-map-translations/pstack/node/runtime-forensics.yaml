@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: runtime-forensics
+provenance:
+  original_sha256: b1d0a6952233b5e40b4e92367fa2159bb9e11d6bfa3aeb8bbddf6e8ee6b1dd63
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: runtime-forensics
+    language: en
+    source_fingerprint: sha256:af3fefcc13b6d715dde5cda8bc3d26b274e2f183772bc1cb285b8efb6842e559
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 从正在运行的进程采集信号并做只读诊断。
+    language: zh-Hans
+    source_fingerprint: sha256:27edb8c955a551a94f21ba520b804a94a4d1ce75fd314c6aa232bf081512a620
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 只读
+    language: zh-CN
+    source_fingerprint: sha256:2ab2e64c6758a3c4803fe81e6bd2841b787dd60a6d64b3863099c1f545027ce5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 取证
+    language: zh-CN
+    source_fingerprint: sha256:f9e3c47e473ed7045652c1cf57d9fd4791f93422cb68036969a9741bb98a1579
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 正在运行的进程
+    language: zh-CN
+    source_fingerprint: sha256:45cf5d9a3296a101f116b51cdaecefc2c4bc43b43c1d49f674e2a90ee62a9c6a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 控制界面
+    language: zh-CN
+    source_fingerprint: sha256:f25cfc5076fe7a9e4305a2438ed9832c83fbc055236e113c57e9da96f0e088ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 附引用的诊断
+    language: zh-CN
+    source_fingerprint: sha256:f09815e99c95f18c4ab78da877e3afb744d920553e0d147b2292ad5877f00017
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 源码位置
+    language: zh-CN
+    source_fingerprint: sha256:079a653814ce78e0173244946bf957fc460c0e183fdebbdac396cf730e004dab
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 产物路径
+    language: zh-CN
+    source_fingerprint: sha256:e8592e7a35b01812ac8a75f0a48d2cd5aa06ae27da2786f80a03f420554b04c2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 采集 CPU/heap/CDP 等真实 artifact → 缩小 smoking gun → 在 live process 中验证 mechanism → 映射 source。
+    language: zh-Hans
+    source_fingerprint: sha256:86ec1cddc4173c5d463197ac079880af88a954e5aa271cd754194773541bd032
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 正在发生的泄漏、空转或异常
+    language: zh-CN
+    source_fingerprint: sha256:f1ca4844eba67d1ccb09be46c37b3f5cebb5310474e627858030ad3f0a2ce047
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 症状只能在运行时观察
+    language: zh-Hans
+    source_fingerprint: sha256:f0bb4cc465ba8df19739c826944ea2fcfe7a62571d2545b05c9211c69b6867f7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 从源码猜 runtime 问题
+    language: zh-Hans
+    source_fingerprint: sha256:045335002789a6f53f2ad3369ce1a99305a1add83314af58b75fc20052f973cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13

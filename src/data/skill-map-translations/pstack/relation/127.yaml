@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autopilot-stack","governed_by","principle-make-operations-idempotent"]'
+provenance:
+  original_sha256: 98eabec943a325168e778f000ddc0ce9fd8e62315289795accd53b7990dcda26
+  retained_at: 2026-10-13
+units: []

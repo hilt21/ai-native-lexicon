@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-subtract-before-you-add
+provenance:
+  original_sha256: a898f09935ad21f9328d9bc624582beaaab9251e5f802e81cf4a86d905a2b34a
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: subtract-before-you-add
+    language: en
+    source_fingerprint: sha256:d5f6bf860d779a6ccaab08baa193e4c582b04660bb42aecebdf07ea280abd845
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 新增前先删除死代码和冗余结构。
+    language: zh-Hans
+    source_fingerprint: sha256:4054511187476bba320663b6b288835780356be6e139a0bae02578c0f72e44f7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:7c44fe7ffc363a18b6f4118d7ad206c7e1c965babcd244460b8a9290630d126d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 现有复杂性
+    language: zh-CN
+    source_fingerprint: sha256:0d2c194978197ca7aa742718ea4ef885e0dbb07d1be2f65f17e68acc6d8015fa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更简单的基础
+    language: zh-CN
+    source_fingerprint: sha256:1615996c23f5d9c6bf6de96c809d20c3cfa6c5acb362da8fbee0b430f4ad85d9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when sequencing an addition, refactor, or rewrite. Remove dead code, redundant validators, and stub references first, then build on the simpler base.
+    language: en
+    source_fingerprint: sha256:ea8893d0a01b95230c12e0d9f13c2ede2e92e14361e3cd7357456032762f995e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 新增前先删除死代码和冗余结构。
+    language: zh-Hans
+    source_fingerprint: sha256:ed21650b7958a58ccf10e43227ecee3120800940b9b4ae286a4c2d5ad39d6ac7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 安排新增、重构或重写工作顺序时使用。先删除死代码、重复验证器和占位引用，再在更简单的基础上构建。
+    language: zh-CN
+    source_fingerprint: sha256:a19e834ad175ab6fbee242d4674f8ca69e22a8af95e3f2c30a27441a59ad899e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 新增前先删除死代码和冗余结构。
+    language: zh-Hans
+    source_fingerprint: sha256:35717c5a58888f6569fd81887ec25ad15eb5073dfc0d6b7053a56936c7dc059d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

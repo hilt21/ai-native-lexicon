@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: autopilot-stack
+provenance:
+  original_sha256: 8d1253aee779e88b361308d967c4115a9461b2f62b302d3cdd10684fc7895aa3
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: autopilot-stack
+    language: en
+    source_fingerprint: sha256:1dd10ad269b38ace9a788a3228de909c5923dba471c968a3fcdd00508a3a752c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
+    language: zh-Hans
+    source_fingerprint: sha256:d3761f786f689fa2a350f47d7285ef553a0df45a7e721e75f416e4da451d10ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 拉取请求队列
+    language: zh-CN
+    source_fingerprint: sha256:36cc20af7807a9e245e4e03bb8ec5d187cdde68344172b0abfd3c88a46b344d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 目标变更栈顺序
+    language: zh-CN
+    source_fingerprint: sha256:28894a299bf30f6c30e57a8ddeea64b0be7be2a09343058734d9d156f6a3dcce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已验证的线性变更栈
+    language: zh-CN
+    source_fingerprint: sha256:f39cefdbd2878fa44a8be80d4fa8af785264666e76bcda05e77fee67c03c54e2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 可进入变更栈的提交 SHA
+    language: zh-CN
+    source_fingerprint: sha256:11447d4a970e7f2a3867cf372b7c43b70d482631dfe9a39795d521b45cd6d98f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 操作人员交接
+    language: zh-CN
+    source_fingerprint: sha256:1c604369a9f23d48fcabf1d9a5791f1c978e71ae06f7ddbcedef0c07c1f19374
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 沿用 one-owner lifecycle；root hourly audit；root 是 topology single writer；verified PR 依序 append 到线性 stack；不 merge。
+    language: zh-Hans
+    source_fingerprint: sha256:7ae2e1c6a733c3ccd057bc3704a450d6181fd3536c4a5e090665f4625c8bf91c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 多个相关 PR 要自动构建
+    language: zh-Hans
+    source_fingerprint: sha256:b1859aecb11b93c548ee2be00b961efbe89be5d35e425fe69d92944b210e5029
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要人工最终 review/land
+    language: zh-Hans
+    source_fingerprint: sha256:c642037c0f2fc8fd3ca5131f63e2e978914b5bd0ced5a57f2ffd789dc95f71ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 多 owner 同时改 stack topology
+    language: zh-Hans
+    source_fingerprint: sha256:2ed4fc6966405a4bb10f8c46e897463aaa0309566fc083015068643d294af5e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 自动 merge 超出 operator gate
+    language: zh-Hans
+    source_fingerprint: sha256:87312f7e195f3b4a97446a224c037f82df98191bb37d910879e8b1e4c8f253f8
+    review_status: reviewed
+    reviewed_at: 2026-10-13

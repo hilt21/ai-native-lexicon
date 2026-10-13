@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 关于达成目标的预期步骤、依赖和停止条件的可检查表述。
     source_fingerprint: sha256:2691567155e9f560193dcc47dbe805747f27719c6bd86dfb16e9b0fbecce17a3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 需要协调步骤，或需随新证据修订的任务。
     source_fingerprint: sha256:fb80a69583a4c2b7e061cdfdc0741ceaee40b6f5e8e77069c2cbbd72f93167b8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 使预期路径可审阅，同时避免将其视为执行保证。
     source_fingerprint: sha256:fe1dbd9e3a7eefdfae4ef2496145163edf348c4c0ea5f6b04424d365d53f4bbd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 规划是生成或修订计划的过程；计划是该过程的产物。实际执行可能与计划不同。
     source_fingerprint: sha256:f849a350fa734174f19d360d4633c91260b342dbfb2df490107deccb3f162ca1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 目标 → 推理 → 计划 → 执行
     source_fingerprint: sha256:0a9144b6dcd011ebeff89d0d662b0dbdec11082baa29475f7cc3fcbebf78e562
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 迁移计划依次安排备份、转换、验证和切换，并规定验证失败时停止。
     source_fingerprint: sha256:d6fbc697fc8c627a4287a92d929f771d2f67187b44709cd4aae1a760bdc8787f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 计划
     source_fingerprint: sha256:02cf83343fc378aafdb14dfd3f06eba09cc91654d8aca6cfb82929f39c2fd3bf
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 为达成目标而规定预期步骤、依赖和停止条件的可检查表示。
     source_fingerprint: sha256:e3e8b5e7a39c0c02c0ef9caeef8bae7fab1b523459dc036b8d5e65ec5012bb44
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 证据使假设失效时修订计划。
       - 动态规划无附加价值时，使用既定工作流。
     source_fingerprint: sha256:3ab52e7ae6f6f95e1a76a6eebab632660f6b7a014ef7d8cff7e466c4bba9fd86
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 大语言模型可提出步骤；软件记录依赖，并执行已接受的运行边界。
     source_fingerprint: sha256:5d9923f69fd9e98f182bf22f5971ba8aee8aa9215f23b91576d3247574b330dc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 需要协调步骤，或需随新证据修订的任务。
     source_fingerprint: sha256:4cd67aae10c076986e667c1819a4f588bc82865d4b13a69ed2ab45c3279fa2c5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 协调或新证据可能改变完成路径时，多步骤任务可从明确计划中受益。
     source_fingerprint: sha256:a30b2031e2f6b5b25514ff1f079bf9ac6ce51cb55665bc22a1837c1d9ebc150b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

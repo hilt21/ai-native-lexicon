@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-prove-it-works
+provenance:
+  original_sha256: 76bb149176a35ff00d46a0b5c661a2edbfc6a2e0ac30a2263e42d8f4e1fbc7b8
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: prove-it-works
+    language: en
+    source_fingerprint: sha256:24e6973dc6a9abe7c3c3de04723c002e88ff196beace357f03e96cab42f8f852
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 完成前验证真实 artifact 和真实行为。
+    language: zh-Hans
+    source_fingerprint: sha256:99eb4b3a2917b24537ef9cd1eb1e028e0891cc643094174334275fc9d28e4841
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:99caa2643eb74ad14e2ffcbd9667160c251925036b2d048cd9e4f077798da7cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 候选结果
+    language: zh-CN
+    source_fingerprint: sha256:d9084b4e09048933a5e75434225b9f5c54f0677ea5ecc2dbce354ad31ddb4d51
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 实际场景证据
+    language: zh-CN
+    source_fingerprint: sha256:3cd0cab0333fb2617447eda5ffa2a0ebf8dbfc09eb69708ef22d882d7e0093ed
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply after completing a task, before declaring done. Verify against the real artifact (run the feature, read the actual value, inspect the diff), not a proxy, self-report, or 'it compiles.'
+    language: en
+    source_fingerprint: sha256:7fcaba749017e0be327d4db41c3c5c4d161bf74e0e699af1759467d6772d24b5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 完成前验证真实 artifact 和真实行为。
+    language: zh-Hans
+    source_fingerprint: sha256:f2a874faf945de1038b6258eb17d9ebd458219ad44d8116f8cf6372c33cadbbc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 完成任务后、宣布完成前使用。针对真实产物验证，而不是代理指标、自我报告或“能编译”。
+    language: zh-CN
+    source_fingerprint: sha256:0f71e67d7c9aca59fe0d01816e84b2b78270a29b92bbf22c71d7f762df15ff1e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 完成前验证真实 artifact 和真实行为。
+    language: zh-Hans
+    source_fingerprint: sha256:c67eb421da7a0eb75d4cc40e4953427d00cb5ac26c12ffa4417bc4b9238fb7f3
+    review_status: reviewed
+    reviewed_at: 2026-10-13

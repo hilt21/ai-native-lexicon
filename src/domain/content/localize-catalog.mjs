@@ -36,6 +36,8 @@ export function resolveCatalog(catalog, overlays = catalog.translations ?? [], l
       data.priority.rationale = units['priority.rationale'].text;
       let inlineIndex = 0;
       data.definitions = canonical.definitions.map((item) => 'concept' in item ? {...item} : {name:units['definitions.name'].text[inlineIndex],text:units['definitions.text'].text[inlineIndex++]});
+    } else if (kind === 'speaking-guide') {
+      for (const path of Object.keys(units)) data[path] = units[path].text;
     } else {
       data.label = units.label.text;
       if (kind === 'category') {data.description = units.description.text; data.question = units.question.text;}
@@ -57,5 +59,5 @@ export function resolveCatalog(catalog, overlays = catalog.translations ?? [], l
     });
     return result;
   });
-  return {concepts,primitives,categories:(catalog.categories ?? []).map((record) => resolve('category',record.slug ?? record.id,record.data ?? record)),layers:(catalog.layers ?? []).map((record) => resolve('layer',record.anchor ?? record.id,record.data ?? record))};
+  return {concepts,primitives,speakingCards:(catalog.speakingCards ?? []).map((record) => resolve('speaking-guide',`card-${String(record.data.number).padStart(2, '0')}`,record.data)),categories:(catalog.categories ?? []).map((record) => resolve('category',record.slug ?? record.id,record.data ?? record)),layers:(catalog.layers ?? []).map((record) => resolve('layer',record.anchor ?? record.id,record.data ?? record))};
 }

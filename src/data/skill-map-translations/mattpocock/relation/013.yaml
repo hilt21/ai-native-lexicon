@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","to-questionnaire"]'
+provenance:
+  original_sha256: 65912cf07d51bba7b39ee7ecc0d7c8b65560f925de660d226b45a71b00af09f0
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 缺失信息由另一位利益相关者掌握时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:247c25388e67f6a9f7c1a6f36ea42f4be3d6e0a5899b6bef10a52d0fe3eec6d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13

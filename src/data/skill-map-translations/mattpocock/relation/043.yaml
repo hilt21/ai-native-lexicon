@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["prototype","feeds","handoff"]'
+provenance:
+  original_sha256: 445ff40e4f22e9ace63d968cf430b9cb4b9c41e82e0e2f186b8f8eec1c252ec3
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 仅当跨目录、新 harness、交给同事或阶段中分出的侧任务需要 portability 时，交接原型问题、结论及来源指针；普通返回讨论不需要 handoff。
+    language: zh-Hans
+    source_fingerprint: sha256:6c68a14a6ae229aaf5909a8d35bebdada93eeaa4328326d0c8fa1e1e25608c15
+    review_status: reviewed
+    reviewed_at: 2026-10-13

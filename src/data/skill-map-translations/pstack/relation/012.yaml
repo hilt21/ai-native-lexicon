@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["bug-fix","governed_by","principle-prove-it-works"]'
+provenance:
+  original_sha256: 7f9eaa796886efcc0cd12b4e3af4eea1dbf4342d2d41504c273600d0e99a54e6
+  retained_at: 2026-10-13
+units: []

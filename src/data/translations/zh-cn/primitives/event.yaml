@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 需要与对其解释或观察区分开的重要发生事项。
     source_fingerprint: sha256:643ff34d978b033b2477212d2faa00cd60720c53a14aeeb17caec213e8711ed6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 响应变化或需要重要发生事项历史的系统。
     source_fingerprint: sha256:132fdb4be043b1a6161280f5bf580960a1342b2ac8d8edac726be64ae6b650af
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 根据记录事实驱动转换，避免仅从叙述推断进度。
     source_fingerprint: sha256:2c2414bf19562bbb4f4355292484e71decf510f3561c09c7789f93c8f5bee81b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 事件是发生事项；观察是获得的相关信息；追踪关联多个已记录步骤。
     source_fingerprint: sha256:6ad3d6fd361cfbf2b0a0f91b8fa5c9df2302a5865b8aa21053b493a2848b9794
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 事件 → 规则 → 状态转换
     source_fingerprint: sha256:ccaba6ddbc4fb62d1c8a1e73d06059f4be750439a3e651578a6c0d36259f53e9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 工具完成事件记录任务标识、完成时间和结果位置。
     source_fingerprint: sha256:835b21e6dc7ab862b170b4831ba4c8711f5a3b63ee7065b26b2155b5754fd609
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 事件
     source_fingerprint: sha256:0999054584a7885c0e47133dbdc9aef57c8b84211ac4f143056daf3b4798016e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 某个重要事项在可识别时间点或时间区间发生的事实。
     source_fingerprint: sha256:8ec26d24d37a09577e0f8b4eef30f20926097c62fb375b010b8dd866ac511f84
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 区分发生事项与对其原因的解释。
       - 交付顺序和重复情况可能与发生顺序不同。
     source_fingerprint: sha256:4b5503e676a248e6201b37a90acab5f7f1f4c0a4eea6004194150464ad2418ce
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 运行时检测与记录机制及事件存储，使用标识符和时间戳记录发生事项。
     source_fingerprint: sha256:145287bba48f11be0f59b26bc307e0755b9a286ce69d8c301a796e233616ec27
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 响应变化或需要重要发生事项历史的系统。
     source_fingerprint: sha256:378b19cb2fcce1db05e9e90112da853726d4b495af003c2bd32a6c0d9da84e22
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 响应变化的系统需要可识别发生事项，以解释转换并区分实际事件与推断进度。
     source_fingerprint: sha256:0266a4b427073ef190b058b18dcfbd41be5f3c81684f2ab22891ccdc21ceaf47
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

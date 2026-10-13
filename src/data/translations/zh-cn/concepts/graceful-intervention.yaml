@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 允许人在不损坏状态、不丢失已完成工作的情况下，暂停、转向、纠正或接管智能体工作流。
     source_fingerprint: sha256:f69f2b5a4b56becc17f887202fcba3319c5f694e4bb24a1278a48df09a1ca7c9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 优雅干预将人工输入视为正常控制转换。系统到达或创建安全点，报告已提交影响，保留相关上下文，接受意图变更，并以明确责任归属恢复或交接。
     source_fingerprint: sha256:4f6283da8bee3488d504e6fa1aaacbd4a0979e6d2c1381c385b8132e0726ec0a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 实际目标和外部条件会在执行中变化。干预控制使用户无需在被动等待和破坏性取消之间二选一。
     source_fingerprint: sha256:76677489033de42c3bcb5ecc302165390a88a75d2a2c08f4a8f37208b7ccec73
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于长期、高成本或重大影响任务，尤其是可能需要中途纠正的工作。
     source_fingerprint: sha256:c600bfeabc49661044c1c3317a21d4dc2f7ec6fd14dbbface0499f297aebbce2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 仅提供停止按钮，放弃状态，却未解释部分副作用。
     source_fingerprint: sha256:bfab1f4da328b519c297759cec828b64e8dee0463465e78782aea917cf72a0b3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

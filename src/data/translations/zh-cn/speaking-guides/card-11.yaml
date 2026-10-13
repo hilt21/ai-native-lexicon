@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-11
+units:
+  - path: title
+    translation: 权限与治理
+    source_fingerprint: sha256:baed7f8af1a580f5fe8d257fbeafebeb0ca2d61815ce7ade31f722110a0c5426
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 智能体应只拥有完成任务所需的权限。
+    source_fingerprint: sha256:2ec5f257519d8eac3d3ccd13b3c0b90929233cab05b082c0abb588ba75f84689
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 组织中的哪些信息，AI 智能体绝不应默认访问？
+    source_fingerprint: sha256:779d13b72b323099ccddd018bc0ed4451d1b7decfcb2181e2d573a1d44dddd8c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:1edfa49ff4516575419b9e1c0f317ef83da7a7fd926ba6ec20ff1aace43f6039
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 即使权限设计良好，我们仍需知道 AI 系统是否实际表现良好。
+    source_fingerprint: sha256:b404aa5a6fdbc7e06a4ecbcda31e581cf8c0bcbbe8952e963be38a9dfc8ab151
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 智能体可以访问信息并采取行动。
+      - 因此权限设计极其重要。
+      - 访问应遵循最小权限原则。
+      - 敏感操作可能需要额外批准。
+      - 治理应从一开始就是系统的一部分。
+    source_fingerprint: sha256:4b15efe8feeca4007170b3bfb8c78abaf803d87058f36d8e182694a82ca225c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设人力资源智能体帮助员工解答内部问题。
+      - 它可能需要访问一般的人力资源政策。
+      - 它不应自动获得每位员工机密信息的访问权限。
+      - 不同任务需要不同级别的权限。
+    source_fingerprint: sha256:6415ae9f166de28d8183d0b5f1fae9cff56348915a799e6e232efe0b8d3f72db
+    review_status: reviewed
+    reviewed_at: 2026-10-13

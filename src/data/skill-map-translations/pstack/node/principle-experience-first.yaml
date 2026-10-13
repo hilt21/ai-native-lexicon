@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-experience-first
+provenance:
+  original_sha256: c2878d8d5b33fbca3b648861d3ea961976e35e30fd9cefe8502f4f720314814c
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: experience-first
+    language: en
+    source_fingerprint: sha256:24071814a9236a74ef9a691d481614948ca9cf7bcdafdad4b0a28b67d99df7eb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 产品取舍优先用户体验和完整度。
+    language: zh-Hans
+    source_fingerprint: sha256:8d51d68d6fa6bdcddf8fac482730b99fce24b05d02e3673d4f1c7469852fd57f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:1e12e6b9b1483c218f19153fa52dd766958d7d70ec6b201a107f5f949fceb043
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 产品取舍
+    language: zh-CN
+    source_fingerprint: sha256:69ee88b48f242d2de686b8bedfb492b7e27ded55640bca05be3b6718ccaddb45
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 以体验为导向的选择
+    language: zh-CN
+    source_fingerprint: sha256:804decca1bac26311b637630546f30d4e1ee39a27c38112e31a8381d9a36b436
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones.
+    language: en
+    source_fingerprint: sha256:a9a1225dce4e5f1cc368ed75b230f14aaf2906bbb62a501f6401fe15d650e2d6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 产品取舍优先用户体验和完整度。
+    language: zh-Hans
+    source_fingerprint: sha256:827ebbd4cd5013401d938d613db6fe3cf01673713b7ab22c38e646eb6d573684
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 遇到产品、用户体验或功能范围的取舍时使用。优先选择让用户满意的体验，而不是实现上的方便；宁可发布较少但打磨完善的功能，也不要发布更多粗糙功能。
+    language: zh-CN
+    source_fingerprint: sha256:8b5d7d7ea1e6fc2a6b24bf5825e80189fae1e6f51ecea3d7fef80137493d10e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 产品取舍优先用户体验和完整度。
+    language: zh-Hans
+    source_fingerprint: sha256:e1c02fca95eb81242586e7c7ff8b00023551e36656c48217c7f940152c1be08d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

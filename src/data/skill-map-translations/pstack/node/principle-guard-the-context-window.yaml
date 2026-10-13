@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-guard-the-context-window
+provenance:
+  original_sha256: c8898937ae9c2f61ee1b40a9d60bb9be46f6e8fc9eba56ddb84b38aab3b798e0
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: guard-the-context-window
+    language: en
+    source_fingerprint: sha256:a18c0f6ef0f7bf15f9dfe9992dccbd6321a704d1307a9f50273b9f6519793c24
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把大 payload 放到 subagent，主 context 只保留摘要。
+    language: zh-Hans
+    source_fingerprint: sha256:c5e8bb47c163f4b9d2dfdf2cf90df77ac813ffef9022ecba6f64cdcbb08cff1e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:2207494c4fcbd332db218f8064b9242ab2cf57146e36ac741f2ac9c6ab6dd2c8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 大量上下文内容
+    language: zh-CN
+    source_fingerprint: sha256:46df8593558e39b2d9b4bff2dacd8aa114e9466dd9a96078f2223031ed317217
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 压缩后的摘要
+    language: zh-CN
+    source_fingerprint: sha256:7c6ac43e48e53dab64c93d37f7ae7b7d5bc8d92f17e76d6c16e295e53442b141
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Apply when context is filling up: large outputs, long files, repeated reads, fan-out planning. Route bulk to subagents; keep summaries in the main thread, not raw payloads."
+    language: en
+    source_fingerprint: sha256:9fbdc766398ab20ef85019b3d1d1ecdd682dfd2409a22955ce103fa4a2c2893d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 把大 payload 放到 subagent，主 context 只保留摘要。
+    language: zh-Hans
+    source_fingerprint: sha256:87302447a34a9f27bde5184208dcde53c032890667ab736ca8172b27e999cd51
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 上下文即将填满时使用，例如大段输出、长文件、重复读取或分散任务规划。将大批内容交给子智能体；主线程保留摘要，而不是原始内容。
+    language: zh-CN
+    source_fingerprint: sha256:8d0c7242b9e8b602070214e419d61ffdc1b4c30dd5ab97954d366701f53049e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 把大 payload 放到 subagent，主 context 只保留摘要。
+    language: zh-Hans
+    source_fingerprint: sha256:ced98799702bd787680b0d4bdc684b11d9849bd3b5d8b6e72c5efcc6765a7b24
+    review_status: reviewed
+    reviewed_at: 2026-10-13

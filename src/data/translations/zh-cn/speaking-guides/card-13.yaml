@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-13
+units:
+  - path: title
+    translation: 寻找合适的 AI 用例
+    source_fingerprint: sha256:fa01ee4f659abb56693a7c0e3a81bf3e11ef226d540602efea719b8ed56ac643
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 最佳 AI 机会往往始于业务中的阻力。
+    source_fingerprint: sha256:7cecff61410c3057d672d1ddd18707c39b3f515890cd98974fc3a84a2db1acda
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 哪项重复任务是你乐于永远不再手工完成的？
+    source_fingerprint: sha256:645885575067d5546a423c669b72a755b516d55e4a63411844e51882fa17d838
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:9554d2e413c4d5e80274ae59417f7c88e5ae409543021ddf2b1ee32649377e53
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 找到一项合适的任务之后，下一个机会往往是看看这项任务之外的流程。
+    source_fingerprint: sha256:66ff1b7fd250d4a0c62051bf6ca0c92b62df57b1ca407e59e39fabb030c46a12
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 先寻找浪费时间和重复劳动的地方。
+      - 关注搜索、阅读、比较和总结。
+      - 关注交接和等待时间。
+      - 关注依赖分散信息的工作。
+      - 然后判断 AI 能否消除其中一部分阻力。
+    source_fingerprint: sha256:1adf8a260aa0a4bd563356552a190ab89b3214cb1b24e649b4428d88e30e6d88
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 项目经理每周花数小时收集不同团队的更新。
+      - 信息已经存在，但分散在邮件、文档和系统中。
+      - AI 可以收集信息、识别变化并准备初步总结。
+      - 这是一个有力的用例，因为痛点已经存在。
+    source_fingerprint: sha256:7b1b143800c8370af030f5d0ac1672e94c8131a98d16eded0dcdef2c696d6254
+    review_status: reviewed
+    reviewed_at: 2026-10-13

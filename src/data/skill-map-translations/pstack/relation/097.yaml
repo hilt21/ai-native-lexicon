@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autopilot-full","routes_to","shipping"]'
+provenance:
+  original_sha256: 6f3376b08772a12e16bc4e3ab1523f65fcbf4bc2b9ae5e802c500b3023701223
+  retained_at: 2026-10-13
+units: []

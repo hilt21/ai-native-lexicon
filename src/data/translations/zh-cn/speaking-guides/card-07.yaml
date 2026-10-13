@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-07
+units:
+  - path: title
+    translation: 企业知识
+    source_fingerprint: sha256:262489fa1baf6a5398de6e0af97314e002e06f5e2039cae17c2acdf85282ed74
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 企业 AI 能够利用人们实际使用的知识时，才会产生价值。
+    source_fingerprint: sha256:53e27758009bb7445cf2c43d104f72d3996e09f87888a46968cfdfc95e86f3c7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你所在团队最有价值的知识目前在哪里？
+    source_fingerprint: sha256:83677e841ed5e562f21586d32d2821fac1410620fa4b18bbf9905479b02ba480
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:18ec12dffd6a16fbc401e19632a17fbe8d211b340025098b344f571d88dc50b7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 知识帮助 AI 理解情况，工具则让 AI 能够采取行动。
+    source_fingerprint: sha256:7671ae9edcf026b9a43252fa53c65f5847f4e270f7bdc2fbb4b2ad1b3a3b8a54
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 公司已经拥有大量知识。
+      - 问题是这些知识往往分散。
+      - 它们存在于文档、邮件、数据库和人的经验中。
+      - AI 可以帮助关联这些来源。
+      - 但知识仍必须准确、可访问，并受到治理。
+    source_fingerprint: sha256:654236fb74494111c9f4c839abb22367de531dcaab082cab50343c3882c8967d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 设想一位新工程师加入项目。
+      - 重要信息可能分散在 SharePoint、旧报告、会议记录、邮件以及资深工程师的经验中。
+      - AI 助手可以帮助关联这些来源，并在回答问题时提供相关参考。
+      - 这可以缩短理解项目所需的时间。
+    source_fingerprint: sha256:bd4693eed08c4fd5c8b8506bf1b624c655464c8a55e17836e52571c9f04bbde6
+    review_status: reviewed
+    reviewed_at: 2026-10-13

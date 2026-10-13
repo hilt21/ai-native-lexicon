@@ -1,0 +1,50 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-09
+units:
+  - path: title
+    translation: 人在回路中
+    source_fingerprint: sha256:17b8c7b02dbf743e7a00dbb39b1c19df1744346957fad86a91275e7e2a473ed3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 应把人的判断放在最能创造价值的时刻。
+    source_fingerprint: sha256:218d8e4182ac93537f748358027f5a79d80b4ddb570c1dbc71a148f22067fa55
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你工作中的哪些决策应始终要求人工批准？
+    source_fingerprint: sha256:260b3410a5cb8a8000b1faaf6b70bb835db92e7b413b1dc06761b84f0e7bed1d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:3ac764d795223947faa534e832ce2eb6ce6c01a304326dc577fb72b47c8da4ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 人工批准有助于控制，但人们在信任 AI 建议之前也需要证据。
+    source_fingerprint: sha256:01297a12de21da14385f052b0e3e9d4c654d3cae9a9093a4bf6dbc3d3a14d6f0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 完全自动化不一定是目标。
+      - 有些决策风险低，而且重复发生。
+      - 另一些决策涉及不确定性、责任或业务影响。
+      - 人应关注这些高价值决策点。
+      - 好的 AI 系统让升级处理变得容易。
+    source_fingerprint: sha256:d5833ac3168ea77d98fd67553ff6f8457916b972d53951a92f817c3051fb3d2d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设 AI 智能体在准备技术变更提案。
+      - 它可以收集信息、比较版本并准备初稿。
+      - 但最终技术决策仍可能需要经验丰富的工程师批准。
+      - AI 承担大部分准备工作。
+      - 工程师专注于判断与责任。
+    source_fingerprint: sha256:449f0bc952b28fd88c1f751f1e38dcd6f22f6201567c34d17c96643830c9f7a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["to-questionnaire","feeds","to-spec"]'
+provenance:
+  original_sha256: f20f4337decb4b188bb45dc9f39fc90a2bc7fa9eb37478fadb6934be9dd4937f
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 取得回答且决策足够清晰后，可作为规格输入；用户显式启动 to-spec。
+    language: zh-Hans
+    source_fingerprint: sha256:626e14c11cf286e902c5ac781ea8643759e5c175a42efb4f6089b3f91c0eb8d6
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["eval","feeds","authoring-a-skill"]'
+provenance:
+  original_sha256: 4678c547a6b67db51c445846544e499318d5c759531aafe861c58afe98d1cab3
+  retained_at: 2026-10-13
+units: []

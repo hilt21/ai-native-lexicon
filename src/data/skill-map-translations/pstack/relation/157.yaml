@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["poteto-help","routes_to","setup-pstack"]'
+provenance:
+  original_sha256: a50fc367038628dcb0b31d53da6126ccc09b5c8b6c401bd98645956d1ca5ce75
+  retained_at: 2026-10-13
+units: []

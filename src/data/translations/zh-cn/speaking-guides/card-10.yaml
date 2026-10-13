@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-10
+units:
+  - path: title
+    translation: 信任与证据
+    source_fingerprint: sha256:a096b201f44800910d889480a76bd4cbf2253fb1f5017bad50069939b9155689
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 在企业 AI 中，有用的答案也需要证据。
+    source_fingerprint: sha256:a0ea9d08655397ad338310e6981a667de48eca6f61e4f45fe4a533b7adc076e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 在信任工作中的 AI 建议之前，你需要哪些证据？
+    source_fingerprint: sha256:719bc02e78048e03ed5af9322998b359dadaca947e63ce7b75816b01d4e147e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:295c1ab8cbff53fcb0546c2ee627adc81fece252207caefede95b638f0c9af93
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 证据帮助我们理解智能体做了什么，权限则决定它允许做什么。
+    source_fingerprint: sha256:815edc39ee612a226f05cb59eaab170cbae62a6c690de286fc42319f5689b944
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 信心不等于正确。
+      - 人们需要了解重要信息来自哪里。
+      - 好的系统提供来源、日志和可追溯性。
+      - 证据让人能够核验 AI 输出。
+      - 系统让核验更容易时，信任就会增长。
+    source_fingerprint: sha256:c753ee25b2a511a877d838dc1aeb44e795a36f7d8b48277a7ef2ac6b535cd471
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设 AI 告诉工程师某个组件符合技术要求。
+      - 只有这句话是不够的。
+      - 工程师想知道：是哪项要求、哪份文档、哪个修订版本以及哪项测试结果支持这个结论。
+      - 证据让 AI 答案变为可以审查的内容。
+    source_fingerprint: sha256:a09dc6a86f188aa94c7e318b0a66a6c3a54cdbd88f31c81a6925317ea0a6ff04
+    review_status: reviewed
+    reviewed_at: 2026-10-13

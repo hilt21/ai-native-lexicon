@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: visual-parity
+provenance:
+  original_sha256: d7c93633dab3812fe406162cd9318c74a3ee604ef0830f1b63cec820e5fcf20b
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: visual-parity
+    language: en
+    source_fingerprint: sha256:c191acd8c500cfca367438b1a803a90896969e9f3eb15cf6302e157c5576a6ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 以 baseline screenshot 为规范做 pixel-exact 迁移。
+    language: zh-Hans
+    source_fingerprint: sha256:c54f9bcaecd49e76a6e2559ed6c271bf72cd67588bb8fafa6722190188e54ebb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 基线截图
+    language: zh-CN
+    source_fingerprint: sha256:cb886b2501b06ce41acbb5fe5ccbc526cd30c13d06bc48401dd0b3301b9b973d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 目标实现
+    language: zh-CN
+    source_fingerprint: sha256:8febeee58c9e7f67fbcea929e9f655ea06cf800676c19f006d99601df5ac4917
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 像素差异证据
+    language: zh-CN
+    source_fingerprint: sha256:6014d43416387c67765edb1f0f77d51093980979eab0c6d6eadf4304e8989cbc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已迁移组件
+    language: zh-CN
+    source_fingerprint: sha256:11603b8d8a3d7b81475c703f1c0a712019ff835fc78103333176d7a46a3347d5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 拉取请求
+    language: zh-CN
+    source_fingerprint: sha256:d4728c9aaa11d4046fc1d780fca2e2a0a186b842e54802c7178124a8cae15117
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先建立不可修改 baseline → component-by-component 迁移 → worktree 隔离 → image diff → 非零即失败 → loop 到零差异。
+    language: zh-Hans
+    source_fingerprint: sha256:3df12f65418a456ba935fb446d18186a9d0b12492b6f5ad93fedf0b35afae0d4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 界面迁移
+    language: zh-CN
+    source_fingerprint: sha256:f27103e0dadeff0716acf91d5ce502977efb6d36a54e06e595258d51fa395c35
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 两个实现要视觉一致
+    language: zh-Hans
+    source_fingerprint: sha256:020fd9fd830c24d2f7ee7dd7efe92ced04b005970bfb033607abbaf2f0618d6d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 肉眼判断 parity
+    language: zh-Hans
+    source_fingerprint: sha256:b57cf0c0610f90cf1a06690af81a7c414ac800e9e79e31766dd00aa7df074c8a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 修改 baseline 让测试通过
+    language: zh-Hans
+    source_fingerprint: sha256:794814784b13ce4f4e2eab1bc41ca3e026d317f96af4b8e7e6626cf707ddad47
+    review_status: reviewed
+    reviewed_at: 2026-10-13

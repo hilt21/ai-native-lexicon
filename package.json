@@ -21,6 +21,7 @@
     "schema:check": "node scripts/content-schemas.mjs check",
     "test:l2": "node scripts/verify-l2-expansion.mjs",
     "test:browser": "node scripts/verify-web-browser.mjs",
+    "verify:i18n": "node scripts/verify-i18n-publication.mjs",
     "verify:online": "node scripts/verify-online.mjs"
   },
   "dependencies": {

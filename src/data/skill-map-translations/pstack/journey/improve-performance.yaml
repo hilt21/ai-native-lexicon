@@ -1,0 +1,207 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: improve-performance
+provenance:
+  original_sha256: 26c5370f8ab5c95ef3503a5a1c47331e8725b2792edbe43019adcb132b2cb7f9
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想优化性能
+    language: zh-Hans
+    source_fingerprint: sha256:9991d372dac9dbf75b5a81e180b227bb14332c10b1a38cd1f2a05e3b1dfeb42e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 我想优化性能：从任务入口到可检查的产物。
+    language: zh-Hans
+    source_fingerprint: sha256:645353535411b729d36be781de46d3f62c574b5ba3a73e2ec579763862e39243
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 明确的任务目标与相关上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:9f0fda7510150c034509a88eaa95e454c3189d333943500f9a245702211b9192
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 这里很慢
+    language: zh-CN
+    source_fingerprint: sha256:71154f096f8f374e3428c5b84786d9e9c40d88a17e610d3e326ad8853b8979f4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 将延迟降低 50%
+    language: zh-CN
+    source_fingerprint: sha256:9898cb014ca14c1febd671326275251d2707a95e1cb2d365159ed67f58654eab
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 有测量依据的性能改进
+    language: zh-CN
+    source_fingerprint: sha256:84f592478858dd587185753db11817ae3bfdb525869e5afec3c1cc287e39d163
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 推荐路径
+    language: zh-Hans
+    source_fingerprint: sha256:14a46996a8f64ca0daa68311dd0915aa050e4134a2a0f9e62fcc6c6ba5ead714
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 选择测量入口
+    language: zh-Hans
+    source_fingerprint: sha256:5b2181e5f1dacca897eb6e8d9d1dd4fe373e1d1f9983293e4ce8b8aeeb8dc343
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: pstack 的总路由器与工作风格入口。 一次性性能问题的测量、修复与证明。
+    language: zh-Hans
+    source_fingerprint: sha256:39fe090f0c7f933d12e544afd4500cc7a1b8b848409db04d331b556f59438718
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 确认测量
+    language: zh-Hans
+    source_fingerprint: sha256:5d38b4b5f5622f67c17a20e6224a830393d9c9575d04e141d3868f6a89c38504
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 验证性能数字是否真的测到了目标工作。
+    language: zh-Hans
+    source_fingerprint: sha256:98818800f8f1d9010ca37d0e3b49d133df700916a7d2c98e28ad6a8fcc058357
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 理解瓶颈
+    language: zh-Hans
+    source_fingerprint: sha256:26605802c5b25160b5873e474c2b9d9cc96f50b98b7e768d921833f3e2af852b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 建立系统如何工作的 mental model。
+    language: zh-Hans
+    source_fingerprint: sha256:37183c0d7e518a1e9be7716910a35513f8f024026e4e20478a6ebf6cc9b88489
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 设计改动
+    language: zh-Hans
+    source_fingerprint: sha256:e10cb48f744312619d9bc13c7161fb774056a3c077e950c59185a2c6dae4a9e3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 在写代码前确定类型、接口、模块和数据结构。
+    language: zh-Hans
+    source_fingerprint: sha256:169cd087bf620b938a335306e72c902f6334c5694cc4ef559ec101b2e6fe6283
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 优化影响系统结构时。
+    language: zh-Hans
+    source_fingerprint: sha256:5fbae0cf879ab8a5e6fd2eb727027031d02b975f3fcc7fa0857755315ec7df99
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.title
+    translation: 准备 PR
+    language: zh-Hans
+    source_fingerprint: sha256:643c05959bb1d3447e4bb3b1e725eebec602c496adb1f1f00788217be56c8423
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.why
+    translation: 把已验证 diff 整理成可审阅 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:2c83e8ceaf006826fa9ecb74a40c9809fde92b00e5cd1e542ac1a449604ea82f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.title
+    translation: 审查与发布
+    language: zh-Hans
+    source_fingerprint: sha256:2a98d3c72f492f08af543ce6bf3a0a1320fa5f32e104bc8dc22668d68619308a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.why
+    translation: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    language: zh-Hans
+    source_fingerprint: sha256:a580c9e0afe9868340cfe739820506f3fef39912775cca84577377b168bfedab
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.when
+    translation: 需要推进发布且已获得相应授权时。
+    language: zh-Hans
+    source_fingerprint: sha256:ca8076985a040eb8fe87740a4e2bff19f641a54d54de7b3fd1c539c699de6d58
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.title
+    translation: 持续改进一个指标
+    language: zh-Hans
+    source_fingerprint: sha256:0c39f7c3c14c4a2d95a50085b315e9da4a634b6186b359088e70b8afa9004050
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.when
+    translation: 需要针对单一指标反复测量和改进时。
+    language: zh-Hans
+    source_fingerprint: sha256:2bcd0de07f56dee5a35f692efee94238f7b46965537baf0107e6272b7d200da3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.title
+    translation: poteto-mode
+    language: en
+    source_fingerprint: sha256:a9e937257f36b8d5189b2e7f5255d94b36f41060f0c8300053d687c071e2a94d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.why
+    translation: pstack 的总路由器与工作风格入口。
+    language: zh-Hans
+    source_fingerprint: sha256:ef6a162e8755f166486d84f29551ca31357e832795eb6d6954fc9ea58c54e7ab
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.title
+    translation: hillclimb
+    language: en
+    source_fingerprint: sha256:a07817119493b182979ea44a5b18a7af5a4ffbc1fcd95b3d563dec23fa227c19
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.why
+    translation: 围绕单一 metric 做持续、可回滚的迭代优化。
+    language: zh-Hans
+    source_fingerprint: sha256:aae90a3ed993e6a03d46075b9b1729d53b3eef7f8815b835d828c40a33c9279f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.2.title
+    translation: benchmark-checklist
+    language: en
+    source_fingerprint: sha256:8ede6d5a7a7bca1823e8485b9b13985348458ad8b7ac3c2fe551f34d385f3985
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.2.why
+    translation: 验证性能数字是否真的测到了目标工作。
+    language: zh-Hans
+    source_fingerprint: sha256:1f6e8df3c651941696d497fd9c00001f50ba547b3040da6d8201c993fbc69447
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.3.title
+    translation: show-me-your-work
+    language: en
+    source_fingerprint: sha256:1c2e62f9732b7fdb0569fff6576cbdb408e4a81382f313f2bd0c92e55366662d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.3.why
+    translation: 把长时间 Agent 活动压缩成可审计 decision trail。
+    language: zh-Hans
+    source_fingerprint: sha256:1087d09aa64c235cbf1ae181d8d6010680827bb8d12fd7e1fd61e87ac9cdb49c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.4.title
+    translation: opening-a-pr
+    language: en
+    source_fingerprint: sha256:32bef30e7f3483b12bf0ec3d82b3722d29839b6673ce93bea14865820c4db4d9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.4.why
+    translation: 把已验证 diff 整理成可审阅 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:71e233981cd6720e73f6da9ab4ecc7cc02b70d4aadd21497efd9cc44df887db1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-never-block-on-the-human
+provenance:
+  original_sha256: bdab1bb698958ac6f9e18b82389f076176c08baaecbb51648b2b11465649791a
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: never-block-on-the-human
+    language: en
+    source_fingerprint: sha256:a8906ae63bd925e2234e3e321906a54718c32780fdd25c81443f8fde00450245
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 可逆工作先做，只有不可逆或无法实验解决的偏好才阻塞人。
+    language: zh-Hans
+    source_fingerprint: sha256:aa3547f1a3fc793e169ede3e8b195334a00c874d7140a1f9a9ce9d2a70c8e376
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:10c9f7d8920b7eef1e94c695be74ffe2fdf2b6ad58a4aa0f5b28a759aed82a67
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 可逆决策
+    language: zh-CN
+    source_fingerprint: sha256:f567d6a715f47f8c0750ec980c3c04267338c5f8dfd03613c3b9882142a0eee8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已执行结果或已升级处理的不可逆选择
+    language: zh-CN
+    source_fingerprint: sha256:5e717a3c0dafd7fc5e775ee5c8be516c89111bd5d6145253e5e0dd1299becf2e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when tempted to ask 'should I do X?' on reversible work. Proceed, present the result, let the human course-correct after the fact; reserve confirmation for irreversible actions.
+    language: en
+    source_fingerprint: sha256:7e01842c18e4d0d4f3b424914cfce8798ba2a9d2b20abeb5125a96006e22c456
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 可逆工作先做，只有不可逆或无法实验解决的偏好才阻塞人。
+    language: zh-Hans
+    source_fingerprint: sha256:3cf586f4a114ccc66ab0347a10269b77b12c84aff8ce95711e0ba3e860a6b030
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 在可逆工作中想询问“我应该做 X 吗？”时使用。继续执行并呈现结果，让人在事后纠正方向；将确认留给不可逆操作。
+    language: zh-CN
+    source_fingerprint: sha256:e2ac77d8aa377ed69f87e82e01ce7db9ffd77b8f1cdfe9dcc84577bf588f3b88
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 可逆工作先做，只有不可逆或无法实验解决的偏好才阻塞人。
+    language: zh-Hans
+    source_fingerprint: sha256:59bb34b5c61466dcafd66be3ecbd8538213131f86a439b81ca128484324a37b9
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: choose-a-skill
+provenance:
+  original_sha256: 8cd62070254e0c571c13a645db88a90152649e6d8e85fc43f151ef3ae12efcda
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我不知道该用哪个 Skill
+    language: zh-Hans
+    source_fingerprint: sha256:9725376b7a162718cccb7b414e7e581efe79cb4ee70055f29369e7e655273856
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 先用统一入口判断当前任务最适合哪条工作路径。
+    language: zh-Hans
+    source_fingerprint: sha256:4fec0edfb0f01b72ca5e2a29b85f11504616f1db6a726c6e51c9f0a0f6f0c951
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前目标与项目状态
+    language: zh-Hans
+    source_fingerprint: sha256:3e5c6cb992a225b48063f5f6d2471650f23fbca7a192f99e92b338ce8a0009fb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 面对一个任务，但不确定应该调用哪个 Matt Pocock skill。
+    language: zh-Hans
+    source_fingerprint: sha256:6e18aba2a4384afe987a917bea2cb69f4a6dd8aca025c348512254373c75e645
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 推荐 skill 或工作路径
+    language: zh-Hans
+    source_fingerprint: sha256:ab985821ef1b74aabf95d6e6bcf8ac5e840c0cbad3e4e64ebd1ae67cff6b8f5d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 从任务选择入口
+    language: zh-Hans
+    source_fingerprint: sha256:d610e651d33d20b890a03056702a6b8c9fbb632ea0bf1a36a913f298fae5e654
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 首次使用先完成配置
+    language: zh-Hans
+    source_fingerprint: sha256:e48db322bfcc9be9358f8afec3dc843d6a7e375f3fa077abba0e478e5da08473
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+    language: zh-Hans
+    source_fingerprint: sha256:82e691ed50e18f042b33253c6d723c12e8abbe2e55f6483d804e38d048b2c8b8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.when
+    translation: 首次工程工作，或项目配置仍缺失。
+    language: zh-Hans
+    source_fingerprint: sha256:bf6f567309a20600700e56b45ffd953d229bee2787f4ba427bdaa7c51e395b67
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 可供后续入口读取的项目配置
+    language: zh-Hans
+    source_fingerprint: sha256:5904a92aae0af7689d74cd85d72ba34bd269cf40d9dfdeda7e5c63328d2e8365
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 描述目标并获得推荐
+    language: zh-Hans
+    source_fingerprint: sha256:c4bba2ddec0aadc4353bd7c566208864a8f5757739b337e4347ab8f8f9e83732
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: ask-matt 根据目标和当前阶段推荐入口后停止；用户决定是否显式启动推荐技能。
+    language: zh-Hans
+    source_fingerprint: sha256:56c52b31caaea7e5a9d54362112c832f865acdb1daeff5edd7d3c124e603e409
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.outputs.0
+    translation: 推荐入口、理由和当前条件
+    language: zh-Hans
+    source_fingerprint: sha256:f97db033a6c2f668b09d82bcf0113cd475620f4755cad8edd78027e4ba8f2a29
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-foundational-thinking
+provenance:
+  original_sha256: f9226de61b5c78246150f18850ace91d42d897055220a82b165e436031f486ea
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: foundational-thinking
+    language: en
+    source_fingerprint: sha256:469a54144315bbdc36dc1409216470e33dfd1166d86016e85d420d5a67960759
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 先选对核心数据结构和共享状态模型。
+    language: zh-Hans
+    source_fingerprint: sha256:7e2621dc93f84f6d5b9c82a061f278de9395f03d084a44a2e476f6694b6d4d00
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:8b2f7657276a06c43318d3dab3ac583540ce15342a2864f450f88d81dee8b6df
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 需求或领域
+    language: zh-CN
+    source_fingerprint: sha256:ce61b172fa6dfb3464d52c35693b9ad2dff59d99e9589d76e839982d319e9870
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 基础数据模型
+    language: zh-CN
+    source_fingerprint: sha256:9baacff7255cb328fed5f7b34a340e2862feaa4a9e8d83617c498bd067172e09
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Apply before writing logic: choosing core types and data structures, sequencing scaffold-vs-feature work, asking what concurrent actors share. Get the data structures right so downstream code becomes obvious."
+    language: en
+    source_fingerprint: sha256:f9c69c40140329d8357bee9fc89d503badd666a6e644e478e1c7a594c3570205
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先选对核心数据结构和共享状态模型。
+    language: zh-Hans
+    source_fingerprint: sha256:171fe06046c547b20f5eefda4fbc720c8ed2437c19368ce935c5799d38c61bee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 在编写逻辑之前使用，例如选择核心类型和数据结构、安排脚手架与功能工作的顺序，或确定并发主体共享什么。先把数据结构设计正确，让后续代码自然清晰。
+    language: zh-CN
+    source_fingerprint: sha256:b234b7e52c5553b977694e132cb251c0166b74749d9534eb3320e5e6ab47af6b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 先选对核心数据结构和共享状态模型。
+    language: zh-Hans
+    source_fingerprint: sha256:a8a1bfcef025f2b4561989570d856962b6c0937ab34cb88de6a87ac15a880ac1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

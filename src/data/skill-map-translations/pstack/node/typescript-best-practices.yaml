@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: typescript-best-practices
+provenance:
+  original_sha256: d664c4ae6a94a0e196e7eaeba3373a747847269f312b64f69c252119f9141645
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: typescript-best-practices
+    language: en
+    source_fingerprint: sha256:53d3b3185844163478f9c423a777f3d5262df7ad7c75dd676da367fca8db520e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用类型系统和边界解析减少 TypeScript 的非法状态。
+    language: zh-Hans
+    source_fingerprint: sha256:20a1961f588e5f9c657ae9885820079b874a138eaa36798266934e7741d2f2f1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: typescript
+    language: en
+    source_fingerprint: sha256:1ed75f611204cc28b5621d3cd90555e989a595c579a0e4f88fc49de7bf927619
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 类型
+    language: zh-CN
+    source_fingerprint: sha256:ebfed32d47d2c39f6e50f13b97f2a6cb0d4b3ccc8a6cea51c0c53b5d6eaaaa3e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 质量
+    language: zh-CN
+    source_fingerprint: sha256:a56f7a3a21a92a182a6b39df04b34e963d1b6b23f7a0e53a69bb8867094be2d1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: TypeScript 代码
+    language: zh-CN
+    source_fingerprint: sha256:89dd004a87045fa25dbe900861ba9cc1a6becc8859e44030b680c78dd316f4e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 领域约束
+    language: zh-CN
+    source_fingerprint: sha256:5386382410e94ebd84d1e52aa851d767ec43e9b125f2db4214a5679d1be3d69c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更强的类型
+    language: zh-CN
+    source_fingerprint: sha256:cfa24f422ab53dfe1b9c61dbc33834628952f5b9807f22b3663871390dc1ae85
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 更安全的边界
+    language: zh-CN
+    source_fingerprint: sha256:ba7a68a8988cb02cc16b861c60ed673a1356393044f44b526757eb152b4a18ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 穷尽处理的代码
+    language: zh-CN
+    source_fingerprint: sha256:748f45fb4df1ab2f75c12fd65db2fb65b2566a938a17c65bd8b068e0ac5b5552
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: TypeScript best practices. Use when reading or editing any .ts or .tsx file.
+    language: en
+    source_fingerprint: sha256:33ce4752a34716513c96e57a6d127d4ad04d145b965ec3b308d5b946500d2846
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 强调 discriminated union、branded types、unknown、schema validation、exhaustiveness 和 authoritative schemas。
+    language: zh-Hans
+    source_fingerprint: sha256:42c4a614ae8a71f065b49d15b5da0eebb7517e5667f3696510cf828719582d4f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 任何 .ts/.tsx 修改
+    language: zh-Hans
+    source_fingerprint: sha256:a35b6b2233538dd9e55dbe8cbd03bf04a33e26efe96e3b034385bacbd775f5c4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少 any/cast/隐式状态
+    language: zh-Hans
+    source_fingerprint: sha256:861c373ce4c41a0a440f6550825f97f753fcfd8695fc26ff87ac45754177723f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把 runtime 错误前移到类型层
+    language: zh-Hans
+    source_fingerprint: sha256:437fe2ab856ae46f19e57fd435614457357ef09ff95cb8ea2ac81801d14c4686
+    review_status: reviewed
+    reviewed_at: 2026-10-13

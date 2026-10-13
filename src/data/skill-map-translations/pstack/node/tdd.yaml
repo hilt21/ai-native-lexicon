@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: tdd
+provenance:
+  original_sha256: a812e7bf65167fa2e983e113dadd4e09d4451825cfa7de4d317de0bea611ab14
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: tdd
+    language: en
+    source_fingerprint: sha256:56b653959a92e33aeba5d71634e11bae80a36d0c8b5f70bba29592e294da10fd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 在存在廉价可靠测试入口时，用 failing test 固化 bug 后再修复。
+    language: zh-Hans
+    source_fingerprint: sha256:672bc805f477f324e3755ae5844868632e5524b4bea312a5f5f05d69cacd7b4a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 测试
+    language: zh-CN
+    source_fingerprint: sha256:ab9a379e36e87d91365164a856f32762734c872360ac66f56e95fbe960c0ee37
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 回归
+    language: zh-CN
+    source_fingerprint: sha256:a69cba33b217e2d98975aee58a7f5ecc260ffc2ce5c90cda6b013ecaa53a9b60
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 问题行为
+    language: zh-CN
+    source_fingerprint: sha256:fff983fa58419ab117e665cf2d5e3d40043748bfbf951296d93d049f8c5785c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 本地测试目标
+    language: zh-CN
+    source_fingerprint: sha256:5010b1478c0d3d95856fa382283a600782d7dd2d74e433da4cf6408b7b43ba3c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 未通过的回归测试
+    language: zh-CN
+    source_fingerprint: sha256:8e5cc97dcfbc2024f80c9264b9b6cdc2678a69d932f9dd186e7751f079735cad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 最小修复
+    language: zh-CN
+    source_fingerprint: sha256:128e834df7252eaf2751915e26f6a1ded8691b38de2b262919af6742af3c2bee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 已通过的回归测试
+    language: zh-CN
+    source_fingerprint: sha256:c24dc198062947d77d7306d4c44817d9f345b14f4407a3b8fa21df3a2db12d45
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR when the bug has an obvious cheap local test target. Skip when the test path is unclear, expensive, integration-heavy, or not requested.
+    language: en
+    source_fingerprint: sha256:53fb257a19e420f56b1ff6349f476fcea153733650ffcc84e74ca910e3364a0e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先构造最窄可执行 regression，证明其失败；再做最小修改；最后用同一测试证明通过。
+    language: zh-Hans
+    source_fingerprint: sha256:879513d788cda0a4ae4c748963d4700629932eed6c7981900b7557bec184e989
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 明确要求 TDD
+    language: zh-Hans
+    source_fingerprint: sha256:c7637d08f0842b30a1179f9d2aa11c025d4437e410281f1b3f6bb18fe8f3bca9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: bug 有明显本地测试目标
+    language: zh-Hans
+    source_fingerprint: sha256:41b576bd92c0aa65748e400245b1ef7ca4964e72b384e806b619fa88c7f6f319
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 防止修复无法复现
+    language: zh-Hans
+    source_fingerprint: sha256:7b8e7d477754bee480a6a22388af38b66cf04b3e4a2dcb4fef1fce4e3d9a132f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 形成 failing-before / passing-after 证据
+    language: zh-Hans
+    source_fingerprint: sha256:9e5c55e0fa3abd73e3722b919acf2cc9f9d5f23c3544c577708212976da96fd4
+    review_status: reviewed
+    reviewed_at: 2026-10-13

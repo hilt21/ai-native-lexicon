@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["poteto-mode","routes_to","trace-forensics"]'
+provenance:
+  original_sha256: 4f10eb9efeef246f32e5a31e28f6fb2ba8afde28b92e7484724b79c8863089f5
+  retained_at: 2026-10-13
+units: []

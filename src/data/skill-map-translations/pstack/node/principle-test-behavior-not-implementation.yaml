@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-test-behavior-not-implementation
+provenance:
+  original_sha256: 36dd05f5ab508b83ee737d8cb75145271c31753173da22557283d7aac604b098
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: test-behavior-not-implementation
+    language: en
+    source_fingerprint: sha256:011d168e1875f2ca670c3526ac6119fe941893e51bf2f9972f04e67b4c43bebc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 测试用户可观察行为，避免测试实现细节。
+    language: zh-Hans
+    source_fingerprint: sha256:401b050c790a8893c57b53833bf6f785f9dcc00ef2984df27fd58c2781d24fef
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:b75925073184064dde15ea24ab7b77c3de0eca88c59521a295e122808a94823e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 测试用例
+    language: zh-CN
+    source_fingerprint: sha256:8b7fa5d9c224cd3c85848e07bc8d8f558a385f62cfe639ace6d4dfd9d7cb0208
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 行为测试
+    language: zh-CN
+    source_fingerprint: sha256:d66b9307055ba2a934cd2d97b06063bd53f01cc944b20f1ec2ad46b13f29e94f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when you write, change, or keep a test. Call the code the way its users do and assert the result they observe against a literal expected value. If the test would still pass when every imported function returns undefined, rewrite the assertion or delete the test.
+    language: en
+    source_fingerprint: sha256:9c2f9c2429252c1a3b30882e36d79ae97d9d88d393eb0a93a5de7f0ab385e58c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 测试用户可观察行为，避免测试实现细节。
+    language: zh-Hans
+    source_fingerprint: sha256:86e3aefa702cae7fb730ad7fbf6294b3b7b5ed030899046e7a8415cd658263bc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 编写、修改或保留测试时使用。按用户使用代码的方式调用代码，并将用户观察到的结果与明确写出的预期值比较。
+    language: zh-CN
+    source_fingerprint: sha256:3a76782f5ba6a0a68570cb3e5b72e70065a12c67297f232eb974821fb6f7810c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 测试用户可观察行为，避免测试实现细节。
+    language: zh-Hans
+    source_fingerprint: sha256:d96d405539d562b4f771c0502c02fca94569e1b531509bb05652b4ae8f38267e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

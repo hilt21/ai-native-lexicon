@@ -1,7 +1,6 @@
 title: ask-matt
-summary: 根据当前情况推荐最合适的 Skill 或工作路径。
+summary: Recommend the skill or work path that fits the current situation.
 type: router
-status: active
 layer: entry
 primary_cluster: entry-routing
 secondary_clusters: []
@@ -9,37 +8,22 @@ tags:
   - engineering
   - user-invoked
   - stable
-mechanism: 读取用户当前目标与所处阶段，推荐主工作流、on-ramp 或独立技能，然后停止。推荐不是自动调用：由用户显式启动标有 user-invoked 的入口。首次工程工作前先完成 setup-matt-pocock-skills 的项目配置。
-when_to_use:
-  - 不知道应该使用哪个 Matt Pocock skill。
-  - 不确定当前任务应该进入规划、实现、调试还是其他独立能力。
-solves:
-  - 降低记住全部 skills 的认知负担。
-  - 避免从错误的工作阶段开始。
 inputs:
-  - 当前目标
-  - 当前项目状态
+  - Current objective
+  - Current project state
 outputs:
-  - 推荐 skill
-  - 推荐工作路径
+  - Recommended skill
+  - Recommended work path
+handoffs: []
 source_refs:
   - source: mattpocock-skills-1-3-1-dd400c3a
     path: engineering/ask-matt/SKILL.md
-handoffs: []
 official_description: Ask which skill or flow fits your situation. A router over the skills in this repo.
-text_languages:
-  title: en
-  summary: zh-Hans
-  mechanism: zh-Hans
-  official_description: en
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  inputs.0: zh-Hans
-  inputs.1: zh-Hans
-  outputs.0: zh-Hans
-  outputs.1: zh-Hans
-  tags.0: en
-  tags.1: en
-  tags.2: en
+status: active
+mechanism: Read the user's current objective and stage, recommend a main workflow, on-ramp or standalone skill, then stop. The user explicitly starts user-invoked entries; a recommendation does not invoke them. Complete the repository configuration with setup-matt-pocock-skills before the first engineering task.
+when_to_use:
+  - You do not know which Matt Pocock skill to use.
+  - You need to choose between planning, implementation, debugging or another standalone capability.
+solves:
+  - Reduce the effort of remembering the entire skill inventory.
+  - Avoid starting at the wrong stage of work.

@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: writing-for-agents
+provenance:
+  original_sha256: 7e762ac75776b4ecb8d7d8aedb8030da0fba5d4bc94aa0e54f36f9f8ee88e159
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: writing-for-agents
+    language: en
+    source_fingerprint: sha256:e570d1d01370fe489019c83bcceca6713f3e5bee9953b4ddb3b32c862a1d1816
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 为 Agent 编写它实际会消费的 steering 与 reference 文档。
+    language: zh-Hans
+    source_fingerprint: sha256:236306b315092d16fc4d3cca2ce868b8a9ac32e0bef0d26af7641a433ed9921e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 生产力
+    language: zh-CN
+    source_fingerprint: sha256:51a6870238283b72e42bc41d7428b65bd6c7ab1a9a424ef8f1b549b77f6367c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:9670133c77fb360e99f98e42e99583558052221abd2738fd698c4779e3c3592d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:456be17918aa2b153d0d1b1a3b80ba3d26cf0ca83d33680545521b483ab74829
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: Agent-facing 文档目标
+    language: zh-Hans
+    source_fingerprint: sha256:9b9a0137955350d651fb05d4b1be1005d0c30abc14fb5674ba9024241af73a25
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 现有项目结构
+    language: zh-Hans
+    source_fingerprint: sha256:e5a05a80a1a63d23dc88c7537f3d67e5faf007a02241d778a3e67c27d68f11e0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更适合 Agent 消费的文档
+    language: zh-Hans
+    source_fingerprint: sha256:8f647320ca7b2ee905f203c4b29d722f9153811219ed085800a5bec6233140fe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Writing documents for agents. Use when creating or editing skills, or modifying AGENTS.md or CLAUDE.md.
+    language: en
+    source_fingerprint: sha256:c37367ace7f2ae556d49ebd8b98ba44e7ffa73973eb8ebcc4f76771366d46b8e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 为 skills、AGENTS.md、CLAUDE.md 与 pointer docs 提供写作参考：同时考虑 Agent context 与人的阅读成本，给出完成条件、渐进披露和就近指针，删除 no-op 与无用规则。输出是当前文档任务中的指导或编辑结果，不自动生成所有文档；创建真正 skill 时另读取其机制说明。
+    language: zh-Hans
+    source_fingerprint: sha256:cb90c1aff30eedf1cae3e966d38e6aeee9e9d1668a94c2fad8d1cb47908501d2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 创建或修改 skill。
+    language: zh-Hans
+    source_fingerprint: sha256:d324464207e7c74bd37ef0c0756c0738a9f827e874672d9fbb5ad7750e1a8ff0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 编写 AGENTS.md、CLAUDE.md 或其它 Agent-facing docs。
+    language: zh-Hans
+    source_fingerprint: sha256:5189d0792a45d831c37e5acd7590acc965a7080c894f80d58876dd3ebf7536bd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少 Agent context 中的噪声。
+    language: zh-Hans
+    source_fingerprint: sha256:e1057512f2627dcf6ae20f32b283fa35c758f554681e25f39de6a53825d5c64d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 让规则和参考资料更容易被正确找到与执行。
+    language: zh-Hans
+    source_fingerprint: sha256:223a8d2032c6b2404f6d1db65c5676892e3d4c3aeda252de18547684e676e3b1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

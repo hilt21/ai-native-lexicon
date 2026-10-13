@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: make-bot-ui
+provenance:
+  original_sha256: ec9a486205127855cd2608555deb3ea9fe1a37ac834b68dc7cff94050f8ec90d
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: make-bot-ui
+    language: en
+    source_fingerprint: sha256:5fe4b4e7418b4a494076ab738c491704793ac6565d5096020f97ffc36c0cab69
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 为 Agent automation 建一个简单可触发的控制 UI。
+    language: zh-Hans
+    source_fingerprint: sha256:33d0f1dd0021106b3c7fd474178aed7c6edfdac6012e1698009d86542e4c9722
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 自动化
+    language: zh-CN
+    source_fingerprint: sha256:4308007e3db2937c4c29a54d1081f29b0e344391833e69074ad41c472b4c3301
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 界面
+    language: zh-CN
+    source_fingerprint: sha256:2d5a96d44d6b9bc4fb23e37a996d0a55b18f4916241dbfb39e5d0e6f4f02deb2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 网络回调
+    language: zh-CN
+    source_fingerprint: sha256:20923c9651d36d6b52b8044e12d47af5bb1395bb1dc995aa2d567daee515c7ef
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 界面需求
+    language: zh-CN
+    source_fingerprint: sha256:dc172142f2c66a84b7324e4a4f81a34582f3514c86085e9cb9727468a1a41d32
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 网络回调端点
+    language: zh-CN
+    source_fingerprint: sha256:c6f7f7382caa1b0264c513e91912269a9b1ff52ef987df9e81c0af4d5273b3a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 发送方密钥
+    language: zh-CN
+    source_fingerprint: sha256:92bbeea06028c82b6f8c6f590fb384e46e2582c13bd5747c1023bc7e92bff788
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.3
+    translation: 网络暴露方式选择
+    language: zh-CN
+    source_fingerprint: sha256:928ce9338e08990922696516dbbf572c05b556a96ce5df797e71b75f26c29c2f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 可工作的机器人界面
+    language: zh-CN
+    source_fingerprint: sha256:9592168f9b39271150a21272512bb02f216ddb583e4e3d5186d0ff201c381fa7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 网络回调流程
+    language: zh-CN
+    source_fingerprint: sha256:cca730bb9a73f727eec2e445ea1b155a17ddd41ce0f943ff99fdc9d377fbf6ee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Use when building a custom UI (page, dashboard, buttons) that should wake a Grok Bot over a webhook, when the user must provide a webhook sender key, or when exposing that UI on Tailscale.
+    language: en
+    source_fingerprint: sha256:f7044a1b606b052b5f04868703b2ffb24ddc38877cf1f33e5fcd6f19f1b1d5bb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 本地页面经 server/webhook 唤醒 bot，secret 留在 server，并可通过 Tailscale 暴露。
+    language: zh-Hans
+    source_fingerprint: sha256:397777df8d19c6057e37057a59df24fdc75a0c9ff2f9de354948c524ac3e9258
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要按钮/仪表盘触发 Grok Bot
+    language: zh-Hans
+    source_fingerprint: sha256:b07e24adf8fdd50f5ca1240ac91e9eb656efc9783777f512198c45ee4c6a32de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要远程控制自动化流程
+    language: zh-Hans
+    source_fingerprint: sha256:ce8d333d1c5df7f510a6e0aad53690b1f64de70b24a8d4f1d51c817aecfb3301
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低非技术用户触发自动化的门槛
+    language: zh-Hans
+    source_fingerprint: sha256:5246b8ddcc3b5702d8c045372903cf401180cfd96da3001af17f8bbb17a86fea
+    review_status: reviewed
+    reviewed_at: 2026-10-13

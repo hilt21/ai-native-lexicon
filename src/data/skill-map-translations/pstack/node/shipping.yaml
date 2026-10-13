@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: shipping
+provenance:
+  original_sha256: cd8ef76b5054aa4d8582f8f05cdf729ad08229504de5d287e9a07720099b7a29
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: shipping
+    language: en
+    source_fingerprint: sha256:60594619c792f6a2cc7d3efc5cf64edd5e8dde96686e26d626545a53db4c5002
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用独立 verifier 决定哪些 PR 可以真正 land。
+    language: zh-Hans
+    source_fingerprint: sha256:671a17f588c24025fb45e42ebcd501212fcfd3dbadbdb2abe14d918e4b4d6a2e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 可合并的拉取请求栈
+    language: zh-CN
+    source_fingerprint: sha256:901817291c899412c10c6a7744503f305a939ca9a15a56377934337af939b5ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 当前代码托管平台状态
+    language: zh-CN
+    source_fingerprint: sha256:570c93f4177561044ff6d279f37dfef6ac4a122508eecd264575491234d74df3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 独立判定
+    language: zh-CN
+    source_fingerprint: sha256:ba92d4eb0e2c7c6393334e8117d9467ebdf6b39325e1a7e40b31b8b98e4be514
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已合入且经过验证的拉取请求
+    language: zh-CN
+    source_fingerprint: sha256:354ad2f225002d9da56574590256a9ddda941df6287c835af7eb5029ab6288ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 合入上限
+    language: zh-CN
+    source_fingerprint: sha256:be269f084cad4ed5738121b1d01f53f3edd73abdbe3b1dbbb2ab61b93c75ff5a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 每个 PR fresh verifier 在真实 surface 验证 parent vs head → verdict 绑定 SHA/base/patch-id → 只 landing 从底部开始的连续 verified run → 每次只处理一个 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:2482adeb80cea355eb1ad39563a69adf239115db270ee133c9b388427a87547c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: PR 已 merge-ready
+    language: zh-Hans
+    source_fingerprint: sha256:11f28b8ef2845e92831192232223fbfe1fb0cfa8cb4f195f19e62b0324a965d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 用户要求 land/ship
+    language: zh-Hans
+    source_fingerprint: sha256:d026fb872f28ef8fd81397005fe0eeb0b66eb169c24ecca65638f6e84c51e496
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: writer 自证
+    language: zh-Hans
+    source_fingerprint: sha256:bb0c62ee57ec464de38f0d51b92bc33a8adf1a67231e5213dfac856fa842ae41
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 旧 SHA 绿灯被误复用
+    language: zh-Hans
+    source_fingerprint: sha256:45e188fd3d22b02240f0c1cf42b7141c56aac9bd25bac299852260de3ee19a52
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.2
+    translation: 上层 PR 跳过未验证底层
+    language: zh-Hans
+    source_fingerprint: sha256:16aa44a0e07df552ff69cf2e546069b822d8e534fac68cd5cde8e3fee9fa7009
+    review_status: reviewed
+    reviewed_at: 2026-10-13

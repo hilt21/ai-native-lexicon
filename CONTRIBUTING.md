@@ -138,7 +138,7 @@ Use the [Text language annotations contract](docs/design/skill-map.md#text-langu
 
 ## Translation overlays
 
-Maintain independent YAML assets under `src/data/translations/` using [the translation contract](docs/design/translation-overlay.md). Targets use Concept/Primitive slugs, category public slugs or layer public anchors. The only overlay locale is `zh-CN`; public page routes use `zh-cn` after the deployment base. UI dictionary changes belong in `src/lib/locale.ts`, separately from knowledge translations.
+Maintain independent YAML assets under `src/data/translations/` using [the translation contract](docs/design/translation-overlay.md). Targets use Concept/Primitive slugs, category public slugs, layer public anchors or Speaking Guide `card-XX` identities. Skill Maps use separate [scoped prose assets](docs/design/skill-map-translations.md), preserving a single canonical graph. The only overlay locale is `zh-CN`; public page routes use `zh-cn` after the deployment base. UI dictionary changes belong in `src/lib/locale.ts`, separately from knowledge translations.
 
 Start generated translations as `draft`. Obtain source fingerprints from `translationUnits` using canonical data returned by the shared `readCatalog` boundary. Confirm the exact translated prose and its source with the editor before setting `review_status: reviewed` and the actual review date. A fingerprint update requires renewed source/translation review; a stale unit remains valid historical input and displays current English. Translation review does not verify the underlying knowledge or its sources.
 
@@ -147,3 +147,5 @@ Follow [Validation](#validation). L2 includes an absent-overlay baseline, comple
 ## Deployed verification
 
 For remaining online-only evidence after a release, use [online verification and manual acceptance](docs/audits/online-verification-guide.md). `npm run verify:online -- <deployed-base-url>` checks served resources and resolver-derived i18n expectations without rebuilding or deploying. Add `--browser` for the targeted native-option/Pagefind smoke. Screen-reader, actual 400% zoom, real-device menus and platform cache sessions remain separate manual evidence.
+
+Full language publication additionally runs `npm run verify:i18n` after the production build. It rejects missing/draft/stale published coverage and checks all inventoried rendered pages. This release gate is distinct from fixture tests that deliberately exercise incomplete coverage.

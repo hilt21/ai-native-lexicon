@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["to-spec","feeds","to-tickets"]'
+provenance:
+  original_sha256: 84cf2271f2be2dbebfdf691e862e31fd79af07cf7819e6ae1d20b0595d7d8d89
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 适用条件下，前一阶段的产物供用户选择下一入口；不是自动启动用户技能。
+    language: zh-Hans
+    source_fingerprint: sha256:edfc17446cd2c6aeaafbb6e9b774a006ea7e3139af2ef57b8bd02999f48bccc8
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["poteto-mode","routes_to","worktree-cleanup"]'
+provenance:
+  original_sha256: 849bf8134b14f187d080d108b7a362297745b3d8206617245e4d850378f3f949
+  retained_at: 2026-10-13
+units: []

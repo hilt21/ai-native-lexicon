@@ -15,7 +15,7 @@ export const translationUnitInputSchema = z.discriminatedUnion('review_status', 
 export const translationInputSchema = z.object({
   schema_version: z.literal('1.0.0'),
   locale: z.literal('zh-CN'),
-  kind: z.enum(['concept', 'primitive', 'category', 'layer']),
+  kind: z.enum(['concept', 'primitive', 'category', 'layer', 'speaking-guide']),
   target_id: slug,
   units: z.array(translationUnitInputSchema).default([]),
 }).strict().refine((overlay) => new Set(overlay.units.map((unit) => unit.path)).size === overlay.units.length,

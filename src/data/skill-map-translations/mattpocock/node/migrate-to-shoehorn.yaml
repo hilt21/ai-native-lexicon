@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: migrate-to-shoehorn
+provenance:
+  original_sha256: 505c8484a00b8a9831af741823a9c74176541a366e66f4fab20bf40ebc669073
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: migrate-to-shoehorn
+    language: en
+    source_fingerprint: sha256:f5944107938f0e8ff8ebfcf3436405368d7a9da4ed9fa5d0bc56194fe0cdcede
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把测试中的 `as` 类型断言迁移到 @total-typescript/shoehorn。
+    language: zh-Hans
+    source_fingerprint: sha256:610a1f28b2a8c5b84db3cf40011df34876b44305ea5087ebd874b9149c05ecdb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 其他
+    language: zh-CN
+    source_fingerprint: sha256:f32cf3a8c7c05262e6b79b1f566c1ab26fee468649bb42acdcfcfd4057bf16fd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:3e8a4b5e0d0c3f1ed9de269e325131885b0c5195b9c1c39d4220eba891727a1a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:3af6ee0b65bdab7294e86d9bf0a22009b8b9476827fa52bce485547217718a31
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 测试文件
+    language: zh-Hans
+    source_fingerprint: sha256:c9b3f778c4cb80cb5f42a875e6f3da4526e7f8e7f8baa09349f449f0a6c6de59
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 现有 `as` assertions
+    language: zh-Hans
+    source_fingerprint: sha256:454e02dfda9321510c7228c6e20ac88cf1da3af1c388df07dbe670128bc70806
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 使用 shoehorn 的测试数据构造
+    language: zh-Hans
+    source_fingerprint: sha256:3f7420138d1461c8f1d9fe9f26a4d56d57c110ec762910320fcf35c96f8fa429
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Migrate test files from `as` type assertions to @total-typescript/shoehorn. Use when user mentions shoehorn, wants to replace `as` in tests, or needs partial test data.
+    language: en
+    source_fingerprint: sha256:ff926e0624678c6046c6b8fbf1fd24a7c2881909cd774dc21e6ea0fd07516641
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 仅迁移测试文件中作为数据构造的类型断言：fromPartial 表达部分有效数据，fromExact 表达完整对象，fromAny 用于有意构造的非法值。安装所需依赖并类型检查；故意无效的测试值不会因工具转换而变成正确数据。
+    language: zh-Hans
+    source_fingerprint: sha256:29209bd2859cc8dd3eda0f6918fd8b2ba095a1b04bbdd1ec7e74cb52384c834d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 测试代码大量使用 `as` 构造不完整数据。
+    language: zh-Hans
+    source_fingerprint: sha256:0cca5b917c8939890609f484844784d1fb79bc3c7ec111c5c47570a6db1da1f5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 项目希望采用 @total-typescript/shoehorn。
+    language: zh-Hans
+    source_fingerprint: sha256:4e35a0d72b66a25d960ee2e175e16a019c7861848b6c5705635af19c4d2bdd95
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低测试中的不安全类型断言。
+    language: zh-Hans
+    source_fingerprint: sha256:b8034911a22a02468e58c39e26bc673bc4af28c656ed2abdb677d4d558084979
+    review_status: reviewed
+    reviewed_at: 2026-10-13

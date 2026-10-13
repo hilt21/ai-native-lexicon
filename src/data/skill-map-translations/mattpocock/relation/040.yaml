@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["diagnosing-bugs","feeds","retro"]'
+provenance:
+  original_sha256: 8b5ee9f375e9951d5e93ac0576a5fad5166df767f870f12989fce9ede622fdd5
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 修复后由用户选择在同一 session 复盘；这是 ask-matt 的条件性教学建议，不是自动收尾调用。
+    language: zh-Hans
+    source_fingerprint: sha256:2cec88d0ddc5dce7f042c68bffee453d5e7df023a2e9f04d7e8f02d490269aae
+    review_status: reviewed
+    reviewed_at: 2026-10-13

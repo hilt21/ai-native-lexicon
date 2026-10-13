@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["refactoring","governed_by","principle-redesign-from-first-principles"]'
+provenance:
+  original_sha256: fe9f0520fbda46f91c31a69b320b0cd9657b4ca98b7debb35203dd17c0dc9a76
+  retained_at: 2026-10-13
+units: []

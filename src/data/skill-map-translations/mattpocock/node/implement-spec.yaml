@@ -1,0 +1,117 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: implement-spec
+provenance:
+  original_sha256: b45c26152a1fdc0fde1fcfd1e78df878810cf1050d184780a312856df288b2d6
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: implement-spec
+    language: en
+    source_fingerprint: sha256:b32f6bc8691564af2c44063b03b704a23a31630126ab9eadcac87647a9086980
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 在一个 integration branch 上并行实现完整 spec。
+    language: zh-Hans
+    source_fingerprint: sha256:1b30aa826da1fcf65616af7cd39cf235a6d7dbdc8023b66a4fb81e401d56a6ee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:0a9dd8c36a78a709c0a8976d1b15e6a631eb75d6514edad89021d38d23d60918
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:7d08c501e98c03cc16f7adf97a9cdde1244e1823a819b00feff5b4909add91ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:499c64d0b43140b1e67ea63353673ebef8aeb79197ce8315e5b2480a5cd3c0ad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 规格
+    language: zh-CN
+    source_fingerprint: sha256:29034430e1364c3c9aefc39511f3e17551cfd348e3873e7507d5c16f01469544
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 工单关系图
+    language: zh-CN
+    source_fingerprint: sha256:21befb2d6ed06c43de918a398174110d2d132b53cb4efe948ac7040f45d053ad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: issue tracker 配置
+    language: zh-Hans
+    source_fingerprint: sha256:e94f7373769cf8253574f544a11181955ad1a4f7df70867a2601881165be1daa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 集成分支
+    language: zh-CN
+    source_fingerprint: sha256:da034c09d70c4900f77bd7ae12bdc3cfd9e60d5bcb21c4a2a9ce82ede4f250a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已解决工单
+    language: zh-CN
+    source_fingerprint: sha256:5455a6c244983f757ebf2396bf3486472a86f18586f996f731ad7911e11f7820
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 最终代码审查
+    language: zh-CN
+    source_fingerprint: sha256:ea3f1ed6a0fd420616799a6fb522cb7a9cdb2e583d622f0be5c4803d54033951
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: ready PR 或 branch
+    language: zh-Hans
+    source_fingerprint: sha256:49e2872b478cae7268cf6910764a70abc8fd4ffc405feab5aacb01dd82eaecb4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Implement the result of /to-spec and /to-tickets in code.
+    language: en
+    source_fingerprint: sha256:7dc59e39f590aa235c988739bc506470b0be937ed3489d7b6dd32a379bd503e2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动整个 spec 的实施。把票据及 blocking edges 读作 task graph，先建立 integration branch，在 ready frontier 上委派 implementer subagents，各自在 worktree 内用已约定 seam 的 TDD 实现并提交，同步 integration tip 后由编排者合并；所有票据完成后统一 code-review。它与逐票 implement 是选择关系，不是先后必经阶段。
+    language: zh-Hans
+    source_fingerprint: sha256:ae83d385cd32cd61a9bc61dc91279b1235627cf2e5cc755637081249193596dc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 已有完整 spec 与 tickets，并希望一次 orchestration 完成。
+    language: zh-Hans
+    source_fingerprint: sha256:c5d95eaa21a230b1fce96195738999a3b15ee5cbc47c9d9f5ebc2839a7c265ad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 多个独立 ticket 可并行推进。
+    language: zh-Hans
+    source_fingerprint: sha256:1c4c91ee60b7124f9a4bbefaff5f52ebf6ff3d2a512c2a58abdb71a832388474
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 提高大型 spec 的并行吞吐。
+    language: zh-Hans
+    source_fingerprint: sha256:ebca8849bac8aa745fc07926cbbe9f48dd80e40f79394ea11a874e369284a279
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 在并行实现时保持任务依赖、集成顺序和最终 review。
+    language: zh-Hans
+    source_fingerprint: sha256:dac3b0bf67d68e91bee523023e3fb9a9490810941731f027ef995653be70e018
+    review_status: reviewed
+    reviewed_at: 2026-10-13

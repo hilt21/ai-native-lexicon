@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: no-comments
+provenance:
+  original_sha256: 67ce770f4e5697f68f2e555cc258d76ef5fae2c1105ead826a900b7fed4b175b
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: no-comments
+    language: en
+    source_fingerprint: sha256:ea5b1591034b839f7c1a03076365e7a4dbaca45ccd145c47bebff19706b52552
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 删除 AI 常见的解释性注释，并把真正约束转成结构。
+    language: zh-Hans
+    source_fingerprint: sha256:dc212c14bb5d6ac05f96700a3b5876bbe149aa773707449436569fe197f870de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 代码质量
+    language: zh-CN
+    source_fingerprint: sha256:9c92d0e18b52c0f20ce8388c42708d5fd1ba693d14bc8f1dd1504b3bdaa48bbc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 注释
+    language: zh-CN
+    source_fingerprint: sha256:20d425e62020832e675d3d8bf64d3f7f4193de6c49a6b69a88843fa02dd91cfa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 结构化编码
+    language: zh-CN
+    source_fingerprint: sha256:7790753712f79f19f7f5b70bc44f33e7f317d77f0c71f66e0d659610775b6410
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 差异或源文件
+    language: zh-CN
+    source_fingerprint: sha256:aac6fb59baa3a4e93d96e8fcfd8d3b449f244502027f570e59e1751b1ea6644f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更清晰的代码
+    language: zh-CN
+    source_fingerprint: sha256:77bd1d5ae05017cbdea05ee8366239ad8b9d7957cd9830ce9d00bbe378037640
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 表达真实约束的结构化编码
+    language: zh-CN
+    source_fingerprint: sha256:5af79f7982ffe1cd2ce4c1f50945dd789fc9f36aaf415c65107f8068b8b1cbb5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints.
+    language: en
+    source_fingerprint: sha256:04c8a062053a06def5f67541083cb7689d6ae611c9e69b3287588aef3e86ee68
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 审查 comment；删除代码本身能表达的说明；如果 comment 描述真实 invariant，则建议 type/test/lint/runtime check。
+    language: zh-Hans
+    source_fingerprint: sha256:44270aa118c05a6823499a25c9e4af5090dd7998714fb312906c791be2def090
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: AI 生成大量注释
+    language: zh-Hans
+    source_fingerprint: sha256:c5d8faf865a1ba84dd03873143edf313da8df09034ea5903e81667ba4bf84816
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: PR review 前清理
+    language: zh-Hans
+    source_fingerprint: sha256:88026fad2d41a5f2c0e5c11e060bcef76fbc83bca33058d1b7cba0541a468c4f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: comment 声称某约束必须成立
+    language: zh-Hans
+    source_fingerprint: sha256:0d678e9ce3947dba26f7d6373d89d56cb402c7290412e9c8cc61c79e649f5e4e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少过时注释
+    language: zh-Hans
+    source_fingerprint: sha256:85c98c5bac6ff9fe87d5b5d0e5d320acff63dfe9b726f4774b45f8d2da7c6b75
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 防止 comment 成为错误 precedent
+    language: zh-Hans
+    source_fingerprint: sha256:8d3ac0bb8320165ccf5d600e35fa4aa5043b223dc4ea44c6b7f0bfe4fe9562bd
+    review_status: reviewed
+    reviewed_at: 2026-10-13

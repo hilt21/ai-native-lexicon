@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["to-tickets","feeds","implement"]'
+provenance:
+  original_sha256: 11a5d0e40a6005beb47e42a1331253baae2bcd8bf6d27f9e39082d8c7611a148
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 已批准的自包含票据供用户逐票实施；与整图 implement-spec 二选一。
+    language: zh-Hans
+    source_fingerprint: sha256:a3092807245d43fa669cc16e7cbf8da3138d8ad9e71a7ef562fd35691708d3fe
+    review_status: reviewed
+    reviewed_at: 2026-10-13

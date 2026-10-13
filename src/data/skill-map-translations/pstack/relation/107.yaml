@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["orchestrate","governed_by","principle-guard-the-context-window"]'
+provenance:
+  original_sha256: bc0e20305df0d0b38d637b4f0474b524e4f14f6309b3d174de0ab9bd661ea79c
+  retained_at: 2026-10-13
+units: []

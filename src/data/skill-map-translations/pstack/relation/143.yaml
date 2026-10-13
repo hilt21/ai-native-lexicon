@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["session-pickup","uses","recall"]'
+provenance:
+  original_sha256: 6f8cf38d2dde7792cceccc2086bb820ee5c627395ece4dcf77eca4d2bc1c8f77
+  retained_at: 2026-10-13
+units: []

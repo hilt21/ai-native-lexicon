@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["triage","feeds","implement"]'
+provenance:
+  original_sha256: 82253f2771b55732d52f200751c1dc38fb391d21bf0caa067165390bf8cdc73c
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 只在外部输入已形成 agent-ready brief 后交接实施；to-tickets 已准备的票不重复 triage。
+    language: zh-Hans
+    source_fingerprint: sha256:77f922f764449d4023ead91aa6666ae1f9585e90ce21c84873f7b067f9db5636
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autonomous-run","feeds","opening-a-pr"]'
+provenance:
+  original_sha256: 6f96ac736fbe793842dfa2949587e8aef780bb5baf195e0f1fd62b061ad6bdd5
+  retained_at: 2026-10-13
+units: []

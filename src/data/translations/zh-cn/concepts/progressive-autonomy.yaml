@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 随着智能体在每个阶段内安全有效运行的证据累积，分阶段扩大其权限。
     source_fingerprint: sha256:47d2d6648063c1e6813f0c20d1c731740e6e2b82ec0c31dde26260862260dd1d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 渐进式自主把权限视为需要通过表现获得且能够撤回的能力。工作流可从建议模式开始，进入批准后执行，再依据评估、生产证据和明确回滚触发条件获得受限自动操作权限。
     source_fingerprint: sha256:39959fd4ba04e071abf0a42b81260e272a3183180b967dca88b926c7d585e03d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 它将部署风险与已展示能力匹配，让团队无需一次不可逆地跃迁到完全自动化，就能尽早获得价值。
     source_fingerprint: sha256:5e6a138b2152aeeedab44e4067a18828b4992f6689ed57d5848bf96bf398dbc2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于将智能体引入重大影响工作流，或扩大现有智能体范围时。
     source_fingerprint: sha256:eef97a99ea95de2255a13b38d2a1ffd98d21d44cecf2bbeeb699eae31fdffa47
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 仅凭范围狭窄、任务经过挑选的成功试点，就永久授予广泛访问。
     source_fingerprint: sha256:cd07204455403e9981ce27193cf673174f4de93dea2938f48c62d5a40d147b45
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

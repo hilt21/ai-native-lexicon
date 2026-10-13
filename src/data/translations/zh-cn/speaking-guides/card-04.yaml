@@ -1,0 +1,55 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-04
+units:
+  - path: title
+    translation: 智能体运行框架
+    source_fingerprint: sha256:6ebef918c63af46555d0e2364a91e3234b846f97afc2faaa0ee9b110c9d1d9db
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 运行框架围绕模型，规定智能体如何安全、可靠地运作。
+    source_fingerprint: sha256:0888fb56356c8be5ea58618a0dc48c6ba5be72cb856d840348987950a08718ee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 如果 AI 智能体明天就能访问你的工作系统，你希望为它设置哪些控制？
+    source_fingerprint: sha256:c8c72cf31be7cfe54f1c50d1dc950c576019744fe9135fe5bba14eb26091e033
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:dd5de658b3e56ce116a4d727a70efdbef7f89d34ce03eee9359aecfa1ae5f262
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 有些任务需要这样的推理与控制，另一些任务则更容易预测。
+    source_fingerprint: sha256:d7d23bd07da91c77a32fa1677299d8679b84847a2d597ee8d05f578076016063
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 强大的模型不会自动产生可靠的智能体。
+      - 运行框架控制智能体如何获得上下文和使用工具。
+      - 它规定权限、批准、错误处理和证据。
+      - 它也帮助智能体判断任务何时完成。
+      - 模型提供智能，运行框架提供纪律。
+    source_fingerprint: sha256:874b97e4dc4ad7552c5cb6d59f5850aa676d192601cc2f92b90f238b6d979e22
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设智能体要更新一份工程文档。
+      - 写出新文本相对容易。
+      - 更难的是其他问题。
+      - 它可以访问哪些文档？
+      - 它可以覆盖原文件吗？
+      - 它应该创建新版本吗？
+      - 它何时需要批准？
+      - 工具失败时会发生什么？
+      - 我们如何知道它修改了什么？
+      - 这些都是运行框架需要处理的问题。
+    source_fingerprint: sha256:c41a2e81cbb5e002e03525ecaa5325212e89d83d2efeee431b38302156602eb2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

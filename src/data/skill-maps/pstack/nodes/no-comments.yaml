@@ -1,39 +1,29 @@
 title: no-comments
-summary: 删除 AI 常见的解释性注释，并把真正约束转成结构。
+summary: Remove explanatory AI comments and express real constraints structurally.
 type: capability
-status: active
 layer: skill
 primary_cluster: implementation-quality
 secondary_clusters: []
 tags:
-- code-quality
-- comments
-- structural-encoding
-mechanism: 审查 comment；删除代码本身能表达的说明；如果 comment 描述真实 invariant，则建议 type/test/lint/runtime
-  check。
-when_to_use:
-- AI 生成大量注释
-- PR review 前清理
-- comment 声称某约束必须成立
-solves:
-- 减少过时注释
-- 防止 comment 成为错误 precedent
+  - code-quality
+  - comments
+  - structural-encoding
 inputs:
-- diff or source files
+  - diff or source files
 outputs:
-- cleaner code
-- structural encodings for real constraints
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/no-comments/SKILL.md
+  - cleaner code
+  - structural encodings for real constraints
 handoffs: []
-official_description: Spawn Comment Sicko, fix accepted findings, and offer encodings
-  for claimed constraints.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/no-comments/SKILL.md
+official_description: Spawn Comment Sicko, fix accepted findings, and offer encodings for claimed constraints.
+status: active
+mechanism: Review comments and remove explanations already carried by code. If a comment states an actual invariant, recommend a type, test, lint rule or runtime check.
+when_to_use:
+  - AI generates excessive comments.
+  - Clean up before PR review.
+  - A comment asserts a required constraint.
+solves:
+  - Reduce stale comments.
+  - Prevent comments from setting incorrect precedents.

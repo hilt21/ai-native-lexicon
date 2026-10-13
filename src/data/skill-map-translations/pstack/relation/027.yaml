@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["hillclimb","uses","swarm"]'
+provenance:
+  original_sha256: e20c835fd7974870cd5f4fcc9b617cc649576ae32a871dbbd3b3548c395cf45c
+  retained_at: 2026-10-13
+units: []

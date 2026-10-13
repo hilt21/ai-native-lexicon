@@ -1,0 +1,333 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: map
+target_id: pstack
+provenance:
+  original_sha256: b120b043c930ae67fa1d33b4e1c9b9607dab64e349e636d03046a1f8993e31c5
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: pstack 技能地图
+    language: zh-CN
+    source_fingerprint: sha256:5e4b878becf5d5f11fad376f84c7ac8035ebb96dc9b02d08227345295184e41d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 从工作目标出发，选择和组合 pstack 的技能、操作手册与工程原则。
+    language: zh-Hans
+    source_fingerprint: sha256:ede61ef4de271cd06ad47f8945cc68301f7ac243a0d1c3f31fe6f614b07fd1b2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: scope
+    translation: pstack 0.15.15 的技能体系；用途和任务路径是编辑解读。
+    language: zh-Hans
+    source_fingerprint: sha256:231150066d1c4cf4d2a27f480979097c02f2cb9b5152f09ac893bbe69241936d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: audience.0
+    translation: 第一次使用 pstack 的开发者
+    language: zh-Hans
+    source_fingerprint: sha256:9c645ac9dd885c1317458b5b1215a965958bd1d1ee2f5684a47d1936f7cf0af2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: audience.1
+    translation: 需要选择工程工作流的 Agent 使用者
+    language: zh-Hans
+    source_fingerprint: sha256:acb4f08dd1a431f18eb0505b154c1f87969de7af0047bb8d73feaf680add4500
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.0.label
+    translation: 入口路由
+    language: zh-Hans
+    source_fingerprint: sha256:93866b58e5d67e966fa8d57bf985ba476cb3fbbbfc6a8b18b5e38c3b0288cc4a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.0.description
+    translation: pstack 的入口路由条目。
+    language: zh-Hans
+    source_fingerprint: sha256:d4d93ea7f049fbe361c36faa994abc8a7a9fce9788e3689efe5373ab4facf191
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.1.label
+    translation: 辅助技能
+    language: zh-Hans
+    source_fingerprint: sha256:a5d94641808fd244d79299647b529238992d7eb3c0a95d8b4e767183dd762593
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.1.description
+    translation: pstack 的辅助技能条目。
+    language: zh-Hans
+    source_fingerprint: sha256:f8d9f2e3d820d793a011c8da553d59f4d718863f8c7baed48f7565f557cedc8a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.2.label
+    translation: 能力技能
+    language: zh-Hans
+    source_fingerprint: sha256:c043ac0f70f218006c582d6078ee0750cea4fccafe49a90e24390fdc50da07fe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.2.description
+    translation: pstack 的能力技能条目。
+    language: zh-Hans
+    source_fingerprint: sha256:06e0ac8cbf2706c8474f74266fa8b5e3b16790c0fe5d84bc57ad63a591322d11
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.3.label
+    translation: 操作手册
+    language: zh-Hans
+    source_fingerprint: sha256:4b8e40ff93aabb5358118c761ca2a84459cef1173a7020b5faa2c02b94967e77
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.3.description
+    translation: pstack 的操作手册条目。
+    language: zh-Hans
+    source_fingerprint: sha256:d511e3ad7ab1dd9a730b713c76c3a0f525a5c08ceca7c8f3be1271bae1333e2b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.4.label
+    translation: 工程原则
+    language: zh-Hans
+    source_fingerprint: sha256:3d27c44033b6b5d4b137a9061e74b13fc6a06085ee6f45c1cfc57bb28579af84
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.types.4.description
+    translation: pstack 的工程原则条目。
+    language: zh-Hans
+    source_fingerprint: sha256:54b1f1b5aaaf2953e7e7f466df39511d93d6e77186d3f6f62f854725e9904168
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.0.label
+    translation: 路由器
+    language: zh-CN
+    source_fingerprint: sha256:e11a5091b646fb614eb045990ac00e58aeb2a8c3beac6d75a93fda57ecb4fe9e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.0.description
+    translation: 将用户任务分派到适合的工作流。
+    language: zh-CN
+    source_fingerprint: sha256:ffaba5c120bc7e8272c3f13edacb6e0959a4d3184ef409aab98e397abd4a2182
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.1.label
+    translation: 操作手册
+    language: zh-CN
+    source_fingerprint: sha256:e6c48ec9ec95ef3c3c59b621075be3b3e509ee80d361eb8d22c789902b2d3743
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.1.description
+    translation: 组合技能与原则、针对特定任务的操作流程。
+    language: zh-CN
+    source_fingerprint: sha256:8011b91b4ad298b5af62ee8b58dbdafe080a7fbd12d32ca62fbf638eb267dbcc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.2.label
+    translation: 技能
+    language: zh-CN
+    source_fingerprint: sha256:db5c10a8b52d8be163cac95c2b2bb87b034059d2c72f0c6914fc612362605471
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.2.description
+    translation: 执行或支持某类工作的可复用能力。
+    language: zh-CN
+    source_fingerprint: sha256:403d30e51fd75f3d95b175d34c21c86b8b6bbdb8c7e3642b797d309c96bd5e75
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.3.label
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:38ef91780e260e5bf1dbccc7a5e610be0309df223b53b602964488cafc01b3ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.layers.3.description
+    translation: 约束决策与执行、贯穿各项工作的工程规则。
+    language: zh-CN
+    source_fingerprint: sha256:9524e209ab9dca33c952da1fd306b268dd2e052fb4f30cbfbb5b781bf26825e3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.0.label
+    translation: 入口与路由
+    language: zh-Hans
+    source_fingerprint: sha256:a6d9edcf03867a684ca4ee6420da2869a8e3efbb7d952afcdda16c0467a78ee6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.0.description
+    translation: 应该从哪里开始，运行哪种工作流？
+    language: zh-CN
+    source_fingerprint: sha256:b7a44d42f78c2ef85ba7742de103b22b84497b5bac640b6970ccf3dd3c8fde30
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.1.label
+    translation: 理解与上下文
+    language: zh-Hans
+    source_fingerprint: sha256:9f14f3899e9fa7aa21ede751b00d12acb5ae6df7e0bb834a2b8346e76899a0de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.1.description
+    translation: 这个系统如何工作，为什么是这样？
+    language: zh-CN
+    source_fingerprint: sha256:c844f47d7f21c086becad510ab2788c72c9840d192e4ff621ff114f81ef28871
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.2.label
+    translation: 设计与决策
+    language: zh-Hans
+    source_fingerprint: sha256:a656adbe37ed412f4fe009761c6b3f6ce952f8373d4d86d84d3b50a0e012e9d6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.2.description
+    translation: 方案应采取什么结构，可能影响什么？
+    language: zh-CN
+    source_fingerprint: sha256:d2b7475a5362732973c9524f911f4100868e3bc2e5bf2b1f7034b195d1915ef8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.3.label
+    translation: 实现与质量
+    language: zh-Hans
+    source_fingerprint: sha256:df798f281ae394bae32819c3a08c060b96d4a3c524ffc6fb19a075d413bb0178
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.3.description
+    translation: 如何清晰地实现变更？
+    language: zh-CN
+    source_fingerprint: sha256:31d0b06b4780aae569148b17650c72cb288fc567525540f112aef19a49cbcf1b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.4.label
+    translation: 验证与证据
+    language: zh-Hans
+    source_fingerprint: sha256:9c407abf4078c4867b9fe8bd01e7c55ca99c7c38aba535a5649c49fde5754c09
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.4.description
+    translation: 如何证明实际结果能够正常工作？
+    language: zh-CN
+    source_fingerprint: sha256:2433748dfa43500c54c5e6bcfe943a48fa0d1e9dd6e9eeab91b126ccb67a308d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.5.label
+    translation: 并行与自治
+    language: zh-Hans
+    source_fingerprint: sha256:78f1263a4e2a28e738b58d0c8a2565b9d22c41b11468e49e3cb09f1377b8584b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.5.description
+    translation: 如何减少人工监督，同时推进更多工作？
+    language: zh-CN
+    source_fingerprint: sha256:7593fbf394b7b961d8f0c443c8f5a88d5016afcfb3f953a74ba4feb2fbfe44d4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.6.label
+    translation: 复盘与进化
+    language: zh-Hans
+    source_fingerprint: sha256:b6f37416a751d664a39c4a1340c2f04c472f3ad1e31e7040d36304b05d33ca93
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.6.description
+    translation: 如何让环境在每次运行之后得到改善？
+    language: zh-CN
+    source_fingerprint: sha256:701c15b66d4daa80b5c3ca6a0b500b34e834488671c6887c50cda3564805b266
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.7.label
+    translation: 工程原则
+    language: zh-Hans
+    source_fingerprint: sha256:c7df63753d73439eefc87213147fdb6eea270d08cddc1d735ed23f042a690b14
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.clusters.7.description
+    translation: 哪些可复用规则约束所有工作流？
+    language: zh-CN
+    source_fingerprint: sha256:e7cccc8505d704f7b286bed938f8380c685b6435e4e45950f9af434cbdfe0646
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.0.description
+    translation: 流程调用或使用一个能力。
+    language: zh-Hans
+    source_fingerprint: sha256:d63cebfa37394aeeb879b54fe735f4806e343285faa5dd92bcbdd4799c407295
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.0.outgoing_label
+    translation: 使用的能力
+    language: zh-Hans
+    source_fingerprint: sha256:5509d49888d74b829b0401b32e2bd3383a634371356baee36a3ce69582eec263
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.0.incoming_label
+    translation: 使用此能力的流程
+    language: zh-Hans
+    source_fingerprint: sha256:e2903036d2050f635082c2908809d189a8685e4311b50e4f1bba66b5e77a6a15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.1.description
+    translation: 入口为任务选择下一条流程。
+    language: zh-Hans
+    source_fingerprint: sha256:698c794393dfabb15de49bcaf05ee6dc2b5b09df45d719af2b31c117fe8398b8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.1.outgoing_label
+    translation: 可选择的入口
+    language: zh-Hans
+    source_fingerprint: sha256:2a18f864a54dfae9cd2ca0768df8f1a6b13e6677a83fcf59e050fec3a1b857a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.1.incoming_label
+    translation: 路由到此处的入口
+    language: zh-Hans
+    source_fingerprint: sha256:b724385f14454e254be0ba9e32869c3e458b35239bd42597dcf1ec0d85b46754
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.2.description
+    translation: 一个条目的产物可交接给另一个条目。
+    language: zh-Hans
+    source_fingerprint: sha256:3eda9914a8273a31859987a02022e793034d21e3280d355269937661f2319669
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.2.outgoing_label
+    translation: 可交接给
+    language: zh-Hans
+    source_fingerprint: sha256:9f8797a59593d941e925053a22cbd3a671b66315bb25b6782c2438428f0532d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.2.incoming_label
+    translation: 可接收来自
+    language: zh-Hans
+    source_fingerprint: sha256:804ef1e7f223fd5812cf924b13e564f607358e9a839b85357a7a5d8201319c20
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.3.description
+    translation: 工程原则约束工作中的判断。
+    language: zh-Hans
+    source_fingerprint: sha256:12f18e79d81fb0bfd45a9f783799d56b9d5a2ba67d45618a5b7e19f483450dc8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.3.outgoing_label
+    translation: 遵循的原则
+    language: zh-Hans
+    source_fingerprint: sha256:455580ad1666fef52bf325accc497c03a411f27f7e4ac9cf4091597b8f350ca3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.3.incoming_label
+    translation: 受此原则约束的条目
+    language: zh-Hans
+    source_fingerprint: sha256:38479b16d2e0952feb5a9eb4f6626b5fd72a7e7baac5ce78447a13f5919aeca8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.4.description
+    translation: 通过恢复入口继续先前的工作。
+    language: zh-Hans
+    source_fingerprint: sha256:52d9562cfbbf5d2d4a47f792e38366d94f9fb546349d7723211cec2989b2bd52
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.4.outgoing_label
+    translation: 可恢复的工作
+    language: zh-Hans
+    source_fingerprint: sha256:8beea6de82f4afb28fc0e8796c4fe73ac32f478f6a1471361903eeae54aa9b65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: taxonomy.relation_types.4.incoming_label
+    translation: 由此处恢复的工作
+    language: zh-Hans
+    source_fingerprint: sha256:1420be04f19c7217c42b954162e81fbf48c00eac14fbbeb847ad4f6db4b3aca7
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["orchestrate","uses","swarm"]'
+provenance:
+  original_sha256: f75c4054dfee28b368f1531496b820db604a35dcccf12f19a59138d105f4df84
+  retained_at: 2026-10-13
+units: []

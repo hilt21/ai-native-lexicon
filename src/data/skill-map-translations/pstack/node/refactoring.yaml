@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: refactoring
+provenance:
+  original_sha256: 7ddb835d6fd859a71cb941d3808e572f5841a31f4812bd6ac3dd1fbe6f89be75
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: refactoring
+    language: en
+    source_fingerprint: sha256:87001ef1ad72fbfbc387dee2c6ba3cf7d20b2473c62222792a00768b338a8b42
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 在行为不变前提下重塑结构。
+    language: zh-Hans
+    source_fingerprint: sha256:a8bedbd8c104c12868a28aa6927ed4497971631515a4858ca7e03068799e1fde
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前行为
+    language: zh-CN
+    source_fingerprint: sha256:2b97ca17720fc87e80626173cae6020f71c888c3194dd35ef889db932e8feb20
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 目标结构
+    language: zh-CN
+    source_fingerprint: sha256:cfd9d8006fb29e2b2e165a99c7e44d178349cddd02095f9118694594a47f44d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 保持行为的重构
+    language: zh-CN
+    source_fingerprint: sha256:e2508c0c8ceb7bdcc39f920aa5e1d127bf2e28cc8221259df14427ddfdfa5f88
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 等价性证明
+    language: zh-CN
+    source_fingerprint: sha256:5068ae93aa15d09dd2ef16e467d953e6d4d2c454e54b8f88728f3377fcf7ca87
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 降低读者负担
+    language: zh-CN
+    source_fingerprint: sha256:230d885ebbb1024128e12932286ac97da81da9dbfc297d3e417b7f6ad3b35a65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: PR
+    language: en
+    source_fingerprint: sha256:915a0e43311baacc899922b7a3a63f26317614cd4e9528468a9943fbcbc08584
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先 pin behavior → 命名缺失结构与 target shape → subtract → 小步迁移 → old/new equivalence → reader-load check → PR。
+    language: zh-Hans
+    source_fingerprint: sha256:bb8f61c7bb104c937a42107731206c2dba3d365fa0aefea599ae992ad484b962
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 小范围至中等规模的重构
+    language: zh-CN
+    source_fingerprint: sha256:7909be1b302ef2c6abd0f3761fb476478bfff17611e87fdd67157c134dcdbee3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: API 结构调整
+    language: zh-CN
+    source_fingerprint: sha256:074d0ff715aacbd450b22590a6ec9c3e4711136b411772b79cfa0a6ac1492aa3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 结构难读但行为正确
+    language: zh-Hans
+    source_fingerprint: sha256:bab630920c8dcdee309b73f752351a97a088ccafa5ce2bab5ba9b1359f1c7046
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 重构顺便改行为
+    language: zh-Hans
+    source_fingerprint: sha256:7566b1e95de777a8d5b16cdc07670eb70830ff62f1f9731accc19466331ad024
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 兼容层长期残留
+    language: zh-Hans
+    source_fingerprint: sha256:f28605db8488d6fcdeaca1aa6459c7d29de14ea7c9298f97c1cd3ad0d477ef12
+    review_status: reviewed
+    reviewed_at: 2026-10-13

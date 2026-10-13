@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 将相关设计决策和能力隐藏在接口之后的实现单元。
     source_fingerprint: sha256:31e65e109d556dbe57508d8063332d580c75d65d9606a81e8c8bd6eabb7ae30d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 能够划分责任，且无需过量跨边界协调的系统。
     source_fingerprint: sha256:0cb23904f01bea50163f60ff78f3c9ea00f839f9cb1200a5f64eb6e6bc06dcbf
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 隐藏可能变化的决策，同时让调用方保持简单。
     source_fingerprint: sha256:8d927548c823f94a380b3da5be54e71b48ac851a8090637c71c889f989e57e60
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 模块是实现边界；层级描述单元之间的嵌套。
     source_fingerprint: sha256:50e2026637cb2e8ab5a9558f2099c3b5602d9fabf3094fe9c1a7bf76980c2cf6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 模块 = 接口 + 隐藏决策
     source_fingerprint: sha256:8b6b9c02f83c81e3e3887804d7b1e3fdcefee663f19c51242684d0de3ba3f2b5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 检索模块在稳定搜索接口之后负责排序与索引选择。
     source_fingerprint: sha256:3e5a56cab8ebb98a59bd479a0b72f97cb3515dcd99ba38568c20ce27b25e8700
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 模块
     source_fingerprint: sha256:6a6c15a54011f9eeed4582ba96fd228f465ca16ca2dd21dcba745d4da7ef6a12
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 将相关能力和内部设计决策封装在接口之后的单元。
     source_fingerprint: sha256:324c125a870e7c8c31f0583dad2c9107e7d42cfed4f0ffbe8969697cb72bd151
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 只转发的包装层可能增加导航成本，却未隐藏有意义的复杂性。
       - 根据实际变更模式评估模块边界。
     source_fingerprint: sha256:8a8256bc75ac63db64eed2a79d280efa24851df51e5cd991107edec2bd7be755
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 代码边界和封装实现强制实施分离。
     source_fingerprint: sha256:3e376b80de35eaba4c8830f7733d833442ac91c931e21d724d20437803a05cc1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 能够划分责任，且无需过量跨边界协调的系统。
     source_fingerprint: sha256:ba7fdd5a0ce6d1f92fd721d1b653caa34ab5ee7f774571065a5da892b831c846
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 封装变化能够减少调用方所需知识时，通常应明确模块。
     source_fingerprint: sha256:c58fe19260488c6174ae705b44cd09050092c0ade12e1baa5442c183b17524a0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

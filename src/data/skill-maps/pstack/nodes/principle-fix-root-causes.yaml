@@ -1,30 +1,23 @@
 title: fix-root-causes
-summary: 先复现并找到机制，再修根因。
+summary: Reproduce and establish the mechanism before fixing the root cause.
 type: principle
-status: active
 layer: principle
 primary_cluster: principles
 secondary_clusters: []
 tags:
-- principle
-mechanism: 先复现并找到机制，再修根因。
-when_to_use:
-- Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce
-  first, ask why until you reach it, resist nil-check guards that silence crashes.
-solves:
-- 先复现并找到机制，再修根因。
+  - principle
 inputs:
-- symptom / repro
+  - symptom / repro
 outputs:
-- root-cause fix
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/principle-fix-root-causes/SKILL.md
+  - root-cause fix
 handoffs: []
-official_description: Apply when debugging. Trace each symptom to its root cause and
-  fix it there; reproduce first, ask why until you reach it, resist nil-check guards
-  that silence crashes.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  summary: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-fix-root-causes/SKILL.md
+official_description: Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.
+status: active
+mechanism: Reproduce and establish the mechanism before fixing the root cause.
+when_to_use:
+  - Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.
+solves:
+  - Reproduce and establish the mechanism before fixing the root cause.

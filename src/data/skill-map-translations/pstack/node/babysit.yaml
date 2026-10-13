@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: babysit
+provenance:
+  original_sha256: aa40554ba9dd4232099a5db80a13efb16c3450f1a0668b61885b801aec3bcab0
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: babysit
+    language: en
+    source_fingerprint: sha256:041b5177938db50edd733b73ae6674ed572dda8c8c08dc232f9533ecec3bef56
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。
+    language: zh-Hans
+    source_fingerprint: sha256:19171b87e030fe690f7a0987588cd4ecbea46b58b3eaeda4a133c8d7ebb440f6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 未关闭的拉取请求或变更栈
+    language: zh-CN
+    source_fingerprint: sha256:3f4bc14cd174237401fdb8e497aaf34dbbd20b4e259cb7b6175708e090f95f0c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 代码托管平台状态
+    language: zh-CN
+    source_fingerprint: sha256:119f782554c2264de62b0fb1881d30d370d98436d4bcfe932907eec7c1daa762
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 可合并的推进边界
+    language: zh-CN
+    source_fingerprint: sha256:967d54c9b587232730d7e672cd1273d6093854f5846581b3abcf06618a26c6dc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已处理的审查与持续集成问题
+    language: zh-CN
+    source_fingerprint: sha256:79ffc7ca7786b2a084490e630844b7293d6cc9f5f79b3cd72eb5a0b6650ca98f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 阻塞报告
+    language: zh-CN
+    source_fingerprint: sha256:4c8f365dd5cdab206415d54dc6419c425ab469a54c113fddfce6a563e44c1684
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 声明 drive/background/threads-only/check 模式 → 只处理 merge frontier → conflicts → review → CI → forge verdict → 批量 fix wave。
+    language: zh-Hans
+    source_fingerprint: sha256:acfd2f3ee031b54224b3b7dc4757081cfa4d21b2f2ec60291b327c163eac6bc4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: PR 已开，需要 green/merge-ready
+    language: zh-Hans
+    source_fingerprint: sha256:c0dd5a2752ceb79a712407ffe44c03b62704d6b7241e3d0e23364c0872daad45
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要处理 review/CI
+    language: zh-Hans
+    source_fingerprint: sha256:7c0b9e190d5e28c3b4dd37b1ca4bfa369eac2b509432cfc9bbf7725fc3d7d5cd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 同时处理整个 stack 导致 churn
+    language: zh-Hans
+    source_fingerprint: sha256:0384a578ce65f37628b45fb75c937f5e1f6f9d226eaa0ec8de4a5fa4d1e04cb8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把 green checks 当 merge verdict
+    language: zh-Hans
+    source_fingerprint: sha256:fbf81f1e342790bcaa4edefaffeefffff741e475bba0bba03447778298e9b739
+    review_status: reviewed
+    reviewed_at: 2026-10-13

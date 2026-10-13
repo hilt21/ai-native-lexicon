@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["hillclimb","feeds","opening-a-pr"]'
+provenance:
+  original_sha256: 40e25e39232b615e664ea3c95176808756360b704cabb3594613041ca131434c
+  retained_at: 2026-10-13
+units: []

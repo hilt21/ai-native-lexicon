@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["hillclimb","uses","show-me-your-work"]'
+provenance:
+  original_sha256: 9ce425f06397b27c41d7a0a46e9d7b72d7a945548ef0a3a82bb2c9d1d1d961bd
+  retained_at: 2026-10-13
+units: []

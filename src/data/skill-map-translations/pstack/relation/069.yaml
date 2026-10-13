@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["poteto-mode","routes_to","prototype"]'
+provenance:
+  original_sha256: 731da48a7ef37e8f7a573dc6e600c8d44f91021f7de40b3e822260657a9ae215
+  retained_at: 2026-10-13
+units: []

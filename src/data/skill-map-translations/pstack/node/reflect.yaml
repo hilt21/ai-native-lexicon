@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: reflect
+provenance:
+  original_sha256: c4bdc4949255a0a464ca24087b2b8cad32037757830b141d78bbc61a81ec8ce2
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: reflect
+    language: en
+    source_fingerprint: sha256:fe6192dfff4130f88c8bb1d51785675310fa3185068bc4e2944e619efb0f9637
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 复盘一次 Agent 工作，把经验路由成具体 skill 改进。
+    language: zh-Hans
+    source_fingerprint: sha256:b651b5e81a265dba52094b291650a215fb3b2ea648b2d6ba661ac6fae28e22aa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 反思
+    language: zh-CN
+    source_fingerprint: sha256:90029c42aa0e9a1aedc7f45735dbaba6045875d73285ed611e636f0fc91938a7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 学习
+    language: zh-CN
+    source_fingerprint: sha256:315e7240caeb92273713c75dbe70d0bddd3d530ad3af87b8b53e87c0942946fb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 技能
+    language: zh-CN
+    source_fingerprint: sha256:c848f01150b65c145718644626ba2614b0a54d640e5748a7080b1d632dadce1f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前对话记录
+    language: zh-CN
+    source_fingerprint: sha256:60fd05150b1af394feae475a991e80ca2aebcf5467e6fe4148fe660aec5eed25
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 任务结果
+    language: zh-CN
+    source_fingerprint: sha256:6646810548a3f1a1297a931cce3ded2b41312bb4be7aa79cbe9ede2ce5e44413
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已接受、已拒绝或待处理的经验
+    language: zh-CN
+    source_fingerprint: sha256:6e934db2ea62a635f86a0f66c6f3128771933697aaa0b6bdd1cf3b96c3e9a342
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 技能编辑提案
+    language: zh-CN
+    source_fingerprint: sha256:a1dfcd8307334404c2dd69d0c14fb507cc7a2fd7de3a8bcb4d8458b6bfc2afcc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Spawn three parallel review subagents over the active transcript, surface learnings, and route each to a concrete edit on an existing skill. Use when the user says reflect.
+    language: en
+    source_fingerprint: sha256:0ddb68040fd3517b88d382907d5831313d74ce6979e76e8e83180fbac00d6ebd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 三个并行 reviewer 从不同角度分析 active transcript，综合 learnings，并把每条落到现有 skill 的可执行修改或 backlog。
+    language: zh-Hans
+    source_fingerprint: sha256:082ab7551481eb08d915368813c1f09619a26f7f31f958d743c615e576b2d171
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 复杂任务完成后
+    language: zh-Hans
+    source_fingerprint: sha256:a3ea74f27ebb8f90de5d3a7ac636535907d3eec6b733a57c319ee451a46f4523
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 用户显式说 reflect
+    language: zh-Hans
+    source_fingerprint: sha256:c139b585591dec1f81f350ee5938af13932aa230a2ba494f05d698f9e3c59a94
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 想从一次运行中沉淀方法
+    language: zh-Hans
+    source_fingerprint: sha256:312bc2c33bc8fdd14b9c6d5050b5a03a0dbbd56336fb911d4e0d73c892ff4548
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免经验只留在对话
+    language: zh-Hans
+    source_fingerprint: sha256:7166131e27f3b007c5585e4bba2f1d13920c4fdd7cd039f4cc7522f1b76453c7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把操作经验转成可维护 skill
+    language: zh-Hans
+    source_fingerprint: sha256:664b0d78c2d57f1dc437c824de91b671527168d96588220d5589cadc5ef582da
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement-spec","uses","code-review"]'
+provenance:
+  original_sha256: bdb5a6a926ff8791482daec26b5c340d6b3a21f473896f9d83153f6a0b48f2db
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 所有票据合入 integration branch 后做一次全图审查，不要求再重复每票独立审查。
+    language: zh-Hans
+    source_fingerprint: sha256:2e50353494db5dd5767441d317c575a625cbed9df85f102d42467f497f233a6b
+    review_status: reviewed
+    reviewed_at: 2026-10-13

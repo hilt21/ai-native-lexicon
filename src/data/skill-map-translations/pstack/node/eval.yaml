@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: eval
+provenance:
+  original_sha256: 60f862b45a680f424e338c9e383bf5b59615d61fdccb8deac242129ff6617913
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: eval
+    language: en
+    source_fingerprint: sha256:5390cab1cc9c4d8d73e80b5690485000331afb559dca6980d496e250fda2e4c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用盲测验证 skill/prompt 是否真的改善 Agent 行为。
+    language: zh-Hans
+    source_fingerprint: sha256:9fcc982a883f56209abdea6eb4b01288713d29ed5b17e726f2712dbc5b39dddf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 变体
+    language: zh-CN
+    source_fingerprint: sha256:974c8c34002d0af8e114c8cbdd4cce67442100c6229465efc8fdb759122cc938
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 自然产生的提示
+    language: zh-CN
+    source_fingerprint: sha256:b39e7468fef102dd5d6451a8a116a991b98be4d345bf77c5791007693a23e005
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 隐藏评分标准
+    language: zh-CN
+    source_fingerprint: sha256:178c6ea3379ca73074efabb41324361d7a97d72959a59100ab94cbf2426258f5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 候选输出
+    language: zh-CN
+    source_fingerprint: sha256:617c09d4bd6a180efa4ba38d6999732b667177588bd07ca9159cc4dfe6c4d368
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 盲评结论
+    language: zh-CN
+    source_fingerprint: sha256:0fb72cb7b14bfb07b83c3badf5a18e97a16c47c8fd0bf8abed55681214312891
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 是否采用候选方案的建议
+    language: zh-CN
+    source_fingerprint: sha256:1a8c2f3cf4f28b517cfda6f95d88985ddec1906baa8f23d93e26187961731d6c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 定义 rubric 但不泄漏给 candidates → sanitized env → organic prompt → 多候选 → 不同模型 family blind judge → transcript 验证真实 chain → 综合。
+    language: zh-Hans
+    source_fingerprint: sha256:aa3c1471cf45ed6b13683940948b43a9097ae50d2d9d2168c8808e3b09123418
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 修改 skill/prompt 后
+    language: zh-Hans
+    source_fingerprint: sha256:b5534eea3be17c3ac26d87e450ff605454dbd6258838c5ecaa4c4128bff4d72f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要判断 behavioral improvement
+    language: zh-Hans
+    source_fingerprint: sha256:23f120e7ee3e9227198dfa71e08bac46a6a784205c91d773040f1ac45008bbd4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 自报遵循规则
+    language: zh-Hans
+    source_fingerprint: sha256:679a4c282d79cd34cc7543d872757c7637a66c26d33afdbda59696ae69f6e4f1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: judge 知道模型身份带来的偏见
+    language: zh-Hans
+    source_fingerprint: sha256:e7135e3dc47c654974b0a2ff871d2ef7a402d917a097b0caa661880862fb989d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: session-pickup
+provenance:
+  original_sha256: c8529f946343909047324282b1c488ca8f5d7e8dc1b99e3f880d4d6a637c6eca
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: session-pickup
+    language: en
+    source_fingerprint: sha256:a3672f7efb8af026060ff7a0999f571d6134b880e4b4c562145cc8fd75d19a11
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 从 prior trail 恢复执行点，避免重做。
+    language: zh-Hans
+    source_fingerprint: sha256:223d81e7890d28b18348d0262b5d2452035d11ffe23fe7446b5c5713a2c52e62
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 此前记录
+    language: zh-CN
+    source_fingerprint: sha256:42a0f1e97b715b25b5b6daaff36e4c5be75ebcad3abf3d64623504a73733e3a9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 分支
+    language: zh-CN
+    source_fingerprint: sha256:5db570c2ab34ee52bf2ea322640ebe77a49795f0e2cdd62faa70e4e440f2278c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 计划
+    language: zh-CN
+    source_fingerprint: sha256:30c5b1373688a5a3b462875c8cc46139e0333735fc32c53b25e7c48b91135ed2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 恢复点
+    language: zh-CN
+    source_fingerprint: sha256:35a5f8bf0b56a71c1f94d8af1634cc110d9639004ba28b9a6d76e72bc8b42376
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 继承的状态
+    language: zh-CN
+    source_fingerprint: sha256:55f50445625021af3152b85fa0f22067a8dcee306bc881656c339858a915ce7d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 下一份操作手册
+    language: zh-CN
+    source_fingerprint: sha256:10f9f9dfa07d00bf7cc77f95ec32b7d6b2eef082d9fdfdf9112b9d79bbcdad61
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 读 transcript/cloud URL/branch → 重建 branch/worktree/todos/decisions → done vs pending diff → 路由剩余工作 → 仅对继承 claim 做真实 artifact 验证。
+    language: zh-Hans
+    source_fingerprint: sha256:dcdf193e61e9a87c7d9c14458dd61bc9008a63f6d0df30449aa17162cb08412e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 接手上一 session/agent
+    language: zh-Hans
+    source_fingerprint: sha256:d876a3c2af182fc445298e17fa6ad0ae00868b72fc132cff4c7dcaa4a0f4e3cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 恢复长期任务
+    language: zh-Hans
+    source_fingerprint: sha256:ed9c7f6ebb1b65477e445ed6156e9a2540c03889d8b57437ffeefe239469584e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 从头再调查
+    language: zh-Hans
+    source_fingerprint: sha256:a4673bc7bbb96a5bae1723cc653ecbda748b2425a44e4b3755530739786a630c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 重复已经完成的工作
+    language: zh-Hans
+    source_fingerprint: sha256:e4fdd6618bd2745315a34b2acef3cfe9df63ef4c5ac9b1ce1a223daf8d7bc710
+    review_status: reviewed
+    reviewed_at: 2026-10-13

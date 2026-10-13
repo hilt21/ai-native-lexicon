@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-08
+units:
+  - path: title
+    translation: 工具与行动
+    source_fingerprint: sha256:e5a59868794f8c5f8a3874795faf1250f174118e77c2a78338cc63811e4f882d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: AI 从回答问题走向采取有用行动时，可以创造更多价值。
+    source_fingerprint: sha256:15cb87bb14ca924fea30816716e9e28e2750cab2778252f1cc630473e1e81b26
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 如果 AI 智能体能够安全地使用某个系统，哪个系统会带来最大的价值？
+    source_fingerprint: sha256:461a4a896239f9ef66e1104f34f293e3a976a0928b5d5b5a16cd880359c6701e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:c0a70782d6d0a9939016a00350c584800da4232e8de4a606cc8fafcb4587820d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 随着 AI 获得行动能力，人的判断变得更加重要。
+    source_fingerprint: sha256:42829920758b69b6439b8b150cd5602e9683c43a0109aaf9880617929e6a3fd3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 语言模型可以生成信息。
+      - 工具让它能够与真实系统交互。
+      - 它可以搜索、创建、更新或触发流程。
+      - 每增加一个工具，能力就有所增长。
+      - 每增加一个工具，责任与风险也有所增长。
+    source_fingerprint: sha256:9c79d30340a2d88b59da31c72d9dd5df2f9568996df51f92a0e08523977fd4ff
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 一名员工向 AI 助手询问年假。
+      - 回答政策问题是有用的。
+      - 连接了工具的智能体还可以查询员工剩余假期、寻找可用日期并准备请假申请。
+      - 体验从信息走向了行动。
+    source_fingerprint: sha256:8e99e9cbf5760d60def22eb1c97aef9b702326c292e316e10f3acf53ffcf16cc
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement","feeds","retro"]'
+provenance:
+  original_sha256: e5e13e3a4ec229302a6bb154efe4e8bfd2131226565675d98367f2a137ebf297
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 实施记录可供用户复盘环境；retro 输出候选，不自动应用建议。
+    language: zh-Hans
+    source_fingerprint: sha256:537d9011256741a365cdcf4dd10dd8518ee18faea75db16411c79802190f8fd6
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["opening-a-pr","uses","technical-writing"]'
+provenance:
+  original_sha256: 844eadf0fd01b0ef2ec0d86954da25056be539e729a65d4700dfecc4c847f071
+  retained_at: 2026-10-13
+units: []

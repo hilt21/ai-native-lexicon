@@ -1,35 +1,27 @@
 title: multi-phase-plan
-summary: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
+summary: Plan large multi-phase work as executable owner checklists and evidence for operator audits.
 type: playbook
-status: active
 layer: playbook
 primary_cluster: design-decision
 secondary_clusters: []
 tags: []
-mechanism: prototype 解决未知 → subagent 探索 → 每 PR 一段 executable checklist → live/perf/unit
-  verification blocks → plan checker → handoff，不实施。
-when_to_use:
-- 大型 multi-PR change
-- 需要先规划再执行
-solves:
-- 计划只有主题没有执行接口
-- 把未知假设带进执行阶段
 inputs:
-- program goal
-- open questions
-- repo conventions
+  - program goal
+  - open questions
+  - repo conventions
 outputs:
-- validated plan file
-- PR-by-PR checklist
-- chosen execution playbook
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/poteto-mode/playbooks/multi-phase-plan.md
+  - validated plan file
+  - PR-by-PR checklist
+  - chosen execution playbook
 handoffs: []
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/multi-phase-plan.md
+status: active
+mechanism: Resolve unknowns with prototypes and subagent exploration. Give each PR an executable checklist and live/performance/unit verification blocks. Run a plan checker and hand off without implementing.
+when_to_use:
+  - Large change spanning multiple PRs
+  - Plan before execution.
+solves:
+  - A plan lists themes without an execution interface.
+  - Unknown assumptions reach execution.

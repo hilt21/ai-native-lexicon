@@ -1,43 +1,32 @@
 title: show-me-your-work
-summary: 把长时间 Agent 活动压缩成可审计 decision trail。
+summary: Condense long agent activity into an auditable decision trail.
 type: capability
-status: active
 layer: skill
 primary_cluster: verification-evidence
 secondary_clusters: []
 tags:
-- audit
-- evidence
-- attention-compression
-mechanism: 以 append-only TSV 记录关键决策、原因、证据指针和结果，避免让人重读完整 transcript。
-when_to_use:
-- overnight run
-- autonomous run
-- multi-phase work
-- 人离开后回来审计
-solves:
-- 压缩 human review bandwidth
-- 提高长期任务可追溯性
+  - audit
+  - evidence
+  - attention-compression
 inputs:
-- agent decisions
-- evidence pointers
+  - agent decisions
+  - evidence pointers
 outputs:
-- decisions.tsv
-- compact audit trail
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/show-me-your-work/SKILL.md
+  - decisions.tsv
+  - compact audit trail
 handoffs:
-- 交接说明：human audit
-official_description: 'Keep a reviewable decision trail for long-running or unattended
-  work: a TSV log with one row per decision (what, why, evidence, result). Local by
-  default; commit it when a reviewer needs the trail to trust the result. Use for
-  /show-me-your-work, autonomous or multi-phase runs, or work a human reviews after
-  stepping away.'
-text_languages:
-  handoffs.0: zh-Hans
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.3: zh-Hans
+  - "Handoff guidance: human audit"
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/show-me-your-work/SKILL.md
+official_description: "Keep a reviewable decision trail for long-running or unattended work: a TSV log with one row per decision (what, why, evidence, result). Local by default; commit it when a reviewer needs the trail to trust the result. Use for /show-me-your-work, autonomous or multi-phase runs, or work a human reviews after stepping away."
+status: active
+mechanism: Record important decisions, rationale, evidence pointers and outcomes in append-only TSV so a person need not reread the whole transcript.
+when_to_use:
+  - overnight run
+  - autonomous run
+  - multi-phase work
+  - A person returns to audit unattended work.
+solves:
+  - Reduce human review bandwidth.
+  - Improve traceability of long-running tasks.

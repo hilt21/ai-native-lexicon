@@ -1,45 +1,34 @@
 title: blast-radius
-summary: 识别 diff 之外的潜在影响并用真实运行证明安全前提。
+summary: Find effects beyond the diff and demonstrate safety assumptions through actual execution.
 type: capability
-status: active
 layer: skill
 primary_cluster: design-decision
 secondary_clusters:
-- verification-evidence
+  - verification-evidence
 tags:
-- risk
-- verification
-- review
-mechanism: 寻找改动安全性依赖的核心事实，追踪 callers/consumers/implicit assumptions，并构造脚本或真实运行验证该事实。
-when_to_use:
-- 小 diff 但不确定风险
-- API/数据结构变化
-- shipping 前安全检查
-solves:
-- 避免只看 diff 的局部审查
-- 识别隐藏依赖
+  - risk
+  - verification
+  - review
 inputs:
-- diff
-- repository graph
-- runtime or data surface
+  - diff
+  - repository graph
+  - runtime or data surface
 outputs:
-- blast-radius map
-- critical safety fact
-- proof
-- residual risks
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/blast-radius/SKILL.md
+  - blast-radius map
+  - critical safety fact
+  - proof
+  - residual risks
 handoffs: []
-official_description: Find what a change could break somewhere else before it ships,
-  beyond the diff, and prove the one fact it's safe because of by running real code
-  instead of writing it up. Use for 'blast radius of X', 'what could this break',
-  or reviewing a small diff you don't trust.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/blast-radius/SKILL.md
+official_description: Find what a change could break somewhere else before it ships, beyond the diff, and prove the one fact it's safe because of by running real code instead of writing it up. Use for 'blast radius of X', 'what could this break', or reviewing a small diff you don't trust.
+status: active
+mechanism: Identify the facts on which change safety depends. Trace callers, consumers and implicit assumptions, then verify the facts with a script or actual run.
+when_to_use:
+  - A small diff has uncertain risk.
+  - Change an API or data structure.
+  - Check safety before shipping.
+solves:
+  - Avoid review limited to the local diff.
+  - Identify hidden dependencies.

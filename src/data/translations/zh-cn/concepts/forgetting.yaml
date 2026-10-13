@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 让过时或价值较低的记忆退出未来使用。
     source_fingerprint: sha256:20d9a7f1e8c0a3975f5cf48a901982c21a80f3b0b327d07024e3f34afc5547b5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 遗忘按照保留和相关性规则，退役、删除存储信息，或将其排除在未来检索之外。它改变未来记忆可用性，与上下文裁剪不同；删除笔记不会擦除模型训练数据。
     source_fingerprint: sha256:7bcafc823faa9b49b65848a55d95884508e0024fc335ac444a5d877790004d27
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 永不过期的记忆可能保留过时假设，并让信息存留超过其有用期限。
     source_fingerprint: sha256:317910205f40ab77ba259d0cadaf57461ef2dc9536f91afab46fe3c6a4e9bd18
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 退役已被替代的项目指导，或执行已约定的记忆保留期限时使用。
     source_fingerprint: sha256:1664c3a731aa71034df3f5b1f3d896ab80969a140891ad4bf88f0c8b380a2a98
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 删除可见笔记，却让重复内容继续被索引和检索。
     source_fingerprint: sha256:750b82f7ebd2832bd608661fd64c449624e8638c95c3979e5c1e600c84de27ad
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-06
+units:
+  - path: title
+    translation: 从提示词到上下文工程
+    source_fingerprint: sha256:5e1d9ed615e115f3455adf59898b6134976a34400942a8ca27e664d42e004b1d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 好的 AI 结果越来越依赖好的上下文。
+    source_fingerprint: sha256:9f4777ad260c82f925f83172c9a06da980b9855102dbbea1e95bc903327a71a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: AI 需要哪些信息，才能真正理解你的工作？
+    source_fingerprint: sha256:eb70a1a45d0f5c2ca6cb0a9909004f6de6eda6e3795ed59e37e3f98d3b393191
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:8741f71a179d4736696f71b8a015f25da7c350ddea91a9c89e6615943439ca1c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 在公司内部，一些最有价值的上下文来自组织知识。
+    source_fingerprint: sha256:e8fec506f0600dc2d511670cec6b6a70523cb5b424300e7b23586aceb8fdea72
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 提示词有用，但只是系统的一部分。
+      - AI 需要在正确的时间获得正确的信息。
+      - 好的上下文可以包括文档、数据、指令和之前的操作。
+      - 差的上下文会导致差的决策。
+      - 上下文工程正在成为一项核心 AI 能力。
+    source_fingerprint: sha256:62b3dc7ace64687a0eb55cf774e6ff4dd06d1d9b7a11a4752234d2f9d0f66d1f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设你让 AI 编写项目状态报告。
+      - 巧妙的提示词可能改善文笔。
+      - 但如果 AI 不知道当前计划安排、未解决问题、已有决策和最新变化，报告仍然薄弱。
+      - 答案质量很大程度上取决于上下文质量。
+    source_fingerprint: sha256:4d2a795fd20429cbc05c24eafe70e07a8956784df77e82ccead8eb4eda71d7e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13

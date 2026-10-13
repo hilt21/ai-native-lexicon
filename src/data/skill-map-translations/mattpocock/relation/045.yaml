@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["prototype","feeds","grill-with-docs"]'
+provenance:
+  original_sha256: 3bb5ef4fdc8556fe4b06413271971e4b18ecf43f04b98569c98f917aef29b1af
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 原型回答设计问题后，可将结论（必要时经 handoff）带回原讨论；不自动调用用户入口。
+    language: zh-Hans
+    source_fingerprint: sha256:2ef8fe31a073f3fc3675a0582f51c13d7997c719fcc413022b7c2f7e282e887a
+    review_status: reviewed
+    reviewed_at: 2026-10-13

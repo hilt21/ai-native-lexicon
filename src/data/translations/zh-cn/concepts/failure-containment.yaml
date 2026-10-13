@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 设计 AI 系统，使错误决策或组件失败的影响范围有限、可观察且可恢复。
     source_fingerprint: sha256:5871bda23f483f91e883bc9eb9e622b6203492545f79c00f7f7f4b7d360d2712
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 故障遏制结合狭窄权限、隔离工作区、预算、事务边界、熔断器和升级路径。它假定模型与工具会发生部分故障，并通过周边系统设计避免级联影响。
     source_fingerprint: sha256:7e0723759e9cebf6ca1d8efd579513fc94ad4e1330b598677316497d4837492e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 平均准确率无法说明罕见重大错误的成本。遏制措施使剩余不确定性在运行中可承受。
     source_fingerprint: sha256:89909b96b8f60a22ffe4b8a076db4d28e84fa2e0b8dad16b82a010e316d38901
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于智能体反复操作、控制共享资源或依赖不可靠外部系统的场景。
     source_fingerprint: sha256:d97a937b3ed4257c0bc2de89be7ac7cc4bfedf6f4f10e3e234af2ace3644c4cf
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 让副作用不受限制地扩散，再依赖智能体自行发现并纠正错误。
     source_fingerprint: sha256:b2b1614e4e4e71f73a94534297ddedf745dae21d0b33831c4d4f443caa8ef85e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

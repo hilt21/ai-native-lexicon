@@ -1,52 +1,45 @@
-title: 我想先看懂系统
-summary: 我想先看懂系统：从任务入口到可检查的产物。
+title: Understand the system first
+summary: "Understand the system first: from task entry to inspectable output."
 order: 0
-when_to_use:
-- How does X work?
-- Why is this designed this way?
-- Catch me up on X.
 inputs:
-- 明确的任务目标与相关上下文。
+  - Explicit task objective and relevant context
+source_refs: []
+status: active
+when_to_use:
+  - How does X work?
+  - Why is this designed this way?
+  - Catch me up on X.
 outputs:
-- evidence-backed mental model / explanation
+  - evidence-backed mental model / explanation
 variants:
-- id: standard
-  title: 推荐路径
-  steps:
-  - title: 选择理解入口
-    why: 帮助用户理解 pstack，并选择正确入口。 pstack 的总路由器与工作风格入口。 只读调查，输出带证据的解释或建议。
-    nodes:
-    - poteto-help
-    - poteto-mode
-    - investigation
-  - title: 理解行为
-    why: 建立系统如何工作的 mental model。
-    nodes:
-    - how
-  - title: 查明设计理由
-    why: 解释系统为什么变成现在这样，并给出证据。
-    nodes:
-    - why
-    optional: true
-    when: 需要追溯设计动机时。
-  - title: 组织解释
-    why: 把 how 与 why 的结果组织成人真正能理解的解释。
-    nodes:
-    - teach
-    optional: true
-    when: 需要面向他人讲解时。
-text_languages:
-  inputs.0: zh-Hans
-  summary: zh-Hans
-  title: zh-Hans
-  variants.0.steps.0.title: zh-Hans
-  variants.0.steps.0.why: zh-Hans
-  variants.0.steps.1.title: zh-Hans
-  variants.0.steps.1.why: zh-Hans
-  variants.0.steps.2.title: zh-Hans
-  variants.0.steps.2.when: zh-Hans
-  variants.0.steps.2.why: zh-Hans
-  variants.0.steps.3.title: zh-Hans
-  variants.0.steps.3.when: zh-Hans
-  variants.0.steps.3.why: zh-Hans
-  variants.0.title: zh-Hans
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the understanding entry
+        why: Use poteto-help to choose an entry, poteto-mode for routing and investigation for read-only evidence-backed explanations or recommendations.
+        nodes:
+          - poteto-help
+          - poteto-mode
+          - investigation
+        optional: false
+        outputs: []
+      - title: Understand behavior
+        why: Build a mental model of how the system works.
+        nodes:
+          - how
+        optional: false
+        outputs: []
+      - title: Find design rationale
+        why: Explain the system's current form with evidence.
+        nodes:
+          - why
+        optional: true
+        when: Design motivation needs investigation.
+        outputs: []
+      - title: Organize the explanation
+        why: Organize how and why findings into an explanation people can understand.
+        nodes:
+          - teach
+        optional: true
+        when: Explain the result to another person.
+        outputs: []

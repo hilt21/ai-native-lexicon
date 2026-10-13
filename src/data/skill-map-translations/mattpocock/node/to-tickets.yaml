@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: to-tickets
+provenance:
+  original_sha256: 62fad7fa9bf4272b63e0ecff5278fa54827fb1fd741d24f8c23ec25ae38827e9
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: to-tickets
+    language: en
+    source_fingerprint: sha256:5fb69391dd8530e484c6a01cb4a61a489a09919001f35df3f90b35f281b7b40d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把计划或规格拆成带阻塞关系的 tracer-bullet tickets。
+    language: zh-Hans
+    source_fingerprint: sha256:018e3834fc2e9384897dfc799a2907fd358b8c51700288ea7897e32068c084de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:0ebfda32b2a1ed04185a5995ad150000af36f7a2f5c5cd2f3fc0262e90f9b3a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:8be29b00a6e85a589becc5b508f0a14d8389d2572e79fa1daf81404f7f360049
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:6abadea4eabfaf4c9c1a594dce69cd5407397538bd70a37d4949fea72e3a71d4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 计划、规格或对话
+    language: zh-CN
+    source_fingerprint: sha256:1f9d0e1dbf5652de61d520ee831f22d7fe41faf3bdead5b4a7716538036b1e18
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: issue tracker 配置
+    language: zh-Hans
+    source_fingerprint: sha256:cca5e2fdb01e46366e91692874c6eac8e68e0526e8ca7467a994416ee542141f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 适合智能体执行的工单
+    language: zh-CN
+    source_fingerprint: sha256:17312b5a7a90a5e8189c3af9c404deb6d69b248a18357a6e168a0eeccebd0252
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 阻塞关系图
+    language: zh-CN
+    source_fingerprint: sha256:503a5d4311a23c2018b5d3d6a4a399efb364459d0d4683ac2ab344b9e72f6442
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Break a plan, spec, or the current conversation into a set of tracer-bullet tickets, each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket locally, or native blocking links on a real tracker).
+    language: en
+    source_fingerprint: sha256:259813a13439c9dcaefba3916aca947888b4bfd43fb20a327be2fb6ccfc61eff
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动后，读取完整 plan/spec/讨论与代码，把工作拆成每票在一个新 context 内可完成、能独立演示或验证的完整 vertical tracer bullet；需要的 prefactor 先做，无法逐片保持有效的宽机械重构采用 expand–migrate–contract 例外。向用户确认 granularity、合并/拆分与 blocking edges 后发布；本地一票一文件，真实 tracker 使用相应阻塞关系，不关闭或修改父票。产生的票据已 agent-ready，无需再 triage。
+    language: zh-Hans
+    source_fingerprint: sha256:03dce1c60e521c0b767139512b52f31950269d0b1e2f3476556c048f30a34dfb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 已有 plan/spec，需要变成可执行 backlog。
+    language: zh-Hans
+    source_fingerprint: sha256:be0acba98d4e0f6ebd3b96ca8c7be549ea542a53ab5671d1643da69a9a27c1d0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 希望多个 Agent 能安全并行实现一个较大规格。
+    language: zh-Hans
+    source_fingerprint: sha256:374cc9d9c246a380c89e85619601b251ed1a0c38cc88bc5746481d73d4565abd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免大任务一次性塞进单个 context window。
+    language: zh-Hans
+    source_fingerprint: sha256:453fb132ed036e911ece6ab09ec73c1523bf445d91f942e996e97228956a37e1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把实施顺序和并行机会显式化。
+    language: zh-Hans
+    source_fingerprint: sha256:2f9858aa3de7b3868f6106027e3af7c1472adf2668d6d363ace31460fc715162
+    review_status: reviewed
+    reviewed_at: 2026-10-13

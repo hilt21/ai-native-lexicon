@@ -1,0 +1,50 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-14
+units:
+  - path: title
+    translation: 从任务到工作流
+    source_fingerprint: sha256:7f4f909ca880a9e7b6b48dd5dac3512ade7bd41638d0d236553ec1489d735fa4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 围绕 AI 重新设计工作流，往往能够带来最大的 AI 价值。
+    source_fingerprint: sha256:026d0aaedb5cdb1785b669a38451e4c3dacda52b323b895be23b2c3109d16474
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你的团队中哪个 AI 用例可以从一项任务扩展为端到端工作流？
+    source_fingerprint: sha256:bea749c6b0a47e022eef0902e20b79ca4e29f4a6c17010f773cbe832f763c610
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:65ddb8c8c70b302fb986264b8e25a7f0e0485a819ebd37b2741cd8848332f134
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: Microsoft 正围绕这类工作构建多种工具。
+    source_fingerprint: sha256:5649106eec72159ae41d88ee9c8f4bb78c63c239401dc845079b87effffc923a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 许多人从单个 AI 任务开始。
+      - 这是有用的第一步。
+      - 连接多个步骤后，更大的价值就会出现。
+      - 我们应关注信息和决策的完整流转。
+      - AI 给了我们重新思考工作组织方式的理由。
+    source_fingerprint: sha256:4110ae74da2aebba278a0253b5ab6d5ed1f5b507b265e2b7a404923584945492
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设要编写测试报告。
+      - 最初，AI 帮助写一个段落。
+      - 之后，这个流程可以扩展。
+      - AI 查找以前的报告、提取产品信息、识别相关标准、生成初稿并准备待审查文档。
+      - 价值来自连接完整的工作流。
+    source_fingerprint: sha256:45ff595a17994397e8ad5553c21c71a5c00730ad18285bbf996f270fb07ec035
+    review_status: reviewed
+    reviewed_at: 2026-10-13

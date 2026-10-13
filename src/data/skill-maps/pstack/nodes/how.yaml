@@ -1,43 +1,32 @@
 title: how
-summary: 建立系统如何工作的 mental model。
+summary: Build a mental model of how the system works.
 type: capability
-status: active
 layer: skill
 primary_cluster: understanding-context
 secondary_clusters: []
 tags:
-- grounding
-- architecture
-- read-only
-mechanism: 简单问题直接分析；复杂系统并行调查关键路径、所有权、运行流和层次，再综合成结构化解释。
-when_to_use:
-- 修改前理解 subsystem
-- 代码 walkthrough
-- 询问某代码应该放在哪一层
-solves:
-- 避免盲改
-- 减少错误的模块归属和边界判断
+  - grounding
+  - architecture
+  - read-only
 inputs:
-- subsystem or code area
-- runtime question
+  - subsystem or code area
+  - runtime question
 outputs:
-- architecture overview
-- runtime flow
-- key files and ownership
-- gotchas
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/how/SKILL.md
+  - architecture overview
+  - runtime flow
+  - key files and ownership
+  - gotchas
 handoffs: []
-official_description: Use for "how does X work", code walkthroughs before changing
-  something, and placement / ownership / layering questions ("where should this live",
-  "which package owns this", "is this the right layer"). Explains subsystem architecture,
-  runtime flow, onboarding mental models. Use why for motivation.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/how/SKILL.md
+official_description: Use for "how does X work", code walkthroughs before changing something, and placement / ownership / layering questions ("where should this live", "which package owns this", "is this the right layer"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation.
+status: active
+mechanism: Analyze simple questions directly. For a complex system, investigate critical paths, ownership, runtime flow and layers in parallel, then synthesize a structured explanation.
+when_to_use:
+  - Understand a subsystem before changing it.
+  - Walk through code.
+  - Determine where code belongs in the system's layers.
+solves:
+  - Avoid changes made without understanding.
+  - Reduce incorrect ownership and boundary decisions.

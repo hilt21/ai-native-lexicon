@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 结合观察与期望条件选择干预措施，以调节行为。
     source_fingerprint: sha256:b2865b27240f8f4bba79b954d864d4ccad4565682594c0335addc3c1766a86f2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 需要纠正、稳定或在边界内向目标推进的系统。
     source_fingerprint: sha256:65cbaf5766b2ee1fcb487813c4f5432edd055a9b3e1acc9d9a107e01a7753576
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 定义测量什么、可以改变什么，以及何时干预。
     source_fingerprint: sha256:e066bdc9bc2ea5cb75651113c0e36587765e81741084065f2e9b89f8127afc35
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 反馈提供信息；控制利用信息和参考条件实施干预。
     source_fingerprint: sha256:9409b7f18d8ec1dcfa27b51a59fce842b70622492789fe82139186a258ffd9df
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 目标 + 观察 → 控制器 → 行动
     source_fingerprint: sha256:b85310b3b49444821339caebdb48d1147e54abcca25c257e72a6e99449eaa30d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 支出接近已接受预算时，运行时停止新的智能体调用。
     source_fingerprint: sha256:9be62cd075b18cb0e77efa3203a3c0a70764846ff27690fededabf619d862691
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 控制
     source_fingerprint: sha256:f0b197ca78afdd8a2fff7889e865c4dd747bab2017c82270c8a99af906a6afc6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 利用观察与期望条件选择干预措施，以调节系统行为。
     source_fingerprint: sha256:09dd7668cccf8993b2d2562d94b07fb880cd8a8540227b33d88a8a28152663b3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 延迟或过度纠正可能使过程不稳定。
       - 控制器缺少有效响应时，规定升级措施。
     source_fingerprint: sha256:b1ceff38cb99389fd16e8dcbde9ee485519f38d390253fd2f4d5841e44cf0188
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 运行时规则和控制器实施可预测干预；模型可在明确限制内提出建议。
     source_fingerprint: sha256:e5251ef8373ea08c9e605a1e448fd235cd6d5c877fd56a914cd7635f1aafe51b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 需要纠正、稳定或在边界内向目标推进的系统。
     source_fingerprint: sha256:eeb2aa6f94819cb09aee094abf96dde327db74ec12bbc8384d5e1818b95178ec
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 需要维持限制或向参考条件推进的系统，需要明确干预规则，仅观察信息并不足够。
     source_fingerprint: sha256:abd651153ec8209c35b9088fd26f5efbafb193190525eb0a137b1de98754edb5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

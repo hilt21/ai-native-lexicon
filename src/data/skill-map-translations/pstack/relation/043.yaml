@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["trace-forensics","feeds","perf-issue"]'
+provenance:
+  original_sha256: 4de8598e1eb03fa02fa0a30532d9b83a01220645d31f75cbadf0ce4526b255d0
+  retained_at: 2026-10-13
+units: []

@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement-spec","feeds","pr"]'
+provenance:
+  original_sha256: 34e2b38d91dcc8ba6a80db632821fc1fdf887bac0fa65bd2d70607a5db49f735
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: integration branch 与统一 review 的证据可用于 PR body；是否创建或合并由任务授权决定。
+    language: zh-Hans
+    source_fingerprint: sha256:13a1cf35031b0d8957ba094567a4433e5902597893a8b4f6db7436a144e399fc
+    review_status: reviewed
+    reviewed_at: 2026-10-13

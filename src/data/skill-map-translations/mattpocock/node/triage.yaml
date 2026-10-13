@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: triage
+provenance:
+  original_sha256: f627dec4967eb34152f80b7b1acf9d4b70d8a3c9efac2a95e8ac24961be2f474
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: triage
+    language: en
+    source_fingerprint: sha256:cd05db0617ce1b280792ec125fa5a648344230025d0b71f9e27e64f0d6639634
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把外部 issue 和 PR 经过状态机处理成可行动的工作。
+    language: zh-Hans
+    source_fingerprint: sha256:e33c616912b8dd4991e947f3e68b767fdd682ae114f905eb44e7df43fc5354a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:dec8e0d04f3e4f4b422219c4adb4e085188bdfe0ba019a96e795f0804a379d7c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:f033579d8ba07da4c6ef818da02b1b3442f7420286fe459950af2b27d2d79be8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:2f7fa98f493101362135ad3d19e98eb21137ab481f569b0f30ac0a14ba08c6b3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: issue 或 external PR
+    language: zh-Hans
+    source_fingerprint: sha256:f363f57b5fc3969b8d367b1353b4210295d1bee3db4f4a27b0a49a181132757b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: triage 配置
+    language: zh-Hans
+    source_fingerprint: sha256:33ade05b98b64e3a9ee443b6eb848f3b8431f31d7622254de99b53951e912306
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 分类及事实验证结果
+    language: zh-Hans
+    source_fingerprint: sha256:55d23dd462e78580a4de5564422bd9407b7f8038fb25b691a966625c4db2ab98
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 经确认的处理方向与适用状态
+    language: zh-Hans
+    source_fingerprint: sha256:c3c52d3e06afcdc27921b329755af740494461246c954b0db3015dd6befa980e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 准备充分时的 agent-ready brief
+    language: zh-Hans
+    source_fingerprint: sha256:333389e83dd03fac31c161b349b672503cc5e5bc2c783df3470acfb876761781
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Move issues and external PRs through a state machine of triage roles, categorise, verify, grill if needed, and write agent-ready briefs.
+    language: en
+    source_fingerprint: sha256:85f12f99266d496c1e15fc62157c144fdbe20ab1a3bd00e1e64e3bcc6f78dcca
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动后，针对原始外部 bug report、feature request 或指定 PR，按配置角色与状态收集上下文，先提出分类及状态建议并等待维护者方向，然后验证 bug 或 diff，必要时通过 grilling 与 domain-modeling 补齐信息。结果可为 needs-info、ready-for-human、wontfix 或 agent-ready brief 等状态，并非每项都进入实施。外部 PR 自动发现开关默认关闭；to-tickets 已准备好的票据无需再次 triage。
+    language: zh-Hans
+    source_fingerprint: sha256:bebaaa593255c42e7d0d5962866971cbb6ec988fe08d710dc67048c8a1543f55
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 有外部 bug report、feature request 或 PR 需要处理。
+    language: zh-Hans
+    source_fingerprint: sha256:76e2142601465c9be3f5e06b69f639201b5ecbeaf385c363bdc55c8eef450016
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: issue backlog 需要从原始输入变成可实施工作。
+    language: zh-Hans
+    source_fingerprint: sha256:1bb975d73dff10a1e251808c1124f97ff9ea91c9d25f751e568ab58f264ce7a6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少原始 issue 的歧义。
+    language: zh-Hans
+    source_fingerprint: sha256:aef19a75bcba63a2342b70671299338634b52dc927781e6e319ee8e54dd84ea8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把未加工需求转换成可交给 Agent 的明确任务。
+    language: zh-Hans
+    source_fingerprint: sha256:5fa9e46bb4f43706721cee9e16d372c9694351a56c67b51467e014c11b75afaa
+    review_status: reviewed
+    reviewed_at: 2026-10-13

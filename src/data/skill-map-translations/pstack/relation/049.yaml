@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["feature","governed_by","principle-separate-before-serializing-shared-state"]'
+provenance:
+  original_sha256: 27e4ca06c944558af2f9350e50a4ba898895b734d8d4656ee486e39f645d2467
+  retained_at: 2026-10-13
+units: []

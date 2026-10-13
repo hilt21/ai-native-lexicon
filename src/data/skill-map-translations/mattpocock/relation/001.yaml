@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","grill-with-docs"]'
+provenance:
+  original_sha256: 394e2d7b16629d2cc7463854c9a13ac17981805caf4c6ea4d0b59fe806ba96b4
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 有 working directory 且设计仍未清晰时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:9fd793aea4b19d265cc1640ec6ace9850ab052bead910cb08cb823b25bd9f0cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13

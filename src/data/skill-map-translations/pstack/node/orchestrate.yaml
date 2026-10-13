@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: orchestrate
+provenance:
+  original_sha256: 85dc05c40ffa9099576cb90a82f81a454faed8032eb9b37c6566b94137b5359c
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: orchestrate
+    language: en
+    source_fingerprint: sha256:051c57d785beb0fd92b54de6a86c1b1c9f3ed907624835d5f5d264fbbe0b0766
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用持久 coordinator 管理跨天、几十到几百 Agent 的 program。
+    language: zh-Hans
+    source_fingerprint: sha256:7a01bd30e5654609211c96354dcaf7ee3d800aa22b3b18fd35006dadd848d9b3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 项目目标
+    language: zh-CN
+    source_fingerprint: sha256:2ef9050d32d67b31bea88ca1235c136c2e42d2ae6ee545c2ab47a0d9916da4e4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 工作线
+    language: zh-CN
+    source_fingerprint: sha256:ec03f6cd286149ed003ffca77c9a9fe07796b294961332daddf87ee881495b61
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 持久状态存储
+    language: zh-CN
+    source_fingerprint: sha256:127c06f81ce8f191fa140329a98cfbbd57b100715834dcf86d023452d4cf2832
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 滚动验证的工作单元
+    language: zh-CN
+    source_fingerprint: sha256:f78462258915b6d7f7e35272bc7fa6b6534b13f06e9331284727175d20e0f659
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 项目台账与推进边界
+    language: zh-CN
+    source_fingerprint: sha256:d949cccbec2cac5e515156e46975242cb88ea21b2d0f8178404380d1e7ac63ef
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 面向人的报告
+    language: zh-CN
+    source_fingerprint: sha256:418c6a015ab57162ba06636e27aae7cabf2fc570598e01c247cb4fd1c23f65e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: coordinator 只管 program 不写代码；brief 是产品；workers/sub-coordinators 经 queue/inbox 回报；durable state 管 frontier；每个 writer 独占 worktree/branch。
+    language: zh-Hans
+    source_fingerprint: sha256:18d8bd1c2ef534e437f8d7ff503fa5713251e27635c6631167b5cc9dddec2512
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 工作超出单 Agent session
+    language: zh-Hans
+    source_fingerprint: sha256:383bd99322be019ae0602f9d738d3d4497db38fcc92a76b748de6767ed4d5865
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 持续多天的项目
+    language: zh-CN
+    source_fingerprint: sha256:99c4d7c1698c95b16ea16d397ff2ebddfb7e03fbfaa99e42f11e53d992721e2a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 大量子任务与 PR
+    language: zh-Hans
+    source_fingerprint: sha256:5c26d04d164c6962aeabb9a3202bfd98ec5c048363b8c24b8aa8adf40c2c886b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: coordinator context 崩溃
+    language: zh-Hans
+    source_fingerprint: sha256:2d64d7261999c62bd226abd72640607ca0e52ce3612ec74f1ff1c2142a0f6385
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: completion interrupt 风暴
+    language: zh-Hans
+    source_fingerprint: sha256:326a7484323c14047d01fdd9d6f9914feab2e37a8a0a4172d95f991e6f3beacf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.2
+    translation: 共享写冲突
+    language: zh-Hans
+    source_fingerprint: sha256:22e2f718ba3e7f9f07aba962fb49122aa3e61afa07610eac87a2ffd48b850713
+    review_status: reviewed
+    reviewed_at: 2026-10-13

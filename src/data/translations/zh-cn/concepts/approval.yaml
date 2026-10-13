@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 在规定的重要操作之前取得授权。
     source_fingerprint: sha256:ac562d6f270c930091221619e512de48e4187f367ef87e962808f476980a4fbc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 批准是有权的人或策略过程作出的决定，允许某项具体操作或某个工作范围。技术权限之外仍可能需要批准，且应明确批准者接受的内容。
     source_fingerprint: sha256:468eca61203bfd08d16f58e80eeef641984ddd5077af30ae78f6e7a3900ec1bc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 当已有授权不足时，在重大影响边界进行审阅可使行动符合人的意图。
     source_fingerprint: sha256:15528c80bea4c325350f3ed0de6a18dfcc5251912b64df5dedd6485b73cff263
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 策略规定必须由人审阅具体拟议结果后才能执行操作时使用。
     source_fingerprint: sha256:8e1bc6dab9da0d52d212feb6a85ca38ea3f1db56fdd15a8d96ccb3d53d44e5cb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 把沉默或经过一段时间当作对待处理批准请求的接受。
     source_fingerprint: sha256:416041caf180c2a6bc147873be644e84e3b0bc9ebd6953ea946b0e9af222987d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

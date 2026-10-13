@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["bug-fix","governed_by","principle-fix-root-causes"]'
+provenance:
+  original_sha256: 93a6acb34e6f4c8bc55e40a6b7f0cc896fb72a73e4d122b522ca74251f17d3c9
+  retained_at: 2026-10-13
+units: []

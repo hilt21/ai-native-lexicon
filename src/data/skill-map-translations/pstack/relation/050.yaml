@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["feature","governed_by","principle-sequence-verifiable-units"]'
+provenance:
+  original_sha256: 0cae43c5262ac5af454a2cae52234c9202b8389417ea76289d1e95ceeb07c136
+  retained_at: 2026-10-13
+units: []

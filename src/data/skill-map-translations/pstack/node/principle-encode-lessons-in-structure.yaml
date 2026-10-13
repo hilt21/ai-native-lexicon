@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-encode-lessons-in-structure
+provenance:
+  original_sha256: 4bc09864396bcfd7897daa04d9aa4a164b9fd5803e90a6b4b16eae4db0d3fe10
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: encode-lessons-in-structure
+    language: en
+    source_fingerprint: sha256:a7f75bb467d69ba7821f10fc8a452b819165df9a9ebdb0bde11d22807a007ff8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 重复指令第二次出现时，把规则下沉成结构。
+    language: zh-Hans
+    source_fingerprint: sha256:bfd1713be5957e7e147bc011b9ec2c5d2271990f03888ea1eda5b192c0293901
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:f5f22a67b0079218cfb7a4562ac4fee37089555217ccb25e4d895183394d64cb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 重复出现的指令或纠正
+    language: zh-CN
+    source_fingerprint: sha256:88020fa9a69c76db1884b6bb24fc7acb2c3a52135aa19539103f87e8409cfe74
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 静态检查、元数据、运行时检查或脚本
+    language: zh-CN
+    source_fingerprint: sha256:cff3ce4dd4de8383115c179fb169ef0b6e601a25338ebb2d292346150aa6c275
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when you catch yourself writing the same instruction a second time, or notice a recurring correction. Encode the rule as a lint, metadata flag, runtime check, or script instead of more text.
+    language: en
+    source_fingerprint: sha256:9450c44da796c65c6d58ca7471081efab662a812ba4adc227f3391eb6db62c8c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 重复指令第二次出现时，把规则下沉成结构。
+    language: zh-Hans
+    source_fingerprint: sha256:bdb86743ea27df49f1ebefcb8b9182c40dd15f24a8b3af31f3e4c3188943b461
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 发现自己第二次编写同一指令，或注意到反复出现的纠正时使用。将规则编码为静态检查、元数据标记、运行时检查或脚本，而不是继续增加文字。
+    language: zh-CN
+    source_fingerprint: sha256:4319752149dfbc456814e556cf190d77f89086b1683f3c4fcb5a0563b3d66a9f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 重复指令第二次出现时，把规则下沉成结构。
+    language: zh-Hans
+    source_fingerprint: sha256:e7e45d645eca7e474aa978408ddabf25ec4b4c4b58f3a1a6afd8e04fde71423f
+    review_status: reviewed
+    reviewed_at: 2026-10-13

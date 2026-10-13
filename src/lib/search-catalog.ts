@@ -31,7 +31,7 @@ export function catalogSearchRecords(concepts: Concept[], primitives: Primitive[
     ...guides.map((guide) => ({
       identity: `speaking-guide:${guide.number}`, type: 'speaking-guide' as const, title: guide.title,
       href: pathWithBase(`/speaking-card/#card-${String(guide.number).padStart(2, '0')}`), summary: guide.coreIdea, secondary: `Card ${String(guide.number).padStart(2, '0')}`,
-      fields: [field('Title', guide.title), field('Core idea', guide.coreIdea, true, 'en'), field('Linked concepts', references(guide.concepts, conceptNames)), field('Linked primitives', references(guide.primitives, primitiveNames))],
+      fields: [field('Title', guide.title), field('Core idea', guide.coreIdea, true, unitLang(guide, 'coreIdea')), field('Linked concepts', references(guide.concepts, conceptNames)), field('Linked primitives', references(guide.primitives, primitiveNames))],
     })),
   ];
   for (const map of maps) {
@@ -64,7 +64,8 @@ export function catalogSearchRecords(concepts: Concept[], primitives: Primitive[
       record.summaryLanguage = unitLang(entry, 'summary');
       record.secondaryParts = [{ text: entry.data.zh, lang: 'zh-CN' }, { text: record.secondary.slice(entry.data.zh.length), lang: 'en' }];
     } else if (record.type === 'speaking-guide') {
-      record.titleLanguage = 'en'; record.summaryLanguage = 'en';
+      const guide = guides.find((g) => `speaking-guide:${g.number}` === record.identity)!;
+      record.titleLanguage = unitLang(guide, 'title'); record.summaryLanguage = unitLang(guide, 'coreIdea');
       record.secondary = record.secondary.replace(/^Card /, `${ui('Card')} `);
     }
     const paths: Record<string, string> = { Summary: 'summary', Definition: 'definition', 'Example context': 'examples.context', Example: 'examples.example', Distinction: 'distinguish_from.distinction' };

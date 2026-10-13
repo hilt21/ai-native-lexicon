@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 保存一个智能体以后可以返回的执行位置。
     source_fingerprint: sha256:11dc5f8fd33176a17f1973d1d671df778864a2b5859b85dea553385631795912
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 检查点是在明确边界处保存的执行状态表示，足以支持规定形式的恢复。它必须说明哪些工作已完成，以及哪些副作用可能已经在保存状态之外发生。
     source_fingerprint: sha256:70fef2c0555ad76e2d5b01cb39b92bcf9dd042cefc3718d22d01081aeaa7e2de
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 重启点可减少中断后的重复工作，并帮助避免再次执行已改变外部世界的操作。
     source_fingerprint: sha256:4088a1c5dfce0a6d4b49d4da12d312b4c1c4026b09a5de985ebfd997472fd3c6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 长任务完成一批工作后、开始下一阶段之前使用。
     source_fingerprint: sha256:075fcf8acf14820183ff28e4c1c51636721f72d1cdb7feba9393ab40d7f61e21
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 保存对话文字，却未记录哪些外部写入实际成功。
     source_fingerprint: sha256:80773e498a1b0d3280520ed912901de5e5dbca5905995b88030838af6eba8f56
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-minimize-reader-load
+provenance:
+  original_sha256: afee88b249d4ab7afae98d3d85092b09375550bd06f54648e8eb46894cefaac0
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: minimize-reader-load
+    language: en
+    source_fingerprint: sha256:ff4fdc67a40bcbaa5c175baada1ccb7f792c30f242682b7b1e0d107745e60c3c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用减少读者必须跨越的层和隐藏状态衡量代码质量。
+    language: zh-Hans
+    source_fingerprint: sha256:36cee8032a8c65d7ceec29ff07438106f816e7959efe4f63f3c74979d78f544c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:f727fffe87fc27ced687294001190b7fa7780b1f833c0b8c289cb002f21b0c50
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 难以追踪的代码
+    language: zh-CN
+    source_fingerprint: sha256:c0ecd275a5f57fe9947a7e8bccdf344bb6a15636fe79a7bf39ec26870e97fa8b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 降低读者负担
+    language: zh-CN
+    source_fingerprint: sha256:2ac1294209e79b761b001c51645ac635521462fa19d49d99bef7b0afbd7d3c2f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when reviewing or shaping code that's hard to trace. Count layers between question and answer, and hidden state in the reader's head; collapse one-caller wrappers and shrink mutable scope.
+    language: en
+    source_fingerprint: sha256:651648f0f333f366919b01e181f27194a155e3e240972cd569f495eee46ee1be
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用减少读者必须跨越的层和隐藏状态衡量代码质量。
+    language: zh-Hans
+    source_fingerprint: sha256:fb57e0cb783c9317778f3e90d467ae1894a8f92a8b4bb15e00e5039f0688cdd4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 审查或调整难以追踪的代码时使用。计算问题与答案之间的层数，以及读者必须记住的隐藏状态；合并只有一个调用方的包装层，并缩小可变状态的作用域。
+    language: zh-CN
+    source_fingerprint: sha256:0ef40901d34c4ab874956378ab413fc850b9afbe20082a4e1dcbafdc0e1c1c1e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 用减少读者必须跨越的层和隐藏状态衡量代码质量。
+    language: zh-Hans
+    source_fingerprint: sha256:8921760281dacd83d4470dd76670b29e4538986a1d325ac615514c4307dca3ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13

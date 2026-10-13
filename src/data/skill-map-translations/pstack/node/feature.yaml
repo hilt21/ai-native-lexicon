@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: feature
+provenance:
+  original_sha256: 52d8508e780ec1cbbcb975358ca03e1df57ba4a1365f921c5a5668dbdf9d5ac4
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: feature
+    language: en
+    source_fingerprint: sha256:ae952ab31ec143f6a9af3889348d8c118868ee97fb0b1ba2a9ea3b2b5d504c0a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 新功能的设计、并行实现、真实验证和审查。
+    language: zh-Hans
+    source_fingerprint: sha256:c569743b5573327c667ab85e7c17b197e0ab12ae701fe251b3996e9574889989
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 功能需求
+    language: zh-CN
+    source_fingerprint: sha256:3e17eb9e12b1997505333d079a82edda68a6bbe5f10b3918b5f85f598a24cf65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 受影响子系统
+    language: zh-CN
+    source_fingerprint: sha256:5a69650e708e1e1f468bc2651ec95e9b3862e07048191d79b7da95f1f1fc99fa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已实现功能
+    language: zh-CN
+    source_fingerprint: sha256:b603b6828c20285c4b35ec1e1997daa66003bede400d6b6fd4e6fdc7ca497b71
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 设计依据
+    language: zh-CN
+    source_fingerprint: sha256:b64a6da75c8dc940d440a39a035ee08c7802b8e977e6d60e647e183656688183
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 验证证据
+    language: zh-CN
+    source_fingerprint: sha256:137358aabe3544f81f616b9bd3f71db0df4754f8804bf275d2ad8b19130a6885
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: PR
+    language: en
+    source_fingerprint: sha256:52661d6d99f02379f87a8dc0ef13a82ca10d6c560a439078725c477fcff8c11f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: how grounding → architect → throughput checkpoint → 分离 workstreams → delegate/arena → live verify → interrogate if contested → PR。
+    language: zh-Hans
+    source_fingerprint: sha256:3627a247c196d38a4934a647ce3f5cab094d530e829ca559b0f8728ac4fa88bc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 新增用户行为或 capability
+    language: zh-Hans
+    source_fingerprint: sha256:7be53d0c5d8fa9701c398b5538033ab3dbd6046c2f31511df2742dcdd0f17df0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 直接写代码导致错误结构
+    language: zh-Hans
+    source_fingerprint: sha256:abc3cff475376f1ac18bdf73bd44a5da0390d9919d0d321d8b7178eb3f1d6eca
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 并行写共享状态
+    language: zh-Hans
+    source_fingerprint: sha256:9992b952742c49cb96e7e41a6833a9fd7f329664cc5bbf762c8e8e500a8ee8db
+    review_status: reviewed
+    reviewed_at: 2026-10-13

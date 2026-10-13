@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement-spec","uses","tdd"]'
+provenance:
+  original_sha256: d9157a1496b99b85d5327ddd3bb14f39aa78c9ca1582cb894c0961438776f307
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 各 implementer 直接调用 model-invoked 的 TDD；编排者没有自动调用 user-invoked 的 implement。
+    language: zh-Hans
+    source_fingerprint: sha256:9ef82049eb53e5c94afd4929ad776e390c3edffb4f3ede9a657fa51a37f0a6ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13

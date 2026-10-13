@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","wayfinder"]'
+provenance:
+  original_sha256: 1a6b8ee7a1cb88fb24a076d4be9c23065a3466f13eab0913bacaee7e6aa97ba4
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 工作太大且前往目标的路线尚不清晰时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:44592909b285211d1ebb4c27992ece73690097c27014cfcc786e950e3bcbf6e2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

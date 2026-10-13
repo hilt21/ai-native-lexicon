@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-fix-root-causes
+provenance:
+  original_sha256: a9662fa1304817bb41e85ecae8d3a8bcd182c71d0aafc01021c63b6edaed87e5
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: fix-root-causes
+    language: en
+    source_fingerprint: sha256:0708ae5f31b662fd35087fa4ab4329815c66cf2d22ae292166e3daa7f18a8fdd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 先复现并找到机制，再修根因。
+    language: zh-Hans
+    source_fingerprint: sha256:f2b1690300e24b76919a0be836aa92a97ef4436a3883e7732d7d6417a0869bb1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:a284e6d8dcc1b9d0808648fe27d4244243c82a2dd252295e21708e0300434252
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 症状或复现
+    language: zh-CN
+    source_fingerprint: sha256:9163534861eabba13f52747e206dad8540c9790c9ba3fdd1e994176990627f9a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 根因修复
+    language: zh-CN
+    source_fingerprint: sha256:d6a24cdd24323cb1ee458edf679bbf60133a769509c93f15430b506dbfb26a80
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.
+    language: en
+    source_fingerprint: sha256:1195527bec6954bc98d822872136692c8de28a7b8115b3974e93ce0c4a8b9d2d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先复现并找到机制，再修根因。
+    language: zh-Hans
+    source_fingerprint: sha256:b781ca29507391c77c88946d11424e362bbdf7738ca0be767912aab7f62cf6e3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 调试时使用。追踪每个症状的根因，并在根因处修复；先复现，持续追问原因直到找到根因，避免用空值检查掩盖崩溃。
+    language: zh-CN
+    source_fingerprint: sha256:ab05d0718e491a85abe3933298b06cc3642fce682f3353e8f5f8265ee6a2f66b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 先复现并找到机制，再修根因。
+    language: zh-Hans
+    source_fingerprint: sha256:735a463eac16885671b311bc879fdc454c7da29d2b1af24fc3cf007a17385b21
+    review_status: reviewed
+    reviewed_at: 2026-10-13

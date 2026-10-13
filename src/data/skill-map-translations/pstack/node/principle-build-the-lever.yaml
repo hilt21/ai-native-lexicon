@@ -1,0 +1,69 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-build-the-lever
+provenance:
+  original_sha256: cbfe9d3066ef894eca6181010f4088259d4911ac33b24d42d878eabc34902863
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: build-the-lever
+    language: en
+    source_fingerprint: sha256:6b5b4ed68777bbe728f8d7ff3954aa3b008f450feeaf6101d2284eee5ec47d4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 优先构建可重复执行或验证任务的工具。
+    language: zh-Hans
+    source_fingerprint: sha256:66ace901061840da00d56bb57643d31b88476be81aa0ec1d2d24616813c20597
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:04b1f7c49bfe888a6d57d6e162f1eac05974ce4a234960068883d1443b8ca411
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 重复性或非简单工作
+    language: zh-CN
+    source_fingerprint: sha256:c48c06c32b9fe250818f17243d3f03ebf00b5f8f0c91fb338357672f5d152eb0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 可重复运行的脚本、代码迁移工具或技能
+    language: zh-CN
+    source_fingerprint: sha256:24c87753bc12adf6ed5942850b08f97fa16dd71720aaf1841c1a561dff84f5a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：verification
+    language: zh-Hans
+    source_fingerprint: sha256:62462fc570b2f0d9ec2b4f68c599483ae0c7277d40174c8b1cddc0cf41bcdc6c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Apply to any non-trivial work, not just bulk work: edits, migrations, analyses, checks. Build the tool that does it or proves it (codemod, script, generator, or a skill your subagents follow) instead of working by hand. The tool is the artifact a reviewer can rerun."
+    language: en
+    source_fingerprint: sha256:c744122fa9999acfcdd338032171d3feb543e5839f9861dc5de864a35843fa17
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 优先构建可重复执行或验证任务的工具。
+    language: zh-Hans
+    source_fingerprint: sha256:b6ab0a127b568963e443331f8fee3a77480991f9440d268aa796df22c3b21060
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 适用于任何非简单工作，而不仅是批量工作，包括编辑、迁移、分析和检查。构建能够执行或验证工作的工具，而不是手工操作。工具本身就是审查者可以重新运行的产物。
+    language: zh-CN
+    source_fingerprint: sha256:42d94a8b6e5e9e3d30f39e0bc33df21e3eb8284381ff5cc12e8d0fac443b2b38
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 优先构建可重复执行或验证任务的工具。
+    language: zh-Hans
+    source_fingerprint: sha256:15b1ddd623a3084687c0b55649b345c845419533cd8b84a3c318e9d797f22a1c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

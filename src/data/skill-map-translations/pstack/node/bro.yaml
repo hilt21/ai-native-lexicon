@@ -1,0 +1,75 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: bro
+provenance:
+  original_sha256: d980054547e228e8333850e3270058a7ac956b77bf93402e538650495bd25478
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: bro
+    language: en
+    source_fingerprint: sha256:f527e6c5bbded33e9ccd934ee11f9c5131ade2ead00b965ad8a5e5c5742001e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把上一条技术回复翻成普通人语言。
+    language: zh-Hans
+    source_fingerprint: sha256:2d999d23d22d33eb3372eee1260b880f390cd5cc4087e400720eb1e18b52dba9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 解释
+    language: zh-CN
+    source_fingerprint: sha256:4c942a856e8562ec03931c2a2a574e3dc2e86a2c995792adbc13120284d653f3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 通俗语言
+    language: zh-CN
+    source_fingerprint: sha256:2f70e5a74ce0a70061b6b000bce4f8c3015ceae76f6546b869b1b27d7bd668a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 上一条助手消息
+    language: zh-CN
+    source_fingerprint: sha256:f5900383b5de9b0b0db2c08c402d456bf16f5f0bc3b93f3593a169f2c7ec14cc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 通俗复述
+    language: zh-CN
+    source_fingerprint: sha256:bfa200b3b07180a7653f871caf01b9c1d2880bf3b8a132c3f9caef6623d4ac53
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Restate the last message in plain human language, with no jargon.
+    language: en
+    source_fingerprint: sha256:87edd95919b3b440f0012480e89526afd1322afe3104dd6e92ed53747cedc554
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 保留结论与因果，删除术语和复杂表达。
+    language: zh-Hans
+    source_fingerprint: sha256:b0a51a161386800c3d7d2411344ea97fc67b8d5e2177c4eb85bfee940e39630c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 上一条回复太技术
+    language: zh-Hans
+    source_fingerprint: sha256:c8011e12d08a284a4154befb43a49ea891ab114f28835b024a711034ce4e53b6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 用户要求通俗解释
+    language: zh-Hans
+    source_fingerprint: sha256:86e1d548d8a117e4bc3d2bb6d7c2842d13ee5495936a60b4c15add4428818a1c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低即时理解成本
+    language: zh-Hans
+    source_fingerprint: sha256:4a8a56a3b10728afe1b471792e0ecab0f4accaef2311409da1c6c1fef10f8604
+    review_status: reviewed
+    reviewed_at: 2026-10-13

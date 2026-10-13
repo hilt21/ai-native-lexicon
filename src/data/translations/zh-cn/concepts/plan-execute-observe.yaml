@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 将预期操作、实际副作用和观察结果分成明确阶段的执行纪律。
     source_fingerprint: sha256:a499d1e8aeb4833e56ffa62ebfd5200b9e46dabfb2792136e084fbb1e08a2087
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 规划—执行—观察要求智能体表述或编码下一项预期操作，经执行边界实施，再根据实际结果更新状态。下一步由观察结果驱动，避免由原始预期代替实际结果。
     source_fingerprint: sha256:efa3c63d8f9a0eee67248b3b607f6edceb2ff4ff3e2cd0dfe2859ba5ed5ec785
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 分阶段可使失败局部化且可见，避免假定成功污染后续推理，并提供自然的策略检查点。
     source_fingerprint: sha256:d4902768521740dc64087f9b6259a0c0f98dedaf55324fe4e8dd9b1325dca203
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于多步骤工具使用、外部 API、基础设施变更及结果不确定的工作流。
     source_fingerprint: sha256:c10011aaf5f95ff6bab72a939f2d2ada2161b3606445c0cbc96f844a35d63441
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 把提议操作当作已完成，未检查结果就继续计划。
     source_fingerprint: sha256:232c53bf70530516b501404a6362e5ed29e48ff810d7e04e8e54d83fd24921ae
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,48 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-01
+units:
+  - path: title
+    translation: 为什么 AI 在当下如此重要
+    source_fingerprint: sha256:d5db94ba1461cfb2604e686f20382a18e1a9a00862614b8c7037088dcb55fa39
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: AI 正在成为连接人与知识、软件的新界面。
+    source_fingerprint: sha256:5e56c87ba0ef004c95bcf2d2c8a684e92e63583574f1c4a46a2442ea4b702cc6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 在日常工作中，你在哪些查找信息的事情上花费了太多时间？
+    source_fingerprint: sha256:d3a950c0211823ad3509b09c65bef91feaff5e1abb74c870f5ec1570b43062cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:e51dfc45c43663a4caf892ca2d468155dea819feb27bc0b522cfff8846b489f2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 一旦 AI 理解了我们的意图，下一个问题就是：我们希望它替我们完成多少工作？
+    source_fingerprint: sha256:4ed7d60f55a2caf611ed99a7e1fc470d1dd9758ef6823f627394edf9fd00e594
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - AI 正在改变我们与信息和软件交互的方式。
+      - 过去，我们必须学习软件如何工作。
+      - 现在，软件开始理解我们的沟通方式。
+      - 自然语言正在成为一种新的用户界面。
+      - 这让更多人能够使用数字化能力。
+    source_fingerprint: sha256:4d72c359600ee37ddc0e237ff521ee86172d7dfa4302126111497d8926bf50ea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 以在公司内部查找信息为例。如今，员工可能需要搜索 SharePoint、打开多份文档、查看邮件并询问同事。
+      - 借助 AI，交互可以变得简单得多。员工可以用自然语言描述问题，AI 可以帮助查找、总结并关联相关信息。
+      - 重要的变化不仅是搜索更快。用户不再需要了解每一条信息存储在哪里。
+    source_fingerprint: sha256:b55997f79b1459690ea4ada04bcdfad2ea5be261537b42ee2ef92163fdabaf6c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

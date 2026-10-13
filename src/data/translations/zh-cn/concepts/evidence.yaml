@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 提供能够检查的支撑，说明工作是否确实完成。
     source_fingerprint: sha256:123743a495dce8eb224ce6aae4e6851e0b859a9754c2690e8aecae4533db69e6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 证据是可检查的信息，用于支持或质疑某项具体主张，例如测试输出或观察到的状态变化。其强度取决于相关性、来源和范围；成功消息无法构成普遍证明。
     source_fingerprint: sha256:8e0274689cd8fd43349c9a6b89254dcea0ee387cf650b24ae174a07f847bf242
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 审阅者需要依据接受完成主张，避免重建每项行动或依赖智能体的自信。
     source_fingerprint: sha256:ecc1d11ff7fefef36ac69fc566e1321fb6fed3d963eda08e0b00fc62aed4d06a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用可复现问题和修正后行为的通过检查支撑修复主张时使用。
     source_fingerprint: sha256:811f70b9db93080757009f79f27e7eeedd955478d9157cdafcf519d5b8877fad
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 用无关的通过测试证明所有请求行为都正常。
     source_fingerprint: sha256:9e7a4e4c6dcebc11813ff89e6f4e32dd5d37b917547ab67abef37b045e7f639c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

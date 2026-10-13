@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: improve-codebase
+provenance:
+  original_sha256: fe588f5b3e0eaee138004f7ddef49afbc361d9fca63cf209d621301133f34cdc
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想改善代码架构
+    language: zh-Hans
+    source_fingerprint: sha256:399558d241721a06be6f8b7950f841afa7e9dadf06ce2f358681ce9f27a277b9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 先扫描 deepening opportunities，再选择一个候选进入正常设计与实现流程。
+    language: zh-Hans
+    source_fingerprint: sha256:97e2e6565385d6412030c387b820a93d49aac5abfe3d71f36036509f3713613b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前代码库
+    language: zh-Hans
+    source_fingerprint: sha256:098df443f7d6bf89af394db49b38db8a8592178e18cf9c49ff4317c3d3bdbd27
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 希望主动降低 codebase entropy，提升可测试性和 Agent 可导航性。
+    language: zh-Hans
+    source_fingerprint: sha256:62a96812f4f3202a9494deb7abca93bee5b156b126944e58e11d78196f3c547a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 架构机会报告
+    language: zh-Hans
+    source_fingerprint: sha256:b8d35c04b9ed07bd149797383676a0cec4dc55f275c42a43537335ba5b114ac1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 选中改进方向
+    language: zh-Hans
+    source_fingerprint: sha256:afd065c22e42506ab384aecc775babddfb80377c92387f057f1cfaf628b3423b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 可进入主流程的设计
+    language: zh-Hans
+    source_fingerprint: sha256:1a22dd842f0c7ab8943cf247199a5852503cc777edc5f3704d87371a703fdec4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 先调查，再选择改进方向
+    language: zh-Hans
+    source_fingerprint: sha256:8734258d341037a277bbeb5e43caf57d29cccdd937fcab16c7bcb805c797e1c1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 扫描 deepening opportunities
+    language: zh-Hans
+    source_fingerprint: sha256:63c997784c54eb30256b4bf15303fdd76776b1818b5530727912973a347c8b1d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 用户启动 architecture survey；它内部使用 codebase-design 词汇与 grilling 深入选中的候选，扫描不自动重构所有机会。
+    language: zh-Hans
+    source_fingerprint: sha256:07e3469f38fda29b9789d7bb258c59557cb3f49f35dbf0479819779a689adfaa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 可视化候选报告与选中方向
+    language: zh-Hans
+    source_fingerprint: sha256:671251d6200d3f51da7aa8f623c47762ccdc7257663b6d756310fc9e52f93274
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 直接查阅模块设计词汇
+    language: zh-Hans
+    source_fingerprint: sha256:3fe07d5f05f32d2243ac9352648c7c5f2b645a8206be2fd853796a2b979b191e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: codebase-design 是模块形状的参考能力；需要讨论 interface、seam 或 locality 时查阅，无需把词汇阅读当作必经阶段。
+    language: zh-Hans
+    source_fingerprint: sha256:28a0d2c0cc6997d38a60e23637eae1548a0bc9e5fc228000f1529b83562b1224
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.when
+    translation: 需要明确设计词汇或模块 seam。
+    language: zh-Hans
+    source_fingerprint: sha256:ae804f323324b0a6f57bba36cb303bd2b9a707471b3373dc7bffbd5f3ecb135d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.outputs.0
+    translation: 模块边界与接口设计语言
+    language: zh-Hans
+    source_fingerprint: sha256:b82eb606442900458e94842f06a96d1cc890109af01c4b91817a218d4bc747f4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 将选中想法带回主流程
+    language: zh-Hans
+    source_fingerprint: sha256:f0c4e85b26383b4dc87adaa0c0ae908a0aaefbfd9304d1c04b0d37383c397df8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 候选是新的 idea，由用户启动 grill-with-docs 收敛决策，再按工作规模选择 spec/tickets 或直接实施。
+    language: zh-Hans
+    source_fingerprint: sha256:cffa671f7e7ceb3ae81d9d56f0b4e8aa0723597960a3c3a4c2e8226c5f0a1db6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 准备把一个候选变成实际变更。
+    language: zh-Hans
+    source_fingerprint: sha256:21e23c4cd802dd9509fa38266e676ccd070003e8c557667380e9d2eba2dcfed6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.outputs.0
+    translation: 已对齐的架构设计
+    language: zh-Hans
+    source_fingerprint: sha256:031b20c303f60d21d401a4c926613fc09e624b05a7a94ce6b4569aa89e3b56ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13

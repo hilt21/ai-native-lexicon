@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 经过设计的操作，使其安全重复不会在首次成功应用之外产生额外的非预期影响。
     source_fingerprint: sha256:e7b291e0212a39e619f69ddc40c86d414d726c637ae59eadeaf06189986425c1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 幂等操作通过稳定标识符、前置条件检查、去重键或目标状态语义，让重试安全。无法实现真正幂等性时，操作应呈现提交状态和补偿路径。
     source_fingerprint: sha256:220dad17b5080024f1b2d4e2a7ed6871177238400783f780942950f0a68496c2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 智能体会在超时、部分失败和不确定观察后重试。缺少幂等性时，恢复可能重复消息、付款、记录或破坏性变更。
     source_fingerprint: sha256:03e7c5bd20582973e541ab09306bafe8208ae627314b62d192919c70e340cbd3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于可能被重试或恢复的每项外部可见操作。
     source_fingerprint: sha256:e79d5fcdcb8f979ca4443ae1808f872d590f0517fed591c3008d6090008edf78
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 状态变更请求超时后，不知道首次尝试是否已提交就重试。
     source_fingerprint: sha256:4b5bdf8f46e569c68efc8383ca7d0843e028b4363c2fd7668f436d4a6b3dade4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: bug-fix
+provenance:
+  original_sha256: 227342ee137f403659c42106e0d21fdf45b95c940a73f5dd78c72dff05a803da
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: bug-fix
+    language: en
+    source_fingerprint: sha256:1c132f1946d52c46f57f7b44911b37513c1f60a8eab4af19ee0d06e397047a5b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 科学式 bug 修复。
+    language: zh-Hans
+    source_fingerprint: sha256:a9d6f4e7c323886144025b93a9c4fae0acb0a00d5474acb19cdfbe1d5640fb95
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 问题报告
+    language: zh-CN
+    source_fingerprint: sha256:ee77425f6b44178ef40c4a642723ffaacf75eb3f2e2cb84bcee2cc30e1ac9564
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 复现
+    language: zh-CN
+    source_fingerprint: sha256:d36dcf7c30f4a70bdc29f25c2033394912a49ff246cdb83c09bfedd000ba7158
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 受影响子系统
+    language: zh-CN
+    source_fingerprint: sha256:cca43274e294d93053ce24f164d6dc973b559867430314d0dfa3a2507fbeb0d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 根因
+    language: zh-CN
+    source_fingerprint: sha256:677f192f48a38f323a562046b71ca719005cfcd6ef6d422baea2ce212f1be039
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 最小修复
+    language: zh-CN
+    source_fingerprint: sha256:cc2163b9a051c0246bae1786c102221ee0f6acfe2dec51b75215d0e69a5c7954
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 修复前失败、修复后通过的证据
+    language: zh-CN
+    source_fingerprint: sha256:cbfb8d4ad4fc2d4409960b311b7cbb0aac6873c35b7a855c18829e95d6e065b3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: PR
+    language: en
+    source_fingerprint: sha256:cdbf982e3325b88ab9e638e19fadaefe3b76c43485dbd34d34b7efb2dbe24024
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 真实 surface 复现 → how/why 形成假设 → 二分排除 → 证明 mechanism → architect/tdd → 最小修复 → 同 surface 验证 → PR。
+    language: zh-Hans
+    source_fingerprint: sha256:e06c91391757b5cb34a2283f908a0fa703e85e5dd34614f3ba6929b5fe409487
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 明确 bug/回归
+    language: zh-Hans
+    source_fingerprint: sha256:a7d01a5c95b900b87ec2bb3bacff6de0c88b19b89c73f73053e05c0e98a12a6c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 可以构造 repro
+    language: zh-Hans
+    source_fingerprint: sha256:471059f9eab40b9f59d0dac5d5ed0e1525d44f4bc82478ffa521a59ee9b218b4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 猜测式 patch
+    language: zh-Hans
+    source_fingerprint: sha256:63479076e1c3ad2ff2662af6509daf8251094ac790bf0821e584e1d9ff769101
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: tests green 但真实 bug 未消失
+    language: zh-Hans
+    source_fingerprint: sha256:c0af71cbc7a519f341a7df0d8e893fe3dd073d0960e7fd1f913e80c42de3d69c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

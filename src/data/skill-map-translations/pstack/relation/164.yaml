@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["create-verification-skill","feeds","maintain-verification-skill"]'
+provenance:
+  original_sha256: d8fa71699adc8b11e92f463d1ccf432931ba470377b3f51b1c29bbaf425b8563
+  retained_at: 2026-10-13
+units: []

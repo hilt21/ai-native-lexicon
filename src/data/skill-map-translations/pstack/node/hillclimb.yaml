@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: hillclimb
+provenance:
+  original_sha256: a9b08bd68688e967916e9c15b67b0d4f943f4b976c832a9d9943d970d2a214f7
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: hillclimb
+    language: en
+    source_fingerprint: sha256:c639aedde0dce322ef714b620266d82886500b59b1d0c11021191704b8fa8d31
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 围绕单一 metric 做持续、可回滚的迭代优化。
+    language: zh-Hans
+    source_fingerprint: sha256:d23b30de9a4cb356e765899beb31513de051105965b11c06dd882a8b382acab4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 指标
+    language: zh-CN
+    source_fingerprint: sha256:ff1a0e337fc745e6d49013be0548d4afce416f1f7dacd32e14313c7c8b3309de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 目标值
+    language: zh-CN
+    source_fingerprint: sha256:c8db2aa0a071b70d2d6bcbeaac32dc75345e51cdc2e6822f968988491c938fe8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 贴近实际的工作负载
+    language: zh-CN
+    source_fingerprint: sha256:eebb92af591d54c865432fa7d9e3cbb2afdd15b8580e521588c5b9b23f663cbe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已接受的改进
+    language: zh-CN
+    source_fingerprint: sha256:405c3be84b2aed0ad79a7ba6eed4f4dabd64520267000cfa33ff64f915082dfd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已回滚的尝试
+    language: zh-CN
+    source_fingerprint: sha256:b5350f330be44e2500aa9f2d5a4e9496dbfb43a35fc4d89aa6f2b775432e27be
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 决策日志
+    language: zh-CN
+    source_fingerprint: sha256:78dcbf4d345039d782e6fd9a9f256c30e6592be6d4048e018748dec5683e10f5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 最终指标
+    language: zh-CN
+    source_fingerprint: sha256:019769af4bcd54761d7b13a162949b4b96c209dbf63557fef779c986ba327a65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 冻结 measurement harness；one hypothesis → one change → one measurement → keep/revert；记录 decision trail，直到 stop predicate。
+    language: zh-Hans
+    source_fingerprint: sha256:598ffffeb7bbfaa11ce5c0c370e3d14b9886b01666ef760994a5ed5b91f529e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要持续把一个指标推到目标
+    language: zh-Hans
+    source_fingerprint: sha256:f0bb2ac41b1268b6bea0d375da6429e153d97deea3348f41eb5c85cf059dd7bf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 多轮性能/质量优化
+    language: zh-Hans
+    source_fingerprint: sha256:70b2800b8ec639658e17b19e2cc1c8b889958684befc55d57b8dc27d6885ed18
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 多个改动混在一起无法归因
+    language: zh-Hans
+    source_fingerprint: sha256:c889fa779bda0ae0b4ee9580824de83f88831e4e971feae955d65481f3213911
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 偶然一次数字改善
+    language: zh-Hans
+    source_fingerprint: sha256:e8b1648019eefded5f9a60c9a52eb0421c519a84a7553d229e0c0eee47b1234d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

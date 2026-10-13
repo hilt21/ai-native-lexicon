@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-02
+units:
+  - path: title
+    translation: Copilot 与智能体
+    source_fingerprint: sha256:300f7d34a3be767fa82a0148925dd72e13ff212de11199ef70e83be797024ba8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: Copilot 帮助你完成工作；智能体可以承担部分工作的责任。
+    source_fingerprint: sha256:96fe45d4c75332d953b4bb6911823a0780e944e313b8edf73db0cb9d8eab0596
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你愿意放心地将工作的哪一部分委派给智能体？
+    source_fingerprint: sha256:cddd47b9989aa09407e52b75ff0d43e01e5342b101119fc2b5d0ca82b642981b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:b66c087e29fcafa2b9b926440e18daf37d9559a23159a3b13365e69a0a369324
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 如果智能体可以承担工作责任，我们就需要了解究竟是什么让智能体成为可能。
+    source_fingerprint: sha256:1e14e814b31ee5d28774693d6956cb5ef601b8b43fd3b30ce5a6aac9221d0f72
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - Copilot 通常与人协作。
+      - 你提问，它回答，你仍控制每一步。
+      - 智能体可以通过多个步骤朝目标推进。
+      - 它可以使用工具、做出决策并采取行动。
+      - 关键区别是委派的程度。
+    source_fingerprint: sha256:84ed37e796d0042d180d92444ef1b87e42ce52f3d99f9396f4fa058780576da6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设你要准备每周项目报告。
+      - Copilot 可以在你提出请求时总结文档。
+      - 智能体则可以收集最新项目信息、识别重要变化、准备报告，并发送给你审查。
+      - 关键转变是从向 AI 提出单个问题，到给 AI 一个目标。
+    source_fingerprint: sha256:bb9314a42fc25c73ec210d5771a46e0a7f4d32d6d4c95bb3306e7de055f52268
+    review_status: reviewed
+    reviewed_at: 2026-10-13

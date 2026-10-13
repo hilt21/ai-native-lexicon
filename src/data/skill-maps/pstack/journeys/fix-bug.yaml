@@ -1,73 +1,64 @@
-title: 我想修 bug
-summary: 我想修 bug：从任务入口到可检查的产物。
+title: Fix a bug
+summary: "Fix a bug: from task entry to inspectable output."
 order: 1
-when_to_use:
-- Fix this regression
-- Why does this crash?
 inputs:
-- 明确的任务目标与相关上下文。
+  - Explicit task objective and relevant context
+source_refs: []
+status: active
+when_to_use:
+  - Fix this regression
+  - Why does this crash?
 outputs:
-- root-cause fix with same-surface evidence and landed PR
+  - root-cause fix with same-surface evidence and landed PR
 variants:
-- id: standard
-  title: 推荐路径
-  steps:
-  - title: 选择修复入口
-    why: pstack 的总路由器与工作风格入口。 科学式 bug 修复。
-    nodes:
-    - poteto-mode
-    - bug-fix
-  - title: 调查问题
-    why: 建立系统如何工作的 mental model。 解释系统为什么变成现在这样，并给出证据。
-    nodes:
-    - how
-    - why
-  - title: 建立回归依据
-    why: 在存在廉价可靠测试入口时，用 failing test 固化 bug 后再修复。
-    nodes:
-    - tdd
-    optional: true
-    when: 存在适合的局部测试目标时。
-  - title: 确定结构
-    why: 在写代码前确定类型、接口、模块和数据结构。
-    nodes:
-    - architect
-    optional: true
-    when: 修复涉及模块或接口变化时。
-  - title: 检查影响
-    why: 识别 diff 之外的潜在影响并用真实运行证明安全前提。
-    nodes:
-    - blast-radius
-  - title: 准备 PR
-    why: 把已验证 diff 整理成可审阅 PR。
-    nodes:
-    - opening-a-pr
-  - title: 审查与发布
-    why: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
-    nodes:
-    - babysit
-    - shipping
-    optional: true
-    when: 需要推进发布且已获得相应授权时。
-text_languages:
-  inputs.0: zh-Hans
-  summary: zh-Hans
-  title: zh-Hans
-  variants.0.steps.0.title: zh-Hans
-  variants.0.steps.0.why: zh-Hans
-  variants.0.steps.1.title: zh-Hans
-  variants.0.steps.1.why: zh-Hans
-  variants.0.steps.2.title: zh-Hans
-  variants.0.steps.2.when: zh-Hans
-  variants.0.steps.2.why: zh-Hans
-  variants.0.steps.3.title: zh-Hans
-  variants.0.steps.3.when: zh-Hans
-  variants.0.steps.3.why: zh-Hans
-  variants.0.steps.4.title: zh-Hans
-  variants.0.steps.4.why: zh-Hans
-  variants.0.steps.5.title: zh-Hans
-  variants.0.steps.5.why: zh-Hans
-  variants.0.steps.6.title: zh-Hans
-  variants.0.steps.6.when: zh-Hans
-  variants.0.steps.6.why: zh-Hans
-  variants.0.title: zh-Hans
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the fix entry
+        why: Enter through pstack's main router and work style, then investigate and fix scientifically.
+        nodes:
+          - poteto-mode
+          - bug-fix
+        optional: false
+        outputs: []
+      - title: Investigate the issue
+        why: Build a mental model of the system and explain its current form with evidence.
+        nodes:
+          - how
+          - why
+        optional: false
+        outputs: []
+      - title: Establish a regression basis
+        why: Capture the bug in a failing test before fixing when a cheap, reliable test surface exists.
+        nodes:
+          - tdd
+        optional: true
+        when: A suitable local test target exists.
+        outputs: []
+      - title: Define the structure
+        why: Define types, interfaces, modules and data structures before coding.
+        nodes:
+          - architect
+        optional: true
+        when: The fix changes modules or interfaces.
+        outputs: []
+      - title: Check the impact
+        why: Find effects beyond the diff and demonstrate safety assumptions through actual execution.
+        nodes:
+          - blast-radius
+        optional: false
+        outputs: []
+      - title: Prepare the PR
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr
+        optional: false
+        outputs: []
+      - title: Review and ship
+        why: Progress the open PR/stack to merge-ready without final landing, then use independent verifiers to decide what may land.
+        nodes:
+          - babysit
+          - shipping
+        optional: true
+        when: Delivery needs progression and the required authorization exists.
+        outputs: []

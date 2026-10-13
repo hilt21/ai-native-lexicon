@@ -1,0 +1,111 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: technical-writing
+provenance:
+  original_sha256: 7cadcf0f65c4342c0776e19d654eeac5ea493675bbf6cedae7ca2795cfcc0d91
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: technical-writing
+    language: en
+    source_fingerprint: sha256:b7d8967f6fdfb85c488032df191da8f8d0855e0c1a4d0bfa25f77e3b83c05678
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用统一工程写作规则降低文档和 PR 的歧义。
+    language: zh-Hans
+    source_fingerprint: sha256:c6b3b95a492d50f949576f87bd2f0e8d1dcd868c9641b882add91dff9d98eeb6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 写作
+    language: zh-CN
+    source_fingerprint: sha256:bae2f913632df3f0bd0ae4091667c8c6863640830c4972ee49fbba119ec732ff
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 文档
+    language: zh-CN
+    source_fingerprint: sha256:0ad2edc70be6290e72b8dc29508d640de73b713505d2d0b03f4630bc4c96b77e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 清晰度
+    language: zh-CN
+    source_fingerprint: sha256:592de1b06eb5a4d71d86d79693f347a88b9b46c4fa70dda20243b097225deec1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 技术草稿
+    language: zh-CN
+    source_fingerprint: sha256:0879cd5f3e6b3cefb93fd4f468cede65eaed2d27afb79d25b9c3a1d6220d22ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 文档目的
+    language: zh-CN
+    source_fingerprint: sha256:dafe264fbde68b23a5e954cdfb13ee6632d12eb8f1c55e8a7bcf0a0c51e91a35
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更清晰的技术产物
+    language: zh-CN
+    source_fingerprint: sha256:85262303f0efeebc10fcdedda11206a61f10b3eba3ae82c3e0b327b3cb151ffe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：human reviewer
+    language: zh-Hans
+    source_fingerprint: sha256:2ecb0cca6a94348d33b1e95219c453777c0dadfe4bdc9a6437cbd3751e6ad08a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Layered technical-writing standard: Diátaxis structure, Google developer style sentences, STE instruction rules, Global English syntax. Use for /technical-writing or when writing or reviewing docs, RFCs, readmes, PR descriptions, or commit messages."
+    language: en
+    source_fingerprint: sha256:34eea6f8542f2114393900d5b5fc35244bd8d6feb2bec5fedd42e05909a2d1a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 按 Diátaxis、Google developer style、STE 和 Global English 组合约束结构、句法和操作描述。
+    language: zh-Hans
+    source_fingerprint: sha256:80928dd051902904ec10e6b1ba10edf7244cfa4f4b1617fbdcca9a5628ff25a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: README、RFC 或文档
+    language: zh-CN
+    source_fingerprint: sha256:41cd0465ac3e2c984d45dbe59a6a573065b37888ad90cad33ad06bd032ab9054
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 拉取请求描述
+    language: zh-CN
+    source_fingerprint: sha256:b9dfa8acc2ed6a96bd48197837283dee1a6bf53f996be7d06aa80378e63faf92
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 提交消息
+    language: zh-CN
+    source_fingerprint: sha256:dc146b85183907fd59c767f479b02e01627123bfbcb1f1a69c84a14f940e8ce0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.3
+    translation: 执行计划
+    language: zh-Hans
+    source_fingerprint: sha256:442541dc4363cf6502a1718fbb219c247f892b2f60fd8dc8d7d4a60f1508a4fc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少技术文本歧义
+    language: zh-Hans
+    source_fingerprint: sha256:09e2f089891f5aece84b040b976347fc07e9b290aed1002a43889787d66a8ca5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 提高可读性和跨团队一致性
+    language: zh-Hans
+    source_fingerprint: sha256:ff43790d35763f05839a9abca6b26e6b9f199a7bf6bfd0f6c2c63ce869f0076f
+    review_status: reviewed
+    reviewed_at: 2026-10-13

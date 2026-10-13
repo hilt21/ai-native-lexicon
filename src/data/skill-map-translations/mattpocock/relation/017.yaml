@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["setup-matt-pocock-skills","configures","implement-spec"]'
+provenance:
+  original_sha256: 2dd2f6c8bb736422bd17219ff3717d3dbb6fb602725fe4d06c7ed89c4bc38b9a
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 建立 tracker、标签与领域文档等项目前提，不代表安装技能或自动调用后续入口。
+    language: zh-Hans
+    source_fingerprint: sha256:8c28dd6d3aa5b14accccd0f7325a3b44874159b1b47f15ab364a4839c8691be2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

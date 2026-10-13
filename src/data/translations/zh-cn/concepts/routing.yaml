@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 把工作交给合适的模型、技能或智能体。
     source_fingerprint: sha256:839f6220ae3dcd19613245d780dc8fcdf737512e5827c1b956eb05b640f653ab
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 路由根据请求或中间工作项的特征，将其交给合适处理者。路由可由规则或模型选择，无需一定转移任务的总体责任。
     source_fingerprint: sha256:9efd4f3e0d99bfb5dacaeba92f03ac4d2016db19a79367138430c917e01e0160
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 匹配工作与适当能力可改善专门化，并避免所有请求都经过相同的高成本过程。
     source_fingerprint: sha256:85e850679eddee4855b34c4cb481082544b084c9259dc45c5cead9bc9aed659e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 将账单问题和技术事件交给不同的受支持工作流时使用。
     source_fingerprint: sha256:06edf4af466ed5bda3d8dd580da8af0d931c833bebb78632e5916eee50302dcb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 未检查请求的实际意图，仅根据一个关键词派发。
     source_fingerprint: sha256:4c2bcafe9fa05484bf96509ae3643060aa102396f59ace34cef44e8616ffb273
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

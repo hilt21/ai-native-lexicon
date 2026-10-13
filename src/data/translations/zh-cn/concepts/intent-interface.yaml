@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 帮助人表达期望结果、约束和权限，由系统确定适当步骤的用户界面。
     source_fingerprint: sha256:4953ff623304607eeeed97cd086161176f3511d40481e7732f3a57d91388a83d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 意图界面将交互重点从逐项指定操作转向定义目标及边界。它仍允许用户修正假设、检查拟议方法并控制重大状态转换，功能不限于一个提示输入框。
     source_fingerprint: sha256:bd817d3ee9d27b5dd38b3d9369c85a2845a42d4f5b7c3ce46116b53b6155ab4f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 智能体可跨工具规划，但用户仍负责结果。良好的意图采集减少隐含假设，并使自主行为易于理解。
     source_fingerprint: sha256:d8e1664f4ab06727712c183c7505ddbff573a4330e29e3dfa493a163b5d31a4e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于用户比精确操作顺序更了解所需结果的工作流。
     source_fingerprint: sha256:2caf71987d2637a2e0536c6f2c7d1ac993ce1e64d0c53724bca6da26a8ecb4a0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 用空白聊天框替代结构化工作流，并要求用户自行发现全部必要约束。
     source_fingerprint: sha256:da0a6ffa07ca2a0c3cbe352b0004048f8230e4d8d917a4657872baa7f864e8db
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

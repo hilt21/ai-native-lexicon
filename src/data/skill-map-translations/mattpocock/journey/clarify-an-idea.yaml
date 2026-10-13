@@ -1,0 +1,249 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: clarify-an-idea
+provenance:
+  original_sha256: 72163304885b62bc1d8a169e2772f3f9d53ec239c4d099ff115429a20c18c219
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我有个想法，想把它做清楚
+    language: zh-Hans
+    source_fingerprint: sha256:32713e7481b6ab56a517ae54572d462714762e9200d7da7e30907902fe8c8c50
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 通过结构化追问消除隐含决策，并在有仓库时沉淀领域词汇和 ADR。
+    language: zh-Hans
+    source_fingerprint: sha256:b1b3c4495f66ffbc785ac2d78b88fc07cd2eb3ab2d9728d3a61ae5a8e42fbb13
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 初始想法或设计
+    language: zh-Hans
+    source_fingerprint: sha256:4f82edc9fb69e2733a567a0c086407039cdde23aa5e4a01390b17f07d868df9d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 开始一个新 feature、设计或重要计划，但还没有足够清晰的 spec。
+    language: zh-Hans
+    source_fingerprint: sha256:d13b9df966dfa024f092c61edd78009e4f8e95f52d526fbd110abd518dd8bd71
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 澄清后的设计
+    language: zh-Hans
+    source_fingerprint: sha256:c2372be47bfb11ec536f7c0a8997f958f55b8cb252df533f7de0b23ea1f676e3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 可继续转成 spec 的上下文
+    language: zh-Hans
+    source_fingerprint: sha256:d448127e894f7bfa92d33dbc6d8fc260199ccd9ff073195bb34a4e8c5e0c8443
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 在 working directory 中工作
+    language: zh-Hans
+    source_fingerprint: sha256:afa4701d4566ee200bc1e22f8fb88d6c0091dff735843fbb12988f0ff46c8cdf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.when
+    translation: 当前有可记录领域词汇和决策的仓库。
+    language: zh-Hans
+    source_fingerprint: sha256:ea848108688aab0ea76d7b104a04ea778628484f76eedaf27de24cbe828ca540
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 首次使用先完成配置
+    language: zh-Hans
+    source_fingerprint: sha256:8eb0ec72e1d22ddf2b1fb5033e74cad591a3ff3209c78bd6616ce7485426a182
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+    language: zh-Hans
+    source_fingerprint: sha256:f4b215cf56719aede0953ee23638f433ce3f95bdb9aaa910e48094d8e34a859b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.when
+    translation: 首次工程工作，或项目配置仍缺失。
+    language: zh-Hans
+    source_fingerprint: sha256:5b008e6530bfdd3567b728979fe76da3e3526dd1363bb42fe5f01456bc81a033
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 可供后续入口读取的项目配置
+    language: zh-Hans
+    source_fingerprint: sha256:5cb6c49a6cf81842fe2b6bf9b55aab508169664e211aa506be84f84d7b58bf3f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 追问并建立共享语言
+    language: zh-Hans
+    source_fingerprint: sha256:d53710d72ed8ea233ec06a36f35d7d7b1bc17497bdd33c62e35327c933ba3e74
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 用户启动 grill-with-docs；它内部调用 grilling 与 domain-modeling，稳定认识进入 GLOSSARY.md 与 ADR。
+    language: zh-Hans
+    source_fingerprint: sha256:390adacc46fd5baaa4b697df057ff6895859461411341409f119e870fa0678aa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.outputs.0
+    translation: 澄清设计、共享词汇与必要 ADR
+    language: zh-Hans
+    source_fingerprint: sha256:e003b209c0065a004083e6fc56ae355e945f8cb7b78933a848b438c6bbc03176
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 将一个探索问题交接出去
+    language: zh-Hans
+    source_fingerprint: sha256:828adec5cf8b4915d2fb701a2b1ebd2e17b711254fd706fc8746cb4352fe0091
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 仅当探索需要新目录、新 harness 或分出侧任务时，用 portable handoff 保留问题和背景。
+    language: zh-Hans
+    source_fingerprint: sha256:62d73e88118b48c0c67e8f0d03e80ca1ad52991e4e51289ad571e73b0899cd1a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 关键设计问题需要可运行答案，且需要切换上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:9519f2b0ebbbde47f5b727a4e5c655ae1ac3b62f1280e4e404b06aa5b9658ac0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.outputs.0
+    translation: 原型问题与上下文的 Markdown
+    language: zh-Hans
+    source_fingerprint: sha256:8b25ebdc3cf37a8b00ed128e585240ac55ceb17e8852c02e4f508879e7f0ac4f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 运行可抛弃的原型
+    language: zh-Hans
+    source_fingerprint: sha256:8abd8e1159f4d01e8a72232afdcb1c60f687a6f1be7a4c353f130cafe91bd8f5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: prototype 用真实运行回答逻辑、状态或视觉问题；在有关模块或页面附近标明 throwaway，并保留分支及 issue 指针。
+    language: zh-Hans
+    source_fingerprint: sha256:6cc133f3232410630b2a1c7134fdf5375aeff1438f701250c16c86320458a221
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 对话尚不能解决关键设计问题。
+    language: zh-Hans
+    source_fingerprint: sha256:eb1a46ac7a1c162489882a0e6ecb0b011d5a371659b50bdbfc0c3c8ae92e1fa0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.outputs.0
+    translation: 可运行原型、观察和设计结论
+    language: zh-Hans
+    source_fingerprint: sha256:5c0b3eaca08d97509df794a9d692d918815b0bcedec412366a4b2f3e55a58ce1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.title
+    translation: 需要 portability 时交接结论
+    language: zh-Hans
+    source_fingerprint: sha256:b9ab44e45df58abd849abcbfaa8d0957c8710086ca8c52ed72b063fe840aad1e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.why
+    translation: 只有跨目录、harness、交给同事或阶段中侧任务的返回才使用 handoff；普通回到原讨论直接带入结论指针。
+    language: zh-Hans
+    source_fingerprint: sha256:99fca8e07e1d3f41f9debb3b3f97b7059c775d0a93bd4faead73dfe7eb3ec218
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.when
+    translation: 原型探索已有结论且实际需要 portability/fork。
+    language: zh-Hans
+    source_fingerprint: sha256:bf9e70c601bc703e46211e9dfb21697ec031e2cef9659cd5408b3f6cde305de6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.outputs.0
+    translation: 带来源指针的 portable 结论
+    language: zh-Hans
+    source_fingerprint: sha256:dc0b074a3f8ac7474f3e641a368ae541ef9cffa7d9b6e240abbd50c85aef24a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.title
+    translation: 继续原设计讨论
+    language: zh-Hans
+    source_fingerprint: sha256:f6e70125248f290bcd577327139277146e163efac9bdd183344ca1813dda6324
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.why
+    translation: 在原讨论中引用原型结论和保留的分支/issue 指针；原型不直接替代规格，也不必为了普通讨论返回再启动 handoff。
+    language: zh-Hans
+    source_fingerprint: sha256:bde56be28fadc0ce924f69a3e3e2877c6d33dc354b944452450c05963b95e276
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.when
+    translation: 原型 detour 已有结论且需要继续澄清设计。
+    language: zh-Hans
+    source_fingerprint: sha256:4aee4ab32a0570e135ddd455828b99a654c125121d70d9a543b05d832db15afb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.outputs.0
+    translation: 更新后的设计
+    language: zh-Hans
+    source_fingerprint: sha256:b68c8c17e42c266eb64982f030d54755a46f9e660f4641e6343631d3a598f336
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.title
+    translation: 综合规格并确认测试边界
+    language: zh-Hans
+    source_fingerprint: sha256:2712f6ac85a0b65aa4f395fa473d5baf6acb2db47cb2a63331b82bc755b37927
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.why
+    translation: 把已讨论的决定写成 durable spec；测试 seam 要先与用户确认。
+    language: zh-Hans
+    source_fingerprint: sha256:f3045a52375e69f6fe819fafe6408517c6a2475dc4d671a258fd2a0a71608b79
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.when
+    translation: 准备进入多 session 工作，且尚无完整 spec。
+    language: zh-Hans
+    source_fingerprint: sha256:991ff261f0d8218ed388cd410e5fa859eada4e38cddb6e977dfc920e6b82b1b1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.outputs.0
+    translation: 已发布的 agent-ready spec 与确认的 seam
+    language: zh-Hans
+    source_fingerprint: sha256:a02e8e7815196b3e8e20a6d0a180fdfd5ab845d0de6ccb80f2ef30b2fdcf1ae4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.title
+    translation: 没有 working directory
+    language: zh-Hans
+    source_fingerprint: sha256:4c008f7bcda9b192fec4c03566f7acf0aec1993e1fd7bfd96612e0a470ad7194
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.when
+    translation: 正在思考计划或设计，没有仓库可存领域文档。
+    language: zh-Hans
+    source_fingerprint: sha256:f8b1e7239826a2313566dd0e26ed10412cbb286270295e61d9d75ce53f783469
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.title
+    translation: 无状态地问清设计
+    language: zh-Hans
+    source_fingerprint: sha256:e132f7350a41540a3e591dc70a0a0cfb03cbbaf9e48e5eea18281ebdd0a13ad5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.why
+    translation: 用户启动 grill-me，内部使用同一 grilling primitive；不创建 GLOSSARY.md 或 ADR。
+    language: zh-Hans
+    source_fingerprint: sha256:fff9a2eb6897b87dd50e0830de3e47255c7f13cb05d5bd01ddfc432656b3f409
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.outputs.0
+    translation: 澄清后的决策树
+    language: zh-Hans
+    source_fingerprint: sha256:e795568f384bc63d70de72e0029d4d999ca13c01a2e8b0234d65f61826bd9348
+    review_status: reviewed
+    reviewed_at: 2026-10-13
