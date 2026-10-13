@@ -1,0 +1,141 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: plan-a-huge-effort
+provenance:
+  original_sha256: b96030ebf038d3adbecd82feb2cddd5ec4522bad91396aadd381016bec8e949c
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 这个项目太大，一次想不清
+    language: zh-Hans
+    source_fingerprint: sha256:7b65a192cde3c5b470c4b15250ca969c94dbc336814bd490a91a7f97d8c9dd98
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用 decision tickets 逐步消除未知，直到巨大工作可以坍缩成普通 spec 和 tickets。
+    language: zh-Hans
+    source_fingerprint: sha256:dde5f3384656c469265b8b4fe2e90cd07a08cce1f7eece46786d04788287fb7d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 长期目标
+    language: zh-Hans
+    source_fingerprint: sha256:dde9108f0612cd7e7f60bdb087c6c64a4c1a5afb41ec24d2bce551fa2ecfbf4d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 当前未知
+    language: zh-Hans
+    source_fingerprint: sha256:4528ee8868679c9db45e9d2972d01cb966d2c23cf41ee186e7bde6cee6af9b63
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: greenfield 项目或巨大 feature 超过单个 Agent session 的认知容量。
+    language: zh-Hans
+    source_fingerprint: sha256:dda75e71d96189cbc7456be0905a8fa4ba86db4cc5a3f2ec7c0549f3f45e8cb1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 决策地图
+    language: zh-CN
+    source_fingerprint: sha256:efe4b0d3fc84e2bbcf1a2e93ff23617bda431c9f100df1feedbc0e64372fe422
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已解决未知
+    language: zh-Hans
+    source_fingerprint: sha256:07deed90c8e0428672a90ae8f2d65b69c52a46d2d5dede89422af5a0a1032d45
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 可进入主开发流程的 spec 输入
+    language: zh-Hans
+    source_fingerprint: sha256:083dbf94a790e33ab5ea803faa42d45a25ad97bf679647ae929a4812a6d48a91
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 逐步消除未知，再回到 spec
+    language: zh-Hans
+    source_fingerprint: sha256:d306786834f01143e92a8b439e9e18952a8f3156be2d629b5d705b077402fb83
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 首次使用先完成配置
+    language: zh-Hans
+    source_fingerprint: sha256:25b5d99aea857f7c33d80977f0f2f3ce6cdcd7851eacbdd27bd23299b829c4a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+    language: zh-Hans
+    source_fingerprint: sha256:06afea9bcf37a6856be7ac15f15b4ba20b576c63e1dc99ffb79adaba95fdbc59
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.when
+    translation: 首次工程工作，或项目配置仍缺失。
+    language: zh-Hans
+    source_fingerprint: sha256:e9b7aabd2e36901e6c20816bc24c41ea63c36ca9b7cb04c2113fa26e2cb2a71b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 可供后续入口读取的项目配置
+    language: zh-Hans
+    source_fingerprint: sha256:5599b68857af20a4269686c429ca4b38cb06a769f74cac756af18777e100dab5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 建立并推进决策地图
+    language: zh-Hans
+    source_fingerprint: sha256:28c11825576917597e014649a660737db7d6cfbce3ad404e2326e05b77c3ef6d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 用户启动 wayfinder；它在 tracker 上以 decision tickets 管理未知，按问题类型内部使用 research、prototype 或 grilling。产物是决策而非工程交付。
+    language: zh-Hans
+    source_fingerprint: sha256:1f1072355fcc720973ed72f4428d86808b4663103609f95f114959ea57cfc5ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.outputs.0
+    translation: 共享 decision map 与已解决未知
+    language: zh-Hans
+    source_fingerprint: sha256:66f3ca8ab75764b4592baa9b11d035370ad99f3b93a2058cab4ac8f7a35ee3a7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 把清晰决策折叠为规格
+    language: zh-Hans
+    source_fingerprint: sha256:6ca890b41b261b50fc863fa7abeb7b4826941453c0e831e13c2ecc67cc1e2865
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 当路径清楚后，由用户启动 to-spec，将 linked decisions 综合成 buildable plan，并确认测试 seam；不直接跳到整个巨大工作的实现。
+    language: zh-Hans
+    source_fingerprint: sha256:0f0d98bd135b30b1bf6ae1c5b15eefaf502d8e3c339501e9ae9b4b4757864bcf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.outputs.0
+    translation: durable spec 与确认的测试边界
+    language: zh-Hans
+    source_fingerprint: sha256:105f67d813110a7f200fc01d0ca0dcf8c39d9f1b332652f7d289e93cfac31af0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 确认并发布执行票据
+    language: zh-Hans
+    source_fingerprint: sha256:69768b68cb09e4c1caf2251091854aea12567ebb16e0dc6d830ac9c2714122ea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 由用户启动 to-tickets，确认完整 vertical tracer-bullet 的粒度与 blocking graph，再选择逐票或整图实施。
+    language: zh-Hans
+    source_fingerprint: sha256:d46b197d1132edba26d2509106b1ff12d08c0020f5ece7feafece0763cc216a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.outputs.0
+    translation: agent-ready tickets 与阻塞关系
+    language: zh-Hans
+    source_fingerprint: sha256:162ab0a999d01c6a2eb6f9e657f766267bb93df90df3a425a9e44fb33162ce94
+    review_status: reviewed
+    reviewed_at: 2026-10-13

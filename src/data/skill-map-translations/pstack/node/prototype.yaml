@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: prototype
+provenance:
+  original_sha256: fee1bcafc5dee82b6679a2c6ec818a5129538f4b60daf87d0f1467cd8cc6949d
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: prototype
+    language: en
+    source_fingerprint: sha256:1d5931f859b2ff59710e3a96d9dc255dac81e1676401928cd6bcf238708f4c46
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用可丢弃原型快速决定设计方向。
+    language: zh-Hans
+    source_fingerprint: sha256:270493e7cad285e204eccde26ec7af79609af39752a8b71f0564c47aff46a478
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 设计问题
+    language: zh-CN
+    source_fingerprint: sha256:1d56b1397b623214a61ad2bbdb63b7cd4a57c3f01fa83c0d24725d57d54ecc15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 可选参考资料
+    language: zh-CN
+    source_fingerprint: sha256:afed19252c4a1d0ec250d91c9748806d851feec15564478d160a54ec2c4ed3d2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 一次性产物
+    language: zh-CN
+    source_fingerprint: sha256:dcffe795939fa3b0fc4d488db874e41bcc4c119754b788a6639a6dcad5803c04
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 截图或观察结果
+    language: zh-CN
+    source_fingerprint: sha256:4596688982c798adea2e0676b8fb8e8bc11bb0979ef04bb395f9a8cab24c24f3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 建议
+    language: zh-CN
+    source_fingerprint: sha256:c83f57abb96115b6480ff1b21f1bcfc3316439f609bce6c0a995990e17b0c080
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 明确要做的 decision → 必要时找 references → scratch dir 构建多个 variant → 真实观察 → 比较 tradeoff → 把选择交给 Feature/Architect。
+    language: zh-Hans
+    source_fingerprint: sha256:38489e4e8e8d7531620f123e018fea643bb672c2a6cb7f523845db38259182ff
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 视觉/交互/行为方向不确定
+    language: zh-Hans
+    source_fingerprint: sha256:ef47be908944a425769d8da6abc473927eb1f282557fa439588d4b7501f2b30a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要快速比较多个方案
+    language: zh-Hans
+    source_fingerprint: sha256:64852d613d21bbc92fd9c23f682d4333ab7321583317882407ee0032834c9bea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 在生产代码中试错
+    language: zh-Hans
+    source_fingerprint: sha256:fa8c0ff15e8df6395fa8d69d62f78180c90f21e774b75e031b4846d6d09e3b4c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 未经比较就锁定设计
+    language: zh-Hans
+    source_fingerprint: sha256:1fa16e65615fd0ce0120d9910622d53a050b671cb43640e4bafc12808e14d8b3
+    review_status: reviewed
+    reviewed_at: 2026-10-13

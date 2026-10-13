@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: benchmark-checklist
+provenance:
+  original_sha256: beddc3ac3102dc921abd6ca426499aa5e0ec2cfc3670eed6795df573035c438e
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: benchmark-checklist
+    language: en
+    source_fingerprint: sha256:e4090f90f9980aafa722f55a799b6b023c24c38c10e5ad3b94189cd9b1b28e44
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 验证性能数字是否真的测到了目标工作。
+    language: zh-Hans
+    source_fingerprint: sha256:75b33f93d0819c5c9152c105874f7a576e8e611a3d5418e3593c1b8ceddc685a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 性能
+    language: zh-CN
+    source_fingerprint: sha256:da02354df2fa4eabe5441f59a34bd2d88f0c12ec873d74bafa92ed1bbe83fa51
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 测量
+    language: zh-CN
+    source_fingerprint: sha256:4d0b78c35f3d25f23b8e2d5208dc0c60b6a8f2ddd9062ab09bb66ef085006536
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 验证
+    language: zh-CN
+    source_fingerprint: sha256:f8a61c19d81bde4ae68f6e876783f4912c9245113283db1e231573a386c23fb2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 基准测试框架
+    language: zh-CN
+    source_fingerprint: sha256:08951ae8bacf2e5a2b61c7b2055e86fd9f185134f4343bcedf6207c246d049c3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 测量结果
+    language: zh-CN
+    source_fingerprint: sha256:2a9802fe6607b322810171c48b8edf71a9e24c239e56d481ee2d1852f147aa11
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 工作负载
+    language: zh-CN
+    source_fingerprint: sha256:e8fab70c3718c8df10151415bbeb3475dc153ca1079bbdb9a34ba85fdef085f6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 测量结论
+    language: zh-CN
+    source_fingerprint: sha256:a8cd1816c4f732fbccef8c80b676d7bfce0374766d12a92d107908d37e48ada8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已验证的基线
+    language: zh-CN
+    source_fingerprint: sha256:d3953887669a8964cbc56f0e3c721ac50542ab381186bad2bed4043d4a8a3331
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 已知限制
+    language: zh-CN
+    source_fingerprint: sha256:69549aca6b8605df80ba053a55d2e11cfee22c6e20fb99620e91735ad2bcdee9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：performance claim
+    language: zh-Hans
+    source_fingerprint: sha256:16b7b3c1fa8163fe5abb40a637bb0f72c27f9d5da613dd392f2207620c412376
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured.
+    language: en
+    source_fingerprint: sha256:fa0f527e34a89c105042282e21d0be9d3cda85b58b06ff53887503fb7aec2388
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 检查 limiter、配置、物理上限、错误率、重复性、端到端相关性和 work count，避免把噪声当 speedup。
+    language: zh-Hans
+    source_fingerprint: sha256:f4262c11142b71929d0a870706781e548fa0f92d98727c4c527e135f83c39da5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 性能优化
+    language: zh-Hans
+    source_fingerprint: sha256:4f09bcdd798c1aba59110a59a25b38dabcd72b52ca510230f4d242c14a76a63b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 基准测试
+    language: zh-CN
+    source_fingerprint: sha256:49d28b2a18a155fae4fa0084642aee5f8564b2ac1b294ded4df79ec5cb0d7257
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 报告 latency/throughput/speedup/regression
+    language: zh-Hans
+    source_fingerprint: sha256:270e3f46949132aa662efcf5511ba240aa2a8028910e492eba3a1e851ebe9da7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免错误性能结论
+    language: zh-Hans
+    source_fingerprint: sha256:600f1e578784ba9a79ca6c748d93b4a36ae0cb053647928f2b349808de25dbe5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 提高实验可重复性
+    language: zh-Hans
+    source_fingerprint: sha256:3ee7dd5dcdd1e701c9a15155d97d704739430e430c2f3c32fbe16361c3faacdc
+    review_status: reviewed
+    reviewed_at: 2026-10-13

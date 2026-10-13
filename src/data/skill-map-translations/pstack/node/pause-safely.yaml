@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: pause-safely
+provenance:
+  original_sha256: 071e0c0f6f916a14ba2dd12ac09abb860d57e3eaab9de79484487e9e10a71054
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: pause-safely
+    language: en
+    source_fingerprint: sha256:101d10413c86594b738c2ab3e54013fd4fbd3994da2a88c37f5b53c632c2f7b9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把进行中的任务停在冷启动 Agent 可恢复的安全边界。
+    language: zh-Hans
+    source_fingerprint: sha256:60c10b4c0caca273ad747026a74e2fcbd618ac49937a89aac0e134994c652e09
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 进行中的工作
+    language: zh-CN
+    source_fingerprint: sha256:40b3f36f34cee32a2e5d8d65c0e44ec1de20d2ae61c710f08ad6a3c44f86dc43
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 当前工作树
+    language: zh-CN
+    source_fingerprint: sha256:5ac0a3419e04a1d1a9049be672695018b06e2e8af4c42a7d31d420130145ca3a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 可选决策记录
+    language: zh-CN
+    source_fingerprint: sha256:97f513dd7e15734b4dca3856493fe6bb1354b0ececf099d9a11894a3386e72a3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 持久保存的进行中工作提交
+    language: zh-CN
+    source_fingerprint: sha256:028580684f3eda658df8936378fdf36ee3777bd25abd83c2fc93beaba7de7d6d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 恢复笔记
+    language: zh-CN
+    source_fingerprint: sha256:92ceeac0b8e42bcf6f513663441d4b33b16091e103863f68ff1ac6fd430fa4ec
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 妥善停止
+    language: zh-CN
+    source_fingerprint: sha256:f3f7da1daeca44cdc016544506425b194a518b34f6c57387ced8d80bcf900a4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 完成或回退当前 atomic step → 不启动新工作 → WIP commit 保持 durable → 写 off-context resume note → 指向 decision trail。
+    language: zh-Hans
+    source_fingerprint: sha256:f07b634c183a1c5d98edbeebfed1dcf394e3c157c8a3733523492522be58d6d3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 用户显式要求暂停
+    language: zh-Hans
+    source_fingerprint: sha256:998d75ee718554afce64b509d69a31ac76cb242d5db0a250c4853b2b7d1ccef4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: context compaction 前需要 checkpoint
+    language: zh-Hans
+    source_fingerprint: sha256:aa114a22e805be84f3835b4d3839ff8880740dc8d4c797b99b78830a5c78a52e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 暂停后工作只存在模型脑中
+    language: zh-Hans
+    source_fingerprint: sha256:87987c45750d7e77df7e5d7c9d4e66c593a7589d6ab6722bd44db550becca7e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 下次 session 无法恢复
+    language: zh-Hans
+    source_fingerprint: sha256:8d5103cf4d6b11edf42df167898c21f0d8ad9cd9a94b90b78b0f6fa7de1f6b3a
+    review_status: reviewed
+    reviewed_at: 2026-10-13

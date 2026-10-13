@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","retro"]'
+provenance:
+  original_sha256: 4f4ea160acacfe6e43815a468a68dc7adc65623af584d3edd8e95384c99a6ca7
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 用户希望回看 session 的环境摩擦，原记录仍可查时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:0a0f173dbd020fdc00c9da90495910c7324f2eb8810089a8f16a09e87e2f3aef
+    review_status: reviewed
+    reviewed_at: 2026-10-13

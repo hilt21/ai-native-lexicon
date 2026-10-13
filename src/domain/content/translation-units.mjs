@@ -34,6 +34,9 @@ export function translationUnits(kind, target_id, data) {
     add('ownership.rationale',data.ownership.rationale,{kind:data.ownership.kind});
     add('priority.scope',data.priority.scope,{level:data.priority.level});
     add('priority.rationale',data.priority.rationale,{level:data.priority.level});
+  } else if (kind === 'speaking-guide') {
+    for (const path of ['title', 'coreIdea', 'discussionQuestion', 'endingLabel', 'ending']) add(path, data[path]);
+    for (const path of ['keyLines', 'realCase']) add(path, data[path], data[path]);
   } else if (kind === 'category') {
     add('label',data.name);
     add('description',data.description);

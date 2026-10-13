@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: to-questionnaire
+provenance:
+  original_sha256: 673b589e397639b319bf7b495f0f0717e2ae90fb95e3be5955ef147c48f55d65
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: to-questionnaire
+    language: en
+    source_fingerprint: sha256:d7500138cbf58e8d560832a012ba00396c3ae48c0aba2d5ad32fc73d70d00a37
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把只有外部利益相关者能回答的决策缺口转换成 questionnaire。
+    language: zh-Hans
+    source_fingerprint: sha256:54be92e495880f9622b72689489ec9970b78bf1e41bf64ef4e50b2a0e8d9d8fe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 生产力
+    language: zh-CN
+    source_fingerprint: sha256:52f36f5f0f9e916c244446b0353f10767c87b30acf2fc6d7c21d49e783cee815
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:97ab3974ab713832bbc2aac21bf78e6d26777881f52ca940b72e038d19a389c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:2c2804d46ab8753b9557072c5bf9c6c301841aac67869f2ebecf19eb8467d0c6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 决策缺口
+    language: zh-Hans
+    source_fingerprint: sha256:e75f7c283aa8c07d7cbd65035bf1c32266cc113625a821fd59110e41e69f1b9d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 受访者
+    language: zh-Hans
+    source_fingerprint: sha256:f3f6873b8ac8797e9bba66b1e8246608620fa6a67d8e7a702b2709aa4a88b3e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 需要的输出
+    language: zh-Hans
+    source_fingerprint: sha256:3abe0947905703e4996a83b63493e96902ce3c343f1c2da5248493923da32423
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 当前目录中带回答空位的 Markdown questionnaire
+    language: zh-Hans
+    source_fingerprint: sha256:dd95a1b714a36cf5ebc55817801974a0c541eb28768cd8e647ae2fbbe4b87fe6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Turn a decision you can't fully answer into a questionnaire for someone else to fill in.
+    language: en
+    source_fingerprint: sha256:b6696cf911983b8e2be4ac8d425ff353617a18d70b9d22469d0bc9963942eced
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动后，先用两轮交流明确收件人的角色、背景与要拿回的结果，再围绕真正信息缺口生成当前目录的 to-questionnaire-<slug>.md；按主题优先级组织问题和回答空位。技能只写问卷，由读者分发并把收到的回答带回原讨论。
+    language: zh-Hans
+    source_fingerprint: sha256:37b309c999353b70d12c1821898db2971c31513102e52a3eebe6414cc4c069e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 当前工作被另一个人的知识或决定阻塞。
+    language: zh-Hans
+    source_fingerprint: sha256:f355520a4c34d9d188a84a9096bac63cbab28bb718c79c236a84e9149f1d2121
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要会前或异步收集结构化输入。
+    language: zh-Hans
+    source_fingerprint: sha256:070928c29589d29e58501e5e2059e1aff43556d27cb5196e3c70d950398d386c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少来回追问利益相关者的同步成本。
+    language: zh-Hans
+    source_fingerprint: sha256:3adc775a4979e0f6fd4a24cc5fca71ffe0ccc0181d66fbbf5fc1be371328d296
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 让外部输入直接成为后续 spec 或设计材料。
+    language: zh-Hans
+    source_fingerprint: sha256:515d21171f7d8dccb9a8978f121f9fe6ddd8af10c46f95e091b9d2eadd7b7be2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

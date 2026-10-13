@@ -1,45 +1,34 @@
 title: swarm
-summary: 把可分任务并行分发给多个 worker，再聚合结果。
+summary: Distribute separable work to workers concurrently and aggregate results.
 type: capability
-status: active
 layer: skill
 primary_cluster: parallel-autonomy
 secondary_clusters: []
 tags:
-- parallel
-- workers
-- coverage
-mechanism: 按 slice/race/coverage 等模式 fan-out，隔离工作单元，等待完成并 drain，最后由父 Agent 综合 verdict。
-when_to_use:
-- 大范围 coverage
-- 多个独立调查
-- 验证 gauntlet
-- 并行候选
-solves:
-- 降低串行等待
-- 扩大独立检查覆盖
+  - parallel
+  - workers
+  - coverage
 inputs:
-- work matrix
-- N worker slots
-- acceptance criteria
+  - work matrix
+  - N worker slots
+  - acceptance criteria
 outputs:
-- worker results
-- aggregated report
-- PASS/ISSUES/BLOCKED
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/swarm/SKILL.md
+  - worker results
+  - aggregated report
+  - PASS/ISSUES/BLOCKED
 handoffs:
-- 交接说明：verification
-official_description: Fan out N parallel workers, drain them, and return one report.
-  Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration.
-text_languages:
-  handoffs.0: zh-Hans
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
-  when_to_use.3: zh-Hans
+  - "Handoff guidance: verification"
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/swarm/SKILL.md
+official_description: Fan out N parallel workers, drain them, and return one report. Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration.
+status: active
+mechanism: Fan out using slice, race or coverage patterns, isolate work units, wait and drain completions, then let the parent synthesize a verdict.
+when_to_use:
+  - Broad coverage
+  - Independent investigations
+  - Verification gauntlet
+  - Parallel candidates
+solves:
+  - Reduce serial waiting.
+  - Expand independent checking coverage.

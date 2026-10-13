@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: autopilot-full
+provenance:
+  original_sha256: 69d3ef5b9da9b47f3164c4a0e26df7df2277e592bb698951dfef6b6271df4ea4
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: autopilot-full
+    language: en
+    source_fingerprint: sha256:442d2aad892601b2db1e7c41d4cbedbb0f817d1dd8ae40bd9a12875c1a60b4b9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
+    language: zh-Hans
+    source_fingerprint: sha256:c003c4a0e6e9546221d3e51caca9f61ec328b51beef6380c836b527981a3fd6f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 拉取请求队列
+    language: zh-CN
+    source_fingerprint: sha256:982e649b4498b4931431ee84b3c5db02d8fa084e746ad80d30a41cbc7c3fb71b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 操作人员控制关卡
+    language: zh-CN
+    source_fingerprint: sha256:b3d3ddc4093abac71f4cd5fa0562ac26a22edacb2bfdd108983339c0d73ca262
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已合并且经过验证的拉取请求
+    language: zh-CN
+    source_fingerprint: sha256:82a4cd885f0b0de0fe195b78c7a2cfe18b47e823757cb0e02aa0c84ee8bce3a2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 决策与子任务记录
+    language: zh-CN
+    source_fingerprint: sha256:c714a75fc7b1204267364c72af616dd1351e0fd0edd95da3ba2577eedb3d7c11
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 审计结论
+    language: zh-CN
+    source_fingerprint: sha256:77aff8572393eb8d41b53fd4991a65b31fa6b53ab2d2319acf3cb8dc70c17dd3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: one owner per PR → durable trail → self-proof/CI/babysit 并行 → root swarm verify exact head → clean verdict 后 owner merge → 周期 audit/replacement。
+    language: zh-Hans
+    source_fingerprint: sha256:ce875b556da96c53cdfe6d6ed59684d56f940c7f5bce9a1d06085f325efda5e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 多个独立 PR 要全自动做到 merged
+    language: zh-Hans
+    source_fingerprint: sha256:5b61ecfe83feeded2538e11827a73f9b4f66a3bccb6b4e2cb4d8182ee08b15e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: root 成为执行瓶颈
+    language: zh-Hans
+    source_fingerprint: sha256:231a43ce9662e6860cff3badee9914745c7655bd683e5cefc134b00bf972afdb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: PR owner 丢失生命周期责任
+    language: zh-Hans
+    source_fingerprint: sha256:9273a838c987e1af55625d0c65bd3c3cf320340f937b05c70a96f2fd58fc44e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.2
+    translation: 无独立 countersign
+    language: zh-Hans
+    source_fingerprint: sha256:7b3781f79ac818d81f532e4ce4fb2ff7f33fd06cb82df6dc0040fc2a3972004c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

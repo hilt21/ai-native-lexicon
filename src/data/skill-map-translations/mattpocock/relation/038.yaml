@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["wayfinder","uses","grilling"]'
+provenance:
+  original_sha256: 588941ea295b99d32ddc42d3dd0b4b24a59cdca938987219d9ad51140f43fd0a
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+    language: zh-Hans
+    source_fingerprint: sha256:6edbf593aa59a365a3135ff94a26d7ab9ccc60788ef214c51f54e86d197a2ee8
+    review_status: reviewed
+    reviewed_at: 2026-10-13

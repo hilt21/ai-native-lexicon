@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autopilot-stack","governed_by","principle-prove-it-works"]'
+provenance:
+  original_sha256: 3e2610773e7357e7278d0748eb81c16dd266c2bd11fe5aab4dff6c53fa984294
+  retained_at: 2026-10-13
+units: []

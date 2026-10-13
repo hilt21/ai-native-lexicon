@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: grill-with-docs
+provenance:
+  original_sha256: a6b4d3452f8d2246771a652e3d77b1b787eb9fa31fd135f76ae6388175bd4895
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: grill-with-docs
+    language: en
+    source_fingerprint: sha256:383c9b4b2c9fffd98d56be02309293508e1bcad5c344734970b11f2ffa342afa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 通过持续追问澄清设计，同时沉淀领域词汇和 ADR。
+    language: zh-Hans
+    source_fingerprint: sha256:05774d800ebeb5ec04d86b38a4462ab713a9b949be578fae04c662f61c4b71e7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:f1582cbcdf7a26ca4709dd94457b762d73e248bc3d2d306e62cd449412d2de2d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:55204ee8e3e5d9e7e156ff3b22efbd8d1b300b9a3ea846cadf107916c423a247
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:9863dad7c2caa387efa31e2662255cf6d8304dc8c19010d89418289e7fa6a0cd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 初始想法或设计
+    language: zh-Hans
+    source_fingerprint: sha256:9732181bc038ef65fc588d39a7df10824aee707aa027b02bb314f5e0f4c93af5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 当前仓库上下文
+    language: zh-Hans
+    source_fingerprint: sha256:a73d83bac4fccca1ecf2553b7514deb40fcbe627a89174910673a3df635b6af9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 澄清后的设计
+    language: zh-Hans
+    source_fingerprint: sha256:4fc8243e7e37a5023f7534682b633781e3ab3effbc82763d7f0efd167ab389ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: GLOSSARY.md 更新
+    language: zh-Hans
+    source_fingerprint: sha256:3395f193a8d17604184170253b4542c79f6702905922dcc0104bebff7e521505
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: ADR 更新
+    language: zh-Hans
+    source_fingerprint: sha256:80f958ac99165812417067b53cba86f6571be56c0375baebb97343a7ca048f7c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.
+    language: en
+    source_fingerprint: sha256:451fdbfed6cee51d6fffb1189800a05e89fd8ca35c565a366b8678ff2096bd34
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 内部调用 grilling 和 domain-modeling，在同一对话中暴露未决分支、统一术语，并在术语解决时写入 GLOSSARY.md。满足难逆转、意外性及 tradeoff 条件时才写 ADR；frontier 收敛后由用户确认共同理解，再继续工作。
+    language: zh-Hans
+    source_fingerprint: sha256:04484196b4aad7b78289765da7f07a4ab1978275a4dd082ce5de49175990229c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 在仓库中启动一个新 feature、设计或重要变更。
+    language: zh-Hans
+    source_fingerprint: sha256:77b38d99eeee1dc6b9eac5f702446f8aa0f6c4eff7b6e80baa3dde60ccf6f381
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需求看似清楚但仍包含大量隐含选择。
+    language: zh-Hans
+    source_fingerprint: sha256:0ab926b6978c6075636c7e38c2250e2fac645a533c196789a3c29f6c30345434
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少人与 Agent 的需求错位。
+    language: zh-Hans
+    source_fingerprint: sha256:134a31153098aa2ce7307125f5ff189e7fade04fdaf55394d9097373ac771eb9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把对话中的领域知识沉淀成后续 session 可复用的项目上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:9b5d709b82f1a0fdb9b881abf19af6b124ab8ceb1c6a5846f0dfb83139d42c71
+    review_status: reviewed
+    reviewed_at: 2026-10-13

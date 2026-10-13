@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["wayfinder","uses","research"]'
+provenance:
+  original_sha256: 5ef4164e3af43a97b45f50eb0b2b4cc2d60449255f0f2116534a3b04519e5edf
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+    language: zh-Hans
+    source_fingerprint: sha256:11b73ae4c84513d6fa12fd5b421149b81ef37721d2fe261125181496676bb36e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

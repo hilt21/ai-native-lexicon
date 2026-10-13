@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 通过嵌套或有序单元分开责任层次或抽象层次的组织方式。
     source_fingerprint: sha256:66d892f48b771b5b2dbe4fb56f6a1dadab4b143a50f168cd2f3b6e9fc073ced1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 复杂性可通过分层分解降低的系统。
     source_fingerprint: sha256:1d76f65b88f2046916356299dc4b56bdc48751277b3bb17d8f9d52f59049bc80
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 局部化推理和变更，同时明确跨层依赖。
     source_fingerprint: sha256:7a76b78c055b574ee5600554711a2b7b48daad2e761fd7ef68e8ba7c04304365
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 层级描述组织；计划描述预期行动及依赖。
     source_fingerprint: sha256:f0bf62e09c8cf607f7493feb5151461dd4f0c45cfd3f25206053d92ebe3bb9a6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 系统 → 子系统 → 模块
     source_fingerprint: sha256:9ea8719452a315086b44d57a416836277c53691a95d0d01e18c5343bf10bd5b4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 研究任务包含多个证据收集工作流，各自具有范围受限的检索步骤。
     source_fingerprint: sha256:cc7a7babc8f420eaf8acb4f6054ead6a01066eb07916457162e758b4428bdd16
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 层级
     source_fingerprint: sha256:497b9be5b6a5f052b5e97ca53cc2a994fbb099ffc3d5ddbb47b3f0b3619b07da
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 通过嵌套或有序单元分开责任或抽象层次的组织方式。
     source_fingerprint: sha256:3d4d643368f7da0dfb7baa26302e8c36b2cd70820116e03db1ed15497c78e858
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 共享依赖占主导时，树状图可能误导。
       - 委派层数增加不会消除上层责任。
     source_fingerprint: sha256:7ddd12720827c5080521cdc77db56c18ba525fac5af2ed65b964a99e5ecbf23f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 大语言模型可提出分解方案；明确的责任和依赖记录管理执行。
     source_fingerprint: sha256:30e98bb3cafc11175571d469290d7b8a8137215dd5ecf051e598f8a010a5e69e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 复杂性可通过分层分解降低的系统。
     source_fingerprint: sha256:b7a4d2521697f0cdfac38a3e4e28cdee673ee158ac23662c7e9d5de6be6553f5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 分解能局部化决策时，层级有帮助；只有形成的层次能澄清实际依赖时，才值得明确建模。
     source_fingerprint: sha256:88eec02516938b52752ee95a6bda68e1d85fb9db231668712a9bd4efc7ad4119
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

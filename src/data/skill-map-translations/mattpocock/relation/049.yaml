@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["improve-codebase-architecture","feeds","grill-with-docs"]'
+provenance:
+  original_sha256: bc5cebe649cefd8b6b5e281490d0dd64ddfc267e845fef9b274c11ec44dc34c4
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 用户选中 survey 候选后，将它作为新的 idea 带回主流程；不自动实施全部建议。
+    language: zh-Hans
+    source_fingerprint: sha256:4a78e7c612ab56d509029e9d46d7bc19330295ec8073ea2d4db831915ebedbac
+    review_status: reviewed
+    reviewed_at: 2026-10-13

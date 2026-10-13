@@ -1,0 +1,129 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: why
+provenance:
+  original_sha256: e4f5208899bd27b6c8faeb8d6b0df5aa174db42247ac560455e12860335d2414
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: why
+    language: en
+    source_fingerprint: sha256:adbe213e8f7b96cbc56bf86db77d4ab9da9fe3a94046577d5f8fe40129df8933
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 解释系统为什么变成现在这样，并给出证据。
+    language: zh-Hans
+    source_fingerprint: sha256:28314783c5fb1059d39e311a78718edc1a9a3fe06ae537d369e5ca27497a1616
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 事实锚定
+    language: zh-CN
+    source_fingerprint: sha256:e821749bef9f0f94e77b7afbda206c4f389d352e0de5fd89c3eeaee8f2d0906c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 历史
+    language: zh-CN
+    source_fingerprint: sha256:7402fb0dc037e4298d03a7505516bf8fe14c10e236fca5a50d653fd1045f71ec
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 证据
+    language: zh-CN
+    source_fingerprint: sha256:e0bfc8af0b60801e8a847760786f004a614be3ef65c6ccd6d654148c2449e232
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 代码或设计锚点
+    language: zh-CN
+    source_fingerprint: sha256:d6f5ea8f2077d9843a142d03f167f98d06e2d741f6da05b6bef2f64ceba38c0c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 动机问题
+    language: zh-CN
+    source_fingerprint: sha256:6e06582210e4ac98771ad4dd0c571bf8727807bef9c3fb2aaa7b6f9c0ae49d6f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 可用证据系统
+    language: zh-CN
+    source_fingerprint: sha256:27e024f529716e36de057df7e15c01706c2765c5364b4b6d4eb0af72d1ff3b1a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 有证据支撑的依据
+    language: zh-CN
+    source_fingerprint: sha256:78f035ddad9df28192389df621e33798bb762e2e1d5d8cca30f793b4f2875044
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 取舍
+    language: zh-CN
+    source_fingerprint: sha256:3a0f13ec1d0bed9ffeb3e1d0b6686029419dfdde03bf633daca90bd40f1b2ad4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 置信程度
+    language: zh-CN
+    source_fingerprint: sha256:6a2cd6260f7df70c0bc8ad2ba7d0ceff1dbf004e3d530b15b8815237def5381c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 来源指针
+    language: zh-CN
+    source_fingerprint: sha256:8c305168716454d4f99f7267159c53d31d8dc1ace7807331d630985b16f22a71
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Use for 'why does X work this way', 'why we picked Y', design rationale, regressions, postmortems, or data-backed thresholds. Discovers available MCPs and queries each evidence category (source control, issue tracker, long-form docs, real-time chat, infrastructure observability, error tracking, product analytics warehouse) in parallel, then returns a cited read on decisions and tradeoffs. Use how for runtime behavior.
+    language: en
+    source_fingerprint: sha256:f5f663e90d28d7a84451c3aac397f0fdb0c327b5b0d1787f8dde8f2aa4bc6436
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 锚定代码后，并行查询 source control、issue、docs、chat、observability、error tracking、analytics 等来源，重建设计动机与演变。
+    language: zh-Hans
+    source_fingerprint: sha256:3dd64c21285fffde16e5078cdfa235cdae68b5d44f09fee4df9e5e1067c5c1a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 设计 rationale
+    language: zh-Hans
+    source_fingerprint: sha256:add96782bd5d84a54a4fa2ed0dc54457e3ae4ac74fbba5832a5d59ac16a86ee9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 回归原因
+    language: zh-Hans
+    source_fingerprint: sha256:5a072b03ca6fa2355eb3702318d07072415e526095e0eeb57ce3e9075d9703a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 历史决策
+    language: zh-Hans
+    source_fingerprint: sha256:d430b2c6be7f7071fbd8e06abc7c7f7f77f0d73af771fbd2e376a8cb5ec4595a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.3
+    translation: 阈值或 trade-off 来源
+    language: zh-Hans
+    source_fingerprint: sha256:1fe16c4ca2f1f0b3edef9c01c15d79a6adc5704c9195f210e6f7f5bd3af906f9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少凭当前代码猜历史原因
+    language: zh-Hans
+    source_fingerprint: sha256:4a2e1ce7ed549f51ce02b5fc106d457942e60c695ff63d6440095f47668507fb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 恢复组织记忆
+    language: zh-Hans
+    source_fingerprint: sha256:4a064b3cce1e73ccdb837236a3ae2bd38a68bc09a53c13411b00b05f6a253919
+    review_status: reviewed
+    reviewed_at: 2026-10-13

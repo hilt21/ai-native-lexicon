@@ -9,16 +9,18 @@ import { readConceptInputs, readPrimitiveInputs, readSpeakingCardInputs } from '
 import { validateConceptReferences, validatePrimitiveReferences, validateSpeakingCardReferences } from './validate-references.mjs';
 import { readSkillMaps } from './read-skill-maps.mjs';
 import { validateSkillMapSources } from './validate-skill-map-references.mjs';
+import { readSkillMapTranslations, validateSkillMapTranslations } from './skill-map-translations.mjs';
 
 // This input boundary returns diagnostic records, not approval to publish a partial catalog.
 export async function readCatalog(directory = new URL('../../data/', import.meta.url)) {
   const path = directory instanceof URL ? fileURLToPath(directory) : directory;
-  const [concepts, primitives, speakingCards, skillMaps, translations] = await Promise.all([
+  const [concepts, primitives, speakingCards, skillMaps, translations, skillMapTranslations] = await Promise.all([
     readConceptInputs(join(path, 'concepts')),
     readPrimitiveInputs(join(path, 'primitives')),
     readSpeakingCardInputs(join(path, 'speaking-cards')),
     readSkillMaps(join(path, 'skill-maps')),
     readTranslations(join(path, 'translations')),
+    readSkillMapTranslations(join(path, 'skill-map-translations')),
   ]);
   // Legacy callers may omit taxonomy; an explicitly supplied registry owns its IDs.
   const hasTaxonomy = (directory) => {
@@ -31,12 +33,14 @@ export async function readCatalog(directory = new URL('../../data/', import.meta
     categories: categories.categories,
     layers: layers.layers,
     translations: translations.records,
+    skillMapTranslations: skillMapTranslations.records,
     concepts: concepts.records,
     primitives: primitives.records,
     speakingCards: speakingCards.records,
     skillMaps: skillMaps.records,
     errors: [
       ...translations.errors.map((error) => `translations/${error}`),
+      ...skillMapTranslations.errors.map((error) => `skill-map-translations/${error}`),
       ...categories.errors.map((error) => `taxonomy/categories/${error}`),
       ...layers.errors.map((error) => `taxonomy/layers/${error}`),
       ...concepts.errors.map((error) => `concepts/${error}`),
@@ -54,6 +58,7 @@ export function validateCatalog(catalog) {
     errors: [
       ...catalog.errors,
       ...validateTranslations(catalog.translations ?? [], catalog),
+      ...validateSkillMapTranslations(catalog.skillMapTranslations ?? [], catalog.skillMaps ?? []),
       ...validateSkillMapSources(catalog.skillMaps ?? []),
       ...concepts.errors,
       ...validatePrimitiveReferences(catalog.concepts, catalog.primitives),

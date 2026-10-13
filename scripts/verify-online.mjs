@@ -6,6 +6,8 @@ import { pathToFileURL } from 'node:url';
 import { parse } from 'parse5';
 import { readCatalog, validateCatalog } from '../src/domain/content/catalog.mjs';
 import { resolveCatalog } from '../src/domain/content/localize-catalog.mjs';
+import { resolveSkillMaps } from '../src/domain/content/skill-map-translations.mjs';
+import { skillMapOverview } from '../src/domain/content/skill-map-overview.mjs';
 
 export function walk(node, visit, inheritedLang = '') {
   const attrs = Object.fromEntries((node.attrs ?? []).map(({ name, value }) => [name, value]));
@@ -40,19 +42,53 @@ export function createInventory(catalog) {
   }, { translated: 0, total: 0, missing: 0, draft: 0, stale: 0 });
   add('', navigationReady, { coverage: sumCoverage(zh.categories) });
   add('categories/', navigationReady, { coverage: sumCoverage(zh.categories) });
-  add('concepts/'); add('search/'); add('skill-maps/');
+  const maps = resolveSkillMaps(catalog.skillMaps, catalog.skillMapTranslations ?? [], 'zh-CN');
+  const ownerTexts = (map, key, predicate = () => true) => Object.entries(map.localization.owners[key].units).filter(([path]) => predicate(path)).map(([path, unit]) => ({ owner: `${map.id}/${key}/${path}`, ...unit }));
+  const taxonomyText = (map, kind, id, field) => {
+    const index = map.data.taxonomy[kind].findIndex((r) => r.id === id);
+    return ownerTexts(map, `map/${map.id}`, (path) => path === `taxonomy.${kind}.${index}.${field}`);
+  };
+  const commonMapTexts = (map) => ownerTexts(map, `map/${map.id}`, (path) => ['title', 'scope'].includes(path));
+  add('concepts/'); add('search/'); add('skill-maps/', maps.every((m) => m.localization.owners[`map/${m.id}`].coreTranslated), { mapTexts: maps.flatMap((map) => ownerTexts(map, `map/${map.id}`, (path) => /^(title|summary|audience\.)/.test(path))) });
+  add('about/');
   add('primitives/', zh.layers.every((r) => r.units.label.status === 'reviewed'), { coverage: sumCoverage(zh.layers) });
-  add('speaking-card/', false);
+  add('speaking-card/', zh.speakingCards.every((r) => r.coreTranslated), { guides: zh.speakingCards });
   for (const kind of ['concepts', 'primitives']) {
     const english = new Map(en[kind].map((r) => [r.id, r]));
     for (const record of zh[kind]) add(`${kind}/${record.id}/`, record.coreTranslated, { kind, records: { en: english.get(record.id), 'zh-CN': record }, coverage: record.coverage });
   }
   for (const record of zh.categories) add(`categories/${record.id}/`, record.coreTranslated, { coverage: record.coverage });
-  for (const map of catalog.skillMaps) {
-    add(`skill-maps/${map.id}/`, false);
-    for (const kind of ['nodes', 'journeys']) {
-      const item = map.data[kind][0];
-      if (item) add(`skill-maps/${map.id}/${kind}/${item.id}/`, false);
+  for (const map of maps) {
+    const ready = map.localization.owners[`map/${map.id}`].coreTranslated;
+    const tasks = [...commonMapTexts(map), ...ownerTexts(map, `map/${map.id}`, (path) => path === 'summary')];
+    for (const j of map.data.journeys.filter((j) => j.status === 'active')) tasks.push(...ownerTexts(map, `journey/${j.id}`, (path) => /^(title|summary|outputs\.)/.test(path)));
+    for (const item of map.data.taxonomy.layers.length ? map.data.taxonomy.layers : map.data.taxonomy.types) tasks.push(...taxonomyText(map, map.data.taxonomy.layers.length ? 'layers' : 'types', item.id, 'label'));
+    add(`skill-maps/${map.id}/`, ready, { mapTexts: tasks });
+    const directory = [...commonMapTexts(map), ...map.data.nodes.flatMap((n) => ownerTexts(map, `node/${n.id}`, (path) => ['title', 'summary'].includes(path)))];
+    for (const kind of ['types', 'clusters']) for (const item of map.data.taxonomy[kind]) directory.push(...taxonomyText(map, kind, item.id, 'label'));
+    add(`skill-maps/${map.id}/nodes/`, ready, { mapTexts: directory });
+    const overview = skillMapOverview(map.data), structure = [...commonMapTexts(map)];
+    for (const group of [...overview.groups, ...overview.clusters.map((c) => ({ ...c, kind: 'clusters' }))]) {
+      if (group.kind) for (const field of ['label', 'description']) structure.push(...taxonomyText(map, group.kind, group.id, field));
+      for (const n of group.examples) structure.push(...ownerTexts(map, `node/${n.id}`, (path) => path === 'title'));
+    }
+    for (const { type, edge, from, to } of overview.relationships) {
+      for (const field of ['outgoing_label', 'description']) structure.push(...taxonomyText(map, 'relation_types', type.id, field));
+      if (edge.note) structure.push(...ownerTexts(map, `relation/${JSON.stringify([edge.from, edge.type, edge.to])}`));
+      for (const n of [from, to]) structure.push(...ownerTexts(map, `node/${n.id}`, (path) => path === 'title'));
+    }
+    add(`skill-maps/${map.id}/overview/`, ready, { mapTexts: structure });
+    for (const kind of ['nodes', 'journeys']) for (const item of map.data[kind]) {
+      const owner = `${kind === 'nodes' ? 'node' : 'journey'}/${item.id}`;
+      const texts = [...commonMapTexts(map), ...ownerTexts(map, owner, (path) => !path.startsWith('tags.'))];
+      if (kind === 'nodes') {
+        texts.push(...taxonomyText(map, 'types', item.type, 'label'));
+        for (const edge of map.data.relations.filter((e) => e.from === item.id || e.to === item.id)) {
+          if (edge.note) texts.push(...ownerTexts(map, `relation/${JSON.stringify([edge.from, edge.type, edge.to])}`));
+          texts.push(...taxonomyText(map, 'relation_types', edge.type, edge.from === item.id ? 'outgoing_label' : 'incoming_label'));
+        }
+      }
+      add(`skill-maps/${map.id}/${kind}/${item.id}/`, ready && map.localization.owners[owner].coreTranslated, { mapTexts: texts });
     }
   }
   for (const card of catalog.speakingCards) {
@@ -60,11 +96,11 @@ export function createInventory(catalog) {
     pages.push({ path: `share/speaking-card/${id}/`, root: 'speaking-card/', locale: 'en', share: true, card: card.data, image: `brand/social/${id}-landscape.png` });
   }
   return { pages, coverage: {
-    collections: Object.fromEntries(['concepts', 'primitives', 'categories', 'layers'].map((kind) => [kind, {
+    collections: Object.fromEntries(['concepts', 'primitives', 'categories', 'layers', 'speakingCards'].map((kind) => [kind, {
       records: zh[kind].length, coreTranslated: zh[kind].filter((r) => r.coreTranslated).length, ...sumCoverage(zh[kind]),
       entries: zh[kind].map((r) => ({ id: r.id, coreTranslated: r.coreTranslated, ...r.coverage, units: Object.fromEntries(Object.entries(r.units).map(([path, u]) => [path, { status: u.status, actualLang: u.actualLang, sourceFingerprint: u.sourceFingerprint }])) })),
     }])),
-    skillMaps: catalog.skillMaps.map((map) => ({ id: map.id, translationOverlay: 'outside-current-contract', englishProseCompleteness: 'not-established',
+    skillMaps: maps.map((map) => ({ id: map.id, translationOverlay: 'shared-prose-resolver', coverage: sumCoverage(Object.values(map.localization.owners)),
       annotations: [{ id: map.id, kind: 'map', languages: map.data.text_languages ?? {} }, ...['nodes', 'journeys'].flatMap((kind) => map.data[kind].map((r) => ({ id: r.id, kind, languages: r.text_languages ?? {} })))],
     })),
   } };
@@ -86,7 +122,7 @@ export function inspectHtml(source, expected, target) {
     if ('data-definition-body' in a) definitions.push(localizedText(node, lang));
     if ((a.class ?? '').split(' ').includes('concept-deck')) summaries.push(localizedText(node, lang));
     if ('data-translation-coverage' in a) coverages.push(Object.fromEntries(['translated', 'total', 'missing', 'draft', 'stale'].map((key) => [key, Number(a[`data-${key}`])])));
-    if (['p', 'span', 'li', 'div', 'h3'].includes(node.tagName)) languageTexts.push(localizedText(node, lang));
+    if (['p', 'span', 'li', 'div', 'h1', 'h2', 'h3', 'a', 'strong', 'option'].includes(node.tagName)) languageTexts.push(localizedText(node, lang));
   });
   const failures = [], risks = [];
   const check = (condition, message) => { if (!condition) failures.push(message); };
@@ -111,6 +147,13 @@ export function inspectHtml(source, expected, target) {
     for (const [path, unit] of Object.entries(record.units)) {
       if (path.startsWith('definitions.')) continue; // Inline definition names include punctuation; bodies are compared above.
       for (const value of [unit.text].flat()) check(languageTexts.some((item) => item.lang === unit.actualLang && item.text === normal(value)), `missing localized text/language for ${path}`);
+    }
+  }
+  if (expected.locale === 'zh-CN' && expected.mapTexts) for (const unit of expected.mapTexts) check(languageTexts.some((item) => item.lang === unit.actualLang && (item.text === normal(unit.text) || item.text === `— ${normal(unit.text)}`)), `map ${unit.owner} text/language differs from resolver`);
+  if (expected.locale === 'zh-CN' && expected.guides) for (const guide of expected.guides) {
+    for (const [path, unit] of Object.entries(guide.units)) {
+      if (path === 'title') continue; // Resource icon contributes accessible text to the heading.
+      for (const value of [unit.text].flat()) check(languageTexts.some((item) => item.text === normal(value) && item.lang === unit.actualLang), `guide ${guide.id}/${path} text/language differs from resolver`);
     }
   }
   const image = url(expected.image ?? 'brand/social/default.png');
@@ -237,7 +280,7 @@ export function markdownReport(report) {
   const riskSummary = [...pageRisks].map(([risk, urls]) =>
     `### ${risk}\n\nAffected pages: ${urls.size}\n\n${[...urls].sort().map((url) => `- ${url}`).join('\n')}`
   ).join('\n\n') || 'None observed in the checked pages.';
-  return `# Online verification\n\nTarget: ${report.target}\n\nSource: ${report.source?.commit ?? 'unknown'}; dirty: ${report.source?.dirty ?? 'unknown'}. Deployed revision is not proven by source checkout.\n\nHTTP/HTML: **${report.automatedStatus}**; browser smoke: **${report.browser.status}**; overall acceptance: **${report.overallAcceptance}**.\n\nPages: ${report.pages.length}; discovered assets: ${report.assets.length}; failures: ${report.failures.length}.\n\n## Translation inventory\n\n| Collection | Records | Core translated | Reviewed/current units | Missing | Draft | Stale |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: |\n${Object.entries(report.coverage?.collections ?? {}).map(([kind, c]) => `| ${kind} | ${c.records} | ${c.coreTranslated} | ${c.translated}/${c.total} | ${c.missing} | ${c.draft} | ${c.stale} |`).join('\n')}\n\nSkill Maps retain original-language editions; annotation inventory is in report.json. These are outside the translation overlay and have no certified English completeness score.\n\n## Failures\n\n${report.failures.map((f) => `- ${f.url}: ${f.message}`).join('\n') || 'None in the stated automated scope.'}\n\n## Page risks\n\n${riskSummary}\n\n## Manual acceptance\n\n${report.manual.map((m) => `- ${m.id}: ${m.status}`).join('\n')}\n\nSee the manual checklist. No automated result proves a screen-reader session, actual 400% browser zoom or social platform cache refresh.\n\n## Limits\n\n${report.risks.map((r) => `- ${r}`).join('\n')}\n- Page risks above are observations, not failed checks or completed platform acceptance; raw metadata remains in report.json.\n- CSS URL references and observed HTML assets are checked; this is not an exhaustive JavaScript dependency crawler.\n- JSON includes timestamps, headers, redirects and per-record coverage.\n`;
+  return `# Online verification\n\nTarget: ${report.target}\n\nSource: ${report.source?.commit ?? 'unknown'}; dirty: ${report.source?.dirty ?? 'unknown'}. Deployed revision is not proven by source checkout.\n\nHTTP/HTML: **${report.automatedStatus}**; browser smoke: **${report.browser.status}**; overall acceptance: **${report.overallAcceptance}**.\n\nPages: ${report.pages.length}; discovered assets: ${report.assets.length}; failures: ${report.failures.length}.\n\n## Translation inventory\n\n| Collection | Records | Core translated | Reviewed/current units | Missing | Draft | Stale |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: |\n${Object.entries(report.coverage?.collections ?? {}).map(([kind, c]) => `| ${kind} | ${c.records} | ${c.coreTranslated} | ${c.translated}/${c.total} | ${c.missing} | ${c.draft} | ${c.stale} |`).join('\n')}\n\nSkill Maps use shared English canonical and retained Chinese prose projections; per-map coverage and annotations are in report.json.\n\n## Failures\n\n${report.failures.map((f) => `- ${f.url}: ${f.message}`).join('\n') || 'None in the stated automated scope.'}\n\n## Page risks\n\n${riskSummary}\n\n## Manual acceptance\n\n${report.manual.map((m) => `- ${m.id}: ${m.status}`).join('\n')}\n\nSee the manual checklist. No automated result proves a screen-reader session, actual 400% browser zoom or social platform cache refresh.\n\n## Limits\n\n${report.risks.map((r) => `- ${r}`).join('\n')}\n- Page risks above are observations, not failed checks or completed platform acceptance; raw metadata remains in report.json.\n- CSS URL references and observed HTML assets are checked; this is not an exhaustive JavaScript dependency crawler.\n- JSON includes timestamps, headers, redirects and per-record coverage.\n`;
 }
 
 async function main() {

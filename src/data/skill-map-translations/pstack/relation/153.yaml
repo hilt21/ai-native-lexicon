@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["worktree-cleanup","governed_by","principle-encode-lessons-in-structure"]'
+provenance:
+  original_sha256: 830d0258a85c4267d1f3383a5b203e927d52e0a170bfaa09d95138673bba9f87
+  retained_at: 2026-10-13
+units: []

@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: retro
+provenance:
+  original_sha256: eca0e072ebfdf816bc0dd4b8ef121b65a0ce22209c54c6c94d7a90a1720607c2
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: retro
+    language: en
+    source_fingerprint: sha256:21c6deb6a22994e0cc435b39d429e17349f694fb72c29039b3aa564ae33be611
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 从一次 coding session 中找出可以改进 Agent 环境的机会。
+    language: zh-Hans
+    source_fingerprint: sha256:0385631620135acafc96cb3f4ed7d16ea4cfe21ce23a7cf0009833158c079a24
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:743e7a3dfe1de0cd96825244659b8ed3d0988401ebba94f4a7f2b6bcf13fa5cc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:5333bd085263aa502a4128b599785f7143aea449e9fd5f16caf17fbaa1e9942f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:899906be285a9d4ab4029a740e80a0451ceb698fe4d4cf87844cedd0c1976be5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 会话记录
+    language: zh-CN
+    source_fingerprint: sha256:028c2a2df5836aa569424fe86828a6a99965ab5573b91fe110bfec7f7a5f1501
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 仓库环境
+    language: zh-Hans
+    source_fingerprint: sha256:8a83fd1cfb112bce67319c810c7b8e3769a3f60a78bbee8cee76e0bdb2527959
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 按严重度排序的环境改进建议
+    language: zh-Hans
+    source_fingerprint: sha256:443d7a714a1d738f7a59f0ee7bfdd44defc04f696ee4bfafe763b5f2a3f809f7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Conduct a retrospective on a coding session.
+    language: en
+    source_fingerprint: sha256:37ea0a7fba4289979e6f89da426cf8f7a4da054f51d7f77112d034aa3dc68827
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动复盘后，先读取 writing-for-agents，再查指定 session 的原始记录；未指定时采用当前 session。按导航、自动检查、编码标准、steering、工具成本和信息访问查找候选，将机械问题建议为确定性检查，将判断问题建议为审查标准。按严重度呈现环境改进候选供人选择，不自动把所有建议应用到代码或环境。
+    language: zh-Hans
+    source_fingerprint: sha256:366899c5f3f8b4ddc6fe74e7f099680db6e890ca2b846ee669fd06513954d352
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 一次 build 完成后。
+    language: zh-Hans
+    source_fingerprint: sha256:eb8406599a65186e19c950ef5fe9008f212c5e680488830fca6f513e2af7bb45
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 一次 Agent run 出现低效、错误或反复纠正后。
+    language: zh-Hans
+    source_fingerprint: sha256:6eb421c52cb57a05803ae33d1ceb16a26c15744f5ab2fb2fcc2012b80b464eca
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 让失败经验改善下一次 Agent 工作环境。
+    language: zh-Hans
+    source_fingerprint: sha256:d73573ab2d4806cb1f5e393a82a7c49365c1b21ba5d85527b71e76b87c3ca577
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把机械错误从人工提醒升级成检查、工具或导航结构。
+    language: zh-Hans
+    source_fingerprint: sha256:a968392aed43e07812e4371148ba1164e2cee3edac13bf3b97f74aea3164906e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

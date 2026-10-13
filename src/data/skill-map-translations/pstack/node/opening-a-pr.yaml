@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: opening-a-pr
+provenance:
+  original_sha256: 43c1635441be23a4366a0581697d8374ed01da6c7daa8dce6d66ec6921271f73
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: opening-a-pr
+    language: en
+    source_fingerprint: sha256:79683a48da8da733c66b392239ef2926a31a859f46e6fc4821a006a59a5c88c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把已验证 diff 整理成可审阅 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:b4aa2ac52ebec47f8089520b93d2d008d05b72b7ad68550451a05ec8b4f69f8c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 已验证差异
+    language: zh-CN
+    source_fingerprint: sha256:6b9fe4b6baa5d54ce3f9af5199d75a7203ea4e6444425d7959a206ec3c04cac7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 证据
+    language: zh-CN
+    source_fingerprint: sha256:5c5ca12948be28ab97e6e6caf6539b22cfda50c9568ff832d01e60cf1dd4a733
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 范围
+    language: zh-CN
+    source_fingerprint: sha256:7b02ecae85c1ee9815576e3f4fcfcdbbc6707865ba1e0fce173b94451c447093
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 可审查的提交
+    language: zh-CN
+    source_fingerprint: sha256:0de00f854d57293f1639be45e822a4e0ded7bf6e2317dbe323237e5a675c7a65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: PR
+    language: en
+    source_fingerprint: sha256:e1a1e7c0276a6da3b1e47527c94aba814dcc7e9a679bb8fc4028744451fba844
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 验证摘要
+    language: zh-CN
+    source_fingerprint: sha256:768c5c730147a7a211041b11323ce11b954edff9b94238a840e549bba311aff5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: fresh worktree → 小而有序 commits → deslop/no-comments → technical-writing + unslop → concise PR body with scope/blast radius/verification。
+    language: zh-Hans
+    source_fingerprint: sha256:3b8cde82723cad3ad4ac859050a83b2f9a7476750ed0fd8d7a94d28882367d2c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 几乎所有写代码 playbook 的结尾
+    language: zh-Hans
+    source_fingerprint: sha256:1e972834750af57e210b06bf9384e81294678ea2df4129efedcea1dee47f35ec
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 大杂烩 commit
+    language: zh-Hans
+    source_fingerprint: sha256:c77e7569bf16ec6fbd8c7f9d17e264b9804c5720417a39877a85b60dad178f43
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: PR body 变成实验日志
+    language: zh-Hans
+    source_fingerprint: sha256:eb624f60b68cad4db92c25b3573d86e10a9138b78cce421c58d36431f9ebfd7d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.2
+    translation: 空泛的 AI 生成内容
+    language: zh-CN
+    source_fingerprint: sha256:2a074aee0f8b92f6c0ab5f9e9a77ddbfeb1b0f35f28ec6a18325d7d51d63bccf
+    review_status: reviewed
+    reviewed_at: 2026-10-13

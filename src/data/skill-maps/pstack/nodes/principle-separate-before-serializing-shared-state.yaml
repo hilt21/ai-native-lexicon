@@ -1,31 +1,23 @@
 title: separate-before-serializing-shared-state
-summary: 并发场景优先消除共享写，再考虑串行化。
+summary: Eliminate shared writes before considering serialization in concurrent work.
 type: principle
-status: active
 layer: principle
 primary_cluster: principles
 secondary_clusters: []
 tags:
-- principle
-mechanism: 并发场景优先消除共享写，再考虑串行化。
-when_to_use:
-- Apply when concurrent actors might write to the same file, branch, key, or state
-  object. Eliminate the sharing first; serialize structurally only when one shared
-  writer is a real invariant.
-solves:
-- 并发场景优先消除共享写，再考虑串行化。
+  - principle
 inputs:
-- shared mutable resource
+  - shared mutable resource
 outputs:
-- isolated ownership / single-writer boundary
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/principle-separate-before-serializing-shared-state/SKILL.md
+  - isolated ownership / single-writer boundary
 handoffs: []
-official_description: Apply when concurrent actors might write to the same file, branch,
-  key, or state object. Eliminate the sharing first; serialize structurally only when
-  one shared writer is a real invariant.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  summary: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-separate-before-serializing-shared-state/SKILL.md
+official_description: Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant.
+status: active
+mechanism: Eliminate shared writes before considering serialization in concurrent work.
+when_to_use:
+  - Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant.
+solves:
+  - Eliminate shared writes before considering serialization in concurrent work.

@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: improve-the-system
+provenance:
+  original_sha256: 8d4772979c72139153960821e56d9fad03add94dbce9ec9014352045005f4abb
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想让系统从这次运行中进化
+    language: zh-Hans
+    source_fingerprint: sha256:4d69f652881589f5f71acd9008097342e2bc3f88a7d4df5a40ee780d0d722f06
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 我想让系统从这次运行中进化：从任务入口到可检查的产物。
+    language: zh-Hans
+    source_fingerprint: sha256:c8e2fb15a587c309f1b8beb0b4fb46a5ffc578955f69f99f3febd343dedfb418
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 明确的任务目标与相关上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:57a8a5cadc42c5c38ab9995bf83f397654ca229a8d15243483b0b81d4bdc3652
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 反思
+    language: zh-CN
+    source_fingerprint: sha256:9c7bcc1c980fd057c3471f075e1f77316f7879e5fd5b7b29e0f8c95b0906f705
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 智能体总是犯这个错误
+    language: zh-CN
+    source_fingerprint: sha256:794505cf77015a23fc63bc270aa9260075b908e3bcce3f4df74a456505d6b037
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 将我的工作方式自动化
+    language: zh-CN
+    source_fingerprint: sha256:301e213b632e7391c1b743dd918196cb2795648d54d46f4dacb68a7ccb3a7630
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 减少未来监督需求的结构性防护或改进后的技能
+    language: zh-CN
+    source_fingerprint: sha256:0e90f9240119c9c6b116483d0607babade4c58d47727dfe1e34ef6db139a4cb0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 推荐路径
+    language: zh-Hans
+    source_fingerprint: sha256:35cbe879f20d64d13f1db0a8d5c932477c9bcbac498dac9ee21b92f2aff8309e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 查看决策记录
+    language: zh-Hans
+    source_fingerprint: sha256:22dbd33afa4070404c0e5dc074fb5823995041df444b2dd3905824a3d86a9afc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 把长时间 Agent 活动压缩成可审计 decision trail。
+    language: zh-Hans
+    source_fingerprint: sha256:d947ebc9821101b1c2149e1be3bb4526903d01ba6acaae4a310b38084bcacb92
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 复盘与纠正
+    language: zh-Hans
+    source_fingerprint: sha256:6d622186978a627cc504c9332eeba18f27baeb95806535367b3d46b8344edd93
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 复盘一次 Agent 工作，把经验路由成具体 skill 改进。 把重复的人类纠正升级为结构性约束。
+    language: zh-Hans
+    source_fingerprint: sha256:952afafd7eb323f91997711102106b1d2f6f89046f5a53ac8a4aa7adcf41a453
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 形成技能改进
+    language: zh-Hans
+    source_fingerprint: sha256:63aeedf14d2b9b82c6b83ebcdeda913a992b10ec74f8d527004d00a052c8b2d4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 创建或修改 pstack/Cursor skill。 用盲测验证 skill/prompt 是否真的改善 Agent 行为。 把稳定的个人工作偏好编码成可复用 mode skill。
+    language: zh-Hans
+    source_fingerprint: sha256:db7f9633a0020920ac73ff9a76735a3b84c8f09a511e564769ba689dd15d9167
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 复盘结果需要落到技能或工作方式时。
+    language: zh-Hans
+    source_fingerprint: sha256:71827c85f43369add25e60203bf101bf1f896d539427607b80392d186968ce82
+    review_status: reviewed
+    reviewed_at: 2026-10-13

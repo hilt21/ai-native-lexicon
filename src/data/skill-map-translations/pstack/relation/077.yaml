@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["authoring-a-skill","governed_by","principle-encode-lessons-in-structure"]'
+provenance:
+  original_sha256: cc39e6952eb7ddd65a32b71780b07ac28f13ed2c420eb2b2abf00006c7de6a3c
+  retained_at: 2026-10-13
+units: []

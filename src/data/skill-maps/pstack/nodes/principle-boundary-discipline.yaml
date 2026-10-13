@@ -1,31 +1,23 @@
 title: boundary-discipline
-summary: 把 validation 和 adapter 集中在系统边界，内部依赖可信类型。
+summary: Concentrate validation and adapters at system boundaries; trust typed data internally.
 type: principle
-status: active
 layer: principle
 primary_cluster: principles
 secondary_clusters: []
 tags:
-- principle
-mechanism: 把 validation 和 adapter 集中在系统边界，内部依赖可信类型。
-when_to_use:
-- Apply when wiring validation, error handling, or framework adapters. Concentrate
-  guards at system boundaries (CLI, config, network, external APIs); trust internal
-  types and keep business logic in pure functions.
-solves:
-- 把 validation 和 adapter 集中在系统边界，内部依赖可信类型。
+  - principle
 inputs:
-- boundary input / external API
+  - boundary input / external API
 outputs:
-- clean boundary adapter / pure core
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/principle-boundary-discipline/SKILL.md
+  - clean boundary adapter / pure core
 handoffs: []
-official_description: Apply when wiring validation, error handling, or framework adapters.
-  Concentrate guards at system boundaries (CLI, config, network, external APIs); trust
-  internal types and keep business logic in pure functions.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  summary: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-boundary-discipline/SKILL.md
+official_description: Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions.
+status: active
+mechanism: Concentrate validation and adapters at system boundaries; trust typed data internally.
+when_to_use:
+  - Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure functions.
+solves:
+  - Concentrate validation and adapters at system boundaries; trust typed data internally.

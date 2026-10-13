@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["perf-issue","governed_by","principle-prove-it-works"]'
+provenance:
+  original_sha256: 091d1dc2eb8f37964567c3509a8c5f6683e8b681947a20cc0cb8e0214c8b1837
+  retained_at: 2026-10-13
+units: []

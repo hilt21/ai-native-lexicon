@@ -1,31 +1,23 @@
 title: outcome-oriented-execution
-summary: 迁移直接收敛目标架构，避免永久中间态。
+summary: Converge migrations on the target architecture rather than permanent intermediate states.
 type: principle
-status: active
 layer: principle
 primary_cluster: principles
 secondary_clusters: []
 tags:
-- principle
-mechanism: 迁移直接收敛目标架构，避免永久中间态。
-when_to_use:
-- Apply during planned rewrites and migrations with explicit phase boundaries. Converge
-  on the target architecture; don't preserve smooth intermediate states with throwaway
-  compatibility code.
-solves:
-- 迁移直接收敛目标架构，避免永久中间态。
+  - principle
 inputs:
-- migration target
+  - migration target
 outputs:
-- target architecture
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/principle-outcome-oriented-execution/SKILL.md
+  - target architecture
 handoffs: []
-official_description: Apply during planned rewrites and migrations with explicit phase
-  boundaries. Converge on the target architecture; don't preserve smooth intermediate
-  states with throwaway compatibility code.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  summary: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-outcome-oriented-execution/SKILL.md
+official_description: Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code.
+status: active
+mechanism: Converge migrations on the target architecture rather than permanent intermediate states.
+when_to_use:
+  - Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code.
+solves:
+  - Converge migrations on the target architecture rather than permanent intermediate states.

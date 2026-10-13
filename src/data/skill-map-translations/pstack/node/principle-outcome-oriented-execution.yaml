@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-outcome-oriented-execution
+provenance:
+  original_sha256: 48c18d62e3964bece338b62aaa9f0e07c89b9e52c273ee8b6348221627bd9117
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: outcome-oriented-execution
+    language: en
+    source_fingerprint: sha256:ce78f9bcb66bf312432f05e3df229851c610be81b8a06970ce5d208174335e5b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 迁移直接收敛目标架构，避免永久中间态。
+    language: zh-Hans
+    source_fingerprint: sha256:a0d7609cea64b1b4ee4f1cd8441fe178d78c74a3cf97b2ca6cbb68b9760ac31d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:e7e355f2b4913a09f5a1259e3056a2450dd2b1bd1e134ae3ff7a4e2aa9726846
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 迁移目标
+    language: zh-CN
+    source_fingerprint: sha256:7e7ec4309fb9ff63761937bd9cfc42de911ff409b614320d53695ad9903813e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 目标架构
+    language: zh-CN
+    source_fingerprint: sha256:bbec55e8b096612e3db712274bee5bfa6bfc7bcd0cfe987f193a38fad72682ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply during planned rewrites and migrations with explicit phase boundaries. Converge on the target architecture; don't preserve smooth intermediate states with throwaway compatibility code.
+    language: en
+    source_fingerprint: sha256:8629314bca9fefff571c38a1fb6d5524a7bf90a0c95f2dbf40623ade190acca5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 迁移直接收敛目标架构，避免永久中间态。
+    language: zh-Hans
+    source_fingerprint: sha256:9ea35a1b925eff91f1c39b7a8f6e5795513bb6891eb74a7ec6e5fdbcdf0a89fb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 进行具有明确阶段边界的计划重写或迁移时使用。收敛到目标架构；不要用临时兼容代码维持平滑的中间状态。
+    language: zh-CN
+    source_fingerprint: sha256:fe5581e5b2ed953c477610f4d6a6699024cf54166bd353b5a071c9972d7f6dee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 迁移直接收敛目标架构，避免永久中间态。
+    language: zh-Hans
+    source_fingerprint: sha256:70fadd7a93f49483063a7b3e7856865da81057ce6d7ce558a0696a1addcfd3c7
+    review_status: reviewed
+    reviewed_at: 2026-10-13

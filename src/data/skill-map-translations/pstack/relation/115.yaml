@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autopilot-full","uses","no-comments"]'
+provenance:
+  original_sha256: 897d04168a2495d1485fee1764aa3236cc4b87e49bd272e494f63b65a181afa9
+  retained_at: 2026-10-13
+units: []

@@ -1,0 +1,147 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: fix-a-hard-bug
+provenance:
+  original_sha256: 7d57ba93b239cb421273a2605ac90c1dffdca29852099079c3956c0271f8ca98
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我遇到了一个难 Bug
+    language: zh-Hans
+    source_fingerprint: sha256:71dc2db7e5ae5849dd1155b68eefc7d550adaa3e2d5d3faf9e61f26b65a0be7c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 先建立能捕获真实症状的红反馈，再最小化、假设、instrument 和修复；存在正确 seam 时留下回归测试，否则记录可测试性缺口。
+    language: zh-Hans
+    source_fingerprint: sha256:6df448598d72231ee2c76b5cf15650b496688f0b5be4c4204d298340d78b4fa1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 问题症状
+    language: zh-CN
+    source_fingerprint: sha256:277aca685924832a9e83be0710ee3e9307081708d2d1f56247a8f84ed5c71dec
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 可运行系统
+    language: zh-Hans
+    source_fingerprint: sha256:f4221da79a8f7d1c1870ab0b26093e7f75adb15645da73205f62763d3c10a9d9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: bug 抗拒第一眼分析、存在 flake、回归或性能异常。
+    language: zh-Hans
+    source_fingerprint: sha256:d11bf5a66acedc710432ad26eec5bdd2e04432c9c77741a6ec75902595908d21
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 根因证据与修复
+    language: zh-Hans
+    source_fingerprint: sha256:7bc2592e8f26ec940391d9039cd2111147624e7b52dce8cf19fee56ed3461b56
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 正确 seam 上的回归保护，或记录缺少 seam 的发现
+    language: zh-Hans
+    source_fingerprint: sha256:5a19f583c54654fe034eabd37c24c8a1e5f973cf39fa603fe99a78806bb54ce4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 可观测复现驱动的修复
+    language: zh-Hans
+    source_fingerprint: sha256:ff73754d760ce41401313f7f5e2a22b2efaf5a380aa372a0c44567f5048e7077
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 建立反馈并验证根因
+    language: zh-Hans
+    source_fingerprint: sha256:a812a0a299eb0befe0c1ff3986f96667497f526e666cc03e0ec637c6de595c07
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: diagnosing-bugs 先要求一个已经能在此 bug 上变红的反馈入口（flake 为固定高复现率），再最小化、假设、instrument 和修复。有正确 seam 才先写回归测试，缺少时明确记录，最后重跑原始场景并清理。
+    language: zh-Hans
+    source_fingerprint: sha256:6db1702ed4d9e16eec5e597a06d9a6fe05869312707986cc352ef81ca6dfdafc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 反馈入口、根因证据、修复及回归测试或缺少 seam 的记录
+    language: zh-Hans
+    source_fingerprint: sha256:2c29f60f4dd9432635928d65254cc5706bdce2d477e13d7c948a7b93a90a24ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 按固定点审查修复
+    language: zh-Hans
+    source_fingerprint: sha256:38f31c172b6124e6a44f32d4566b7092c6856367d6270dbeaf6d1be9e70fd705
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 当需要独立审查时可使用 code-review，分别检查仓库标准和原问题要求；这是可选建议，并非诊断正文要求额外调用。
+    language: zh-Hans
+    source_fingerprint: sha256:6f8cfab57d4a715b76aaf0bf34363a575639011055538d527039ccb245210caa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.when
+    translation: 需要独立审查修复 diff。
+    language: zh-Hans
+    source_fingerprint: sha256:e196387f037c50a904c6a345c16f562541edec597ffc366450b9586de27bbf46
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.outputs.0
+    translation: Standards 与 Spec 两轴发现
+    language: zh-Hans
+    source_fingerprint: sha256:f018709e74e264e4e7aedd6765200e220fbba8f33712c068c929be3a18717e88
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 由用户选择是否复盘
+    language: zh-Hans
+    source_fingerprint: sha256:8af970cf98c86f52fb49aa428f654a06d682ffcf1b8291c1016123e0173a4bf2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+    language: zh-Hans
+    source_fingerprint: sha256:86d8dfe5aafd595814126a245668f202e916c89f229e1fa1027a7a59b3b66e5e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+    language: zh-Hans
+    source_fingerprint: sha256:12b0aa12dee99ba9e44e645f018193dcf05a9e7e8d49790bed9eff2fb25dcb7c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.outputs.0
+    translation: 按严重度排列的环境改进候选
+    language: zh-Hans
+    source_fingerprint: sha256:e1b59a87bd2c3181f61d7d625e688053c83a4062c2a51fb5d6bf79e09595dc0d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 缺少反馈 seam 时调查架构
+    language: zh-Hans
+    source_fingerprint: sha256:3a7c3a9390bff3c222e7eedb61a983d554ad8a26b39a08d5adc98bcbdd402af9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 这是条件性的编辑建议，由用户启动架构 survey；不表示 diagnosing-bugs 自动调用或自动重构。
+    language: zh-Hans
+    source_fingerprint: sha256:7d368a8107eaa16ef7dc5c623c156bd24c1c6b7fd0ae103348e22fa887aae4b8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 发现根本问题是缺少能观察和锁定行为的 seam。
+    language: zh-Hans
+    source_fingerprint: sha256:24187e054049b2bfa1b4476ce01b93aa8edbd8a4582711b08231d730c92db0ed
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.outputs.0
+    translation: 架构候选与待确认的模块边界
+    language: zh-Hans
+    source_fingerprint: sha256:5980f538b871ce77a734da2e9bc7af5c84182c7104c09c91a19571bbac51cbc6
+    review_status: reviewed
+    reviewed_at: 2026-10-13

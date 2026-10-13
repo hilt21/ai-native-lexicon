@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: domain-modeling
+provenance:
+  original_sha256: a361e696a5663d46e46e3d2a4e36c15be723c48ef714307af098786725a42ff0
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: domain-modeling
+    language: en
+    source_fingerprint: sha256:4fd3cb699accad3a604e71ece6128eadf6405c31e8e0f225191d04e0d96e2a4e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 持续建立项目的统一领域语言和关键决策记录。
+    language: zh-Hans
+    source_fingerprint: sha256:89699d8cffc442f014d9ba794914b2d4fee098d3e800ccc48b8f16b8892d3bd4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:605d92c26a85bf34aff35047eac147160c8943d8941449e61a70599b794f249d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:54e4ec67f92b1d0de09cc444cf50deaff4114147922e0d82537288ef8be57c7d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:5ce87e4482ebc543a3eaa0e1f88eb39c2886f1eb6ab73ed478583cca6bc1f5e4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 领域术语
+    language: zh-Hans
+    source_fingerprint: sha256:ae72da58a0a3e23abf7abbdfda946c09c442f7bb94f79a25aed9d2df1c77ac7b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 代码和业务上下文
+    language: zh-Hans
+    source_fingerprint: sha256:46b62a296d274ce214c4e536105ca02ca205580c7a2aed184fd4f4f5597f7402
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更新后的 GLOSSARY.md
+    language: zh-Hans
+    source_fingerprint: sha256:9771859315526cbd6d40322ebf34f47c5111d0cb1de47d0f4093966086f5702a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 满足记录条件时的 ADR
+    language: zh-Hans
+    source_fingerprint: sha256:0bac3720351f1030e10be571839d24456e559d5e021b7e473eb20e1eeaf4b09d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Build and sharpen a project's domain model. Use when discussing codebase terminology, writing or editing a GLOSSARY.md, or recording or editing an ADR.
+    language: en
+    source_fingerprint: sha256:870310c1d808ad9dbc26882590b751b3c3f3559566a6126411d87832fad9b555
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 挑战模糊或重载的领域术语，用 edge cases 检验含义，随时把稳定词汇写入 GLOSSARY.md。只有难以逆转、缺少背景会令人意外且存在实质 tradeoff 的决定才建议记成 ADR；不把实现细节塞进 glossary，也不把每个稳定认识都写成 ADR。
+    language: zh-Hans
+    source_fingerprint: sha256:7d5c8be709565bdcdf537431addbdf6678cbc5f9e7c9d7cc53f7eebceffdbd3b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 项目术语不一致或同一个词承担多个含义。
+    language: zh-Hans
+    source_fingerprint: sha256:69f4f0d9b2e35dd22c9d48666c665b59094a0fa229e7dd3a55783140a931f4dd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要修改 GLOSSARY.md 或记录 ADR。
+    language: zh-Hans
+    source_fingerprint: sha256:65a47588dbacae67ceb05f286cf7b597cbd7c05fe150beac151cc6d71c733eb9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低人与 Agent 的语言歧义。
+    language: zh-Hans
+    source_fingerprint: sha256:d071c22d575bdf6d7ad503bd6c3d7d3821c9d6f7d5ed50ffddc4d4b222a153cb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 让命名、导航和后续推理共享同一领域模型。
+    language: zh-Hans
+    source_fingerprint: sha256:95cb7cb8f1f2dfd56083debf164c36f01f8fb49d52d3a9966a9729daca9a8072
+    review_status: reviewed
+    reviewed_at: 2026-10-13

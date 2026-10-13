@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["tdd","uses","codebase-design"]'
+provenance:
+  original_sha256: 45684546a9d322d7de529c3ed5f7903c33b19059476c3b7b033c63f79efdec1b
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 明确引用同一套 seam/deep-module 词汇；仅当公共测试界面的形状还需讨论时查阅，不是每片都运行的阶段。
+    language: zh-Hans
+    source_fingerprint: sha256:695fbd4d3b176a6a9ce4905501fbce501ba67d90b6cc88ce484460892329421a
+    review_status: reviewed
+    reviewed_at: 2026-10-13

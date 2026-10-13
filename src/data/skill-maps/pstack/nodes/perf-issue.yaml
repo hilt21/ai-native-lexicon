@@ -1,33 +1,26 @@
 title: perf-issue
-summary: 一次性性能问题的测量、修复与证明。
+summary: Measure, fix and demonstrate a one-off performance problem.
 type: playbook
-status: active
 layer: playbook
 primary_cluster: verification-evidence
 secondary_clusters: []
 tags: []
-mechanism: baseline trace → benchmark-checklist → how → 按性能 mantra 排序假设 → 修改 → post
-  trace → artifact diff → PR。
-when_to_use:
-- 一次性 latency/throughput/slowness 问题
-solves:
-- 读代码代替测量
-- 无基线 speedup claim
 inputs:
-- performance complaint
-- real workload
+  - performance complaint
+  - real workload
 outputs:
-- baseline/post metric
-- artifact paths
-- verified perf fix
-- PR
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/poteto-mode/playbooks/perf-issue.md
+  - baseline/post metric
+  - artifact paths
+  - verified perf fix
+  - PR
 handoffs: []
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/perf-issue.md
+status: active
+mechanism: Capture a baseline trace, apply benchmark-checklist, ground with how, order hypotheses by the performance mantra, change the system, capture a post-change trace, compare artifacts and prepare the PR.
+when_to_use:
+  - One-off latency, throughput or slowness issue
+solves:
+  - Code reading substitutes for measurement.
+  - Speedup claim lacks a baseline.

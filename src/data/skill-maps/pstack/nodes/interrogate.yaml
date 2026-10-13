@@ -1,45 +1,33 @@
 title: interrogate
-summary: 对代码或设计做多模型 adversarial review。
+summary: Use multiple models for adversarial code or design review.
 type: capability
-status: active
 layer: skill
 primary_cluster: design-decision
 secondary_clusters: []
 tags:
-- review
-- adversarial
-- multi-model
-mechanism: 让不同模型从独立角度攻击同一 diff/design，lead reviewer 将问题分类为 Act on / Consider / Noted
-  / Dismissed。
-when_to_use:
-- 复杂 diff
-- 有争议设计
-- 准备 shipping 前寻找盲点
-solves:
-- 降低单模型 confirmation bias
-- 提前暴露隐藏风险
+  - review
+  - adversarial
+  - multi-model
 inputs:
-- intent
-- diff or design
-- review context
+  - intent
+  - diff or design
+  - review context
 outputs:
-- adversarial findings
-- triaged verdict
-- action items
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/interrogate/SKILL.md
+  - adversarial findings
+  - triaged verdict
+  - action items
 handoffs:
-- 交接说明：fix round
-official_description: Use for "interrogate", "adversarial review", "multi-model review",
-  "challenge this", "stress test this code", "find blind spots", or "tear this apart".
-  Multiple LLM reviewers challenge changes from independent angles.
-text_languages:
-  handoffs.0: zh-Hans
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
+  - "Handoff guidance: fix round"
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/interrogate/SKILL.md
+official_description: Use for "interrogate", "adversarial review", "multi-model review", "challenge this", "stress test this code", "find blind spots", or "tear this apart". Multiple LLM reviewers challenge changes from independent angles.
+status: active
+mechanism: Have different models challenge the same diff or design independently. The lead classifies findings as Act on, Consider, Noted or Dismissed.
+when_to_use:
+  - Complex diff
+  - Contested design
+  - Find blind spots before shipping.
+solves:
+  - Reduce single-model confirmation bias.
+  - Expose hidden risk early.

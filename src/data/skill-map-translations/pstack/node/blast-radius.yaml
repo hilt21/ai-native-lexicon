@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: blast-radius
+provenance:
+  original_sha256: f11f72d37a6a9c965a7dc00ac74ebe7aad41237d449f5acfc9e2b172d304a59a
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: blast-radius
+    language: en
+    source_fingerprint: sha256:125e1220239dedd2c852d8e283e5187ec66ba65ff578060f7e7298b35246e685
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 识别 diff 之外的潜在影响并用真实运行证明安全前提。
+    language: zh-Hans
+    source_fingerprint: sha256:9631ecf63a00f87ffc3c17040137223398d781925419cca8a48b41aacdd0c7a8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 风险
+    language: zh-CN
+    source_fingerprint: sha256:575fb7a18852575bd37cf4fe6d52cc9e6815b6d6d7d62a79de62911df3fc403f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 验证
+    language: zh-CN
+    source_fingerprint: sha256:5acc6d0ae016b89ae0029a27ab4043f0d2152386940d89ca98d243221a251138
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 审查
+    language: zh-CN
+    source_fingerprint: sha256:f65aaad41fd0678da53c9be5d8eb5656918d2d4267b2785305a3f7e4c62d0768
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 差异
+    language: zh-CN
+    source_fingerprint: sha256:4e9d531a1f95b8ef2a614e59322384b2b42c2e1d7028f689bf07cd8128423aed
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 仓库关系图
+    language: zh-CN
+    source_fingerprint: sha256:15f69b5ad62806907e9fbd5045482eca2962eeac40cdf0d469dd506c3e930f3b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 运行时或数据场景
+    language: zh-CN
+    source_fingerprint: sha256:790a7b266f073bf7a12d826988eb7dcf7ef3df7d35d4d4ca659faabc98cb971c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 影响范围地图
+    language: zh-CN
+    source_fingerprint: sha256:2f097415e6d8e92e80acfe7d88a8eb6ad5c783b3c13d1db519fef1506a689c87
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 关键安全事实
+    language: zh-CN
+    source_fingerprint: sha256:0ad1e2f1b72d92bcb00bd3015416a9e4f12f15b8c395671049360bab41fa937f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 证明
+    language: zh-CN
+    source_fingerprint: sha256:33d31af1c42da2e9131210a6f514eada3e36da1943ea907b7c4fb838f0933488
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 剩余风险
+    language: zh-CN
+    source_fingerprint: sha256:4eba62d1e33a356292b672996e8ac65987aeddbcb75a8bfea982a4e0121346a4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Find what a change could break somewhere else before it ships, beyond the diff, and prove the one fact it's safe because of by running real code instead of writing it up. Use for 'blast radius of X', 'what could this break', or reviewing a small diff you don't trust.
+    language: en
+    source_fingerprint: sha256:37664e4eed13c15d24cea6c0500d534ef58225e9278793c83a45f9832cf6ba9c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 寻找改动安全性依赖的核心事实，追踪 callers/consumers/implicit assumptions，并构造脚本或真实运行验证该事实。
+    language: zh-Hans
+    source_fingerprint: sha256:2209b8c9796bbd531f278b0b0a5546db6054472e760f4c2e2ccb061dcb56b1ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 小 diff 但不确定风险
+    language: zh-Hans
+    source_fingerprint: sha256:84c25675f32fd421554835b7e6ed8bf0592acc8570784278007ab316ec69a0c2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: API/数据结构变化
+    language: zh-Hans
+    source_fingerprint: sha256:401af4cd8742975410db3831e27bfc2d13727cb7c56e796754969fbe44ea9755
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: shipping 前安全检查
+    language: zh-Hans
+    source_fingerprint: sha256:5ecbd1c788c698e26fc238757a3605fde9e4941b40c3347f31acfe75984c48b3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免只看 diff 的局部审查
+    language: zh-Hans
+    source_fingerprint: sha256:89a4661afb111ce9d798dd660ad5f0f47335955795ec2a8a7af1a794f735f958
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 识别隐藏依赖
+    language: zh-Hans
+    source_fingerprint: sha256:bfcddeb11c746aa52e4b457bb6df2cb7e24f542c355649a63b2191e068e6b824
+    review_status: reviewed
+    reviewed_at: 2026-10-13

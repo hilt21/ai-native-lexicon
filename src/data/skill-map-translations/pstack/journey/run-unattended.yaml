@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: run-unattended
+provenance:
+  original_sha256: dcf41034732e368c409ebee62cfc60bed0dde49dc13a204ce1a9a5023064419f
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想让 Agent 自己跑
+    language: zh-Hans
+    source_fingerprint: sha256:7b93df593d706d47dd504134583e42c3fead7e832cfb26b09f79802cc321691e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 我想让 Agent 自己跑：从任务入口到可检查的产物。
+    language: zh-Hans
+    source_fingerprint: sha256:5eff88a6cd6f94114cff362011c61197fa63a1cffb24cbb3d3397bb3ecd288d6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 明确的任务目标与相关上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:36d0a6dbfbf1a51f0bea20b7b6d0a400c3444876de400a487f5fb238d7ae59a7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 整夜继续运行
+    language: zh-CN
+    source_fingerprint: sha256:5484814c8c89a8a6ac2b429510fda05a857447a0dffb9ff6dacb558a46545610
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 推进直到完成
+    language: zh-CN
+    source_fingerprint: sha256:2fe1861564b01558c93abeab6844586cfc5fb8b036fdfa6081220630dd71c655
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 满足完成判定条件且附有审计记录的结果
+    language: zh-CN
+    source_fingerprint: sha256:5174fa27ac02fab31bb43461b09b671090fa0f29b6ed43964889d857a6d5602d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 推荐路径
+    language: zh-Hans
+    source_fingerprint: sha256:681b5a71924b035a2d9d819ac7dfd999ed39784b7158c3005f3cc2b35561e4b1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 选择自治入口
+    language: zh-Hans
+    source_fingerprint: sha256:5b5051947d6e4edc674d66c55858e79f6573c70e514900c34f7669cf24ee222d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: pstack 的总路由器与工作风格入口。 单一任务无人值守推进到固定 exit predicate。
+    language: zh-Hans
+    source_fingerprint: sha256:19865c8dafc4da621b788cb82d5ad6796bbd4304ca4c4c8494b3431426beb205
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 保留决策依据
+    language: zh-Hans
+    source_fingerprint: sha256:40df312452d2f3a6c05ee5a0059286864873d537f4c6dbcf7e6cba2f5926733e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 把长时间 Agent 活动压缩成可审计 decision trail。
+    language: zh-Hans
+    source_fingerprint: sha256:c075851a2a14366cec7d46f0bea6d4abae1b0180514f98b82a2f1a0d30f3abd1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 准备 PR
+    language: zh-Hans
+    source_fingerprint: sha256:0d1d2d4509e66b0422b597aa638bb0fb3c3de32b9a8acd76f94546412ab7fd5d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 把已验证 diff 整理成可审阅 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:ce3f27eb8d2f1aad9217a15b572dc6b1e272996b81a4c9026349f87670b69108
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 审查与发布
+    language: zh-Hans
+    source_fingerprint: sha256:c0f8fbb041d5d364686625ee8e0c8717a33c93d6d9b7cf05a2d35b9fd6ade474
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    language: zh-Hans
+    source_fingerprint: sha256:bd068aa7988b772fa1616851d9013c984b629f87902993d3de5481844a1bac60
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 需要推进发布且已获得相应授权时。
+    language: zh-Hans
+    source_fingerprint: sha256:0da414e17886322d0872c03215bce261ba02f53e9a978c758a23e34a676fd4a6
+    review_status: reviewed
+    reviewed_at: 2026-10-13

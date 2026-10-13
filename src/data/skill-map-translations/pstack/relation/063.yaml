@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["refactoring","governed_by","principle-minimize-reader-load"]'
+provenance:
+  original_sha256: 813ad038e4bf4dbea4cdaded11afb82f58af9c6400d4a676fb18aaaf0780ec62
+  retained_at: 2026-10-13
+units: []

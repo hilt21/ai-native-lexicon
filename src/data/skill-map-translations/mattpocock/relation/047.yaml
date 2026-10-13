@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["to-questionnaire","feeds","grill-with-docs"]'
+provenance:
+  original_sha256: 7e03b62d7dc7b6e7ee90deb8e4716de1671e6bfcf4b8bbd439ca6cab8d641ad3
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 取得外部回答后，用户可选择继续设计讨论；问卷不是自动发送或自动启动讨论。
+    language: zh-Hans
+    source_fingerprint: sha256:17e6f94d65927ce5eaaa50cbb32ad8fe2a04dd29071cc57a63833d5694378ebe
+    review_status: reviewed
+    reviewed_at: 2026-10-13

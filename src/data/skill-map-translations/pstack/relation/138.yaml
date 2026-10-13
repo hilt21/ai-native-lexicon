@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["multi-phase-plan","governed_by","principle-encode-lessons-in-structure"]'
+provenance:
+  original_sha256: e98720f90c0fc8af7dedec43065e2cdfc9245a2712cda5b6b68cfaa83e5e9713
+  retained_at: 2026-10-13
+units: []

@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 负责必要执行保证的最小确定性核心，将快速变化的判断交给可替换的智能体策略。
     source_fingerprint: sha256:4fd8b28c99114f60ef6da6aceb98f4f1d689fda510d6ccaf8134f516c2b78af7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 薄内核仅在可信代码中保留权限、状态转换、工具调用、审计记录和取消等长期机制。规划策略、提示和领域启发式方法留在内核之外，使其可演进而不削弱核心保证。
     source_fingerprint: sha256:36cc5aabfd247b5dd94012e9e83428eadf0b4495c78aee2c3711d8e60b5af34a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: AI 行为快速变化，但授权与执行不变量应保持稳定。小型可信核心更容易测试、审计和迁移。
     source_fingerprint: sha256:ff5d4b5d65fca655d4946a6994a80efb4c6523865b43dd835528498bfba0c758
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 构建智能体运行时、编排平台或具有安全要求的工具层时使用。
     source_fingerprint: sha256:876bf97efffae1c9540394a8212879b1b4b2f248c2a8da4856c1b652d1abc00b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 将所有工作流规则嵌入运行时，导致策略变更需要有风险的内核修改。
     source_fingerprint: sha256:e96057baf840753a5a78a6988dac7089c7664bc07944eb893874f4a64dade190
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

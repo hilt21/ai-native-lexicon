@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["opening-a-pr","feeds","babysit"]'
+provenance:
+  original_sha256: 36698c7721acd7929ff3fd5b14052a0b9e9abb739cf34bde8d704059ad1d6ffb
+  retained_at: 2026-10-13
+units: []

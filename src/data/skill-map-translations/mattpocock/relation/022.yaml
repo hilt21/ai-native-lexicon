@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["improve-codebase-architecture","uses","codebase-design"]'
+provenance:
+  original_sha256: 82dcadabc49726936fb5f45a616a33a0fc87b6d9b8433eb997a12e4e622723ec
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+    language: zh-Hans
+    source_fingerprint: sha256:81e5db4c2dcf651150d08b6f406ce4aa04314acb3d57ac56713d179b138dc006
+    review_status: reviewed
+    reviewed_at: 2026-10-13

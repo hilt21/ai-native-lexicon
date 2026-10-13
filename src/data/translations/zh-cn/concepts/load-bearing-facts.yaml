@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 丢失、失真或移位后，会实质改变 AI 系统下一步行动正确性或安全性的事实。
     source_fingerprint: sha256:de63207a0d7fcb8d07ac5ec5ea17d5926a256ae2adaefe2ef1d93d01280d7b2a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 承重事实是工作流在摘要、检索和交接过程中必须保留的少量上下文。例如用户的实际目标、不可逆约束、授权状态、标识符和已验证的外部条件。
     source_fingerprint: sha256:16d940e9af759dfca51ce1bf031d79cb48c56ff9618c74ceda1c1b540d226f2e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 长工作流自然会压缩和转换上下文。明确必须保留的事实可形成可测试的保留要求，减少对通用摘要的盲目信任。
     source_fingerprint: sha256:6bd4f93b1e3a3da2b99508571f5948cd5697746f9d56f8b41acf51e919ec0cad
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于摘要、委派、检查点保存或任何可能丢弃工作上下文的转换之前。
     source_fingerprint: sha256:9158742c8e2459242d8d13942f4f36e8536a757f7a7273d5e39f938a7a0251d7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 认为所有历史消息同样重要，并假定流畅摘要保留了每项约束。
     source_fingerprint: sha256:ca877cd80e6ed4f8e85564f3eb2842da771f4fe4a1815938e24b6a018faa86f7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

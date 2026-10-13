@@ -6,54 +6,66 @@ units:
   - path: summary
     translation: 规定允许或必须行为的具体条件规则及更广泛管理决策。
     source_fingerprint: sha256:90c8d6e7ac27b52f63118a122e9c92be391809f092549b87114a373f5f714f8b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 需要对允许或必需行为作出一致决策的系统。
     source_fingerprint: sha256:d5f55ec785752ea9b69eb7433723ef000e28d9c487aff4e99667a5b1369a67b9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 使可重复决策能够执行约束，并让例外可见。
     source_fingerprint: sha256:f14f0f8e7895861e29cf8efaab0eb69413c1c92101dffa891c5917a253b7fddc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 指令可能混合目标与数据；规则和策略则专门管理行为。
     source_fingerprint: sha256:65e2da1a34e49e8b3260ebd9990595d48d403b1c08ae3a1299ed599f50358b7e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 条件 → 策略 → 允许操作
     source_fingerprint: sha256:8dc54cbf420e52e68e937e6dd7be85c4100b14b676fc912dbbfe049c0d34f49e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 发布策略要求报告公开前获得批准；提交时的规则检查批准记录。
     source_fingerprint: sha256:002f9756ccabbc75e8ad84f39b58751f33862d4c5484de3107bd64490d48acc7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 规则
       - 策略
     source_fingerprint: sha256:5462ad42c25d7752d032d4106cc758dbd68c1b1f8e6b24f4c672d9b02786b3b3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 规定具体情况的明确条件及应产生的后果。
       - 跨情况决定哪些行为允许、必须或优先的管理决策或原则集合。
     source_fingerprint: sha256:7905a7086ea0f805212421ae1853c7e9a6164880df0001eeb4c941050977e114
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 将硬性禁止与偏好分开。
       - 模型生成的策略解释不能替代执行约束规则。
     source_fingerprint: sha256:03f64b1566531be3e86d47d695aa07ebc856f6bc8f67159c5e04ab3625d275ba
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 可形式化决策应由代码或策略引擎负责，并明确处理需要人工判断的情况。
     source_fingerprint: sha256:db9104ba564979765db8007659f6c667ca1616de12d77716d54c59c5930d2a9d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 需要对允许或必需行为作出一致决策的系统。
     source_fingerprint: sha256:5b8027a5fcf702f9365b5a521f4ca26caacbc1cbd28fc68edf9e15fe7207bc62
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 可重复行为需要明确管理决策，使等效情况不依赖偶然的模型解释。
     source_fingerprint: sha256:d3d6ef752246f2328fd8a828c09021e8aa55dbfbcc65d8cf9cac469e72aaac66
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

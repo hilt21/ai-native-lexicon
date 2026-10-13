@@ -1,0 +1,117 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: understand-system
+provenance:
+  original_sha256: 9bbff0e3fe1b4cb3fd6b3ceb486c05a240964afe5e0d6481ed040219bb0116b5
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想先看懂系统
+    language: zh-Hans
+    source_fingerprint: sha256:94756942e2111100a251189cb354f5ca2059f825cacc352d04766bbb8a5c54b8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 我想先看懂系统：从任务入口到可检查的产物。
+    language: zh-Hans
+    source_fingerprint: sha256:2e85bb8246e0e4c4ee17bd160c3d6ea2b44da22885afce8ff293fee780483d7b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 明确的任务目标与相关上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:34fa7962523331c8387fdb77b56216deb4412166b1d7fadd3041380e144ece63
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: X 如何工作？
+    language: zh-CN
+    source_fingerprint: sha256:49422738e6fe65dea2427eb0cd6b775b057fd737b41701651cd46943d45e1522
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 为什么这样设计？
+    language: zh-CN
+    source_fingerprint: sha256:93c565001c4867099330ded35950f7244b5ffca87cb939b1f6418fc01659c0e4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 向我介绍 X 的最新情况。
+    language: zh-CN
+    source_fingerprint: sha256:485e5d382859d5fe42c5a35b9c4d2f589218c23efe03cf67d8a9170a33037550
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 有证据支撑的心智模型或解释
+    language: zh-CN
+    source_fingerprint: sha256:b19ca02c09fe2947b8750f1d6a58a949f017fabdb1a5377f6748cdab3df2b8df
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 推荐路径
+    language: zh-Hans
+    source_fingerprint: sha256:9041808ccd4fc53c8450368183e6ea0332c3a2ccc2e1310f36859a5216199460
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 选择理解入口
+    language: zh-Hans
+    source_fingerprint: sha256:a94cba12c5dfd250f5ffc1e3fdd736d30e4bc9a5e0c66c2a76d850be7418b233
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 帮助用户理解 pstack，并选择正确入口。 pstack 的总路由器与工作风格入口。 只读调查，输出带证据的解释或建议。
+    language: zh-Hans
+    source_fingerprint: sha256:f408e19f88620813deef5c3986ecfc82622f588ea6dcb37ac7b9a4275dfa1922
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 理解行为
+    language: zh-Hans
+    source_fingerprint: sha256:2556c2a6c0bc4663b9ced12bb582a0d19496b2113b6a50a4a25b2040daeb7135
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 建立系统如何工作的 mental model。
+    language: zh-Hans
+    source_fingerprint: sha256:e135568e4083bc690c74b60ca6805cd3091dd6078a12178b1e71f5b1a34b6f9f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 查明设计理由
+    language: zh-Hans
+    source_fingerprint: sha256:7b162852a76706ece0def0c2c48723044d9a628a3f4c7aee42d126e185c93ba8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 解释系统为什么变成现在这样，并给出证据。
+    language: zh-Hans
+    source_fingerprint: sha256:a3305e7c08eb2925a1c8a1c1fdd3074704eb5cb28160a8f67f4936698eb46903
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 需要追溯设计动机时。
+    language: zh-Hans
+    source_fingerprint: sha256:197a25c17eb3c1348a838f43b08e40f3aab668d155d868d8e94d48c0d9af6c7d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 组织解释
+    language: zh-Hans
+    source_fingerprint: sha256:9b1bce4b00baadbb22443867c2d204817d69ffdc78638a23fdf49daa98521e0d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 把 how 与 why 的结果组织成人真正能理解的解释。
+    language: zh-Hans
+    source_fingerprint: sha256:297dd94c8a438d3987b84a91c9fad155cb9d038ccff25cd81aa2de77d0474f03
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 需要面向他人讲解时。
+    language: zh-Hans
+    source_fingerprint: sha256:625d70080173cac70fdb3e2d9d0bc6112b9bf1d858bce7ccd0bde0bb22ffa21e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

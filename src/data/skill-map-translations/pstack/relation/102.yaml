@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autonomous-run","governed_by","principle-prove-it-works"]'
+provenance:
+  original_sha256: 05c6643a2fbdc373aadf80bde0497ebb0a07e96ac04e108bde782afa1d6283c6
+  retained_at: 2026-10-13
+units: []

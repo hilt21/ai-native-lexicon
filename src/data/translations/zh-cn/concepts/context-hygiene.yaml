@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 持续移除、纠正和分离 AI 工作流中过时、重复、不可信或无关的信息。
     source_fingerprint: sha256:2acc3a85c6849f186a63df1edc0df0da67fff34a0bee2f453f7f279bce6c8829
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 上下文卫生是让活动上下文准确且服务于目标的操作纪律。它包括标记不可信输入、使过时状态失效、去除重复证据、区分观察与指令，以及在外部变化后更新假设。
     source_fingerprint: sha256:4c0a43b12a8d610ff8d26bf5c77bfdfba43447b469b07fca8dcabe66e14637bd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 即使未达到令牌限制，上下文质量也会随时间下降。持续维护可防止旧计划和受污染证据悄然影响新决策。
     source_fingerprint: sha256:bec58ff8a679f7d63f1c50709101b0232393c4b588a7f94a602ad83859e53562
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于持久智能体、协作会话、变化环境，以及纳入外部文字的工作流。
     source_fingerprint: sha256:f160da4d58e7d3cd839e405000d2e4af7bf0ff7ce850bee63c9796b8ba2cb9a5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 无限追加每个观察结果，并依赖模型自行解决矛盾。
     source_fingerprint: sha256:ec0fd0b558004283fb0d0385709195a8f2c9d9eda45ffbe08d3417438d7ed2bc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

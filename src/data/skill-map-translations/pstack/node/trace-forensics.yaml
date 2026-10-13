@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: trace-forensics
+provenance:
+  original_sha256: d04c5f5c1f0ff960d72d2cf63c9cdfe85a1a2a08a1ff690aa558029f151ede6f
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: trace-forensics
+    language: en
+    source_fingerprint: sha256:2f416f885c8e89be628275780da4c425a4571d26deed019d352ccaabe1567e3c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 对已有 trace/heap/profile 做离线取证。
+    language: zh-Hans
+    source_fingerprint: sha256:959e1cf6a4415d2cbe3b2b638bb2519e5c650d5356d988542bd35e8e41971573
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 只读
+    language: zh-CN
+    source_fingerprint: sha256:226f2ef310c9d6c473935c94a0e48da2ca7e5c76c3e5fa99104459cf9af292f3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 取证
+    language: zh-CN
+    source_fingerprint: sha256:5fddd58f3aa1975f64d159ee3797e0d8cf69163a733e4ec57ca422677faad6c3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 追踪产物
+    language: zh-CN
+    source_fingerprint: sha256:af24c8cf23f785568dd293f9097a99582fe78d2fda727247aec7b72027f19610
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 缩小范围后的发现
+    language: zh-CN
+    source_fingerprint: sha256:33b4c7c0c8dc9018f572804e88bfa998cbf96a76d349159cc273c6e11d60a840
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 源码位置
+    language: zh-CN
+    source_fingerprint: sha256:b1cde65c81c33d0c17664feb48f497deda9289fba165ad3191bf694e9acc2cef
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 置信程度
+    language: zh-CN
+    source_fingerprint: sha256:cf76edc87af48591923e3359135228132dd8921730cae95ef1bdf3bb27b202d2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 产物引用
+    language: zh-CN
+    source_fingerprint: sha256:2eb6188469a42f3de0ecbc62a3d6130b284d92ac1f2cffeb4c4a11690891c7a2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 识别格式 → 转成 queryable form → 找 hot path/retainer/wait reason → source mapping → paired diff。
+    language: zh-Hans
+    source_fingerprint: sha256:932f294ca4367ea4d3bbd787a8ec71136488d829becc8b6c1c2550041e9af070
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 已经有 trace、heapsnapshot、cpuprofile 或 spindump
+    language: zh-Hans
+    source_fingerprint: sha256:a3d1b2bc24f50c32a81a5f72b2e27db66ac2ba8ab0fcdbadf0eb7e77dd778bf3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 大 artifact 直接肉眼阅读
+    language: zh-Hans
+    source_fingerprint: sha256:efd234715cfe672f6d901a98404650ba860c3ac4321bb0fb8dab7e30ed0f4fee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 无 source attribution 的模糊结论
+    language: zh-Hans
+    source_fingerprint: sha256:672fee0b51cad8d5ac6b2013ca1f232bf031b866f63219610a0511cadbf64e7d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

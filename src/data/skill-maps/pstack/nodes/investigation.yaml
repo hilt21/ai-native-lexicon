@@ -1,30 +1,24 @@
 title: investigation
-summary: 只读调查，输出带证据的解释或建议。
+summary: Investigate read-only and provide evidence-backed explanations or recommendations.
 type: playbook
-status: active
 layer: playbook
 primary_cluster: understanding-context
 secondary_clusters: []
 tags: []
-mechanism: 路由 how，动机问题再加 why；不改代码；用 unslop 收尾。
-when_to_use:
-- 需要理解系统
-- 需要技术建议但不要求改代码
-solves:
-- 避免把调查和实现混在一起
 inputs:
-- question
-- repository/evidence sources
+  - question
+  - repository/evidence sources
 outputs:
-- cited explanation
-- recommendation
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/poteto-mode/playbooks/investigation.md
+  - cited explanation
+  - recommendation
 handoffs: []
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/investigation.md
+status: active
+mechanism: Route to how, add why for motivation, keep code unchanged and finish with unslop.
+when_to_use:
+  - Understand a system.
+  - Obtain technical advice without code changes.
+solves:
+  - Keep investigation distinct from implementation.

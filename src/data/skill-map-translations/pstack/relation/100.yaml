@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autonomous-run","governed_by","principle-never-block-on-the-human"]'
+provenance:
+  original_sha256: 4afba249ce40080f9b0c6b2f08cc265547d032e86aebc03621e5bea1fc5b9f59
+  retained_at: 2026-10-13
+units: []

@@ -3,12 +3,12 @@ import { fileURLToPath } from 'node:url';
 import { readCatalog, validateCatalog } from '../domain/content/catalog.mjs';
 
 /** Shared catalog validation is the publication boundary for Astro and the CLI. */
-export function translationsLoader(directory = new URL('../data/', import.meta.url)) {
+export function translationsLoader(directory = new URL('../data/', import.meta.url), collection = 'translations') {
   const root = resolve(directory instanceof URL ? fileURLToPath(directory) : directory).replaceAll('\\', '/');
   let stopWatching;
   let generation = 0;
   return {
-    name:'translations-yaml-loader',
+    name:`${collection}-yaml-loader`,
     async load(context) {
       stopWatching?.();
       const current = ++generation;
@@ -16,7 +16,7 @@ export function translationsLoader(directory = new URL('../data/', import.meta.u
         const catalog = await readCatalog(directory);
         const {errors} = validateCatalog(catalog);
         if (errors.length) throw new Error(errors.join('\n'));
-        const parsed = await Promise.all(catalog.translations.map(async (record) => {
+        const parsed = await Promise.all(catalog[collection].map(async (record) => {
           const data = await context.parseData(record);
           return {id:record.id,data,digest:context.generateDigest(data)};
         }));

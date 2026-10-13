@@ -1,36 +1,28 @@
 title: bug-fix
-summary: 科学式 bug 修复。
+summary: Fix bugs through reproducible, evidence-based investigation.
 type: playbook
-status: active
 layer: playbook
 primary_cluster: implementation-quality
 secondary_clusters: []
 tags: []
-mechanism: 真实 surface 复现 → how/why 形成假设 → 二分排除 → 证明 mechanism → architect/tdd → 最小修复
-  → 同 surface 验证 → PR。
-when_to_use:
-- 明确 bug/回归
-- 可以构造 repro
-solves:
-- 猜测式 patch
-- tests green 但真实 bug 未消失
 inputs:
-- bug report
-- repro
-- affected subsystem
+  - bug report
+  - repro
+  - affected subsystem
 outputs:
-- root cause
-- minimal fix
-- failing-before/passing-after evidence
-- PR
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/poteto-mode/playbooks/bug-fix.md
+  - root cause
+  - minimal fix
+  - failing-before/passing-after evidence
+  - PR
 handoffs: []
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/bug-fix.md
+status: active
+mechanism: Reproduce on the actual surface, use how and why to form hypotheses, narrow alternatives, prove the mechanism, use architect or tdd where appropriate, apply a minimal fix, verify on the same surface and prepare the PR.
+when_to_use:
+  - A specific bug or regression needs fixing.
+  - A reproduction can be constructed.
+solves:
+  - Replace speculative patches with evidence.
+  - Verify the actual bug rather than relying only on green tests.

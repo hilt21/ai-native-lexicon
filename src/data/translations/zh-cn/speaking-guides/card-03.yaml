@@ -1,0 +1,52 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-03
+units:
+  - path: title
+    translation: 智能体由什么构成？
+    source_fingerprint: sha256:acc9c06eb94cf75e2126e9ca8f52fd77d6cd473e97385776982403adde27fa3e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 智能体将智能与上下文、工具、记忆和边界结合起来。
+    source_fingerprint: sha256:7b73a8c9d7a9756e01a875eb0e777213f4bca9ad9a275daf3cdf066767ee9fe7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你认为这五个要素中，哪一个在企业里最难做好？
+    source_fingerprint: sha256:f35063f4c7b2ea115546f89108be020c7bfcb97828e40230bdda3f092b407ff7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:515ee7415dc86474eccb9e299846696ff0851c42be4cf473e3313090c5aced81
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 但具备这些能力仍不保证行为可靠。这时，运行框架就很重要。
+    source_fingerprint: sha256:b451855483076566050fd23c4db7ff80b90122b30524fe1fdbcee27bdbe2bfe0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 模型为智能体提供智能。
+      - 上下文告诉智能体正在发生什么。
+      - 工具让智能体能够与外部世界交互。
+      - 记忆帮助它长期保留有用信息。
+      - 护栏规定智能体允许做什么。
+    source_fingerprint: sha256:b724833d70c19a1d10ffda3c98f131ed0fc20af35e550973c7c9b0ce0389dc15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设有一个帮助处理客户请求的智能体。
+      - 语言模型可以理解请求。
+      - 上下文为它提供客户和产品信息。
+      - 工具让它可以搜索数据库或创建工单。
+      - 记忆可以保留之前的交互。
+      - 护栏可以要求某些操作先获得人工批准。
+      - 这些部分共同将语言模型变为一个可工作的系统。
+    source_fingerprint: sha256:571410513b8bedea57026215be69ca18b499ed6ccc839cd1b6e7e0f5f4b56f03
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: teach
+provenance:
+  original_sha256: 23e48516e28f5e00cf3147e77716f016ec894bd36b4498d4d59fd53f3e7c88b3
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: teach
+    language: en
+    source_fingerprint: sha256:de9c54aa163bbe6571f0da1e72325ab79647092f50514c79fe63b57c0173771e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把 how 与 why 的结果组织成人真正能理解的解释。
+    language: zh-Hans
+    source_fingerprint: sha256:7d9fd75b0263420f00d9ab0609e687dc8686111c0da53eb30d0c8c8d0d4aa79e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 教育
+    language: zh-CN
+    source_fingerprint: sha256:b0db864ca1377c0f99294e2646872e68ef20576cf1542e0532f741712b3eb80b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 心智模型
+    language: zh-CN
+    source_fingerprint: sha256:d0eefc4e0d29c515d8f0dc9058dd620a39d55b52baae99451d4c2d9351257332
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 主题
+    language: zh-CN
+    source_fingerprint: sha256:f3c1a6f04231b2e025bf9b675747199ab32ca06915bc3013bccd915f6a1bf9b0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 学习者问题
+    language: zh-CN
+    source_fingerprint: sha256:07ca34543bb4d31d6aeca4f95408425a3be32e7c76964ebe3b24709f18840cd7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 教学叙述
+    language: zh-CN
+    source_fingerprint: sha256:610efbdbfa7910e0f4d037a199041821b5cf647dbce2aa4c64a69e11dcce8325
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 心智模型
+    language: zh-CN
+    source_fingerprint: sha256:bd16268e0f06030f9a66e003d66ca1324be674f99f3369699baf55ef857888de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 关键概念
+    language: zh-CN
+    source_fingerprint: sha256:558a95121d445d3d71c7bc96d5629397c7c3b7ade96faa0ac95b8b401fde7ecc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Explain a body of work plainly so a person actually understands it. Runs the `how` and `why` skills and weaves what they find into one clear explanation. Use for 'teach me this', 'help me really understand X', 'explain this change or subsystem to me'.
+    language: en
+    source_fingerprint: sha256:bf3333411fe731cb926a6749f9a40409162aca717842e84b7b95b87fa2ee3326
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先调查系统工作机制与设计动机，再按学习者已有知识重组概念、机制和例子。
+    language: zh-Hans
+    source_fingerprint: sha256:c0b2702006428a1c5a3dbc41da1f31ac04397bbb664e172e1d042b4b1b7bffdb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 用户想真正理解 subsystem/change
+    language: zh-Hans
+    source_fingerprint: sha256:30494ebebf465adf0e32bc012f40f102847c63830a77ec4d652125f561409cf7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要 onboarding explanation
+    language: zh-Hans
+    source_fingerprint: sha256:0968bd70db1538dff863926a79141ca76cff49547ce82781c728f7169567b666
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低技术理解成本
+    language: zh-Hans
+    source_fingerprint: sha256:337f328fa80e4692ac4fe0b851167b3ee9ad1115065efa9a20ddf563d18a5632
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把碎片化代码知识变成 mental model
+    language: zh-Hans
+    source_fingerprint: sha256:6d3f2a7467bce85c3ee9b1cd2adf4508d6a75f926793c892146cf78fc661be74
+    review_status: reviewed
+    reviewed_at: 2026-10-13

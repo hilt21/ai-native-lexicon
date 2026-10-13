@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-12
+units:
+  - path: title
+    translation: AI 评估
+    source_fingerprint: sha256:a781842f65f11343cb353be34d563fad77497c9b445197101941b225f1c1da6f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 我们应把 AI 当作系统来评估，而不是依据一次令人印象深刻的演示。
+    source_fingerprint: sha256:77f79f3188f0c97cfcfc7914376c5fc856840bdeef858fe0ab05ee66f5ba7bfe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你会如何判断一个 AI 用例是否足以投入生产？
+    source_fingerprint: sha256:f4fb49141fce418eda5e846c93c1392c3918acac0e29cb6a014e07c7c1313fca
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:59e928b07fb0df0c0abcf869dbb7b6e9fb55c908d7fdd764c393fe5fbc05b682
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 在评估 AI 方案之前，我们首先需要选择正确的问题。
+    source_fingerprint: sha256:f27a1e64866ca0d310d0f63f3c74ac60961338e0f5c2819162e519a0154c505d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 好的演示证明可能性。
+      - 生产环境要求表现一致。
+      - 我们应衡量质量、可靠性、成本和故障模式。
+      - 我们应测试正常案例和困难案例。
+      - 部署之后也应继续评估。
+    source_fingerprint: sha256:b8e9ed84ddaca2e7b9ef69e80fa3c0eb237fdf82f55902e83afd2994dd17ebfb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - AI 助手可能在演示中完美地总结一份文档。
+      - 但在生产环境中，它可能需要总结来自不同部门的数千份文档。
+      - 其中一些可能不完整、过时或相互矛盾。
+      - 重要的问题是：系统在各种真实情境中的整体表现如何？
+    source_fingerprint: sha256:c5429ff622301c3ccb05cbb0774d48ffa6738b63657b266f52bb6d6f5e8fe2b1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

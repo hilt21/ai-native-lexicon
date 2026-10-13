@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 帮助多个智能体避免相互妨碍。
     source_fingerprint: sha256:deaa107737f1f70b0e7f5a10c2ce2fc438ea00ae73a4be6cbf9d2e2136a23f13
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 协调通过责任归属、依赖、沟通和冲突解决规则使行动主体保持一致。它可以集中或分布式实施；编排是在这一更广泛问题中组织控制流的一种方法。
     source_fingerprint: sha256:95224d80811a26a83705589af39de53cd005d03e1c436d38e69e76ee29751d4f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 若缺少交互管理，多个有能力的工作者仍可能重复劳动或破坏共享输出。
     source_fingerprint: sha256:c45c93e48d427e79caf22061442b15e1388d53056699fd6c6f79ed5ec2893103
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 多个智能体贡献独立变更，并需组合成一致最终结果时使用。
     source_fingerprint: sha256:6aa07df9f98f719fe4861f284089426dff0965f36ea10e5b27099da2fae7458c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 启动并行工作者，却未规定写入边界或集成责任。
     source_fingerprint: sha256:f126516a968e816178e4cb354217ef377a149e7072791b92e38d40dd7b501db8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

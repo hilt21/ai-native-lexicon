@@ -1,0 +1,141 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: create-verification-skill
+provenance:
+  original_sha256: 35f7aba2b68f2bfb8b5ed5b3cfcdcbe500e5db6cf4a0e2967d268b8c55285fc3
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: create-verification-skill
+    language: en
+    source_fingerprint: sha256:51d56b007e9566ffd2eeeebf341ab083119ae452f50f5f52878716bab1c10fde
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 为项目建立可复用的真实产品验证接口。
+    language: zh-Hans
+    source_fingerprint: sha256:c147d435a65c1b131f5bbb158596355fa80986ce9c528843fa4a6502e8ceb2d0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 验证
+    language: zh-CN
+    source_fingerprint: sha256:381de0b0be2ccb038479989cd28d7c1b9f7aaacee513cd71f23d6ecc29388982
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 功能地图
+    language: zh-CN
+    source_fingerprint: sha256:189d959aa2e6e25a0bc0a4d432a35b127895f56747214019b142a0bfcd15a1df
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 证据
+    language: zh-CN
+    source_fingerprint: sha256:13a324280c70c4e2d3706f36bad15951dbdbdf83f1de87f49613d820f7023c2d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.3
+    translation: 核心
+    language: zh-CN
+    source_fingerprint: sha256:fdcc61cd9e061afcd4a0b44b68dbaa927da4d18837de120ced87480c46235c11
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 仓库
+    language: zh-CN
+    source_fingerprint: sha256:e949b677ca5b61d59aff94107b8f485ede9bb2667119adba8eedd3530ceec7b6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 应用场景
+    language: zh-CN
+    source_fingerprint: sha256:9cf7ce5b5a2cc68dcc088ea4c93379b96f76ed7cce1aaa7958b5f844a4c88d12
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 运行命令
+    language: zh-CN
+    source_fingerprint: sha256:1fadf904b1dec2938ce932c47879a5948ae1a1e95631004d72c4d0c229f61b21
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.3
+    translation: 可观察结果
+    language: zh-CN
+    source_fingerprint: sha256:9f871fbdc56bfafe3a114feae464698cd28213900fc7ff92c69f6ede3042d54c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 项目内的验证技能
+    language: zh-CN
+    source_fingerprint: sha256:c46ae1a3519f486bc46aeaca69ee80ae8e342ae86c20faf6561e704afa8564f4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 功能地图
+    language: zh-CN
+    source_fingerprint: sha256:bcb8b9c8d4e5146f63b485941dcc7a4320456a49a83e7865c3800547a1510cca
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 控制工作流
+    language: zh-CN
+    source_fingerprint: sha256:be0cc7207a027bf6f90f45c52cbc8779442846fedd96a8f8a0c5fb0345b4e44b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 首次验证证据
+    language: zh-CN
+    source_fingerprint: sha256:a5be28af190bcd62c3b4c7c2a0b795e96ed5ebc0c0f7333347806f5d792c136c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Generate a project-local verification skill that drives your app the way a user does — any language, framework, or platform. Use for /create-verification-skill, "make a control skill for this repo", or when a project has no scripted way to prove UI/CLI/service behavior.
+    language: en
+    source_fingerprint: sha256:b35d46be14cc0010737f2a1f145d7f4bd076e957749d7ebfd5ca8cd4caf8eb31
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 调查 Surface / Run / Drive / Observe / Isolate，生成 Launch、Doctor、Drive、Evidence、Cleanup 和 Feature Map，并实际跑通一次。
+    language: zh-Hans
+    source_fingerprint: sha256:c66f017180a1aa73eb1d319d81f54695ffea44a88c9bea3bc5d2791e8864c8e1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 项目没有 scripted real-surface verification
+    language: zh-Hans
+    source_fingerprint: sha256:93bc88e4df9bc6e04d074d6c61441969f22093e5dd4aa1b891757565916adbdc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: Agent 只能靠测试或自报 done
+    language: zh-Hans
+    source_fingerprint: sha256:91eaa3f96468e7a2fca3d1bbd16ff6b75773a3a299a39926b1226d0f58ed9f06
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 想建立长期验证基础设施
+    language: zh-Hans
+    source_fingerprint: sha256:a3c767acf38eb4e1947a52a0e0909778d1138bb961422d432407728d9c08d3fc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 验证瓶颈
+    language: zh-CN
+    source_fingerprint: sha256:cc83ca0af5b2793d9bb90344a454744fb7c6f5f09f8c8ccc25d09d710746e9e2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 真实结果不可直接观察
+    language: zh-Hans
+    source_fingerprint: sha256:f0ced7151309484421b0fbe151f8b21df213cc6e255532cfde52482363314403
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.2
+    translation: 每次验证都要重新摸索
+    language: zh-Hans
+    source_fingerprint: sha256:1008e39456f9f862ef0970f2e0b0f05699e32323a6306e48440ccd49c5e5da9b
+    review_status: reviewed
+    reviewed_at: 2026-10-13

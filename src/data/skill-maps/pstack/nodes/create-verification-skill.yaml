@@ -1,48 +1,36 @@
 title: create-verification-skill
-summary: 为项目建立可复用的真实产品验证接口。
+summary: Build a reusable interface for verifying the real product.
 type: capability
-status: active
 layer: skill
 primary_cluster: verification-evidence
 secondary_clusters: []
 tags:
-- verification
-- feature-map
-- evidence
-- core
-mechanism: 调查 Surface / Run / Drive / Observe / Isolate，生成 Launch、Doctor、Drive、Evidence、Cleanup
-  和 Feature Map，并实际跑通一次。
-when_to_use:
-- 项目没有 scripted real-surface verification
-- Agent 只能靠测试或自报 done
-- 想建立长期验证基础设施
-solves:
-- verification bottleneck
-- 真实结果不可直接观察
-- 每次验证都要重新摸索
+  - verification
+  - feature-map
+  - evidence
+  - core
 inputs:
-- repository
-- application surface
-- run commands
-- observable outcomes
+  - repository
+  - application surface
+  - run commands
+  - observable outcomes
 outputs:
-- project-local verification skill
-- feature map
-- control workflow
-- first proof
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/create-verification-skill/SKILL.md
+  - project-local verification skill
+  - feature map
+  - control workflow
+  - first proof
 handoffs: []
-official_description: Generate a project-local verification skill that drives your
-  app the way a user does — any language, framework, or platform. Use for /create-verification-skill,
-  "make a control skill for this repo", or when a project has no scripted way to prove
-  UI/CLI/service behavior.
-text_languages:
-  mechanism: zh-Hans
-  solves.1: zh-Hans
-  solves.2: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/create-verification-skill/SKILL.md
+official_description: Generate a project-local verification skill that drives your app the way a user does — any language, framework, or platform. Use for /create-verification-skill, "make a control skill for this repo", or when a project has no scripted way to prove UI/CLI/service behavior.
+status: active
+mechanism: Investigate Surface, Run, Drive, Observe and Isolate. Create Launch, Doctor, Drive, Evidence, Cleanup and Feature Map assets, then complete one real run.
+when_to_use:
+  - The project lacks scripted real-surface verification.
+  - The agent relies only on tests or self-reported completion.
+  - Establish durable verification infrastructure.
+solves:
+  - verification bottleneck
+  - Actual outcomes cannot be observed directly.
+  - Verification requires rediscovery every time.

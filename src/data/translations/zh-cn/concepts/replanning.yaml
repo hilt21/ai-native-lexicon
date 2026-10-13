@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 新事实改变任务条件时调整计划。
     source_fingerprint: sha256:2fb52acc22957d73d107af37befcf24fa9a884e9a22658d4659dd20077dee67b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 重新规划在新证据、失败或约束变化后，修订剩余行动及依赖。除非目标被明确改变，否则应保留已授权目标；重新规划不授予扩大范围的权限。
     source_fingerprint: sha256:cf8f35b98901b5f80ae29a96da353a6aeb8b87609b966d84d3942b522d472fd0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 可适应工作需要放弃无效假设，同时保留用户原始目标，并避免重复已完成步骤。
     source_fingerprint: sha256:a50dc0eec41b192bd61cf7917ab4701a376de0b1064fe890328a505836cc5d36
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 必要依赖不可用，但其他有依据的路径能够满足相同目标时使用。
     source_fingerprint: sha256:98d6e8cc60dd0c7fd9119ad9e78567e4f3c66c05077b4872af6da2a65591e448
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 证据已表明前提无法满足，仍重复过时计划。
     source_fingerprint: sha256:dd6a8637a4fc799659d238b690c4c9c53cda1120c805e27c6ed495e78275fe10
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

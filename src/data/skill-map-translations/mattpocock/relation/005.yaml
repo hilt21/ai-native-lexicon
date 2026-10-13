@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","to-tickets"]'
+provenance:
+  original_sha256: d2d963dd1512dbceb5987d115d681e714daac4843067cae2eed45473420e919d
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 已有 spec 且需要自包含执行票据时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:8a27c407f822bdad896820606c348c10987f8199ae9021350515760a6baf4d62
+    review_status: reviewed
+    reviewed_at: 2026-10-13

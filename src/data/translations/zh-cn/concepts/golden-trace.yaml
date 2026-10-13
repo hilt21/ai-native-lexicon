@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 精心策划的良好智能体运行全程记录，可用作审阅参考、回归用例或行为规格。
     source_fingerprint: sha256:19f54e2768ba1cbfb66017fb4027b60d8a0eff54d85b5556eaa94253acb39079
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 黄金轨迹记录代表性任务的相关观察、决策、工具调用、状态转换、证据和最终结果。它同时评估过程和答案，并允许明确标记的非确定性变化。
     source_fingerprint: sha256:8761fabe7ed20eff98b00ab0207f8c0f80b57475a0760b2dec2dd9fe30c359e9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 仅测最终输出会遗漏碰巧得出正确结果的不安全或浪费路径。追踪呈现结果形成过程，并为调试讨论提供依据。
     source_fingerprint: sha256:970facf428eb1b7f1dae9544458cd4a466778d0a9288ba9cebe8de543596197d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于关键工作流、事件复现、入门示例或智能体循环变更。
     source_fingerprint: sha256:8ffe256eea1eb890287ba71ccbfe3aa3b0c52d845c84c3c296f01438865b8576
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 过度固定偶然措辞或时间戳，使追踪拒绝无害变化。
     source_fingerprint: sha256:679ba60e61ab12378cbb8edc96920d84e24a1bbb6c70731470d03d1aaaa4c62d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

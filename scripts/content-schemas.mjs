@@ -3,12 +3,14 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { z } from 'zod';
 import { translationInputSchema } from '../src/domain/content/translation-input.mjs';
+import { skillMapTranslationInputSchema } from '../src/domain/content/skill-map-translations.mjs';
 import { conceptInputSchema } from '../src/domain/content/concept-input.mjs';
 import { primitiveInputSchema } from '../src/domain/content/primitive-input.mjs';
 import { speakingCardInputSchema } from '../src/domain/content/speaking-card-input.mjs';
 import { skillMapInputSchema, skillMapNodeInputSchema, skillMapJourneyInputSchema, skillMapRelationsInputSchema } from '../src/domain/content/skill-map-input.mjs';
 
 const contracts = {
+  'skill-map-translation': { schema: skillMapTranslationInputSchema, title: 'Skill Map prose translation' },
   translation: { schema: translationInputSchema, title: 'AI Native Lexicon translation overlay' },
   concept: { schema: conceptInputSchema, title: 'AI Native Lexicon concept' },
   primitive: { schema: primitiveInputSchema, title: 'AI Native Lexicon primitive' },

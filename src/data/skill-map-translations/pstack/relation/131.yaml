@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["multi-phase-plan","uses","technical-writing"]'
+provenance:
+  original_sha256: 6f13675e480316089a35fa0c5d20c08b3a9110947717a63ebae5e6295d4a36c3
+  retained_at: 2026-10-13
+units: []

@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-exhaust-the-design-space
+provenance:
+  original_sha256: 4d643dfc36192ea07ea94548b2c0f65c283617215a582adc6f64ef6263063371
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: exhaust-the-design-space
+    language: en
+    source_fingerprint: sha256:238aa2b25ba582438c7c446cb1c4ca1e6897c472432544a401575e0c1cff7fc4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 重要新设计先比较多个原型。
+    language: zh-Hans
+    source_fingerprint: sha256:69db5953b7487ed9d31f5582986e08ab11b44900153c7006a4cd159d5da4aef6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:a99603afa587649d272388b6753ff3a07b2c7c5843250c9a82da62df1e43941a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 新的设计决策
+    language: zh-CN
+    source_fingerprint: sha256:d032d39239daf1259479ee9033269ddb1dec1869eab72194a0f8cb9097b38323
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已比较的替代方案与选定方向
+    language: zh-CN
+    source_fingerprint: sha256:8a8f45b55f49d9dd3ada0ba845f99d1dcb47ec4ea880debadfd35caa12ee6180
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when facing a novel UI interaction or architectural decision with no precedent in the codebase. Build 2-3 competing prototypes and compare side by side before committing.
+    language: en
+    source_fingerprint: sha256:c9113caeac79829e593881dbdd6a3fdf87fbc9efe2fce4ab9fcf5eb6be982766
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 重要新设计先比较多个原型。
+    language: zh-Hans
+    source_fingerprint: sha256:42c0770cdca89d5f4bdb14dd7b7c039eeb5c1b0916b3dd4bd12d30c68034dc96
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 面对代码库中没有先例的新界面交互或架构决策时使用。在作出确定选择之前，构建 2–3 个相互竞争的原型，并并排比较。
+    language: zh-CN
+    source_fingerprint: sha256:64d4b7c81b9c425f6208e047449c086e7557d80fed6ecbf93e3ce64cc46c8633
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 重要新设计先比较多个原型。
+    language: zh-Hans
+    source_fingerprint: sha256:cdac0affdaf8eabb72cc8729258e041ea92a161ff252fa4ffa17c5cce2c27fd1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

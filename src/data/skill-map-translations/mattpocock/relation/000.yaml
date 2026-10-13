@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","setup-matt-pocock-skills"]'
+provenance:
+  original_sha256: db06a41cbad784e8e2a6b73b477354ab242809162d59b6ea61d68b58ea4275b3
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 首次工程流程且项目配置缺失时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:7fdfbb8c77aa562f85377ecda227a7b2ad20b39bddb83af302cb52b0a6f9d506
+    review_status: reviewed
+    reviewed_at: 2026-10-13

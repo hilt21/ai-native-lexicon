@@ -1,0 +1,111 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: automate-me
+provenance:
+  original_sha256: a6ce9725c5520db304075d58f132a96e26d9e7e744ee0db862b6b526a60ce199
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: automate-me
+    language: en
+    source_fingerprint: sha256:dff5b60e8f2f33f50251f9b5e1c4029f5bfa2ae3e55c3c04f29bfc772c23c263
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把稳定的个人工作偏好编码成可复用 mode skill。
+    language: zh-Hans
+    source_fingerprint: sha256:fcb879b5f58f47eb57347a7a779c0828d2480366d654c492899439c9386bb626
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 个性化
+    language: zh-CN
+    source_fingerprint: sha256:7958da3ca2fc52d29e7f11fd4b5b96d5a474bb76a1b3b2b26cdc2ef4f6ce6892
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 自动化
+    language: zh-CN
+    source_fingerprint: sha256:563d1710050eece58f5662f5e439b0ad66b3a1c0fdc9cf9ed06cf332f9f75b15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 记忆
+    language: zh-CN
+    source_fingerprint: sha256:cea625099b8dd6ce87ce602c16a69369f54ddea3d90d57a4d7c9bc06953b8063
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 用户偏好
+    language: zh-CN
+    source_fingerprint: sha256:c49ef92e710cbd288389aad8a2195de031843ee0af412818dd79c7bf478abf18
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 近期对话记录
+    language: zh-CN
+    source_fingerprint: sha256:1a99c53c49d371bc3c93b59b28d2e952d29aae78323b17b5f18f5006bec00947
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 现有模式技能
+    language: zh-CN
+    source_fingerprint: sha256:f9653c9b72be4da83bfa8a25be03ef86262fa88e93428e6e29b95011474052a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 个人模式技能
+    language: zh-CN
+    source_fingerprint: sha256:3c168b78063962b13677900836ca7261407882ceaa7c1a88c7e46712e2fa3e15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 更新后的工作风格规则
+    language: zh-CN
+    source_fingerprint: sha256:9330e5c0d5c98bfc334858cf63c324f1b7dc41106fa42e829687b78c432c0ced
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：future poteto-mode/custom mode
+    language: zh-Hans
+    source_fingerprint: sha256:790c46fc2d59c167fbcb2315de4fa3c174e64409d1ecac68110039b345167459
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Use for "automate me", "create/update/refresh my -mode skill", "turn/capture my preferences or working style into a skill", or wanting agents to follow how the user works. Drafts or revises a personal -mode skill via create-skill + unslop, optionally pulling fresh evidence from recent transcripts.
+    language: en
+    source_fingerprint: sha256:e69dca2ed619b4c42d6e91b21faa1f0bfcf04153a64625e02aff3aca8fefc6c7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 从近期工作历史提取稳定偏好，经 create-skill 和 unslop 形成个人 `<name>-mode`，后续 Agent 可直接继承。
+    language: zh-Hans
+    source_fingerprint: sha256:9fc1d155b1bfd93d85327294eb1b9a39aa186fd0afd8ea78041572db84dbeb33
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 希望 Agent 长期遵循个人工作方式
+    language: zh-Hans
+    source_fingerprint: sha256:e4895a13331446b66b802182d5c8973dfc9bf901a54e54540edc01e9848a2e70
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 重复表达相同偏好
+    language: zh-Hans
+    source_fingerprint: sha256:fb9cf77a3d2cc7f258d102b412f2a76407606584c563fd959d0dbf4f48c7baf8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少重复提示
+    language: zh-Hans
+    source_fingerprint: sha256:69a6d20e6ccfeab7a0a801cd89201892bdade00b825ac223332a3fd3af73be42
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把个人 workflow 外部化
+    language: zh-Hans
+    source_fingerprint: sha256:f06c1c15e78412419dab87e7fc774872875771a8a0be85c62603103869460f8c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

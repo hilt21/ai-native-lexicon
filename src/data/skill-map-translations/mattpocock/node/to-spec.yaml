@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: to-spec
+provenance:
+  original_sha256: ec9072714c7d5bceeebbcc84d31613b9412f53e4d7ee8960836b2735640b5416
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: to-spec
+    language: en
+    source_fingerprint: sha256:9c08400c431ac453d7dda0799438cebebd9d16fda7380ede3eb00839e97026ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把当前已经讨论清楚的内容压缩成可发布规格。
+    language: zh-Hans
+    source_fingerprint: sha256:f7e9edf6febc541f36d4e16a856e5c81604bbae7b5f0da4a331d04cb4fe9dbc9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:93ce7c877f280155e791c53a8ed10b95734618f8fa2ee48af9c004f58e5bdf3b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:cea6826b8e90a0f6482fcb2ffbeb1c3b14b2ba85ae696374503c52a767c753eb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:67581384c297f60e606beb391264c58fac050e73feb78245c4244bb8036041d9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前 conversation
+    language: zh-Hans
+    source_fingerprint: sha256:790728e8431002e5a3d8877d8a2a90d78b3b5b93f3bc3d2eaf5dabd47a6e126a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 项目 tracker 配置
+    language: zh-Hans
+    source_fingerprint: sha256:2784735bdfff2f3054a34d210cfce65b3d1df8747c4d02e4cab0201d60623ba5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已发布规格
+    language: zh-CN
+    source_fingerprint: sha256:e85f22e48d2f8dbd860fa0b5f82529023d322557e12eb017da5a1a6f506025c8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Turn the current conversation into a spec and publish it to the project issue tracker: no interview, just synthesis of what you've already discussed."
+    language: en
+    source_fingerprint: sha256:854eadcb00c0c7edeb51622fd7c087151089dddbb90d15e68a5bdcb98c0f703f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用户显式启动后，从现有对话和代码库综合目标、范围及决策，不重新采访需求；采用领域词汇和 ADR。优先提出少量、尽可能高层的现有测试 seam，并向用户确认，再将 spec 发布到已配置的 issue tracker，标记为 agent-ready。若 tracker 配置缺失，先完成 setup。
+    language: zh-Hans
+    source_fingerprint: sha256:74881d6cf1355b379860be114c774df34ee47c86d08439f0ad027e8cc6a4bafd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 当前对话已经把需求讨论清楚，需要转成 durable spec。
+    language: zh-Hans
+    source_fingerprint: sha256:ddfe86c307e13d5bd237d43fd5ceabdf0e0bf8edb018fc1c0c5d1498a715ec5b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 多 session build 在实现前需要稳定规格。
+    language: zh-Hans
+    source_fingerprint: sha256:69770feca498d8645dfda63373f8f0bac38bc99c9e723ca04d589f91f51dcfc8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免重新解释已经完成的讨论。
+    language: zh-Hans
+    source_fingerprint: sha256:c7e5a080af20e47ebabeceddfc34ac137faa8b35cab40194ca8189735b95d588
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把易丢失的会话上下文变成可引用的规格。
+    language: zh-Hans
+    source_fingerprint: sha256:80021f15512a61d231e99506d43f3ed8f4291b56c9b175e3d901c4785e72e55c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

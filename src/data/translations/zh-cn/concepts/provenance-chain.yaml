@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 连接 AI 系统主张或操作与产生它们的证据、转换和决策的可追溯链。
     source_fingerprint: sha256:fc01862fb0af98b939a6eb7736a53f5e21e229972f13c79ec91f94958ead3618
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 来源链记录信息从何处产生、何时观察到、如何被筛选或摘要，以及哪些输出依赖它。它保留原始证据、推断和模型生成解释之间的区别。
     source_fingerprint: sha256:bf6f75e60e6a0e4bcf55e5d0e2fa91e855bcc7eff5075d8b6fdf6bd98be0308b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 缺少来源信息时，流畅输出难以验证或纠正。可见来源链支持审计、调试、用户信任及来源变化后的定向失效。
     source_fingerprint: sha256:73916b99e58979738f5fc4e9a036b139d8e3364c51a757ecc23308ff3d506c4d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于研究、受监管决策、事件响应、生成数据集，以及未来可能受到质疑的输出。
     source_fingerprint: sha256:fad3669d6e3e2fd2dad3c9d237eb8285fe00a952943f21a1347ed543c1162059
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 生成后附上一组链接，却未记录每个来源实际支持哪项主张。
     source_fingerprint: sha256:78cad8be006f8332c00bde24be22ee63628294d24b9f98f14d5279719cf8313e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: wizard
+provenance:
+  original_sha256: 2e6bf5330eb042c10334437b445bb8c27cc1c2d17e7025888c23794cb9369c30
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: wizard
+    language: en
+    source_fingerprint: sha256:60486ddff684ef1f9b3eadd9024ce8d0945876eb1e952e9d662ac2dfeb21e282
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 为只能由人完成的外部步骤生成交互式 Bash 向导。
+    language: zh-Hans
+    source_fingerprint: sha256:4064f4294fd0f1cad8eae6d73dadf52412e2afc4556487baf33d00ec1e892c61
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:affc81656fef9c8770986b68c4b21c27fcdaa49b3a0fd071d391e252742f8ca1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:73e51b7eed114c586d42e09633094622b6bd0652bfc7c11109f4b26474e8d9bf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:2923457835fea5006f31bfec0934ca6a1e6b5dfca899246ca7d889e4652afbdc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 人工操作目标
+    language: zh-Hans
+    source_fingerprint: sha256:ca43dfa314b0e3e65ed66ae1236906321d25d8635f4a19c8a331e4fae724fb1c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 需要采集或写入的配置
+    language: zh-Hans
+    source_fingerprint: sha256:897ecb19100c0d1b9fce1217f4cb04582850bb6d5160fbbb708401973fd94004
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 交互式 Bash 向导
+    language: zh-Hans
+    source_fingerprint: sha256:54378925dcda75665361d0d7919eab7f3c703cb4aac46f4fd3f043337059fe65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 静态验证结果与供人运行的命令
+    language: zh-Hans
+    source_fingerprint: sha256:d948cf549af2a37119e03b12ea6ad0a7eac31aa81a60967c491ec9720bba7206
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Generate an interactive bash wizard that walks a human through steps only they can perform. Use when provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover. Don't invoke this for steps the agent can perform itself.
+    language: en
+    source_fingerprint: sha256:ba89b27b458951b895c6bc4b69f1a827c752471a7db928e6f9311a6228cdec13
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 遇到只有人能完成的认证、凭据、第三方 dashboard 或 cutover 步骤时，生成交互式 Bash 向导，把 URL、提示、采集值和配置写入步骤组织起来。Agent 只生成并静态验证脚本，将运行命令交给人；人执行时才采集值或写入配置。Agent 能自行完成的步骤不进入这个向导。
+    language: zh-Hans
+    source_fingerprint: sha256:3a20a03ab5cc6559ea0fdc351c5c6414b60fd4d8795a051f54ba09e3974fda48
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: Agent 遇到必须由人完成的认证、凭据或第三方 UI 操作。
+    language: zh-Hans
+    source_fingerprint: sha256:3246ed913d85abe3c726cc4576a5662b6fee7f283495e82e537240cb79ce53b2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 一次性 migration/cutover 需要防止遗漏步骤。
+    language: zh-Hans
+    source_fingerprint: sha256:83a1acbb59d5079c3c98693a628e6d0ddacfbaf84bd348e373c235f636ea31a4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少每次重新向人解释操作步骤。
+    language: zh-Hans
+    source_fingerprint: sha256:c9bb6af00cf078510ccf7f5a3bc64e5fb7ece364ef5502acface64c88ea65949
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 让 human-in-the-loop 过程更可重复、更少出错。
+    language: zh-Hans
+    source_fingerprint: sha256:ff125f446ad17dc8e02e59e49f4b418e97a222bf0d107103b83cb98da060f264
+    review_status: reviewed
+    reviewed_at: 2026-10-13

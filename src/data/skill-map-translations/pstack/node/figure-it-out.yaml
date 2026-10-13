@@ -1,0 +1,117 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: figure-it-out
+provenance:
+  original_sha256: 48d1826897eb3dd274d4853d8bbe2e308d47b8a116f3895d1311af8ff503e456
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: figure-it-out
+    language: en
+    source_fingerprint: sha256:3a1df195f055b3274bd922220296f5a5d4df2ccfc98069777a94be68d9420dd5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 当现有 playbook 不适配时，临时设计一条可审计工作流。
+    language: zh-Hans
+    source_fingerprint: sha256:b5ae2a64bd87aecba286571ae4a4418c6c570ee661f7fa99102644b3f08e806f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 定制工作流
+    language: zh-CN
+    source_fingerprint: sha256:2f75607347f73488a2a0193fa706f9f55402d8a1181445c45e8079b652b25d04
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 审计
+    language: zh-CN
+    source_fingerprint: sha256:a7338d6cc45c2175df9a0fed244e72d6ff01c5b607737e71a650441754669918
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 含糊的复杂目标
+    language: zh-CN
+    source_fingerprint: sha256:085e7a2e249d92527c02ac1e170ca5739a3c643ccbd960493fd953310b7ba561
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 约束
+    language: zh-CN
+    source_fingerprint: sha256:793624c62fe6805e86929905da4bcabbcdcd35b45675d14977c5bafc0cd51755
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 可用验证场景
+    language: zh-CN
+    source_fingerprint: sha256:e1272d7315f3f94933b4db06e490e3a1a106a0df000fd4b27c8afc5a2b9cc265
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 定制操作手册
+    language: zh-CN
+    source_fingerprint: sha256:08ac7a777ecbd471084a8c761382bb83ddb24999f53376a92614925e539f2d1a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 退出判定条件
+    language: zh-CN
+    source_fingerprint: sha256:220e1f87776c8eab7f8a9ceb583a67ed0208d1979a129f15d0604d08ca8d15b5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 决策记录
+    language: zh-CN
+    source_fingerprint: sha256:b5c5f98a09014c282f776633684c9577e3cc8e3e2d9508ff4c22270dfb046192
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 已验证结果
+    language: zh-CN
+    source_fingerprint: sha256:84fa2c024bf4e1b460c4b91aecaa8b9db4b8499261e11f955f6cc0eae7a1b4b9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Design an auditable playbook when no narrower one fits: a large migration, an ambitious multi-part change, or work a human reviews after stepping away. Scales rigor to the task, runs a hypothesis loop, and logs decisions via show-me-your-work. Use for /figure-it-out, 'figure it out', a large migration, or when no narrower playbook applies."
+    language: en
+    source_fingerprint: sha256:1395d031def5a06015e72664f8b993cef6438abb8e9b6566f4f9f06968af5827
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 先定义可证伪的 Done，再拆 atomic units、verification 和 decision trail，通过假设循环推进。
+    language: zh-Hans
+    source_fingerprint: sha256:6db7ef7382176402d850036e4594e611f992a66d120cdaf353f7fda1c192c5db
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 大型迁移
+    language: zh-Hans
+    source_fingerprint: sha256:9afc108398b865d3f536467c9928ec4dcf8c338aa66859b75c077e0673ed87f6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 跨阶段复杂任务
+    language: zh-Hans
+    source_fingerprint: sha256:9a4a2d326ea71862d5c8137e6c59fb062c2869273b5e6f5bc1712017873b6f89
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 任务类型新颖且没有窄 playbook
+    language: zh-Hans
+    source_fingerprint: sha256:9637c9e1003093c01e26f7896d1dd35a9699d8b4d81d0b717a80c8821f651cd2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免用错误 playbook 硬套复杂任务
+    language: zh-Hans
+    source_fingerprint: sha256:89c766cd428555025122c50e49ec43c68c05ee64a779d060ac18eec8f7b146b0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 让一次性复杂任务仍可审计和恢复
+    language: zh-Hans
+    source_fingerprint: sha256:78e0ef93961c7a423c5fd5d9b3c5223e21aef523ac6a8f6f9f10e771212f39a0
+    review_status: reviewed
+    reviewed_at: 2026-10-13

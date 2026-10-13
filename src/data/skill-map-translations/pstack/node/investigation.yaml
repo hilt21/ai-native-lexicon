@@ -1,0 +1,69 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: investigation
+provenance:
+  original_sha256: 3b534ca8a5b780afc0ab6b1a6e46e6436cd19434cefedaa35e4de81ae95157e8
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: investigation
+    language: en
+    source_fingerprint: sha256:3cbf2dbca2f0cdfe39a692f3fbaa7730bec637aae435b821866dd1f01e78c781
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 只读调查，输出带证据的解释或建议。
+    language: zh-Hans
+    source_fingerprint: sha256:eece7eba04b274ed4454e3f162bf8d26c29f7677c0a43c5fa190db140f749121
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 问题
+    language: zh-CN
+    source_fingerprint: sha256:71964a0436b22f0d602c334e6cd34b942ec63338f621d3e4320b633e77675013
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 仓库或证据来源
+    language: zh-CN
+    source_fingerprint: sha256:e94c26121f3b543a35f5053f18c6eee00526be34183d8f723b25d14134486536
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 附引用的解释
+    language: zh-CN
+    source_fingerprint: sha256:99266840f772f4b03aeed0368fc8a7c65a5a71720d79ce06fe7c257b82cd0104
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 建议
+    language: zh-CN
+    source_fingerprint: sha256:557eb29d8f95501b6ee783c7719c781f35c2cc35b9468fb5d5f376ae95b15867
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 路由 how，动机问题再加 why；不改代码；用 unslop 收尾。
+    language: zh-Hans
+    source_fingerprint: sha256:1a2c73c0c6096aea7cf5ad7f6b57a47accd9c93dbe94ef9175ebb0bf7e511d9b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要理解系统
+    language: zh-Hans
+    source_fingerprint: sha256:b3bf02edc51d155d268a268ed4c58d3dc5ad92b28e1eba6aa852c9d0e0b3556f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要技术建议但不要求改代码
+    language: zh-Hans
+    source_fingerprint: sha256:2b2d180afef48d8548db0491392b910e644d5e8ec83d25134052252760a19637
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 避免把调查和实现混在一起
+    language: zh-Hans
+    source_fingerprint: sha256:6f3746be3dec058aee361f4a8ec8b3a49eda3ed6a476d869c74e61217fb5fd79
+    review_status: reviewed
+    reviewed_at: 2026-10-13

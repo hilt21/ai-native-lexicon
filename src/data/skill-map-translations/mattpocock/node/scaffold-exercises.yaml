@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: scaffold-exercises
+provenance:
+  original_sha256: ff10d519c277e4237230108288d935b90bb6a3b26d0fb9abd7aae8073ddc2c24
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: scaffold-exercises
+    language: en
+    source_fingerprint: sha256:4be50647852b1bfe855d21afd69168abf63b3ed79b7417f5b50214a295349233
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 创建符合课程约定的 exercises 目录、题目、答案与 explainer 骨架。
+    language: zh-Hans
+    source_fingerprint: sha256:070c3b7a06f8cd04215240ad703cdafad4e4f5c399a008500576a5dad6d5dd1b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 其他
+    language: zh-CN
+    source_fingerprint: sha256:33d4e2c736bbd3a6d4bd6b98d59f5a7d5bdad31cd5507f1a3fdaf122804f430f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:42eddc3229f855286e1b7fdeebb7fdec220999397797323b72d98c6cb27997d2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:0a1d8cd3796940dcaba5d219904ddcdf14c9cba79abaf5e9c2f878f241ea94b6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 课程结构要求
+    language: zh-Hans
+    source_fingerprint: sha256:afbf375163d3a7c5189c77b6fdb02ae903702fd08626389fa66c6d0cd66d22e0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 练习列表
+    language: zh-Hans
+    source_fingerprint: sha256:2f15a50050d726591a327543803ee8c9827edf6f4301a50a0c53f43fcade1869
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 练习目录结构
+    language: zh-CN
+    source_fingerprint: sha256:7463344ddc7cd83cdc4ab54eea6d1b8d041825131d78f7e8ccf49452af3a300a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 题目、解答和讲解的初始文件
+    language: zh-CN
+    source_fingerprint: sha256:e46de995cb1932b12bd96245c71ac31e24911b2f8706608ebbb7ed511b3aa3e5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Create exercise directory structures with sections, problems, solutions, and explainers that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course section.
+    language: en
+    source_fingerprint: sha256:0fa356231ba18612aca12fbf7156d3b39bc53b52995f081e90119ffad102a255
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 在既有课程组织方式下，按编号和命名规则建立 section/problem、README 与所需 problem/explainer stubs；未指定时默认 explainer。遵循相应模板，运行 pnpm ai-hero-cli internal lint 验证课程结构后提交；不是适用于任意项目的通用 scaffold 或 lint。
+    language: zh-Hans
+    source_fingerprint: sha256:7470c6d0f10f692df9783f3661f6b7e7b8cd894b4eff9973797ed467dae46e50
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 创建新的课程 section 或练习。
+    language: zh-Hans
+    source_fingerprint: sha256:cd3c4aafdb4e739bad5adbb6024e1e595768388febd1ead14a4d553de7a638aa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要批量生成 exercise/problem/solution/explainer 骨架。
+    language: zh-Hans
+    source_fingerprint: sha256:a3a4f2612a7f0c55d0da678264a631d4560ebf5cdad527f3bc3256ee3ff1532e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少课程内容脚手架的重复手工工作。
+    language: zh-Hans
+    source_fingerprint: sha256:99d9f60fbd4d37a9f2286e4fcdd1893d37b61d758b16c046592dd189d7c01b09
+    review_status: reviewed
+    reviewed_at: 2026-10-13

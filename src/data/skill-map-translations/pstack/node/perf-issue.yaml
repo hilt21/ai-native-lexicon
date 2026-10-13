@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: perf-issue
+provenance:
+  original_sha256: c2e0bd0a75e70f0b5bd713d1fc48ddda0292d7cdf72785e5ceb0d1b76c7c11f3
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: perf-issue
+    language: en
+    source_fingerprint: sha256:8b450ef00e3e6c49c40192fb38d1fc6f5f1e872ed8e6487d40099cb5a1ab65e6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 一次性性能问题的测量、修复与证明。
+    language: zh-Hans
+    source_fingerprint: sha256:f814f8b7659efcefe7a0a0850612318084f624fd7e886b3977ac1d3fc5b97ca6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 性能问题报告
+    language: zh-CN
+    source_fingerprint: sha256:daf92ac27a87cf30c31d748dd0dd09fd8abf45aef4c8434bf4dffe936607423e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 真实工作负载
+    language: zh-CN
+    source_fingerprint: sha256:787db5d8d48d6854f5a558de1e8ecac8abc7c2ba7cffb1c0ff74f812b66e4cdd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 基线与变更后的指标
+    language: zh-CN
+    source_fingerprint: sha256:e39a0ddea7f2e706ef93d4728510f0384d3dc41044c2d3daf88a6be0329f8c1a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 产物路径
+    language: zh-CN
+    source_fingerprint: sha256:57f17de6dc334d32555becb3ba83d4f629a74f369fda1b47eeb694bc64a56477
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 已验证的性能修复
+    language: zh-CN
+    source_fingerprint: sha256:db10538cc891a1bcb9ab804d24ca21b2678be3de27f9c372b59847d930211e2a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: PR
+    language: en
+    source_fingerprint: sha256:78819e34837fd1c74f6ca866a996b823470fa7dc69cfa9197b8e8a7e06309211
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: baseline trace → benchmark-checklist → how → 按性能 mantra 排序假设 → 修改 → post trace → artifact diff → PR。
+    language: zh-Hans
+    source_fingerprint: sha256:b92a45feea69db06c07bb3834eb73712176451ccaff84c1bb9c5ade16dc8c081
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 一次性 latency/throughput/slowness 问题
+    language: zh-Hans
+    source_fingerprint: sha256:dfd23da46cdabedb5b9c0b1d3ed6450aac21cd531c535571a275792e4f1b4d66
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 读代码代替测量
+    language: zh-Hans
+    source_fingerprint: sha256:8b680d15fe8e7b0063d2afcff0e80ca7d4b4627781b5142b1354ce8a477daefd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 无基线 speedup claim
+    language: zh-Hans
+    source_fingerprint: sha256:d16f78a16b21fd842d6fb16d1ac4e21de68556f6be0af6e30756e1df5304e39a
+    review_status: reviewed
+    reviewed_at: 2026-10-13

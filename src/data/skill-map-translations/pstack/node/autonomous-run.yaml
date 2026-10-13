@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: autonomous-run
+provenance:
+  original_sha256: 386b9306ab1833eb1eecdeaa4b61f4fb33f3a39becc6bc411eda6b52d8d18c5c
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: autonomous-run
+    language: en
+    source_fingerprint: sha256:679413bb4085cad5490217c332fa89bdfc904aee06a13fc61f5c45904044530f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 单一任务无人值守推进到固定 exit predicate。
+    language: zh-Hans
+    source_fingerprint: sha256:541c03fffb575b2d3e882ea7eff44629621686b946e03d418eba57cb0e260650
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 目标
+    language: zh-CN
+    source_fingerprint: sha256:4074e05dbf17ddd28a03166416ead7a10b62f695acd8e9fbb813639493923963
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 退出判定条件
+    language: zh-CN
+    source_fingerprint: sha256:9136250d0eb59eda500781f54c5624ee2ae7619dcf1489b28d1002b657f0ef2a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 验证场景
+    language: zh-CN
+    source_fingerprint: sha256:ed0234a843d6faf2b3bf69dab1d2b1eed30249c5ec2609f6659f0e9aaba7a8a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已满足的判定条件
+    language: zh-CN
+    source_fingerprint: sha256:77b9d22246b66583c049efcfbf2d25bc29e514d64773d3504cf1e4245b86d32c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已接受的迭代
+    language: zh-CN
+    source_fingerprint: sha256:03425690c09abfbbed87d9a6cb4ca66ab4643cd1ae4a633e65ba8cc924c82156
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 已舍弃的尝试
+    language: zh-CN
+    source_fingerprint: sha256:0012c5a23f9248b35e1d7c3742edc2d064c2214382c8b19ca5f3de0bfc6ecb31
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.3
+    translation: 决策记录
+    language: zh-CN
+    source_fingerprint: sha256:ebbebcff687326d2b146ed66ee16739fb961474790aee945be5bd715acdc02d0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 开始前冻结 checkable predicate → /loop wake → smallest justified change → verify → commit if progress / discard if not → decision log → plateau 时换方法。
+    language: zh-Hans
+    source_fingerprint: sha256:dfe12ca025a12ecd0c1c6e7a61263b3671493b9ee6801309f80c898122e1881e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 整夜运行的单项任务
+    language: zh-CN
+    source_fingerprint: sha256:80f2c02c77b3184a308117b07bfa011053c78cfeeb292bca2adb4162bc9219c3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 一个目标可以定义明确 Done
+    language: zh-Hans
+    source_fingerprint: sha256:14d5f756cf03c9f089e747cc9abd6f6ce6053be52e4b20a9be71637a4d3147c0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: Agent 过早宣告完成
+    language: zh-Hans
+    source_fingerprint: sha256:08b8b57a96b173bcfbac8aa64c24644f6367c7ae7b2e468b7f2ebcf7f2b52d93
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 无效改动累积
+    language: zh-Hans
+    source_fingerprint: sha256:f6ff788d536bb1ec4401c5853733c4f5ee0044c4e58a6903ea0e0cb2da899548
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.2
+    translation: 人频繁被问
+    language: zh-Hans
+    source_fingerprint: sha256:cc19420a1094378837e35476baa8619e7547cca15415b6af6e76742b601da8bd
+    review_status: reviewed
+    reviewed_at: 2026-10-13

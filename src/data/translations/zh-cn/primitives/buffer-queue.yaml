@@ -6,54 +6,66 @@ units:
   - path: summary
     translation: 暂存容量和排序结构，将生产与后续处理分开。
     source_fingerprint: sha256:1e814ea577e7ca661c4a1dfbbd7a725d2efe74a9fc7ece176546d12e4d6833cb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 具有突发到达、异步处理或处理速率不一致的系统。
     source_fingerprint: sha256:07de70da6c467a5381722fde1825480c1361aec7cb55bec3fbead0ddf8004e2c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 吸收短期变化，同时呈现积压和准入限制。
     source_fingerprint: sha256:2e35d46938f66c99ac08982fb4515cf5854788982cd4fd9f3be9c17d7fb8b7d8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 队列是有组织的缓冲形式；并非每种缓冲都遵循先进先出。
     source_fingerprint: sha256:60ff09d537e268d1b0844ea4febc42e4c04eba0cd9f701ad32e95de0403df368
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 生产者 → 缓冲 → 消费者
     source_fingerprint: sha256:d359b9d8ae6e6267dac02964f98162cb6efab5d532dad337609e9efe7eb8d2b4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 一批文档请求先在有界队列中等待，再由模型工作者处理。
     source_fingerprint: sha256:38b31600b6a370d894bf5f04cb75293ece8f8148d89aa4529542f9f4750656d7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 缓冲
       - 队列
     source_fingerprint: sha256:5594bb04b37049faeb73910405ec549ca64238c330dad53ab62297b14944cb8f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 在速率不同的生产者与消费者之间暂存工作或数据的容量。
       - 按明确选择顺序组织待处理项目的结构。
     source_fingerprint: sha256:f37e458819d3b4b80a81097846501bf1a2ac37e9c64073ead290c4413cd382e8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 限定容量并规定过载处理方式。
       - 更多缓冲可能掩盖容量不足，并增加等待时间。
     source_fingerprint: sha256:67938ba492d6133910cc4ab961dd89235fbe23a2d59c2ae15fa57144884cc2e3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 队列服务和运行时代码负责排序、限制、重试和确认语义。
     source_fingerprint: sha256:a0e1feb9ff4224377b8cd1e8ddde2d58506bf5a4b9a9378a506b6812b8f24a6a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 具有突发到达、异步处理或处理速率不一致的系统。
     source_fingerprint: sha256:de5e95fb7fa642b2bfc5d63098edb158a06ec6ffbd33a434a2147e90e591ee34
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 当速率不一致或突发到达造成等待、过载或排序要求时，应明确建模缓冲与队列。
     source_fingerprint: sha256:fbf21f431097d38567eca8a24c07013be7d9c62d627c00d5dd90b6db95139825
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

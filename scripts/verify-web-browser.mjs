@@ -434,9 +434,9 @@ try {
     }, { slug });
   }
   await page.goto(`${origin}/skill-maps/pstack/nodes/tdd/`);
-  await check('node language separation', async () => { await language(page.locator('.map-summary'), 'zh-Hans'); await language(page.getByText('先构造最窄可执行 regression，证明其失败；再做最小修改；最后用同一测试证明通过。', { exact:true }), 'zh-Hans'); await language(page.locator('details').filter({ hasText: 'Official description' }).locator('p'), 'en'); await language(page.locator('.map-provenance > p').first(), 'zh-Hans'); });
+  await check('node language separation', async () => { await language(page.locator('.map-summary'), 'en'); const node = dataset.skill_maps.find((m) => m.id === 'pstack').nodes.find((n) => n.id === 'tdd'); await language(page.getByText(node.mechanism, { exact:true }), 'en'); await language(page.locator('details').filter({ hasText: 'Official description' }).locator('p'), 'en'); await language(page.locator('.map-provenance > p').first(), 'en'); });
   await page.goto(`${origin}/skill-maps/pstack/journeys/fix-bug/`);
-  await check('journey language separation', async () => { await language(page.locator('.map-summary'), 'zh-Hans'); await language(page.getByText('Fix this regression', { exact:true }), 'en'); await language(page.getByText('存在适合的局部测试目标时。', { exact:true }), 'zh-Hans'); });
+  await check('journey language separation', async () => { await language(page.locator('.map-summary'), 'en'); await language(page.getByText('Fix this regression', { exact:true }), 'en'); const journey = dataset.skill_maps.find((m) => m.id === 'pstack').journeys.find((j) => j.id === 'fix-bug'); const conditional = journey.variants.flatMap((v) => v.steps).find((s) => s.when); await language(page.getByText(conditional.when, { exact:true }), 'en'); });
   await page.goto(`${origin}/skill-maps/pstack/overview/`);
   await check('canonical structure examples and counts', async () => {
     const map = dataset.skill_maps.find((m) => m.id === 'pstack'); const active = map.nodes.filter((n) => n.status === 'active');

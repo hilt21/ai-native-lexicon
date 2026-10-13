@@ -1,46 +1,34 @@
 title: architect
-summary: 在写代码前确定类型、接口、模块和数据结构。
+summary: Define types, interfaces, modules and data structures before writing code.
 type: capability
-status: active
 layer: skill
 primary_cluster: design-decision
 secondary_clusters:
-- implementation-quality
+  - implementation-quality
 tags:
-- architecture
-- design
-mechanism: 用 how/why grounding 现状，用 arena 探索多个形状，选择可解释的 target architecture，并在实现中保持设计约束。
-when_to_use:
-- 跨函数/模块变更
-- 新 feature
-- 非平凡 refactor
-- 数据模型改变
-solves:
-- 避免局部 patch 锁死错误结构
-- 降低返工和读者负担
+  - architecture
+  - design
 inputs:
-- requirements
-- current architecture
-- constraints
+  - requirements
+  - current architecture
+  - constraints
 outputs:
-- types/signatures
-- module map
-- design rationale
-- implementation constraints
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/architect/SKILL.md
+  - types/signatures
+  - module map
+  - design rationale
+  - implementation constraints
 handoffs: []
-official_description: Sketch types, signatures, and module structure before code,
-  then stay in the loop while implementation fills in. Use for /architect, 'architect
-  this', 'design this', or non-trivial work where jumping to code would lock in the
-  wrong shape.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
-  when_to_use.2: zh-Hans
-  when_to_use.3: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/architect/SKILL.md
+official_description: Sketch types, signatures, and module structure before code, then stay in the loop while implementation fills in. Use for /architect, 'architect this', 'design this', or non-trivial work where jumping to code would lock in the wrong shape.
+status: active
+mechanism: Ground the current system with how and why, explore alternative shapes with arena, choose an explainable target architecture and preserve its constraints during implementation.
+when_to_use:
+  - Changes span functions or modules.
+  - Build a new feature.
+  - Perform a nontrivial refactor.
+  - Change a data model.
+solves:
+  - Avoid a local patch that entrenches the wrong structure.
+  - Reduce rework and the effort required to understand the result.

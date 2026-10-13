@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["retro","uses","writing-for-agents"]'
+provenance:
+  original_sha256: f5479236f31b6e63153b06f2aa04df4f3c34ff0c9585a101af172658474cd4f5
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文实际调用或明确引用此能力；能力的适用条件继续以对应技能正文为准。
+    language: zh-Hans
+    source_fingerprint: sha256:2e7d94e856377c2cb7468dcd4279fe2135d1eac5bf28bab7db363dd1b7c4aa75
+    review_status: reviewed
+    reviewed_at: 2026-10-13

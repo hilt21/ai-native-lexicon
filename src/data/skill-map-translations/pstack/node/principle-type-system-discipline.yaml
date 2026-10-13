@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-type-system-discipline
+provenance:
+  original_sha256: 3aee5a95f736668df0a82c6bde7754549ed0b14468ad8e3a207723df0ac4b888
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: type-system-discipline
+    language: en
+    source_fingerprint: sha256:15c8373aeb6cb5fe73cb30e3ccd1d1e9825343aa154bb9f28a1fbd452d2c05f9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用类型系统让非法状态难以表达。
+    language: zh-Hans
+    source_fingerprint: sha256:76de1e5248378950639706ef43b1670143a3dae053d12b40b66aa2a67ab113e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:9fb47b56695b7778aa814eeb9690d35a8e20cae900b4ca72d9f6fab14cb380c6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 领域约束或外部数据
+    language: zh-CN
+    source_fingerprint: sha256:10041662b095c622495afbfd6b0dd3d02f1d6a0a6c72bb0c411e78c2936307da
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 强类型与已解析的边界输入
+    language: zh-CN
+    source_fingerprint: sha256:a08c7c2167b1787ff2e7bca88763edc50464472fdb0e46539f39bd69928f4636
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when designing types, reviewing a function signature, or writing code in any statically-typed language. Make illegal states unrepresentable, brand semantic primitives, parse external data at boundaries, refuse to lie to the compiler, exhaust variants, derive from authoritative schemas.
+    language: en
+    source_fingerprint: sha256:592badab7fc3871d0df32c810154d6a692073011fdea9f788c5b8696e57d0050
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用类型系统让非法状态难以表达。
+    language: zh-Hans
+    source_fingerprint: sha256:e622cad4ab0b0f7676ef52114f734cb2f63205f36f22218698cf0b60e51aa238
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 设计类型、审查函数签名，或使用任何静态类型语言编写代码时使用。让非法状态无法表示，为语义原语添加品牌类型，在边界解析外部数据，拒绝向编译器提供虚假类型，穷尽处理各个变体，并从权威 Schema 派生类型。
+    language: zh-CN
+    source_fingerprint: sha256:580db40a41c06cf64d25e470b7f0c6d70d1eb1f44d679e52159d354ae77b3a7b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 用类型系统让非法状态难以表达。
+    language: zh-Hans
+    source_fingerprint: sha256:b1ff3314e0ec691544e1c6c01b5c6a3c54956cffb45884626b5ed8c60d9d34be
+    review_status: reviewed
+    reviewed_at: 2026-10-13

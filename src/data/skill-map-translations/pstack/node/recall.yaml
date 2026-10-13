@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: recall
+provenance:
+  original_sha256: eecb2513b33b2660ede60071f39c13e468d3c9629e54bc2cf758b9789bae49e6
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: recall
+    language: en
+    source_fingerprint: sha256:9f3c3a7bde0b121a3e07044ba5bed52e6aed6a9088d22c2777b2604bf40f2629
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 从历史记录和当前状态恢复工作上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:be152ed103c4d7d50d2721d9d8ae95bb463e8b6d92bb1a1d560c4f0f1b9c5f2a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 记忆
+    language: zh-CN
+    source_fingerprint: sha256:34285b323245d150850c39f1b7e8e95093e3e2c70432fd4d46f2b64461b6e354
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 恢复
+    language: zh-CN
+    source_fingerprint: sha256:c94a9751996c33cb33d9ccf637cbec7f3158d203c18b209ca0d639b9e810b179
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 上下文
+    language: zh-CN
+    source_fingerprint: sha256:1a9049dd6c2e2e6f8b08eb5fa417253b6a58c2122342ab266ee6fdfb88bf76b5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 主题
+    language: zh-CN
+    source_fingerprint: sha256:ecee3dae7575b4eda426fd139580272d07283460f379a12bfc38d0e7e3cfdb36
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 时间窗口
+    language: zh-CN
+    source_fingerprint: sha256:abddfb8f2df746828e061aac16f2e255150a04e5ab4b420e48f35d7ecbd3f1fc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 聊天历史
+    language: zh-CN
+    source_fingerprint: sha256:7bad0b53a0493dd1b4959fe41b146ea868d497a2c445d499855e364cbfbf13a4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.3
+    translation: 仓库实时状态
+    language: zh-CN
+    source_fingerprint: sha256:e241e748bcac39709cb4dba38e913cd0843a29342f77b1571f5cc63c31a80ae5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 当前状态摘要
+    language: zh-CN
+    source_fingerprint: sha256:3151aebbd51b09533d14d18b5716094eec6388a34226b4cc2eb39434367c70b7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 恢复点
+    language: zh-CN
+    source_fingerprint: sha256:ddb850767653f1ab9995419a5a8a03c0a394e39a08398e9f55e326ebfad67668
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 待解决事项
+    language: zh-CN
+    source_fingerprint: sha256:13a5313366e82ec3fd78c3f2c15ef097c07f342a0195925c543e98caad9f6689
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Reconstruct your recent working context from your own chat history, live state, and the shared record (user reports, prior fixes, incidents), then hand back a tight current-state brief. Use for 'recall my work on X', 'catch me up', 'what have I been working on', 'where did I leave off', before starting or resuming work.
+    language: en
+    source_fingerprint: sha256:e68260799ac02cf29c4ddadfbddba8773641c736381f3127281ca0f256441e82
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 读取近期 transcript、分支/PR 等 live state 和 shared record，压缩成当前状态、已完成事项、待办和关键决策。
+    language: zh-Hans
+    source_fingerprint: sha256:898322ecbde10360a1fb65e9624c109316ae42de08b1b0233fe5af81ee60e7bf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 接手几天前的工作
+    language: zh-Hans
+    source_fingerprint: sha256:a23645921c35adbe376de426f635bf6006580177dd681fd85f869c9924f7546b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 继续长期项目
+    language: zh-Hans
+    source_fingerprint: sha256:df0fdef243b9c6a1e88223ef1653f5c910f9fb2a7acf6f0ed919ebaace610ca3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 用户说 catch me up / where did I leave off
+    language: zh-Hans
+    source_fingerprint: sha256:8cc1e4fbe8a7fb28ba3be960f410a5209221fc31d35a92ce708819b74cbee7a6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低重复解释
+    language: zh-Hans
+    source_fingerprint: sha256:c58e2f0bda72decff8739ddc72776956bff2a18bdeda840a50b7ed741cb37600
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 避免重新做已经完成的调查
+    language: zh-Hans
+    source_fingerprint: sha256:1644c79bad77ad8d684e4d19f53534003b2fcd360c0356f3285f905c1eb65998
+    review_status: reviewed
+    reviewed_at: 2026-10-13

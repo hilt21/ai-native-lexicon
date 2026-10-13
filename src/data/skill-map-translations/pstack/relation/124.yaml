@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autopilot-stack","uses","swarm"]'
+provenance:
+  original_sha256: 48cc1fb01a2cdbcdde9bfa16d6049f23c428da1e041ad116633040d7b7a4ba8e
+  retained_at: 2026-10-13
+units: []

@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: authoring-a-skill
+provenance:
+  original_sha256: ea90e5802fac6ae24697bacd48f68661039a8b23a83c2ad677c61aba8cda7bda
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: authoring-a-skill
+    language: en
+    source_fingerprint: sha256:9ad806236570d78735e7d9880eb9d360abc45adb5bce3f706a7a64e3d898ffe1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 创建或修改 pstack/Cursor skill。
+    language: zh-Hans
+    source_fingerprint: sha256:be687c1772c499c8a9e3ca60ecec8d20f0fa3b0fccfd2b7806c2ddaf3176a8ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 工作流知识
+    language: zh-CN
+    source_fingerprint: sha256:ad59cc48324162296917a7ccf1f6fbf41fbde56da6ddb5c15446013579c75c28
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 技能需求
+    language: zh-CN
+    source_fingerprint: sha256:7c642ab708df59ca46cfdffa872016a94ecbcd4596c45a2e2bde5638605146c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已验证的 SKILL.md
+    language: zh-CN
+    source_fingerprint: sha256:3461709ec2214622baa5493c6739d7f7960333a86c49f7665f9f0f664423941f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 设计笔记
+    language: zh-CN
+    source_fingerprint: sha256:ed97be64bf70e94c5bf5814baa990c53c19e074a495b2f44e6699fa8b25af213
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: PR
+    language: en
+    source_fingerprint: sha256:438d52fbb74e0e8018618256fa2948fd7500380f446c8d110799d3db0201d0b4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 用 create-skill 生成 SKILL.md → 校验 frontmatter/引用/链接 → structural test → PR；重复规则优先链接结构 source。
+    language: zh-Hans
+    source_fingerprint: sha256:b1f699344ee66a6f94fdc196e7036066c55b83b233fad006e4a473a643f07177
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 要创建新 skill
+    language: zh-Hans
+    source_fingerprint: sha256:040dbf0509aeeaae2b804564d471fb02044e69cf1c71ad32c16ea43658f59181
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 修改现有 skill
+    language: zh-Hans
+    source_fingerprint: sha256:e65c01ff7305c835cf1276483532308fe5c67a31f82a295993331134f72f7747
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: skill 文本膨胀
+    language: zh-Hans
+    source_fingerprint: sha256:856caf98fc60cc0bd7a586c1afa60584acc50a773788849c2f7d2836df02170d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 重复解释已有规则
+    language: zh-Hans
+    source_fingerprint: sha256:2b1c18caa209b30e37c7b11c6589009bac96bd2a30f07f5356a628877357f3aa
+    review_status: reviewed
+    reviewed_at: 2026-10-13

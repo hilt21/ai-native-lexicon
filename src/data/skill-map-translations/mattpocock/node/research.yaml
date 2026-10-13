@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: research
+provenance:
+  original_sha256: 1c66a2af1591d7de6e1bcdb816035cb18fcfd92170f76efbc3f4acf060c5585e
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: research
+    language: en
+    source_fingerprint: sha256:455aaff33f5204e0ae6c274f693d12f5b8df4c371914498fac50845af9cae069
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把高可信资料调查交给后台 Agent，并在仓库留下可引用研究文件。
+    language: zh-Hans
+    source_fingerprint: sha256:7dcaa007b16fb686aad2173d83fd5e14383ffc6c5d8e1ab610c42594afac7331
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:7f8ffed587c9ecca86d92039c47ff07a4a86b7412e28e8024f231942906af9c2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:a644c4df717a6b666b7c60600e0f2b11561d70d352cd7bd512d05caf70821ad7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:993aff5daea88a95e26da5f0979d79c75e8efb115f19a8a6aeb80d37ba5fb595
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 研究问题
+    language: zh-CN
+    source_fingerprint: sha256:733af7ee1a9a3970580998015c53512c81fb5d93efe9e77e98618d6833f78522
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 可用 primary sources
+    language: zh-Hans
+    source_fingerprint: sha256:6988edf43f24652b55e5abd1b95f55e49e25ac26844029b13d2eb07994354ebf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 附引用的 Markdown 研究笔记
+    language: zh-CN
+    source_fingerprint: sha256:29cb4242eabdecd61409716441e45eccb18c0cefb2f8bc6fc94f9bbbf5e0cadd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Investigate a question against high-trust primary sources and capture the findings as a Markdown file in the repo. Use when the user wants a topic researched, docs or API facts gathered, or reading legwork delegated to a background agent.
+    language: en
+    source_fingerprint: sha256:7c58118a12d4603d483979ff47df065a3ddb56bea18cfca155399715e4651738
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 优先读取 primary sources，在后台完成阅读与比较，把结论、引用和不确定性整理成 Markdown artifact，供主工作流继续使用。
+    language: zh-Hans
+    source_fingerprint: sha256:9e4e9b767762555358100108de9dd0a9a75526fde685e7535b07470d0a435c1c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要 API、标准、框架或外部技术事实。
+    language: zh-Hans
+    source_fingerprint: sha256:748865c6e13e301cbdca844c393e2b76edfb525492b4b3e0f454590424578d63
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 不希望阅读任务占满主 session。
+    language: zh-Hans
+    source_fingerprint: sha256:3a055e6f0a2599372bab3cef11167367de33876ecd666a45c9439bbe9d1e013c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少主 context 中的大量阅读负担。
+    language: zh-Hans
+    source_fingerprint: sha256:f36b4b4a273faee285093a2badda683ee8c55dbfd99f0a529189eda7376c05ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 让研究结果成为后续设计可引用的 durable artifact。
+    language: zh-Hans
+    source_fingerprint: sha256:08648198459a78544c6d8c8f5a9ef96e8b9e58234d418bc192e8535c7405c67d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

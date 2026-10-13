@@ -1,0 +1,129 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: handoff-work
+provenance:
+  original_sha256: 93efd51a23e6b6148c8b0067058812aea4813a1930ca30b2425c629f0a4e79b1
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我要把工作交给另一个 Agent 或人
+    language: zh-Hans
+    source_fingerprint: sha256:22e141d84faf7591b4d4b3f2154c5b153e9a677099fb0efee533b00fccd0c334
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 根据接收者不同，把上下文压缩成 handoff，或把外部决策缺口变成 questionnaire。
+    language: zh-Hans
+    source_fingerprint: sha256:8610c8389974c708040a0710baa407d63b6f24cf0cd171bec240234075f4c753
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前工作状态或决策缺口
+    language: zh-Hans
+    source_fingerprint: sha256:e64463f71f37ee53ec0c53fd0f735553ce88eb38d2ee0033671a6dcf39f78eda
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要新 harness、新目录、交给同事或在阶段中分出侧任务。
+    language: zh-Hans
+    source_fingerprint: sha256:682f9e2fa62acd62091f46aa8cc06e7e54e63bdf409c94c56483fe8fd576b6ea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 当前阻塞信息只有另一位利益相关者能够提供。
+    language: zh-Hans
+    source_fingerprint: sha256:484cca74f5a00d052ffa37d9e5759746196cb7b9d56e70dd7bebfb9b611b1a00
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: portable handoff 或 questionnaire
+    language: zh-Hans
+    source_fingerprint: sha256:89c32096f959d656c824dfb566756a05fedb202f9b1eb740190d9f98267d7b47
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 新 harness、目录、同事或侧任务
+    language: zh-Hans
+    source_fingerprint: sha256:cb10e9c3f5b7066689d7d2d90e66adf77a367caf9fb7b833c9d5b02094a4b7b5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.when
+    translation: 需要 portable artifact；普通阶段边界可先继续或根据条件 clear/compact/委派。
+    language: zh-Hans
+    source_fingerprint: sha256:2e14deddc292a5928f061832217d8243e1947be26e7dce49f86f09193a761046
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 压缩可携带上下文
+    language: zh-Hans
+    source_fingerprint: sha256:2655e92d61f09c150a21e569ec7efc99394856780a3cbd310a73c07891d9afae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 用户启动 handoff，写明目标、决策、状态、证据、使用的技能、文件指针和下一步。
+    language: zh-Hans
+    source_fingerprint: sha256:c2df85ea8cce1842916002c3ec747569b4ba5846603ac467b33c9ea78430d1dd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 操作系统临时目录中的 handoff Markdown
+    language: zh-Hans
+    source_fingerprint: sha256:39777b72998ae6f9e16d8c7be99d70415be35c16bf0deb9ae3d4ac3c2cb0b90e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.title
+    translation: 向另一个人获取缺失信息
+    language: zh-Hans
+    source_fingerprint: sha256:e4498e33a661869ba2b8421ea4936d347f4c4e07bcfd4f6501bf1e94847c5dbd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.when
+    translation: 真正的阻塞在外部利益相关者掌握的信息或决定。
+    language: zh-Hans
+    source_fingerprint: sha256:0b6dd76d44a8743ea0643e57725c4c7f8e9e176e02031d07bca52a5a79b5f659
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.title
+    translation: 先确认问卷收件人与结果
+    language: zh-Hans
+    source_fingerprint: sha256:12727e9ce80f7a5cb2e98a1b46110fb471884a6a2bbb15d3e165b366fed42c61
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.why
+    translation: 用户启动 to-questionnaire；先追问要发给谁、需要拿回什么，再把缺口写成可异步填写的问卷。生成问卷不等于发送。
+    language: zh-Hans
+    source_fingerprint: sha256:ffd09fa3c2eec1d1d47af2e8271cc554f74b295cba8a2a6fcb6b45d9a31a6837
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.outputs.0
+    translation: 面向已明确收件人的 Markdown questionnaire
+    language: zh-Hans
+    source_fingerprint: sha256:959a144f0e1df4e0436e0ce76d08d02dfe87c6fd0d525375dde95bb5744e8fb7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.title
+    translation: 将回答带回设计或规格
+    language: zh-Hans
+    source_fingerprint: sha256:70cce697416def281e5b181123ec3354f57c68c2b7ef7eb065ade6abe2feedbf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.why
+    translation: 回答是新材料，用户根据准备状态选择继续 grill-with-docs 或综合 to-spec；它们不是同时自动启动。
+    language: zh-Hans
+    source_fingerprint: sha256:08cad8cd947b856d0f9b0405be64411205771ded529dba939ef77ab717d3e544
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.when
+    translation: 已取得回答并需要继续原工作。
+    language: zh-Hans
+    source_fingerprint: sha256:318059dafe21029bb771c4391240c0eba25d4a2557e243910eadd6e287d63136
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.outputs.0
+    translation: 补齐的设计决定或 spec 输入
+    language: zh-Hans
+    source_fingerprint: sha256:67264ea3271689fb8df395ce1cd0338d0d6de88a26854e25738dcd6a99267579
+    review_status: reviewed
+    reviewed_at: 2026-10-13

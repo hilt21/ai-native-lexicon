@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 明确规定委派工作的结果、权限、证据、升级规则和完成条件的约定。
     source_fingerprint: sha256:718e28bd919413b7e662c4f915d582bebf092c2ee2cd8c24dc1c8a716f2c020d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 委派契约说明必须实现什么、可以改变什么、有哪些可用资源、如何判断进展、何时求助，以及哪些产物构成完成。它适用于人与智能体之间及智能体之间的委派。
     source_fingerprint: sha256:51926d09b802672faac5d92136119d40144e96877a91fa45d2abed4ac9dfecf0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 含糊的委派产生大量活动，却缺少责任依据。契约允许受托方调整方法，同时保留委派方的意图和限制。
     source_fingerprint: sha256:05e7b5031459c90272dbf6453dd2786cb97fd0c3dbbbd2d787fe598017bc8f4f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 责任跨越个人、团队、智能体或执行边界时使用。
     source_fingerprint: sha256:822f93a36ce654419d121f8e41931e611f2112ab990f1f83208e21928c6d78f9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 只给宽泛目标，不设权限限制或验收证据，事后才判断成功。
     source_fingerprint: sha256:328ca83a80780db6df1cb9defcc6f1a88065e7128873842901fd1c5068f3176e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

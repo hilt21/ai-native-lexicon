@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-laziness-protocol
+provenance:
+  original_sha256: 93ffec181d4dcd1022a4742624ca0c81856cbbef328508e0a1bcfc644e2658d2
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: laziness-protocol
+    language: en
+    source_fingerprint: sha256:179691d72d44c4d76f1cc96c4e5e6abf6aca457d145154d756594e729a8c6db8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 优先删除和最小充分变化。
+    language: zh-Hans
+    source_fingerprint: sha256:4f5b8d5edc009e05e3800bce4158f799d710c8a86f6b897309259521099a2ee7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:5e5e1c467c388cddcaf935503266460099fa0743b07306490efcb0a5941122de
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 候选变更
+    language: zh-CN
+    source_fingerprint: sha256:4733d5c1b39b3e9e41eab3a8408fcf68eff5e227d4185481cf42cf0a21cbd4a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 更小且更简单的差异
+    language: zh-CN
+    source_fingerprint: sha256:11bebf32a2dc347fdeeaa6548ea432c2874aacdd70d313b1ce3194b7e75b14e7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when refactoring, evaluating diff size, or tempted to add abstractions, layers, or signal threading. Bias toward deletion and the smallest change that solves the problem.
+    language: en
+    source_fingerprint: sha256:fd877ca245d773163d3d257c13f3132a7ef19116acd7a6de23d2e0702ab24b5c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 优先删除和最小充分变化。
+    language: zh-Hans
+    source_fingerprint: sha256:1f51152f39ae62c10a4c8d1091a5237631545f57cc2f6fa43836c1759cd59d50
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 重构、评估差异规模，或想增加抽象、层次或信号传递时使用。倾向删除，并采用能够解决问题的最小变更。
+    language: zh-CN
+    source_fingerprint: sha256:c5baab96168ed7385c185e46f60d2af7c210de5fe62bed9843ffb2a88d20bb4c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 优先删除和最小充分变化。
+    language: zh-Hans
+    source_fingerprint: sha256:c555596373cbf05bc28efe8eb773189b8ea1099a7e9b76a3db2ecf772b49b217
+    review_status: reviewed
+    reviewed_at: 2026-10-13

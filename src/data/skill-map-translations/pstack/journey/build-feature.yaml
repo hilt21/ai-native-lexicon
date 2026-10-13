@@ -1,0 +1,129 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: build-feature
+provenance:
+  original_sha256: dfea1ae6664d4ed4aec9e7ad169085f8bff704ef53918888b6640dd3f928c9a8
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想做新 feature
+    language: zh-Hans
+    source_fingerprint: sha256:fd79a4a66a7198d90c36d4f04ee54d092a12f0961b7a49f7015f8b90c312adec
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 我想做新 feature：从任务入口到可检查的产物。
+    language: zh-Hans
+    source_fingerprint: sha256:a8b03f4c8ae1add897a902b68152c924c5ce810716458d0edb0d53048bd1827a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 明确的任务目标与相关上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:e147c2c12b6fda1b9addaac3fe38a30b6a05ed48d45bb1cbea1cef6ea5c8440c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 添加 X
+    language: zh-CN
+    source_fingerprint: sha256:6da5dbb0aff7fd00d540b972dbd733529df363be09f32973c85e46cdbcd1be8f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 实现 Y
+    language: zh-CN
+    source_fingerprint: sha256:284dab801bbac5d32d4abaa5cbbe1a18aebc0a5ae19af21bf7dbfa1f634b6e8a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已验证的功能拉取请求或已合入变更
+    language: zh-CN
+    source_fingerprint: sha256:c4cbdd1dc7f1c48b7b018a554439eda17e432fec1e163a69054f9ab07373a533
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 推荐路径
+    language: zh-Hans
+    source_fingerprint: sha256:9cd9134f4cbe4f40482d27e2fbd7dce9e83ac5862c60b1ba6b533d81292c40ca
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 选择功能入口
+    language: zh-Hans
+    source_fingerprint: sha256:88ae95c2a3af1459aa7f0c388c4a40885ff60bf33c706c3c53d0bf2b35da3fda
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: pstack 的总路由器与工作风格入口。 新功能的设计、并行实现、真实验证和审查。
+    language: zh-Hans
+    source_fingerprint: sha256:0d555239391cde1f88ae74802dd77cbc000bc0db26997d2e051516a16fdbfeee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 理解现状
+    language: zh-Hans
+    source_fingerprint: sha256:ca8da0b74609fc89219ef6481a5b2e57dc58143f57dec1d45110017ebc904c21
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 建立系统如何工作的 mental model。
+    language: zh-Hans
+    source_fingerprint: sha256:43dd8ae544ca787eb8c41c546a02dab216f597ec17c767cf96077c07135800df
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 设计方案
+    language: zh-Hans
+    source_fingerprint: sha256:270f42d4277502d25711c927f67bd157bed153f41359f796f6bde49668006180
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 在写代码前确定类型、接口、模块和数据结构。 用并行候选和盲评扩大设计空间。
+    language: zh-Hans
+    source_fingerprint: sha256:a297ff1c37e5843645b892f7a6787defa90943c18039145e540bb596a5022aea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 挑战方案
+    language: zh-Hans
+    source_fingerprint: sha256:da962e08f5cf6a875165de26f451382418844afe82d631a9e406cc8e57c37966
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 对代码或设计做多模型 adversarial review。
+    language: zh-Hans
+    source_fingerprint: sha256:75bd81a2658b8b3ed947da8497c2be0327969176d3d8650f9e0ccaa3924cc229
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.title
+    translation: 准备 PR
+    language: zh-Hans
+    source_fingerprint: sha256:7ffe60d822a1211387801a85723159db3a061fc8bc5b622ec193dbcc29cfa9e2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.why
+    translation: 把已验证 diff 整理成可审阅 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:dd0259f8e9f4e7fc9873499b71cc68870745dcec0a6ee3016177b5a10b64da06
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.title
+    translation: 审查与发布
+    language: zh-Hans
+    source_fingerprint: sha256:232174111f6daaa1ae70e3f71a4a0825c6f1b59e24ab75851a95e411c827d9bb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.why
+    translation: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    language: zh-Hans
+    source_fingerprint: sha256:fc1b763ff93da8eff05c8c93acbd9f01a2c5763c78ec894a77c0e5a6f95ace72
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.when
+    translation: 需要推进发布且已获得相应授权时。
+    language: zh-Hans
+    source_fingerprint: sha256:f847130ef2256e6718e4788cb0c2f5791fd9264689e5363c0ed44fe1decf754f
+    review_status: reviewed
+    reviewed_at: 2026-10-13

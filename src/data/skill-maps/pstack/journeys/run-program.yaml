@@ -1,80 +1,75 @@
-title: 我想批量并行推进
-summary: 我想批量并行推进：从任务入口到可检查的产物。
+title: Progress work in parallel
+summary: "Progress work in parallel: from task entry to inspectable output."
 order: 5
-when_to_use:
-- Plan and run this multi-PR migration
-- Orchestrate this project
 inputs:
-- 明确的任务目标与相关上下文。
+  - Explicit task objective and relevant context
+source_refs: []
+status: active
+when_to_use:
+  - Plan and run this multi-PR migration
+  - Orchestrate this project
 outputs:
-- continuously verified program / merged queue / verified stack
+  - continuously verified program / merged queue / verified stack
 variants:
-- id: standard
-  title: 推荐路径
-  steps:
-  - title: 选择项目入口
-    why: pstack 的总路由器与工作风格入口。 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
-    nodes:
-    - poteto-mode
-    - multi-phase-plan
-  - title: 协调与分工
-    why: 用持久 coordinator 管理跨天、几十到几百 Agent 的 program。 把可分任务并行分发给多个 worker，再聚合结果。
-    nodes:
-    - orchestrate
-    - swarm
-  - title: 保留决策依据
-    why: 把长时间 Agent 活动压缩成可审计 decision trail。
-    nodes:
-    - show-me-your-work
-  - title: 发布已验证结果
-    why: 用独立 verifier 决定哪些 PR 可以真正 land。
-    nodes:
-    - shipping
-    optional: true
-    when: 已获得发布授权且结果满足验证条件时。
-- id: alternative-1
-  title: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
-  when: 项目的交付结构适合 autopilot-full 时。
-  steps:
-  - title: multi-phase-plan
-    why: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
-    nodes:
-    - multi-phase-plan
-  - title: autopilot-full
-    why: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
-    nodes:
-    - autopilot-full
-- id: alternative-2
-  title: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
-  when: 项目的交付结构适合 autopilot-stack 时。
-  steps:
-  - title: multi-phase-plan
-    why: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
-    nodes:
-    - multi-phase-plan
-  - title: autopilot-stack
-    why: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
-    nodes:
-    - autopilot-stack
-text_languages:
-  inputs.0: zh-Hans
-  summary: zh-Hans
-  title: zh-Hans
-  variants.0.steps.0.title: zh-Hans
-  variants.0.steps.0.why: zh-Hans
-  variants.0.steps.1.title: zh-Hans
-  variants.0.steps.1.why: zh-Hans
-  variants.0.steps.2.title: zh-Hans
-  variants.0.steps.2.why: zh-Hans
-  variants.0.steps.3.title: zh-Hans
-  variants.0.steps.3.when: zh-Hans
-  variants.0.steps.3.why: zh-Hans
-  variants.0.title: zh-Hans
-  variants.1.steps.0.why: zh-Hans
-  variants.1.steps.1.why: zh-Hans
-  variants.1.title: zh-Hans
-  variants.1.when: zh-Hans
-  variants.2.steps.0.why: zh-Hans
-  variants.2.steps.1.why: zh-Hans
-  variants.2.title: zh-Hans
-  variants.2.when: zh-Hans
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the program entry
+        why: Enter through pstack's main router and create a multi-phase plan of executable owner checklists and operator audit evidence.
+        nodes:
+          - poteto-mode
+          - multi-phase-plan
+        optional: false
+        outputs: []
+      - title: Coordinate and divide responsibilities
+        why: Use a durable coordinator for multi-day programs with many agents, distribute separable work concurrently and aggregate findings.
+        nodes:
+          - orchestrate
+          - swarm
+        optional: false
+        outputs: []
+      - title: Retain decision evidence
+        why: Condense long agent activity into an auditable decision trail.
+        nodes:
+          - show-me-your-work
+        optional: false
+        outputs: []
+      - title: Publish verified results
+        why: Use independent verifiers to decide which PRs may actually land.
+        nodes:
+          - shipping
+        optional: true
+        when: Publication is authorized and results meet verification conditions.
+        outputs: []
+  - id: alternative-1
+    title: One owner takes each PR from build to merge; the root performs independent verification, countersigning and audits.
+    when: The delivery structure suits autopilot-full.
+    steps:
+      - title: multi-phase-plan
+        why: Plan large multi-phase work as executable owner checklists and evidence for operator audits.
+        nodes:
+          - multi-phase-plan
+        optional: false
+        outputs: []
+      - title: autopilot-full
+        why: One owner takes each PR from build to merge; the root performs independent verification, countersigning and audits.
+        nodes:
+          - autopilot-full
+        optional: false
+        outputs: []
+  - id: alternative-2
+    title: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+    when: The delivery structure suits autopilot-stack.
+    steps:
+      - title: multi-phase-plan
+        why: Plan large multi-phase work as executable owner checklists and evidence for operator audits.
+        nodes:
+          - multi-phase-plan
+        optional: false
+        outputs: []
+      - title: autopilot-stack
+        why: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+        nodes:
+          - autopilot-stack
+        optional: false
+        outputs: []

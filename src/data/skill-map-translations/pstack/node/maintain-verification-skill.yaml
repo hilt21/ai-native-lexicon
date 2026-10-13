@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: maintain-verification-skill
+provenance:
+  original_sha256: f9d42eaae00ba29c1af8f11d6663aeb294809bfa32ab38d1c7fc091012dc1ffc
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: maintain-verification-skill
+    language: en
+    source_fingerprint: sha256:d3278ae527c95d6473ec69c6d559a1a2e4a6e898809ef88a71192cb893e03caa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 持续校准 verification skill 和 Feature Map，防止它们随代码漂移。
+    language: zh-Hans
+    source_fingerprint: sha256:2d8f39112b0ef450978266dd69623a5dad498e734bafb475f81ac6113b32d83d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 验证
+    language: zh-CN
+    source_fingerprint: sha256:734ae52a27a7be663eff941a5758b773034c21c7c4bbd9e48a975f61789d44c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 维护
+    language: zh-CN
+    source_fingerprint: sha256:200356fd613eb6e337f469148e88a971e07da9deccffed4f20e36a3bc217f5be
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 漂移
+    language: zh-CN
+    source_fingerprint: sha256:a46d983ae3ae4330c37b800a756ad45f0ce5d4660dcc9845604e06b0cfff0b15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 验证技能
+    language: zh-CN
+    source_fingerprint: sha256:b5b2dec58dcf122b9afb8f8ab7e0de8123118b4a1cc000e67626e20aa24fe3b4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 功能地图
+    language: zh-CN
+    source_fingerprint: sha256:0b9fe12fc18d2db0cb8c4f074ba82eb67c549ed062ee74deb6f905e484aaa8ee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 当前源码
+    language: zh-CN
+    source_fingerprint: sha256:7fe23a35a2519b65431cd678b6c434074d005f08c6cc062f85702065ca6ccaeb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.3
+    translation: 实际产品
+    language: zh-CN
+    source_fingerprint: sha256:1b596a105416eec9abbe1b2056362630b1b876b2af0ebb7978aa5aa06e59b83f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 无问题、已变更或受阻的判定
+    language: zh-CN
+    source_fingerprint: sha256:69ace894981cee18fae3cd7998152efaeeec451cdaf5cf5c377297afe766c741
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已证实的修正
+    language: zh-CN
+    source_fingerprint: sha256:c5173f953dd89dc78615cdd999b28a70b20a966a8ccf25dc498a6662ad4ac97b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 可选拉取请求
+    language: zh-CN
+    source_fingerprint: sha256:58fa848d0d4ae4562e30b6642aa189c3ae0e0c86864fdaee3e924e93b4dbc550
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：future verification runs
+    language: zh-Hans
+    source_fingerprint: sha256:a7e14d7e7ab8554a5a65b8bd9b90538be68e87109a56640c5a64fbc4f69af4d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Periodic pass that keeps a project's verification skill and feature map honest: parallel source readers per feature, one live session driving every feature, at most one PR of proven corrections. Use for /maintain-verification-skill or \"audit the verify skill\"."
+    language: en
+    source_fingerprint: sha256:15239bf83f2c9c3a0d97ab35667832a46b85bc611c207e9c3bf1380e59bbd244
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 每个 feature 并行读 source，再用一个 live session 驱动全部 feature，区分 documentation drift、harness gap 和 product regression。
+    language: zh-Hans
+    source_fingerprint: sha256:0c7dfb06b2b0066b911c605058ea423af7b4f200047c6d2305e9606beb2860d3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: verification skill 已存在且产品持续演进
+    language: zh-Hans
+    source_fingerprint: sha256:d86c49a3ddb3eaa9d89df152f80b3f51b189f1188991cab6cb1436dd15a241eb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 定期 audit verify skill
+    language: zh-Hans
+    source_fingerprint: sha256:26c538ba92580a4b08a50a6a5f8b62998f7ce064390476637536ba4dd563f526
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 防止 verifier 腐化
+    language: zh-Hans
+    source_fingerprint: sha256:20393c8407d1a5c9898b1aee9679b811b3b3b0d2ed950c2ca3be3e65fbfb3f26
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 防止用错误文档掩盖产品回归
+    language: zh-Hans
+    source_fingerprint: sha256:b2e0ba3711f5f53113e964ea8438f7829a7f45ecc6b1d92e79e74de3ad9a48d0
+    review_status: reviewed
+    reviewed_at: 2026-10-13

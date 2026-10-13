@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: worktree-cleanup
+provenance:
+  original_sha256: 609a284b3982aef2f04c64bb279f7f9d9f086c600f9b33cf69217bb7b85f0387
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: worktree-cleanup
+    language: en
+    source_fingerprint: sha256:65e71c6a8e70b3ce7555849fb44e30a8b2449139f5b0fbee8340c346c8d2defa
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 安全清理旧 worktree、simulator 和大型缓存。
+    language: zh-Hans
+    source_fingerprint: sha256:7008029950c90509a08703f4f771377ad8724088fcee6e7fdec4c4ea6323c73b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: Git 工作树
+    language: zh-CN
+    source_fingerprint: sha256:edf614cde4e53cc162695748a5dccfd18ffe5994246a4507ba8fd8f531ad9113
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 聊天活动
+    language: zh-CN
+    source_fingerprint: sha256:1da1cd75145efda06b140d837a8d76b1517e1e12836fab5ab0b1e849200000f7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 磁盘状态
+    language: zh-CN
+    source_fingerprint: sha256:cece153e0c8e67344446066013e9512227d352dd8e086f503e0580b8cdfc0ac9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 回收的空间
+    language: zh-CN
+    source_fingerprint: sha256:14675045857bae794f6d2a1e463c91a1acd9cbfc1671de833f685e1b966edaa7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 已清理的工作树
+    language: zh-CN
+    source_fingerprint: sha256:8672ba00d35e45f0a041805e8e67d7e9ea3c6b5362e3a86ede60f57ec7d93fb3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 保留未清理项的原因
+    language: zh-CN
+    source_fingerprint: sha256:c17228ce67349f87c582f26912525c5334aa6161d9f9f07b363cae2f47a086b8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: audit script 分类 → 与 pinned/active chats 交叉确认 → 有 WIP 或 in-use 就暂停 → 删除 confirmed set → before/after disk proof。
+    language: zh-Hans
+    source_fingerprint: sha256:430bae1e209ac54c6f61a12d4d85a9e37ad98eff4f37823406a5ab5ed0cced94
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 磁盘压力
+    language: zh-Hans
+    source_fingerprint: sha256:26e30a91550cfac357d12bcaaef5469c96c6111e8ec27d21e396efffdbc0d149
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 大量 Agent worktree/simulator 堆积
+    language: zh-Hans
+    source_fingerprint: sha256:bc36145caf54e48329fac34da9e4667f6cf2739c9844a97dc39539f4add9997b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 误删正在使用或未提交状态
+    language: zh-Hans
+    source_fingerprint: sha256:5ca5cff0f66deff04b3b5c6e372e585944a75543530aabf839bbfe123a879982
+    review_status: reviewed
+    reviewed_at: 2026-10-13

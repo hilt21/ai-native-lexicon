@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-17
+units:
+  - path: title
+    translation: Power Automate
+    source_fingerprint: sha256:b81289216b373ce094d40614207ae65b650781944f44b77a3a53b09513e9805a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: Power Automate 为可重复的业务流程提供可预测的执行。
+    source_fingerprint: sha256:1a79e061b3d0cac3bdd21942290149e8b943aacdd7a458f046c71314aaf905eb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 团队中哪个人工审批或通知流程，现在就可以自动化？
+    source_fingerprint: sha256:68bd216515221881ceb87c15c884ddc91a09a395daf23804a89a552530dbbaba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:95a3d40585ffaf6ad4f4704bb9e2512457e82ca8e74a2da445fd82126cc71844
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 流程也需要让人们查看、编辑和管理结构化信息的地方。
+    source_fingerprint: sha256:dcaa67826ff8c0c5d0758e8ba434915bece82faf78eeff7c7d7dc2d1dec301c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 许多业务流程遵循明确规则。
+      - 这些流程不一定需要 AI 推理。
+      - Power Automate 可以连接系统并执行已定义的步骤。
+      - 它尤其适合批准、通知和数据流转。
+      - 智能体与自动化可以协同工作。
+    source_fingerprint: sha256:a4f072d73e2fc37f1f4e4de6f6bcdf386051b2778f8ab3c07108f939424418ac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 智能体收到客户请求，并判断需要经理批准。
+      - 智能体不必自行设计批准流程。
+      - Power Automate 可以启动预定义的批准流程、收集决定并返回结果。
+      - 推理与执行承担不同角色。
+    source_fingerprint: sha256:98f9873652f8169662e689aa86c6274005e75c6290c22a5a0741414ab877cec1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

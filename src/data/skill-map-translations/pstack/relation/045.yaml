@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["feature","uses","architect"]'
+provenance:
+  original_sha256: 9da80695de9a4f8a78d7f05255819d8377d9010d86b3e241888efd96ce067197
+  retained_at: 2026-10-13
+units: []

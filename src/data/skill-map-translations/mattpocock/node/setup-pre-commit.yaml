@@ -1,0 +1,105 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: setup-pre-commit
+provenance:
+  original_sha256: 08b1cc3e3d6cd48ee64514f1651a5e129a62d5c5112ca3af09114f95ceff8b1a
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: setup-pre-commit
+    language: en
+    source_fingerprint: sha256:1cbf3bcb0cb85e783aa711dfa47083c9c8d130533a67c18f5227c475b854cd1a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把格式化与已有类型检查、测试脚本接入 pre-commit，缺少的脚本省略并报告。
+    language: zh-Hans
+    source_fingerprint: sha256:a656d62a860b654be6597aee662e2f46d2eb30b03dc6906a0e7b9ceec810f839
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 其他
+    language: zh-CN
+    source_fingerprint: sha256:2c2965804cdff3aef4dc166ea49361265f63324894768e3b09aafa66aa9edb28
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:b86fd7098c7aab3defc60b35f06e5b29b44c3b83ed6707fc2dc9b7a8e23bd42e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:b639ac49cd761bc3bce20b0aa12168a7a239f008939e18381c5f525a3902e059
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前仓库
+    language: zh-Hans
+    source_fingerprint: sha256:dcab7feb497c4591f634488aff233dc574b6616ac737d8c9a5c5cfe01b38cb58
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 包管理和测试命令
+    language: zh-Hans
+    source_fingerprint: sha256:ea0eafe52193e6369e7c5a183c28ad498df22a3828bf329d63e5745330f49c4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: Husky 钩子
+    language: zh-CN
+    source_fingerprint: sha256:1dae90dfe127ff8577d99dd30a80e2eb0835b19dfaf11b39fcc2461a59f3a753
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: lint-staged 配置
+    language: zh-Hans
+    source_fingerprint: sha256:6db2b636ee1bcf70e7aca0b6a4822f69de9e796c58671c7b97e20bf42dcbce08
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 提交前检查
+    language: zh-CN
+    source_fingerprint: sha256:568887a30112bfa5a8beaaa85821076630c6c6b9e288ea5fee4ad9a0f581876d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add commit-time formatting/typechecking/testing.
+    language: en
+    source_fingerprint: sha256:a09975ff7a93ac12a8f0ab1f85d5a591846a6efd27aa8fb0e8199b299240d5c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 检测项目包管理器，复用已有 formatter 配置，接入 Husky、lint-staged 与 Prettier。只有对应 npm/package scripts 存在时才接入类型检查和测试；缺少的脚本省略并报告。完成 smoke check 后提交 hooks/config 变更，不承诺每个项目都具有完整测试。
+    language: zh-Hans
+    source_fingerprint: sha256:dc9b011254d8d780e531983d259cba1eee7347b0e230c7fc0cfbf0aadc6fabc8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 项目缺少 pre-commit guardrail。
+    language: zh-Hans
+    source_fingerprint: sha256:5c449098d734a4e5f8585cf0ab6cc498f642b3c8efe0b18aa7be3f44ca86684c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 希望提交时自动运行 formatting、typechecking 或 tests。
+    language: zh-Hans
+    source_fingerprint: sha256:78948fbf026f9450f79fa5285ca7971155955e287eb0dc379d7ed56dadeb92ad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 缩短错误反馈距离。
+    language: zh-Hans
+    source_fingerprint: sha256:ef0229b718df3dfe745d98767bc5b2f6940f1b3e38fe1bf8a23a3a2db39e39df
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把代码质量检查从人工记忆升级成自动门禁。
+    language: zh-Hans
+    source_fingerprint: sha256:9f4c981ecbcd0fdf00ea8099b40bfd3f61a6f33f85c3f64dc982f9e7373d24d4
+    review_status: reviewed
+    reviewed_at: 2026-10-13

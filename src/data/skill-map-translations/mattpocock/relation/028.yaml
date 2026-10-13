@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement","uses","tdd"]'
+provenance:
+  original_sha256: 2c5883d0c2a6c91f7d5f9205888662b753ba3c8e0f2a6fbb7153031b8ab57eb6
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 固定正文要求尽可能在事先约定的 seam 上使用 TDD；不是事后重复的独立阶段。
+    language: zh-Hans
+    source_fingerprint: sha256:67d8737336efd1687630d12530b6a9d17df8badad509a6e66f70cbcc0420e68b
+    review_status: reviewed
+    reviewed_at: 2026-10-13

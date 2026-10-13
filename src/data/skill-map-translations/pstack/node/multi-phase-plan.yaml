@@ -1,0 +1,87 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: multi-phase-plan
+provenance:
+  original_sha256: 5d06a2d2e5ade88406828c3b66a9cd22b93c534427f1608953bc83b6610e5e8a
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: multi-phase-plan
+    language: en
+    source_fingerprint: sha256:772418a0b935fe1191bd2de5bdb9802e29c8e25e7725a0de86528c0e4212490c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
+    language: zh-Hans
+    source_fingerprint: sha256:064d04adedeb341f48a37b1e3f5938e0e72d99260df1dfbe4a74e6ec3595e2f7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 项目目标
+    language: zh-CN
+    source_fingerprint: sha256:203b8bb326c4cedfe4034e24dbd348ff0cb15a62263506cd47ab99bea0c456cf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 待解决问题
+    language: zh-CN
+    source_fingerprint: sha256:1b5bb2259f9da6f2ca5b639acdf2c922b7504b967f7febd096515140e047abc1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 仓库惯例
+    language: zh-CN
+    source_fingerprint: sha256:e0ad1d8170be1824f67e3f006902b4f86b123cce51429ccb67fe275e1fc73e19
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已验证的计划文件
+    language: zh-CN
+    source_fingerprint: sha256:e8f041f161e391325f74dfd7cef1c32f42852d1fa04c0bcb77373de4cc282eac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 逐个拉取请求的检查清单
+    language: zh-CN
+    source_fingerprint: sha256:f71fc8a7b482c5bee175b016b8638ea643315274f978c48cef62844ce4fb4e85
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 已选定的执行操作手册
+    language: zh-CN
+    source_fingerprint: sha256:e57c820e32d6d6f6fc488423697ab986e3b98482164f6cad01990818816b2b18
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: prototype 解决未知 → subagent 探索 → 每 PR 一段 executable checklist → live/perf/unit verification blocks → plan checker → handoff，不实施。
+    language: zh-Hans
+    source_fingerprint: sha256:bee1a834092dafc985e0a907689ac02a553fe62e958a81179739b815829a1634
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 大型 multi-PR change
+    language: zh-Hans
+    source_fingerprint: sha256:1938325f44c4d45d48f7a08b56eec79c4ef16d4e2bbd9ab9794b786084653091
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要先规划再执行
+    language: zh-Hans
+    source_fingerprint: sha256:59be2094926dc52f0cd5a66a46564ceaec697e8465d9d8162b16c941069a7a4a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 计划只有主题没有执行接口
+    language: zh-Hans
+    source_fingerprint: sha256:a3413b03e1971c932bb1344bff378b2bf196d45dc5349e29d594a0b4b11056fc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把未知假设带进执行阶段
+    language: zh-Hans
+    source_fingerprint: sha256:a7696a91dc32c7d24711b8504a935506547e20143f071f76a841f5e8bcbc65b2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

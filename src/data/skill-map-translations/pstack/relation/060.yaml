@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["refactoring","governed_by","principle-laziness-protocol"]'
+provenance:
+  original_sha256: 7c6d2ccaa0f0d489480c1faf47a37a901f31e77883ad68ea3587b911421713cf
+  retained_at: 2026-10-13
+units: []

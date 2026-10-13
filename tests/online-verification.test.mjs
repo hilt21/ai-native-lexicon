@@ -86,7 +86,7 @@ test('inventory derives both locales and preserves application resource boundari
     assert.equal(inventory.pages.filter((p) => p.kind === kind).length, inventory.coverage.collections[kind].records * 2);
     assert.ok(inventory.coverage.collections[kind].entries.every((r) => r.total === r.translated + r.missing + r.draft + r.stale));
   }
-  assert.ok(inventory.coverage.skillMaps.every((m) => m.translationOverlay === 'outside-current-contract'));
+  assert.ok(inventory.coverage.skillMaps.every((m) => m.translationOverlay === 'shared-prose-resolver'));
   assert.ok(inventory.pages.every((p) => !p.path.includes('undefined')));
 });
 
@@ -136,4 +136,22 @@ test('Markdown summary groups page risks and preserves affected URLs', async () 
     assert.ok(markdown.includes(`${target}${sample.path}`));
     assert.ok(markdown.includes('share canonical targets guide'));
   });
+});
+
+test('full map field verification rejects missing or wrong-language steps, taxonomy and relation notes', () => {
+  const target = new URL('https://example.test/lexicon/');
+  const units = [
+    { owner: 'map/taxonomy.layers.0.label', text: '操作手册', actualLang: 'zh-CN' },
+    { owner: 'journey/variants.0.steps.0.when', text: '存在可靠的本地测试目标时。', actualLang: 'zh-CN' },
+    { owner: 'relation/note', text: '先证明失败，再修复。', actualLang: 'zh-CN' },
+  ];
+  const expected = { ...sample, mapTexts: units };
+  const source = html(target.href, sample).replace('</body>', `${units.map((u) => `<p lang="${u.actualLang}">${u.text}</p>`).join('')}</body>`);
+  assert.deepEqual(inspectHtml(source, expected, target).failures, []);
+  for (const u of units) {
+    const changed = source.replace(`<p lang="${u.actualLang}">${u.text}</p>`, `<p lang="en">${u.text}</p>`);
+    assert.ok(inspectHtml(changed, expected, target).failures.some((f) => f.includes(u.owner)));
+    const missing = source.replace(`<p lang="${u.actualLang}">${u.text}</p>`, '');
+    assert.ok(inspectHtml(missing, expected, target).failures.some((f) => f.includes(u.owner)));
+  }
 });

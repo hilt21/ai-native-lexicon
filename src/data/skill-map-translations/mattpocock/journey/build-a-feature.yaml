@@ -1,0 +1,579 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: journey
+target_id: build-a-feature
+provenance:
+  original_sha256: ae3e29bf1f151c51e1acc38beca5c881728241f42680afcc7e35aee30b0d2bdb
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我要开发一个 Feature
+    language: zh-Hans
+    source_fingerprint: sha256:845eb07dad01c7583aa0601e5685c4ff14416c604f314f081d243a58b9b889d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 小而明确的工作直接实施；多 session 工作先固化 spec 和票据，再在逐票实施与整图编排之间二选一。实施内部包含 TDD 与 review。
+    language: zh-Hans
+    source_fingerprint: sha256:9d377d54e0f915dbbb9de3ca7627bb2da58e76d6a50c5b14e29137c6a198c24a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: feature idea 或 agent-ready issue
+    language: zh-Hans
+    source_fingerprint: sha256:1d74cc3767e98351829fe66bcf5b6f5e765eb5b91eae875f8ca1d601e4da48d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 要实现一个新的产品行为或工程变更。
+    language: zh-Hans
+    source_fingerprint: sha256:aac3156829d0e0de1bda339d3124d6411b3941228b190209004095f78836b6fe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已实现并验证的代码
+    language: zh-Hans
+    source_fingerprint: sha256:5f50609515b9c5b78b6d93f6504f51761f7059a07073be882ef85d6a94f20f3f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 按实施方式产生的 review 结果与 commit 或 integration branch
+    language: zh-Hans
+    source_fingerprint: sha256:c682ca0ba4e3f670c395a670b74cbed8daacaa5f593f17017289ac3abaaf8dea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 适用时的 PR body 与环境改进候选
+    language: zh-Hans
+    source_fingerprint: sha256:57c96d44c79c3441cfabfcd837c5e3cb1f5a284b8aa8b382e18c8d2c2485e0ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 多 session：逐票 implement
+    language: zh-Hans
+    source_fingerprint: sha256:8cada40853ecfba9a59dcfae7d7f432430b26b858400391f9b789369c79da4ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.when
+    translation: 已有或需要生成自包含票据，用户希望按 blockers-first 顺序手工推进；与整图 implement-spec 二选一。
+    language: zh-Hans
+    source_fingerprint: sha256:4b02ccbdcc3371eb2f623c826f16bfe34f036cc05f6f15b128b03043396bd498
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 首次使用先完成配置
+    language: zh-Hans
+    source_fingerprint: sha256:cf7aeff3ae91486ee475042663a72b7ccd65cc799efb183539d0f9b58dc1060a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+    language: zh-Hans
+    source_fingerprint: sha256:59a6e49bccbbfb68bcff8ad6b17645f0e21f507581d3021317cd9475b8f80c62
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.when
+    translation: 首次工程工作，或项目配置仍缺失。
+    language: zh-Hans
+    source_fingerprint: sha256:b6d51eded4bb5a318d0c1157df314325416b2406f78be987bf40d6de47e36798
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.outputs.0
+    translation: 可供后续入口读取的项目配置
+    language: zh-Hans
+    source_fingerprint: sha256:14c6ada8c105db43844a71b707441ed2dabf4005e3e4746089da3c25b0a84935
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 澄清仍未解决的设计
+    language: zh-Hans
+    source_fingerprint: sha256:422ba0a1761f84ecdc5f9e945011b7b33f0d3fa09b318d3b7c32a416afffd271
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 在 working directory 中保留领域词汇与设计决策；明确的既有 spec 不需要重新追问。
+    language: zh-Hans
+    source_fingerprint: sha256:16e5aabc97a309320d5a2019fbc264d9348a013176494798a043a70dd4b03ea7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.when
+    translation: 需求或设计仍有未决分支。
+    language: zh-Hans
+    source_fingerprint: sha256:1550e2bf03dac6a8f93e3b811b14a3f0099d6ed0117be9e5e185fbf15d5132db
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.outputs.0
+    translation: 澄清的设计、GLOSSARY.md 和必要 ADR
+    language: zh-Hans
+    source_fingerprint: sha256:c01425ac13f2c7caf89751ff82854bb0e0a74593127292b835834245afb54467
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 综合规格并确认测试边界
+    language: zh-Hans
+    source_fingerprint: sha256:95def8043a55cee3c9edf8644473168276e772b0687c6b4cbf758500b839c3e4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 把已讨论的决定写成 durable spec；测试 seam 要先与用户确认。
+    language: zh-Hans
+    source_fingerprint: sha256:56db1bb40d33ca93d6fae885ca510b6c8435c804001d8692e59b3975d524a11d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 准备进入多 session 工作，且尚无完整 spec。
+    language: zh-Hans
+    source_fingerprint: sha256:357bab59eac627eace6b1e01148282b177311f9fd94b832c6d2e31ab03026334
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.outputs.0
+    translation: 已发布的 agent-ready spec 与确认的 seam
+    language: zh-Hans
+    source_fingerprint: sha256:504c13ed7d667dece731eee5b49f0f76b17cb94a31418f29a642b431941fce27
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 确认 tracer-bullet 拆票方案
+    language: zh-Hans
+    source_fingerprint: sha256:a249aff821f9cb4e98ba69bd44f1a51cf2325134daa6f291b90edaa841fa7647
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 每票覆盖完整可演示行为并能在一个新 context 内完成；确认粒度与阻塞关系后发布，必要 prefactor 先做。
+    language: zh-Hans
+    source_fingerprint: sha256:d5f7a36e15acdeb269288f2663b2535dd1ae90cea5a75fc83952d14ed44cdb09
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 尚无 agent-ready tickets。
+    language: zh-Hans
+    source_fingerprint: sha256:69c088ee1633317fbfee88557c4334aea601370d4596ef89b4982c1deb830545
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.outputs.0
+    translation: 已批准并发布的 tickets 与 blocking edges
+    language: zh-Hans
+    source_fingerprint: sha256:6ccf95dbe3d87d6fb5da19464d162137969f20f11f973ef7a781f2409edcf068
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.title
+    translation: 每票在新上下文中实施
+    language: zh-Hans
+    source_fingerprint: sha256:b2e3fbfd24c5723b601323095e3e4a4fb630f6a03c31c8cec9b98294ccdc58bf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.why
+    translation: 用户显式启动 implement；每票按确认 seam 做 red→green，内部完成 code-review 后提交。票据自包含，可在每票之间清空旧上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:66d9845d6d7281d5448beb3ac3c249c35f3008eb404d3ba6cc18262a9fbdd3e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.outputs.0
+    translation: 每票的代码、测试、review 与 commit
+    language: zh-Hans
+    source_fingerprint: sha256:275d05c1e17cf9a881d5c9927da4df386bfe2e0541aa7526064bbc1a7613f5a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.title
+    translation: 编写 PR 说明
+    language: zh-Hans
+    source_fingerprint: sha256:784aad2bfbfb212199adaa6774884047c44569671d347ed0984383630ed31f44
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.why
+    translation: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+    language: zh-Hans
+    source_fingerprint: sha256:3d1451ace8574305fecb2136f463b4903afda7539511287124fb59817ee9c76f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.when
+    translation: 通过 pull request 交付。
+    language: zh-Hans
+    source_fingerprint: sha256:f0893c2c51cf4092d881ae71a833873806502533adac9206b6ad3025e8e88ca1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.outputs.0
+    translation: PR body 与验证证据
+    language: zh-Hans
+    source_fingerprint: sha256:b28430cb69d6f819ffd1a1dd20a61c706a9d2faab97738191e6fffb00e579679
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.title
+    translation: 由用户选择是否复盘
+    language: zh-Hans
+    source_fingerprint: sha256:a8d858ea10d67cc3dda04c6cad0de03f8a6410614c596ea9a75d8e65108b9f96
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.why
+    translation: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+    language: zh-Hans
+    source_fingerprint: sha256:b04591250951ca809c19de16fcbdbd4543c95c80317cda3265f30d4c3f59fc96
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.when
+    translation: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+    language: zh-Hans
+    source_fingerprint: sha256:d2d51a3222e7acb91eb84af8f79a50c3ba974f894874382b3ae11db9f33fcacc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.outputs.0
+    translation: 按严重度排列的环境改进候选
+    language: zh-Hans
+    source_fingerprint: sha256:3a06e79bed38cc100ee24613a6b3105f1df38a87e2e16360305c297cd33b00c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.title
+    translation: 多 session：整图 implement-spec
+    language: zh-Hans
+    source_fingerprint: sha256:9bab1733925b1e7da7b5b0edb1304864c35c24b568d13cdcbf8551f4523d7ae6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.when
+    translation: 用户希望把整个 spec 的 ticket graph 交给编排者，在 ready frontier 上并行推进；与逐票 implement 二选一。
+    language: zh-Hans
+    source_fingerprint: sha256:b88f9ecc2f582f8adfd83d45b8c4499c118a47dda7fa61e91196858f37b640ea
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.title
+    translation: 首次使用先完成配置
+    language: zh-Hans
+    source_fingerprint: sha256:8928c55a8e44cfe8e3acd080c4e2bf2d89c50ba7afe754b28d3bc968542d0698
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.why
+    translation: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+    language: zh-Hans
+    source_fingerprint: sha256:101b6416dc3d307982ae912f25d9d0fea4ec9ec540208a6c9c0462eb16165751
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.when
+    translation: 首次工程工作，或项目配置仍缺失。
+    language: zh-Hans
+    source_fingerprint: sha256:22f39b4726f71e3c6caeeae15a95e37591e0fb8fb9e8c3430b6b7a3b264a8857
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.0.outputs.0
+    translation: 可供后续入口读取的项目配置
+    language: zh-Hans
+    source_fingerprint: sha256:bb63f015179df58f9fdac48508803997204a4aa86c1063c96983c61873a9ead6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.title
+    translation: 澄清仍未解决的设计
+    language: zh-Hans
+    source_fingerprint: sha256:a4bb00925cf38553e514446d274ec6e7e7d2d0ac6e87a4533124b5cdd3b2aa3f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.why
+    translation: 在 working directory 中保留领域词汇与设计决策；明确的既有 spec 不需要重新追问。
+    language: zh-Hans
+    source_fingerprint: sha256:4b8b510ad5354ccb3e469bed68e5b4517cbdb63bada1c4969699caec6b1e367e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.when
+    translation: 需求或设计仍有未决分支。
+    language: zh-Hans
+    source_fingerprint: sha256:e3b097092e822a683807eb291a47a78646c7898eb939e28ed663293d77057582
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.1.outputs.0
+    translation: 澄清的设计、GLOSSARY.md 和必要 ADR
+    language: zh-Hans
+    source_fingerprint: sha256:0e4820ab96c192b05f756850cb2d3772230ac891ebf80a708f4b842e7c665a1f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.2.title
+    translation: 综合规格并确认测试边界
+    language: zh-Hans
+    source_fingerprint: sha256:413ee5738683dc58fc2ee200243d46e5fbdfe94a9e9ce970fa901f75e19bb97e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.2.why
+    translation: 把已讨论的决定写成 durable spec；测试 seam 要先与用户确认。
+    language: zh-Hans
+    source_fingerprint: sha256:56a8c038961a839b3248998f1e87ee7bc826215e3a9a39daea7b05a771cc601d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.2.when
+    translation: 准备进入多 session 工作，且尚无完整 spec。
+    language: zh-Hans
+    source_fingerprint: sha256:8ff4a53d3f345135e73ef262f86dc2d074ed0801a0bde7f08000651f36134e72
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.2.outputs.0
+    translation: 已发布的 agent-ready spec 与确认的 seam
+    language: zh-Hans
+    source_fingerprint: sha256:41c41890236958159fcd22e78e5694e9e9a490f38becd0360d34edacea07f4ba
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.3.title
+    translation: 确认 tracer-bullet 拆票方案
+    language: zh-Hans
+    source_fingerprint: sha256:57c528d390c330512720794689ac56166477fedea0196ded4f54d009bbb41322
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.3.why
+    translation: 每票覆盖完整可演示行为并能在一个新 context 内完成；确认粒度与阻塞关系后发布，必要 prefactor 先做。
+    language: zh-Hans
+    source_fingerprint: sha256:b51028d750a78d0bd9f2d5e345fa3e1e76190fcae8885ba462409106eb25937d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.3.when
+    translation: 尚无 agent-ready tickets。
+    language: zh-Hans
+    source_fingerprint: sha256:2b44942eff109b8b6570ec675fda5052c2c2bc8db8d787de769abbe5d0ffdc2f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.3.outputs.0
+    translation: 已批准并发布的 tickets 与 blocking edges
+    language: zh-Hans
+    source_fingerprint: sha256:9bccc8e7417269a03c0f6ebc33554ffb6b4541a9df007c13e6535208b48196d1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.4.title
+    translation: 编排整个票据图
+    language: zh-Hans
+    source_fingerprint: sha256:be76c895f8505aa1bf5ff0c0abcf33e1ab526b1c50e50b47313ff1b52fd9dd53
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.4.why
+    translation: 用户显式启动 implement-spec；各 implementer 在独立 worktree 用 TDD 实施，落到 integration branch，再统一 code-review。无需随后重跑另一种实施入口。
+    language: zh-Hans
+    source_fingerprint: sha256:e998f5690eab81a29b9b63b4b7b540bfc925b412e8e2a93dce8c6f4b49b68e66
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.4.outputs.0
+    translation: integration branch、票据完成状态与全图 review
+    language: zh-Hans
+    source_fingerprint: sha256:2136648e73999b1ab6f6640c6d30df63847003482c38082b25a064119e5d5082
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.5.title
+    translation: 编写 PR 说明
+    language: zh-Hans
+    source_fingerprint: sha256:eee075e83f029c5441cc24278980a43b208047466c77c1e2e06c1d681e1e9517
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.5.why
+    translation: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+    language: zh-Hans
+    source_fingerprint: sha256:2daed2ceb06f42d20697ac7825a706f3e3a9929f4ea88c469324422cb4ae0bfe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.5.when
+    translation: 通过 pull request 交付。
+    language: zh-Hans
+    source_fingerprint: sha256:6910f0b100fab9faac6976744efd6ab991e1205f0e3e298d9de7857a0b988e8d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.5.outputs.0
+    translation: PR body 与验证证据
+    language: zh-Hans
+    source_fingerprint: sha256:6e1391abaa08da78b3e21d2a7d2eefb6271f19cd34286a63901e3acabd45c980
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.6.title
+    translation: 由用户选择是否复盘
+    language: zh-Hans
+    source_fingerprint: sha256:7cc161d8cc7178e3d30821b071defda2da73f889bd668d8539bdc701b5502258
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.6.why
+    translation: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+    language: zh-Hans
+    source_fingerprint: sha256:83583d70b336a06de88e3e5b039552b5ba995f09d504a33fa7b3e242d0067eb1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.6.when
+    translation: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+    language: zh-Hans
+    source_fingerprint: sha256:d97d382bddbddea280f1f942fe1fb1027460b249a3cdb721060e1f1e4059d25a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.1.steps.6.outputs.0
+    translation: 按严重度排列的环境改进候选
+    language: zh-Hans
+    source_fingerprint: sha256:cb959253341865a2bc694b58559b0f3335978528871406479449231fae10cfe8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.title
+    translation: 单 session：直接 implement
+    language: zh-Hans
+    source_fingerprint: sha256:3cfcf8e1b69275752df7113d77eb9a909e33d51f8c7619a0a8d259d1c8a42331
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.when
+    translation: 工作小而明确，已约定行为与测试边界，不需要 spec/tickets 分阶段。
+    language: zh-Hans
+    source_fingerprint: sha256:4644a20d7c4a35ded85f83c7b90f929807714986a2f9a3bc4dce8d676b46b0b0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.0.title
+    translation: 在当前上下文直接实施
+    language: zh-Hans
+    source_fingerprint: sha256:a5586e1f055b92e5d71eaf57fdeeb0f42ce3038c220e25fb91f3b2ca48484d7a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.0.why
+    translation: 用户显式启动 implement；TDD 与 code-review 在内部完成，避免把它们写成之后重复执行的阶段。
+    language: zh-Hans
+    source_fingerprint: sha256:c89001e38538c002f645871951e695e75f5140c2e400a6c5bb10b25a5b5ac9b6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.0.outputs.0
+    translation: 代码、验证、review 和 commit
+    language: zh-Hans
+    source_fingerprint: sha256:a0d79727ddfe0ea14cbc1c0f0fd50b2a900c098159ac970ae447c8e186bdd65d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.1.title
+    translation: 编写 PR 说明
+    language: zh-Hans
+    source_fingerprint: sha256:fd81a91c30923761bdad211dce59345a0da087795df4534e997ea7464e21aef6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.1.why
+    translation: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+    language: zh-Hans
+    source_fingerprint: sha256:d3baf521d47d1e705f47f00622b56d2ec2f2a9f89025e8a61db1a79ce1a1a361
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.1.when
+    translation: 通过 pull request 交付。
+    language: zh-Hans
+    source_fingerprint: sha256:c75747d0276b1de59273ed42c1895db4a5d9cfd9e2e7c2131945210ae88db5da
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.1.outputs.0
+    translation: PR body 与验证证据
+    language: zh-Hans
+    source_fingerprint: sha256:88921bbadadca06e02df64f785326d9c8e96eeb50e651df6dace940be344ad0a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.2.title
+    translation: 由用户选择是否复盘
+    language: zh-Hans
+    source_fingerprint: sha256:52d388bd9268836f474810b4a21f8fe3de85ee2500dcf3a3d5de2d4c6a5fac61
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.2.why
+    translation: 复盘读取原始 session 记录并建议环境改进，候选由人选择；建议不自动应用。
+    language: zh-Hans
+    source_fingerprint: sha256:76d84e27d5f27e5fb582362d3196b0880b56220997f7c3f3cb00a5366e749891
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.2.when
+    translation: 用户希望总结这次工作的环境摩擦，尤其是实施不顺时。
+    language: zh-Hans
+    source_fingerprint: sha256:fc8cd6e33940dc793c032444ef72575a5cba21807d675203a083275022f34e54
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.2.steps.2.outputs.0
+    translation: 按严重度排列的环境改进候选
+    language: zh-Hans
+    source_fingerprint: sha256:c1fa2e6f4d2726354dc68cdfab34e4f2949e78bc5dd020f7f79c1690ade1b580
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.title
+    translation: 外部原始请求：先 triage
+    language: zh-Hans
+    source_fingerprint: sha256:4a7995a90152eaf38ad8ab3cbec029f44c3cbd5b495952a65e8a24a0780eb4e4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.when
+    translation: 未由 to-tickets 创建的外部 bug report、feature request 或 PR 尚未准备好；已 agent-ready 的票不走此分支。
+    language: zh-Hans
+    source_fingerprint: sha256:60bb9ca4410c83e459ca9925984d508bd457a085e97d07e23b72548853fa9e40
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.0.title
+    translation: 首次使用先完成配置
+    language: zh-Hans
+    source_fingerprint: sha256:6975c0b00ffb274a2c96a541cb328199a962b708b2812f1b1ce9b4bc032c8942
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.0.why
+    translation: 这些工程入口需要项目的 issue tracker、triage 标签与领域文档布局；已经配置的项目直接继续。
+    language: zh-Hans
+    source_fingerprint: sha256:3aed32f2363b7b2bb63948b500523972773333b2cd0686d81eabc21e35de76bb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.0.when
+    translation: 首次工程工作，或项目配置仍缺失。
+    language: zh-Hans
+    source_fingerprint: sha256:0e6263cbc4799387c25688a08d0b59f02c8bb0ca8292e279f2346b2e5c7a9c58
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.0.outputs.0
+    translation: 可供后续入口读取的项目配置
+    language: zh-Hans
+    source_fingerprint: sha256:509c36d75764541590a407c3550a637f0669a8b9ceef1d5c3a2691a7cbd09eb0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.1.title
+    translation: 分类并验证外部输入
+    language: zh-Hans
+    source_fingerprint: sha256:ca7c98c17e4505c44da320a8a5e510149b3d07600a24737449dab3e55e183abc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.1.why
+    translation: triage 先建议并等待维护者方向，再验证事实，必要时补齐设计；结果可能是 needs-info、ready-for-human、wontfix 或 ready-for-agent，只有后者进入实施。
+    language: zh-Hans
+    source_fingerprint: sha256:f4ad8431c69841c747d8e5b7a2f97085405c0fc3e9260242e4c37d1f968df427
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.1.outputs.0
+    translation: 经确认的处理方向与状态；ready-for-agent 时的 brief
+    language: zh-Hans
+    source_fingerprint: sha256:da971d72f8ab6e7b1bdde6c4566e6c311a7e513c3425176c027fdf766187e039
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.2.title
+    translation: 实施已准备好的工作
+    language: zh-Hans
+    source_fingerprint: sha256:b3d163ba5e2a347291c2d889ac18dc49a74008e84e0da2c0c2a5651f268905cc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.2.why
+    translation: 用户显式启动 implement；其内部使用已确认 seam 的 TDD 和 code-review，不再重复 triage。
+    language: zh-Hans
+    source_fingerprint: sha256:efab7da44d6a12a16f1fa71e39a5ebf578accff121cc35a22ba55e72a44ee09c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.2.when
+    translation: triage 得到维护者确认的 ready-for-agent 结果；其他状态先停在对应处理方向。
+    language: zh-Hans
+    source_fingerprint: sha256:5cdbe4fa79833df91e76b1dd1fbb0e9a1360912b1f2e4258345981e577310908
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.2.outputs.0
+    translation: 实现、验证、review 和 commit
+    language: zh-Hans
+    source_fingerprint: sha256:7382ae6589a4158473af9d4383e391cf38977bdd8c5479daf924db0e73087602
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.3.title
+    translation: 编写 PR 说明
+    language: zh-Hans
+    source_fingerprint: sha256:4e7d4e49384e7f17051103a267a96791a24c453b32ee0e5931e6c8b6fb80e5e3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.3.why
+    translation: Agent 写 PR body 时使用此能力；创建、推送或合并仍由当前任务授权决定。
+    language: zh-Hans
+    source_fingerprint: sha256:c13ff66068fee12f5f33219b2322cec4659dcc9a5a8287c895acc28a9eb1bbff
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.3.when
+    translation: 通过 pull request 交付。
+    language: zh-Hans
+    source_fingerprint: sha256:57315146fd92bb8a9c9841b5cf24fe518b35619b7921bb95fc13cbc111dc8411
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.3.steps.3.outputs.0
+    translation: PR body 与验证证据
+    language: zh-Hans
+    source_fingerprint: sha256:395fe311098f568278f4291375208899b438871821aaf8604380fa9221221416
+    review_status: reviewed
+    reviewed_at: 2026-10-13

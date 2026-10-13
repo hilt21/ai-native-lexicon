@@ -1,0 +1,2542 @@
+{
+  "reviewed_at": "2026-10-13",
+  "baseline": "35896f70d3ab5307962061f21acce7f352ab62fc",
+  "basis": "Maintainer requested complete i18n review and publication; all prose reviewed and semantic corrections applied.",
+  "originalChineseUnitsRetained": 1153,
+  "newChineseMapUnits": 630,
+  "retainedSourceAndLiteralMapUnits": 205,
+  "records": [
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/build-a-feature.yaml",
+      "sha256": "24628781f83bc7e9490b809c10aba58a9ee0366b7fbd63d91f17aa6b1cdc83f9"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/choose-a-skill.yaml",
+      "sha256": "753725cf741afd1f89c12721a4c66187893590c5ab72ba960cf69328f4bd79d9"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/clarify-an-idea.yaml",
+      "sha256": "d14da6cec771dd7072ec1c7c51d73a017afd88ee56120c2bdfacb40988c32d6c"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/fix-a-hard-bug.yaml",
+      "sha256": "dbfeba6d7fc864715c727bf3905b41ff909d38120e9001d3352c0fcb41b810a1"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/handoff-work.yaml",
+      "sha256": "28369fd9481501b4c7e706b405a29faad6e04b66e7dab7acb0700e4f886d2a95"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/improve-codebase.yaml",
+      "sha256": "0a95ccf01c5ea23f49815ede9d8437314e6fba446805fd2d52d5e0287aa1b20e"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/journey/plan-a-huge-effort.yaml",
+      "sha256": "69247987b221050aa50f6b2410d126ec62d72b243e36a0f1fdc0ab007ff83b30"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/map/mattpocock.yaml",
+      "sha256": "9e364af0149593f41f873c59e0e0744071c2499f3286b091b11f33d62627766d"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/ask-matt.yaml",
+      "sha256": "9bf939dd115abb0b6ebfa118d8d83f23e246f4ca10ce9d37d769743f968fc3f9"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/code-review.yaml",
+      "sha256": "8f13dc323075d3cab9f20f9b07bd28d5b42403fb113b415cda9f5f8cb12a60ac"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/codebase-design.yaml",
+      "sha256": "ab51b0603365575e77ddc6c6f0756c433b4bd15e58791110d0529022d21e1dd2"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/diagnosing-bugs.yaml",
+      "sha256": "ec21f9b31dbfa8569e2b94e1e7df350c8d494d8c13c7feab3bc902cc84d50214"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/domain-modeling.yaml",
+      "sha256": "635e841dc6a641c0384ab18980d014b0ec13799dea5c152c365596f7a13c82d2"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/git-guardrails-claude-code.yaml",
+      "sha256": "2cbca4a2c2a2add71fc91b471bae4621660118fbd757c870a56c75a84906fd65"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/grill-me.yaml",
+      "sha256": "4aaa3cb4497684df7e3f839d214dd8c06fcc945f76373dd3ead2019a30653525"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/grill-with-docs.yaml",
+      "sha256": "307056d17dbb39fdc59af0e5c4a357c3d398faaeb89b8a5eefe380584964f729"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/grilling.yaml",
+      "sha256": "4dbbfd99ee9e540bd9d984e4cc03afb8d2a457972acd82c396f4a4000eed7fa9"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/handoff.yaml",
+      "sha256": "84f47535b6826335a68cec6ed09f857095c7d3dd4076e12d045d5f7abf85e46f"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/implement-spec.yaml",
+      "sha256": "5515f979ef9d3d1d3ecb83b2d1b5a847f62cd5206260b76aa5e8617e09fde88d"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/implement.yaml",
+      "sha256": "a60c30c4283b480397bf4470927f7873a0cf8a162507979105b2e5308c254906"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/improve-codebase-architecture.yaml",
+      "sha256": "ae7b85972ef4197724425f7795c36ebf87da92793bb524ca9968f783081c1fdb"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/migrate-to-shoehorn.yaml",
+      "sha256": "119c83f66b3a323beb4c7dc59aa5e207a4b4415f7f85b69c5ea2df9d9f0c605b"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/pr.yaml",
+      "sha256": "ab175133d124f5cbcdba2c9e6b8e9c36f835430c690ddad8be09ed6bd3bf24f4"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/prototype.yaml",
+      "sha256": "f9de8aa5fe575839a1c8147d43e6029056065d8175ad7d19568359ebb74254ce"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/research.yaml",
+      "sha256": "461676a2cff3e9daa7123542bab94f19b73cfb12fadee96d6519d7c3d06d630d"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/retro.yaml",
+      "sha256": "91d9a5e325f9a2fb549f795096d1c12cf7b09efc4fb558702e4834ed9d311cf3"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/scaffold-exercises.yaml",
+      "sha256": "178872d5a14c03132c8f22e6e9780b620ef7a1924bf68423213af24f41f15c24"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/setup-matt-pocock-skills.yaml",
+      "sha256": "7229f97e5ace853407585450e573971ceca8fa09cf4b275e8e856f4ca4fb10fe"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/setup-pre-commit.yaml",
+      "sha256": "35335422d0bf4ab1b23fb973598cb127d3d6b6c92ca9f308c5d279d167606061"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/tdd.yaml",
+      "sha256": "3d9da472be8c228cb084c40065d61b80898c44ec8bcd514f9160c164e02ea5f4"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/teach.yaml",
+      "sha256": "552a754474f87f36766e7407994480cc72a8dec2bc419ef0ce4544edec0824ae"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/to-questionnaire.yaml",
+      "sha256": "697e284d4c7f4ee8cd171b511698ff597aea29424ecb6ee599482de6889de41a"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/to-spec.yaml",
+      "sha256": "6a3604e594ee05cca6436e56c464890cd3e40532408c83479fba24cf168b24cf"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/to-tickets.yaml",
+      "sha256": "dc8d96fa19c93faef4d42d2783c9c756e68b723a9bd1678ea59bf8be7c57b763"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/triage.yaml",
+      "sha256": "f9a22b8ee7e2538ff25f6f7eb311080167fe65389e7c556cc3b86911b1cfbc25"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/wait-what.yaml",
+      "sha256": "a0185943669018c9ec3bdea75d5c27ff99f94171acbf66eba99e3121caa37fd0"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/wayfinder.yaml",
+      "sha256": "7695cb614d422a3fe31ad8c5d6491ee8f9f737e301d1763c0bad261d97f9c760"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/wizard.yaml",
+      "sha256": "3df5a2b6c0c8495a4ccc450cc2966ec852841160b6297be09285a4d0386e24f2"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/node/writing-for-agents.yaml",
+      "sha256": "4fe0247df6a831eb23e972ff5f6506fbd36391250fd9eaeba68b4b4ce3fc9959"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/000.yaml",
+      "sha256": "b742287e076963aee0f60495e528fea30b395f4271f6c9ec3fdc12a92cc1ab36"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/001.yaml",
+      "sha256": "42be4823afa37ce3c3b8c4f30724ea3d81773d6b621b16698a41480e4cf00852"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/002.yaml",
+      "sha256": "913b7a8239a85d880f896de50edf72653ee8fb62e0fd8efd4f249507cde5138f"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/003.yaml",
+      "sha256": "a46a40478dc0fb8d344a421baaa36fe1cf14de5ad2be550ac17afd2b1f56e5ad"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/004.yaml",
+      "sha256": "b0c3145689ba7e24bf9577655a6b28cdbbcc5db93054b16363b35c76d2d914a0"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/005.yaml",
+      "sha256": "03de8f65c9279fa8cc2bcaca90cee24fbfb9498a1a13f14cc9cc71147aa2400f"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/006.yaml",
+      "sha256": "206c2b0efe88ee686658b830cfb79c9b3b76b0685a21699d040b272d27cded08"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/007.yaml",
+      "sha256": "6a7b332945d587e62b5f6200cd775b2a2cf43a560de658612d8d3548cd68debf"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/008.yaml",
+      "sha256": "dbf86c79e606ed6762dc5b0a116b191765975add588c0e9e4bfe31004ee5d7e8"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/009.yaml",
+      "sha256": "5efae7f1318f23a32f41402bff38e1df9d8479fb1588a6b8db64825eaaf6fb5f"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/010.yaml",
+      "sha256": "89b9735b3414fb76fccf1fe565a40cf8c4005016ee106208dd191da5fe7acec9"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/011.yaml",
+      "sha256": "4c719f2befea4e48303d017d68c211c38c79045b73de4289eed75c56ff0c374b"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/012.yaml",
+      "sha256": "9423ee15318353fb70d8df31f2809f67f23d3bd180d03935429f71c433d5a591"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/013.yaml",
+      "sha256": "a7497847d737800564fc9358c4c339d30f248222043f766ee2d5da0a4142c941"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/014.yaml",
+      "sha256": "9de9185bd13ab1f30f40276f553598b15a3f4c9c0ecfba3741ea13cb39a815ca"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/015.yaml",
+      "sha256": "3246ca68bfaee82672d36d2d619d01a34c51a89d3ea1432c73c00eabf0de07c3"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/016.yaml",
+      "sha256": "177ef7bda4a24fcd9f1547d28746d30b0f6a20c74d4b4a6f1d62477d02fafb28"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/017.yaml",
+      "sha256": "7dabc4fce9f4bfe071fd756008190b5fc437ece144842edbcdfe682997be6f96"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/018.yaml",
+      "sha256": "f0801a29bf817eb05540a03b41f06d00ec49faafab98da96496744dd88892b92"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/019.yaml",
+      "sha256": "39469437c30f86f99aa7496814ac077163f4b75b01fe74d431ee04eecd794abf"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/020.yaml",
+      "sha256": "115c565fe9d5a07be4725ce467355022bc6172b1424cab9cf19b9312e32369d8"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/021.yaml",
+      "sha256": "83b304a3896ca9f37dbdb1285029be52b44e6d2d306502ec383e07819c5e8723"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/022.yaml",
+      "sha256": "90e1cbf6e16be55b9fdb682a5e19095f4ae7b45859904baeedd52b678bfee863"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/023.yaml",
+      "sha256": "0a201e8ac955a768fae31b05013e766d24db4a28163f94846e61ca6e46f9ff54"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/024.yaml",
+      "sha256": "d96f6a3e39f0a3804d8ff5182605645e18adc6cc459c488bc65d9c1fc05ee818"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/025.yaml",
+      "sha256": "de0b928378505eaa4a259c5357b7d6f98dde9c5d9b4a1f2805791f8b38f43b4d"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/026.yaml",
+      "sha256": "77bc0db3e9751b138b5b595ee1b260d557e438962317b82b77421f1cc0ec4514"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/027.yaml",
+      "sha256": "cb896209d517bf83bbbfbce219cca0bfa122976864da42b326c534a6705457b6"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/028.yaml",
+      "sha256": "9b68e87237eabd4a00dca14263460bdd6dabf0b9a2ec477fd3c12af80720df3c"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/029.yaml",
+      "sha256": "05ee95c57bd407b188cbef74b100df339c0f2a1c07d6c715e2f4551e4ddf2241"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/030.yaml",
+      "sha256": "9b2489e3e87978204d4abf07e233d93051bcec94f5161786601929eace87f765"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/031.yaml",
+      "sha256": "ec278d82a8518b51f6ad8fed4f762a0ec19c449a47d37d719d74e23097058e30"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/032.yaml",
+      "sha256": "038b388423de6aae6b1a6c592e3a76d58570b0f572c62c9d74866590fee81d91"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/033.yaml",
+      "sha256": "d732a1eeeb8f78a9d958e6c842de3af74555e00988ed8af0768fdc7f475ab191"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/034.yaml",
+      "sha256": "0d8cdece7bd7b5f4c2c1755c96783b4888162e1616348dffe8089babbb61f2ec"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/035.yaml",
+      "sha256": "2b30941d9155e44cfeb3f88a9d2c5decd55d07c07225c8e4eafd69c13c8d4a16"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/036.yaml",
+      "sha256": "19cdccdaa9e448f5c8428b6578bcef8d8d0be6b41b8bb819051e708350e7c325"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/037.yaml",
+      "sha256": "ae231296c3ca0427de4970f772953a3e9ff6b00ea31303ceac45a59473e6a7e5"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/038.yaml",
+      "sha256": "8ddb5d881922fbdf7953ac5e4bb307a42e7526c0a23ec00973f5ee43ce81caf0"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/039.yaml",
+      "sha256": "4e3470a39d48b48a242fe323ecb178c33918cc464b364895c080dcee2d9e3104"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/040.yaml",
+      "sha256": "1656e37d51e267c8293364ea54b95ac9159814958f5de2ce8a4552e5f2833e16"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/041.yaml",
+      "sha256": "31e7dda1e8597b578115fb55811ea15715daa924b9f912de69d2580c1c9dc5a5"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/042.yaml",
+      "sha256": "aa9b420ac8a79ed70a97e529296de4380818a957d8d5e2f497105b5feed67088"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/043.yaml",
+      "sha256": "c3bde2234dea573f9705081a35e558af547e4809de99f8f49a43b9cbd97d77fe"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/044.yaml",
+      "sha256": "c650fe013c80ac9ac1f54e59988e7cae498ec30edd5d87e117f5e079f856a187"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/045.yaml",
+      "sha256": "cfe6d316b5cec76155049aded12787dfd35c9f22a73cd371b0d3645fd968f902"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/046.yaml",
+      "sha256": "c0bd7b6aad216443d17958267eebf4c50e0b8b8244a7ad0f7d3a14ab82551afb"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/047.yaml",
+      "sha256": "fe780846ced654ae188166f395acd542dc17f4796dce69bba8c2e5b4cf07d704"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/048.yaml",
+      "sha256": "50d5004d9501307383a3df38e4b8b615a60feeec0ce834dfc4a6da468dbf3881"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/049.yaml",
+      "sha256": "d0a4c50d228c6e19e0e17a5fd87a749cb48008ae5bf46f9126edb72ca1be157c"
+    },
+    {
+      "path": "src/data/skill-map-translations/mattpocock/relation/050.yaml",
+      "sha256": "74898c76c32132bc4035dd3c1103106c5eda3d1449a406e03db059acd02834d9"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/build-feature.yaml",
+      "sha256": "b4fc7ac4539cb67445150a6c255d23339913ed1265227eeb027bf5d07423c226"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/fix-bug.yaml",
+      "sha256": "c81f481d676b5756218b9720fa29a25f108e96e2e17efbad054a4dba3081e2fa"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/improve-performance.yaml",
+      "sha256": "50f3af7f2f989a332a8785bc8c33d64b3c278e1dff884955cd553f0cb2b2112b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/improve-the-system.yaml",
+      "sha256": "4fd30d7fec6f8d9f5a15b5b4a0ee80a062752399770fa816ac7d0ead64125993"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/run-program.yaml",
+      "sha256": "f992da5b1b3b528fde3dea2eea76bfb65bec15da28c7020b0268b97320e08bce"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/run-unattended.yaml",
+      "sha256": "4bd42548ff4df1eb6aea4e75194af4672b5686822763f1dcec17e685aff883ae"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/journey/understand-system.yaml",
+      "sha256": "99a88f525c744d5dd6d88ce9a5059d04c1ea69809b5deaf964e63a79c946ce0c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/map/pstack.yaml",
+      "sha256": "8ba5b86b8050405c7f1b59c6be2bd54f9566c7906b37e278d6dfd8320d3d041d"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/architect.yaml",
+      "sha256": "65c3bcd245033055af25029f22332802212984820aadd6a474c3d71c1851a54f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/arena.yaml",
+      "sha256": "f512a37054135debea4f3b9d232cbf12afe970c944d74f274693d826d8c9737f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/authoring-a-skill.yaml",
+      "sha256": "8d464a146de6aaa5e8486e89604f4e51716f610b8cbc4f7c9b8cb254a2ae9022"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/automate-me.yaml",
+      "sha256": "2c2a045914c55ef59e5d407c1ecc8777e6630923278adefb89622ca66c8dcee0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/autonomous-run.yaml",
+      "sha256": "e79f3e871b26a7018a1df501ff2c2d169b856c40dc5b6a55be3be32fa5c59f12"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/autopilot-full.yaml",
+      "sha256": "76457660001a102841d354c669b63d4515855799bce0dfc8268255d1ef30d376"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/autopilot-stack.yaml",
+      "sha256": "20c52ed7daf9b0c5deb009f0376ee9ee9f680be3d76c8d4b0256423ee8a04741"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/babysit.yaml",
+      "sha256": "29560857c5d06b33ca9ecbd1fd4abef7998844d959219679933945f13a9f9246"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/benchmark-checklist.yaml",
+      "sha256": "739760b7e13640a6b6fd117c53bea0557e29de6510993d4797e1b734158f88f9"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/blast-radius.yaml",
+      "sha256": "baac9811701d42b94de6ae1aa500532e7445271ed62d40b7f1d0d06feb7d2aed"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/bro.yaml",
+      "sha256": "91f99283919a2fd22d217b687e4008a8fbed66ca96f3335bf810049cea8ee5b7"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/bug-fix.yaml",
+      "sha256": "4218774811a4a50be53ca387c12ae17bffae8c08a786f79236469b266a4404cb"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/correct.yaml",
+      "sha256": "6e59497c941dcdbb49c059da3204b8e23238545ecefd858985504f27dac8ef82"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/create-verification-skill.yaml",
+      "sha256": "ba4faa0374a90f5122eadb0c7bd23580c7158404b6e02a05137d21df39fe6ee3"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/eval.yaml",
+      "sha256": "34f3993271a25a8d158e1398f138a0df296aa5f1d8f22c08017c4987055dd6e0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/feature.yaml",
+      "sha256": "a67707e242f15e9d3861742f47a3b07a04a1aff9c26b457b8960fd5a3147338c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/figure-it-out.yaml",
+      "sha256": "747399466aa814f16e0418d59f571cae01e40b9bd443ec06c6a804e6ab81fdfa"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/hillclimb.yaml",
+      "sha256": "af81a6e8172445b8030d7021b6e0a5a7e8fd06fd86ebf747b92550a6b1ef79c4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/how.yaml",
+      "sha256": "3efcfa0bfadaa08211260ca73f42160215a3c869dd1fed723f246a1b7d67ebf2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/interrogate.yaml",
+      "sha256": "d87e8945c141b27dd50553317c91262211d3b65ab690bd22b5c994304aca730f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/investigation.yaml",
+      "sha256": "629de91697166debdf99e0ee3e5e1cc354b3345a52ffc0b6c246ddec4837d909"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/maintain-verification-skill.yaml",
+      "sha256": "e6625d5ed6ec37da075586d28e2c4239c2d4d99f028a5ec67bfb59af318238fc"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/make-bot-ui.yaml",
+      "sha256": "14731ddb7b05de1eef039eba1bf8140a274083493a46b802411b1992a351a06f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/multi-phase-plan.yaml",
+      "sha256": "c02c2f451ff08d3870056e1c7a0c06e5564c05d92df6c36ed48ff0f46859134b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/no-comments.yaml",
+      "sha256": "e0775727c80d19389dc69cb99ed76f646920a9b192593e8dafb9e67492ed1e49"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/opening-a-pr.yaml",
+      "sha256": "bac2318f641b4c3eb42d489ff75d0d184a5493437c19fa9d22d8a6b9c6fa5852"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/orchestrate.yaml",
+      "sha256": "b04b3ebf661f169df70c69ba182729ecd5b989aea1604d9ee5aacee6d8a48f43"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/pause-safely.yaml",
+      "sha256": "178f51a09a3a292fdf1d96a2a950f914db766e57ace04c45f12f062f12b3061b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/perf-issue.yaml",
+      "sha256": "42b0293117c859f4f3a77a3e71fd5c91bfabbd8d5a4715b9dd9ca80dd6a4a684"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/poteto-help.yaml",
+      "sha256": "f8cfbb46e5465aa68d0881a3d76514615504393ca1a57d3247497e2a2b1992f4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/poteto-mode.yaml",
+      "sha256": "5b5735bef2c5109a202ab445e7558b721c97c83bd1b0d170eaa25d738de3aa05"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-attack-the-premise.yaml",
+      "sha256": "206c83b8bf8527bf6c689cc72e67b9dab2740407563192fd2d9ac7dfd69138e7"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-boundary-discipline.yaml",
+      "sha256": "c4ee452bc546844fa64d79f5070e2fe64824d2a09e2db3460493b992f42a8c98"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-build-the-lever.yaml",
+      "sha256": "5a1979b88d760f6bc96bdbc9250783d587d422a72676a1f9e7cae239e2a042ad"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-encode-lessons-in-structure.yaml",
+      "sha256": "5c06e95a86f97e62266d46999d48d2160a616738b5683e1df4a31c2d8a3011bc"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-exhaust-the-design-space.yaml",
+      "sha256": "6bca3c8a8d26d7139bcdc906eae02b908cc72cc689bf05a16143b7528a9a6746"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-experience-first.yaml",
+      "sha256": "3eeac99dbf27149f4cf21561b245ac6fe2542d0f19b40a688b3066c9d527dd4c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-explain-the-number.yaml",
+      "sha256": "e4e3460165e9f692257f3e31d277d8fa7f74f548abf76adb1d034b7b74ea6db2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-fix-root-causes.yaml",
+      "sha256": "ae1422b098afbf703e3ee12ad47431877d2bb506571904c2110f886be47723a2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-foundational-thinking.yaml",
+      "sha256": "42cf13120ada5d6bb6035816fb09e3e0a5796cc496f34c051a4d870b8fd37b39"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-guard-the-context-window.yaml",
+      "sha256": "a9e084e4822d5fc8466e5ef29d1b168ad1dd9342c2b547392b844738272a5f76"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-laziness-protocol.yaml",
+      "sha256": "1bc6c3eaed070d271f17b99c7858976bbe2b5b5643a25f9b5ccb4c032082af35"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-make-operations-idempotent.yaml",
+      "sha256": "0e6042c5e248289d3e438972eadad18c52d06371cec3b18272222a9ca8250d69"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-migrate-callers-then-delete-legacy-apis.yaml",
+      "sha256": "7a1ac206db1d81bbdcbd315f3e6abdd270f0ad14801a49ff9d83caa9f991544c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-minimize-reader-load.yaml",
+      "sha256": "bf29b43c5ab1051527748e709a895433414d8612e31bc189ad105a869a45166e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-model-the-domain.yaml",
+      "sha256": "fd838f60087c33d68fb3968a5bb4d53e6f5a28a738ffddf9aea84b8fbdbce5e8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-never-block-on-the-human.yaml",
+      "sha256": "ff6e901199ea167b7ce90bdb9b1c99d27a3fe27bd414732294c88e0e1f858168"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-outcome-oriented-execution.yaml",
+      "sha256": "c1c101c9cff1899789103e3f359aafc52ee284b2f26a4ca99098d43d61d37f3c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-prove-it-works.yaml",
+      "sha256": "9eea87d8f661503a6356d346a0feb7391b5c2a94f6be7eabb20cf3fb5984097f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-redesign-from-first-principles.yaml",
+      "sha256": "21ff0c11f5389ae906ed4e82aa63160796440dc34a42b0a8ad53148315153c75"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-separate-before-serializing-shared-state.yaml",
+      "sha256": "d7d43afc1dd08cc140d0b5b03596e06b0d87171455f80a38c127a78a1a4c273f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-sequence-verifiable-units.yaml",
+      "sha256": "c78f7d44b9eb60c9699822a9971c1784b719e7aa92cb50b5b39f6d1b16a83059"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-subtract-before-you-add.yaml",
+      "sha256": "a97a6c0fe312ae3fe2b38271e0e00418bff68a75f9368d818c9b3e06dfcfc2d6"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-test-behavior-not-implementation.yaml",
+      "sha256": "6f600ca6247a2b1ccc9330a87ad235cae2892ace80d2d3fad70511aa60681e0a"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/principle-type-system-discipline.yaml",
+      "sha256": "e237950166597fd6559ba7d060d7a41d79535b82fabe0722c7fb901b5e759724"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/prototype.yaml",
+      "sha256": "7fb171eeb2eba374e0ecc435f6d703162629462bc4fa82cc156a4bca05430241"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/recall.yaml",
+      "sha256": "24bffad5aaeacf538e4ef69d780d18bd1bb0ab3669f869219a3baa766ea5b5fe"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/refactoring.yaml",
+      "sha256": "0113f7eececf6d62e1e914106a5dd3e272750457a1d012bd7d3a5ae1bab55861"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/reflect.yaml",
+      "sha256": "6bd8c7785e4d082cc37c12a6a6fcd7fc23b42bf6b11323bca4678c9295eb5bf8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/runtime-forensics.yaml",
+      "sha256": "c68b36d4085c440d883777368b6f898c365b7c07b716126e620b6a60def7cb9c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/session-pickup.yaml",
+      "sha256": "d770b29ad9d6c5c71be26d8ec4a95d66c1e523962df4737d0fb2fb4cc8cc44a8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/setup-pstack.yaml",
+      "sha256": "3951e50dd00c539b22f185ec3fc86ca9c5a492be21b5edc6aa3f97a7d8a2405f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/shipping.yaml",
+      "sha256": "fa06ea73475ea923c5362491d1849dcf674cb94cfca693cfa6c22429fa9b9ec9"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/show-me-your-work.yaml",
+      "sha256": "82e7bcf0459728ff038d66f929c31903dfaa0d6793e85a8a49214dcbed21297f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/swarm.yaml",
+      "sha256": "d370a7f73a192161f1d62bc59834fedee39dfb83e2002d532ea639283ededf8a"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/tdd.yaml",
+      "sha256": "41a44bdb4ddfe04baa058ecc3b94fe62faafd1d7e9cb1bd0ed0ba128a7f3103a"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/teach.yaml",
+      "sha256": "e125c54d1a2a7014664b822674e765abe23c9c0c6c6408b407a0a09b85f097cf"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/technical-writing.yaml",
+      "sha256": "b141ac28a08aca0bfacc5902a951002de5d6d7833b3ab11d51a30c72b6d86814"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/trace-forensics.yaml",
+      "sha256": "e8a6f5f5db16d513a331a3975749584bb631cbf7e2a7be8bd2d2cf654b4dade8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/typescript-best-practices.yaml",
+      "sha256": "c9dddba99f140f79bb4e9c1fd47e5427bc8a272a674a85b5e3980a21d46073a2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/unslop.yaml",
+      "sha256": "e3333d74f9477e1918ecd478de75b783842f842dd5d922be2ec3c62238505e4e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/visual-parity.yaml",
+      "sha256": "62945bf6840383a60b312f1f23ea7d889425770eca7744899641bbb522000020"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/why.yaml",
+      "sha256": "02987d366170f7fb2cfd3e43e4531a8def38c56a964e10b8b0b9cb22b88413df"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/node/worktree-cleanup.yaml",
+      "sha256": "efaf03021bc8c6550d0bf68972babd5e156bd0ff542afe413e4a5749bae03a2d"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/000.yaml",
+      "sha256": "96a1a92fd7839f37e6cc608518a6db7001a6ae28fb40441bb8eba182361726d0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/001.yaml",
+      "sha256": "44de00a6f423081bbfbc98eead7bb8c1a07233daeacbd85c4420dd4aa068f726"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/002.yaml",
+      "sha256": "d09aa78cfcb5c3774cb600100a183bc3b9850cc450d353a4d3a3c99e5216ca55"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/003.yaml",
+      "sha256": "abb1f5bf62890f49cada84d7edc44aafa2c307aa4002d095032515e9ed566b15"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/004.yaml",
+      "sha256": "e47eae2458362383e9f12dd9b4d00aa5aee8905759f3014d3855b641e5be0d8b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/005.yaml",
+      "sha256": "21eac3a318bc1a14f5cb37af8d99f67f50a9faa815e4a10d0f089b4646cdb43c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/006.yaml",
+      "sha256": "dd279bada3f9932f381b9a25d7696ac51c1b0930305f930a93ae8d1f9d56f84c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/007.yaml",
+      "sha256": "1bcce24958116311f42aac41215eb280e4f22051c5a5bbb777ba678abc0d0d01"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/008.yaml",
+      "sha256": "c02b79afb577cd5463bacf42a93402afc0d471a2ba5090701c5a262cabea459b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/009.yaml",
+      "sha256": "ac8d589f7c1c989e474628609c9e9ba41f7b5a773aacff9b89aa99eff1f8d648"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/010.yaml",
+      "sha256": "a07af22aa2aa5098f57de8c202de0800f4cbf1bff31415c2612d6ce9dacfb062"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/011.yaml",
+      "sha256": "0a4f023b8c6997b278159335786f8dbc0dbd5af410ebce35610590c0ab053b84"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/012.yaml",
+      "sha256": "0b8533e06b22282be81ac0835b1bae1a6b84d3416ceacf9b2928fcf465fa4b91"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/013.yaml",
+      "sha256": "e3473a68b3683b2acf2f3606bb8cda3597f53002b7a1cec7644383222d55d3eb"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/014.yaml",
+      "sha256": "04e395b68e43fd0036686d7007f3b542b3db25f3ca135dec43396395ee32d94d"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/015.yaml",
+      "sha256": "318f32ab74a11e7057e765d12a0cb1114432e42670673d03472f183f79a3c6b3"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/016.yaml",
+      "sha256": "eacf04a0e9e588956e7e8e6272464c3c63fcc5f52e5901631389bbabd40b88f4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/017.yaml",
+      "sha256": "db6c772221a4fa8d538a786c968f0def551e265c4529f204638b4647dd98677b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/018.yaml",
+      "sha256": "62c70a2f010691f2692bdd40819b3a0e51a2b8b0cbcdbb9aab7e135ea1bc422b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/019.yaml",
+      "sha256": "855daf024cd08c43b7888704295af9c62ac4656c04f1295b3df65c5f1cb81a35"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/020.yaml",
+      "sha256": "91523fb4138499830d90e55c2d805cf590310fd1bc9bb9eeaf99387f34118ee4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/021.yaml",
+      "sha256": "4a954589b7c27c8cdbc6d1fee1d8d1a3ac315fb0f6201bf77af966bdc30a9f51"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/022.yaml",
+      "sha256": "728037f2cf01de95254a0de63b10641e92bda80189989936f8b901316a99d4b8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/023.yaml",
+      "sha256": "110628aacc7318bc49d20e9f48cf03f7a4e466c5b161eae71bc93750583a542b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/024.yaml",
+      "sha256": "ece011defdd308ee6c9bb2a648526c6f840a8f8d57acf4d325b80126d6e7db2f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/025.yaml",
+      "sha256": "9415ac0ca138ef1be40d88a33dc9db0773abce17363bcd67f9f08e15d3ee3a0e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/026.yaml",
+      "sha256": "d3576b8b289cacb134fe7401e0a256c6c6f7373eae457802d5c5833e9f7cf6a0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/027.yaml",
+      "sha256": "d36c2f1eb1bb4f714fd0b990aec50a03c712ae1d9d42a92bebfa43413e8f97ec"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/028.yaml",
+      "sha256": "0fd1baa89a3ab3a383135a2ba63e5e516a1958600eeb88319e500b6555de459e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/029.yaml",
+      "sha256": "8f83d3d5818571478145949658075886b102e46320778dfa62b4ed2edebd0dc1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/030.yaml",
+      "sha256": "8a647bda8edcde93253eb23c1516acbf19d6e9a1dfa81e17992679b62255e1d6"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/031.yaml",
+      "sha256": "8be9ed58d7b8e24f109724de6fd151c813bb82878045ccf1f4f508ad0edeb609"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/032.yaml",
+      "sha256": "1541544a386bcd0d60f0abc8292f4a8464245770ac8098f3f961391ade176259"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/033.yaml",
+      "sha256": "0cf6201826ab600195542f9f2b0cbb0063315e9ab2dae7a6870fccbfbc7c2a88"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/034.yaml",
+      "sha256": "287f22f5db3155f6088760448ad0b3d1221d298b24999d82e8829ba9de3e7ded"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/035.yaml",
+      "sha256": "8eb701031815f3247bbde7680590fd4d8aafd1300ec5705e50d297bb7791047a"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/036.yaml",
+      "sha256": "8e2551ad2f3af7120d9bd15f3b967e479a720cecb5140a33cf3e301983ff7e9b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/037.yaml",
+      "sha256": "be60ddfaf214436131fd963f0dff31d5b9070656830358bcd1e1a38d48e1e6a1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/038.yaml",
+      "sha256": "b43cef6936e7804f7bfdef76c059ed5417c842dd876e94d9554506331c49a966"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/039.yaml",
+      "sha256": "afcc95f24089b2d9640b93dfb7e320fb273882119671154a22880e2308b2937c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/040.yaml",
+      "sha256": "80f5136b4455b53de487c9cb840cb838e1d974410150a6de596e9fb83ccf0912"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/041.yaml",
+      "sha256": "21973dcd9aba2cea9473a5cb29924a63bd773f43fd9792c01a8f5b97afb478b0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/042.yaml",
+      "sha256": "0adc878f1c9991bf8100f9d0555012f19afb23534c3cb8ec6ed3bd96531dbdc2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/043.yaml",
+      "sha256": "8bbe3d49456dbfe6ef584ec94633aeed4a66d2cff0f44aa41481d0a598d1cced"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/044.yaml",
+      "sha256": "244b715b2a905e18ffe5c8c860909b3221d0fc7817f77eed256346767403f6d0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/045.yaml",
+      "sha256": "02dcaa9231ffa503f7cff99675a1513758578a5d0a7adbe2ee866120264f6b16"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/046.yaml",
+      "sha256": "2da2e02ba95e1a9df51add369dd72693cf3674c9cf4890825a7b7984aa57c56f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/047.yaml",
+      "sha256": "d1f55b76e6b49b9a4f3181c912b84f987513827907f934bb697b33a977e423d6"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/048.yaml",
+      "sha256": "a65df5fb154cacbaf6d83a79aca5c4d66673523d1efb450d19636fd9f11377cd"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/049.yaml",
+      "sha256": "d4806237ba73d9cfac9fed1af0e86467310283fd84796f3149172fed690afc8a"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/050.yaml",
+      "sha256": "d6ea5c0155d76788959f2723445756f35e45cbb37a634c57af69189b561fbce2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/051.yaml",
+      "sha256": "025ecbba846823fd138055f65ed9f869c2fe7e118eaa11a53a1af237634c69e1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/052.yaml",
+      "sha256": "233d023ec2c52393c397ac249936bb36eaadba97abdd2080e61fe0e0c3848af1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/053.yaml",
+      "sha256": "69baf0925486892f1a42283973c19f0d689403dedd934952cca485cbb8dda373"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/054.yaml",
+      "sha256": "7923a5249ec1760463171102ea110c5ba35362486274b5e50c389ae41d33649e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/055.yaml",
+      "sha256": "861ee8e2393d08981d000b5aa08341a462f10d34aabaaefcdd455676d2adf365"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/056.yaml",
+      "sha256": "9183a597aad5e6e5d88c84edeb32e86bc6ee8906c85ac29ad5ab091f5a81f1a2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/057.yaml",
+      "sha256": "8b9b144ea9b3ce1db17d8e05ed5af634181dc88c48cd785adb9c041b626a8dc2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/058.yaml",
+      "sha256": "b8b326f35366acd538780171c3dd17c3c0d52b3ff23c0544c832fdb8cf40ed81"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/059.yaml",
+      "sha256": "20f5c30d1afb30ef2bbdb3438ac43b796fc34b22d18ccc2121234456c79de32e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/060.yaml",
+      "sha256": "8a270d9bb60e74298a081c0108b1d4702c7a8a6b2d41b76de53677c2424bad15"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/061.yaml",
+      "sha256": "851805153609a1d50d4389b05ba005f4d8a21094d89bf99dda2a63ed2a43b425"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/062.yaml",
+      "sha256": "5d692beae002987808e19fe13a797965daa50e905b4be3d8a278c2fd6d3c7903"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/063.yaml",
+      "sha256": "6afef7691e1e8faeaa38a4abda19238ab3c1d7068306c56b729eb5624a01b260"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/064.yaml",
+      "sha256": "bf0724940becec2c4bb1429960dbe797f2320c6be3cb64493f667169ee0fae59"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/065.yaml",
+      "sha256": "025b100fca7adff4921e407ed7092bc2589cbbe624f1ad37595f429fe7cdfd44"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/066.yaml",
+      "sha256": "3c56539e2bb7421ac6f89510a3caee24225409c3be6dcc77d6f86aa2cd4e7471"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/067.yaml",
+      "sha256": "a8fae51a4717c44195e6eec3c25b2286260c8cd7293818604e7c4a198e8d27ee"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/068.yaml",
+      "sha256": "7695dab82b242799c3fc26528711e795938ab5189925d0889006206d7d50d2c0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/069.yaml",
+      "sha256": "792e47e9d78da929beb2f53d65d1faa28aa734ca65a643e40cd501809ea5f8f7"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/070.yaml",
+      "sha256": "d4030bb60deb2bf3c93b9be6970125ed1dde8f3f10d8c0daa3e77068f40dae78"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/071.yaml",
+      "sha256": "9bae7038c926246ad96b0636185c0f3bff26d1d3f4147a4ef4d0226ba7657d07"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/072.yaml",
+      "sha256": "3b9142504758d22ff306a0b660fa45dbba9741ff42edef288f300b4b54e49f60"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/073.yaml",
+      "sha256": "cd45f5e2c209897769c7e6bd247e8cff83b3722002f51bc96b2a1e4de67a0798"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/074.yaml",
+      "sha256": "c4681ef6ec2cb4f274e88d012af62acac644dfa776b12beb62dd816c0dd02578"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/075.yaml",
+      "sha256": "9899c57ad3272f8493873d87b136e5260956b689656f275599da5123d1ba82a4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/076.yaml",
+      "sha256": "a4a725d5600640476f9a84d8f1a477f4c0244672287621f3c75574ed1336a843"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/077.yaml",
+      "sha256": "44efd3906d757a74b3d1c839b3cfca083f526ca46f99a29991bdc68ab2a1047c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/078.yaml",
+      "sha256": "aff5214819dd688eb982daefec660bf27845d2321411a8148d3246c94b329f87"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/079.yaml",
+      "sha256": "9683c7e6bddae90021c3691b948b84667d949522113387c184c6cafddb1c014b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/080.yaml",
+      "sha256": "72d4800deaa8c4f7385a74e3f1c374d1d956745042d230854c79546cf5095940"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/081.yaml",
+      "sha256": "ccb8778a09130c7cc37c2354f47534aea3ea39ad234fbd7f05178ed1afb53bb4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/082.yaml",
+      "sha256": "a13ff2f87879484b58f65e77322c06878d8b62b061edaedbdff85f5864f3db74"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/083.yaml",
+      "sha256": "8eaf9b014c8c0b4a269f3abbeb703afae41bfb97be52f926b50067f79c62c459"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/084.yaml",
+      "sha256": "6e56e6d39112c4042d38f21bbc1389a0121b1e2689604a697477a3b86aa083e3"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/085.yaml",
+      "sha256": "1ca6c4129f9d29ed134e24dfde1cba94b0e03bbc0e24a01e35406cda5a0b923c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/086.yaml",
+      "sha256": "9f004462996e51fe52657a93dc5f0283fea14b8a1b1d652820d81fb4b8503695"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/087.yaml",
+      "sha256": "a740628e0c28e3858e44c119d88982215f4ed51a08c807bdc8813fd18f47ebd7"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/088.yaml",
+      "sha256": "ac7c3fc48b69c65a6a49e38d5420a36713751f3ce634aac635cdebe3b8bededa"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/089.yaml",
+      "sha256": "2faff57c871bc55173bad9ec0b9274c93751bca405fe9bd01497315c3a8df298"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/090.yaml",
+      "sha256": "cfb28161848bfc6782625b5c7b7b86727549bffd94c2e255785864f97401ea3b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/091.yaml",
+      "sha256": "b809fb44dfec513d13c1a1a985ee5c9861b993b6a698a9e91e787c427c74668e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/092.yaml",
+      "sha256": "1786a70fb8af92626bedafa03cbc898ad017248ee1ab1f85faaf5c9924a9c37d"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/093.yaml",
+      "sha256": "a3224ff3dccb11d4348046e4e12c96011055214ce0e89f56165d9f2a8a915dc0"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/094.yaml",
+      "sha256": "220aba896ca61c97b240aefd62128e03e60da9736304df10cd4fcdcb05f378c4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/095.yaml",
+      "sha256": "32a8bdaacf4357f80b7c7313aecbbec5a2efd27d913eebef5139eb2dff43a4a6"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/096.yaml",
+      "sha256": "ae9c206b93b9c28358c5f75372a2c7a3d4f194062432bed34e6d83543db281da"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/097.yaml",
+      "sha256": "3d4cb8b94a37a612f9eaa610404b6450fc6e7bb2e89b87b7b22a394801ab9f91"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/098.yaml",
+      "sha256": "8c4fff4241ac927aead814b0f53a406f62367e9350c5085699655d56c49b3d1e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/099.yaml",
+      "sha256": "c25ec65e77b1d1c7a48cf28beefe3272daabf5d7e03673cf0b200394fe92e096"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/100.yaml",
+      "sha256": "97000099c58ca8deb3c7246d240dbc07da56032f51f0d74c0cc6bae90985ec20"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/101.yaml",
+      "sha256": "1d3032a762c3856f65a4b1d33c4dba28dfa21b9489d1bcd4115788b12758293c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/102.yaml",
+      "sha256": "b91a69dddc5dc944f40518db793b1a1cbb3f4850cad96b241219b678c3b9ba49"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/103.yaml",
+      "sha256": "0cfdd92814079774dc9067bc9c55e7132d419372c9df555c451bb6b341a968f1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/104.yaml",
+      "sha256": "fa16c3570ad10f2748b7005d61f58f9623d94d888d663bc8d240f9612c0913df"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/105.yaml",
+      "sha256": "4a3bc435ef547f4c3fbab1db2854273ee56adda91db67af2a92d759f6f3affcb"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/106.yaml",
+      "sha256": "7d46359b68c4b33127b08c76671646e956ab3d3c6fc3ee11d5e02698e8a724af"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/107.yaml",
+      "sha256": "c4fd254c3968aee1010669d1b2991254d2ae9dbb71ca783345b9c55393061ddf"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/108.yaml",
+      "sha256": "76aa3ca8eb9140b2085d8ddf074e7c1c5c6604d5a67c5d6e9d5e0d9f93624141"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/109.yaml",
+      "sha256": "a2bb129a661de6c9c1b4a5ef3458a91c5dd7da58ab699a0aff1e3b4c6bddc89d"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/110.yaml",
+      "sha256": "b59befa61b0d75c4fdcfe18222cddb9e39ff701bfb26a27f41cf2f8c5e203fab"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/111.yaml",
+      "sha256": "28008bcc17aaa9685ba86aadc349646980fe59f44d2c57a7c474b3d5949310c4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/112.yaml",
+      "sha256": "8133bc8dc97d40116d359060e3bd8a854c3f68fc9b9aab5c448f75dbf3ee0578"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/113.yaml",
+      "sha256": "1ee45c93939e36fbf9185d327a69cc8ac940622e3c7e1b39e49c29bf0e903037"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/114.yaml",
+      "sha256": "a561b5e1fc2be757f7c5a38cb5c3f54818d713af37fedf82525285db84031128"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/115.yaml",
+      "sha256": "8030882c505421a128f4f805a46e76131a46da986502839227c78022e7b3b211"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/116.yaml",
+      "sha256": "a3bc045395329e5da1d4716ed774bbc21b8f37d0af5cc79a43b0a236989ebe2c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/117.yaml",
+      "sha256": "cd77984cd85da7371e4e8782d2244e07682a08799676ee28296389990e2138ac"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/118.yaml",
+      "sha256": "4ab06a861708459262390888fdddbc03ba503c26233e280c7eea9721dc6524ce"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/119.yaml",
+      "sha256": "27cd2ce9cca104f42a4f8e13c809e4ec124f20bdf53577505af74ca37f4c2d79"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/120.yaml",
+      "sha256": "05856bc830ab82e75f03e1062b5bbcb69708cf3956a1870f85aaf22b91755c4f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/121.yaml",
+      "sha256": "8cc339cd21b40d68a9efe09bbfee4c7d3005fe8ed908e48b83f1987e7c091a1c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/122.yaml",
+      "sha256": "2ae8800dd2555fd8e2900ee0c1ad01096449d86d0858bda59caf7767847bf0dd"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/123.yaml",
+      "sha256": "6f96b76c3703f3156bf4ab7be2931389d46fa77906af6d8f22dc5380fea933b8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/124.yaml",
+      "sha256": "cc1aa124bdece64876627ed12f1822e69e227d760287e1cff7cae59cee9b2f54"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/125.yaml",
+      "sha256": "8d2d7dd6337314d5c3fb68426c661548681f70a55569fe900deeb625ce4360e2"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/126.yaml",
+      "sha256": "0b69eefcda68e0bdb6a230751c04176beb16bc82d4e54eea348fa8e55b93c622"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/127.yaml",
+      "sha256": "03237f986162dcf034e81d9bd06ade540c0f88b2ba1f496a0ba9219542bcc4bd"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/128.yaml",
+      "sha256": "d35c017d1fc90fa5241525cefc6465f244858242169d14e979293a31a9cf61ba"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/129.yaml",
+      "sha256": "d314e417dd367277e5b68b851dcbc278280f39980ffa06d713bc0536691c3ee3"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/130.yaml",
+      "sha256": "7f961dcf7c0146c3b9c079def120224e838f959ecb9b7b985e588906fb1c0c9b"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/131.yaml",
+      "sha256": "070239e6c5117be7f94701ed92dd60927e656660cf290d437128283bf1ea98c3"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/132.yaml",
+      "sha256": "a5206d182c074a7c9bc1150e3e9b3b31630c30667b8b1b676c77afbcaaf34056"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/133.yaml",
+      "sha256": "7ccaf47d48d8b4b2390f24746ba1a1f5df35784560bf722e9ba59458195284da"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/134.yaml",
+      "sha256": "7fe0ab558745e748a61c104235c809a380254f9b4d0e0285fe3c22f992e7bd76"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/135.yaml",
+      "sha256": "67380cf39e4032c8c8235562a70fe2fd696b1a1a8f86eaf765a1749d6524a0aa"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/136.yaml",
+      "sha256": "80e815046168ce80f82cdf541fea8d43e744895665b24861baa5cb219628a945"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/137.yaml",
+      "sha256": "97f742615f94fd849f04247ca4b84483aa5e3d3d6f319e89c60500ed9bcfd094"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/138.yaml",
+      "sha256": "c809232a7c98f94c594110240f333253fe518ce99481a7ec07e6ced35db9d066"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/139.yaml",
+      "sha256": "35e086591d796ab02c4ca23ecf1de4ba4e234dfa84f55f50d90b00247ddf42fb"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/140.yaml",
+      "sha256": "22ea79ea5a37d209fc6ae126623c0d114ef818a8c9669d642a88e367b11c800c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/141.yaml",
+      "sha256": "2577cb0ee600c3c8c39df8d50c15acac5d5df849f5d8905140af9f77783d3ba1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/142.yaml",
+      "sha256": "1bffc1ec6abdb631d757084fa45463ba9e0bbff8fcb20885b2c81b8c64d40ee3"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/143.yaml",
+      "sha256": "864c3fdba7335936abf49edee3f16a1315359b6164ac3c863d7fb1e30169f43a"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/144.yaml",
+      "sha256": "6ad4eb6d97ee4a18ed752e7bc2460a11aaf20ba28324a2efa403aebd5de84218"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/145.yaml",
+      "sha256": "0063dd6a96b5192ead4066d0979fe415e56a3aa0d19639a3ad30eda9900f0b79"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/146.yaml",
+      "sha256": "cd55612319dc77a9749c849dcc8612c2e30091ccfdb2202c8157c6e15da1a01c"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/147.yaml",
+      "sha256": "665b75a2e451beac30eaabc0797a12f3a7768745a5fda908eb6e75188ddf7c66"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/148.yaml",
+      "sha256": "fc90adacbf136f5cf6fb3807bf90a7ac9c8964de5bac15222bdb906106b830d4"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/149.yaml",
+      "sha256": "c8bfde433b5deb3a4014c2cf0cc1ab63eaa5f08f23b3ee4b4e1bca6e260d2d0e"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/150.yaml",
+      "sha256": "45e92e267b812fcee6a4650f5610758b4deeb926f297e8edd69e7e6249012b69"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/151.yaml",
+      "sha256": "ce8c1c942e86fcc0e9d06a84cd22f9cfb9e5958288feb3058b5bb2cd040e9bfc"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/152.yaml",
+      "sha256": "baa320a629e1c874150affac3adfd32c528a7044d67a8c6ddf44255b60a5bada"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/153.yaml",
+      "sha256": "4532f3e9301d577762866428bb6cfbfcfe9c92dbd922bed449745a952c19b4de"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/154.yaml",
+      "sha256": "b86591d5c2cb4e80e7887e7cc233255da59d098c72bbd01760f4e7c569133475"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/155.yaml",
+      "sha256": "789ade9574366dfc9fe59566df146872d8608eb3e42893c3e659a7a9b002d227"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/156.yaml",
+      "sha256": "7391fe59fc4300a146b7bcb819d3c9efdc9c13f8ad22166a484f80344ae687c8"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/157.yaml",
+      "sha256": "0c6a7a1da59d7757097c4a0860819dbf7ed289c10923ae10abe173377b0028db"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/158.yaml",
+      "sha256": "1eb618822fa9a9427f8f7a021371854cb633970c85c6a77847644fec1bb45af9"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/159.yaml",
+      "sha256": "14b3f6b9f2939e1452801557b9878bd99a456257fecd52f7c0e51f84b55b0532"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/160.yaml",
+      "sha256": "80b4d60d159b9a135f7be5efb2f959e0f2892163f104a16f6d6655593bb7e348"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/161.yaml",
+      "sha256": "df8291c31d6500c8ed3b34d3800428c00d56234da61545dba87aba8294b5adc1"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/162.yaml",
+      "sha256": "cb78a9585fa08ab683ae31b072bacbfa35ce51937f7fd3851832a9b6b0471fda"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/163.yaml",
+      "sha256": "51125df02fc1be2381fef1252b86932266fef21b17ba9e0f134ef185c9ed75df"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/164.yaml",
+      "sha256": "45d4046083ac1b6056d8c3f9a43f03bf7448972da86a4bfe2e0d51f63e094a6f"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/165.yaml",
+      "sha256": "1c2884858db1702a161ea1b4a2635839afdb15f1d790f630900e287782977876"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/166.yaml",
+      "sha256": "c72b857ea52740deb802161e1a022b03a585ae126851a882f3d4fc46e37c2bda"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/167.yaml",
+      "sha256": "40d85f5300aa9f9199e216ba52937c73e310b465cad0d25513b3ceabab35645d"
+    },
+    {
+      "path": "src/data/skill-map-translations/pstack/relation/168.yaml",
+      "sha256": "5c122d932d7af26a21a9a3e4aecf6f0c201dc77149ad2493d228657d197c826d"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/build-a-feature.yaml",
+      "sha256": "c5a2151b0290daf903ba22d7c9a46ddb4dbd8224dcaa5c779e35ddbfe13282c7"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/choose-a-skill.yaml",
+      "sha256": "dea4e195afacd5a7ee81af26a107eb150beab1c475c66e73a7bc2fc7549d82f7"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/clarify-an-idea.yaml",
+      "sha256": "c2d8651121b654a421e5569a5263de35b1e06072e09d535ada781374e9dc7120"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/fix-a-hard-bug.yaml",
+      "sha256": "398fcb8dff8fc0a3cf3bb090bbd109692497481114c7ca9f6d362a71cd52b7e2"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/handoff-work.yaml",
+      "sha256": "36de19585da479619c683ceb3b605fbaa3dac4b94d544745c466329bbd9d7eef"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/improve-codebase.yaml",
+      "sha256": "4aa25e7885a579a2b3243118058746c02edfedb220d47e2e9fccbe8f2ec98eef"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/journeys/plan-a-huge-effort.yaml",
+      "sha256": "fa345a785b14ae98fb3b77142fc7b95a423ca98ee6c2fe2fc0c87c18c6c4fc05"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/map.yaml",
+      "sha256": "0ff015baea33f0b9a84b6201c2704bf7b37fce32a78088e0c3daad44f6ca8675"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/ask-matt.yaml",
+      "sha256": "5fc48a77ac855d5a3efc5710bbad93417407941343a34b51f7ed7cd2d0ec5ebc"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/code-review.yaml",
+      "sha256": "c0999e2d937e561741c63f5f3a6da357543142a82201f87de2e0fc3e85222312"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/codebase-design.yaml",
+      "sha256": "df61e73001499afb8ad48f95a96bb0acf8b64cda6c449329f27ac4de08198caf"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/diagnosing-bugs.yaml",
+      "sha256": "49cbb42c864c5d96e18c6ffd26f9342dfce143329981e9d379a060d7ab1ca766"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/domain-modeling.yaml",
+      "sha256": "c52509cfb68a2c69fb323fb5b684046776986e34ad84776158436f6b08bf54d4"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/git-guardrails-claude-code.yaml",
+      "sha256": "6589d96d8b4759c188a3698c75256622f5901e72e95cf42fbc91a8497bb160ca"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/grill-me.yaml",
+      "sha256": "3e5cfda9cbd845dbb21633148091690227fa9e56ad19b2b201ccabd0787b7e41"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/grill-with-docs.yaml",
+      "sha256": "d9083c48bfac851d1fb074ceea5a44a8a547f4acd83e8268be4124cea7285eb3"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/grilling.yaml",
+      "sha256": "ed59b003eabd6369ed28ba22cf6b458c9721130db9c58dba225a8b67b964be25"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/handoff.yaml",
+      "sha256": "0796dc5f8b42843d21cd0187a804817c7220c7b8e9d787670ea7d9339cacece6"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/implement-spec.yaml",
+      "sha256": "d1984259b3882c60fd8960d220779367c4cf2b7bbb57741f55818ab1b25520e4"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/implement.yaml",
+      "sha256": "241b8b9d16c563363ff7145a31d29dcb0fe70bf4cd3c6040bf7a8906037dec42"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/improve-codebase-architecture.yaml",
+      "sha256": "f55acca4aa3402cc3fcfdf275af0b46c40478bc72f6505a3491916ceec21c9c0"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/migrate-to-shoehorn.yaml",
+      "sha256": "a8ba2cb0306015850c78c39edabbdb60863961ab0b9274bbd2047afa3b5be307"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/pr.yaml",
+      "sha256": "18291a3753b9ccf7f7c83a678f2749199474513ed16b3f879d32f59ab0e04750"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/prototype.yaml",
+      "sha256": "cc64e4dbdb36e3c2bd5f8404ed8bc5eb4c2d09ce2d9ca380529bd6f32b55b041"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/research.yaml",
+      "sha256": "cb7be65dcf903b3b72850c9bfbe80a7cbe74511b17ef8294fad66ae3b7ee54d1"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/retro.yaml",
+      "sha256": "d1df7c594c0abb78fced99f6235ee765adefa09d849f8d63d990b5949126c197"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/scaffold-exercises.yaml",
+      "sha256": "c1f0f96a96a5cef31c7fcb645a65b6820f25810e678108ec26996addbf69e940"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/setup-matt-pocock-skills.yaml",
+      "sha256": "d4d5f09369a0042379c5b19b3dfa1b5724cf53e5337cd221a18c71bee6b53cf0"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/setup-pre-commit.yaml",
+      "sha256": "2df44f46b4f1ea0e75b20e9728229e728ed10efc5bf16c884e5b3f6ebf3e896c"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/tdd.yaml",
+      "sha256": "7c5821dc0190d3ea2e88d8e21ef1e02ac99ace896879e293f22c2f20c2fd3aff"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/teach.yaml",
+      "sha256": "ebbe0ad68d83591b8016958cba52498a5f36582d4f439232d11e1dd2afc447c1"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/to-questionnaire.yaml",
+      "sha256": "58e7b8b70653ed66808c0a3eea429da9fe9241aa9e0a2fde16967b57658a89a1"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/to-spec.yaml",
+      "sha256": "47223872179e7b732aed9fa1f5532c039deb03236bcb1d7f88806819eb7f3420"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/to-tickets.yaml",
+      "sha256": "3f81bf727d9e51c22354eb93052b14d13d22cb837b1a33de3e2b8cafead608bc"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/triage.yaml",
+      "sha256": "990f751b53b0989156ed63ab29900e47de6d000d2e02452f56a79fa327fa4fea"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/wait-what.yaml",
+      "sha256": "4b479f09ba1ba8cfe43d065c738339e8af07d2354d30bff61e62c8731cf387a7"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/wayfinder.yaml",
+      "sha256": "497d111ad786734eb851a758e2a36239edcf338f74817b2f7875b19eeada41c2"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/wizard.yaml",
+      "sha256": "cc1b0e640e624b7e97fa27bed757ceb10136817e81da952d7e50edcdcd8647e8"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/nodes/writing-for-agents.yaml",
+      "sha256": "6eedf66b03f714aff1c26356073697e77431b25d98a322a32b3b34e19a798257"
+    },
+    {
+      "path": "src/data/skill-maps/mattpocock/relations.yaml",
+      "sha256": "96a51f0e87ff5f06b4b31b400f4e51b0a85aa249a11c9f73d3199e71ac9a2009"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/build-feature.yaml",
+      "sha256": "ac57d7c34ec4edd79c909fec71ee82e33d8203778e3358af34e1ac57e250284c"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/fix-bug.yaml",
+      "sha256": "6f250cc48062e1fa4951d493e083ced0c8e8e231ec11c8566bc40a7d37e01da3"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/improve-performance.yaml",
+      "sha256": "3dfe7da4b988420971273c93b494f14d3f22d523dc92fe8b00550a71687bb710"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/improve-the-system.yaml",
+      "sha256": "7f3591533f0e12d2ee30ce68e58b56505025a2c9094e069615d86e68464d0e0d"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/run-program.yaml",
+      "sha256": "9b8e9a2bbdd88e83d0845bec8a2a62da967ade67fb669306ecffe4aa7f100948"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/run-unattended.yaml",
+      "sha256": "2a685bbf389c5fdea753db44e4e359f14a42eee3068465be9ebf470bba74dc77"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/journeys/understand-system.yaml",
+      "sha256": "a5c7c3c28fb3f8551d0d1b2281f88be24496606584074ecd77b007a032246a22"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/map.yaml",
+      "sha256": "e8c83ceaa29aef465647d280f3e60e6076223b242bf5e64227bb04577a7b1a00"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/architect.yaml",
+      "sha256": "ee004f5620259b7d17260c74740ecc0732f0e90778d43df6d535da0254ba6070"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/arena.yaml",
+      "sha256": "6c71c5e20ab62f791d9951d3a5c1b1604e77c8c1694b78df90fb9135a9a0f883"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/authoring-a-skill.yaml",
+      "sha256": "17dd3e7503e547d49ec2f0bd38a9fccfd8d996a0ddec3f894b20b40d4caa6cc3"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/automate-me.yaml",
+      "sha256": "58ec99c9311f53852424d50ab87f4165145cc14d7f4bd2cc35a24288d57aec64"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/autonomous-run.yaml",
+      "sha256": "2e0e159a70a3774bc2ca2aeb4a661ffcaad8045b895c0579379daa07d1dafb84"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/autopilot-full.yaml",
+      "sha256": "0f3ed9790baa6ec2cb510c373042dc6e76748fde4146d477e02683b23b507297"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/autopilot-stack.yaml",
+      "sha256": "f66624910d8793f34995e3fc9461c380edbd43488f16ebe78740665b3fcfa6fc"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/babysit.yaml",
+      "sha256": "1913a5db5f72302841c1471cde3d8830feb5ba30c05a6d41d49c9a891bbb21d1"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/benchmark-checklist.yaml",
+      "sha256": "eb65aa7a4caa1a30bc9a31b9961623f2ac2d21f3b08a3c259c63a4178f2488ce"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/blast-radius.yaml",
+      "sha256": "7cf51efc4c64668da3b2491184f3687e952a3c5c006efc3c24764f67d243219e"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/bro.yaml",
+      "sha256": "78239ce2c2cb47aaea18c9da637bd9d9eefd71f87a31b6dc5e11213a19db7fca"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/bug-fix.yaml",
+      "sha256": "6464be45c13713d6227b30bef3f5b3cd536423df0a75ec661ea9d2cb5b29744c"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/correct.yaml",
+      "sha256": "65f4487c13fabf0fcc2099962ef0e4dfa1171a1a857a79c3fdae0c3b753386cf"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/create-verification-skill.yaml",
+      "sha256": "e2b99e4287bfb531cd904bfb141d1e3c100e524521624807b6244532a0ca5205"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/eval.yaml",
+      "sha256": "5f417bf849b79894c61d8ac194a5ccaab49a2d6ee1282eff780b5f2a5120dd99"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/feature.yaml",
+      "sha256": "80593a609bedd6941527c305763eca1f489aa193d5041a55da1074eef2936075"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/figure-it-out.yaml",
+      "sha256": "4fbe463e1a3a051503ebc281ff68447ca9a23378c486b7b304598b9dec29832d"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/hillclimb.yaml",
+      "sha256": "1034d1b079fc66adef07088da0a07682edb4e62def279db640bfa8517ca3104a"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/how.yaml",
+      "sha256": "8f7c166a2637312b5f720ff4a82faea4e80781fa59bcf068235df363a4ecf417"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/interrogate.yaml",
+      "sha256": "57432fc3812b56a29ee3709bb84798db46baea596688ea50e54c16c4303a7363"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/investigation.yaml",
+      "sha256": "41f4613e98ddf8127bdf3652d6c1d31d7e55bc52f4caaa916a2a9dbf1efd618a"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/maintain-verification-skill.yaml",
+      "sha256": "368772e2e8b464689c84a2f4a0ce3e8a01bda658bc738f52dc2cc60a126d9c7c"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/make-bot-ui.yaml",
+      "sha256": "b2d0f9f2092050d47c8f90febf69be401a32186e529bd0f729d0e23989a754b3"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/multi-phase-plan.yaml",
+      "sha256": "a047fd98c64b9ce29ec84a73fd357b194df406f1b832ab698c49a009e288cbb7"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/no-comments.yaml",
+      "sha256": "525adac5f5ed409177b6009949d2344a56b8c5f9077181043e2f243ff1469779"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/opening-a-pr.yaml",
+      "sha256": "77fd1268c44102e12bece8764e960193ca9db0f9ed9cc118a1e35c769e6ebbe8"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/orchestrate.yaml",
+      "sha256": "93b12974f9383ff13027ffa078830f68e8ff030dded6e428e2952280d30e41ed"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/pause-safely.yaml",
+      "sha256": "d7dd8110d5d9de22bee7607f330cd88d82869026edbaa6b4be028a7ac60c54ec"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/perf-issue.yaml",
+      "sha256": "87acd04e7d417754639088d6c2189b2047b04696df6a9562aa5e82086ab30500"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/poteto-help.yaml",
+      "sha256": "a67587e4895c23c024763aef0f4bbb4bd4989b2aa3c6270d4c15a1ff45a52a74"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/poteto-mode.yaml",
+      "sha256": "a868ba3890dc66c64e25448861a150d3f26c487728730e05f031a898e1b97300"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-attack-the-premise.yaml",
+      "sha256": "ebb06db8e4fee697e1414f3ccb6af1b5f9c261524b7272d942d948f9988487d9"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-boundary-discipline.yaml",
+      "sha256": "348c756bb007865f4014976d511d22d4f724b0544c9c1b1a60e3ac688cb6e31b"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-build-the-lever.yaml",
+      "sha256": "ec47f7c1d26797e5bf82c2ac7906bc356b8f6ca10d124169048f5598ce44ba32"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-encode-lessons-in-structure.yaml",
+      "sha256": "16070dddc728d20e3710a3643591d3d1e0f1a3cf7eec7345930f3af974726533"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-exhaust-the-design-space.yaml",
+      "sha256": "4de8b5ff859168032ed0a9ac037faea9f4212d656a3c4014ac54d5ea6f263fa9"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-experience-first.yaml",
+      "sha256": "bec2d5d8b880216a50ef3cdd00d1d012331bb0db9c3ba54c13c8efcfae7dc3db"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-explain-the-number.yaml",
+      "sha256": "3e6f9b22dac8d5c1e32ee852063878034f9f441e3bdc282d6f897df4f5b1a693"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-fix-root-causes.yaml",
+      "sha256": "aee67692eb769d1dbfb0cb674b4a42c06d7e3bd6438723ced6ad97f3cf58f442"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-foundational-thinking.yaml",
+      "sha256": "5ec4f412b3bc9880a9ad7897f8472c37627d57358998ecf787064bb29809c6f1"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-guard-the-context-window.yaml",
+      "sha256": "44b55c81a35b107e7de1d89f3e472d97a12ff2e1f8748049c1dd85bfb48c1453"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-laziness-protocol.yaml",
+      "sha256": "c1d8a1f63d16b5be9d97b9a2064e73ad44c074763fdec971ab69cec833846d63"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-make-operations-idempotent.yaml",
+      "sha256": "eeb0ef3da8a929bec974bc3d3cc88f91e8066012e086e0fc88cd73a2cbf55c68"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-migrate-callers-then-delete-legacy-apis.yaml",
+      "sha256": "e4d24223a6d2c1e9601b37551810bc44d802685b8f130e4a32a0f8ea427bfa39"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-minimize-reader-load.yaml",
+      "sha256": "61e938918b268518c1ef76a61a1efc65dd9f2b8929c6fd5745f2324726b0523d"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-model-the-domain.yaml",
+      "sha256": "af3835df34d21d24a44338cfa9c699aa3d89c0be09479f22125ac4e2352080c6"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-never-block-on-the-human.yaml",
+      "sha256": "881abe0d83c7996131442f1dd31396f353207e5afaa39694ce002b1e710e1382"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-outcome-oriented-execution.yaml",
+      "sha256": "f416b048750401e6455580b05adbf0e74b78027b3a62a04464ebed5018e385e7"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-prove-it-works.yaml",
+      "sha256": "25f8477ac2ca4a71e3e87f9679b5a9404bc5904284204eeede82ed04416d5e0d"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-redesign-from-first-principles.yaml",
+      "sha256": "48834cdaf6a27fa7ba0e5f08c118cee01fbcf39c1048513a27f927a64633e8d7"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-separate-before-serializing-shared-state.yaml",
+      "sha256": "49cbc0e65d9fab1cead899f9741199455637494c6e0f78950c618423066e4b7c"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-sequence-verifiable-units.yaml",
+      "sha256": "439b1175debeaf5b2846f3767d3f55e4d87df588213333aa5894329b68786388"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-subtract-before-you-add.yaml",
+      "sha256": "6d98cbddd5df3b89653a38835e302bcb2a41cea3abf8af81736270b4f3643da1"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-test-behavior-not-implementation.yaml",
+      "sha256": "a8a5132d472b74ea2767d138ccf0522a3f1c22889d9ca808ff70c0d9df4eec52"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/principle-type-system-discipline.yaml",
+      "sha256": "6d3a1aad50c6693d256a79c5a5ad4fb502d8dda0d74a5e07245c92755f9e841e"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/prototype.yaml",
+      "sha256": "33bd53cd5e6b64a550763fa932e5001c12f835ba28a81368198633f22e00d6eb"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/recall.yaml",
+      "sha256": "2bc465e849c897ae9de87648a73e5126708a5bc636701bfbca7f6785af88aafe"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/refactoring.yaml",
+      "sha256": "4d02e3a29196b0deea18ba7c46fff3ef370d26650b4a52288824ea1bf6d87202"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/reflect.yaml",
+      "sha256": "13ac1eeb6309855ca4aa2140edc506c32027ddac8c2bd085546b3cb0605c07ac"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/runtime-forensics.yaml",
+      "sha256": "f2ba8a8d0d3740dfec74a7bf82a1da85bca2eb700871bec0bce957026ce24e3a"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/session-pickup.yaml",
+      "sha256": "88d41994ffdd6aacd920a65ac708ecc7ef389ea0b760a751ab9603b6440e37c9"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/setup-pstack.yaml",
+      "sha256": "ce24552a445e9fc93c13125488f3e04bbe57522ad1503b71f9637020ae149e58"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/shipping.yaml",
+      "sha256": "0beb8520d04ac488baf49eaa33900edf1a0abb31a5c864f0a3dde8b619521b39"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/show-me-your-work.yaml",
+      "sha256": "c6dabf47a9c79efbac84376cabb63c172bc9701b3e46f9061e58e6ed5f9eaad2"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/swarm.yaml",
+      "sha256": "3de06c7d127a3a221a3b16d929a51a3bf98f807abb94fce6192d2bdec5341cf6"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/tdd.yaml",
+      "sha256": "ae3d48971896157ea0fad0e6b96ca45d47fc5a815ca769026571bd1f018c5a85"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/teach.yaml",
+      "sha256": "3931b9539f314664145054ea2cc68c98b7f8870a698b09aec99e5f6bb8618229"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/technical-writing.yaml",
+      "sha256": "fb23b0ab9ad7941742dd36db9c9c96a0992491ebfdfec450ae55381732502820"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/trace-forensics.yaml",
+      "sha256": "d270d4c1e553b6aac96a6a1e057b8c4a03aeef7f9154dbd6ccc1f53193d0e93b"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/typescript-best-practices.yaml",
+      "sha256": "d4c133ece75dfcd4127d6004d1b52ed91c738f6be857837cb55d5bcd8331baca"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/unslop.yaml",
+      "sha256": "96f9148fc0dc53085f4234f92e23bc506e2b0c2ca1684c8809403763afea25ec"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/visual-parity.yaml",
+      "sha256": "94bf5748024eb0433b40f4354cb09a2f26da62846cce4ef82e313d2f8e447e74"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/why.yaml",
+      "sha256": "6dcfc067e497ea2d383144136f2aee61f5d74bd792b30de2f4bfaa1dd87419ec"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/nodes/worktree-cleanup.yaml",
+      "sha256": "63b22c97586654093ed84a6bf6d2a7a6d5fa73a669ddd0314b8c37042eec5433"
+    },
+    {
+      "path": "src/data/skill-maps/pstack/relations.yaml",
+      "sha256": "58b6d11e27415bf13493118960fab60a740dd3892becef1927629509f04ca974"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-agent-architecture.yaml",
+      "sha256": "a57a6249b99289078dee6bacd61d8e6d9ab46f3f88179d6a2ae2244048f2ef15"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-capability.yaml",
+      "sha256": "5ef020517049fa3646678b9f2f841fca178ed4d23aab7a745b1517877cc61e50"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-context.yaml",
+      "sha256": "5bf38431b9f578947a3f6c5abc39af6926b4d70078e3097daf6ac283f268e755"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-execution.yaml",
+      "sha256": "02a3e5e60425967b3e76ac68735e90cf41047e1804ed225afa05301d4a1c4582"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-failure-handling.yaml",
+      "sha256": "667c3703d8b777be813c4a0d2249b26ee4ab9ab3ddbd7d5c500f32182561c0f4"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-feedback.yaml",
+      "sha256": "37e1412083abb5eba378fbfaee5e46f1f11b917e3b991857d7a8e561a5c44f70"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-goal.yaml",
+      "sha256": "a2f49d9af6b9ca03344c10421214659d7bec11502c236225125db5c6a8a4f27e"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-governance.yaml",
+      "sha256": "179b3fe6eea34effc66ace618bec07299907c859e3fcd7a2bf66e19fe5f16bac"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-harness.yaml",
+      "sha256": "ef99762459c19aa56646fa7ae550323db38b1ba77775c3f4b27ae79e707ac8d8"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-instruction.yaml",
+      "sha256": "8d14a44e827516615939dccbfa7024f049ee248ed6132d18c7e1d88d38f6592c"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-knowledge.yaml",
+      "sha256": "abf7911ce11dbbac5c9b7f9f0303067f10fd9730cf067e6020ae1a6801d5509d"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-memory.yaml",
+      "sha256": "a5d0dae377ac8d0d072f44c6509e5ea3de1a26342d5030de1255b928b4479589"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-multi-agent.yaml",
+      "sha256": "17851f44e51f8ef75ae8302125ebc9d89da5092401cccd0c32fc6454080b2126"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-organization.yaml",
+      "sha256": "fc4acfab746d4545d8346fb89f23854d5986797e5f6a800f3d46c9d8a297a928"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-reasoning.yaml",
+      "sha256": "e1bc255333cdb69574a3026411123512a81b5f7a4b62f28812eaf060494172c5"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-state.yaml",
+      "sha256": "6c12272c96f73d6e2614f15ee23a92e89c9ff6feff1208fcc61b017b1285d306"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-ux.yaml",
+      "sha256": "fa8093ad5f27c5e9e13fc405da4b32e4da58ee2b66d433307d67eea0ad2f7c95"
+    },
+    {
+      "path": "src/data/translations/zh-cn-category-verification.yaml",
+      "sha256": "86071348ab01f1007e088157671f8717d7da982d49432d08c3c0155a2efa8ef5"
+    },
+    {
+      "path": "src/data/translations/zh-cn-concept-context-engineering.yaml",
+      "sha256": "826a7acf0c6d006287690dac6b9a82fd84abacf5d41f8e1bb8c6a694a5dd00f5"
+    },
+    {
+      "path": "src/data/translations/zh-cn-concept-harness.yaml",
+      "sha256": "e46928cfa21360045a250f77f33e8470a67efe60d67a5bf4c82a6246693c4faf"
+    },
+    {
+      "path": "src/data/translations/zh-cn-layer-layer-cognition-action.yaml",
+      "sha256": "eb6a262916fc3258780747fd60e48507aa74b09b92a4c367a435b318a6e0beab"
+    },
+    {
+      "path": "src/data/translations/zh-cn-layer-layer-dynamics-control.yaml",
+      "sha256": "b3a28a87d40dd4aa35d04f6a5e053cd6056e2b98ae7a59cc0996a1e0f8605d52"
+    },
+    {
+      "path": "src/data/translations/zh-cn-layer-layer-purpose-governance.yaml",
+      "sha256": "ab350614f622beb11a166104bf40cc552fa7c171e9274fdc04c18bbaa00151df"
+    },
+    {
+      "path": "src/data/translations/zh-cn-layer-layer-runtime-trust.yaml",
+      "sha256": "80233a86fe74babca37a08fd50cec53f8e880da428ca34d7ec01a07156987e3c"
+    },
+    {
+      "path": "src/data/translations/zh-cn-layer-layer-structure-representation.yaml",
+      "sha256": "079c007f13e0df993307235f168519ee3f83709d2ae8f0dfdb2ede69ecba9b57"
+    },
+    {
+      "path": "src/data/translations/zh-cn-primitive-harness.yaml",
+      "sha256": "e17dc2c442eaaf2fe0e00b8306ba5cab825257f1492d06d3357baaf8f0fe7bd8"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/agent-loop.yaml",
+      "sha256": "c8b983c2031502135554a52e1c2ecd7c8fbdfbccb6f208ba60cfdc59c4409f92"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/agent-ready-organization.yaml",
+      "sha256": "4f8eb1d04257ebbf47a70511b53f952e35801ecfb2a59c3e8a15d548cc69acb4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/approval.yaml",
+      "sha256": "69c14e5d7c3ec3d82b56c2f022b6da94f4656666433268eb398289f4aa9b4fd1"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/artifact.yaml",
+      "sha256": "9b6c9476069bc6c396be3b29b545b7e3d646dae0fb0f06ce121d1277b07b5e0a"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/bounded-autonomy.yaml",
+      "sha256": "16feb2963aff3f885ee5ad16f931883fc4ca025158bc7e3f0f21a680490d8e1c"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/budget.yaml",
+      "sha256": "d878e75cf542388f86a233b690de0300c2a58da5e2a1e4ee7859ec1c0d95ebf9"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/checkpoint-resume.yaml",
+      "sha256": "1a5ed7bf5ffa93b4eb131a4cf7331efd949d705c249bb1d5bd4947732e934ab4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/checkpoint.yaml",
+      "sha256": "0a3fb190c73b4986e4330ed148a5a91bb3e7ee2e48eef1f131a4636a11dbe091"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-budget.yaml",
+      "sha256": "b5216639cb646d40c5ef29bf2a2d6573b073ce12547689744e95b9f0af709dd4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-compression.yaml",
+      "sha256": "db57b0968eb0e47c1d81c272e9a9c472805cdefd3fd53448e5cab2c3fafe6dfc"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-handoff.yaml",
+      "sha256": "cd7144076185f80c0ed99c98b5dac33858c8d5277fc6ec7aa43010a82899f213"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-hygiene.yaml",
+      "sha256": "5b1093598199803cc2a55ad1851461590cfe73812e7483448d5ed3ab326e7059"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-isolation.yaml",
+      "sha256": "257ed1cf7812ff045511d6bd88cd5fd712b1fc55904a90ce1aa0cc69cc76ca56"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-pruning.yaml",
+      "sha256": "d1740dd2ffb1863d836c7785f8f7a1089d17516ec94142ab881990cd2e9dd5c6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-refresh.yaml",
+      "sha256": "4555883c7e09c3c87fb1c6f8d531547e5de2b4e4034cedfe553c9b36e426871b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-selection.yaml",
+      "sha256": "ddf3e01a477becdeec9bfb1af9ae86843eba57510b56172e358465833e22c371"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context-window.yaml",
+      "sha256": "9f84583a1539cfdb6e1767f6a1939400fca294b118de1aeeb11b160c5ef675bb"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/context.yaml",
+      "sha256": "7c57845c7495c21dc9b7e239258192ca8c2f3cde0399a39eb16294b0812bdcdb"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/coordination.yaml",
+      "sha256": "4deb47ea1adaa2a17023da140f190f5b82e99b712f274fa42b6051ded617a497"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/delegation-contract.yaml",
+      "sha256": "fc691f34e92b5563d5e29a4ce9991a1f4105f88f07c0cd221f7401f2ed7db328"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/delegation.yaml",
+      "sha256": "ac2c6a44aed1ebefbe791f31ddc31e47c7b5e3d632e4c8afe16e55555a885c10"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/deterministic-shell.yaml",
+      "sha256": "77ca29347385bf8ced04e4419024ce95ac68fa035f76c0ba7d669530d9d3525c"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/eval-driven-development.yaml",
+      "sha256": "b087e72e521e1476b4ac094de4baf63020aaf5dee1fe23344659babc9c250048"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/evaluation.yaml",
+      "sha256": "8a3ca837c140ec4ef21f399f52d8a9691c745304958b0ef317a8cc5244e23407"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/evidence.yaml",
+      "sha256": "cf4b14fde2ba6b44d71a4894e1b74f27d6acc2ec5708a5b76447980e181cbe20"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/failure-containment.yaml",
+      "sha256": "e6bb30cc6fb13013ebebfe43f6965e0b19c048a74756e5c40dd6b6dcc2981219"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/fallback.yaml",
+      "sha256": "bfc58eb74831d1198b51602b48251d800717d69e436bcaf5ca00bc45ed64fa76"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/feedback.yaml",
+      "sha256": "ee4126c47aa3adf1012ea1367a7f7621a27e224ff5fa42adf3357db7a1ca2b67"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/forgetting.yaml",
+      "sha256": "9623b2d5e8478dd0f3fc1d2d0d268d83f2408c226fec6d3c7cc036dd8adcde8d"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/goal.yaml",
+      "sha256": "159f74e94cc71137d161132f437ead8e12772258cdbea256efa02cfd63410bc7"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/golden-trace.yaml",
+      "sha256": "0532dae920845475a9e605d1f0768e0f04ba740139944832713fca2341c40f19"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/graceful-intervention.yaml",
+      "sha256": "3ffec1ebdebf119f0b7b701e5f3fe9b03235c02b11ccf49f5f5160aedcb8df13"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/grounding.yaml",
+      "sha256": "11118af7faf9c6f434311859ea1fd0b7299b96bae1aca7fd6f85e127cca29191"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/guardrail.yaml",
+      "sha256": "c7271b26d391a19e764db7ed8ab29af989f5e01e3af6a9cdc0892191a6d3cf93"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/handoff.yaml",
+      "sha256": "01b552bfe4c8e09197a36666d9a404dcad17c41cf828cd0700d123b0e5172fe9"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/human-on-the-loop.yaml",
+      "sha256": "645e67db92fd966efe7f651d26cc1273864b4d5026ea695447fa3cd4617d2472"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/idempotent-action.yaml",
+      "sha256": "500bdb9b7935fa6c7afeaf4407f7d11607341e0d6c1e477783863ff53d55b0cc"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/inspectable-agency.yaml",
+      "sha256": "6580195b228d2656859b9e8594f35a05f6d99d33cfa63a28a765012f03185e63"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/instructions.yaml",
+      "sha256": "e4db96d5cb3d37aeaba1c96027c8fcd81a5353e3715be2e4fcfea4e5bfd6af74"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/intent-interface.yaml",
+      "sha256": "232ceae82671491be84c2e04fce1dd2390d3ae671e4bb5e3444e691557157b12"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/load-bearing-facts.yaml",
+      "sha256": "5e9a279d412ca391b29337e2ffecb84298d1051d4f15aa83d99b3ab807cf3e0b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/long-term-memory.yaml",
+      "sha256": "96a9c3060a231dc5b0dd3969f61a7c99864c63b274bacb8ef768080a62fa2238"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/mcp.yaml",
+      "sha256": "79f4319bb942b0c8d3748e3336740633d299387e274d377d9cca2c6ebd086a05"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/memory-architecture.yaml",
+      "sha256": "aa659bb0c2b1faf098eef71a0bca151e69c66237c1f1c3434367cb2ff825b966"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/memory-consolidation.yaml",
+      "sha256": "416d99d4b164474504f7b4ea5a3f8bac93356f7043f09063ff6cc08e9976a929"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/observation.yaml",
+      "sha256": "bf17a378f221c48501b0ebcf73a715ae965f305df3ba602169fd6e755d239407"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/orchestration.yaml",
+      "sha256": "8c22c60b9ee58f192df3cfddfee5e7d8347b8bb41052a8a2db0164faef19099b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/parallelism.yaml",
+      "sha256": "2d7d792d0352c4dd88547ef097c0201b96e6fe298db2bcc7a4a53f3e45027a94"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/permission-boundary.yaml",
+      "sha256": "a2f00952564c6ef4913f68567bbdba1b9ecc1c7340f35617db062806d428728e"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/permission.yaml",
+      "sha256": "291b91a52002148da90e9a19c0dbf96059b36f4459c108067c5e04a14e11a7ec"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/plan-execute-observe.yaml",
+      "sha256": "73fb652d98dc4cf24c14f064df3f8e1bb0f8db5b89f19585eced57f9e2f2eccc"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/planning.yaml",
+      "sha256": "2fffcc371ac8cd5a4980a75db2168a0f8466f174ea1c47760be8425fdf3ff4b5"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/policy-as-code.yaml",
+      "sha256": "dd5b380d7f3df5e16e68bbcb98d509678910ea09d03c29c85f82c38def3c79c4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/progressive-autonomy.yaml",
+      "sha256": "92260c80ea615ab73d1c6de28ea688f912a55f9651f90795b8821a4e11c9a9ff"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/progressive-disclosure.yaml",
+      "sha256": "7e98ee12060a61cfe149a1e0af2f71d89012166084697265fcdb4fe2ddcebb60"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/prompt.yaml",
+      "sha256": "d4388f699ac1e0f99d4141bdc4d1b7e282a58b00649c0cf6920afc95beb43af6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/provenance-chain.yaml",
+      "sha256": "945b6b7e42a186e4f3659613e164e782de0312a93bc3fa84177948211e763a02"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/rag.yaml",
+      "sha256": "e352a7eb18a976b08762cc7b9a773ca14694e12b44744356c790719d2fb46f3b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/recovery.yaml",
+      "sha256": "b02ce04b37eb0957a2fde033ce91008f475bca6470e0cde48d78e7415527c5e8"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/reflection.yaml",
+      "sha256": "a2ec280420d693f4bfee9d0d83e62b598a832e3a7871b95f979c4eff0bd1dbd4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/replanning.yaml",
+      "sha256": "0ed2a5897b21c476baee12699587f33d500c5a45d92e89d765e51b9c291fc9da"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/retrieval-contract.yaml",
+      "sha256": "6b5b159555f43e13efc542cbd23777fcf8635e45ad8abdb17932c6f027730fcf"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/retrieval.yaml",
+      "sha256": "afb5e569d3a1f63cea23e8975bf557e5155e542a1c90dfa518c6e5f55ab756c7"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/retry.yaml",
+      "sha256": "612e8a40bc1145c16aa19b0b23ccaa9040c06d5e8f255b2f8878fd72ce0deee8"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/rollback.yaml",
+      "sha256": "728df21e3ada7cf245c09f2bc62eb529d4951861649a85f7abd52c1757a11a73"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/routing.yaml",
+      "sha256": "471c5960f5b34881ec5597609ee8f7bedd671cd1304054bac069283b4e86c1bc"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/shared-state.yaml",
+      "sha256": "24e525b190cd8278b883bd1e47f761f30cf31723e362f6d283cde4377b8aca33"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/skill.yaml",
+      "sha256": "c020e1dcc49b47e860a07e6d47cf809be79179578ee1070241c85506396356fe"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/state.yaml",
+      "sha256": "9786d68acd9fb7dc1ed0c953e49686b83182b3be519792402c1e6c5810d7418e"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/subtask.yaml",
+      "sha256": "71fd6d89a8910af2f6e9a3907ac610d2cbb20b8afc0e1123c2d73283814a9fbc"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/system-prompt.yaml",
+      "sha256": "c15b193422b57b1f507e59678967c04c20e539e986a655270529f7551ede304d"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/task-decomposition.yaml",
+      "sha256": "63b67c0dd7561a2949c56415eae711ff82d5a8d4098648451ba4a46fc1f99a3c"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/task.yaml",
+      "sha256": "5c22810c50bc9af787802b7e0eb4b1c01f49d015d56d62b11f550b753d1eadd6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/termination.yaml",
+      "sha256": "8336772f14b38d1a477feb22e097613e3f4c5740eea69e105cf3a8cb22855f22"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/thin-kernel.yaml",
+      "sha256": "8e2576a675163e4b56ae74ca810a699bc181d7e3944cecf58d6a06d8f3b2ab77"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/tool-calling.yaml",
+      "sha256": "1857007eba38576f8d683cbc52ca390a2adeb5b37054286e424bc10e8666add0"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/tool-selection.yaml",
+      "sha256": "2723599c113e2968c43f7e1f7c6c19d366808d1a240c3e549722c9433b8a4e4d"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/tool.yaml",
+      "sha256": "73e23709ad151f01d42af7c8ed34f9ff9f3d2037839b5f13bcb6c2ab8c60505e"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/trace.yaml",
+      "sha256": "6eb3096d5104f2260a4b6edf135557c17844980e7a21f82a5705791114d64893"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/verification.yaml",
+      "sha256": "f7a92f799aae0a770fbb9585c0f6abac89fb2379f888cc1a8726a5c1fab52e8b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/workflow.yaml",
+      "sha256": "bcd00d6c3eda4a01aba221dde9e935bdc12e05d69280317568e6a202f245d1c6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/concepts/working-memory.yaml",
+      "sha256": "f8b9754dfc22c3aadb6c698c059c297c590b81d2929cd4c9dcce39ae90670e8e"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/actor.yaml",
+      "sha256": "ec666a3f7adee7a5ec6596bd74636cb7b032b921b2b2e2983b3146be4484dab8"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/adaptation-learning.yaml",
+      "sha256": "bbbdfcde70e5b6bb544817dc164bdb9eec59cc17a67a12b0689c966d857edcc5"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/affordance-signifier.yaml",
+      "sha256": "0849b0f21d670cafcf29dc41768e04fe9182b4378cc9651bd25d2756f89c0bb2"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/boundary-environment.yaml",
+      "sha256": "aa4b154c6904768ca462e420cb9fb3b511194b0fb18e255ace9857a9ecaae2d1"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/buffer-queue.yaml",
+      "sha256": "18f14c140c4f4ea0da629d7671ed24e4b75c175fbcb3926ef321ac921e188e29"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/capability-tool.yaml",
+      "sha256": "462385220f15916062a9872636f66e871092535bca8f1e88d63fde51f25969a6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/constraint.yaml",
+      "sha256": "843cc7ff21303af5607bd465a1be52dd435cb713cac4e1ef2b5e218358843e84"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/context.yaml",
+      "sha256": "af9da65123468ea82d20469a5d76fbd86befdf3016b7082756691e576fa03692"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/control.yaml",
+      "sha256": "e6ff8a5a61d2d429ff44bc277bf05c5605dc0d517337fbeeb66f7c9a93f88295"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/delay.yaml",
+      "sha256": "2c269ad553d2a6a1d58ef78c800a819fa6e8fe88c56c823fe2b9fb2616def8a0"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/emergence.yaml",
+      "sha256": "5e2250131e920501be7a7ea048e3adf0e316211561faf145a35e5e2022bda2de"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/entity.yaml",
+      "sha256": "4794c77a624880fba6089c702685d0ada24f1a062f9ddcc74d96b9eb5da04238"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/event.yaml",
+      "sha256": "3013a9d56e8ce27e2c9e0cba4230337ce8b987618df3c0cd09aae56a213f706c"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/evidence.yaml",
+      "sha256": "0bf16d876f76e0706ed3834d0f607f838dba5f4a2ab8b8783ac1a9ba7eadfd14"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/execution.yaml",
+      "sha256": "c1f00c3e8a7ff961a1b8d0b9009134f386b204aad5814e4abf8842262dbb6d00"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/feedback.yaml",
+      "sha256": "399eb147161e03cc503675e00e8e4d90b8ff66ccd6269d0cf347ee9233c86c3a"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/flow.yaml",
+      "sha256": "ac7842c4d19042492db485d0f2e663cefed4d3d5582fd68b0f4b35bd5deb6758"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/goal.yaml",
+      "sha256": "c37cf16c9ef211da0201818d5c386a25c95c570b8d98e3066ae129af21d195e9"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/hierarchy.yaml",
+      "sha256": "6abb385d756d59b74dab908c1164f604a6d3b0e9475b1f04fa04213f50ca265e"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/interface.yaml",
+      "sha256": "be1d83463c8ab12c45aacd3ed6eade122352c32ad4de0c52bc261ec1dd6f5fbf"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/invariant.yaml",
+      "sha256": "394c2f34a4081f333664a193ef43bb6a5242c926e3ec61addc52307223fb8f1a"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/memory.yaml",
+      "sha256": "dc028716f9446ec3e25fcabb1d357f4337df12a0287724a189f5ede24da7b5f4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/model.yaml",
+      "sha256": "319c841f3b0486293ff9882a7982a0b463778b780fdeb312af85e77841b07c30"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/module.yaml",
+      "sha256": "9ed4343711837162fb1ae5982b3a0d4f8756949cd27b6f74c358ae628e268249"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/observation-trace.yaml",
+      "sha256": "135e7c5bdf259362575bffda2c158e716bf8b905391a6432be4e1a07ec5964ba"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/permission.yaml",
+      "sha256": "ab8ba88096774ca30cb49a14ba5e2a91b8cfce17ac76c2e9ca6f75326e32fb3a"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/plan.yaml",
+      "sha256": "ab3ea80363b26cb52d54bd3bf2c7c4a54b62c972deda4f5953a6b919ca295f2b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/purpose.yaml",
+      "sha256": "8d79ac2f739a90e3481b5c65fe13ebeef2667579027da7970a529cffebd16e98"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/reasoning.yaml",
+      "sha256": "f6106ac7d1c47e57950eabc4199117269f3efeb9c3bfdc8d8cc2f804919588c6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/recovery.yaml",
+      "sha256": "0cefa9c9973f0669040240a958ecfed41a9610eb0dad58372a55a033289a4ac0"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/relation.yaml",
+      "sha256": "30185cb7fe6b5849e8c71dcc8d1c43c3a4868191d32b3636fd056c62803b35b9"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/resource.yaml",
+      "sha256": "cafa9e63fc1f0ec0eeaf37ba08339203366e32ca7c3551e57478e9011893ec92"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/rule-policy.yaml",
+      "sha256": "bc73914dd371a1f68610bbf7eb81e498ab2c122002785043cc2395645f273f0b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/sandbox.yaml",
+      "sha256": "8a5656b011327cc276fb5e569dd9154fa8ffa0ec06fd255c2cff9f02a22bd8f0"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/session.yaml",
+      "sha256": "eef7b56b0d47ff0f1e0ff9066495bbe6ef1d433b69abe59bae3665cba366d3b3"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/stakeholder.yaml",
+      "sha256": "565e48dd24946ea0b5f6b251ffa418e10609321cf5f2528c07f28ed54ed92335"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/state.yaml",
+      "sha256": "4ac0445dc5bfa192c2d0264c7dd6d8bd5b6311518cb4babb4f8cb42aba9d1c99"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/success-criterion.yaml",
+      "sha256": "04b29ba6cc4cbcff129a17160055ed84c0c124bfe4812caceaa852b827e4d1e4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/variety-uncertainty.yaml",
+      "sha256": "20697e243f6d0f27157898e58e6e34e6d4b04347636cd6ee38bb88adc55fb4a7"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/verification-evaluation.yaml",
+      "sha256": "171953b0da4ab0aed1d3997779ff157b00be1a49e89e5eb5a93bec687f3a5666"
+    },
+    {
+      "path": "src/data/translations/zh-cn/primitives/view-projection.yaml",
+      "sha256": "4fdac902140dac3bd386055929ca3ef144d18b3cdabbfa472ecd109a0c6fb8d9"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-01.yaml",
+      "sha256": "afbd607a759a3db3405eb6fd2f711413ed91b1f4900d5aaaf2c5e8a2e57a3256"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-02.yaml",
+      "sha256": "06099810bc387e253414afad30f956747fc49af88fde9d486dfc66b26ad9f134"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-03.yaml",
+      "sha256": "185595653e6ce68e8050f5dd86247b91e1e75411b6391373819b443072f9ec99"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-04.yaml",
+      "sha256": "a280aa9c0ef02711a715b36c4acf91a8354bbd75e46a4a6f4c35585b47ad5eb6"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-05.yaml",
+      "sha256": "62447423b35d9d372d65e4ff4d53053560f0582c5ecf5feea998dacee55d5a3e"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-06.yaml",
+      "sha256": "ed13c11967b2eae279d3bc85b2a0ddb2dd5a5e131ff61b310a8a5083775a28b2"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-07.yaml",
+      "sha256": "cdfa61d8fb5cb529dd0a6649f2082ed9fa8b8999f9d39e02c586a686a19a1bef"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-08.yaml",
+      "sha256": "5f8de7f7898c5778ba0c1b13445bf7c959c8a3bbab26106f37da71ffcfc6147f"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-09.yaml",
+      "sha256": "e114b0114a8e6a6fd3bbd31ca077241bf92b282f2cb2993e5029ae088b57e77a"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-10.yaml",
+      "sha256": "0f114cbfe0be0cf32e2c2f8af91e4eb81e68ac8530df35fd38d056a3c06715c7"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-11.yaml",
+      "sha256": "7fdba4f478f75dca39fa969fef638ab672a597cf6c13fc25d867d97186e0d2b4"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-12.yaml",
+      "sha256": "1040d650d96b8fa373ad9034a0f990581b1eb17199f5c7c45ea3285c698e333b"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-13.yaml",
+      "sha256": "ff60c169fd58bfe585401734ba97375630b64103549b4968d1c34b1f21d3617d"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-14.yaml",
+      "sha256": "8f4898828a212d174ab4c5aa165100c968c0355a1cbfe69e2fd88a1449efc083"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-15.yaml",
+      "sha256": "a3aa8b4b22d2d864ea262b23e2980af40c84d5f0381e337dda5bf0067b659f42"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-16.yaml",
+      "sha256": "9571cfbb3737911b40abff69c8ddf8b01161903bc76b7209f2b4a805d8d5ca48"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-17.yaml",
+      "sha256": "bc3ab2d5ea635349a08987a0197bb2a94c49ea908b8cee5872463548a1e0c35c"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-18.yaml",
+      "sha256": "d38f053af6cfb1b8b79980e3712e40dd53ec59015990e1c29dfdeb3047a70e54"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-19.yaml",
+      "sha256": "632f5243243d16515dcb1a8a9ff106ea2f2cf56e4f6b73505b89876a2ea24a16"
+    },
+    {
+      "path": "src/data/translations/zh-cn/speaking-guides/card-20.yaml",
+      "sha256": "16671cec186511dc1c9eb1833455aeff5dba4794763864378427b490407e6c4a"
+    }
+  ]
+}

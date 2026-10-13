@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement","feeds","pr"]'
+provenance:
+  original_sha256: acded5301a5ba789cd0e969e9045e0ac522b2e427546a0319e75fc368c20beec
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 需要 PR 交付时，代码与验证证据供 Agent 编写 PR body；此关系不授予远端发布或合并权限。
+    language: zh-Hans
+    source_fingerprint: sha256:466146eb0ebf83dccf7a3fc392e5c374168c5ab5b525d1f457eb5a52f522f50d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

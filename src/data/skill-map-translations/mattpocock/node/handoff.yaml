@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: handoff
+provenance:
+  original_sha256: bdceba0121a2775539b21bbb7264addf6ed552f0880fc96e4bdd0ada2433d36b
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: handoff
+    language: en
+    source_fingerprint: sha256:cdd85930088bcdd4716147a5d834f46a8bacb13d4b9e2b0f3cc5352ffe0a15dc
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把当前会话压缩成另一个 Agent 或 session 可以继续的 portable handoff。
+    language: zh-Hans
+    source_fingerprint: sha256:8b43090e1273f5e30306d2288b20ad56fd7dccd29c84c94710b6ced81f77869d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 生产力
+    language: zh-CN
+    source_fingerprint: sha256:b18b5619db899b46b8fb525c68cdec262b341898262c4f4026ef439346a9a4f0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:68629b7fb9979bd34136cc7c245ba4ec893b294347e16a8895bc838075ddf3cd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:3c323e96a9b58f5988512d92414ef7db760a3ad8e40c494432346e18c32128d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 当前 conversation
+    language: zh-Hans
+    source_fingerprint: sha256:3306484d1ab8a244b31af9d834a98467784a08225d4aefcb8593cb1a3d3c4dde
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 目标用途
+    language: zh-Hans
+    source_fingerprint: sha256:9ae81c04f1b759a6dd9bf62fb916dce17aa33e87dc12304f90bba142c7a6d1a5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: Markdown 交接文档
+    language: zh-CN
+    source_fingerprint: sha256:191c8f8a42fd24c1e438a06d31cb9efe5474284ace0961c0ca719b5eac477320
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Compact the current conversation into a handoff document for another agent to pick up.
+    language: en
+    source_fingerprint: sha256:f1b456ff13c771a27c1998a5cc72c2bb26fcd33a2880dfdfcd36c642139abafd
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 把目标、已做决策、当前状态、证据、所用技能及关键文件指针写成操作系统临时目录中的独立 Markdown。适用于新 harness、新目录、交给同事或在阶段中分出侧任务；普通阶段边界先判断是否继续、清空上下文、委派或压缩，并非每次都要 handoff。
+    language: zh-Hans
+    source_fingerprint: sha256:7bd9ace056b9fc1184eaa294dd58399ab62306ecc2aa873a31a3c3551ed98308
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要新 harness、新目录或将上下文交给同事。
+    language: zh-Hans
+    source_fingerprint: sha256:3d10fbbdfea4bb95315cbae19680eb3807f82e4f30dff1799d699304dfaac856
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要在阶段中分出侧任务，并把 portable context 带给接手者。
+    language: zh-Hans
+    source_fingerprint: sha256:df6b7a4c06cebaa7a6db1af3df1ba14170644f5b9e5621caf3f2cfe94b2177f3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低跨 session 上下文重建成本。
+    language: zh-Hans
+    source_fingerprint: sha256:c7f19c393f1e9ff04c165a7710018bbc2ba65fe32e25f40b7445553a1ff95f00
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 避免关键决定只存在聊天历史中。
+    language: zh-Hans
+    source_fingerprint: sha256:e226a35bbbb77c17eb551720625c9fa6bbe4ac485e9ccd48b474f3ee91a26d1e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

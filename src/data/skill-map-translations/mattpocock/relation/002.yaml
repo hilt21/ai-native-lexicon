@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","triage"]'
+provenance:
+  original_sha256: 70237a6da4a01d9e49deed595b5308409561d944787f7efa111e9b52ef09b584
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 原始外部请求尚未准备好；不包括 to-tickets 生成的票时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:210be8ee745a04893c3c911f6252cd848ffe9887c73fa890696384ecdac5bbbd
+    review_status: reviewed
+    reviewed_at: 2026-10-13

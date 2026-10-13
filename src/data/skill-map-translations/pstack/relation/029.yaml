@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["hillclimb","governed_by","principle-explain-the-number"]'
+provenance:
+  original_sha256: 9127e7ff2a67f5fd583ad389ff4f87641d5d608882666818d8df9dd72f41c99c
+  retained_at: 2026-10-13
+units: []

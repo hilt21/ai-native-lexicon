@@ -104,11 +104,12 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       }
       await page.goto(`${origin}/concepts/harness/#not-an-existing-heading`); await page.locator('lexicon-language-select select:visible').first().selectOption(`${base}/zh-cn/concepts/harness/`); await page.waitForURL(localeUrl('concepts/harness/')); assert.equal(new URL(page.url()).hash, '');
     });
-    await check('native documentation fallback keeps English lang and omits untranslated alternate', async () => {
+    await check('native About documentation has both language editions', async () => {
       for (const prefix of ['', 'zh-cn/']) {
-        await page.goto(`${origin}/${prefix}about/`); assert.equal(await page.locator('link[hreflang="zh-CN"]').count(), 0);
-        assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'), `https://hilt21.github.io${base}/about/`);
-        if (prefix) { assert.equal(await page.locator('main').getAttribute('lang'), 'en'); assert.equal(await page.locator('meta[name=robots]').getAttribute('content'), 'noindex,follow'); }
+        await page.goto(`${origin}/${prefix}about/`); assert.equal(await page.locator('link[hreflang="zh-CN"]').count(), 1);
+        assert.equal(await page.locator('link[rel=canonical]').getAttribute('href'), `https://hilt21.github.io${base}/${prefix}about/`);
+        assert.equal(await page.locator('meta[name=robots]').count(), 0);
+        if (prefix) assert.ok((await page.locator('main').textContent()).includes('编辑立场'));
       }
     });
     await check('Chinese field-search canonical identities, resolved excerpt language, labels and Clear', async () => {
@@ -122,12 +123,12 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       const identities = await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.dataset.searchIdentity)); assert.equal(identities.length, new Set(identities).size);
       for (const kind of ['concept', 'primitive', 'speaking-guide', 'skill-map', 'map-node', 'task-journey']) { await page.locator('#search-type').selectOption(kind); assert.ok(await page.locator('[data-search]:visible').count()); assert.ok((await page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.dataset.searchType))).every((value) => value === kind)); }
     });
-    await check('Chinese guide core-idea match preserves its original English excerpt language', async () => {
-      const guide = catalog.speakingCards[0].data;
+    await check('Chinese guide search uses its reviewed core-idea and actual language', async () => {
+      const guide = localized.speakingCards[0].data;
       await page.goto(localeUrl(`search/?type=speaking-guide&q=${encodeURIComponent(guide.coreIdea)}`));
       const row = page.locator(`[data-search-identity="speaking-guide:${guide.number}"]`);
       assert.ok(await row.isVisible());
-      assert.equal(await row.locator('[data-match-context]').evaluate((element) => element.closest('[lang]')?.getAttribute('lang')), 'en');
+      assert.equal(await row.locator('[data-match-context]').evaluate((element) => element.closest('[lang]')?.getAttribute('lang')), 'zh-CN');
       assert.ok((await row.locator('[data-match-context]').textContent()).includes(guide.coreIdea.slice(0, 25)));
     });
     await check('Pagefind executes separate real English and Chinese indexes including English fallback', async () => {
@@ -171,8 +172,8 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
           assert.equal(await page.locator('link[hreflang="zh-CN"]').count(), eligible ? 1 : 0);
         }
         if (route === 'categories/context/') { const category = localized.categories.find((entry) => entry.id === 'context'); assert.equal(await page.locator('meta[name=robots]').count(), category.coreTranslated ? 0 : 1); assert.equal(await page.locator('h1').getAttribute('lang'), category.units.label.actualLang); }
-        if (route === 'speaking-card/') { assert.equal(await page.locator('.speaking-card h2').first().getAttribute('lang'), 'en'); assert.ok(await page.locator('[data-resource-language-note]').isVisible()); }
-        if (route === 'skill-maps/pstack/nodes/tdd/') { assert.equal(await page.locator('.map-summary').getAttribute('lang'), 'zh-Hans'); assert.equal(await page.locator('details p[lang="en"]').first().getAttribute('lang'), 'en'); assert.ok(await page.locator('[data-resource-language-note]').isVisible()); }
+        if (route === 'speaking-card/') { assert.equal(await page.locator('.speaking-card h2').first().getAttribute('lang'), 'zh-CN'); assert.equal(await page.locator('[data-resource-language-note]').count(), 0); }
+        if (route === 'skill-maps/pstack/nodes/tdd/') { assert.equal(await page.locator('.map-summary').getAttribute('lang'), 'zh-Hans'); assert.equal(await page.locator('details p[lang="en"]').first().getAttribute('lang'), 'en'); assert.equal(await page.locator('[data-resource-language-note]').count(), 0); assert.equal(await page.locator('meta[name=robots]').count(), 0); }
       }, { route, width, theme });
     }
     await check('Chinese keyboard Copy focus, computed contrast and reduced motion', async () => {

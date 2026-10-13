@@ -38,7 +38,7 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     assert.equal(dataset.counts.skill_maps, baseline.skillMaps.length + 1);
     const exportedMatt = dataset.skill_maps.find((map) => map.id === 'mattpocock');
     assert.equal(exportedMatt.schema_version, '1.1.0');
-    assert.equal(exportedMatt.text_languages.scope, 'zh-Hans');
+    assert.equal(exportedMatt.text_languages.scope, 'en');
     assert.equal(exportedMatt.text_languages.title, 'en');
     assert.equal(exportedMatt.nodes.length, 31);
     assert.equal(exportedMatt.journeys.length, 7);
@@ -64,7 +64,7 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     for (const path of ['index.html', 'nodes/index.html', 'overview/index.html']) {
       assert.match(await readFile(join(directory, 'dist/skill-maps/mattpocock', path), 'utf8'), /Matt Pocock Skills Map/);
     }
-    const pstack = await readFile(join(directory, 'dist/skill-maps/pstack/journeys/fix-bug/index.html'), 'utf8');
+    const pstack = await readFile(join(directory, 'dist/zh-cn/skill-maps/pstack/journeys/fix-bug/index.html'), 'utf8');
     assert.match(pstack, /修复涉及模块或接口变化时/);
     const configuredMap = await yaml(directory, 'src/data/skill-maps/example/map.yaml');
     configuredMap.taxonomy.layers = [{ id: 'configured', label: 'Configured', description: 'An optional layer.' }];

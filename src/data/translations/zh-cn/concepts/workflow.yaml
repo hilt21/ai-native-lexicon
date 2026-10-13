@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 步骤可预测时遵循已知路径。
     source_fingerprint: sha256:ac514ed2b93a1ffdf89580645a40b865b5a1cc22ba5e17ad63259c6dc618aec3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 工作流定义既定步骤顺序或图，包括分支和失败路径。它可以包含模型调用，但总体控制流预先规定，无需智能体每轮重新决定。
     source_fingerprint: sha256:53d19307b081f2c3a9f1df27a851eb8d32bd33e8e9b2963753fe7c001a270531
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 过程转换明确且一致重复时，可预测过程更容易检查和测试。
     source_fingerprint: sha256:bf2dda139a44071002252806febbb4dac765dfa4a36e02e79a8db6c3bd7d77d3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于包含提取、验证和发布阶段的文档流水线。
     source_fingerprint: sha256:ceb682dd7c6cb02e3fcaa08bd345de9afad58fbf3ca8fe88c2f940e913dac2e3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 用不受约束的智能体在每次运行中重新发现相同的必需步骤。
     source_fingerprint: sha256:cd1ed442ca019ead071678ffe98a2fcd51bf7338fd1dc98416fc1ae5b6bebf83
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

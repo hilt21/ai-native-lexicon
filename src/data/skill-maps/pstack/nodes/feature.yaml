@@ -1,33 +1,26 @@
 title: feature
-summary: 新功能的设计、并行实现、真实验证和审查。
+summary: Design, implement in parallel, verify on the real surface and review a new feature.
 type: playbook
-status: active
 layer: playbook
 primary_cluster: implementation-quality
 secondary_clusters: []
 tags: []
-mechanism: how grounding → architect → throughput checkpoint → 分离 workstreams → delegate/arena
-  → live verify → interrogate if contested → PR。
-when_to_use:
-- 新增用户行为或 capability
-solves:
-- 直接写代码导致错误结构
-- 并行写共享状态
 inputs:
-- feature requirement
-- affected subsystem
+  - feature requirement
+  - affected subsystem
 outputs:
-- implemented feature
-- design rationale
-- verification evidence
-- PR
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/poteto-mode/playbooks/feature.md
+  - implemented feature
+  - design rationale
+  - verification evidence
+  - PR
 handoffs: []
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/feature.md
+status: active
+mechanism: Ground with how, use architect, check throughput, separate workstreams and delegate or use arena. Verify live, interrogate contested changes and prepare the PR.
+when_to_use:
+  - Add a user behavior or capability.
+solves:
+  - Immediate coding creates the wrong structure.
+  - Parallel workers write shared state.

@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["ask-matt","routes_to","implement-spec"]'
+provenance:
+  original_sha256: cde2015df9774a54cc1a586ab40cd306334b390e8d33d0ab4ebd5ef91f47122f
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 选择整图编排，与逐票 implement 二选一时推荐此入口，推荐后停止；用户决定是否显式启动。
+    language: zh-Hans
+    source_fingerprint: sha256:80737d39caba201f4ef57767b4c862236cc9358407e0b62cba6962688b5f8ee1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,99 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: codebase-design
+provenance:
+  original_sha256: 29b76eafcbd7bcd552b3006e549952cce6bfe7a14c1e03c79d094deb3dbc4649
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: codebase-design
+    language: en
+    source_fingerprint: sha256:9758936074f752e6f64a89840ecb2b5019b9aceabbbc2c5aedddd0bfa0a9cb33
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用 deep-module 词汇设计更小接口、更深实现和更清晰 seam。
+    language: zh-Hans
+    source_fingerprint: sha256:b41637a18ee199a67c9fb76b59aef50e8a043243f5c32136be1176b8e3494a26
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:be1a8a1554b6abe2ee7289d26f8f68dd9f25a020b0ff38f24e4912c9e8132f7e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:7ff5b10ff1b9c731e850f567b831128834f30c0e060f9295d3aaf4eacda2afb6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:4d466dc1a4572a9936f6595613a229ef56b446217e1a71fa962d603c99cf7ec5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 现有模块结构
+    language: zh-Hans
+    source_fingerprint: sha256:f450458b90b7437e3ee9c852dd67c3c557fc1796eca7f6e1132f44fe4b7ffda0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 目标行为
+    language: zh-Hans
+    source_fingerprint: sha256:3d2a558c4b5f2b76a4256580f9b734e1e15480f8ec2aef19dd5fc98f55af2929
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 模块、interface、depth、seam、adapter 与 locality 的共享词汇
+    language: zh-Hans
+    source_fingerprint: sha256:bb597a49cd7719dee81107649c0e7f94a07b8c53ecfdb45dac9232481b127f81
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 需要时的接口替代方案与判断原则
+    language: zh-Hans
+    source_fingerprint: sha256:7b0e9eb3c459004053bfebee35c606b671800e05590cd78747aa4ba9d9ea3f8e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Shared vocabulary for designing deep modules. Use when the user wants to design or improve a module's interface, find deepening opportunities, decide where a seam goes, make code more testable or AI-navigable, or when another skill needs the deep-module vocabulary.
+    language: en
+    source_fingerprint: sha256:6a0dd8602f2ce27ea78b6178365f9280ecd520666d352ee606dea16fd0ed1ae9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 围绕 module、interface、depth、seam、adapter、leverage 与 locality 判断模块边界，寻找以更简单接口承载更多行为的设计。
+    language: zh-Hans
+    source_fingerprint: sha256:9540092970a14b4ad3db141ae4c62462b8dee6764244d059c11b1200cff1a181
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 设计或重构模块接口。
+    language: zh-Hans
+    source_fingerprint: sha256:c9519c72ceb2c63ed102a22a9498cd90e880020d4d9670806e655a6b613637b3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要判断 seam 放在哪里或怎样提高可测试性和 Agent 可导航性。
+    language: zh-Hans
+    source_fingerprint: sha256:207ab4ee81f3ea8c7957b525346d1a258194a7210b3e50346ef44287dc851a16
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少浅模块和层层转发。
+    language: zh-Hans
+    source_fingerprint: sha256:34dabccbdb3918d71aaf1ffa7ca1c178fc775f657deef68a07143e48bb0cc16a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 降低读者与 Agent 理解系统需要跨越的接口数量。
+    language: zh-Hans
+    source_fingerprint: sha256:4103b27ac4826c35dd9bf48bba3ef859eb3ebe8a6da5689346316d6cf70a6d88
+    review_status: reviewed
+    reviewed_at: 2026-10-13

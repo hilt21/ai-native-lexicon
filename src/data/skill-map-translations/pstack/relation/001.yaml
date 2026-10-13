@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["investigation","uses","why"]'
+provenance:
+  original_sha256: 29ccd830db4670660c83c1327976a3830213033b31138e90bc9ab6065287ca3b
+  retained_at: 2026-10-13
+units: []

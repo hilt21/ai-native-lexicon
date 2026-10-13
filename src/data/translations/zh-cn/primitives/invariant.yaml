@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 在适用范围内的状态与转换中必须保持为真的属性。
     source_fingerprint: sha256:1ef59e5cd60ec32ecf139059fd1ece07080ec39bbff1261798114891b72dbfd5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 正确性或安全条件必须经受每个允许转换的有状态系统。
     source_fingerprint: sha256:1b00b5985ba151478aa1613b6b33c4dfe995f39ad94cfa8a1ef27d128107cb2f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 保留必要属性，同时允许实现方式变化。
     source_fingerprint: sha256:267e14c78e0d6b81fecddbe80c47ec1191808a35c77fba5255b9f1020ec1aedc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 不变量是持续成立的属性；验证是用于评估其是否成立的活动。
     source_fingerprint: sha256:58c0a05e8926a0011e38e8382c9adb07e4b41eaf0e6e11ad4309ee7f40b16511
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 提议转换 → 不变量检查 → 提交
     source_fingerprint: sha256:2f9191bdacd4dd135f95d7d9ddc601a7b9457636b44ee526969b178c5496cf1c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 只有必要证据引用仍可解析时，任务才能标记完成。
     source_fingerprint: sha256:9f10b43b5a2f83653956321be4049e512fc0d26296b761f952c7aead514447af
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 不变量
     source_fingerprint: sha256:ce00fdf8013061e80426413344f66a232815ff09009857299faac1b0727f7cde
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 在规定系统状态或转换集合中，要求始终保持为真的属性。
     source_fingerprint: sha256:a207d74f34abf458047c179582416c43eb07a3ad52c427e0f36424f1fe4b29c2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 明确该属性必须在哪些转换中成立。
       - 先检查后写入的竞态可能使原本成功的检查失效。
     source_fingerprint: sha256:7bc048ba02e80ba37feae11b5ec79231b0d8c78267c0032495f381b44d842bf5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 事务、状态机、约束和检查在转换边界维持可机器检查的属性。
     source_fingerprint: sha256:ea146882a1c3800ac8dbcb4f7ba4ee8bd2fbf298798e888471721c26ae2b5315
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 正确性或安全条件必须经受每个允许转换的有状态系统。
     source_fingerprint: sha256:bbc41db39f2be4ffae55673e5eb96e83cefd47bfcedb0c1c3e86382186ba4656
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 有状态系统需要持续的正确性条件，避免局部有效行动产生无效总体状态。
     source_fingerprint: sha256:1ab8ccd93f7ae4a6d9ba4ccdfa89f22c49c8d01d4385e2da5916ed4de02c984a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

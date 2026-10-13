@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-explain-the-number
+provenance:
+  original_sha256: 6f1b62a29ba59101bfa08d471d2f9f539068952da3156c50842109479c61c77f
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: explain-the-number
+    language: en
+    source_fingerprint: sha256:de7ac2e4854503bce1f889df1f197e54384f8a688ed6cf45d4773a4e994116f2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 任何数字先解释 limiter 和测量机制。
+    language: zh-Hans
+    source_fingerprint: sha256:c101191393a4867c7712b85d4d461cbb38a9e9f35860bd495367f382cfa0c167
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:fb73273fc3dd3a0f88ddf4547a96ab42119ae0e73172657ccf552d35f1aabe2f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 测得的指标
+    language: zh-CN
+    source_fingerprint: sha256:8b5ff641efac2c7fa80d79e256a87f9b8cdffc328aec5f784fdd9484f3731286
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已验证的解释
+    language: zh-CN
+    source_fingerprint: sha256:7568b69a446383726f01307691612bb7b32600162ba95d02dc7bed8443c29c13
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: "Apply before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think."
+    language: en
+    source_fingerprint: sha256:1d937645af5db263b72ebe7df7734575351a6bf66ad62960a6c581824b28e38a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 任何数字先解释 limiter 和测量机制。
+    language: zh-Hans
+    source_fingerprint: sha256:0ede2766e2782a700c80d4b80fa7a5164e2be8638927df1e284b87c0302da176
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 在信任、报告或依据测得的数字行动之前使用。找出限制该数字的因素，并排除它实际测量的并非你所认为的工作这种情况。
+    language: zh-CN
+    source_fingerprint: sha256:ce50153ddb2554844bb499db6b054fe47b67e0047fb0dc2491d7951d75cebb7e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 任何数字先解释 limiter 和测量机制。
+    language: zh-Hans
+    source_fingerprint: sha256:76ff477ae2bf085e9280623ef5a5f088e3974431705ca5bfd47b778d76f0e3e8
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["diagnosing-bugs","feeds","improve-codebase-architecture"]'
+provenance:
+  original_sha256: 06f99b88ad0eb01a1679f585436f3676a98876c0c56dbb7f57d660bcc253548a
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 仅当缺少可观察和锁定行为的 seam 时，由用户选择架构 survey；不是自动重构。
+    language: zh-Hans
+    source_fingerprint: sha256:f8ebd2ecb9db6a06db7aae6c5078f9267c357bcf758a67fcb6726fe8eac874d9
+    review_status: reviewed
+    reviewed_at: 2026-10-13

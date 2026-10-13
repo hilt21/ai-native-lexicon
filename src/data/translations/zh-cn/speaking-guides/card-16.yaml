@@ -1,0 +1,48 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-16
+units:
+  - path: title
+    translation: Copilot Studio
+    source_fingerprint: sha256:b7a1ecdc3d489f0d2a8f284096349a4bc37e8245e09736b659e5d726b80608a7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: Copilot Studio 帮助组织围绕特定业务需求创建智能体。
+    source_fingerprint: sha256:97a2cd853566eaa01246fe0388ffeb4a4553107920b3e36d0e3fcc205eb6e012
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 如果团队可以构建一个专用智能体，你会给它什么工作？
+    source_fingerprint: sha256:0c44eb819e696058db1db3a1743156b4c8bc5aeb7a25e84d6abbe93cefb2e91f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:3578f3e6fc192a3074a40d5d1afab1b2a320be85494527c87bf35ee35227c55e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 智能体背后的许多操作仍需要可预测地执行。这正是 Power Automate 的适用之处。
+    source_fingerprint: sha256:3976de41d076b8ddecbc72f4fe6b1166f6f68220adbc41cee758212b94ea09d2
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 通用 AI 无法知道每一种业务流程。
+      - 为特定目的构建的智能体可以结合指令、知识和工具。
+      - 它们可以将 AI 与企业系统连接起来。
+      - 它们也可以包含业务规则和批准步骤。
+      - 这让智能体更切合特定团队的需要。
+    source_fingerprint: sha256:df2c01353104dea2f762754ac7620e174d34ec00e7b52f31a46563fda93475e1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设有一个内部工程支持智能体。
+      - 它理解工程指南、搜索已获批准的文档、回答常见问题，并将特殊情况引导给合适的专家。
+      - 这个智能体具有明确的业务目的和受控的知识范围。
+    source_fingerprint: sha256:fa4f4ffbff6ccd1ca2919a1c5b2fccf2313aae28d5999bd83ab17611af490384
+    review_status: reviewed
+    reviewed_at: 2026-10-13

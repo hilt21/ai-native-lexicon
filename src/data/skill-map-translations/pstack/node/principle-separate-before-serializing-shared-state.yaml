@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-separate-before-serializing-shared-state
+provenance:
+  original_sha256: f33e40052cbd7dfab2e9d887c51c5823b34c658ce115e5957829284c711d64f4
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: separate-before-serializing-shared-state
+    language: en
+    source_fingerprint: sha256:f83cdca6815760cdf4b36fae78a4a9b56ed7c129b6698e841246f6ff41b4ad35
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 并发场景优先消除共享写，再考虑串行化。
+    language: zh-Hans
+    source_fingerprint: sha256:6e94b9474898649ddf2590e5ca56f05205b41e02f8cecef156e109ed4f7d5bac
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:5dc38aedc9d6f384e3310a82ee7181832d20f0a62b0c0c4eab433aee9784aa91
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 共享可变资源
+    language: zh-CN
+    source_fingerprint: sha256:4853bc511f8b1429a27f087ad421af94bab700160e892add43e03a8ab0add0b5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 隔离的责任归属或单写入者边界
+    language: zh-CN
+    source_fingerprint: sha256:404dbcaf24dffd6829cb413989767266036a33339eda193b293e6b8b05fcab6e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant.
+    language: en
+    source_fingerprint: sha256:c2d87e1b6ec1da9120762c48364f5f586745f3fad98bed29cf592d2de799ed2c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 并发场景优先消除共享写，再考虑串行化。
+    language: zh-Hans
+    source_fingerprint: sha256:57231d836361cf19caa6653191742a27c9f7aa950558b14f8aefdd7010d6088f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 并发主体可能写入同一文件、分支、键或状态对象时使用。先消除共享；只有共享的单一写入者确实是不变量时，才通过结构进行串行化。
+    language: zh-CN
+    source_fingerprint: sha256:7b888569028046028e93d3f131cfd5bee0889f481af8285ecc3c48076e9596ee
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 并发场景优先消除共享写，再考虑串行化。
+    language: zh-Hans
+    source_fingerprint: sha256:c680c4433ba82c971716f465511f39fa472043bb61919cc3024d7b727f51d65c
+    review_status: reviewed
+    reviewed_at: 2026-10-13

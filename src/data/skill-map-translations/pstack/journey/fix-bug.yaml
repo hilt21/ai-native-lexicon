@@ -1,0 +1,153 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: fix-bug
+provenance:
+  original_sha256: 94a66e13ec1ba4ac109cf86aa5402b6aba15128a0914f317f70b8e96104d5e08
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: 我想修 bug
+    language: zh-Hans
+    source_fingerprint: sha256:46250b516393b16c6d91eba6e02b95d69ae81c844ee884ebc22ddc2830da2bb1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 我想修 bug：从任务入口到可检查的产物。
+    language: zh-Hans
+    source_fingerprint: sha256:b40a4baba202daff53b55f3700a13fb409308ac05ad8a7960aead88088eafa83
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 明确的任务目标与相关上下文。
+    language: zh-Hans
+    source_fingerprint: sha256:75b10eaabef11958017dad287ede66baecca311505125ca8981188fe53106803
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 修复这个回归问题
+    language: zh-CN
+    source_fingerprint: sha256:30d177c91b8404e37079e4ca3517233a3db0b64f29db44ea654483f9d775109b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 为什么会崩溃？
+    language: zh-CN
+    source_fingerprint: sha256:77f54104db31114e065be76a8ed2d644c7cd6fa9e5fc1e7539be95c1c7d3460a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 具有同一实际场景证据且拉取请求已合入的根因修复
+    language: zh-CN
+    source_fingerprint: sha256:ff91314ae42321cd49aa3bac814670a7338bc5c530cf996eeb918afe143bc29e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.title
+    translation: 推荐路径
+    language: zh-Hans
+    source_fingerprint: sha256:4453d93d7d926deaf4241b0c3b497466bb71be9eac19d8bb390791bd85bc3b50
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.title
+    translation: 选择修复入口
+    language: zh-Hans
+    source_fingerprint: sha256:a431d077d2a077329a51759dcdd09d3c2d51f85b2a552eab00bfb1305a5d0c78
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.0.why
+    translation: pstack 的总路由器与工作风格入口。 科学式 bug 修复。
+    language: zh-Hans
+    source_fingerprint: sha256:ee2a689f88adceb20c143a20e08a03a42a3965a7113e8d6a2cf903962e5fd420
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.title
+    translation: 调查问题
+    language: zh-Hans
+    source_fingerprint: sha256:cd3112ca6a13d9b9c00af986cb0f362bbc1470b62a938753b795274c99f6b4c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.1.why
+    translation: 建立系统如何工作的 mental model。 解释系统为什么变成现在这样，并给出证据。
+    language: zh-Hans
+    source_fingerprint: sha256:cab7f7e247c905e15140f3fd1fef958ca332a753f59870183d80daf140a09b05
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.title
+    translation: 建立回归依据
+    language: zh-Hans
+    source_fingerprint: sha256:6169242ee08b8bf740869c9a112ffa038f7f42aba935c976f361c617594652db
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.why
+    translation: 在存在廉价可靠测试入口时，用 failing test 固化 bug 后再修复。
+    language: zh-Hans
+    source_fingerprint: sha256:7d2999fe5e90e441325bf61a7f4386b832d41d508b27dd927feab582de943fd0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.2.when
+    translation: 存在适合的局部测试目标时。
+    language: zh-Hans
+    source_fingerprint: sha256:becdf130d3efd4d97f69b55c183cf4a084bbbae27da65b0996be820422496b94
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.title
+    translation: 确定结构
+    language: zh-Hans
+    source_fingerprint: sha256:77a61614c23872b74174c057843237f400429657cae51163e832934c6eaf7809
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.why
+    translation: 在写代码前确定类型、接口、模块和数据结构。
+    language: zh-Hans
+    source_fingerprint: sha256:443bb886da49b894864862f0fa2bcaed99deb01723feabd821e4dc0cf68a9bad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.3.when
+    translation: 修复涉及模块或接口变化时。
+    language: zh-Hans
+    source_fingerprint: sha256:d66c9dcecc25b3b75f315dc01438a135dbb07cd3b6a120bcdd237001e25e322b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.title
+    translation: 检查影响
+    language: zh-Hans
+    source_fingerprint: sha256:8b8a619dc40382f58f12a1168ab18523621911be3e42df30dae595f0aad2431e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.4.why
+    translation: 识别 diff 之外的潜在影响并用真实运行证明安全前提。
+    language: zh-Hans
+    source_fingerprint: sha256:0988ab94c84bb48fcc2b7c8db9e385fb8ab5a7f3014625a9d7fb24c48c2acc15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.title
+    translation: 准备 PR
+    language: zh-Hans
+    source_fingerprint: sha256:603d9bc912556079251bc410d15ff0fc26bfa97d0c198d30aeb056495d0f47ae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.5.why
+    translation: 把已验证 diff 整理成可审阅 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:6e475f4aa415fd294d690411b12635857b7dbe5ff2dd9ed8221bdb6ea282cc9c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.title
+    translation: 审查与发布
+    language: zh-Hans
+    source_fingerprint: sha256:a1c2e06dc03e3393a31e0e2f30060d9646f8373fde9fbc6a861a4069071ad551
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.why
+    translation: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。 用独立 verifier 决定哪些 PR 可以真正 land。
+    language: zh-Hans
+    source_fingerprint: sha256:8a602efe60c349860be3522b85a60eb874b6d3b6001830c216faf8786fe40e65
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: variants.0.steps.6.when
+    translation: 需要推进发布且已获得相应授权时。
+    language: zh-Hans
+    source_fingerprint: sha256:363eb077ab02f103f2e401f6a4149b59a6d9872155585051e4057aab37c1368a
+    review_status: reviewed
+    reviewed_at: 2026-10-13

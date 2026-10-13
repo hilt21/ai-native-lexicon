@@ -6,54 +6,66 @@ units:
   - path: summary
     translation: 相关情况的范围，以及对当前是哪种情况或将发生什么的知识限制。
     source_fingerprint: sha256:350ea26ba9c50cbe552dbfd5bbb2ffde2654314335e33ee13515771f756655d9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 面对异质条件或不完整信息的系统。
     source_fingerprint: sha256:c202510cef533b44e4ba3afa32ec81884ef9bb30656a79ccd044449fe956676a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 让响应选项和证据收集匹配系统必须处理的情况。
     source_fingerprint: sha256:411c2b6af95a32c633bccb3e747e98cf0b774c98ee47cf1620bf7145e3504e90
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 多种可能状态可以被充分理解；狭窄情况也可能缺少了解。多样性与不确定性无法互换。
     source_fingerprint: sha256:4627e3e5816c94753bc38c782b2d6687f46a1928322ff5694011e33da1565e05
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 环境多样性 → 响应选项；不确定性 → 观察
     source_fingerprint: sha256:10e1a8b58fdb37cd227fca649e7f3ad398808f9e5b8cdcb9cdc2c7a44bbea666
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 客服智能体对已知请求类型采用固定路由，对不熟悉故障则收集更多证据。
     source_fingerprint: sha256:1fefd1787750b9beba812fc68a9c896ef0fe10e9bc02cd355d2417d1e9da2762
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 多样性
       - 不确定性
     source_fingerprint: sha256:26e494cd59c7de4544ce97bab85ac730514fe9446c997b573d10780424ebbd11
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 与系统及其可能响应有关的可区分状态或情况的范围。
       - 对当前状态、未来结果或解释适用程度的有限了解。
     source_fingerprint: sha256:de6e70f0f25b7d6cfa13c6fe5f1e81513a7c85adac42fe5523e921216260155e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 更高自主性不一定更适合应对不确定性。
       - 将事实不确定性与环境变化分开表述。
     source_fingerprint: sha256:44b4b2264cee3ed2135be44e0599f447b70859a205805081bffa7d0c7368bd1d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 软件跟踪可观察条件和可用响应；在无法完全枚举情况时，大语言模型协助解释。
     source_fingerprint: sha256:ea42f6dbbf13c76ad4acb688565ee4c2ddfcaf06d01029d35b728fe4fb8a553c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 面对异质条件或不完整信息的系统。
     source_fingerprint: sha256:a7fddd50d1e3026040bf42d1254dabd6e317bc3a7319d03e89a37e1d6ed56a58
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 异质或了解不完整的条件需要明确响应选项和证据需求，以避免无依据地统一处理。
     source_fingerprint: sha256:a564c910a0ca997dacc3bb7429051c16be384e6ae4e0d069bc596150667c4494
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

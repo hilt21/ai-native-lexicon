@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["setup-matt-pocock-skills","configures","triage"]'
+provenance:
+  original_sha256: 865d9249c1a2d78b91cc8b51d12f887070b29b3e4195e522cc6ffc4f647272fa
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 建立 tracker、标签与领域文档等项目前提，不代表安装技能或自动调用后续入口。
+    language: zh-Hans
+    source_fingerprint: sha256:bfd5e6e70d0eb63176f996841a04b34cee932d4f5b1d61486a7acef865de221e
+    review_status: reviewed
+    reviewed_at: 2026-10-13

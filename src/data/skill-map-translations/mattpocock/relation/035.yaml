@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["implement-spec","feeds","retro"]'
+provenance:
+  original_sha256: e7c08acf5bcae4e94ec496fea37424331ba1845e51ddcc494a9d443f2120ef1c
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 整图实施的 session 证据可供用户复盘环境；不是编排者自动应用建议。
+    language: zh-Hans
+    source_fingerprint: sha256:c367828b975ba68197fe0a91a3900ec94d29ee8c0dd5de49bca6a5306b83b9da
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-sequence-verifiable-units
+provenance:
+  original_sha256: 72e187e1cbf491cb1b259b3c6fa3c8036b1f51a1a393d6154fecd96c23c299ec
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: sequence-verifiable-units
+    language: en
+    source_fingerprint: sha256:0d81b6ab85adf97893fa1f297ec0ec1150951a1b3f7b5b91ecc3a37f12bff5e4
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把大任务拆成每一步都可验证的单元。
+    language: zh-Hans
+    source_fingerprint: sha256:96cbd9b4bb47f9adba93beca6ffb6a732a31babef9b55a6eb584a3413563bb6a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:3599f9af8f66710d5c2b1fa7ce6e97b9b3dde3e68c0b9b1f622e61493ab3dfda
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 多步骤任务
+    language: zh-CN
+    source_fingerprint: sha256:53fb690b54d84f4e885edf436a9e02a37e79ba761c6e0f45d8ee4f899d278550
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 有序的已验证单元
+    language: zh-CN
+    source_fingerprint: sha256:d4c518d494aec6a0b3cb28402b9ca8fdcf87e651327bde0a402e0bb843d23dae
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply to multi-step work (sweeps, migrations, runs of similar edits) and to how you stack commits and PRs. Break work into small units that each end in a verifiable state, check each before the next, and order delivery so the sequence proves itself to a reviewer.
+    language: en
+    source_fingerprint: sha256:642b23482d394c7fef6966db79e137dafd0e29ddac0339b9e3576d15f30b5a6f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 把大任务拆成每一步都可验证的单元。
+    language: zh-Hans
+    source_fingerprint: sha256:3400c2f012a0ba97c3f9e66e4d5650298f886e6f79aec283ac5916dffba342a1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 适用于多步骤工作，以及安排提交和拉取请求栈的方式。将工作拆成以可验证状态结束的小单元；每个单元检查通过后再进入下一个，并安排交付顺序，使整个序列能够自证。
+    language: zh-CN
+    source_fingerprint: sha256:d4f84b052b1a07d5dd23f74f3c0c45021b0bd518c14c4db410a7c83f52dc4981
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 把大任务拆成每一步都可验证的单元。
+    language: zh-Hans
+    source_fingerprint: sha256:ce45893e63390725e08ffc0230ea1f00be8f6f3e0c4a71f252a303680be33e9d
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["authoring-a-skill","feeds","opening-a-pr"]'
+provenance:
+  original_sha256: 1f2319d0ddaead4df0462080793da675d07640bba73d4e92cb174103ca9d5ee5
+  retained_at: 2026-10-13
+units: []

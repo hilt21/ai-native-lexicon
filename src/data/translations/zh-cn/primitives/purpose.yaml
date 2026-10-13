@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 说明系统为何应存在以及应服务于谁的预期益处。
     source_fingerprint: sha256:f3d0a8cc01ca69acce8768b7f9e76b70e367c8fb2abe26ae510b9ed58a43f050
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 设计需要在相互竞争的结果之间权衡的系统。
     source_fingerprint: sha256:2ee698864216064e6265339aa6e91169060b17fd51c5da6f86cab86bbcc2f66a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 选择机制之前，围绕预期益处对齐设计选择。
     source_fingerprint: sha256:74293be047728593a1808ac388e3583265805b71aa394dff6abc24392980ed1c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 目的说明系统为何存在；目标在该目的范围内明确期望结果。
     source_fingerprint: sha256:377688e206ded5659a7d63e27272d2ba66e7d5f54bf9444362e2c1d657fdc020
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 目的 → 成功标准 → 反馈
     source_fingerprint: sha256:d8a6b2d8d0604676d10a289e4ba1f6d7275b49fb8145b36b17466f2ea80509e8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 客服助手的目的是解决客户问题，其标准包括正确解决问题，不能仅关注更短回复。
     source_fingerprint: sha256:894cabf6a03bbbe93397737b34c2667c0ff5d1069e27da79d819d45b96f30f61
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 目的
     source_fingerprint: sha256:877c7d2f2c026043b7d3547b592ee6e505f3a0a405a9b454fec4c9c6e9316963
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 通过系统应产生的变化和应服务的人来表达其存在理由。
     source_fingerprint: sha256:b49f8910519d3fa04f9e0bbe381d0dd3f52be311400610a57f0ab40d86ccc4cb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 明确受影响的人，包括不操作系统的人。
       - 系统负责人必须确认价值选择；模型建议无法确立目的。
     source_fingerprint: sha256:e044474327abd9d5526d88ba8ef86eaa0af6f90cfce70b36ef34c807016a5a7e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 大语言模型可呈现替代方案和澄清意图；人确认目的，软件保留已接受表述。
     source_fingerprint: sha256:21e220c3d0a6106fbe87cde7ed387366c470ce71209d321a77a998e0e85fced8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 设计需要在相互竞争的结果之间权衡的系统。
     source_fingerprint: sha256:fbe37b4f8e938173b65fb31f7d1b60a29b663610eb0b84a11e7453b1fac29193
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 缺少明确目的时，局部成功的设计选择可能追求相互冲突的结果。
     source_fingerprint: sha256:94c461b531560e0d32e3bc11baec52050e5424a0c554542bbb4cc79d06fafa66
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

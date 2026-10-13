@@ -1,0 +1,117 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: setup-pstack
+provenance:
+  original_sha256: c79e8aac7cd822b44bb86c50015b8344b4939be194f61a5bc9c7bd4af1ae8db6
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: setup-pstack
+    language: en
+    source_fingerprint: sha256:e90dbb02d13b9970875e2a178a89e4ebf3290be2bcc905616bc53bb3dabe2858
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 为不同 pstack 角色配置模型与推理预算。
+    language: zh-Hans
+    source_fingerprint: sha256:23b0b0830a4f300c02bc0f62d79d7110712b5280555b7a30d89e2713be851285
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 设置
+    language: zh-CN
+    source_fingerprint: sha256:ea342bffe8d00e2a7f03ef3ec3ea3405d88f93896349f0f7c8d628c9e4b764d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型
+    language: zh-CN
+    source_fingerprint: sha256:ab011cfea783452c0b2ed23140facabf07a1737b355c5cff0e5181e86b0a48a7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 成本
+    language: zh-CN
+    source_fingerprint: sha256:2be7f25004c4c0ce0873b938404fbb9ab89847f9dfd7fbbcf122b9806c66d969
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 可用模型
+    language: zh-CN
+    source_fingerprint: sha256:408213be700731a69383c02ad4b61485a6bede2c4508982a1152a1c4c869c9b7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 预算偏好
+    language: zh-CN
+    source_fingerprint: sha256:e36c08dc4186eca723d2d1c791a1795177b5d541936a8e1c98edd62894ce1a4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 角色需求
+    language: zh-CN
+    source_fingerprint: sha256:d12463af4025f15ea616b0ad6cd0cefced57bee47f33f00e13f9e1e1c1ac547f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 角色与模型的对应表
+    language: zh-CN
+    source_fingerprint: sha256:5624675d26ef1dc377b917ffc7936eb5490c39e263883533dbc9d89cdebcba50
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 推理预算
+    language: zh-CN
+    source_fingerprint: sha256:330f252f9e44b17a45dc02b06ad5f8a575cd053fe914bfb54956c944437ea945
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 持久保存的 pstack 模型规则
+    language: zh-CN
+    source_fingerprint: sha256:1c005a99fc01df7925db94a4b7e9a45a009eef9b2a4310e221a327315aa5c177
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Configure which models pstack uses per role and at what reasoning budget. Detects your available models and writes an always-applied rule that overrides the skill defaults. Use for /setup-pstack, "configure pstack models", "pstack budget", or changing pstack's model choices.
+    language: en
+    source_fingerprint: sha256:f1771f7501173004122983f422f76f2fddceff3565bc784b62539d351ddbf11c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 检测可用模型，按角色和成本/能力需求写入持续生效的模型路由规则。
+    language: zh-Hans
+    source_fingerprint: sha256:2ac01a900e5a0fc9b2ae37db1e68a554cafb748fe5b0986dd57047037597376e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 首次安装 pstack
+    language: zh-Hans
+    source_fingerprint: sha256:3f8c08c762e56d966ddac27a92bcc77ca4a32df43fac0dfbbc060603a9436b9d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 需要控制成本
+    language: zh-Hans
+    source_fingerprint: sha256:88feaeed483fd9fb1ff6ff48e920a4a018611493fb3eea46b3fc3e072d1d1cde
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 想更换 feature/bug-fix/swarm/judge 等角色模型
+    language: zh-Hans
+    source_fingerprint: sha256:77f380d09a6cdde9c4e065a57ef333afeea7fb99b764b0b147cb21082cd87816
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 模型选择漂移
+    language: zh-Hans
+    source_fingerprint: sha256:2822e9a89683e568f68f10c8ad867c9dc571761cf8ab38f793b4c7dbc2e9e428
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 多 Agent 工作流成本不可控
+    language: zh-Hans
+    source_fingerprint: sha256:fe79385efc717b8fa3ae3aed8bb58b392f401f785faec6b93af859c876ca58dc
+    review_status: reviewed
+    reviewed_at: 2026-10-13

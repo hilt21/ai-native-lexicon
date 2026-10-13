@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: pr
+provenance:
+  original_sha256: 8fd024c590c08254d19fb15c0fe9ed2922d39b33701082ac2ad15e38424c71b4
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: pr
+    language: en
+    source_fingerprint: sha256:3343b97e2de1165fe720c030d65b0baeb14cb6d4bd9c2c05b37bc158e28a4548
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把变更整理成能快速理解风险与证据的 PR body。
+    language: zh-Hans
+    source_fingerprint: sha256:eeafc5b0ea75388ead73a1856cde78c76c2696c78efc3a0d24b8c3356dae34d0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 工程
+    language: zh-CN
+    source_fingerprint: sha256:48f9e80c50e0c5209f2db8c327e731a9bbe04d4c5aaa029880cba148fc435568
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 模型调用
+    language: zh-CN
+    source_fingerprint: sha256:e6bd4e3ab4387337fb149349f213e531aca5f7e787e5c33df1677bdb13cf659f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:f71ca075a73d53b297632d0ecd150d24a5bc7d966a8d3cdf1eabba41be3d5d5f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 差异
+    language: zh-CN
+    source_fingerprint: sha256:0b0a9f25faa9c23d294995dffa76cc28cf6c43c5aee7ea0e1145cae0af43eca0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 验证证据
+    language: zh-CN
+    source_fingerprint: sha256:eed2d9dca08e52a62dea83b98cd9e7b849b0c31be47493645d2317bb6ca383f6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 风险上下文
+    language: zh-CN
+    source_fingerprint: sha256:8d6dce4edd842a966a717da429fa80ccb59a5b189cee24e97ee47180e1e29f4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 拉取请求正文
+    language: zh-CN
+    source_fingerprint: sha256:87e5a934d854ed380211caa0a9ff43b4a5c61a124e845cecc36cd1991f79f577
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Use when writing a PR body.
+    language: en
+    source_fingerprint: sha256:3942cf4d9d381c5169e13bda660a10062544e35f1ac19cf593fd0d101959d1fb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 在编写 PR body 时组织问题、变化、最小视觉（图、调用树、伪码或 diff）及简短说明、before/after 验证证据，以及 one-way/two-way door 与影响范围，帮助 reviewer 判断。输出是 PR 说明；它本身不授权创建、发布、推送或合并 PR。
+    language: zh-Hans
+    source_fingerprint: sha256:d2fc3ec96dbd53a5b7641f8e67ae6fec3ec2d272b3466724b0c7a5cd41f5b571
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 需要编写或更新 PR body。
+    language: zh-Hans
+    source_fingerprint: sha256:721853ce66ae18b972fc4d5ebfc9f099b302d0bbdbb70cc687dd447bb5e1d95f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 让 PR 从代码清单变成决策与验证 briefing。
+    language: zh-Hans
+    source_fingerprint: sha256:256d601fcd254115234ebbb2371c10c1aa1e6eff0482408a08bc9cb29a1c2db9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 把合并风险和证据放到 reviewer 第一视野。
+    language: zh-Hans
+    source_fingerprint: sha256:4004b55d17de74dfcb5ec9a1351d54a64f394a73a4614adf99ec47a50a94d2a8
+    review_status: reviewed
+    reviewed_at: 2026-10-13

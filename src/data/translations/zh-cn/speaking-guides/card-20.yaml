@@ -1,0 +1,53 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-20
+units:
+  - path: title
+    translation: AI 推动者的角色
+    source_fingerprint: sha256:f20f0684faa04ee7819627fbc60af1b405612b3ee8d4eba9dedac4dc881628b7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: AI 推动者将技术可能性与真实业务问题连接起来。
+    source_fingerprint: sha256:203ad7f05c69e273e9911a24472d0e83e9e368729c0475e71a5281c7a09d3494
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你希望借助 AI 探索团队中的哪个问题？
+    source_fingerprint: sha256:ff422bcd0815f7ad0f0fd9ed3ffe99e18494e54e12051335514ae01349d0e4c1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 结束语
+    source_fingerprint: sha256:8a88fb7b06ff13fe3429cfd63caf77eceb638c9b79e9c871814a186b5b9de72d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 最重要的问题已不再是 AI 能做什么。更有用的问题是：AI 在哪里能够实质性地改善我们的工作？
+    source_fingerprint: sha256:fd87b8dd6bc3636e963830ae426cbac6883c5f668f045b820152d6321603c718
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - AI 推动者不需要掌握所有技术答案。
+      - 他们的价值来自连接人、问题和可能性。
+      - 他们帮助团队识别有用的实验。
+      - 他们也帮助人们理解机会与限制。
+      - 能够将技术转化为日常工作的人，会推动 AI 的良好采用。
+    source_fingerprint: sha256:5834dd29b70fd8e085bf7353a17a0bfd0b8cd82c4cdb8cce9d1c1aae25105ae1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 一位同事说：“我每周都花好几个小时准备这份报告。”
+      - AI 推动者不会立即推荐产品。
+      - 他们首先理解工作流。
+      - 信息来自哪里？
+      - 哪些步骤需要判断？
+      - 哪些部分是重复的？
+      - 存在哪些风险？
+      - 只有在这之后，他们才探索 Copilot、智能体或 Power Platform 是否能够提供帮助。
+    source_fingerprint: sha256:5632df1b74bdd2d4a3e6f5a4108c1baad26ab81489e930c8390d567aab2c09b2
+    review_status: reviewed
+    reviewed_at: 2026-10-13

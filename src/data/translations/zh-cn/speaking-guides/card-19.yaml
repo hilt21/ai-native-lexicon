@@ -1,0 +1,51 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-19
+units:
+  - path: title
+    translation: 智能体与 Power Platform
+    source_fingerprint: sha256:99d7d2f668d021e139d50b57ee9358a04a1625e15d5136b067641cad91d98caf
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: 让智能体处理模糊情境，让自动化负责可预测的执行。
+    source_fingerprint: sha256:4165b5dc9b4dd715fc9efe4096f85f32b943245a04c4d1a51d54ff2074fb5d20
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 你的团队可以在哪些地方将 AI 推理与现有 Power Platform 流程结合？
+    source_fingerprint: sha256:90c0d1c74250f9354e27ed138b266d6b059a90de6e6321709c11bd514916998a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:e952dcc58684e3d6472aef2b8bca213aabc83b8b84f471d157b895f0d8b94f3b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 技术提供能力，但仍需要有人将这些可能性与真实业务问题连接起来。
+    source_fingerprint: sha256:9c4e3a647cbebdd59359bc50025dfcf60b3a226e3385a381734962da0f3965d0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 智能体善于理解复杂混乱的情况。
+      - 工作流善于执行已定义的流程。
+      - 应用提供结构化的人机交互。
+      - 数据平台提供共享的业务状态。
+      - 结合这些能力，可以构建更强的企业方案。
+    source_fingerprint: sha256:2abea5c448e15f7f4c3f0ce477de9d5c96a40c45b890118c1aa302fad1a61721
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 假设供应商通过邮件发送一项异常技术请求。
+      - 智能体阅读消息、理解请求并识别所需流程。
+      - Power Automate 启动正确的工作流。
+      - Dataverse 存储该事项。
+      - Power App 让工程师能够审查它。
+      - 智能体处理模糊性，平台则提供结构。
+    source_fingerprint: sha256:9deec725d5822adab37b4ebac41702a4bfba4a696f7129e2293eb614e1210841
+    review_status: reviewed
+    reviewed_at: 2026-10-13

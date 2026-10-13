@@ -1,0 +1,129 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: swarm
+provenance:
+  original_sha256: 9914626d95a0236390630b4af0eefec2c4324e0245486a6c0ba5b2445a453cc9
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: swarm
+    language: en
+    source_fingerprint: sha256:513eaab807fad5fcc570fe847da9a7816a79f58fb8bf60644e36cad84007042e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 把可分任务并行分发给多个 worker，再聚合结果。
+    language: zh-Hans
+    source_fingerprint: sha256:285f84f34173229d0de66f1d9cc44d851e89fb6c14b8c774a97b5e24a8f6c190
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 并行
+    language: zh-CN
+    source_fingerprint: sha256:8d5d0cbf39bdee7f4a7b67eba03a16c20a6d3a3a2575122b1bea6c2fbcf8c1f9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 工作者
+    language: zh-CN
+    source_fingerprint: sha256:1fd49cf7749a9c37a6907ff9df4c118ad1dfa972958e27ff5b7865468a7b3153
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 覆盖
+    language: zh-CN
+    source_fingerprint: sha256:93e18ae869b256ec5c31dc92644d0bd44a2d62b8a522ae60156545d215a56e28
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 工作矩阵
+    language: zh-CN
+    source_fingerprint: sha256:8962bf55464fbef90bbcc11e77eef074e369e0559a586752713ed2ee0af15c93
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: N 个工作者名额
+    language: zh-CN
+    source_fingerprint: sha256:0d2a1d765528f80e6f4e4ce6b2cfbde53c95723e637c5146981a2f79af9bd6d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: 验收标准
+    language: zh-CN
+    source_fingerprint: sha256:57c523b72bb8b0d0cb5fa7685105ddf956af5fc004a1720808d91990d373cb6e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 工作者结果
+    language: zh-CN
+    source_fingerprint: sha256:a815a85755ace3c74d60b4175d9a534f076f1e68bace30c9d14b7210441973f6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 汇总报告
+    language: zh-CN
+    source_fingerprint: sha256:cfaa13494c73010e76c9c70e96548afae396e79b8f147b1a77523018789ce27e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: PASS/ISSUES/BLOCKED
+    language: en
+    source_fingerprint: sha256:692a79a497bdadc8404f2da976b1579df0d804974293136b4120df94c7e22d2d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：verification
+    language: zh-Hans
+    source_fingerprint: sha256:3ee56512aa29c7ed39e316ba776ce861de614da2d5057dd1a39f1d01fa35485b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Fan out N parallel workers, drain them, and return one report. Use for /swarm, 'swarm this', or parallel coverage, races, gauntlets, and exploration.
+    language: en
+    source_fingerprint: sha256:2410d9228f9bff903afdbd8328953958e463a84504bea0bb34ad567d5955859a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 按 slice/race/coverage 等模式 fan-out，隔离工作单元，等待完成并 drain，最后由父 Agent 综合 verdict。
+    language: zh-Hans
+    source_fingerprint: sha256:42fc478bc9edfb44d736e71de931b730862c412732519795e32f2dde45e7a003
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 大范围 coverage
+    language: zh-Hans
+    source_fingerprint: sha256:9e6e79f5385f3788ca7092bf3384091931a676c76d92cc964afc5babfe318b11
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 多个独立调查
+    language: zh-Hans
+    source_fingerprint: sha256:a6b696edc93cb5169d408b10e0d63e0bc284fd5785baa1e857e85ec38b787a91
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 验证 gauntlet
+    language: zh-Hans
+    source_fingerprint: sha256:5aec8f155091901ad279d3958b30be284b505df2e063a1efad5bafc48ee2a41b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.3
+    translation: 并行候选
+    language: zh-Hans
+    source_fingerprint: sha256:43a3b30acb95a36d39d13f92b7def6fae8e11eb335c46a7c6be41574415bc124
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低串行等待
+    language: zh-Hans
+    source_fingerprint: sha256:85bdcc79062eb1ebd8766a063769e7e71367453a0075bff5175240176b5f2420
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 扩大独立检查覆盖
+    language: zh-Hans
+    source_fingerprint: sha256:3406de47cda4ad96b0d994f29109321e1457bafd9539f493f6968e191f7a06f1
+    review_status: reviewed
+    reviewed_at: 2026-10-13

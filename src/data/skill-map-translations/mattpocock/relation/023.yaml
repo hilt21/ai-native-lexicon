@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["improve-codebase-architecture","uses","grilling"]'
+provenance:
+  original_sha256: 15cedb5d999427ae0bbb9efd562653593dc16d875141496a2d3e9744e2eb3a98
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 先等待用户选择候选，再内部调用 grilling 深入该方向；不自动选择或重构所有候选。
+    language: zh-Hans
+    source_fingerprint: sha256:95039c99e576248244cf8bc8b2a1119b843a4889ccf94b0d5764e012acec3dfa
+    review_status: reviewed
+    reviewed_at: 2026-10-13

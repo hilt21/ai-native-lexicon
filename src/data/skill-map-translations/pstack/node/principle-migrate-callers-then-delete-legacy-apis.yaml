@@ -1,0 +1,69 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-migrate-callers-then-delete-legacy-apis
+provenance:
+  original_sha256: 38ae9b7905d867dcfc356db209317507fe9f3e6541656e2e180795f3d0fdaa2b
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: migrate-callers-then-delete-legacy-apis
+    language: en
+    source_fingerprint: sha256:0506aeb334eae35c9f17dcf84b03bf6677f6b9a33ff214efacae90e7a24b9787
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 新 API 与 caller 迁移同一波完成，并删除旧 API。
+    language: zh-Hans
+    source_fingerprint: sha256:2e414d6a05f8146558185ce9cf4ac90a06cbb0e607ff6dd77c441358a672d9f7
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:be5f29e92b110b3bdb696cff448b5d66ee0faa7c3aabaa7c04c8c5e2522fdbfe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 旧 API 与新 API
+    language: zh-CN
+    source_fingerprint: sha256:8cab37bfa3796cd83ec31a220ac3140d8b4f131b17367b9b638985b52c5c1e06
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 唯一目标 API
+    language: zh-CN
+    source_fingerprint: sha256:88160183b318aa8eb0322b48117e95beac6b4417c48a4f0c025c2b4820bb9e4c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：migration
+    language: zh-Hans
+    source_fingerprint: sha256:a577a04e178d98dc3c6f9b678b25ce4eeda25a4a7f67c58c78f1e6ca7548203d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when introducing a new internal API while old callers still exist. Migrate callers and delete the old API in the same wave instead of preserving compatibility layers.
+    language: en
+    source_fingerprint: sha256:684ed75b826ff2ef4b42faab231f82339d2dc99233fa690bd12e8eb665303f76
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 新 API 与 caller 迁移同一波完成，并删除旧 API。
+    language: zh-Hans
+    source_fingerprint: sha256:5cdda17517336fc4bf9904583592028c3218da4bba3ebde99eb5fe9a5e9a33a9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 引入新的内部 API、但旧调用方仍存在时使用。在同一轮迁移调用方并删除旧 API，而不是保留兼容层。
+    language: zh-CN
+    source_fingerprint: sha256:853962fd8ca62868c9ecc6524b51f2ec05f06d4ebfe77b47c112934b049ec299
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 新 API 与 caller 迁移同一波完成，并删除旧 API。
+    language: zh-Hans
+    source_fingerprint: sha256:2a38daa55202cc7b52a190e07e58a60ba21f4e45289613fe7e10b2e39bb20506
+    review_status: reviewed
+    reviewed_at: 2026-10-13

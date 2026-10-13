@@ -1,39 +1,29 @@
 title: teach
-summary: 把 how 与 why 的结果组织成人真正能理解的解释。
+summary: Organize how and why findings into an explanation people can understand.
 type: capability
-status: active
 layer: skill
 primary_cluster: understanding-context
 secondary_clusters: []
 tags:
-- education
-- mental-model
-mechanism: 先调查系统工作机制与设计动机，再按学习者已有知识重组概念、机制和例子。
-when_to_use:
-- 用户想真正理解 subsystem/change
-- 需要 onboarding explanation
-solves:
-- 降低技术理解成本
-- 把碎片化代码知识变成 mental model
+  - education
+  - mental-model
 inputs:
-- topic
-- learner question
+  - topic
+  - learner question
 outputs:
-- teaching narrative
-- mental model
-- key concepts
-source_refs:
-- source: pstack-0-15-15-df581122
-  path: skills/teach/SKILL.md
+  - teaching narrative
+  - mental model
+  - key concepts
 handoffs: []
-official_description: Explain a body of work plainly so a person actually understands
-  it. Runs the `how` and `why` skills and weaves what they find into one clear explanation.
-  Use for 'teach me this', 'help me really understand X', 'explain this change or
-  subsystem to me'.
-text_languages:
-  mechanism: zh-Hans
-  solves.0: zh-Hans
-  solves.1: zh-Hans
-  summary: zh-Hans
-  when_to_use.0: zh-Hans
-  when_to_use.1: zh-Hans
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/teach/SKILL.md
+official_description: Explain a body of work plainly so a person actually understands it. Runs the `how` and `why` skills and weaves what they find into one clear explanation. Use for 'teach me this', 'help me really understand X', 'explain this change or subsystem to me'.
+status: active
+mechanism: Investigate mechanisms and design motivation, then reorganize concepts, mechanisms and examples around the learner's existing knowledge.
+when_to_use:
+  - The user wants to understand a subsystem or change.
+  - Create an onboarding explanation.
+solves:
+  - Reduce technical comprehension effort.
+  - Turn fragmented code knowledge into a mental model.

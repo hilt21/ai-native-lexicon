@@ -1,0 +1,63 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: principle-redesign-from-first-principles
+provenance:
+  original_sha256: ba7446b0aa2bf7d0e8c73f18ca1b30d3ed07c0deaca3b38ae509f8c3e0e202da
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: redesign-from-first-principles
+    language: en
+    source_fingerprint: sha256:cbc445243118335d97800bddfcacf53c8d32c658e4122792158f600b94a83f29
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 新 requirement 当作从第一天就存在，重新推导结构。
+    language: zh-Hans
+    source_fingerprint: sha256:a0188b6f63d7dc41cbc52fce15583c82df968076e9e8283f131d4f43ea56f44f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 原则
+    language: zh-CN
+    source_fingerprint: sha256:e5fe258d652fa28736972a9be71a943ffb79e8f460ceffb7be84f4bc7c206803
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 新需求与旧设计
+    language: zh-CN
+    source_fingerprint: sha256:420d1a3a7d9d3ab975538efdfd8dc011971a07b432c1f53e4c87e8f0da335b83
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 重新设计的目标结构
+    language: zh-CN
+    source_fingerprint: sha256:e4a58378934443f1788cdabc38e74d82a4f4623d241b65497d4ce11484d9126e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Apply when integrating a new requirement into an existing design. Redesign as if the requirement had been a foundational assumption from day one, instead of bolting it on.
+    language: en
+    source_fingerprint: sha256:1e214431f347f26dd5f5760f579daf086ecab3b6403c19f38e238454a5f65e4b
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 新 requirement 当作从第一天就存在，重新推导结构。
+    language: zh-Hans
+    source_fingerprint: sha256:e1d7ffc156b20c0a9b9463e3bdca82944e7e6be05fef2c6441e5e487cc777044
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 将新需求集成进现有设计时使用。假设该需求从第一天起就是基础前提，重新设计，而不是把它附加到旧设计上。
+    language: zh-CN
+    source_fingerprint: sha256:a3d4002d985849e117b7fb0166e6cdc0bde09208d17a74674bbfb13f56691e63
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 新 requirement 当作从第一天就存在，重新推导结构。
+    language: zh-Hans
+    source_fingerprint: sha256:498df11e05ead39e738cdd094471b97ca0c390a16976e6e22ee139e91001f364
+    review_status: reviewed
+    reviewed_at: 2026-10-13

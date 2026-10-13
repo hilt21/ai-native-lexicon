@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["handoff","feeds","prototype"]'
+provenance:
+  original_sha256: 0656f072e003ae6f6383aeb97a84b266bb312fec35dcd621301f54f75ef8c744
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 只有需要 portable context 的 prototype detour 才经 handoff；独立原型源码要求代码靠近相关模块或页面。
+    language: zh-Hans
+    source_fingerprint: sha256:2f376b619fd18ab4ef3ac9696ef83f4f4ce2453967758aeef4e66f8c8ed7a9d7
+    review_status: reviewed
+    reviewed_at: 2026-10-13

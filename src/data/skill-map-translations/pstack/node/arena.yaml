@@ -1,0 +1,123 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: arena
+provenance:
+  original_sha256: 8f3d7d76824f725dab8065d20e512315edb6ab878c0ab12ba61978d2293ee113
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: arena
+    language: en
+    source_fingerprint: sha256:0e8639aa3904475d0c3dd929ae2059b0ba984e356ae9bcd5ea1b56cedccba305
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 用并行候选和盲评扩大设计空间。
+    language: zh-Hans
+    source_fingerprint: sha256:37452f656eb9cf0ff988fb325ec39664ac721ef4f9127faec62f1ee5fdeaac3a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 并行
+    language: zh-CN
+    source_fingerprint: sha256:7ea738b4f88627829df47be29416a90af686732deadffe70baffe49635172639
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 设计空间
+    language: zh-CN
+    source_fingerprint: sha256:6d020c9a866a42066c1bb87385bc0d1a4d2e174791a6a0cc0dbead49ec978286
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 评判
+    language: zh-CN
+    source_fingerprint: sha256:6bb38f6f3eb56a50ffe4de1fba984b1a5928e6ef5bd8f9b4ca32ff2be994cac0
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 同一任务
+    language: zh-CN
+    source_fingerprint: sha256:a07c7d3bc6dc14004bad1ac177fb167910d04e1c58e249530203e7aab06a6a15
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.1
+    translation: 评分标准或成功标准
+    language: zh-CN
+    source_fingerprint: sha256:f256b5056b4b3d1ef724c9d8a39b628b454960e016d4aaf246e44ffa2332a7ad
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.2
+    translation: N 个候选名额
+    language: zh-CN
+    source_fingerprint: sha256:08976e947182cdea5137f92b8ae28856c894906edbc1f457aa82bda0ddb25d20
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 已排序的候选方案
+    language: zh-CN
+    source_fingerprint: sha256:d2e0255d91810e99e4a37160375b0a3a7b887cb58641435257606401be588952
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 评判结论
+    language: zh-CN
+    source_fingerprint: sha256:2e3607e29d3dd06031ed5748a11de679c6c836554d9c276bef12a8d8ade07e7a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.2
+    translation: 综合产物
+    language: zh-CN
+    source_fingerprint: sha256:514a254c3b0d54d69244b0b91de4920356fa6dccdc4f539433d8f2a829f6792d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: handoffs.0
+    translation: 交接说明：design decision
+    language: zh-Hans
+    source_fingerprint: sha256:5eeacae73f3c9c23f5c9514329d7156d78d652b9d07bda1afb6f2b51e70f64a9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Spawn N parallel candidates at the same task, pick a base, graft the strongest parts of the losers into it. Use for /arena, 'arena this', 'throw it in the arena', or when one attempt at a non-trivial artifact would lock in the wrong shape.
+    language: en
+    source_fingerprint: sha256:2236f31d517f3f866fc3b899de6a67206184803ae4de5e2c4d54cb2bb1037698
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 多个 Agent 在相同输入下独立产出；cross-judge 盲评；选择 base，并把其它方案的强项 graft 进最终方案。
+    language: zh-Hans
+    source_fingerprint: sha256:3d89ac90dcc84da5f338d8894dd501b058847fa7a01335f98cfd62a6f38af6a3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 设计空间大
+    language: zh-Hans
+    source_fingerprint: sha256:aa843b6f86ee807385f235450840cc0ff0cde65a7ea79ef6a5b0355a79daaafe
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 第一次选择代价高
+    language: zh-Hans
+    source_fingerprint: sha256:2e76729beb0bdff517ae8b9618ac7662135aba27763b5df069731a67753bc2c5
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 需要比较不同实现/文案/架构
+    language: zh-Hans
+    source_fingerprint: sha256:119f343f43ace1d11211c0ff409a4c830ad07257f62a001299430b2c423d83ce
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低 premature commitment
+    language: zh-Hans
+    source_fingerprint: sha256:29c04ac2bb3081823d94173ca8a152bae3821e63fedfd5ba5236103ebdf1045e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 避免单一路径偏见
+    language: zh-Hans
+    source_fingerprint: sha256:9548751c0d5fcb11f8e511f1eb64936fd7b20206067461dcb3ab172b0fbc8947
+    review_status: reviewed
+    reviewed_at: 2026-10-13

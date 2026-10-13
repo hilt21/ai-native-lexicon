@@ -366,6 +366,10 @@ speaking_guides 的非空条目是正整数，如 4，而不是 card-04、文件
 
 重点 UI 检查覆盖 390px 手机与宽屏、明暗主题、键盘导航、焦点、无结果状态、退役详情，以及 JavaScript 未执行时的正文与路由。截图用于检查真实渲染，不把本文件的文本线框当作运行验证证据。
 
+## Language projections
+
+Canonical map prose is English. Chinese reader projections use independently maintained reviewed/current prose assets; see [the scoped translation contract](skill-map-translations.md). Both editions share identities, topology and source snapshots. The original mixed-language edition is retained through this migration.
+
 ## Text language annotations (Map input 1.1.0)
 
 Map, Node and Journey may include `text_languages`, a flat dictionary from an existing prose path to its language tag. Strings remain canonical strings. Tags use lowercase two/three-letter language, optional Titlecase four-letter script, optional uppercase two-letter or three-digit region (`en`, `zh-Hans`, `en-US`, `pt-BR`). Named paths and zero-based indexes must resolve to nonempty prose; no wildcards or language defaults are supported.

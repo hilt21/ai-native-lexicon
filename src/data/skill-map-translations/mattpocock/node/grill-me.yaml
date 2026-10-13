@@ -1,0 +1,81 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: node
+target_id: grill-me
+provenance:
+  original_sha256: c637fbc01089aa345862f499da7fddf973c89e10916db0cec8637bcf894e11f5
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: grill-me
+    language: en
+    source_fingerprint: sha256:b245899f73190b956f92bc0b2a29d55f662b6a9fc293c70ec3fe046907feb1c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 通过持续追问把一个计划或设计中的未决分支全部暴露出来。
+    language: zh-Hans
+    source_fingerprint: sha256:5705863468d663dc3a7500f44127360283d1a4ce8197fad66f8498773b119628
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 生产力
+    language: zh-CN
+    source_fingerprint: sha256:488d34d154d9ce82b3a2a679066fe0ee2968ee7d8e9fbe501ab435b623a25123
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 用户调用
+    language: zh-CN
+    source_fingerprint: sha256:18f140fb8d1b9b82a78aeeac45506a3760d662c1bdf4b6b2d4849c99dd69e203
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.2
+    translation: 稳定
+    language: zh-CN
+    source_fingerprint: sha256:b0dc6bb08a7746994283a851c462b668c1d24c2bf176298f3794dd219718b396
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 计划、设计或想法
+    language: zh-Hans
+    source_fingerprint: sha256:87e660e5fc025d43e5dbd487b95d4c5eb3ba9a7518940567a5e8f071c02d5eec
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 澄清后的决策树
+    language: zh-Hans
+    source_fingerprint: sha256:b1f740d75d8e158b2c3db5dac3c1e2b83ca8e2f6ae54dfc7fd1240ea71b63df1
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: A relentless interview to sharpen a plan or design.
+    language: en
+    source_fingerprint: sha256:69eca28ca7e6929ca7de98cfa8c4116836ee58424fb3d8158731c6431229aff3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 调用 grilling 的采访循环，但不依赖仓库状态，也不写 GLOSSARY.md 或 ADR；适合无 working directory 的思考任务。
+    language: zh-Hans
+    source_fingerprint: sha256:55826f808b675674d68b22cb58ccc36a57917c96cfc529e8b5b03d3ec5722186
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 没有仓库，但需要把计划、设计或写作思路想清楚。
+    language: zh-Hans
+    source_fingerprint: sha256:ed7fdb09c3f2322606b68242425272a2e5d16404dc5720d64a36f9c60c6d4743
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 减少“我以为我已经想清楚”的隐藏假设。
+    language: zh-Hans
+    source_fingerprint: sha256:f4f1a6d148a3756011d84d66aee359dc8251773493f2cac9c0f2c78e49701a87
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 在实现前发现尚未做出的决策。
+    language: zh-Hans
+    source_fingerprint: sha256:139a0213ed2cd533943485b4fd6103aa2c8034a9eeef931aba1965a1d00352c9
+    review_status: reviewed
+    reviewed_at: 2026-10-13

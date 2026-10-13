@@ -1,0 +1,93 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: poteto-help
+provenance:
+  original_sha256: 6acee07e7d8887c594ababe4401e994ba865248aa102aa9fc6efbf9400f551f0
+  retained_at: 2026-10-13
+units:
+  - path: title
+    translation: poteto-help
+    language: en
+    source_fingerprint: sha256:307afd66b29c3b87138d8275dce748c606c427c741bc63e4a3ef64f5a23a9d5d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: summary
+    translation: 帮助用户理解 pstack，并选择正确入口。
+    language: zh-Hans
+    source_fingerprint: sha256:ace0a93cd5ea207aedb841132e0b4a08d9adf51f935d20a5452fbba000e75dab
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.0
+    translation: 帮助
+    language: zh-CN
+    source_fingerprint: sha256:bf312754c3ce03010b2a3a32ed336ec23130b08b7c1dad3cd42361c38461874c
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: tags.1
+    translation: 入门
+    language: zh-CN
+    source_fingerprint: sha256:54909c5d6a808a1fa04f9abe58aaf01a5936dd565acfe7bd6ed6ee4444e5e703
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: inputs.0
+    translation: 用户问题
+    language: zh-CN
+    source_fingerprint: sha256:977eabd79d35af654ddde0758d9c8ece246f391ad9786789143b62d8a28b1a28
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.0
+    translation: 推荐的 pstack 入口
+    language: zh-CN
+    source_fingerprint: sha256:602a009b958c6e2a31eea83fd2bfa860816a7209a02125f81e44ed9cc56821b6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: outputs.1
+    translation: 使用指导
+    language: zh-CN
+    source_fingerprint: sha256:f56466ed60a360a785548a56ceda50cb065f4c009a751b21cf4ac41995bff7d8
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: official_description
+    translation: Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or principle for a task. Type /poteto-help with a question.
+    language: en
+    source_fingerprint: sha256:a149db9681b3e31ddef89625c6922bcf7dbea43927ea3170c6b0539734de58d6
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: mechanism
+    translation: 根据用户问题解释 setup、poteto-mode、skill、playbook 和 principle 的适用边界。
+    language: zh-Hans
+    source_fingerprint: sha256:9259d8d9abfa77d19d189ba5f24b6d6fd3aa571cb360e236986b820d43363e6f
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.0
+    translation: 第一次使用 pstack
+    language: zh-Hans
+    source_fingerprint: sha256:06f8ca2354907279438ffab02f27ed839d57182dd4a4d5c9a5da7370b8d90d3d
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.1
+    translation: 不确定某个任务该用哪个 skill/playbook
+    language: zh-Hans
+    source_fingerprint: sha256:f637e064a669402e1d1b9ac140b55eb591161d7000fdcc16f6c1246a56cb7960
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: when_to_use.2
+    translation: 需要理解 pstack 概念
+    language: zh-Hans
+    source_fingerprint: sha256:43c0e6ee492aee913ed2a5919171592f7c78074d8349b4a83939b865d7c41839
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.0
+    translation: 降低学习成本
+    language: zh-Hans
+    source_fingerprint: sha256:656f74176a1a115f54a7009083f8dce58575bc95967f6dc0beb57aab4e2eb5bb
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: solves.1
+    translation: 减少错误路由
+    language: zh-Hans
+    source_fingerprint: sha256:71a60472d6badfa3fa9b292bb1dd00a4d68e5daec7a9cac40e1cefd136fc3659
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -1,0 +1,9 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["multi-phase-plan","governed_by","principle-never-block-on-the-human"]'
+provenance:
+  original_sha256: c76a705736a4a807f3adfa00d637ef0c92701c11f3f65b9cf01f2bdc3ea0026e
+  retained_at: 2026-10-13
+units: []

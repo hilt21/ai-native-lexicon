@@ -9,7 +9,7 @@ import { catalogSearchRecords } from '../lib/search-catalog';
 import { searchKinds } from '../lib/field-search';
 const locale = routeLocale(Astro.url);
 const ui = uiFor(locale);
-const [concepts, primitives, speakingCards, maps] = await Promise.all([getLocalizedConcepts(locale), getLocalizedPrimitives(locale), getSpeakingCards(), getSkillMaps()]);
+const [concepts, primitives, speakingCards, maps] = await Promise.all([getLocalizedConcepts(locale), getLocalizedPrimitives(locale), getSpeakingCards(locale), getSkillMaps(locale)]);
 const records = catalogSearchRecords(concepts, primitives, speakingCards, maps, locale);
 
 ---

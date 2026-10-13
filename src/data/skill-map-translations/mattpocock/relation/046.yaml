@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: mattpocock
+kind: relation
+target_id: '["research","feeds","grill-with-docs"]'
+provenance:
+  original_sha256: 7abaf53e86c1b044c74009891fa86291d404c857b3f2ae39d5c747715f8934f3
+  retained_at: 2026-10-13
+units:
+  - path: note
+    translation: 带引用的研究结果供原讨论继续澄清；研究不能代替需求决策，不自动调用用户入口。
+    language: zh-Hans
+    source_fingerprint: sha256:5b710e0875636789939ce8306f0d74695f767728fb54eba70432ae1b50d30da3
+    review_status: reviewed
+    reviewed_at: 2026-10-13

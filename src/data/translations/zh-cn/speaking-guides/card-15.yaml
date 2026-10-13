@@ -1,0 +1,48 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: speaking-guide
+target_id: card-15
+units:
+  - path: title
+    translation: Microsoft 365 Copilot
+    source_fingerprint: sha256:f80b7d23db1f8fb967be0faacca52c398a0e5353520efae57b669bf7b9748c5e
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: coreIdea
+    translation: Microsoft 365 Copilot 将 AI 带入员工已有的工作工具。
+    source_fingerprint: sha256:9c739bbf908a300c6bb0f94fea1aeb2b9324b89dcadac97055920a9df9f44d75
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: discussionQuestion
+    translation: 在你的日常工作中，哪个 Microsoft 365 应用最能受益于 AI？
+    source_fingerprint: sha256:c211bc55131f903fdad532a3254f6d6fd251f00af091d40c8032ae316a589b86
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: endingLabel
+    translation: 过渡语
+    source_fingerprint: sha256:fd753c1864b92be02ce8ff3beccdefaa207e99085078205eb53e10a85cf0ddd3
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: ending
+    translation: 个人生产力是其中一层。公司还需要为特定业务目的设计的智能体。
+    source_fingerprint: sha256:e1d2cb83b189ce2b883f455c7f0c0aeb6bd4fa451cf3ae4841d0d97be293094a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: keyLines
+    translation:
+      - 大多数员工每天已经在使用 Microsoft 365。
+      - Copilot 将 AI 带入 Word、Excel、PowerPoint、Outlook 和 Teams。
+      - 这减少了在工具之间切换的需要。
+      - 真正的优势是能够获取工作上下文。
+      - AI 出现在熟悉的工作流中时，更容易被采用。
+    source_fingerprint: sha256:1de8a1707948819a872e94304a394377aeb2f172a81125d4159a4674f975639a
+    review_status: reviewed
+    reviewed_at: 2026-10-13
+  - path: realCase
+    translation:
+      - 长时间的项目会议结束后，员工可能需要查看记录、识别决策并准备后续行动。
+      - Copilot 可以帮助总结会议，并准备后续工作的初稿。
+      - 用户仍在同一个工作环境中。
+    source_fingerprint: sha256:301d66c6b8a1230eb5d36671dd9ba92ee7c8b5968c5f651be594039f0783769f
+    review_status: reviewed
+    reviewed_at: 2026-10-13

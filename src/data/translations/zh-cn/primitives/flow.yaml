@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 信息、工作、物料或价值随时间在系统中的移动。
     source_fingerprint: sha256:72ce57518a4d6ec203c2420f82d21a91bdcf9312236dfbc14842a48b08048702
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 跨阶段传递或转换工作与信息的系统。
     source_fingerprint: sha256:a95123dce25169645483c883928aa9bd87b54120cf217e3b59b785b32fdacf3c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 沿端到端流动寻找瓶颈，避免仅优化孤立步骤。
     source_fingerprint: sha256:5ecc31c241aa72f6f5b3219c35759068e49a211946718ff3a6706bc7bb7586f4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 流描述移动；工作流规定可能承载该流的有组织活动顺序。
     source_fingerprint: sha256:389a664a9f18910ba6cd1dda11dfbd4a8d11b35175f8096d561416a8f7b45b42
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 来源 → 转换 → 汇点
     source_fingerprint: sha256:440c81b202d87eb4fa6afa03e6943ba83b0231cbc208fa86ca10050c0bf93fc1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 用户请求经过接收、检索、生成、审阅和交付。
     source_fingerprint: sha256:f99249ff3f96b1d7f5d32640c5ffe76e9cfc76bde3dcb779b5a0b8dcc76360c3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 流
     source_fingerprint: sha256:ff4ba1750d47eb2cfa5bbc055b6c081c96da1978b84eef2989af5fbecc35d01f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 信息、工作、物料或价值随时间在系统各部分间移动。
     source_fingerprint: sha256:aa71a5f42378677a12a54566618c77c11a5dcfd48908f125a9a31cc30efc03ea
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 加快生成可能恶化下游审阅积压。
       - 结合故障和等待时间跟踪流速。
     source_fingerprint: sha256:661f491a11155fad5fba1abba61fe0f388409a099f36015c8b254900df51a803
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 流水线、调度器和传输机制实现并测量传递过程。
     source_fingerprint: sha256:4799e2d7eb08510a53c033dc3c95c598f1dc9905302e080a4cc378ebac3f6ec1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 跨阶段传递或转换工作与信息的系统。
     source_fingerprint: sha256:344ea16c7c770037dc824772aa72358b67f19de1a0fe859a5633f370b2fcbe8f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 端到端流动决定局部处理能否交付有用结果，以及瓶颈在何处累积。
     source_fingerprint: sha256:47a8946140f3ee255dde7a4a7f8a9fd6271bd82bdf089f0457665dc7f847f839
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
