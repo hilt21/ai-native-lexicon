@@ -1,0 +1,37 @@
+title: triage
+summary: Process incoming issues and PRs through states into actionable work.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, gather context for a raw external bug report, feature request or
+  specified PR using configured roles and states. Recommend classification and state, then await maintainer
+  direction before verifying the bug or diff. Use grilling and domain-modeling when needed. Outcomes include
+  needs-info, ready-for-human, wontfix or an agent-ready brief; not every item proceeds to implementation.
+  Automatic external-PR discovery is off by default. Tickets prepared by to-tickets do not need another
+  triage.
+when_to_use:
+  - Handle an external bug report, feature request or PR.
+  - Turn raw backlog input into implementable work.
+solves:
+  - Reduce ambiguity in incoming issues.
+  - Turn unprocessed requests into clear tasks for agents.
+inputs:
+  - Issue or external PR
+  - Triage configuration
+outputs:
+  - Classification and fact-verification results
+  - Confirmed direction and applicable state
+  - Agent-ready brief when sufficiently prepared
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/triage/SKILL.md
+handoffs: []
+official_description: Move issues and external PRs through a state machine of triage roles, categorise,
+  verify, grill if needed, and write agent-ready briefs.

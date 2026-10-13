@@ -1,0 +1,35 @@
+title: Run an agent autonomously
+summary: "Run an agent autonomously: from task entry to inspectable output."
+order: 4
+when_to_use:
+  - Keep going overnight
+  - Drive this to completion
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - predicate-complete result with audit trail
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the autonomous entry
+        why: Enter through pstack's main router and progress one unattended task to a fixed exit predicate.
+        nodes:
+          - poteto-mode
+          - autonomous-run
+      - title: Retain decision evidence
+        why: Condense long agent activity into an auditable decision trail.
+        nodes:
+          - show-me-your-work
+      - title: Prepare the PR
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr
+      - title: Review and ship
+        why: Progress the open PR/stack to merge-ready without final landing, then use independent verifiers to decide
+          what may land.
+        nodes:
+          - babysit
+          - shipping
+        optional: true
+        when: Delivery needs progression and the required authorization exists.

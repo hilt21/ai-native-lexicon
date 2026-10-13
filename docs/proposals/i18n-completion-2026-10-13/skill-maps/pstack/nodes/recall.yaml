@@ -1,0 +1,37 @@
+title: recall
+summary: Restore working context from history and current state.
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+  - memory
+  - resume
+  - context
+mechanism: Read recent transcripts, live branch/PR state and shared records. Condense them into current state,
+  completed work, pending items and key decisions.
+when_to_use:
+  - Resume work from several days ago.
+  - Continue a long-running project.
+  - The user asks to catch up or recall where work stopped.
+solves:
+  - Reduce repeated explanation.
+  - Avoid repeating completed investigation.
+inputs:
+  - topic
+  - time window
+  - chat history
+  - repository live state
+outputs:
+  - current-state capsule
+  - resume point
+  - open items
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/recall/SKILL.md
+handoffs: []
+official_description: Reconstruct your recent working context from your own chat history, live state, and the
+  shared record (user reports, prior fixes, incidents), then hand back a tight current-state brief. Use for
+  'recall my work on X', 'catch me up', 'what have I been working on', 'where did I leave off', before
+  starting or resuming work.

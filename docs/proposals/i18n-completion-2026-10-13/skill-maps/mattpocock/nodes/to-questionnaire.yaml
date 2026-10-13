@@ -1,0 +1,33 @@
+title: to-questionnaire
+summary: Turn decision gaps only an external stakeholder can resolve into a questionnaire.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: delivery-human-loop
+secondary_clusters:
+  - spec-planning
+tags:
+  - productivity
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, use two rounds to establish the recipient's role, background and
+  required result. Generate to-questionnaire-<slug>.md in the current directory around the actual information
+  gaps, organized by topic priority with answer spaces. The skill writes the questionnaire; the reader
+  distributes it and returns answers to the original discussion.
+when_to_use:
+  - Another person's knowledge or decision blocks the work.
+  - Collect structured input before a meeting or asynchronously.
+solves:
+  - Reduce synchronous follow-up with stakeholders.
+  - Make external input usable in a later specification or design.
+inputs:
+  - Decision gap
+  - Respondent
+  - Required output
+outputs:
+  - Markdown questionnaire in the current directory with answer spaces
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/to-questionnaire/SKILL.md
+handoffs: []
+official_description: Turn a decision you can't fully answer into a questionnaire for someone else to fill in.

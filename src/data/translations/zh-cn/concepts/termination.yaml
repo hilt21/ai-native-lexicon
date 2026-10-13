@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: termination
+units:
+  - path: summary
+    translation: 明确工作何时完成，以及执行何时必须停止。
+    source_fingerprint: sha256:40b62b5d439dcb416195e42125e108f38f7e5aab2df9a3faa2417d4b8aae7c07
+    review_status: draft
+  - path: definition
+    translation: 终止在满足完成、失败、取消或资源条件时结束执行。最终状态应区分成功完成和未成功停止，并保留有用结果或恢复信息。
+    source_fingerprint: sha256:5f9ab9f41cafe7d4edf530a5ac0d8914acbf20c5940058ae02c8d40277818263
+    review_status: draft
+  - path: why_it_matters
+    translation: 可靠停止规则可防止无限循环，并避免将中断运行误报为已完成任务。
+    source_fingerprint: sha256:f9d273480c33e9f17ece92f00cc070ec520e3d9e88990deb1262fc2ac685b582
+    review_status: draft
+  - path: when_to_use
+    translation: 验收检查通过、预算耗尽或收到已授权取消请求时使用。
+    source_fingerprint: sha256:aa011a116a2496c8f113b56ee23b41cb86e72f9522cd44992efcdfa7b7da6b7f
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅因智能体不再取得进展，就把任务标记完成。
+    source_fingerprint: sha256:dc8b47854641906af660297259b8eadc33e04a209bc731f120a867b9ce54d64b
+    review_status: draft

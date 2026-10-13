@@ -1,0 +1,32 @@
+title: make-bot-ui
+summary: Build a simple control UI that triggers agent automation.
+type: capability
+status: active
+layer: skill
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags:
+  - automation
+  - ui
+  - webhook
+mechanism: A local page wakes the bot through a server or webhook. Keep secrets on the server and optionally
+  expose it through Tailscale.
+when_to_use:
+  - Buttons or a dashboard should trigger Grok Bot.
+  - Control automation remotely.
+solves:
+  - Make automation easier for nontechnical users to trigger.
+inputs:
+  - UI requirement
+  - webhook endpoint
+  - sender key
+  - network exposure choice
+outputs:
+  - working bot UI
+  - webhook flow
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/make-bot-ui/SKILL.md
+handoffs: []
+official_description: Use when building a custom UI (page, dashboard, buttons) that should wake a Grok Bot
+  over a webhook, when the user must provide a webhook sender key, or when exposing that UI on Tailscale.

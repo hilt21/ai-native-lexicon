@@ -1,0 +1,70 @@
+title: Optimize performance
+summary: "Optimize performance: from task entry to inspectable output."
+order: 3
+when_to_use:
+  - This is slow
+  - Make latency 50% lower
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - measurement-backed performance improvement
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the measurement entry
+        why: Enter through pstack's main router and work style, then measure, fix and demonstrate the one-off
+          performance issue.
+        nodes:
+          - poteto-mode
+          - perf-issue
+      - title: Validate measurement
+        why: Check whether performance figures measure the intended work.
+        nodes:
+          - benchmark-checklist
+      - title: Understand the bottleneck
+        why: Build a mental model of how the system works.
+        nodes:
+          - how
+      - title: Design the change
+        why: Define types, interfaces, modules and data structures before coding.
+        nodes:
+          - architect
+        optional: true
+        when: The optimization affects system structure.
+      - title: Prepare the PR
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr
+      - title: Review and ship
+        why: Progress the open PR/stack to merge-ready without final landing, then use independent verifiers to decide
+          what may land.
+        nodes:
+          - babysit
+          - shipping
+        optional: true
+        when: Delivery needs progression and the required authorization exists.
+  - id: alternative-1
+    title: Continuously improve one metric
+    when: Repeated measurement and improvement of one metric are needed.
+    steps:
+      - title: poteto-mode
+        why: pstack's main router and work-style entry.
+        nodes:
+          - poteto-mode
+      - title: hillclimb
+        why: Continuously optimize one metric through reversible iterations.
+        nodes:
+          - hillclimb
+      - title: benchmark-checklist
+        why: Check whether performance figures measure the intended work.
+        nodes:
+          - benchmark-checklist
+      - title: show-me-your-work
+        why: Condense long agent activity into an auditable decision trail.
+        nodes:
+          - show-me-your-work
+      - title: opening-a-pr
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr

@@ -1,0 +1,28 @@
+title: runtime-forensics
+summary: Collect signals from a running process and diagnose read-only.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+  - read-only
+  - forensics
+mechanism: Capture actual CPU, heap or CDP artifacts, narrow the smoking gun, verify the mechanism in the live
+  process and map it to source.
+when_to_use:
+  - live leak/spin/glitch
+  - Symptoms are observable only at runtime.
+solves:
+  - Runtime conclusions are guessed from source.
+inputs:
+  - live process
+  - control surface
+outputs:
+  - cited diagnosis
+  - source location
+  - artifact paths
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/runtime-forensics.md
+handoffs: []

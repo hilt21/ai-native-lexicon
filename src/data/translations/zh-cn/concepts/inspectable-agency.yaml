@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: inspectable-agency
+units:
+  - path: summary
+    translation: 使负责监督的人能够理解智能体当前目标、状态、证据、行动和权限的属性。
+    source_fingerprint: sha256:1cd3b21c702ce7b57be98e9474d7ff743a1362e0125035f9693ba9a3e75e97e4
+    review_status: draft
+  - path: definition
+    translation: 可检视的能动性呈现运行过程，无需用户读取原始思维链。它以合适的详细程度展示计划、工具活动、来源证据、不确定性、批准和有意义的状态转换。
+    source_fingerprint: sha256:bc224cc7929865982dc97a296543d9e286fa1a2980d92325633d065cdce768fd
+    review_status: draft
+  - path: why_it_matters
+    translation: 人无法监督无法理解的行为。可检查性支持校准信任、干预、调试和追责，无需暴露模型私有内部过程。
+    source_fingerprint: sha256:f62df5c5da2752e4860c5fa416edfaf152fe27e73bc3f049c16344062206e2aa
+    review_status: draft
+  - path: when_to_use
+    translation: 用于行动随时间展开或影响外部系统的智能体产品。
+    source_fingerprint: sha256:6a8a4a778336c917f4d64e429957f566f89d8d0bc59419eef4fa2ea702ea9fbb
+    review_status: draft
+  - path: anti_pattern
+    translation: 展示看似内部思考的戏剧化文字流，却未对应可强制执行的状态或实际操作。
+    source_fingerprint: sha256:4633dcde0a928ea920072915a5ba2a70ef983814ac9f536e0831181fa2a21874
+    review_status: draft

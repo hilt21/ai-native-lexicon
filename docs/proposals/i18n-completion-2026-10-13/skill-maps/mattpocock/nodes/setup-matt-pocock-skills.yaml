@@ -1,0 +1,36 @@
+title: setup-matt-pocock-skills
+summary: Configure the repository conventions used by Matt Pocock skills.
+type: workflow
+status: active
+layer: entry
+primary_cluster: entry-routing
+secondary_clusters:
+  - communication-tooling
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, explore the repository and propose an issue tracker. Confirm the
+  configuration draft, then write tracker, domain and required triage-label guidance under docs/agents and
+  update existing CLAUDE.md or AGENTS.md pointers. Use a single-context layout by default; ask about multiple
+  contexts only for an actual monorepo. Skip labels if triage is not installed. This configures project
+  conventions rather than installing skills; rerun it or edit the configuration when changing trackers.
+when_to_use:
+  - Use these engineering skills in a repository for the first time.
+  - Change the project's issue tracker, triage labels or document layout.
+solves:
+  - Avoid asking for the same project conventions in every workflow.
+  - Give triage, specification and ticket workflows stable shared configuration.
+inputs:
+  - Repository
+  - Issue tracker choice
+  - Triage label conventions
+  - Domain document layout
+outputs:
+  - Project-level skill configuration
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/setup-matt-pocock-skills/SKILL.md
+handoffs: []
+official_description: "Configure this repo for the engineering skills: set up its issue tracker, triage label
+  vocabulary, and domain doc layout. Run once before first use of the other engineering skills."

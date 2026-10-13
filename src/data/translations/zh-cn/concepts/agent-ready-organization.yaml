@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: agent-ready-organization
+units:
+  - path: summary
+    translation: 将过程、权限、知识和责任组织清楚，使智能体能够安全且可衡量地参与工作的组织。
+    source_fingerprint: sha256:598ccc44407c9a5e83ba2b1d0a1e3f05127089d38b4321e215b879c012a8e148
+    review_status: draft
+  - path: definition
+    translation: 具备智能体就绪条件的组织具有明确过程状态、可访问的权威知识、范围受限的凭据、可观察结果、异常责任人和反馈回路。它改善运行环境，而非仅给未文档化的工作加上聊天界面。
+    source_fingerprint: sha256:86861ea8d801c74e3552492b54de5a3e0b2697b26b2fbc7ed4f06d392b92d9e8
+    review_status: draft
+  - path: why_it_matters
+    translation: 智能体会放大系统已有的清晰程度或混乱程度。运行准备程度决定自动化能提高效能，还是只让混乱更快发生。
+    source_fingerprint: sha256:abe0031720a13850ca9130951d07d6a45887c5f0459f22e3bc0aa7ed26880820
+    review_status: draft
+  - path: when_to_use
+    translation: 评估团队或过程是否已准备好部署会产生重大影响的智能体时使用。
+    source_fingerprint: sha256:11029efbeef2b7be56922456d8a50017a03e8c7ebc8ad888b490823850e24532
+    review_status: draft
+  - path: anti_pattern
+    translation: 尚未定义过程责任、权威数据和升级路径，就购买智能体平台。
+    source_fingerprint: sha256:0f3b4d8af0271527a526d92da88b40b11fd8e0d8f1fcba43597107c901fc042a
+    review_status: draft

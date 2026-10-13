@@ -1,0 +1,31 @@
+title: ask-matt
+summary: Recommend the skill or work path that fits the current situation.
+type: router
+status: active
+layer: entry
+primary_cluster: entry-routing
+secondary_clusters: []
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: Read the user's current objective and stage, recommend a main workflow, on-ramp or standalone
+  skill, then stop. The user explicitly starts user-invoked entries; a recommendation does not invoke them.
+  Complete the repository configuration with setup-matt-pocock-skills before the first engineering task.
+when_to_use:
+  - You do not know which Matt Pocock skill to use.
+  - You need to choose between planning, implementation, debugging or another standalone capability.
+solves:
+  - Reduce the effort of remembering the entire skill inventory.
+  - Avoid starting at the wrong stage of work.
+inputs:
+  - Current objective
+  - Current project state
+outputs:
+  - Recommended skill
+  - Recommended work path
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+handoffs: []
+official_description: Ask which skill or flow fits your situation. A router over the skills in this repo.

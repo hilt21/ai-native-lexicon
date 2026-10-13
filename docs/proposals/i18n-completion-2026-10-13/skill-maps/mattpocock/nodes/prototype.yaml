@@ -1,0 +1,36 @@
+title: prototype
+summary: Answer a design question with disposable code when discussion alone is insufficient.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: debugging-research
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: Build a prototype around one design question, label it throwaway and place it near the relevant
+  module or page. Use a shareable single-file HTML for logic questions; show distinct alternatives on one
+  route for UI questions. Default to no persistence and show state explicitly. Carry findings back to real
+  work, commit the prototype to a temporary branch outside main and record the question, findings and branch
+  in the implementation issue. Use handoff for exploration across directories or harnesses.
+when_to_use:
+  - A state model or business rule needs execution to judge it.
+  - A UI direction needs visible alternatives to compare.
+solves:
+  - Reduce design guesses based only on discussion.
+  - Use cheap experiments before expensive production implementation.
+inputs:
+  - Design question
+  - Minimum necessary context
+outputs:
+  - Runnable throwaway prototype
+  - Design question and validation findings
+  - Source pointers to the prototype branch and implementation issue
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/prototype/SKILL.md
+handoffs: []
+official_description: Build a throwaway prototype to answer a design question. Use when the user wants to
+  sanity-check whether a state model or logic feels right, or explore what a UI should look like.

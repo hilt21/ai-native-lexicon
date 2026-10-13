@@ -1,0 +1,34 @@
+title: domain-modeling
+summary: Maintain a shared project vocabulary and records of important decisions.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: alignment-domain
+secondary_clusters:
+  - architecture-quality
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: Challenge ambiguous or overloaded terms, test meanings with edge cases and record stable vocabulary
+  in GLOSSARY.md as it emerges. Recommend an ADR only for decisions that are hard to reverse, surprising
+  without context and involve a substantive tradeoff. Keep implementation detail out of the glossary and avoid
+  turning every stable conclusion into an ADR.
+when_to_use:
+  - Project vocabulary is inconsistent or one term has several meanings.
+  - Update GLOSSARY.md or record an ADR.
+solves:
+  - Reduce language ambiguity between people and agents.
+  - Give naming, navigation and subsequent reasoning one shared domain model.
+inputs:
+  - Domain terms
+  - Code and business context
+outputs:
+  - Updated GLOSSARY.md
+  - ADR when its recording criteria are met
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/domain-modeling/SKILL.md
+handoffs: []
+official_description: Build and sharpen a project's domain model. Use when discussing codebase terminology,
+  writing or editing a GLOSSARY.md, or recording or editing an ADR.

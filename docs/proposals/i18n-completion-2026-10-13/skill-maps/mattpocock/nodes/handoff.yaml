@@ -1,0 +1,32 @@
+title: handoff
+summary: Condense the current session into a portable handoff for another agent or session.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: delivery-human-loop
+secondary_clusters:
+  - communication-tooling
+tags:
+  - productivity
+  - user-invoked
+  - stable
+mechanism: Write objectives, decisions, current state, evidence, skills used and key file pointers to a
+  standalone Markdown file in the operating system's temporary directory. Use it for a new harness, directory,
+  colleague or side task. At an ordinary phase boundary, first consider continuing, clearing context,
+  delegating or compacting; a handoff is not required at every boundary.
+when_to_use:
+  - Move to a new harness or directory, or hand context to a colleague.
+  - Fork a side task during a phase and give the receiver portable context.
+solves:
+  - Reduce context reconstruction across sessions.
+  - Preserve important decisions beyond the chat history.
+inputs:
+  - Current conversation
+  - Intended use
+outputs:
+  - Handoff Markdown
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/handoff/SKILL.md
+handoffs: []
+official_description: Compact the current conversation into a handoff document for another agent to pick up.

@@ -1,0 +1,33 @@
+title: teach
+summary: Teach a skill or concept over multiple sessions in the current workspace.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: communication-tooling
+secondary_clusters:
+  - alignment-domain
+tags:
+  - productivity
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, clarify the learning mission and trusted sources. Establish a
+  durable teaching workspace in the current directory using short cited interactive HTML lessons, reference
+  HTML, learning records and reusable assets. Confirm mission changes with the user. Records and repeated
+  practice aim to retain understanding, without promising mastery.
+when_to_use:
+  - Learn a topic over time rather than receive one explanation.
+solves:
+  - Preserve learning progress across sessions.
+  - Turn teaching into a continuing learning process.
+inputs:
+  - Learning mission
+  - Trusted resources
+  - Current learning record and workspace
+outputs:
+  - Cited interactive HTML lessons and reference HTML
+  - Learning records and assets that persist across sessions
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: productivity/teach/SKILL.md
+handoffs: []
+official_description: Teach the user a new skill or concept, within this workspace.

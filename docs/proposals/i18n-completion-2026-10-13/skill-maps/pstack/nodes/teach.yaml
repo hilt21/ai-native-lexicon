@@ -1,0 +1,32 @@
+title: teach
+summary: Organize how and why findings into an explanation people can understand.
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+  - education
+  - mental-model
+mechanism: Investigate mechanisms and design motivation, then reorganize concepts, mechanisms and examples
+  around the learner's existing knowledge.
+when_to_use:
+  - The user wants to understand a subsystem or change.
+  - Create an onboarding explanation.
+solves:
+  - Reduce technical comprehension effort.
+  - Turn fragmented code knowledge into a mental model.
+inputs:
+  - topic
+  - learner question
+outputs:
+  - teaching narrative
+  - mental model
+  - key concepts
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/teach/SKILL.md
+handoffs: []
+official_description: Explain a body of work plainly so a person actually understands it. Runs the `how` and
+  `why` skills and weaves what they find into one clear explanation. Use for 'teach me this', 'help me really
+  understand X', 'explain this change or subsystem to me'.

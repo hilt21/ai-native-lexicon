@@ -1,0 +1,36 @@
+title: show-me-your-work
+summary: Condense long agent activity into an auditable decision trail.
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+  - audit
+  - evidence
+  - attention-compression
+mechanism: Record important decisions, rationale, evidence pointers and outcomes in append-only TSV so a
+  person need not reread the whole transcript.
+when_to_use:
+  - overnight run
+  - autonomous run
+  - multi-phase work
+  - A person returns to audit unattended work.
+solves:
+  - Reduce human review bandwidth.
+  - Improve traceability of long-running tasks.
+inputs:
+  - agent decisions
+  - evidence pointers
+outputs:
+  - decisions.tsv
+  - compact audit trail
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/show-me-your-work/SKILL.md
+handoffs:
+  - "Handoff guidance: human audit"
+official_description: "Keep a reviewable decision trail for long-running or unattended work: a TSV log with
+  one row per decision (what, why, evidence, result). Local by default; commit it when a reviewer needs the
+  trail to trust the result. Use for /show-me-your-work, autonomous or multi-phase runs, or work a human
+  reviews after stepping away."

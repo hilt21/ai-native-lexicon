@@ -1,0 +1,26 @@
+title: explain-the-number
+summary: Explain the limiter and measurement mechanism before interpreting a number.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Explain the limiter and measurement mechanism before interpreting a number.
+when_to_use:
+  - Apply before you trust, report, or act on a number you measured. Find what limits it, and rule out that it
+    measured something other than the work you think.
+solves:
+  - Explain the limiter and measurement mechanism before interpreting a number.
+inputs:
+  - measured metric
+outputs:
+  - validated interpretation
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-explain-the-number/SKILL.md
+handoffs: []
+official_description: "Apply before you trust, report, or act on a number you measured: a speedup, a
+  regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured
+  something other than the work you think."

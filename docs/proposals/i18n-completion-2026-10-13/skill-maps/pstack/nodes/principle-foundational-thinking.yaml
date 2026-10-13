@@ -1,0 +1,26 @@
+title: foundational-thinking
+summary: Choose the core data structure and shared-state model first.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Choose the core data structure and shared-state model first.
+when_to_use:
+  - "Apply before writing logic: choosing core types and data structures, sequencing scaffold-vs-feature work,
+    asking what concurrent actors share. Get the data structures right so downstream code becomes obvious."
+solves:
+  - Choose the core data structure and shared-state model first.
+inputs:
+  - requirements / domain
+outputs:
+  - foundational data model
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-foundational-thinking/SKILL.md
+handoffs: []
+official_description: "Apply before writing logic: choosing core types and data structures, sequencing
+  scaffold-vs-feature work, asking what concurrent actors share. Get the data structures right so downstream
+  code becomes obvious."

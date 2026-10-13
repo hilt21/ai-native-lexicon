@@ -1,0 +1,33 @@
+title: scaffold-exercises
+summary: Create course-conforming exercise directories, problems, solutions and explainer stubs.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: communication-tooling
+secondary_clusters: []
+tags:
+  - misc
+  - model-invoked
+  - stable
+mechanism: Follow the existing course layout, numbering and naming rules to create section/problem
+  directories, README and required problem or explainer stubs. Default to an explainer when unspecified. Apply
+  the relevant templates, validate with pnpm ai-hero-cli internal lint and commit. This scaffold and lint
+  apply to the course, not arbitrary projects.
+when_to_use:
+  - Create a course section or exercise.
+  - Generate exercise, problem, solution or explainer stubs in a batch.
+solves:
+  - Reduce repetitive course scaffolding.
+inputs:
+  - Course structure requirements
+  - Exercise list
+outputs:
+  - exercise directory structure
+  - problem/solution/explainer stubs
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: misc/scaffold-exercises/SKILL.md
+handoffs: []
+official_description: Create exercise directory structures with sections, problems, solutions, and explainers
+  that pass linting. Use when user wants to scaffold exercises, create exercise stubs, or set up a new course
+  section.

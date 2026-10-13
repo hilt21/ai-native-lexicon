@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: task-decomposition
+units:
+  - path: summary
+    translation: 将难题划分为更简单的问题。
+    source_fingerprint: sha256:3b393e8e1f7620c43b3bd0cec9d2e344ba4e5707c93f057153a114434edd54b9
+    review_status: draft
+  - path: definition
+    translation: 任务分解识别能够通过组合结果来满足较大任务的更小问题。它包括定义边界和依赖，范围超出按相似大小拆分请求。
+    source_fingerprint: sha256:dde0445a3f5554078cb19fb61edd95546152c163364915fe6c6ca9d15645dae7
+    review_status: draft
+  - path: why_it_matters
+    translation: 有效边界减少认知负担，使独立工作可被委派，同时保留集成责任。
+    source_fingerprint: sha256:67b7399cd7c3467c1924fa0f5a723334bcf73f16ce4dd1457b7ba8ef211f3a5b
+    review_status: draft
+  - path: when_to_use
+    translation: 将功能划分成数据变更、实现和行为验证时使用。
+    source_fingerprint: sha256:3f5755a6f9dc73f2cfae668a1b8bdfb77f1c431e107dbfa84f3ed22e1385dc7f
+    review_status: draft
+  - path: anti_pattern
+    translation: 把紧密耦合的编辑分给多个工作者，却未规定接口或集成责任。
+    source_fingerprint: sha256:c01690bcafdc26f16bedd25492f3a8b00882c83dfde483f9c2ac2333794140f3
+    review_status: draft

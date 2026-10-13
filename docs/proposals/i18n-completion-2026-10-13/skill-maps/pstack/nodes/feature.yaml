@@ -1,0 +1,27 @@
+title: feature
+summary: Design, implement in parallel, verify on the real surface and review a new feature.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags: []
+mechanism: Ground with how, use architect, check throughput, separate workstreams and delegate or use arena.
+  Verify live, interrogate contested changes and prepare the PR.
+when_to_use:
+  - Add a user behavior or capability.
+solves:
+  - Immediate coding creates the wrong structure.
+  - Parallel workers write shared state.
+inputs:
+  - feature requirement
+  - affected subsystem
+outputs:
+  - implemented feature
+  - design rationale
+  - verification evidence
+  - PR
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/feature.md
+handoffs: []

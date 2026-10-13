@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: bounded-autonomy
+units:
+  - path: summary
+    translation: 允许智能体仅在范围、工具、时间、成本和可逆性方面的明确限制内，自主选择行动。
+    source_fingerprint: sha256:caa6e90640d853afa375fa27768cca3c9e204d34533da5c20ec5ad89d29875f7
+    review_status: draft
+  - path: definition
+    translation: 有界自主定义一个运行范围，而非将自动化与批准视为二选一。在范围内，智能体可以独立调整和恢复；跨越边界则需要升级、重新取得授权或选择更安全的替代方案。
+    source_fingerprint: sha256:0a10de0b5b0e01029fa7e3b2bd839a1272412fd96d3900c376f59ae948f2fd2e
+    review_status: draft
+  - path: why_it_matters
+    translation: 有用的智能体需要行动空间，但不受限的操作会使失败难以控制。明确边界让信任成为可强制执行的系统属性。
+    source_fingerprint: sha256:0331ff81e86ab0feae7cf10cbc3a412d4c3abbd10ad18acd827c306f0ff3aa91
+    review_status: draft
+  - path: when_to_use
+    translation: 智能体能够改变外部状态、消耗资源、联系人或长期运行时使用。
+    source_fingerprint: sha256:bf2ae1f013796673a42bcb483e10325137f3d83c44132a2eb62caa0acc020af5
+    review_status: draft
+  - path: anti_pattern
+    translation: 将智能体描述为受到监督，却未对其行为施加技术限制。
+    source_fingerprint: sha256:984b53f1a9202f09ef137edf0c8bedc72ac67d3babcd72056dfe23bf64512270
+    review_status: draft

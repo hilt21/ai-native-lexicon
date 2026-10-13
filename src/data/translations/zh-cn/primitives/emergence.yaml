@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: emergence
+units:
+  - path: summary
+    translation: 由相互作用产生、单独检查一个组件时不明显的集体行为。
+    source_fingerprint: sha256:75eda7889dbead266f9f8d9a09a73ef4cf16154b286d5e3e73b13215e1b9902e
+    review_status: draft
+  - path: scope
+    translation: 具有显著交互影响的复杂系统或多智能体系统。
+    source_fingerprint: sha256:4db60c662208ef4eca04acd310b428cec18cf1bd4abad3ee2e524bbbced52f6b
+    review_status: draft
+  - path: usage
+    translation: 通过观察与实验调查集体模式，避免假定局部正确能够保证全局行为。
+    source_fingerprint: sha256:42d722f96e325bba7ddb638fbb0aa747a6b6920d1ed818b2204018f6a44b8ee3
+    review_status: draft
+  - path: distinctions
+    translation: 涌现描述系统层面现象，既非可调用的运行时组件，也不能证明智能。
+    source_fingerprint: sha256:68ed2f355b2912afb64142ba54010968aac8d17067ff05ad51d9f3e7916f089d
+    review_status: draft
+  - path: composition.pattern
+    translation: 局部规则 + 关系 + 重复交互 → 系统层面模式
+    source_fingerprint: sha256:537100139a310faa522a80a65ecda07041bb57e64e2582d020a3c6546382de0b
+    review_status: draft
+  - path: composition.example
+    translation: 多个单独看似合理的智能体反复重复搜索，因为局部协调规则未呈现责任归属。
+    source_fingerprint: sha256:83edeb08268946aa20fc5d50f4aa0e021962c40fdde4477fdeb21e9f2d9fd4ca
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 涌现
+    source_fingerprint: sha256:ef4420a6ad30602a9db225f4e63e82734064891db16df7b5dc12314bccb8457c
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 组件交互产生的系统层面行为，单独检查某个组件时无法明显看出。
+    source_fingerprint: sha256:15e6b148ae2bc172d43612553a9cae4ee2557ac09022bac5f75925d847786325
+    review_status: draft
+  - path: considerations
+    translation:
+      - 将涌现用作分析视角，避免用它替代对行为的解释。
+      - 根据测得的交互模式检验不同解释。
+    source_fingerprint: sha256:29e90739a8a0249d7897f9e0b00bb6832690f8511288e82a2de8d6df7a5b3cf5
+    review_status: draft
+  - path: ownership.rationale
+    translation: 大语言模型可提出跨组件解释；仍需检测记录与实验确定实际情况。
+    source_fingerprint: sha256:6296de6561a6959cc9e4dcdd617ed57d552c879b3e5ba71a66478332487a60db
+    review_status: draft
+  - path: priority.scope
+    translation: 具有显著交互影响的复杂系统或多智能体系统。
+    source_fingerprint: sha256:97a8aee294803aa8af812b2b53fe40b04c13482b9db5e38f9df0c39530f11de2
+    review_status: draft
+  - path: priority.rationale
+    translation: 相互作用的组件产生重大模式，且局部组件检查无法解释时，涌现应成为明确关注点。
+    source_fingerprint: sha256:22faddc4ffd75a3982ebdc644074b274e85977d889a22a3ad94acda2dbe1780c
+    review_status: draft

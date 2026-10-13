@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: context-refresh
+units:
+  - path: summary
+    translation: 用更新且已验证的事实替换旧信息。
+    source_fingerprint: sha256:15cd08af6770f8c76c2526a13b85a77808a956e96b5e23d5586ce16b41412cb7
+    review_status: draft
+  - path: definition
+    translation: 上下文刷新通过检查当前来源，替换过时观察或说明其限制，以更新活动信息。它关注时效性，范围超出腾出空间，并应保留事实的核对时间和位置。
+    source_fingerprint: sha256:851bb733ffffb2e55b5857bc20ea73559568abafe014f1992586cf5d7253529b
+    review_status: draft
+  - path: why_it_matters
+    translation: 其他主体编辑文件或外部系统改变状态后，原本正确的观察可能变错。
+    source_fingerprint: sha256:89ebae146881cbaf5d2bf08276ce78c0faf93451f06580977b74633cc088f267
+    review_status: draft
+  - path: when_to_use
+    translation: 决定下一步之前，重新读取拉取请求的当前状态时使用。
+    source_fingerprint: sha256:87478148ce105cf5116dcbf9ce32b2a9f51676aca6e9ed0b62f609953ad6ebc0
+    review_status: draft
+  - path: anti_pattern
+    translation: 已知发生变化后，仍复用缓存状态而不检查权威来源。
+    source_fingerprint: sha256:5597778fd071a19a986c2be2f9f4470faabd38b4a5eb62f8b42b5a3dee7874cb
+    review_status: draft

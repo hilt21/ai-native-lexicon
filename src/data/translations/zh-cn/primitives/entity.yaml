@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: entity
+units:
+  - path: summary
+    translation: 通过稳定身份，可在属性和状态变化过程中持续被引用的对象。
+    source_fingerprint: sha256:6f8957a6ae65478082fcafc6c176064a6fe612b2db54dac0406e2a3250fa7f02
+    review_status: draft
+  - path: scope
+    translation: 跟踪持久对象及其关系的系统。
+    source_fingerprint: sha256:0edaa9107bd736a82b8111fd55f9fea3590c2f2aa5a8b5c502b88e0955842a8e
+    review_status: draft
+  - path: usage
+    translation: 为持久工作对象提供稳定身份，避免依赖不断变化的描述。
+    source_fingerprint: sha256:dba9399d316f77b56d83538a3bebda66d77c21021b400f6fb2f23a0d63e17864
+    review_status: draft
+  - path: distinctions
+    translation: 实体在状态变化后仍保持身份；视图呈现实体现有信息中的选定部分。
+    source_fingerprint: sha256:203ff4b067ab8bca5a23a692855d0e73637f53f5920ef24cdbd586bf0e357fda
+    review_status: draft
+  - path: composition.pattern
+    translation: 实体 + 关系 + 状态
+    source_fingerprint: sha256:569093076a3337493f7ef79dbbcbe5717f9407710af4061d3e3bf2afaf9c167d
+    review_status: draft
+  - path: composition.example
+    translation: 报告在草稿、批准和发布事件中保留同一个报告 ID。
+    source_fingerprint: sha256:8aec3353500c5c29d180a07e74662f2dcc17cc62ecfcaa37b5439affd08f1fd4
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 实体
+    source_fingerprint: sha256:8d7973a6fe7b905ef1982f7561a2a95883cf054a0c17eae8c84e2d7b849dc384
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 具有稳定身份、可在属性或状态变化过程中被引用的对象。
+    source_fingerprint: sha256:53fe74d81a0688e229f13f28bcffc9553a01b6274c7cf1c14e215955950b1fe9
+    review_status: draft
+  - path: considerations
+    translation:
+      - 同一对象的每种呈现无需各自创建新实体。
+      - 广泛建立引用前，先确定身份与生命周期规则。
+    source_fingerprint: sha256:f9c4b459d4815cb43e45ca5e1ae5d0017f7dadb42ae114a96f6531af9c548fd9
+    review_status: draft
+  - path: ownership.rationale
+    translation: 数据库和带类型记录保留身份、引用和生命周期规则。
+    source_fingerprint: sha256:d92f4f52088cad362fe40e129499d78bfcb48da974d9f3c79bd262343c5f9172
+    review_status: draft
+  - path: priority.scope
+    translation: 跟踪持久对象及其关系的系统。
+    source_fingerprint: sha256:16b663cc73ad9f657b4d0e51c9f75a92038cc75b16990b6e3621cc8b44a58dbd
+    review_status: draft
+  - path: priority.rationale
+    translation: 跟踪持久对象的系统需要身份规则，以区分对象变化与不同对象。
+    source_fingerprint: sha256:a0e7c460606f3200f79f4b018a723a0a2e3ab5d5fb4269f9e58dfb9902188895
+    review_status: draft

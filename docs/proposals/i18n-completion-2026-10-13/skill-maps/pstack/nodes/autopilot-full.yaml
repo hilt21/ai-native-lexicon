@@ -1,0 +1,29 @@
+title: autopilot-full
+summary: One owner takes each PR from build to merge; the root performs independent verification,
+  countersigning and audits.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: parallel-autonomy
+secondary_clusters: []
+tags: []
+mechanism: Use one owner per PR and a durable trail. Run self-proof, CI and babysit concurrently; the root
+  verifies the exact head independently. After a clean verdict the owner merges. Audit or replace owners
+  periodically.
+when_to_use:
+  - Automatically bring several independent PRs to merged state.
+solves:
+  - The root becomes an execution bottleneck.
+  - PR owners lose lifecycle responsibility.
+  - Independent countersigning is absent.
+inputs:
+  - PR queue
+  - operator gates
+outputs:
+  - merged verified PRs
+  - decision/children trails
+  - audit verdicts
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/autopilot-full.md
+handoffs: []

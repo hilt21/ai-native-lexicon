@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: goal
+units:
+  - path: summary
+    translation: 为任务或系统提供具体方向和停止依据的期望结果。
+    source_fingerprint: sha256:d2c324490defccea3572414723e73a4fa4355b786d8648541a2f5e31f5a915a3
+    review_status: draft
+  - path: scope
+    translation: 具有预期结果的目标导向任务和系统。
+    source_fingerprint: sha256:e914cffa4168bf8f0cda413874ee8c01f8f31cd8553bf1e2333964b956b3a829
+    review_status: draft
+  - path: usage
+    translation: 明确要追求的结果，使计划和停止决策具有稳定参考。
+    source_fingerprint: sha256:26b5516467ac3c22ab601813b92bdd401d3a1274070cbbcb21735033d24d89e0
+    review_status: draft
+  - path: distinctions
+    translation: 目的说明工作为何重要；目标规定期望结果；成功标准决定如何判断目标达成。
+    source_fingerprint: sha256:6d5459e4d3c058e184ce8330a07ded0511ba73fef57b89851e45e158f09d3564
+    review_status: draft
+  - path: composition.pattern
+    translation: 目的 → 目标 → 计划 + 成功标准
+    source_fingerprint: sha256:ebc68fb55bd47391ae31c8990d7512ed41792378d598205d6f24cb7bb6795d99
+    review_status: draft
+  - path: composition.example
+    translation: 研究任务的目标是在约定范围内交付三种架构的有来源支撑的比较。
+    source_fingerprint: sha256:292efee480c1941c0931fcaf468575d389d0b32689ac147f99188a6d52773d34
+    review_status: draft
+  - path: considerations
+    translation:
+      - 智能体不应悄然用更容易的代理目标替换已接受目标。
+      - 与负责人员解决目标冲突。
+    source_fingerprint: sha256:cad9376bfb7bf87382d7d5be11e57e124bbde1a8e885a330febeab04bd6731ab
+    review_status: draft
+  - path: ownership.rationale
+    translation: 人授权预期结果；大语言模型协助澄清，软件保留已接受目标和完成条件。
+    source_fingerprint: sha256:1b64825f74beec9e2c11939cff03dbcfa6bc34102f96e376931b751ffb35b78e
+    review_status: draft
+  - path: priority.scope
+    translation: 具有预期结果的目标导向任务和系统。
+    source_fingerprint: sha256:6ea4fcc14fe6364707d707bc762a29e00a4758b91df8179fb76bee57ae8655d1
+    review_status: draft
+  - path: priority.rationale
+    translation: 目标导向工作需要明确预期结果，以对齐计划、解决偏移，并判断何时无需继续行动。
+    source_fingerprint: sha256:50ef3a37d4d1d2366bed48998fd5c54971ebd4d3e8fdeb7712e03b3bdc6c4fc6
+    review_status: draft

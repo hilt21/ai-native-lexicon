@@ -1,0 +1,52 @@
+title: Fix a bug
+summary: "Fix a bug: from task entry to inspectable output."
+order: 1
+when_to_use:
+  - Fix this regression
+  - Why does this crash?
+inputs:
+  - Explicit task objective and relevant context
+outputs:
+  - root-cause fix with same-surface evidence and landed PR
+variants:
+  - id: standard
+    title: Recommended path
+    steps:
+      - title: Select the fix entry
+        why: Enter through pstack's main router and work style, then investigate and fix scientifically.
+        nodes:
+          - poteto-mode
+          - bug-fix
+      - title: Investigate the issue
+        why: Build a mental model of the system and explain its current form with evidence.
+        nodes:
+          - how
+          - why
+      - title: Establish a regression basis
+        why: Capture the bug in a failing test before fixing when a cheap, reliable test surface exists.
+        nodes:
+          - tdd
+        optional: true
+        when: A suitable local test target exists.
+      - title: Define the structure
+        why: Define types, interfaces, modules and data structures before coding.
+        nodes:
+          - architect
+        optional: true
+        when: The fix changes modules or interfaces.
+      - title: Check the impact
+        why: Find effects beyond the diff and demonstrate safety assumptions through actual execution.
+        nodes:
+          - blast-radius
+      - title: Prepare the PR
+        why: Turn a verified diff into a reviewable PR.
+        nodes:
+          - opening-a-pr
+      - title: Review and ship
+        why: Progress the open PR/stack to merge-ready without final landing, then use independent verifiers to decide
+          what may land.
+        nodes:
+          - babysit
+          - shipping
+        optional: true
+        when: Delivery needs progression and the required authorization exists.

@@ -1,0 +1,35 @@
+title: setup-pre-commit
+summary: Add formatting and existing type-check/test scripts to pre-commit; omit and report scripts that are absent.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: communication-tooling
+secondary_clusters:
+  - architecture-quality
+tags:
+  - misc
+  - model-invoked
+  - stable
+mechanism: Detect the package manager, reuse existing formatter configuration and integrate Husky, lint-staged
+  and Prettier. Add type checks and tests only when their package scripts exist; omit and report absent
+  scripts. Smoke-check and commit hooks/configuration. Do not imply every project has a complete test suite.
+when_to_use:
+  - The project lacks a pre-commit guardrail.
+  - Run formatting, type checks or tests at commit time.
+solves:
+  - Shorten the feedback path for errors.
+  - Turn remembered quality checks into automated gates.
+inputs:
+  - Current repository
+  - Package manager and test commands
+outputs:
+  - Husky hooks
+  - lint-staged configuration
+  - pre-commit checks
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: misc/setup-pre-commit/SKILL.md
+handoffs: []
+official_description: Set up Husky pre-commit hooks with lint-staged (Prettier), type checking, and tests in
+  the current repo. Use when user wants to add pre-commit hooks, set up Husky, configure lint-staged, or add
+  commit-time formatting/typechecking/testing.

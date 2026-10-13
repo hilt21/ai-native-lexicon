@@ -87,7 +87,7 @@ const repository = fileURLToPath(new URL('../', import.meta.url));
 async function inIsolatedProject(verify) {
   const directory = await mkdtemp(join(tmpdir(), 'lexicon-extension-'));
   try {
-    for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'docs/design/brand', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
+    for (const path of ['src', 'scripts', 'schemas', 'tests', 'public', 'docs/design/brand', 'docs/proposals/i18n-completion-2026-10-13/skill-maps', 'package.json', 'package-lock.json', 'astro.config.mjs', 'tsconfig.json']) {
       await cp(join(repository, path), join(directory, path), { recursive: true });
     }
     // External dependency symlinks break Astro's virtual CSS module paths on Linux.

@@ -1,0 +1,27 @@
+title: unslop
+summary: Remove AI mannerisms, templated wording and content without information.
+type: capability
+status: active
+layer: skill
+primary_cluster: implementation-quality
+secondary_clusters: []
+tags:
+  - writing
+  - editing
+mechanism: Compress repetition, empty headings, stock phrases, abstract metaphors and machine-like wording
+  while preserving facts and operational information.
+when_to_use:
+  - Nearly all final agent-generated text
+solves:
+  - Reduce AI writing mannerisms.
+  - Improve signal-to-noise ratio.
+inputs:
+  - draft text
+outputs:
+  - concise human-readable text
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/unslop/SKILL.md
+handoffs:
+  - "Handoff guidance: final response"
+official_description: Cut AI tells from any writing. Must always apply.

@@ -1,0 +1,34 @@
+title: setup-pstack
+summary: Configure models and reasoning budgets for pstack roles.
+type: utility
+status: active
+layer: skill
+primary_cluster: entry-routing
+secondary_clusters: []
+tags:
+  - setup
+  - models
+  - cost
+mechanism: Detect available models and persist role-routing rules according to capability and cost needs.
+when_to_use:
+  - Install pstack for the first time.
+  - Control cost.
+  - Change models for feature, bug-fix, swarm or judge roles.
+solves:
+  - Model-selection drift
+  - Uncontrolled multi-agent cost
+inputs:
+  - available models
+  - budget preference
+  - role requirements
+outputs:
+  - role-to-model map
+  - reasoning budgets
+  - persistent pstack model rule
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/setup-pstack/SKILL.md
+handoffs: []
+official_description: Configure which models pstack uses per role and at what reasoning budget. Detects your
+  available models and writes an always-applied rule that overrides the skill defaults. Use for /setup-pstack,
+  "configure pstack models", "pstack budget", or changing pstack's model choices.

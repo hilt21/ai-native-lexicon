@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: orchestration
+units:
+  - path: summary
+    translation: 协调智能体、工具、状态和控制流，使专门工作汇聚为一个责任明确的结果。
+    source_fingerprint: sha256:d3c34ed34113f31814cee4cdd4f4e99689524af06c4b15978f5e96b6afe51d55
+    review_status: draft
+  - path: definition
+    translation: 编排规定谁或什么执行下一步、传递哪些上下文、如何合并部分结果，以及遇到延迟或失败时如何处理。它可由确定性逻辑、模型或混合方式驱动，但其契约应保持可观察。
+    source_fingerprint: sha256:ab14c093d031ae560a0aaae670a60242cd3e95b21d06ac8f47b4339eec79bf61
+    review_status: draft
+  - path: why_it_matters
+    translation: 增加智能体会增加协调成本和失败路径。明确编排可避免将并行活动误当作进展。
+    source_fingerprint: sha256:d2953a051ca80f3d82a143bfa7bfc169ebd8292e161fab182c6ec4c6a86e00b6
+    review_status: draft
+  - path: when_to_use
+    translation: 用于跨专门角色、独立工作流或具有不同时间特性的外部系统的任务。
+    source_fingerprint: sha256:ced265dd1a6306092c5bea9e4fd92c7d2499a4a68e7f769d6ecd4bde5375762b
+    review_status: draft
+  - path: anti_pattern
+    translation: 启动多个智能体，却未规定责任边界、合并规则或统一完成标准。
+    source_fingerprint: sha256:17f45a3b771f15b419fa6c1b4d7f147f5f6ed405590562173975a2217eda494d
+    review_status: draft

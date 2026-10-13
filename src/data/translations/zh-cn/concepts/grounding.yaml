@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: grounding
+units:
+  - path: summary
+    translation: 根据现实证据检查主张与决策。
+    source_fingerprint: sha256:447258296f95d1fbc44105ce3a01789b064a5a512f9778c5710039944da15c38
+    review_status: draft
+  - path: definition
+    translation: 事实锚定将主张或决策连接到相关外部信息，例如来源文字、测量或观察到的系统状态。来源可能不完整或有误，因此必须评估该连接，不能直接假定它有效。
+    source_fingerprint: sha256:e1717bcb257874acaf6592c4631b6fa63b92c5d7bf13a082cd811ceae03f3be8
+    review_status: draft
+  - path: why_it_matters
+    translation: 明确支撑可减少对看似合理的生成内容的依赖，并使主张更容易检查和质疑。
+    source_fingerprint: sha256:712a94cd6e4f1f11758c00e4a00af109dfa1c97f5fb714e0440402a5ce491cfa
+    review_status: draft
+  - path: when_to_use
+    translation: 将事实性答案关联到真正支撑具体表述的当前来源时使用。
+    source_fingerprint: sha256:9acc71be2deeee0759f55163607febb36a3120c8e9ec727d12995037c13a83d5
+    review_status: draft
+  - path: anti_pattern
+    translation: 添加只提及主题、却未支撑所述主张的引用。
+    source_fingerprint: sha256:eba34c43e94c92b3b1a99d66397e149f362dbf89639d60771d511a15f99a4cb9
+    review_status: draft

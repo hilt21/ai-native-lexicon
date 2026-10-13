@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: budget
+units:
+  - path: summary
+    translation: 限制工作的时间、令牌、资金或工具调用次数。
+    source_fingerprint: sha256:27c3e8a71e70e7c9fc96103393eb920ac96b932fa66d43772d04f5501b6cf37d
+    review_status: draft
+  - path: definition
+    translation: 预算限制任务可使用的一项或多项资源，例如持续时间、令牌用量、支出或调用次数。有效执行预算需要跟踪消耗，并定义达到限制后的处理方式；仅设目标不能构成硬性上限。
+    source_fingerprint: sha256:ce90127767e3b67c872f4f4943aee9b081a8d0d4957ed885aa1e436b649f0035
+    review_status: draft
+  - path: why_it_matters
+    translation: 明确限制可避免开放式执行无限消耗资源，并促使系统判断剩余工作是否有用。
+    source_fingerprint: sha256:b739cad80c319031703e7d8baeb19757b0ddb4b973c2f99c1b00fbfeea860570
+    review_status: draft
+  - path: when_to_use
+    translation: 限制一次智能体运行，并预留报告结果或保存可恢复状态的容量时使用。
+    source_fingerprint: sha256:10aa2d360dafb3124a09657873875d9dd93624620893578d921f92f504151c36
+    review_status: draft
+  - path: anti_pattern
+    translation: 超出上限后继续调用工具，只记录预算已经超支。
+    source_fingerprint: sha256:02b80017337984beb1a119c05c86382f668f4d203e095913cf1e5f3db70c69cd
+    review_status: draft

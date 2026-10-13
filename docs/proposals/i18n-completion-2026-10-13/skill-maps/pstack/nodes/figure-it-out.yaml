@@ -1,0 +1,37 @@
+title: figure-it-out
+summary: Design a temporary auditable workflow when existing playbooks do not fit.
+type: capability
+status: active
+layer: skill
+primary_cluster: entry-routing
+secondary_clusters:
+  - parallel-autonomy
+tags:
+  - bespoke-workflow
+  - audit
+mechanism: Define falsifiable Done first, then atomic units, verification and a decision trail. Progress
+  through hypothesis loops.
+when_to_use:
+  - Large migration
+  - Complex task spanning phases
+  - A new task type has no narrow playbook.
+solves:
+  - Avoid forcing a complex task into the wrong playbook.
+  - Keep one-off complex work auditable and recoverable.
+inputs:
+  - ambiguous complex goal
+  - constraints
+  - available verification surfaces
+outputs:
+  - bespoke playbook
+  - exit predicate
+  - decision trail
+  - verified outcome
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/figure-it-out/SKILL.md
+handoffs: []
+official_description: "Design an auditable playbook when no narrower one fits: a large migration, an ambitious
+  multi-part change, or work a human reviews after stepping away. Scales rigor to the task, runs a hypothesis
+  loop, and logs decisions via show-me-your-work. Use for /figure-it-out, 'figure it out', a large migration,
+  or when no narrower playbook applies."

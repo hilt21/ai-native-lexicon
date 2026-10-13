@@ -1,0 +1,32 @@
+{
+  "tested_base": "d5f7a06698a88c9bd5c160f04092a827168597d1",
+  "coverage": {
+    "concepts": {
+      "translated": 156,
+      "total": 426,
+      "missing": 0,
+      "draft": 270,
+      "stale": 0
+    },
+    "primitives": {
+      "translated": 132,
+      "total": 486,
+      "missing": 0,
+      "draft": 354,
+      "stale": 0
+    }
+  },
+  "canonicalKnowledgeAndChineseMapsUnchanged": true,
+  "englishCandidate": {
+    "maps": 2,
+    "nodes": 105,
+    "journeys": 14,
+    "relations": 220,
+    "sameStructure": true,
+    "immutableSources": true,
+    "noHanText": true,
+    "semanticReview": "required-for-new-prose"
+  },
+  "newChineseProse": "draft",
+  "englishRuntimeActivation": "pending-semantic-review-and-locale-contract"
+}

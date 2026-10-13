@@ -1,0 +1,27 @@
+title: visual-parity
+summary: Use baseline screenshots as the specification for pixel-exact migration.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags: []
+mechanism: Establish an immutable baseline, migrate component by component with worktree isolation and image
+  diffs. Any nonzero diff fails; loop to zero difference.
+when_to_use:
+  - UI migration
+  - Two implementations must look identical.
+solves:
+  - Parity is judged only by eye.
+  - The baseline is changed to make checks pass.
+inputs:
+  - baseline screenshots
+  - target implementation
+outputs:
+  - pixel-diff evidence
+  - migrated components
+  - PRs
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/visual-parity.md
+handoffs: []

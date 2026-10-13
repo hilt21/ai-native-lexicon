@@ -1,0 +1,94 @@
+schema_version: 1.1.0
+title: pstack Skill Map
+summary: Choose and combine pstack skills, playbooks and engineering principles around a work objective.
+scope: The skill system at the fixed pstack 0.15.15 snapshot. Uses and task journeys are editorial interpretations.
+audience:
+  - Developers using pstack for the first time
+  - Agent users choosing an engineering workflow
+sources:
+  - id: pstack-0-15-15-df581122
+    repository: https://github.com/cursor/plugins
+    root_path: pstack
+    version: 0.15.15
+    commit: df581122cde17e6e27686b5a448bde23e4ad4318
+    observed_at: 2026-10-07
+    verification_status: verified
+    verified_at: 2026-10-07
+current_sources:
+  - pstack-0-15-15-df581122
+taxonomy:
+  types:
+    - id: router
+      label: Entry router
+      description: A pstack entry-routing item.
+    - id: utility
+      label: Utility skill
+      description: A supporting pstack skill.
+    - id: capability
+      label: Capability skill
+      description: A reusable pstack capability.
+    - id: playbook
+      label: Playbook
+      description: A task-specific pstack operating procedure.
+    - id: principle
+      label: Engineering principle
+      description: A cross-cutting pstack engineering principle.
+  layers:
+    - id: router
+      label: Router
+      description: Route a user task to an appropriate workflow.
+    - id: playbook
+      label: Playbook
+      description: A task-specific operating procedure that composes skills and principles.
+    - id: skill
+      label: Skill
+      description: A reusable capability that performs or supports a class of work.
+    - id: principle
+      label: Principle
+      description: A cross-cutting engineering rule that constrains decisions and execution.
+  clusters:
+    - id: entry-routing
+      label: Entry and routing
+      description: Where do I start and which workflow should run?
+    - id: understanding-context
+      label: Understanding and context
+      description: How does this system work and why is it this way?
+    - id: design-decision
+      label: Design and decisions
+      description: What shape should the solution take and what could it affect?
+    - id: implementation-quality
+      label: Implementation and quality
+      description: How should the change be implemented cleanly?
+    - id: verification-evidence
+      label: Verification and evidence
+      description: How do we prove the real result works?
+    - id: parallel-autonomy
+      label: Parallelism and autonomy
+      description: How can more work run with less human supervision?
+    - id: learning-evolution
+      label: Learning and evolution
+      description: How does the environment improve after each run?
+    - id: principles
+      label: Engineering principles
+      description: Which reusable rules constrain all workflows?
+  relation_types:
+    - id: uses
+      outgoing_label: Uses capability
+      incoming_label: Used by workflows
+      description: A workflow invokes or uses a capability.
+    - id: routes_to
+      outgoing_label: Can select entry
+      incoming_label: Routed here by
+      description: An entry selects the next workflow for the task.
+    - id: feeds
+      outgoing_label: Can hand output to
+      incoming_label: Can receive output from
+      description: One item's output can be handed to another item.
+    - id: governed_by
+      outgoing_label: Follows principle
+      incoming_label: Constrains these items
+      description: An engineering principle constrains work decisions.
+    - id: resumes
+      outgoing_label: Can resume work
+      incoming_label: Resumed by
+      description: A resumption entry continues earlier work.

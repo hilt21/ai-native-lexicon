@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: context-pruning
+units:
+  - path: summary
+    translation: 从活动上下文中移除不再有用的内容。
+    source_fingerprint: sha256:1d4ea2f0c90fd7fce62b38c1366573edeba0bb7a7998ffc68fdba619e314ea62
+    review_status: draft
+  - path: definition
+    translation: 上下文裁剪从活动输入中移除选定材料，例如过时工具结果或重复消息。它直接舍弃内容，无需像压缩那样生成摘要；来源历史仍可保存在其他位置。
+    source_fingerprint: sha256:f991fa11b4631039c708dfa6f2129a2235aab963d19533f977fed34c7bbf0e4e
+    review_status: draft
+  - path: why_it_matters
+    translation: 移除无关历史能减少干扰和令牌消耗，使剩余工作上下文更集中。
+    source_fingerprint: sha256:73a2c2699cbb44c6df42a78e6d8f17849995bc90a447f04298df6e99a5662f1a
+    review_status: draft
+  - path: when_to_use
+    translation: 会话中某个错误已解决，但留下多个重复堆栈记录时使用。
+    source_fingerprint: sha256:5b6eeefbc912a2397a20149d397d5e8bab3a9450ac9d1446f4aba19134679bee
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅因未解决约束出现在对话早期，就将其丢弃。
+    source_fingerprint: sha256:fbb9d9ec9cc6e153766d2c7fef067afc16898d5f84d2f7aa0b0ed68b80381408
+    review_status: draft

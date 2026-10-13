@@ -1,0 +1,59 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: boundary-environment
+units:
+  - path: summary
+    translation: 定义系统范围的分界，以及影响系统的外部条件和参与者。
+    source_fingerprint: sha256:7ca0a53dc3d264abded11eb1ddd54f1f293bcf0d64d88caee0fc114de17fc6bf
+    review_status: draft
+  - path: scope
+    translation: 根据明确设计或运行范围描述的任何系统。
+    source_fingerprint: sha256:52e09803b20ab786888a3c23a3e1c991be508739e646e0d03065dd334d5e0d5f
+    review_status: draft
+  - path: usage
+    translation: 呈现系统无法完全控制的依赖与交换。
+    source_fingerprint: sha256:b429daa10d1a7fcb807788070dd658ca494753a3a3ef57fb1a588d01ebede667
+    review_status: draft
+  - path: distinctions
+    translation: 边界是分界；环境是边界外的内容。沙箱是执行某些边界约束的一种机制。
+    source_fingerprint: sha256:800b090e26cfccbd35f82668e46a5bf8fb1691b667f1b18fddc13992e6569238
+    review_status: draft
+  - path: composition.pattern
+    translation: 边界 → 接口；环境 → 约束
+    source_fingerprint: sha256:2191a30e5218077c53401f807e981b3e3b42d03093f98d16605ba240a915bbda
+    review_status: draft
+  - path: composition.example
+    translation: 文档智能体控制本地工作区，但依赖具有独立延迟和访问规则的外部搜索服务。
+    source_fingerprint: sha256:49b66df9d92ff0c0e96e86bdd553d4b22d9c37bc7fa20cb8716e3fe90ce4e5c6
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 边界
+      - 环境
+    source_fingerprint: sha256:e91e2cca67afa21d610ae69825fd6df1a49a6c4ab358e60876ae3c4f1cb5408c
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 选定的分界，说明哪些内容属于系统，以及系统间在何处交换。
+      - 影响系统、但处于选定边界之外的外部条件和参与者。
+    source_fingerprint: sha256:6fa268ad6313637c0bacacc98406bcf323145d36ea9c98bf83e4368ffc110dca
+    review_status: draft
+  - path: considerations
+    translation:
+      - 责任变化时重新检查边界。
+      - 图中画出的边界不会强制实施执行限制。
+    source_fingerprint: sha256:482e7dc2cdc5a087bd5d80c51952081549c84e681b2eb009677a084f3cda31ee
+    review_status: draft
+  - path: ownership.rationale
+    translation: 大语言模型可帮助界定范围；软件接口和运行时限制实现已接受边界。
+    source_fingerprint: sha256:9bfa0c9508c2d3f1620c64af8c90305ac0274472ba0a70d45c55ac704c33af0f
+    review_status: draft
+  - path: priority.scope
+    translation: 根据明确设计或运行范围描述的任何系统。
+    source_fingerprint: sha256:90f63091d515e3a3e5a78331a21277b1373768e8998bac1d9967aa8332099939
+    review_status: draft
+  - path: priority.rationale
+    translation: 每项设计都依赖它控制什么、排除什么，以及如何与周边交换信息或影响。
+    source_fingerprint: sha256:3ab2030426ff9fae6b833432542af282c37fdd5bf3a2a011e96ab6e151e70d1f
+    review_status: draft

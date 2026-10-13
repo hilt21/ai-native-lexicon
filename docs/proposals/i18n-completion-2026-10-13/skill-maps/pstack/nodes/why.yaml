@@ -1,0 +1,39 @@
+title: why
+summary: Explain why the system took its current form, using evidence.
+type: capability
+status: active
+layer: skill
+primary_cluster: understanding-context
+secondary_clusters: []
+tags:
+  - grounding
+  - history
+  - evidence
+mechanism: Anchor the question in code, then examine source control, issues, documents, chat, observability,
+  error tracking and analytics in parallel to reconstruct design motivation and evolution.
+when_to_use:
+  - Explain design rationale.
+  - Investigate why a regression occurred.
+  - Recover a historical decision.
+  - Find the basis of a threshold or tradeoff.
+solves:
+  - Avoid guessing historical reasons from current code alone.
+  - Recover organizational memory.
+inputs:
+  - code/design anchor
+  - motivation question
+  - available evidence systems
+outputs:
+  - evidence-backed rationale
+  - tradeoffs
+  - confidence
+  - source pointers
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/why/SKILL.md
+handoffs: []
+official_description: Use for 'why does X work this way', 'why we picked Y', design rationale, regressions,
+  postmortems, or data-backed thresholds. Discovers available MCPs and queries each evidence category (source
+  control, issue tracker, long-form docs, real-time chat, infrastructure observability, error tracking,
+  product analytics warehouse) in parallel, then returns a cited read on decisions and tradeoffs. Use how for
+  runtime behavior.

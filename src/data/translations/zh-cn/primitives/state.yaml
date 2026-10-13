@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: state
+units:
+  - path: summary
+    translation: 系统决定下一步能够发生什么所需的当前事实与进度。
+    source_fingerprint: sha256:e68e99b2d1df378f5bf41f585ff311eb71cd6d79100c016033ef403eb806aff7
+    review_status: draft
+  - path: scope
+    translation: 未来行为依赖当前事实的有状态软件和智能体工作流。
+    source_fingerprint: sha256:abc70a7e749ec1d1dce213e7645b861271d8310ba3fc7cb03383ee570b3e91ba
+    review_status: draft
+  - path: usage
+    translation: 明确进度和承诺，使工作可恢复，无需从文字中重建。
+    source_fingerprint: sha256:39e272fe2187c5d7cae3af5859deb60ffac138c411c9e31bbde6c86933f1fd88
+    review_status: draft
+  - path: distinctions
+    translation: 状态表示当前事实；记忆保留信息供未来使用；上下文是当前推理可用的信息。
+    source_fingerprint: sha256:81396f3056af7b3d480018857f1d4004cf0bb9f146c7ac9098ec73684e30d863
+    review_status: draft
+  - path: composition.pattern
+    translation: 状态 + 事件 → 下一状态
+    source_fingerprint: sha256:dea4b8f790434dfa0ad98842eacf0525208a4ef1c3f5f031b4a337c91fea395d
+    review_status: draft
+  - path: composition.example
+    translation: 智能体任务记录当前阶段、已接受产物版本和待处理批准。
+    source_fingerprint: sha256:024211deaaa1364894517f2877531106dee71cda607661286755c76f06d8030e
+    review_status: draft
+  - path: considerations
+    translation:
+      - 将权威状态与生成摘要分开。
+      - 将快照视为当前状态之前，处理并发更新。
+    source_fingerprint: sha256:ab74ba548a6abf1624353215a995d02283a0a2c6d5b4c9553bec752a4b7e65c6
+    review_status: draft
+  - path: ownership.rationale
+    translation: 数据库、文件和状态机按照明确一致性规则存储与更新权威状态。
+    source_fingerprint: sha256:5381ebc654d20051d688a908ac80cc4b6adaff12edc6b3bcb82b668a16ac04c4
+    review_status: draft
+  - path: priority.scope
+    translation: 未来行为依赖当前事实的有状态软件和智能体工作流。
+    source_fingerprint: sha256:5014b566e4197b5b220af2ea719c1ccf152a795e4d272f1e26f3cf90726d2596
+    review_status: draft
+  - path: priority.rationale
+    translation: 未来行为依赖当前事实，因此明确的权威状态对正确转换和可靠恢复至关重要。
+    source_fingerprint: sha256:70044d68000980dfc66dd25be56a3c56b84bf36d8ec8de5e16588c2fe68c2f68
+    review_status: draft

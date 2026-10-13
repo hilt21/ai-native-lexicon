@@ -1,0 +1,28 @@
+title: trace-forensics
+summary: Investigate existing traces, heaps or profiles offline.
+type: playbook
+status: active
+layer: playbook
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+  - read-only
+  - forensics
+mechanism: Identify the format, make it queryable, find hot paths, retainers or wait reasons, map to source
+  and compare paired artifacts.
+when_to_use:
+  - A trace, heap snapshot, CPU profile or spindump already exists.
+solves:
+  - Large artifacts are inspected only by eye.
+  - Conclusions lack source attribution.
+inputs:
+  - trace artifact
+outputs:
+  - reduced finding
+  - source location
+  - confidence
+  - artifact references
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-mode/playbooks/trace-forensics.md
+handoffs: []

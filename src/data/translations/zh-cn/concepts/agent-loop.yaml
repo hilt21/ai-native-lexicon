@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: agent-loop
+units:
+  - path: summary
+    translation: 智能体观察状态、选择操作、执行操作，并将结果纳入下一次决策的循环。
+    source_fingerprint: sha256:28129782d26524f7c485aae51180c730c79d93ef4c65ca60f96e966a14d21dd7
+    review_status: draft
+  - path: definition
+    translation: 智能体循环是一种控制结构，使单次模型调用成为可适应的过程。可靠的循环明确呈现观察、决策、行动、停止条件和错误，避免将它们隐藏在无止境的对话中。
+    source_fingerprint: sha256:953de2eface6a29ac792d3a6879b06709a12fdeb5df8fbdca8c31148c7c32c9b
+    review_status: draft
+  - path: why_it_matters
+    translation: 可靠性问题常发生在模型调用之间。明确循环结构后，重试、预算、终止、追踪和人工干预才能被测试。
+    source_fingerprint: sha256:d366269d786ce73892db029f3c15924e216ac9452375bbff1d2756ee6cb5346b
+    review_status: draft
+  - path: when_to_use
+    translation: 用于需要多项相互依赖的行动，或需要根据工具结果调整的任务。
+    source_fingerprint: sha256:a949817617bf03b4662ef9fcf58971338be1df8014f0e5faada95afee5461c66
+    review_status: draft
+  - path: anti_pattern
+    translation: 无限重复模型调用，却没有进度指标、停止条件或失败状态。
+    source_fingerprint: sha256:b9333a45c86420c5d32e08a24576be0bf8e4e8795e1235c3f0bc44496aa66d62
+    review_status: draft

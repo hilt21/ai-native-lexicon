@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: parallelism
+units:
+  - path: summary
+    translation: 同时执行相互独立的工作。
+    source_fingerprint: sha256:9835a144706dded86016b5878508db0992fc2fc6174687738ad0419e2caf4412
+    review_status: draft
+  - path: definition
+    translation: 并行在依赖与资源访问条件允许时，同时执行多个工作单元。结果仍需合并和验证；任务争用同一可变状态时，重叠工作未必有益。
+    source_fingerprint: sha256:31a550f5f2852bf6cdbea22da5a1aafa762c8f54510112ff1a27666a31bf327a
+    review_status: draft
+  - path: why_it_matters
+    translation: 独立任务可更快完成，但边界不清时，协调成本和写入冲突可能抵消收益。
+    source_fingerprint: sha256:a8b7b0aa63f4dd6187c6d9faed2df14d67f55e2c8eb84e9e0aef41d7ed089ae7
+    review_status: draft
+  - path: when_to_use
+    translation: 先分别分析文档，再在后续步骤综合发现时使用。
+    source_fingerprint: sha256:8bd50603d9c5c5bcd6ad5f1bb69c5d7f0f1a782929c7d6e9d7202f50d61b3eaf
+    review_status: draft
+  - path: anti_pattern
+    translation: 在相同文件上同时执行有依赖的编辑，却未规定责任归属或合并规则。
+    source_fingerprint: sha256:209d35b21d8a656e1a2c87153cd24493f9b836f6cd388510725862272524420b
+    review_status: draft

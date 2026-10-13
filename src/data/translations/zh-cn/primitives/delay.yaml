@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: delay
+units:
+  - path: summary
+    translation: 行动、其影响及相关影响信息可用之间的时间滞后。
+    source_fingerprint: sha256:1d42d0aa7345a4c8e44d9c266b82ebdc91a74bd86528bb7a5ca5bdc0c527832e
+    review_status: draft
+  - path: scope
+    translation: 具有异步影响、等待或反馈回路的系统。
+    source_fingerprint: sha256:a9b1f4e126782cd9188f6f5f46de96c0ea754aacdb1c7f66b8809d9b2da0eee5
+    review_status: draft
+  - path: usage
+    translation: 解释缺少结果或发出纠正行动前，应考虑滞后。
+    source_fingerprint: sha256:4bd4519dd71b9caf1288accc747699e35a3e81225cec074a9cb440f10afc540b
+    review_status: draft
+  - path: distinctions
+    translation: 延迟是经过的滞后时间；时间预算是资源约束。
+    source_fingerprint: sha256:d17e4a3c0257728f98b9eb657ffb03e704f45e37ca00aa8b9c141c5111ba0428
+    review_status: draft
+  - path: composition.pattern
+    translation: 行动 → 延迟 → 观察 → 反馈
+    source_fingerprint: sha256:9f7ca8af2db995ac9ddb8c34ee76ef75598d70c8ed4da7a358d630118eb66942
+    review_status: draft
+  - path: composition.example
+    translation: 部署智能体等待健康信号稳定后，再判断发布是否失败。
+    source_fingerprint: sha256:796b06f9c8ba82f7a1ecf5d250d48a30ab9907cba14261567f91c734fbedcd62
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 延迟
+    source_fingerprint: sha256:2708be196b20ac89565e3db87ef17fe0f4272d27e1fdbe486529f64e64b7a69d
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 行动、由此产生的变化及有关变化的信息可用之间经过的时间。
+    source_fingerprint: sha256:65a6596b01898fed24cd52710a45af3c9d3f4a7e7c95966a384b6fe772199d05
+    review_status: draft
+  - path: considerations
+    translation:
+      - 影响到达之前反复纠正可能造成振荡。
+      - 诊断延迟时区分处理时间、排队时间和观察滞后。
+    source_fingerprint: sha256:c27e7cfc016b1698f50a0040ccb0b9810965c1fe575310cbc7aafb77d57b178a
+    review_status: draft
+  - path: ownership.rationale
+    translation: 定时器、时间戳、调度和超时策略测量并处理滞后。
+    source_fingerprint: sha256:285bee1a14f5cfefb2967a1711cb8c75cfb3f4d940ed7bf8a63a31e865084bc8
+    review_status: draft
+  - path: priority.scope
+    translation: 具有异步影响、等待或反馈回路的系统。
+    source_fingerprint: sha256:e87850f851cefaf787192ab7ff7f5328c4273a748ec49dcd0405ab67af2b439f
+    review_status: draft
+  - path: priority.rationale
+    translation: 具有异步影响的系统需要明确延迟假设，以避免过早判断失败和过度纠正。
+    source_fingerprint: sha256:1f204d7d2100011a2b78fab09c5610dfd7c8335f76329d3699a1477703b74d08
+    review_status: draft

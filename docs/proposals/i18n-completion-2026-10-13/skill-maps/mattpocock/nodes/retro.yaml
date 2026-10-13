@@ -1,0 +1,33 @@
+title: retro
+summary: Identify opportunities to improve the agent environment after a coding session.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: architecture-quality
+secondary_clusters:
+  - communication-tooling
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, read writing-for-agents and inspect the specified session's raw
+  transcript, or the current session if none is specified. Examine navigation, automated checks, standards,
+  steering, tool cost and information access. Recommend deterministic checks for mechanical problems and
+  review criteria for judgment problems. Present improvements by severity for the user to choose; do not
+  automatically apply every proposal.
+when_to_use:
+  - A build has completed.
+  - An agent run was inefficient, incorrect or required repeated corrections.
+solves:
+  - Use failures to improve the next agent's work environment.
+  - Turn recurring mechanical errors into checks, tools or navigation improvements.
+inputs:
+  - Session transcript
+  - Repository environment
+outputs:
+  - Environment improvements ordered by severity
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/retro/SKILL.md
+handoffs: []
+official_description: Conduct a retrospective on a coding session.

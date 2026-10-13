@@ -1,0 +1,36 @@
+title: benchmark-checklist
+summary: Check whether performance figures measure the intended work.
+type: capability
+status: active
+layer: skill
+primary_cluster: verification-evidence
+secondary_clusters: []
+tags:
+  - performance
+  - measurement
+  - verification
+mechanism: Check limiters, configuration, physical limits, errors, repeatability, end-to-end relevance and
+  work counts. Separate noise from speedup.
+when_to_use:
+  - Optimize performance.
+  - benchmark
+  - Report latency, throughput, speedup or regression.
+solves:
+  - Avoid incorrect performance conclusions.
+  - Improve experimental repeatability.
+inputs:
+  - benchmark harness
+  - measurements
+  - workload
+outputs:
+  - measurement verdict
+  - validated baseline
+  - known limitations
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/benchmark-checklist/SKILL.md
+handoffs:
+  - "Handoff guidance: performance claim"
+official_description: Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and
+  whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup
+  or regression you measured.

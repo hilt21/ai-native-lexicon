@@ -1,0 +1,59 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: adaptation-learning
+units:
+  - path: summary
+    translation: 因条件或经验而作出的变化，包括对知识和未来行为的持久改变。
+    source_fingerprint: sha256:9ec72000f9d86d9801c618493aed58033200a67e53490d176efa9bdd4709665e
+    review_status: draft
+  - path: scope
+    translation: 预期通过重复经验改善或调整的系统。
+    source_fingerprint: sha256:b72d285de875976c50e888b86afb3a3f4589947623b73e3ce82b6a5e5b16df12
+    review_status: draft
+  - path: usage
+    translation: 将观察结果转化为受控且影响可测量的变更。
+    source_fingerprint: sha256:b588d236f38a60c1bdda57e92b0f8c3d57afb64a2236c4a7384a4ad09bb02d95
+    review_status: draft
+  - path: distinctions
+    translation: 适应可以是暂时响应；学习意味着持久变化。两者都不一定需要修改模型权重。
+    source_fingerprint: sha256:040c120940f7307d58174e0235f853358771188033e4e788df078a501c7f33c8
+    review_status: draft
+  - path: composition.pattern
+    translation: 反馈 → 学习 → 模型或策略更新
+    source_fingerprint: sha256:8eda6e6ceaafd64758bd1c294a6d8460cc8920c81980fcaa97bd443d64d9763a
+    review_status: draft
+  - path: composition.example
+    translation: 检索服务评估未能回答的问题，提出排序变更，并在采用前用留出查询检查。
+    source_fingerprint: sha256:4da56630f0d27dd0d3c8f3699296431834946cc371f7c78496624dc2c64cf57d
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 适应
+      - 学习
+    source_fingerprint: sha256:4e9aafb040a425344f175c50d668ee9f8e60154fbeebb1f94af9d127d8e017be
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 针对条件或经验改变行为或配置。
+      - 经验使知识、模型或未来行为产生持久改变的过程。
+    source_fingerprint: sha256:d03f55b787eb185a924cdafd603bba1f690bb4da722476b9b878a29f74d03ae0
+    review_status: draft
+  - path: considerations
+    translation:
+      - 反思性解释不能证明行为已经改善。
+      - 将提出更新与授权、部署更新分开。
+    source_fingerprint: sha256:0fc7363ed3a898a927a0e216b4b63a3103a42f3247ec7c042e6b301abe77fcff
+    review_status: draft
+  - path: ownership.rationale
+    translation: 大语言模型可推断候选变更；具有版本的更新、评估和部署控制决定是否采用。
+    source_fingerprint: sha256:19491a22490c7420ff9882a9b2da26ddd95346bb8e43e1d5a07e8b138e939be8
+    review_status: draft
+  - path: priority.scope
+    translation: 预期通过重复经验改善或调整的系统。
+    source_fingerprint: sha256:d0a667a23e20c42bf070813e202cab352da031f7c24fe72395dc7e2509da7db3
+    review_status: draft
+  - path: priority.rationale
+    translation: 预期通过经验改善的系统应明确管理改变什么、如何测量改进，以及何时采用变更。
+    source_fingerprint: sha256:068e050e14a3e9ebdbbe703ab69f358b7fbef443da1c6aa6ca904961d01dadec
+    review_status: draft

@@ -1,0 +1,47 @@
+title: Improve code architecture
+summary: Survey deepening opportunities, select one candidate and enter the normal design/implementation process.
+order: 6
+when_to_use:
+  - Reduce codebase entropy and improve testability and agent navigation.
+inputs:
+  - Current codebase
+outputs:
+  - Architecture opportunity report
+  - Selected improvement direction
+  - Design ready for the main workflow
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/ask-matt/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/improve-codebase-architecture/SKILL.md
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/codebase-design/SKILL.md
+variants:
+  - id: standard
+    title: Survey before choosing improvements
+    steps:
+      - title: Survey deepening opportunities
+        why: The user starts the architecture survey, which uses codebase-design vocabulary and grilling for the
+          selected candidate. The survey does not automatically refactor every opportunity.
+        nodes:
+          - improve-codebase-architecture
+        outputs:
+          - Visual candidate report and selected direction
+      - title: Consult module-design vocabulary directly
+        why: codebase-design is a reference for module shape. Consult it for interfaces, seams or locality without
+          making vocabulary reading a mandatory phase.
+        nodes:
+          - codebase-design
+        outputs:
+          - Module-boundary and interface-design vocabulary
+        optional: true
+        when: Clarify design vocabulary or a module seam.
+      - title: Return the selected idea to the main workflow
+        why: The candidate is a new idea. The user starts grill-with-docs to converge decisions, then chooses
+          specifications/tickets or direct implementation according to scope.
+        nodes:
+          - grill-with-docs
+        outputs:
+          - Aligned architecture design
+        optional: true
+        when: Turn one candidate into an actual change.

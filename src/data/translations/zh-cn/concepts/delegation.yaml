@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: delegation
+units:
+  - path: summary
+    translation: 将一部分工作交给其他工作者。
+    source_fingerprint: sha256:8a5f3ef3b5da17f85c916e0e9a531b3aff2cf2af164e21b89bc389681ddf92a8
+    review_status: draft
+  - path: definition
+    translation: 委派将范围明确的一部分工作交给另一个主体，同时提供完成工作所需的信息和权限。委派方仍需安排集成和验收；仅分配工作无法保证结果可用。
+    source_fingerprint: sha256:5cbf1d07f7ea9300125886969a920de8c82ac00f05ae8786765e90a3e8e4d2c8
+    review_status: draft
+  - path: why_it_matters
+    translation: 明确责任归属、输出预期和依赖后，专门工作者才能有效贡献。
+    source_fingerprint: sha256:bb56a3b71cdce6953d705499f25b0deba0f8acb67f174d497fee1c06df76b231
+    review_status: draft
+  - path: when_to_use
+    translation: 分配独立分析，同时保留对最终综合结果的责任时使用。
+    source_fingerprint: sha256:ecc2231c37910bc57f6ad139b1ccf61c0d2e55a1e51e2c84ab1ecb4a502090c9
+    review_status: draft
+  - path: anti_pattern
+    translation: 让多个智能体处理问题，却未规定各自产物的负责人。
+    source_fingerprint: sha256:2fb318f4005e653602957f2ce0d65d1c085f17889060712dc565fa798055be59
+    review_status: draft

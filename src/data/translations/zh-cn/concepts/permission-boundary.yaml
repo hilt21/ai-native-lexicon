@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: permission-boundary
+units:
+  - path: summary
+    translation: 强制区分智能体可直接执行的操作，与需要其他凭据、批准或升级的操作的边界。
+    source_fingerprint: sha256:ec94193aab69ce91d4d841700f8abfce9ac59fb311ad5e024cbfe7358ef2d883
+    review_status: draft
+  - path: definition
+    translation: 权限边界将权限对应到具体资源和操作，宜采用最小权限凭据与运行时检查。它区分模型提议的操作和系统实际能够执行的操作。
+    source_fingerprint: sha256:26963b2014f85c6a1b1c06ef40f33c1f4d6b8fddb6d1b625fa7cad068cce3b5d
+    review_status: draft
+  - path: why_it_matters
+    translation: 提示指令无法提供访问控制。技术边界限制推理错误、提示注入和受损外部内容的影响。
+    source_fingerprint: sha256:aa38bb769dbd56afbf81d07f6e9c8594d01a1560b2d9442459683b525c46d233
+    review_status: draft
+  - path: when_to_use
+    translation: 用于每个读取敏感数据或改变外部状态的工具。
+    source_fingerprint: sha256:f91dcd21ca8954d62f89272195f979b03668b5d3d0d17c4adda839c86eb76140
+    review_status: draft
+  - path: anti_pattern
+    translation: 给智能体长期管理员凭据，仅用自然语言表述限制。
+    source_fingerprint: sha256:b9bf7dc8878b9fde2a70cde9c18fe58610edee1febc58fb19450eb8842027c4c
+    review_status: draft

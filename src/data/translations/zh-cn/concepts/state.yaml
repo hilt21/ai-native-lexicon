@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: state
+units:
+  - path: summary
+    translation: 记录工作当前所处的位置。
+    source_fingerprint: sha256:13ce8776c2c3a287bd64deb3de44d2006e0cee43c4415690a60beff63d2e4e03
+    review_status: draft
+  - path: definition
+    translation: 状态是某一时点过程的明确表示，例如阶段、已完成步骤、待执行操作和相关值。它描述进度；对话或操作历史可能仅间接编码这些内容。
+    source_fingerprint: sha256:8639221bff21a90a66928a6f83275672920570f98e66713bdfa1a50a57ce7209
+    review_status: draft
+  - path: why_it_matters
+    translation: 可靠续接需要对已发生事项和待完成事项形成共同判断。
+    source_fingerprint: sha256:8cfd7105146130aebcfc4f6bfd54781cf1f0ba615b4d0cb53e24efdfafdb1156
+    review_status: draft
+  - path: when_to_use
+    translation: 区分排队、运行、失败或完成的操作时使用。
+    source_fingerprint: sha256:55c453fb9d080b6a49a7bc24fa6a6eb7175aa025e7826061e3a3d9a589050d45
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅因智能体表示准备执行某项操作，就推断操作已完成。
+    source_fingerprint: sha256:a41774c787d376d2a74d3d3211f811e8e68ed2ece35c21a6d27c2c67ee2c39b8
+    review_status: draft

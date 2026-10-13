@@ -1,0 +1,27 @@
+title: boundary-discipline
+summary: Concentrate validation and adapters at system boundaries; trust typed data internally.
+type: principle
+status: active
+layer: principle
+primary_cluster: principles
+secondary_clusters: []
+tags:
+  - principle
+mechanism: Concentrate validation and adapters at system boundaries; trust typed data internally.
+when_to_use:
+  - Apply when wiring validation, error handling, or framework adapters. Concentrate guards at system
+    boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in pure
+    functions.
+solves:
+  - Concentrate validation and adapters at system boundaries; trust typed data internally.
+inputs:
+  - boundary input / external API
+outputs:
+  - clean boundary adapter / pure core
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/principle-boundary-discipline/SKILL.md
+handoffs: []
+official_description: Apply when wiring validation, error handling, or framework adapters. Concentrate guards
+  at system boundaries (CLI, config, network, external APIs); trust internal types and keep business logic in
+  pure functions.

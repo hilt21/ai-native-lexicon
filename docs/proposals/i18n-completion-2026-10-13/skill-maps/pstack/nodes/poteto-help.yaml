@@ -1,0 +1,30 @@
+title: poteto-help
+summary: Explain pstack and help the user select the right entry.
+type: utility
+status: active
+layer: skill
+primary_cluster: entry-routing
+secondary_clusters: []
+tags:
+  - help
+  - onboarding
+mechanism: Explain the applicability boundaries of setup, poteto-mode, skills, playbooks and principles
+  according to the user's question.
+when_to_use:
+  - Use pstack for the first time.
+  - Choose the right skill or playbook for a task.
+  - Understand pstack concepts.
+solves:
+  - Reduce learning effort.
+  - Reduce incorrect routing.
+inputs:
+  - user question
+outputs:
+  - recommended pstack entry point
+  - usage guidance
+source_refs:
+  - source: pstack-0-15-15-df581122
+    path: skills/poteto-help/SKILL.md
+handoffs: []
+official_description: Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or
+  principle for a task. Type /poteto-help with a question.
