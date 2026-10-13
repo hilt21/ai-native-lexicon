@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 提供智能体当前需要知道的信息。
     source_fingerprint: sha256:8e9ebe834612961ec55dc75a4417640b2ea92276b3cc6501874adb5fd4f274c6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 上下文是模型在某次推理中可用的信息，包括指令、对话、选定记录和工具结果。存储在其他位置的信息，只有被提供给这次推理后才成为上下文。
     source_fingerprint: sha256:8a72fa70c0752c7bf207f840913121ecad9b1bc1b3bcc529f6d0a5be11e6c936
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 正确决策要求相关事实在使用时可用，即使这些事实已经存在于系统中的其他位置。
     source_fingerprint: sha256:925d26069ce05dd30491837b5e99f9673fd2016cf3d4938527f7e2c0b41cdf8d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 为编码步骤组织请求、当前文件内容和约束时使用。
     source_fingerprint: sha256:8a8b7365a8220db166685456c54696fcb4eb7592dfc40275f2087adb502c3423
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 仅因某个事实存在于仓库或以前的会话中，就假定智能体知道它。
     source_fingerprint: sha256:c10f4599ac621659c2071470f2a4c77836c944a623d222754f540862ab94ba5a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

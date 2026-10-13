@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 为工具与智能体的连接提供通用方式。
     source_fingerprint: sha256:f4236259211f518c70f33f619420ffb57b05e6bad0eee82cc985355e9f4601d3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 模型上下文协议（MCP）是一种开放协议，用于将 AI 应用连接到外部能力和信息。服务器可以提供工具、资源和提示；宿主应用仍负责访问决策和执行策略。
     source_fingerprint: sha256:dbe14eba5056f59138f7027b8ad9e86da3cc3e9d827fba5a5df74ff884250f81
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 共享集成接口可减少定制连接器，同时将协议兼容性与对具体服务器的信任分开判断。
     source_fingerprint: sha256:1e10895dcf3c26a8b1a94db93d6d613edab91888a9cebdf72ac6ecafd7c9f206
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 通过通用接口向多个兼容 AI 应用提供服务时使用。
     source_fingerprint: sha256:182409dfb4ae290576ca7c28c07d4206168a1d82591d23065c4a5ffc036d5d95
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 假定兼容的 MCP 服务器自动值得信任，或已获准访问全部数据。
     source_fingerprint: sha256:0bc3f849e38aea308b6ddf9d14b6d7f3389ab7a5d238fe617a588565e6a98d74
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

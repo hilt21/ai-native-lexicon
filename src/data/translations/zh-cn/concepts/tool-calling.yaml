@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 让智能体请求使用外部能力。
     source_fingerprint: sha256:06a4311af50a8b824e97874f4eac9eae487ee71b933f55f7c54e31551d4d2d96
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 工具调用是模型以结构化参数请求某个命名操作，并由宿主执行或拒绝的交互过程。返回的结果成为观察信息；仅发出请求不能证明执行成功。
     source_fingerprint: sha256:1bebc069e2ec0ea3845b2656fe9b8e2d16ce8781bc816cd95c6378da44a50d14
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 将请求与执行分开，使参数验证、权限检查和错误报告可见。
     source_fingerprint: sha256:a2e5819edbfa6e9dad9cc1548c8d7725016967e4ab4d347ff5d1ce69ca3d1d30
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 智能体需要查询数据库，并在下一次决策中使用返回记录时使用。
     source_fingerprint: sha256:fe5325b13a9f48891ab7bf390c3bb7c7f476cdf60250cdf36772f1e4dfbab6f9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 尚未收到并检查工具结果，就根据生成的调用参数报告成功。
     source_fingerprint: sha256:567bf364b6714db0c2ad8dc1ee1bc186804f25e22081c8b0e4e2010ae15110d9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

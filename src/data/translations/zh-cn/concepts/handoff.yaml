@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 将责任、相关状态和完成标准从一个行动主体或智能体受控地交给另一个。
     source_fingerprint: sha256:9dd374ddbc6f2e34f96d607c149e0b6408c4726bca17c02c6837d89d9ac46c0b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 交接的内容超出对话记录，需包含目标、当前状态、决定性事实、权限限制、产物、未解决风险，以及责任返回或完成的条件。
     source_fingerprint: sha256:feb665acba7d4a05710a009f6e9700db1c1134d9a6d33014ab0823b1d7fcdffa
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 工作常在责任归属边界处失败。结构化交接保留意图，并明确哪个主体负责下一次状态转换。
     source_fingerprint: sha256:6df996e39c2f4a65250f71a2d3666a83e9a70c93bafd6e51376e6df08c77bc13
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 在智能体之间、智能体与人之间交接，或在新执行上下文中恢复工作时使用。
     source_fingerprint: sha256:dbec03d3e8b5069b6eb8449e08c2f8df8aee547193ff6f645d663d134a92cd60
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 转发原始历史，并假定接收方会自行推断优先级、权限和完成标准。
     source_fingerprint: sha256:8d7efce6c07bcd7d6f8906845fb6c853af26e517d787a7a867ccfa3621ab229b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 观察行动后实际发生的情况。
     source_fingerprint: sha256:968698254a62700a134ac316d28e78ab9a14906910349bb35015300fe5fcc654
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 观察是从环境接收的信息，例如工具结果、文件内容或测得的状态。它记录特定时间和范围内呈现的信息；解释其含义是另一个步骤。
     source_fingerprint: sha256:e500cda0f2694a8973e4c7fee485030b2cf344066ce4b9d610e150417c8f14b2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 智能体需要外部信号，以区分预期影响和实际结果，并发现条件变化。
     source_fingerprint: sha256:8e27fb07ba86a8e62942c23a68c99d9b0d7591293a831d9e48e9ce6d78b25848
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 在判断步骤是否成功前，检查命令退出状态和输出时使用。
     source_fingerprint: sha256:cedafbe0a82aaeeec7ef470546ff4e35681ecee461019ca50de4cdc25d836f47
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 把操作计划产生的影响当作已经观察到的结果。
     source_fingerprint: sha256:80d0ae8c84ede81f8025deae5bd12ea57793c9b83c9c7925ba2a08515c0e7156
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

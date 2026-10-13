@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 检查要求是否确实得到满足。
     source_fingerprint: sha256:2f72bc301142ca7f4f42881b278844b4238532f8f60641c8b87a8dc00057ef21
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 验证通过适当检查、测试或观察证据，将结果与明确要求比较。验证针对明确的主张和范围；检查一个组件无法证明完整系统的全部属性。
     source_fingerprint: sha256:a75c34d3bfb88a64e5857883d4b788c7cf0f14adfb8fe92bf543ce21673b2a92
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 完成只有在验收标准经过检查时才具有意义，不能仅根据已投入工作量推断。
     source_fingerprint: sha256:1cb9f84e57ae333db41350562e1a2452f74f488847d4e0b0db765e9ffa45fedc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 交付变更前确认所需行为和相关约束时使用。
     source_fingerprint: sha256:329014bff902d8f52897f5c47d96ecb87ee9e52740c387a9f1ada718732eb427
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 只因为文件已经编辑就宣称成功，却未检查实际行为。
     source_fingerprint: sha256:5a3a8defb018cf9d772048a2733f28bfd8f5b570a9f2f0139b11097198a67d3d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

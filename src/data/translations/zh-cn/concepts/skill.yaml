@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 向智能体提供完成某类工作的可复用方法。
     source_fingerprint: sha256:92fe78c4e0b883e3cb80ac75d041ca8b2c3ed5be4e0a418933ee0807060e4364
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 技能将某类任务的可复用操作指导打包。它可以包含示例、参考资料或脚本；在 Agent Skills 格式中，SKILL.md 文件提供指令和元数据。技能无需是可执行工具。
     source_fingerprint: sha256:fd95b291a3314ca2a1c7adf78a500a2ae44f2aef5d350a719ecc5988c73b9f37
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 任务专用过程使有效经验可复用，无需在每个模型请求中都放入全部指令。
     source_fingerprint: sha256:d88cc707acf2b7f4a469dab7ce158860b2bbf30cb73774148c5e8e98e94a37ae
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 将可重复的文档审查过程、模板和参考资料打包时使用。
     source_fingerprint: sha256:ce7a1cfc396823fa0e2f950555c20ec8ae81f55768a7957c1c846ad34a96372d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 无论任务是否相关，都在每个请求中加载全部可用技能。
     source_fingerprint: sha256:167c52b25a7e4732db11c27d71f555e5b743cbd53bbba643fc2834be4c2b0410
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

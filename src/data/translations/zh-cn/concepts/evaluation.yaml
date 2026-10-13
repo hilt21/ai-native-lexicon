@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 衡量智能体在明确任务上的表现。
     source_fingerprint: sha256:00ef82bdf042495c716362735ab0bf8687ec148d9e428d78efe0df5e15261c7d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 评估使用选定案例、标准和测量过程判断质量或性能。它可以比较系统或跟踪回归；汇总分数无法验证某个实际任务中的每个结果。
     source_fingerprint: sha256:037c2dc5b7f6e706ae345d87e93da40286bd017ce20287e0413cb420180459cc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 可重复的评估能揭示单次演示或自信解释可能掩盖的权衡和回归。
     source_fingerprint: sha256:44634e21bec08794a1897b8bd0509e617a5b007b9130545fe2d70b813f248060
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 使用相同评分标准，在代表性任务上比较两种智能体配置时使用。
     source_fingerprint: sha256:2003e179042116089bd019e3211c67306200baaa5f5e8ab27b4138061bc350f9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 针对小型基准优化，却声称分数证明了所有用户请求上的可靠性。
     source_fingerprint: sha256:ca9c18749e88a5dc5a1b6c60e0085a4d3fe7e853e86f7805ae1debb8e161a439
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

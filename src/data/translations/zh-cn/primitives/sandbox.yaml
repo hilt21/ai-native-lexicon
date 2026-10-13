@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 限制访问和影响，以约束潜在不安全操作的执行环境。
     source_fingerprint: sha256:78407a5504f34c86be59d5d658b9079a94bd82ad4f9fce431fdff1d73415d8d5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 执行生成代码、外部工具或其他需要限制影响范围的操作的系统。
     source_fingerprint: sha256:d9be58842a06bb5edc10cbdc7605a5a8e807671b2c03e6630dbb6bef9269569f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 限制操作能够访问的文件、网络、凭据、进程和资源容量。
     source_fingerprint: sha256:0ad740f5c31996febe077904a85daacebc4d937e5d0b54df6082b9fdb491a694
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 沙箱限制执行影响范围；权限确定授权。两者各自承担独立职责。
     source_fingerprint: sha256:f632150bb706dbaeb39f91f4c8b7598076613fa579979fb313769b272b1233e3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 工具 + 沙箱 + 资源限制 → 受限执行
     source_fingerprint: sha256:a40493b21d058d28a05185e0006260e171c2682516a603076aa817b7546e45a3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 生成的分析代码在临时工作区中运行，不提供生产凭据，并设置时间限制。
     source_fingerprint: sha256:e6d7e6ad510f8f8f36e2180e23c9847d10c8ef8a7eae79beb274adb3eb101123
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 沙箱
     source_fingerprint: sha256:24f3da3b81ad2a786ace04aa761704da5f40aa008af020a0135ecc40e229da21
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 限制访问和影响，以约束潜在不安全或不可信操作的执行环境。
     source_fingerprint: sha256:011be36c0ec5c7a12645aa68b7c4560a44e8b2eeca5cab980b02db249a17d699
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 隔离具有明确边界，不能证明某项操作无害。
       - 除文件系统外，还应控制网络和凭据。
     source_fingerprint: sha256:3a053d2539013eb81794f7c8aa1758ac8d1f14ebcc580f5bb7ac314275a8368b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 操作系统和基础设施控制独立于模型的遵从行为，施加执行边界。
     source_fingerprint: sha256:60d65ba5eb886bd58665a812e613b31c2dbce03900fc5fdda25d78188f6300dd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 执行生成代码、外部工具或其他需要限制影响范围的操作的系统。
     source_fingerprint: sha256:1522c5e40d19ebd39c47fe8117a2b2eb349c2efc1651b7eb025ed3fdaa2348b4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 当生成或不可信操作需要超出普通应用授权的影响限制时，通常应采用沙箱。
     source_fingerprint: sha256:fff943efe9ea7adcfaab102f180d21534578ca929ad1df3a3c5f696ea0e29c98
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
