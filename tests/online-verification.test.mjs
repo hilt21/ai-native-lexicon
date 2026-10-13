@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
-import { createInventory, verifyOnline, manualChecks, cssResources } from '../scripts/verify-online.mjs';
+import { createInventory, verifyOnline, manualChecks, cssResources, inspectHtml, markdownReport } from '../scripts/verify-online.mjs';
 import { readCatalog } from '../src/domain/content/catalog.mjs';
 
 const inventory = createInventory(await readCatalog());
@@ -26,6 +26,14 @@ async function fixture(run, options = {}) {
   const png = Buffer.alloc(24); Buffer.from([137,80,78,71,13,10,26,10]).copy(png); png.writeUInt32BE(1200,16); png.writeUInt32BE(630,20);
   let target;
   const server = createServer((req, res) => {
+    if (options.redirectAssets) {
+      if (req.url.endsWith('/concepts/mcp/')) return res.writeHead(302, { location: '../../../moved/' }).end();
+      if (req.url.endsWith('/moved/')) return res.writeHead(200, { 'content-type': 'text/html' }).end(html(target, sample).replace(`<script src="${target}test.js"></script>`, '<link rel="stylesheet" href="style.css">'));
+      if (req.url.endsWith('/moved/style.css')) return res.writeHead(302, { location: '../styles/site.css' }).end();
+      if (req.url.endsWith('/styles/site.css')) return res.writeHead(200, { 'content-type': 'text/css' }).end('body{background:url("../images/pattern.svg")}');
+      if (req.url.endsWith('/images/pattern.svg')) return res.writeHead(200, { 'content-type': 'image/svg+xml' }).end('<svg xmlns="http://www.w3.org/2000/svg"/>');
+      if (!req.url.endsWith('/default.png')) return res.writeHead(404).end('wrong relative asset path');
+    }
     if (req.url.endsWith('/default.png')) return res.writeHead(200, { 'content-type': 'image/png' }).end(png);
     if (req.url.endsWith('/test.js')) {
       if (options.redirect) return res.writeHead(302, { location: 'http://outside.invalid/file.js' }).end();
@@ -82,4 +90,47 @@ test('inventory derives both locales and preserves application resource boundari
 test('CSS URL extraction keeps quoted SVG data URLs atomic', () => {
   const css = `a{background:url("data:image/svg+xml,%3Csvg filter='url(%23n)'%3E")} b{background:url('../brand/image.webp')}`;
   assert.deepEqual(cssResources(css), ["data:image/svg+xml,%3Csvg filter='url(%23n)'%3E", '../brand/image.webp']);
+});
+
+test('HTTP seam resolves HTML and CSS dependencies against each final response URL', async () => {
+  await fixture(async (target) => {
+    const report = await verify(target);
+    assert.equal(report.automatedStatus, 'passed', JSON.stringify(report.failures));
+    assert.ok(report.pages[0].finalUrl.endsWith('/moved/'));
+    assert.ok(report.assets.some((a) => a.url === `${target}moved/style.css` && a.finalUrl === `${target}styles/site.css`));
+    assert.ok(report.assets.some((a) => a.url === `${target}images/pattern.svg` && a.passed));
+  }, { redirectAssets: true });
+});
+
+test('field language rejects a wrong-language child inside a correctly labelled ancestor', () => {
+  const target = 'https://example.com/lexicon/';
+  const value = sample.records['zh-CN'].units.why_it_matters.text;
+  const source = html(target, sample).replace(`<p lang="en">${value}</p>`, `<div lang="en"><p lang="zh-CN">${value}</p></div>`);
+  assert.ok(inspectHtml(source, sample, target).failures.includes('missing localized text/language for why_it_matters'));
+});
+
+test('field language accepts inherited language and same-language inline markup', () => {
+  const target = 'https://example.com/lexicon/';
+  const value = sample.records['zh-CN'].units.why_it_matters.text;
+  const source = html(target, sample).replace(`<p lang="en">${value}</p>`, `<div lang="en"><p><em>${value}</em></p></div>`);
+  assert.deepEqual(inspectHtml(source, sample, target).failures, []);
+});
+
+test('summary language checks nested text even when another correct copy exists', () => {
+  const target = 'https://example.com/lexicon/';
+  const value = sample.records['zh-CN'].data.summary;
+  const source = html(target, sample).replace(`<p class="concept-deck" lang="en">${value}</p>`, `<p class="concept-deck" lang="en"><span lang="zh-CN">${value}</span></p>`);
+  assert.ok(inspectHtml(source, sample, target).failures.includes('summary text/language differs from resolver'));
+});
+
+test('Markdown summary groups page risks and preserves affected URLs', async () => {
+  await fixture(async (target) => {
+    const report = await verify(target);
+    report.pages.push({ url: `${target}share/speaking-card/card-01/`, risks: ['share canonical targets guide while og:url identifies the card; platform behavior unverified'] });
+    const markdown = markdownReport(report);
+    assert.match(markdown, /## Page risks/);
+    assert.ok(markdown.includes('social description language differs from route locale'));
+    assert.ok(markdown.includes(`${target}${sample.path}`));
+    assert.ok(markdown.includes('share canonical targets guide'));
+  });
 });

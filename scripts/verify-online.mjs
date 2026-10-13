@@ -15,6 +15,13 @@ export function walk(node, visit, inheritedLang = '') {
 }
 const text = (node) => node.value ?? (node.childNodes ?? []).map(text).join('');
 const normal = (value) => String(value).replace(/\s+/g, ' ').trim();
+function localizedText(node, inheritedLang) {
+  const languages = new Set();
+  walk(node, (child, _attrs, lang) => {
+    if (child.nodeName === '#text' && normal(child.value)) languages.add(lang);
+  }, inheritedLang);
+  return { text: normal(text(node)), lang: languages.size === 1 ? [...languages][0] : null };
+}
 export const manualChecks = ['screen-reader', 'browser-400-percent', 'real-device-selects', 'linkedin-preview', 'x-preview', 'social-cache-refresh'];
 
 export function createInventory(catalog) {
@@ -76,10 +83,10 @@ export function inspectHtml(source, expected, target) {
     if (a.srcset) resources.push(...a.srcset.split(',').map((part) => part.trim().split(/\s+/)[0]));
     if (a.style) resources.push(...cssResources(a.style));
     if (node.tagName === 'style') resources.push(...cssResources(text(node)));
-    if ('data-definition-body' in a) definitions.push({ text: normal(text(node)), lang });
-    if ((a.class ?? '').split(' ').includes('concept-deck')) summaries.push({ text: normal(text(node)), lang });
+    if ('data-definition-body' in a) definitions.push(localizedText(node, lang));
+    if ((a.class ?? '').split(' ').includes('concept-deck')) summaries.push(localizedText(node, lang));
     if ('data-translation-coverage' in a) coverages.push(Object.fromEntries(['translated', 'total', 'missing', 'draft', 'stale'].map((key) => [key, Number(a[`data-${key}`])])));
-    if (a.lang && ['p', 'span', 'li', 'div', 'h3'].includes(node.tagName)) languageTexts.push({ lang, text: normal(text(node)) });
+    if (['p', 'span', 'li', 'div', 'h3'].includes(node.tagName)) languageTexts.push(localizedText(node, lang));
   });
   const failures = [], risks = [];
   const check = (condition, message) => { if (!condition) failures.push(message); };
@@ -103,7 +110,7 @@ export function inspectHtml(source, expected, target) {
     check(definitions.length === wanted.length && wanted.every((d, i) => definitions[i]?.text === normal(d.text) && definitions[i]?.lang === d.textLang), 'definition text/language differs from resolver');
     for (const [path, unit] of Object.entries(record.units)) {
       if (path.startsWith('definitions.')) continue; // Inline definition names include punctuation; bodies are compared above.
-      for (const value of [unit.text].flat()) check(languageTexts.some((item) => item.lang === unit.actualLang && (item.text === normal(value) || item.text.includes(normal(value)))), `missing localized text/language for ${path}`);
+      for (const value of [unit.text].flat()) check(languageTexts.some((item) => item.lang === unit.actualLang && item.text === normal(value)), `missing localized text/language for ${path}`);
     }
   }
   const image = url(expected.image ?? 'brand/social/default.png');
@@ -203,7 +210,7 @@ export async function verifyOnline({ target, inventory, concurrency = 4, timeout
       Object.assign(result, { metadata: observed.metadata, coverage: observed.coverage, failures: observed.failures, risks: observed.risks });
       result.passed = observed.failures.length === 0;
       report.failures.push(...observed.failures.map((message) => ({ url, message })));
-      for (const value of observed.resources) addAsset(value, url);
+      for (const value of observed.resources) addAsset(value, result.finalUrl);
     }
     report.pages.push(result); onProgress(report.pages.length, inventory.pages.length);
   });
@@ -212,7 +219,7 @@ export async function verifyOnline({ target, inventory, concurrency = 4, timeout
     await pool([...candidates].filter((url) => !checked.has(url)), concurrency, async (url) => {
       checked.add(url); const { result, source } = await request(url);
       report.assets.push(result);
-      if (source !== undefined && new URL(url).pathname.endsWith('.css')) for (const value of cssResources(source)) addAsset(value, url);
+      if (source !== undefined && /text\/css/i.test(result.headers['content-type'] ?? '')) for (const value of cssResources(source)) addAsset(value, result.finalUrl);
     });
   }
   report.pages.sort((a, b) => a.url.localeCompare(b.url)); report.assets.sort((a, b) => a.url.localeCompare(b.url));
@@ -222,7 +229,15 @@ export async function verifyOnline({ target, inventory, concurrency = 4, timeout
 }
 
 export function markdownReport(report) {
-  return `# Online verification\n\nTarget: ${report.target}\n\nSource: ${report.source?.commit ?? 'unknown'}; dirty: ${report.source?.dirty ?? 'unknown'}. Deployed revision is not proven by source checkout.\n\nHTTP/HTML: **${report.automatedStatus}**; browser smoke: **${report.browser.status}**; overall acceptance: **${report.overallAcceptance}**.\n\nPages: ${report.pages.length}; discovered assets: ${report.assets.length}; failures: ${report.failures.length}.\n\n## Translation inventory\n\n| Collection | Records | Core translated | Reviewed/current units | Missing | Draft | Stale |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: |\n${Object.entries(report.coverage?.collections ?? {}).map(([kind, c]) => `| ${kind} | ${c.records} | ${c.coreTranslated} | ${c.translated}/${c.total} | ${c.missing} | ${c.draft} | ${c.stale} |`).join('\n')}\n\nSkill Maps retain original-language editions; annotation inventory is in report.json. These are outside the translation overlay and have no certified English completeness score.\n\n## Failures\n\n${report.failures.map((f) => `- ${f.url}: ${f.message}`).join('\n') || 'None in the stated automated scope.'}\n\n## Manual acceptance\n\n${report.manual.map((m) => `- ${m.id}: ${m.status}`).join('\n')}\n\nSee the manual checklist. No automated result proves a screen-reader session, actual 400% browser zoom or social platform cache refresh.\n\n## Limits\n\n${report.risks.map((r) => `- ${r}`).join('\n')}\n- Per-page metadata language observations are in report.json.\n- CSS URL references and observed HTML assets are checked; this is not an exhaustive JavaScript dependency crawler.\n- JSON includes timestamps, headers, redirects and per-record coverage.\n`;
+  const pageRisks = new Map();
+  for (const page of report.pages) for (const risk of page.risks ?? []) {
+    if (!pageRisks.has(risk)) pageRisks.set(risk, new Set());
+    pageRisks.get(risk).add(page.url);
+  }
+  const riskSummary = [...pageRisks].map(([risk, urls]) =>
+    `### ${risk}\n\nAffected pages: ${urls.size}\n\n${[...urls].sort().map((url) => `- ${url}`).join('\n')}`
+  ).join('\n\n') || 'None observed in the checked pages.';
+  return `# Online verification\n\nTarget: ${report.target}\n\nSource: ${report.source?.commit ?? 'unknown'}; dirty: ${report.source?.dirty ?? 'unknown'}. Deployed revision is not proven by source checkout.\n\nHTTP/HTML: **${report.automatedStatus}**; browser smoke: **${report.browser.status}**; overall acceptance: **${report.overallAcceptance}**.\n\nPages: ${report.pages.length}; discovered assets: ${report.assets.length}; failures: ${report.failures.length}.\n\n## Translation inventory\n\n| Collection | Records | Core translated | Reviewed/current units | Missing | Draft | Stale |\n| --- | ---: | ---: | ---: | ---: | ---: | ---: |\n${Object.entries(report.coverage?.collections ?? {}).map(([kind, c]) => `| ${kind} | ${c.records} | ${c.coreTranslated} | ${c.translated}/${c.total} | ${c.missing} | ${c.draft} | ${c.stale} |`).join('\n')}\n\nSkill Maps retain original-language editions; annotation inventory is in report.json. These are outside the translation overlay and have no certified English completeness score.\n\n## Failures\n\n${report.failures.map((f) => `- ${f.url}: ${f.message}`).join('\n') || 'None in the stated automated scope.'}\n\n## Page risks\n\n${riskSummary}\n\n## Manual acceptance\n\n${report.manual.map((m) => `- ${m.id}: ${m.status}`).join('\n')}\n\nSee the manual checklist. No automated result proves a screen-reader session, actual 400% browser zoom or social platform cache refresh.\n\n## Limits\n\n${report.risks.map((r) => `- ${r}`).join('\n')}\n- Page risks above are observations, not failed checks or completed platform acceptance; raw metadata remains in report.json.\n- CSS URL references and observed HTML assets are checked; this is not an exhaustive JavaScript dependency crawler.\n- JSON includes timestamps, headers, redirects and per-record coverage.\n`;
 }
 
 async function main() {
