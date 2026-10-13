@@ -14,6 +14,8 @@ body::before { content: ""; position: fixed; inset: 0; z-index: -1; pointer-even
   body:has(.lexicon-home) .header .right-group label { width: var(--lex-control-height); height: var(--lex-control-height); }
   body:has(.lexicon-home) .header .right-group select { width: 100%; height: 100%; margin: 0; padding: 0; color: transparent; }
   body:has(.lexicon-home) .header .right-group .label-icon { font-size: 1.25rem; inset-inline-start: 50%; transform: translate(-50%, -50%); }
+  /* Native popup options must not inherit the collapsed transparent value. */
+  body:has(.lexicon-home) .header .right-group select option { color: var(--lex-ink); background-color: var(--lex-paper); }
   body:has(.lexicon-home) .header .right-group .caret { display: none; }
 }
 .sidebar-pane { border-inline-end: 1px solid var(--lex-line); }
