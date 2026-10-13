@@ -35,6 +35,13 @@ export async function verifyTranslationBrowser({ browser, origin, base, reposito
       assert.equal(await page.locator('html').getAttribute('data-theme'), 'light');
       await page.setViewportSize({ width: 1440, height: 960 });
       assert.equal(await language.count(), 1); assert.equal(await theme.count(), 1);
+      // Regression for PR #49: collapsed transparent text must not hide native options.
+      for (const mode of ['light', 'dark']) {
+        await theme.selectOption(mode);
+        const options = await page.locator('.header :is(starlight-theme-select, lexicon-language-select) select option').evaluateAll((items) => items.map((item) => ({ text: item.textContent.trim(), color: getComputedStyle(item).color })));
+        assert.ok(options.length >= 5);
+        for (const option of options) assert.ok(option.text && option.color !== 'transparent' && !/rgba\([^)]*,\s*0\s*\)/.test(option.color), `Native option must remain visible: ${JSON.stringify(option)}`);
+      }
       const labelFits = await language.evaluate((element) => { const style = getComputedStyle(element); const canvas = document.createElement('canvas').getContext('2d'); canvas.font = style.font; return element.clientWidth - parseFloat(style.paddingLeft) - parseFloat(style.paddingRight) >= canvas.measureText(element.selectedOptions[0].text).width; });
       assert.ok(labelFits, 'Desktop language label still fits the native select');
       await page.setViewportSize({ width: 360, height: 844 });

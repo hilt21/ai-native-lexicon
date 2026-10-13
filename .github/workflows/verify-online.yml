@@ -1,0 +1,42 @@
+name: Verify deployed site
+on:
+  workflow_dispatch:
+    inputs:
+      target:
+        description: 'Deployed base URL, including trailing slash'
+        required: true
+        default: 'https://hilt21.github.io/ai-native-lexicon/'
+      browser:
+        description: 'Include targeted native-option and Pagefind smoke'
+        type: boolean
+        default: true
+permissions:
+  contents: read
+jobs:
+  verify-online:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - if: inputs.browser
+        run: npx playwright install --with-deps chromium
+      - name: Check served pages and resources
+        env:
+          ONLINE_TARGET: ${{ inputs.target }}
+          ONLINE_BROWSER: ${{ inputs.browser }}
+        run: |
+          args=("$ONLINE_TARGET")
+          if [ "$ONLINE_BROWSER" = true ]; then args+=(--browser); fi
+          npm run verify:online -- "${args[@]}"
+      - name: Upload evidence, including failures
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: online-verification
+          path: work/online-verification
+          if-no-files-found: warn
