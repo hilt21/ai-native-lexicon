@@ -1,0 +1,38 @@
+title: implement-spec
+summary: Implement a complete specification in parallel on an integration branch.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: implementation-feedback
+secondary_clusters:
+  - spec-planning
+  - architecture-quality
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: The user explicitly starts implementation of the whole specification. Read tickets and blocking
+  edges as a task graph, create an integration branch and delegate ready tickets to implementer subagents in
+  separate worktrees. Each implements with TDD at the agreed seam and commits. Synchronize the integration tip
+  before the orchestrator merges work, then run a final code-review after all tickets are complete. Choose
+  this whole-graph path or per-ticket implement according to scope; they are alternatives.
+when_to_use:
+  - A complete specification and ticket set should be delivered through one orchestration.
+  - Independent tickets can progress concurrently.
+solves:
+  - Increase throughput for large specifications.
+  - Preserve dependencies, integration order and final review during parallel implementation.
+inputs:
+  - Specification
+  - Ticket graph
+  - Issue tracker configuration
+outputs:
+  - Integration branch
+  - Resolved tickets
+  - Final code-review
+  - Ready PR or branch
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/implement-spec/SKILL.md
+handoffs: []
+official_description: Implement the result of /to-spec and /to-tickets in code.

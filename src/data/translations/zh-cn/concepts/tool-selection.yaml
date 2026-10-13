@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: tool-selection
+units:
+  - path: summary
+    translation: 为下一项具体步骤选择最合适的工具。
+    source_fingerprint: sha256:78974478ca4260fb5e30addd7b29938e2cda6d07a177f4625c6bb7b747992e8f
+    review_status: draft
+  - path: definition
+    translation: 工具选择将当前信息需求或操作与可用能力匹配。选择时考虑范围、权限、预期输出和副作用；选定工具与调用工具是两个步骤。
+    source_fingerprint: sha256:03224f2007128a5eb11cf7329573e8688d21344feec9d525ecfae15f6289ffb5
+    review_status: draft
+  - path: why_it_matters
+    translation: 与每一步都使用宽泛能力相比，适用范围较窄的工具可减少错误和不必要的访问。
+    source_fingerprint: sha256:a71fa124bb85a23c42758567aa4aa7778491697f54d2d5d89cf9beb5ac7211d3
+    review_status: draft
+  - path: when_to_use
+    translation: 在搜索文件名、读取已知文件和查询服务之间选择时使用。
+    source_fingerprint: sha256:5e6b99af7440b8eaaa80387db0ea2f314e1f1ff620723347d9f9815d8a9ec866
+    review_status: draft
+  - path: anti_pattern
+    translation: 本可通过限定范围的读取回答问题，却执行宽泛的 shell 命令。
+    source_fingerprint: sha256:6a94638157bfbd6f4b932a58e64b900b0937903b15a345fa7dba8a73e7e55cd6
+    review_status: draft

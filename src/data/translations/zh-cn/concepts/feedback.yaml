@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: feedback
+units:
+  - path: summary
+    translation: 根据结果选择下一项有效行动。
+    source_fingerprint: sha256:8744e29ce2b4d656f0320758d71c9ee7f47421a0788e2a307a16819415ff3f50
+    review_status: draft
+  - path: definition
+    translation: 反馈是用于指导后续决策或调整的结果信息。它可以来自用户、测试或环境；当反馈与目标和可行响应相连接时，才能发挥作用。
+    source_fingerprint: sha256:13ebee499393dd416071e575f91d30d182543a9e3f87906d24762a13703788e7
+    review_status: draft
+  - path: why_it_matters
+    translation: 将结果信号纳入过程，可纠正错误，避免反复执行无效方法。
+    source_fingerprint: sha256:7586b14f16360cae7403129ffcfe1578e9fd752407cef2697a73841274177983
+    review_status: draft
+  - path: when_to_use
+    translation: 失败测试指出某种行为未满足要求后，据此调整实现时使用。
+    source_fingerprint: sha256:dbcc22fa97c9e230c19353d401e442454c90bb1aa603638f8ee9a69bccc4a442
+    review_status: draft
+  - path: anti_pattern
+    translation: 收集审阅意见，却无论意见内容如何都继续执行相同行动。
+    source_fingerprint: sha256:d886cb202f27e3a9a29c4656b657a2ff97e6ce95823e6ae86308e732aea83249
+    review_status: draft

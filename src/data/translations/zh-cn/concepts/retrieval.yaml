@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: retrieval
+units:
+  - path: summary
+    translation: 在任务需要时查找信息。
+    source_fingerprint: sha256:16ac34dfa00330c810c9f68502ff8e21e300782298a58865d4524af37eff3339
+    review_status: draft
+  - path: definition
+    translation: 检索使用查询、筛选条件或直接标识符，从外部存储中定位信息。它可以采用词法搜索、语义搜索或数据库查询；返回结果并不能证明结果正确。
+    source_fingerprint: sha256:d8be461fc7841eeeb17fb9698530ebecb94ad2a5191771a60b33c520d544dc82
+    review_status: draft
+  - path: why_it_matters
+    translation: 查找任务相关事实能扩展智能体可用的信息，使其超出当前上下文和模型已学知识。
+    source_fingerprint: sha256:b5d01023139d3da89326d70100e521ce714c5c7fdee3f7d8293fae12ff4c9c62
+    review_status: draft
+  - path: when_to_use
+    translation: 回答政策问题前查找相关政策章节时使用。
+    source_fingerprint: sha256:002c623d6ffcbfd4ca29409537d6f56e54a612e87108a835a71c8584a2377017
+    review_status: draft
+  - path: anti_pattern
+    translation: 未检查内容，就把排名最高的搜索结果当作权威来源。
+    source_fingerprint: sha256:b05cc0739ed338fabe68d0ef4d1f0e471a26ce11086961c99c3c6a2d16d6b70c
+    review_status: draft

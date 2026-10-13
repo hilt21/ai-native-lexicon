@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: memory-consolidation
+units:
+  - path: summary
+    translation: 从多次经验中形成可复用的有效经验总结。
+    source_fingerprint: sha256:cc87b4d5e30349f8cf0c67cb1064b66496833d6f3dcdad23cb7e44700f9e2b47
+    review_status: draft
+  - path: definition
+    translation: 记忆整合审阅多个观察或事件，并形成更精简的持久记录。它应区分重复出现的证据与暂定解释，并保留重新检查总结所需的引用。
+    source_fingerprint: sha256:022d8ee5f2d50f6980300ab109bfc0e54e657f6e9fed44a4bbb1d0be98ec76ec
+    review_status: draft
+  - path: why_it_matters
+    translation: 将经验整理成适用范围明确的总结，比累积重复笔记和相互矛盾的片段更有利于检索。
+    source_fingerprint: sha256:c7a7d76baf5dbc83a4d0beb436a8a2ff39b94f8c8278794553d731c73c16fc57
+    review_status: draft
+  - path: when_to_use
+    translation: 多个事件揭示相同且已验证的故障机制和补救措施后使用。
+    source_fingerprint: sha256:1cb54b34e5a58a0f74d602dd24864184e892dd3e60799ff1efca62ad1a25a52b
+    review_status: draft
+  - path: anti_pattern
+    translation: 把一次推测性解释提升为适用于所有后续任务的永久规则。
+    source_fingerprint: sha256:5314ebc4fabd3a23db0f16ca364aaa912c1e9fd62c7eed4e34b3c63e7f681abf
+    review_status: draft

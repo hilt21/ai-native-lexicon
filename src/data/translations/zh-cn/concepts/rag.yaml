@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: rag
+units:
+  - path: summary
+    translation: 检索有用知识并将其纳入上下文。
+    source_fingerprint: sha256:6888ac652664969a988bf05e573c944d435bcf34aaf61610e52d4c9387553f2a
+    review_status: draft
+  - path: definition
+    translation: 检索增强生成（RAG）结合外部信息检索与基于这些信息的生成。检索提供候选证据；生成的答案仍需检查相关性、证据支撑和时效性。
+    source_fingerprint: sha256:221efe9cc3a4d1362b0e86e2bb96c8d041e18a6467825c17688500ff61f4257f
+    review_status: draft
+  - path: why_it_matters
+    translation: RAG 让应用能够使用可更新的知识来源，减少对模型参数中编码事实的单独依赖。
+    source_fingerprint: sha256:38eafa9f9948b35d84b8459e7e8423297a5237d8f344028d726ca467407d6489
+    review_status: draft
+  - path: when_to_use
+    translation: 基于持续维护的文档集合回答问题，并提供来源引用时使用。
+    source_fingerprint: sha256:a0ea00f7eddd50d30fd5a030393ee1102167bffcb9c3f38f1dec7e4abecb3b6c
+    review_status: draft
+  - path: anti_pattern
+    translation: 假定附上检索片段就能保证答案符合事实且引用正确。
+    source_fingerprint: sha256:e30b03f032502b1b22b84533de0c68be7240cb84cbd82cf688704b85e6335269
+    review_status: draft

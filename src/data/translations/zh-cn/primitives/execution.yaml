@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: execution
+units:
+  - path: summary
+    translation: 尝试执行已授权且能够影响实际系统或环境的操作。
+    source_fingerprint: sha256:345afd0483da71dfc9726a8823bc17fbb9c2a8c17c2195ab9f2553058d1701cd
+    review_status: draft
+  - path: scope
+    translation: 实际执行操作，而非仅描述提议工作的系统。
+    source_fingerprint: sha256:13617fd80c8af1bbaeef7d9a70e8278588dea4f81ded241d4c40fd2af85875e9
+    review_status: draft
+  - path: usage
+    translation: 区分提议意图、已尝试操作和已确认影响。
+    source_fingerprint: sha256:c94909f7a7bfd7cd82641d0d88e4c7004d86950eec78434f113dced3f85ee803
+    review_status: draft
+  - path: distinctions
+    translation: 执行是行动；叙述、规划或对状态成功变化的保证都不能代替执行。
+    source_fingerprint: sha256:873de864aec85d927820db2c794102b8e5af3f169775e3c2d0ce1664fe986e3f
+    review_status: draft
+  - path: composition.pattern
+    translation: 已验证意图 + 权限 → 执行器 → 观察到的结果
+    source_fingerprint: sha256:db796a0b1ac2dee744d5a9ad59627ca063a728304142b9487404abc9eead359b
+    review_status: draft
+  - path: composition.example
+    translation: 编码智能体请求编辑文件；文件系统操作及随后的读取确定实际变化。
+    source_fingerprint: sha256:a0f24c479ac288612dbbdc1a979841815044e19dc66316d1213face2d2654c88
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 执行
+    source_fingerprint: sha256:37a6cd31aad566d601abc3bece954d41420f152026a5f08656640dc5b12fdea3
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 通过能够影响实际系统或环境的机制，尝试实施已授权操作。
+    source_fingerprint: sha256:859d5f812ed80b2776563b270d725fb7e0b190d8f77846da3a14c5f20106c403
+    review_status: draft
+  - path: considerations
+    translation:
+      - 成功收到请求不能证明预期影响已经发生。
+      - 明确处理部分失败和不确定的外部结果。
+    source_fingerprint: sha256:186500bd309c8e7050cabecb1ab3ae317e45addfe53b72d70a5ce792d188165e
+    review_status: draft
+  - path: ownership.rationale
+    translation: 函数、脚本、API、事务和状态机实施操作并呈现实际结果。
+    source_fingerprint: sha256:c85bf294330e9688139dd2ced13dfba9976cf1d56586825c11a256c0c0520650
+    review_status: draft
+  - path: priority.scope
+    translation: 实际执行操作，而非仅描述提议工作的系统。
+    source_fingerprint: sha256:97551c8be761b8384b173ca729f9dc8853367398e8456b0df1e25b26d486cdb8
+    review_status: draft
+  - path: priority.rationale
+    translation: 能够采取行动的系统必须区分提议意图、已尝试操作和已确认影响，才能如实报告进度。
+    source_fingerprint: sha256:5ccb89e2dae107880673a6dadb1aac43f14ada45f7b0ab497f4c121bd01c70e7
+    review_status: draft

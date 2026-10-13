@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: session
+units:
+  - path: summary
+    translation: 具有身份并保留进度，在时间上串联各项操作的任务生命周期。
+    source_fingerprint: sha256:926cd045df72f7ee482e286365284d8c464e7471dac7fe1e68f168f1b6867ac2
+    review_status: draft
+  - path: scope
+    translation: 长期运行或可恢复的智能体任务；本条目采用持久任务会话的解释。
+    source_fingerprint: sha256:5fdebd31e06de094fafce04db62a15029b40ce709224343b9712a7f2fb6cfa67
+    review_status: draft
+  - path: usage
+    translation: 将任务身份和可恢复进度与当前模型输入分开。
+    source_fingerprint: sha256:acdd1c9d29182279cc7e72cb34d34012a42a281608eef720ef2d731ab45cda1a
+    review_status: draft
+  - path: distinctions
+    translation: 会话是生命周期容器；上下文是当前输入。并非每种实现都使用事件日志或支持持久恢复。
+    source_fingerprint: sha256:071f75eb9b7d1a13bde9908eca03cff13983640d5125f8a365be85ac459e4fea
+    review_status: draft
+  - path: composition.pattern
+    translation: 会话身份 + 已保留状态 + 事件历史 → 恢复
+    source_fingerprint: sha256:e4132d2627e39a9191355d680d5738a67f6c7efa82dc44dcb5957d7870f75946
+    review_status: draft
+  - path: composition.example
+    translation: 研究任务中断后，使用已接受大纲、已完成搜索和待办工作恢复。
+    source_fingerprint: sha256:903042af02087938ff1e398e7e8af0987e098ea3d81e6abaa9e60b53d3fd5dab
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 会话
+    source_fingerprint: sha256:ce3c68171316c45a02af8bec06e8b7f9675665c61202a9537d0c4f34dc6f429e
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 具有身份和已保留进度的有限任务生命周期，使相关交互和操作可在时间上协调。
+    source_fingerprint: sha256:bd8dba4a3cfe37deb7e35d77b6239b6b196f15335034e3d98e81481a0ef91676
+    review_status: draft
+  - path: considerations
+    translation:
+      - 不应在每次模型上下文中复制完整历史。
+      - 明确会话状态的保留规则和并发责任归属。
+    source_fingerprint: sha256:c5ff8516b1e2dbd37ba9d5d0fd7a3794d9b6268ca911c5ee26edc9db94cd145d
+    review_status: draft
+  - path: ownership.rationale
+    translation: 持久记录和生命周期管理在多次交互之间保留身份与恢复点。
+    source_fingerprint: sha256:f25a826e591c2b1b47a899c13f539aca16088f4b3fc88dd0e508aea46eabce82
+    review_status: draft
+  - path: priority.scope
+    translation: 长期运行或可恢复的智能体任务；本条目采用持久任务会话的解释。
+    source_fingerprint: sha256:8761c27c00fa9e07c8a6e0e55a41be217c2b6b1af5f504f6192f636d794b4ee7
+    review_status: draft
+  - path: priority.rationale
+    translation: 长期运行或可恢复的任务需要明确的会话身份和生命周期规则，以保持单次模型交互之外的连续性。
+    source_fingerprint: sha256:b79765a13d15adf242004b1c8d6787b00b220e403b393c3f27393546167f059a
+    review_status: draft

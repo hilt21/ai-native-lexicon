@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: feedback
+units:
+  - path: summary
+    translation: 返回并影响后续决策的操作结果信息。
+    source_fingerprint: sha256:8382cb7ba7cfd63d186b5c7bfe5d77d60231b86e343a177395f9ff3692593208
+    review_status: draft
+  - path: scope
+    translation: 操作结果可以影响后续决策的系统。
+    source_fingerprint: sha256:87f44795a7650540b35a5d2be7621cf4af9e6d1bd85a5c9630ab92de5efc69d8
+    review_status: draft
+  - path: usage
+    translation: 使用相关结果信息，闭合行动与调整之间的反馈回路。
+    source_fingerprint: sha256:47cb00a6fcd00f2b32a5eef94aa77234f7c031ecf515ecd202c936a2f401ebe8
+    review_status: draft
+  - path: distinctions
+    translation: 观察信息进入后续决策后才成为反馈；仅收集日志无法闭合回路。
+    source_fingerprint: sha256:0d183d265ea93e786f7fd2099214aaac5d2fe155432be3083912662d6c01f54a
+    review_status: draft
+  - path: composition.pattern
+    translation: 执行 → 观察 → 反馈 → 调整
+    source_fingerprint: sha256:c12b95c76aac684b25e4ae9ff9ed03257c638e558f6869a5c18968eed684ac4a
+    review_status: draft
+  - path: composition.example
+    translation: 编码智能体读取失败的测试结果，修改实现，再次运行相关检查。
+    source_fingerprint: sha256:14a4f9aa3d11fcb9387f251206535754109408b5dd3e4f6688527f5059188a8e
+    review_status: draft
+  - path: considerations
+    translation:
+      - 优先使用结果证据，而非自报的信心。
+      - 放大纠正动作前，应考虑延迟和信号噪声。
+    source_fingerprint: sha256:d44fa83a788a72f8e4a8f54a0f0799c8eb540ea200dd027fcf64a584b1a9a42d
+    review_status: draft
+  - path: ownership.rationale
+    translation: 检测与记录机制提供结果；代码处理明确响应，大语言模型解读范围受限的语义反馈。
+    source_fingerprint: sha256:bd4d4b62c79c6023a5dd96b9da9fedfbb17fb5add5aba8308221ce6795775011
+    review_status: draft
+  - path: priority.scope
+    translation: 操作结果可以影响后续决策的系统。
+    source_fingerprint: sha256:80fce30ad1d36c5012249d2146c77e3f75793d38a1264fad9184b43f7d85ea3f
+    review_status: draft
+  - path: priority.rationale
+    translation: 系统只有让实际结果影响后续行为，才能可靠地纠正自身行为。
+    source_fingerprint: sha256:3973d7659eca2e3e09a8f0808bd554f4b2c55f730041890041611e3e8b2e1e61
+    review_status: draft

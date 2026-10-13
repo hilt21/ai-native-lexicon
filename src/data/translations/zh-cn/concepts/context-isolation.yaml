@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: context-isolation
+units:
+  - path: summary
+    translation: 避免无关任务混用信息。
+    source_fingerprint: sha256:3b6975bea4d4527c3a135765d22c39a4a58bd52bfc2b965e942860944fd518d8
+    review_status: draft
+  - path: definition
+    translation: 上下文隔离将不同任务或角色的工作信息分开，减少无关假设相互泄漏。独立对话有助于隔离，但对话独立本身不会隔离文件、凭据或权限。
+    source_fingerprint: sha256:befa14d948ed1af63b5ab32bcaeeabeffb6d7899b72b4199cc8afce75ea789b9
+    review_status: draft
+  - path: why_it_matters
+    translation: 任务隔离可减少误用其他任务的指令、私密信息或未经验证结论。
+    source_fingerprint: sha256:ce416dd49a3ddf9114ff0b5cfc3a8ee224e72edad1b0349a394fb8b8f422b74b
+    review_status: draft
+  - path: when_to_use
+    translation: 不同智能体分析不同客户或独立工作流时使用。
+    source_fingerprint: sha256:3d7601bd9b11b86fabdb0f331aa27ad530d56000919badf12aa788e58a3d1d54
+    review_status: draft
+  - path: anti_pattern
+    translation: 假定聊天历史分开，就能阻止智能体读取同一个未受限制的存储。
+    source_fingerprint: sha256:40dac6a88228c9626b0b695835ef3c19b5a4143999119bf13dbb645bcd36428c
+    review_status: draft

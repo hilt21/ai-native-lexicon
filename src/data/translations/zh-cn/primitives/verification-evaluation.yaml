@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: verification-evaluation
+units:
+  - path: summary
+    translation: 依据选定证据和标准，检查具体要求并评估更广泛的质量或性能。
+    source_fingerprint: sha256:07c3e3feb6e5202e2da186078e01b20a0a74583cc31e6c984d9ac3f3a84965d0
+    review_status: draft
+  - path: scope
+    translation: 需要对单个结果或整体质量作出有依据判断的系统。
+    source_fingerprint: sha256:dfa9fd9a9753b669f64e9263dd3431f91fd7639237843bb338dfd976e03ca12e
+    review_status: draft
+  - path: usage
+    translation: 在宣称成功或采用变更前，将证据与明确标准比较。
+    source_fingerprint: sha256:a4f070a75a4c35d0432216a4a995da7f19084a1271c540f4ca6bf1de8bdfed36
+    review_status: draft
+  - path: distinctions
+    translation: 验证检查某个具体要求或结果；评估按照选定方法判断质量或性能。
+    source_fingerprint: sha256:2fd9df7b19e9cff514dc7447bd109bbe0026baf1fd41ac1f36688ad1c80739b8
+    review_status: draft
+  - path: composition.pattern
+    translation: 证据 + 标准 + 不变量 → 判定
+    source_fingerprint: sha256:b7e2baec0daaf050dfd6c1f16560c6885a8449c0fea4a841845719a155de79a1
+    review_status: draft
+  - path: composition.example
+    translation: 报告流水线通过机械检查验证必要来源链接，并在代表性查询集上评估答案相关性。
+    source_fingerprint: sha256:d9ef232fd94bf4655fac6a9d01e2119280f2e8c47d3c8a6701e865728026c7c1
+    review_status: draft
+  - path: considerations
+    translation:
+      - 通过结构检查不能证明语义正确。
+      - 汇总质量分数无法验证每个单独结果。
+    source_fingerprint: sha256:c1b6ec16ca4336b32d05173c252a2c56ede0183f4fcd3e23d3ab4bc3dc013a8a
+    review_status: draft
+  - path: ownership.rationale
+    translation: 代码执行形式检查；大语言模型可按照明确标准、证据和适当审阅协助语义评估。
+    source_fingerprint: sha256:c089ee7da08884adea7584cfadfff69cd3e64527dc465219d30fc4cf8b68d9b1
+    review_status: draft
+  - path: priority.scope
+    translation: 需要对单个结果或整体质量作出有依据判断的系统。
+    source_fingerprint: sha256:e994278bd06c45f7e669457341aad191d2363c9f034281b230794285af021aa3
+    review_status: draft
+  - path: priority.rationale
+    translation: 系统需要明确的结果判断依据，避免把看似合理的输出和汇总分数误当作已验证成功。
+    source_fingerprint: sha256:49414398c4ba5cb31b10382547e3ab448613cb605fec90ff35e4155999c23530
+    review_status: draft

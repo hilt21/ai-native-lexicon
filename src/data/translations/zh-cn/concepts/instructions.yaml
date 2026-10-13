@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: instructions
+units:
+  - path: summary
+    translation: 说明智能体工作时应遵循的规则。
+    source_fingerprint: sha256:9e13063181e57b2bb3a58eab0eafea774ded3fa585c0a292e9cae0f43776e7c1
+    review_status: draft
+  - path: definition
+    translation: 指令规定智能体应如何行动，包括约束、优先级和输出要求。它可以跨任务生效，也可以仅针对一个请求；描述性来源材料不会自动成为指令。
+    source_fingerprint: sha256:8e876801b31cbe61662dc6a75d90520353e3d8db6debc32b2b7bd852a4a35194
+    review_status: draft
+  - path: why_it_matters
+    translation: 明确规则使要求可复用，也帮助区分已授权行为与检索材料中的文字。
+    source_fingerprint: sha256:9d4cd143e413b71eb5f2c50877bcc02ba4c9b5ba31272230983bc65665f433a2
+    review_status: draft
+  - path: when_to_use
+    translation: 要求提供引用、限定编辑范围或制定团队审查要求时使用。
+    source_fingerprint: sha256:c0e501a155f71ef947ae9c84a876e7ff62d1d16c675bc0749e5da056d7af27d6
+    review_status: draft
+  - path: anti_pattern
+    translation: 把不可信文档中的命令当作已授权的操作规则。
+    source_fingerprint: sha256:e5df17ae3beb33918ed4ef03fd3ae4fb594176fa812eba1284375840424997ba
+    review_status: draft

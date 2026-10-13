@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: working-memory
+units:
+  - path: summary
+    translation: 保留当前任务所需的信息。
+    source_fingerprint: sha256:9bd452f259f8eee69b76bb519bf0cbd7d84d64913e1a6d66af95db06ce87232b
+    review_status: draft
+  - path: definition
+    translation: 工作记忆保存任务执行期间需要的事实、中间结果和未决事项。它可以位于活动上下文或外部工作笔记中；它不会自动成为供未来任务使用的持久记录。
+    source_fingerprint: sha256:1825e7f1b4c5a76db0888005f075512c1476004992b4dbf32236a433de453902
+    review_status: draft
+  - path: why_it_matters
+    translation: 简明地保留当前情况，可避免在长操作序列中重复调查或遗漏待履行事项。
+    source_fingerprint: sha256:bf61fa2254d33c190afcf929ac17982f198557a56ad153244f7ab938f6a7e76b
+    review_status: draft
+  - path: when_to_use
+    translation: 调试时跟踪假设、已完成检查和下一个未解决问题时使用。
+    source_fingerprint: sha256:dd73632fd42064857ef12f87a6a2ab596eec1840394eb444ff6a142b2539b12a
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅用完整对话表示当前进度。
+    source_fingerprint: sha256:5855ce3adbf610c399b687c430762881642a9b4659f0248b837f6e72df725344
+    review_status: draft
