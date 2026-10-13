@@ -6,42 +6,52 @@ units:
   - path: summary
     translation: 关于实际条件或结果的信息，以及让长期运行过程可检查的关联记录。
     source_fingerprint: sha256:5cce037ebd3105c570e30e91fd171e55c09fabd6e2bd130d0c399c5d11bc4e03
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 需要单次操作及长期运行实际行为证据的系统。
     source_fingerprint: sha256:57b4cc46051c3462462762265f9c4b86194e1010551263459dd3383144d9fa08
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 记录结果及其关系，以便重建故障过程。
     source_fingerprint: sha256:7d1f85f2762f7e05f676a4b491f37222e7afb4ab54357138589b2ae08c050f1c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 观察记录结果或条件的信息；追踪串联一次执行中的记录。两者都不会自动证明某项主张。
     source_fingerprint: sha256:5b16c70297761130151bf7fdefdda2ceaa0f2539d6954dcbc4d857ea8622a685
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 执行 → 观察 + 追踪 → 证据
     source_fingerprint: sha256:4b425ef5183db20e70a936e71af179ebba791e6e32f9867e4a029fb4d2d66a16
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 工具调用记录请求 ID、结果、耗时和父任务，以便检查失败的运行。
     source_fingerprint: sha256:cfcd6c47a9cd58cbcd60455636500542a883760feb866c27ece6b1284a3a748b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 日志可能不完整、经过采样、延迟到达，或包含敏感内容。
       - 记录足够的身份和顺序信息，以关联相关步骤。
     source_fingerprint: sha256:84ed11490b10dffab75404d152cbe447f65bdbe9f5f7873c8ca4142d6391cb25
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 检测与记录机制、日志、指标和追踪存储独立于模型描述捕获行为。
     source_fingerprint: sha256:3fe63958b3c36b706586e157e4eb906b72435e88e64d52b0ce01f2a915d387cb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 需要单次操作及长期运行实际行为证据的系统。
     source_fingerprint: sha256:3f3838c1add01e72e367a3ce55a6910738e411dbe196fddcbf6d095f9d9c7278
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 实际行为必须可观察，才能诊断故障、检查完成情况，并重建结果的形成过程。
     source_fingerprint: sha256:6a1b0e33122a62e1cace3caccb9b950331b8d606fad8c15043ee8c6e2f745c99
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

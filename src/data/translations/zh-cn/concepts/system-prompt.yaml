@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 定义智能体的基本行为和操作规则。
     source_fingerprint: sha256:3a19eafc35699ad0165bd54dadd232ba382e4f871f289d7af69387f1e75289b1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 系统提示是通过模型接口的 system 角色提供的消息，用于指导通用行为。其优先级取决于接口；处于该角色的文本本身不会强制执行访问权限。
     source_fingerprint: sha256:4e2636ccd00ccdee45b9e3b8fe2824593d5336c529a9e13f028a15b0f16d2363
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 将基础行为与任务请求分开，可降低维护智能体角色的难度，同时保持执行约束的责任明确。
     source_fingerprint: sha256:331fbd2f0d40b039cb14da265088b084297a38170d1fe20b34cc01f1dc66ca7f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 定义客服智能体的职责范围、响应风格和不支持请求的处理方式时使用。
     source_fingerprint: sha256:5aa90bf1e5a5ad4a1d69d5e15f3c79015d29039260ce7d7591573bad0f226a91
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 将秘密或访问控制放入系统提示，并假定它们已受到技术保护。
     source_fingerprint: sha256:2324b57da09344e1a28a07e762247bc2e2f7033f7f630d7d9acf4fd1f3c2e337
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

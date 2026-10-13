@@ -6,42 +6,52 @@ units:
   - path: summary
     translation: 当前推理或决策过程能够直接使用的信息。
     source_fingerprint: sha256:4d22fca70e446613d2710a66a3d4a537ba350957b1bdb6fe146e05a9b42439b2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 直接可用信息范围有限的 AI 推理和决策过程。
     source_fingerprint: sha256:b0fea9b5403e28d642629a0b915d7fedfe2e0cc2293311374e76deadccae2cf5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 提供当前决策所需的事实和指令，避免向推理过程灌入过量信息。
     source_fingerprint: sha256:545b7a691bf786a724146f4322fe683ae7ef5faab1f3c51bc344061900da080f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 上下文是当前可访问的信息；记忆保留信息以供后续检索；状态保存权威的当前事实。
     source_fingerprint: sha256:09fe965beead72f2a0accb70444544a2d65081f195d421a95bee98dd16bc19b0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 状态 + 检索到的记忆 + 任务 → 上下文
     source_fingerprint: sha256:4bbc7d22f7702c79a8e76aa87c75334aff8dd4492d50df93b921c9137a74c8ec
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 编码智能体获得相关函数、当前失败信息、已接受约束和最新测试输出。
     source_fingerprint: sha256:ecacb5e488b782cbe2987e27bb87ab4b96c431a45e75a4c539d7468fc0d9af5e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 信息可用不代表它真实或具有权威性。
       - 保留来源身份，并将外部内容与指令分开。
     source_fingerprint: sha256:59cbdb7c0d27bb32f2f8db13e6a302d61ccf79f1a8c902bebd876afd7688ce03
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 软件选择并限制输入；大语言模型可协助判断相关性，并提供具有可追溯引用的摘要。
     source_fingerprint: sha256:d6a930cce20a3fa4f52fb993e2c074a82ec5719d1a734b10d6b3fd9c8da28f9f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 直接可用信息范围有限的 AI 推理和决策过程。
     source_fingerprint: sha256:251a1474565a92120259c99c7d2bb674b402ae95455867768d6bb7f49cae4246
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 推理过程无法使用不可用的信息，因此设计须明确输入选择和权威性。
     source_fingerprint: sha256:f85b777cbf4f5af5f1f2f8622a0d0eb28c4a3a6a8544e0a9abcbb390e1a0b8a0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 信息、含义或可选路径尚未完全明确时，形成解释并作出选择的过程。
     source_fingerprint: sha256:772a75d1200d192494486580dc49f4054f8738b445ef6e7a719452f799ac4735
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 处理语义歧义、不完整信息或开放选择的 AI 智能体系统。
     source_fingerprint: sha256:221f5e7e39cc33d066c419e19776ea9ae041ce2883abda61c612f2dab05758a1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 当选择有效操作需要超出固定规则的解释时，使用模型推理。
     source_fingerprint: sha256:f5f09fa8ceba0b338746d9b4779644878e241a40dffa89af74a50f28e3db0117
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 推理提出方案或解释；执行产生影响；验证检查主张。大语言模型之外也存在形式推理。
     source_fingerprint: sha256:4a3502ddc4dc57579ebf1d8cc86dae798023847f46684edf5dcf3369dbbbf9eb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 上下文 + 目标 → 推理 → 提议计划
     source_fingerprint: sha256:eee76915848a6147d456715a1ccc68f5e79aeb6622b1863cb09fbf73403b9503
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 调试智能体比较症状和代码，提出下一步应检验的假设。
     source_fingerprint: sha256:74f18d252c72bb864a3abf407b2c6b81f4b2ebe15c5e3b22ed4b118ee70630dc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 推理
     source_fingerprint: sha256:c8fa39993336d2b551f2ed10eb5b80edb58ab82684d3d52e0905e24c009b208b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 基于可用信息形成解释并选择可能方案的过程，尤其适用于含义或路径尚未完全明确时。
     source_fingerprint: sha256:4419902e14d89badb92244a1a88ee9e3cad35f36f3b8d312aaa599492d8c4502
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 生成的解释可能看似合理但实际有误。
       - 决策已完全明确时，使用固定过程。
     source_fingerprint: sha256:f29b00f9905a3c79a9626fa20f336060db24af314fcabf907980a382f22fa496
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 大语言模型适合开放式语义推理；其结论仍是提议，在产生重大影响前需检查。
     source_fingerprint: sha256:3eca3024100ea7a7913eb5c8052a96b1956ac7cd344816d972cf384f3c44217b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 处理语义歧义、不完整信息或开放选择的 AI 智能体系统。
     source_fingerprint: sha256:d9e9d01256d42cc2202978eb6c3f9ce1dfd73c1a7793c6a9e59a47f3b9d3003e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 开放式 AI 智能体任务需要明确推理责任，以处理固定规则无法完全规定下一项有效操作的情况。
     source_fingerprint: sha256:8d325bd5641faf8395b3592d54b56c6bcd09dff192b1bb7a886a39e3cfdc2349
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

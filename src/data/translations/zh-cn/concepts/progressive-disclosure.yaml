@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 仅在当前工作阶段需要且能够使用时，提供指令、证据和工具。
     source_fingerprint: sha256:dcb47d44d1db3006233662591e28979751aac26a542625b8542a95d9c9da2515
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 渐进式披露按阶段组织上下文，避免启动时加载全部内容。系统先提供方向和决策规则，再在能影响下一步行动时检索详细过程、示例或工具 schema。
     source_fingerprint: sha256:05cc01242a829cf1a014c4218a03e37e2885262aea96be6d854adcd6c6010dd1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 分阶段提供上下文能减少干扰和令牌压力，同时保留获取深入内容的途径，也让决策来源更容易检查。
     source_fingerprint: sha256:d1071fa64ed440ec8478adf8d11bfb390f239d175ab61dd3691c573570a3c12e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于大量指令、专用工具、分支工作流，或相关性差异较大的知识库。
     source_fingerprint: sha256:ab6eed5919c36bb40b949721d00b5bdc3336c9c9aba477f2278a48f95b2b7db9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 直到智能体已经决定执行操作后，才披露关键安全约束。
     source_fingerprint: sha256:4eeaed7538637f42a4ef6b823421e447b62b54a63e0bb5331c0bb185d02b7fec
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

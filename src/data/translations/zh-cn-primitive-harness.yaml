@@ -16,34 +16,42 @@ units:
   - path: usage
     translation: 通过可检查的状态和结果，将推理连接到范围受限的执行。
     source_fingerprint: sha256:9256dea7f5d68b04d7d70d793a6f60073619a6d1d9bcd47a0cd2398702e74bb9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: Harness 是 AI 运行时的协调层，其含义不涵盖全部运行时、框架或工具集合。
     source_fingerprint: sha256:463b81b641dc936e6024e2169b42b0d9e2212856baa1493e5c3b8d8d63eaea54
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 上下文 + 推理 + 工具 + 权限 + 验证 → 智能体运行
     source_fingerprint: sha256:c4cfe46824588c7ffbbec11ef0bc3ba518784f3eced83748ba1974b60d885f20
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 编码运行时提供相关文件、执行获准工具、记录结果，并检查完成标准。
     source_fingerprint: sha256:a1270e6b30db6d653840bc7bfc233eb63cec973f6bad725005abd9f8c21411ae
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 控制层应足够小，便于检查和替换。
       - 当证据表明不再需要针对特定模型的变通措施时，删除这些措施。
     source_fingerprint: sha256:ad1bec37d27e1597b54bd70138e0f1859544ee3b714e424395b4aeddeda438a8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 代码负责状态和执行约束；模型在协调后的运行时中提供范围受限的推理。
     source_fingerprint: sha256:e59b12e98442620e77171508b0652a58bb5344f2f42f77f5355903eeb074d954
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 协调模型推理、工具、状态和操作控制的 AI 智能体运行时。
     source_fingerprint: sha256:701bdfcecec02617fd75be73f2cc8174276d9020305ab82e54558244cc432c2d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: AI 智能体系统需要明确的运行时主体负责协调和执行约束，这些责任无法仅交给模型输出。
     source_fingerprint: sha256:1ee760caae7fb8f9b9a1c43b52a0a27ab21523f4e20ac8622213d890d2773d68
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

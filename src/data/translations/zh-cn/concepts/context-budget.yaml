@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: AI 系统为某次决策可分配的有限注意力、令牌、延迟和检索容量。
     source_fingerprint: sha256:a808796b5a19219bea3987309e7b03a1e65b0d21d1a01f004761471aae4c7325
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 上下文预算是模型能够有效使用的信息量的实际限制，范围不限于标称上下文窗口大小。它考虑令牌数量、信息位置、相关性、相互竞争的指令、延迟，以及模型找回重要事实的能力。
     source_fingerprint: sha256:01388bb008769d9effbd519f6ab7fc68ca5c81b39b4b37be529c5061c27962cb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 每条新增信息都会占用注意力并增加成本。明确预算会促使团队对证据排序、压缩历史，并让关键约束保持可见。
     source_fingerprint: sha256:9cbbda3d4aee21edcdbf852d4e20e1084c8a5f1d6c04170863eb5b4dcda9bfb9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 设计长会话、多文档检索、智能体交接，或具有严格延迟和成本目标的系统时使用。
     source_fingerprint: sha256:85b0b275068d85132bc6130193ade7b9c7b80aefd48f8770acc3bd5a7ec5c770
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 因为未使用的令牌看似是空闲容量，就把可用窗口填满。
     source_fingerprint: sha256:7e95fe148e0127c49f6ae3df688986782f41040ec03e7eef14cad11ccd2253ba
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

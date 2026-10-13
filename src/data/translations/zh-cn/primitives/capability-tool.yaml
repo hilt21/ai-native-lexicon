@@ -6,52 +6,64 @@ units:
   - path: summary
     translation: 产生结果的能力，以及使该能力可用的可调用操作。
     source_fingerprint: sha256:01e98b4c6abe7d7310c92230be4a1c5cbd9ab51e75e4a718caeca24f4e04c2b9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: scope
     translation: 通过明确能力和可调用操作采取行动的系统。
     source_fingerprint: sha256:4b2d4e57d86802ef8f077488b55901e9454214fc553def8f043aeb6033c49e19
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: usage
     translation: 提供范围受限的操作，并明确输入、影响和可观察结果。
     source_fingerprint: sha256:277c476622ac73d6bdcd771554ba4b8b3ee7a70f166298c3e5fe4021b54b3bc3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: distinctions
     translation: 能力描述能够做什么；工具是实现某种能力的可调用接口。技能无需是可执行工具。
     source_fingerprint: sha256:5418017d7fa95ebea660b909cfeafe83d22c5ee21b5da7cc98512fc6260bb232
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.pattern
     translation: 推理 → 工具输入 → 执行 → 证据
     source_fingerprint: sha256:838da9de8fe4bc1003b9dbbbe57b7ff7a7e39a547789375fd7b43cf667c37c8c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: composition.example
     translation: 文档智能体调用搜索工具，返回带标识的来源片段，无需获得不受限制的数据库访问。
     source_fingerprint: sha256:6bd7d2c8b71acbdd86317e14710b310eb0e6f235625bf17972eb554cba23b552
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.name
     translation:
       - 能力
     source_fingerprint: sha256:72ddd56d3f6acc7a2fab048ca26a68cdae43b86eedd4ba595a1e2fe427673015
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definitions.text
     translation:
       - 在规定条件下产生某类结果的能力，可由人、模型、过程或工具提供。
     source_fingerprint: sha256:a428e6992ea77f513988218bc654cdd49c660cc8c618ee6684c3564a258ed438
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: considerations
     translation:
       - 具有能力不意味着具有权限。
       - 工具执行可能失败，也可能产生不确定的外部影响；应明确这些语义。
     source_fingerprint: sha256:8104178bf38e1e82fe9220a77c4dca35a4932001f173fad017df3ff349f11f7a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: ownership.rationale
     translation: 运行时实现执行可调用操作并报告结果；模型可以选择工具，但不会因此成为工具的授权主体。
     source_fingerprint: sha256:0c380c6d2cc66cb51503d2428437c9bd83445d9b6f27bfde7da7ae822a0ddc10
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.scope
     translation: 通过明确能力和可调用操作采取行动的系统。
     source_fingerprint: sha256:93f98ee3a181bc3f37611027b5b9cf13c226c7ebe0e222fa8da1762c81a3d1e4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: priority.rationale
     translation: 能够采取行动的系统必须先明确可用操作及其可能影响，再选择或授权操作。
     source_fingerprint: sha256:ce247a8f8bd2c5d5cad33c6879cb90732ac49eb912dad57fd801ca4f1716a30d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

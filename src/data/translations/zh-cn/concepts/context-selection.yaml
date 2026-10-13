@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 选择当前步骤值得关注的信息。
     source_fingerprint: sha256:22ad82e19790641ba3b3eeb39cd8f0d8eabe5e8f639b7cf75e6907daa028b85c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 上下文选择决定针对某次决策应纳入哪些可用信息。它权衡相关性、可靠性和成本，无需改写或删除底层来源记录。
     source_fingerprint: sha256:5f7f7b67972c69858d819541897c46fb7cc1052fde1be92ece8442a48e37c772
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 有选择地提供输入可减少干扰，并为可能改变下一步决策的证据留出空间。
     source_fingerprint: sha256:cea7f7afb75d47cc11891f00e274761120ef98660ace6c21f45ec8edaacee1d1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 只加载相关函数和测试失败信息，而非整个代码仓库时使用。
     source_fingerprint: sha256:faa4756b073937b76aaf76454675f146ad5c92fddef65c29157e6c57f378080f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 仅因窗口还有空间，就纳入每份检索到的文档。
     source_fingerprint: sha256:78b7d05b1458159072bd351c7bdb0c272b4a12e18b3f3a8b99ae990af4e719ad
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

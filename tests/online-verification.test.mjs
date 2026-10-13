@@ -4,7 +4,10 @@ import { createServer } from 'node:http';
 import { createInventory, verifyOnline, manualChecks, cssResources, inspectHtml, markdownReport } from '../scripts/verify-online.mjs';
 import { readCatalog } from '../src/domain/content/catalog.mjs';
 
-const inventory = createInventory(await readCatalog());
+// This seam deliberately tests unpublished fallback HTML. Editorial approval of
+// real records must not silently change the fixture's expected publication state.
+const catalog = await readCatalog();
+const inventory = createInventory({ ...catalog, translations: [] });
 const sample = inventory.pages.find((p) => p.path === 'zh-cn/concepts/mcp/');
 function html(target, expected, { badCoverage = false, wrongCanonical = false, asset = 'test.js' } = {}) {
   const record = expected.records['zh-CN'];

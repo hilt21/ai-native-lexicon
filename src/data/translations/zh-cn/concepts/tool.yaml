@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 提供智能体实际完成工作的能力。
     source_fingerprint: sha256:299f3ba3b75f8b1d153932658f63edf00e5ea11407a064af8406551f335eb672
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 工具是外部实现的能力，智能体可调用它获取信息或执行操作。接口定义输入和输出；运行时决定请求的操作是否执行以及如何执行。
     source_fingerprint: sha256:eb91186fad4bf6f3a33b5cdf71d6469a0138c8abb1887f61d679cc15f23604eb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 工具将生成的决策连接到模型文字响应之外的可观察信息和实际影响。
     source_fingerprint: sha256:c3cfffce20f898f4ef0287c51811499d7ba54ed45b1b94272f289f833bde9e02
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 读取文件、查询服务或执行限定范围的验证命令时使用。
     source_fingerprint: sha256:67930651b5cc3ed78efdfb2770a412736a71477c627cd49b17c1efa5f9929cfd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 假定模型描述了工具操作，就意味着操作确实已执行。
     source_fingerprint: sha256:58c3792923fdfbcecb9ea4160e8b7f68c41fd729d9c96733a865397bc08129e6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13

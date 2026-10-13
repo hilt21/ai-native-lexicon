@@ -6,20 +6,25 @@ units:
   - path: summary
     translation: 设计 AI 系统如何在不同时间跨度内记录、选择、更新、使信息过期和检索信息。
     source_fingerprint: sha256:fb15f62a1167c6ec57681366e3440d2914f442dd4c52fd35f3039cb7e5a4f01f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: definition
     translation: 记忆架构区分临时工作状态、事件记录、持久用户或领域知识，以及权威外部来源。它为每类记忆定义写入标准、检索策略、来源追溯、纠正和过期规则。
     source_fingerprint: sha256:8347520d44f2ef622081cc8170bd89a563dbbb383098b09522ff6503724616ce
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: why_it_matters
     translation: 缺少结构的持久存储会累积过时或敏感数据，完全不保存又会导致重复调查。记忆架构让保留信息具有选择性且可追责。
     source_fingerprint: sha256:297ef9cd67b7a42f966f1d93a3f62b1cbd56cab08184002ac1403cb251c4854b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: when_to_use
     translation: 用于助手、重复工作流、个性化、组织智能体，或持续时间超过一个上下文窗口的会话。
     source_fingerprint: sha256:b1a66f8496b78e5eb3c2c0a4dc0ed5481dd053ec5c0706b40cd937893dcc6622
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
   - path: anti_pattern
     translation: 把所有对话片段放入一个向量索引，并将其称为长期记忆。
     source_fingerprint: sha256:f4846970ad1353e1c494d4e139e803d89775538865e8747ca3c9773b332b53d8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-10-13
