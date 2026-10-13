@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: trace
+units:
+  - path: summary
+    translation: 保留智能体可观察行动的记录。
+    source_fingerprint: sha256:09281b9a4462b66bca20346d4bcaed675a5ba8bfbafa9b7cea3f1aeb2e632bec
+    review_status: draft
+  - path: definition
+    translation: 追踪记录可观察执行事件及其关系，例如工具请求、结果、耗时和状态转换。它支持行为调查，无需暴露或重建模型的私有推理。
+    source_fingerprint: sha256:36ad62bc9c927729f5407ea4e77ac8df2bc8b7c73defbe00fc848d8cc3d8c8cd
+    review_status: draft
+  - path: why_it_matters
+    translation: 相互关联的事件记录让故障定位更容易，也让最终结果能与产生它的操作相联系。
+    source_fingerprint: sha256:641e543d2f02c5fcd0fe712211ef69750a1b37d2c0cd2de1031209ca687a62ec
+    review_status: draft
+  - path: when_to_use
+    translation: 调查多步骤运行中哪次工具调用引入错误值时使用。
+    source_fingerprint: sha256:c1421956a43d2d423b07e84b2d695bbc29ae8f2064f3a1d2ccdc2fb5115b8d8e
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅记录最终答案，并称其为完整执行追踪。
+    source_fingerprint: sha256:497e7d15fe8debaede7b15f9c368d86d1f82a75b45400137ec0135847c02358d
+    review_status: draft

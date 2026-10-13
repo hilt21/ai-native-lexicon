@@ -1,0 +1,31 @@
+title: pr
+summary: Write a PR body that makes risk and evidence quick to assess.
+type: discipline
+status: active
+layer: discipline
+primary_cluster: delivery-human-loop
+secondary_clusters:
+  - architecture-quality
+tags:
+  - engineering
+  - model-invoked
+  - stable
+mechanism: Organize the problem, change, a minimal visual and explanation, before/after verification evidence,
+  reversibility and affected scope. The output is a PR description. This reference does not authorize
+  creating, publishing, pushing or merging a PR.
+when_to_use:
+  - Write or update a PR body.
+solves:
+  - Present the PR as a decision and verification briefing.
+  - Put merge risk and evidence where the reviewer can find them quickly.
+inputs:
+  - diff
+  - verification evidence
+  - risk context
+outputs:
+  - PR body
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/pr/SKILL.md
+handoffs: []
+official_description: Use when writing a PR body.

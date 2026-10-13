@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: memory
+units:
+  - path: summary
+    translation: 保留到当前步骤或会话之后，供后续检索和复用的信息。
+    source_fingerprint: sha256:69d1fafa82d38e0ba65717800ad8b5dfd176694068df62356e0ea0c2159a624e
+    review_status: draft
+  - path: scope
+    translation: 后续决策可从以往经验或已保留事实中受益的任务。
+    source_fingerprint: sha256:012556c098bf1efd6bf7227c5d267131cfaba0aab3038885836bdda2333086c7
+    review_status: draft
+  - path: usage
+    translation: 在活动上下文之外保存有用经验，并在相关时检索。
+    source_fingerprint: sha256:795ea8fcf5b0bae13c6b0a3476a61ab9fb9cf1d41075082f8a0dba5e8d9c3615
+    review_status: draft
+  - path: distinctions
+    translation: 记忆是已保留的信息；上下文是其中当前可供推理使用的部分。工作记忆与长期记忆的区别在于生命周期和用途。
+    source_fingerprint: sha256:d68e9f7b715cc24e6a04f810aa585ce51f4821c6af45e90829dbaf07100b056d
+    review_status: draft
+  - path: composition.pattern
+    translation: 经验 → 记忆 → 检索 → 上下文
+    source_fingerprint: sha256:a96e719b16803256b60686825cc6d74c0f84300d43608f3cece5843ae9b6bd03
+    review_status: draft
+  - path: composition.example
+    translation: 研究助手保存已接受的术语决策，并在起草后续报告时检索。
+    source_fingerprint: sha256:a1da0f54d11b086ce7f747bd757ce7fcff3f8db0daf6b66098323302e041bb09
+    review_status: draft
+  - path: definitions.name
+    translation:
+      - 记忆
+    source_fingerprint: sha256:2432b570463ab9bad76cb608d6c035fda0994b523c59ca478cc33399668bc578
+    review_status: draft
+  - path: definitions.text
+    translation:
+      - 跨步骤或会话保留的信息，可供再次检索和使用。
+    source_fingerprint: sha256:0670d4aadf210988e2f1f7dc6ac3969a2c506e5a6aa315f928befd3c1ebfb824
+    review_status: draft
+  - path: considerations
+    translation:
+      - 保留的信息可能过时或有误。
+      - 制定记录更新、来源追溯和删除规则，避免无限追加。
+    source_fingerprint: sha256:87e8602f83edf38f09435b0a984cd80e657795284d186059a4bc84eaf0fe59bb
+    review_status: draft
+  - path: ownership.rationale
+    translation: 存储和检索机制保留记录；大语言模型可提出摘要和相关性判断，随后需经过审阅。
+    source_fingerprint: sha256:de549a8f1f0f630fd6ddba137dd3193524e7961ca93a43bf7e6c56fb849ac309
+    review_status: draft
+  - path: priority.scope
+    translation: 后续决策可从以往经验或已保留事实中受益的任务。
+    source_fingerprint: sha256:dd210f20f78227007d7dde1cc43039c636f70a66272789452508bbc9b9c9a310
+    review_status: draft
+  - path: priority.rationale
+    translation: 当后续工作需要以往事实或经验时，保留记忆通常适用，但需要明确的时效性和生命周期规则。
+    source_fingerprint: sha256:54448ffc44a0668b45ecfc80b02220475a7f7fe90446baa99b43eb2b8c67d2a1
+    review_status: draft

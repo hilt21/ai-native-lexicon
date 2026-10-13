@@ -1,0 +1,34 @@
+title: grill-with-docs
+summary: Clarify a design through sustained questioning while recording domain terms and ADRs.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: alignment-domain
+secondary_clusters:
+  - spec-planning
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: Use grilling and domain-modeling within one conversation to expose unresolved branches, agree
+  vocabulary and write resolved terms to GLOSSARY.md. Write an ADR only when the decision meets the source's
+  irreversibility, surprise and tradeoff criteria. Once the decision frontier converges, confirm the shared
+  understanding with the user before continuing.
+when_to_use:
+  - Start a new feature, design or important change in a repository.
+  - Apparently clear requirements still contain implicit choices.
+solves:
+  - Reduce requirements misalignment between the user and agent.
+  - Preserve domain knowledge from the conversation as project context for later sessions.
+inputs:
+  - Initial idea or design
+  - Current repository context
+outputs:
+  - Clarified design
+  - GLOSSARY.md updates
+  - ADR updates
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/grill-with-docs/SKILL.md
+handoffs: []
+official_description: A relentless interview to sharpen a plan or design, which also creates docs (ADR's and glossary) as we go.

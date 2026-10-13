@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: long-term-memory
+units:
+  - path: summary
+    translation: 让有用知识可供未来任务使用。
+    source_fingerprint: sha256:0535a76f92a89a7f84975c046bcfd22e30f81d4e3c033bad7524285471f955ef
+    review_status: draft
+  - path: definition
+    translation: 长期记忆将选定信息保留到当前任务或会话结束之后，供以后检索。已保存笔记不会自动载入上下文，持久保存本身也不能证明内容准确。
+    source_fingerprint: sha256:bcecb17651bba86a8f76d2a3a1c1f5ed2b4c1912d539bea98f2c7b44ac1c3112
+    review_status: draft
+  - path: why_it_matters
+    translation: 可复用知识能减少重复工作，前提是系统检查相关性、时效性，并遵守用户对保留信息的预期。
+    source_fingerprint: sha256:0c5292d8d25593cf04637746d7f4f17bb4fb29942da868c12f3cf5580cfff8fd
+    review_status: draft
+  - path: when_to_use
+    translation: 保存已确认且后续会话还会用到的项目约定时使用。
+    source_fingerprint: sha256:2f1dba30faabb37b8207e7ed9695a435b3c24741a1ddd88c0e0e33c2ef50da38
+    review_status: draft
+  - path: anti_pattern
+    translation: 无限期保存每次交互，并把旧笔记当作当前指令。
+    source_fingerprint: sha256:5f18c98fa3f6a2293699268c602566ac5fb651afa30d28a5b32f14a7a8640d0a
+    review_status: draft

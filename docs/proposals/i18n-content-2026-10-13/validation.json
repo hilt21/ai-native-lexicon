@@ -1,0 +1,23 @@
+{
+  "base": "0d504d6222b0d721fa03dac93184068e74d29df9",
+  "newDraftUnits": 270,
+  "existingUnitsUnchanged": true,
+  "canonicalKnowledgeAndMapsUnchanged": true,
+  "readerTextAndPublicationEligibilityUnchanged": true,
+  "coverage": {
+    "concepts": {
+      "translated": 16,
+      "total": 426,
+      "missing": 270,
+      "draft": 140,
+      "stale": 0
+    },
+    "primitives": {
+      "translated": 2,
+      "total": 486,
+      "missing": 354,
+      "draft": 130,
+      "stale": 0
+    }
+  }
+}

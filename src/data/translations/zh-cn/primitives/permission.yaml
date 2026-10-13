@@ -1,0 +1,47 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: primitive
+target_id: permission
+units:
+  - path: summary
+    translation: 决定某个主体可以对哪些资源执行哪些操作的授权。
+    source_fingerprint: sha256:741f49fa2b54b5ecd206d59564613bf6163691078c9ab8a12fd0449f55bf8d72
+    review_status: draft
+  - path: scope
+    translation: 具有身份的主体可以读取资源、调用操作或改变状态的系统。
+    source_fingerprint: sha256:9980bbb2877eaeb73e9c56ca647a16fd90f7c82fd320eabff281638a590ee101
+    review_status: draft
+  - path: usage
+    translation: 明确授权，并在影响实际发生的位置执行授权检查。
+    source_fingerprint: sha256:37f1b7a2e4ec18f02f71e69440debd46385a38852066bde9132190d95e8431b7
+    review_status: draft
+  - path: distinctions
+    translation: 权限决定授权；护栏的控制范围更广，也可约束输入、输出、预算或行为。
+    source_fingerprint: sha256:aff2d94b2a1ac20fe81690bd9b2516f5ffada5729507f0e44c88b4094effdc9c
+    review_status: draft
+  - path: composition.pattern
+    translation: 主体 + 请求的操作 + 权限 → 允许或拒绝
+    source_fingerprint: sha256:580ebecc8419a42ca935aa8501463f8c570a9d3bd313a26588edaf156a28c542
+    review_status: draft
+  - path: composition.example
+    translation: 智能体可以读取仓库，但发布版本需要单独获准的操作。
+    source_fingerprint: sha256:f0b805bb8af1958199c4d5d0b8d98f91199812699815266d9aec9fb3c71c9e2d
+    review_status: draft
+  - path: considerations
+    translation:
+      - 模型输出无法给自己授予权限。
+      - 凭据范围应限定为实际需要的操作和资源。
+    source_fingerprint: sha256:9127c9abdd31b4ae24bdd97cec65ac38340f24e2ff7a3e5ce3c55055012b8f83
+    review_status: draft
+  - path: ownership.rationale
+    translation: 身份验证、访问检查和运行时执行约束决定哪些操作可以继续。
+    source_fingerprint: sha256:95061f1c6f61b61d1c120413f91c07a560fb145c670fbd2ffe64acd20e8ab6ce
+    review_status: draft
+  - path: priority.scope
+    translation: 具有身份的主体可以读取资源、调用操作或改变状态的系统。
+    source_fingerprint: sha256:20b5202fd49191a14fe4552cc58732d0baffbd675935d879c30fad11239174c9
+    review_status: draft
+  - path: priority.rationale
+    translation: 任何能够影响资源的系统，都必须在影响发生的位置区分可用能力与已授权操作。
+    source_fingerprint: sha256:e46d9b748c70251aa24e8f14ecb940e44eccb78793ed10e06d4e2edf3c0d4f30
+    review_status: draft

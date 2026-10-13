@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: guardrail
+units:
+  - path: summary
+    translation: 阻止智能体执行不允许的操作。
+    source_fingerprint: sha256:0f2e863418b87a67fe456a428a8cfa8dd237e7b521e020895579f54b958cdde4
+    review_status: draft
+  - path: definition
+    translation: 护栏是在明确边界上约束或检查行为的控制措施，例如验证输入或阻止工具操作。向模型提供建议性指令会有帮助，但其执行约束不同于运行时控制。
+    source_fingerprint: sha256:8b09b31ed31abdb74074150694a033367f7cab135aecbfb4f2ddb4ee8ddb1db7
+    review_status: draft
+  - path: why_it_matters
+    translation: 明确的控制措施可减少对模型持续正确理解并遵守全部安全或业务规则的依赖。
+    source_fingerprint: sha256:92c9950ff64cb48436283b9b568335a5ca7a0cfbf4eb3f6982bc0f778aa7a42f
+    review_status: draft
+  - path: when_to_use
+    translation: 执行工具前，拒绝超出允许资源范围的参数时使用。
+    source_fingerprint: sha256:8d4494205528c78f432231fbcf2b41cbd1b7480d93815e560bf0d85997993b8a
+    review_status: draft
+  - path: anti_pattern
+    translation: 仅依赖一句要求模型不要访问受限文件的指令。
+    source_fingerprint: sha256:e9d99cc26e78421b5200b5697d82c4f19fd12eade39e5e1a53413f1466650067
+    review_status: draft

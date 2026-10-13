@@ -1,0 +1,34 @@
+title: to-spec
+summary: Turn an already clarified conversation into a durable specification.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - alignment-domain
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, synthesize objectives, scope and decisions from the existing
+  conversation and codebase without restarting the requirements interview. Use agreed domain vocabulary and
+  ADRs. Propose a small set of existing test seams at the highest practical level and check them with the user
+  before publishing the specification to the configured tracker as agent-ready. Complete setup first if
+  tracker configuration is missing.
+when_to_use:
+  - The conversation has clarified requirements and needs a durable specification.
+  - A build spanning sessions needs a stable specification before implementation.
+solves:
+  - Reuse the completed discussion without repeating it.
+  - Turn fragile session context into a referenceable specification.
+inputs:
+  - Current conversation
+  - Project tracker configuration
+outputs:
+  - published spec
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-spec/SKILL.md
+handoffs: []
+official_description: "Turn the current conversation into a spec and publish it to the project issue tracker:
+  no interview, just synthesis of what you've already discussed."

@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: context-compression
+units:
+  - path: summary
+    translation: 保留重要内容，缩短信息表述。
+    source_fingerprint: sha256:25a25e543285997052d809c6c8a20a0120d088d3c8b56b0beba59f586399c579
+    review_status: draft
+  - path: definition
+    translation: 上下文压缩将工作信息改写或编码为更小的表示。有用的压缩记录会保留约束、决策、未解决问题和引用，但不能假定它保留了每个细节。
+    source_fingerprint: sha256:ed05f1df1c5f0ef3a0e58384b915ee19a4cdc0d3a7d0aad2cda0b6451e4d33d4
+    review_status: draft
+  - path: why_it_matters
+    translation: 长任务需要为新观察留出空间，同时保留决定智能体下一步行动的事实。
+    source_fingerprint: sha256:5055e772d8b11fc831e56fabf436b1b12a25578821baf6fa1ac72929a607fab6
+    review_status: draft
+  - path: when_to_use
+    translation: 总结已完成的调查步骤，同时保留准确标识和待办工作时使用。
+    source_fingerprint: sha256:e9c78bb92582979f64bed925a024ceca825ed79f368cd96dcc845023e60dadcc
+    review_status: draft
+  - path: anti_pattern
+    translation: 用无法支持下一步行动的含糊摘要替代精确要求。
+    source_fingerprint: sha256:839b76fa127a09eec505dd4a508b3f659a2d63266a116a9b35a1649a91549594
+    review_status: draft

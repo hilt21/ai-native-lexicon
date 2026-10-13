@@ -1,0 +1,37 @@
+title: to-tickets
+summary: Split a plan or specification into tracer-bullet tickets with blocking relationships.
+type: workflow
+status: active
+layer: workflow
+primary_cluster: spec-planning
+secondary_clusters:
+  - implementation-feedback
+tags:
+  - engineering
+  - user-invoked
+  - stable
+mechanism: After explicit user invocation, read the complete plan, specification, discussion and code. Create
+  vertical tracer bullets that each fit a fresh context and can be independently demonstrated or verified. Do
+  required prefactoring first; use the expand-migrate-contract exception for broad mechanical changes that
+  cannot remain valid slice by slice. Confirm granularity and blocking edges with the user before publishing.
+  Use one file per local ticket or the real tracker's blocking relationships, while preserving the parent
+  ticket. Generated tickets are already agent-ready and do not need triage.
+when_to_use:
+  - A plan or specification needs an executable backlog.
+  - Multiple agents should implement a larger specification safely.
+solves:
+  - Keep large tasks out of a single overloaded context window.
+  - Make implementation order and parallel opportunities explicit.
+inputs:
+  - Plan, specification or conversation
+  - Issue tracker configuration
+outputs:
+  - Agent-ready tickets
+  - Blocking graph
+source_refs:
+  - source: mattpocock-skills-1-3-1-dd400c3a
+    path: engineering/to-tickets/SKILL.md
+handoffs: []
+official_description: Break a plan, spec, or the current conversation into a set of tracer-bullet tickets,
+  each declaring its blocking edges, published to the configured tracker (edges as text in one file per ticket
+  locally, or native blocking links on a real tracker).

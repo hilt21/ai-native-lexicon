@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: context-window
+units:
+  - path: summary
+    translation: 限定智能体一次能够看到的信息量。
+    source_fingerprint: sha256:56b79c9fca92887e4b53946348172257ec9307ec4b8bbabe70b53d8bab312444
+    review_status: draft
+  - path: definition
+    translation: 上下文窗口是模型一次推理能够容纳的有限令牌容量。输入和生成的输出须符合接口的计数规则；容量大小与可靠回忆或关注所有已纳入事实的能力是不同属性。
+    source_fingerprint: sha256:3281ce3e2b863ef0f245844bd5cd34cc5cd4fbe65c12fafdb177530f279423dd
+    review_status: draft
+  - path: why_it_matters
+    translation: 窗口限制决定一次交互能容纳多少历史、检索文本和输出，因此必须选择信息。
+    source_fingerprint: sha256:4bbe4884185aede90f68f9b1df4b8a2d1ef151de365cb8d89e6fa5f0cce7ed3d
+    review_status: draft
+  - path: when_to_use
+    translation: 估算长文档分析规模并为模型响应预留空间时使用。
+    source_fingerprint: sha256:02200858cad726c7b336637ad2ac6181ed8839c60aedc6f240dbfc495f1a4974
+    review_status: draft
+  - path: anti_pattern
+    translation: 填满可用输入容量，并假定模型会同样有效地使用所有细节。
+    source_fingerprint: sha256:90bc533e5e0d1b7119e9262373e89168d8f2698ca2c4af92c8fdd5db37773ab0
+    review_status: draft

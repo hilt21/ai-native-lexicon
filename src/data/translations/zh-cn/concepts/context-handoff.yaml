@@ -1,0 +1,25 @@
+schema_version: 1.0.0
+locale: zh-CN
+kind: concept
+target_id: context-handoff
+units:
+  - path: summary
+    translation: 把适当的工作上下文交给另一个智能体。
+    source_fingerprint: sha256:6d559c28a3d8bb5ebeb0921d3e1deae4beeca846afc55c8174872b18575707a7
+    review_status: draft
+  - path: definition
+    translation: 上下文交接传递继续工作所需的信息，包括事实、约束、进度和未解决问题。它可以与责任交接同时发生，但仅共享上下文不会改变责任归属。
+    source_fingerprint: sha256:9b0e7509fd9d99673d4326a7141c68886d41f8a2ff6f9818dec7f20462730b9a
+    review_status: draft
+  - path: why_it_matters
+    translation: 交接包说明已知事实、剩余不确定性和支撑材料的位置，接收方才能高效继续工作。
+    source_fingerprint: sha256:825ee6eb02b0f8e572d20d93837dd65ba784bff5a13ff7e3c72f9c0c7a7a451f
+    review_status: draft
+  - path: when_to_use
+    translation: 调查智能体向实现智能体传递发现，或会话达到上下文限制时使用。
+    source_fingerprint: sha256:d38675ce5f8a9b6e84f4104b9c60fb5c047f74aceb762391ac7dcc3917bde5d3
+    review_status: draft
+  - path: anti_pattern
+    translation: 发送未经筛选的完整记录，却未说明当前目标、证据位置和下一步。
+    source_fingerprint: sha256:9f090295d264ea1f12981f8e61fe3c83f6a8ba3011210c7de2a3d6907b1a578b
+    review_status: draft
