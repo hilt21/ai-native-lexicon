@@ -38,6 +38,8 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     assert.equal(dataset.counts.skill_maps, baseline.skillMaps.length + 1);
     const exportedMatt = dataset.skill_maps.find((map) => map.id === 'mattpocock');
     assert.equal(exportedMatt.schema_version, '1.1.0');
+    assert.equal(exportedMatt.scope, matt.scope);
+    assert.equal(exportedMatt.title, matt.title);
     assert.equal(exportedMatt.text_languages?.scope ?? 'en', 'en');
     assert.equal(exportedMatt.text_languages?.title ?? 'en', 'en');
     assert.equal(exportedMatt.nodes.length, 31);
