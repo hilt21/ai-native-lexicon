@@ -2,6 +2,10 @@
 
 This is a data-first lexicon. Concepts and Primitives are knowledge records; Speaking Guide and Skill Map are independently curated Application Resources. Pages, search, backlinks and machine exports are Content Projections. Keep their contracts separate and derive projections from validated canonical records; see [ADR-0006](docs/adr/0006-application-resources-and-projections.md).
 
+## Before development
+
+Identify the execution environment from the session/runtime, then read its rules before editing: **local workstation** → [local development](docs/agents/local-development.md); **hosted workspace, remote container or CI** → [cloud development](docs/agents/cloud-development.md). A shell or `localhost` alone does not identify the environment. If unclear, use the cloud capability checks until confirmed; report the environment and verification route you can actually use.
+
 ## Always preserve
 
 - Stable public identities: record filename slugs, category slugs, layer anchors, map-scoped node/journey IDs and Speaking Guide numbers/`#card-XX`. Update inbound references when removing a target; derive backlinks from the owning references.
