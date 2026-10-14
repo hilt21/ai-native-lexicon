@@ -107,20 +107,30 @@ async function searchHistory(browser, mode, locale = 'en') {
   const route = `${localizedOrigin}/search/?q=${query}&type=concept&keep=1`;
   const input = page.locator('#concept-search');
   const type = page.locator('#search-type');
+  // A committed return URL can precede module execution and pageshow, especially
+  // with external module scripts. Wait for the restored controls, not elapsed time.
+  async function restoredSearch(query, kind) {
+    await page.waitForFunction(({ query, kind }) =>
+      window.historyShows?.length > 0
+      && document.querySelector('#concept-search')?.value === query
+      && document.querySelector('#search-type')?.value === kind,
+    { query, kind });
+  }
   const visible = () => page.locator('[data-search]:visible').evaluateAll((rows) => rows.map((row) => row.getAttribute('href')));
   await page.goto(route);
   const expected = await visible(); assert.ok(expected.includes(`${base}/${locale === 'zh-CN' ? 'zh-cn/' : ''}concepts/harness/`));
   await page.locator(`[data-search][href="${base}/${locale === 'zh-CN' ? 'zh-cn/' : ''}concepts/harness/"]`).click();
   await page.waitForURL(`${localizedOrigin}/concepts/harness/`);
-  await page.evaluate(() => history.back()); await page.waitForURL(route, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  await page.evaluate(() => history.back()); await page.waitForURL(route, { waitUntil: 'commit' }); await restoredSearch(query, 'concept');
   assert.equal(await input.inputValue(), query); assert.equal(await type.inputValue(), 'concept');
   assert.deepEqual(await visible(), expected);
   const persisted = await page.evaluate(() => window.historyShows.at(-1));
   assert.equal(persisted, mode === 'bfcache', `Search return must actually exercise ${mode}`);
   await page.reload(); assert.deepEqual(await visible(), expected);
   await input.fill('no-such-search-result'); assert.equal((await visible()).length, 0);
+  assert.equal(new URL(page.url()).searchParams.get('q'), 'no-such-search-result');
   await page.locator(`a[href="${base}/${locale === 'zh-CN' ? 'zh-cn/' : ''}concepts/"]`).first().click(); await page.waitForURL(`${localizedOrigin}/concepts/`);
-  await page.evaluate(() => history.back()); await page.waitForURL(/search\//, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  await page.evaluate(() => history.back()); await page.waitForURL(/search\//, { waitUntil: 'commit' }); await restoredSearch('no-such-search-result', 'concept');
   assert.equal(await input.inputValue(), 'no-such-search-result'); assert.equal(await type.inputValue(), 'concept');
   assert.equal((await visible()).length, 0); assert.equal(await page.locator('#search-count').textContent(), locale === 'zh-CN' ? '0 条匹配记录' : '0 matching entries');
   assert.ok(await page.locator('#search-empty').isVisible());
@@ -131,9 +141,9 @@ async function searchHistory(browser, mode, locale = 'en') {
   // Push a native same-document history entry, then traverse it to fire real popstate.
   await input.fill('mcp');
   await page.evaluate((query) => history.pushState(null, '', `?q=${query}&type=concept&keep=1`), query);
-  await page.evaluate(() => history.back()); await page.waitForURL(/q=mcp/, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  await page.evaluate(() => history.back()); await page.waitForURL(/q=mcp/, { waitUntil: 'commit' }); await restoredSearch('mcp', '');
   assert.equal(await input.inputValue(), 'mcp'); assert.equal(await type.inputValue(), '');
-  await page.evaluate(() => history.forward()); await page.waitForURL((url) => url.searchParams.get('q') === query, { waitUntil: 'commit' }); await page.waitForTimeout(30);
+  await page.evaluate(() => history.forward()); await page.waitForURL((url) => url.searchParams.get('q') === query, { waitUntil: 'commit' }); await restoredSearch(query, 'concept');
   assert.equal(await input.inputValue(), query); assert.equal(await type.inputValue(), 'concept');
   assert.deepEqual(await visible(), expected);
   report.checks.push({ name: 'catalog URL, empty return, Clear, native popstate and reload', mode, persisted, passed: true });
