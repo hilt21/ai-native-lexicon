@@ -3,7 +3,6 @@ import { routeLocale, localePath, uiFor } from '../lib/locale';
 import type { SpeakingCardData } from '../lib/speaking-cards';
 import type { LocalizedConcept as Concept, LocalizedPrimitive as Primitive } from '../lib/localized-catalog';
 import { unitLang } from '../lib/localized-catalog';
-import TranslationCoverage from './TranslationCoverage.astro';
 import ResourceIcon from './ResourceIcon.astro';
 import { cardImagePath, cardSharePath } from '../lib/brand';
 
@@ -22,10 +21,9 @@ const pathWithBase = (path: string) => localePath(path, locale);
 ---
 
 <article class="speaking-card" id={id} aria-labelledby={`${id}-title`}>
-  {locale === 'zh-CN' && card.coverage && <TranslationCoverage coverage={card.coverage} />}
   <header>
     <a class="card-number" href={pathWithBase(`/speaking-card/#${id}`)} aria-label={`${ui("Link to card")} ${card.number}: ${card.title}`}>{ui("Card")} {String(card.number).padStart(2, '0')}</a>
-    <h2 id={`${id}-title`} lang={unitLang(card, "title")}><ResourceIcon kind="speaking-guide" size={24} /> {card.title}</h2>
+    <h2 id={`${id}-title`} lang={unitLang(card, "title")}><ResourceIcon kind="speaking-guide" size={24} /><span>{card.title}</span></h2>
     <p class="core-idea" lang={unitLang(card, 'coreIdea')}>{card.coreIdea}</p>
   </header>
   <nav class="card-share-actions" aria-label={`${ui('Share this card')}: ${card.title}`}>
@@ -33,7 +31,6 @@ const pathWithBase = (path: string) => localePath(path, locale);
     <a href={cardImagePath(card.number, 'portrait')} download={`${id}-portrait.png`}>{ui('Download portrait image')}</a>
     <a href={cardSharePath(card.number)}>{ui('Share this card')}</a>
   </nav>
-  {locale === 'zh-CN' && <p class="card-share-language">{ui('Images retain the original English content.')}</p>}
   <p class="relation-counts" aria-label={`${ui("Related entries")}: ${concepts.length} ${ui("concepts")}, ${primitives.length} ${ui("primitives")}`}>
     <span>{concepts.length} {ui("concepts")}</span>
     <span>{primitives.length} {ui("primitives")}</span>
@@ -77,10 +74,12 @@ const pathWithBase = (path: string) => localePath(path, locale);
   .speaking-card { margin: 0; min-width: 0; border: 1px solid var(--lex-line); padding: var(--lex-space-6); background: var(--lex-paper); scroll-margin-top: var(--lex-section-space); }
   .speaking-card:target { border-color: var(--lex-focus); }
   .card-number { color: var(--lex-muted); font: var(--lex-text-small) var(--sl-font-mono); display: inline-flex; align-items: center; min-height: var(--lex-control-height); }
-  h2 { margin: var(--lex-space-2) 0 var(--lex-space-4); font: normal var(--lex-text-section)/1.15 var(--lex-font-display); letter-spacing: -0.025em; overflow-wrap: anywhere; }
+  h2 { display: grid; grid-template-columns: 24px minmax(0, 1fr); align-items: start; gap: var(--lex-space-2); margin: var(--lex-space-2) 0 var(--lex-space-4); font: normal var(--lex-text-section)/1.15 var(--lex-font-display); letter-spacing: -0.025em; overflow-wrap: anywhere; }
+  h2 :global(.resource-icon) { margin-block-start: calc((1.15em - 24px) / 2); }
+  h2 > span { min-width: 0; }
   p, li { font-size: var(--lex-text-body); line-height: var(--lex-leading-body); }
   .core-idea { margin: 0 0 var(--lex-space-6); color: var(--lex-muted); }
-  .relation-counts { display: flex; flex-wrap: wrap; gap: var(--lex-space-2) var(--lex-space-4); margin: calc(var(--lex-space-4) * -1) 0 var(--lex-space-4); color: var(--lex-muted); font: var(--lex-text-label) var(--sl-font-mono); }
+  .relation-counts { display: flex; flex-wrap: wrap; gap: var(--lex-space-2) var(--lex-space-4); margin: var(--lex-space-4) 0; color: var(--lex-muted); font: var(--lex-text-label) var(--sl-font-mono); }
   details { margin: 0; padding: 0; border: 0; border-top: 1px solid var(--lex-line); }
   summary { margin: 0; padding-inline: 0; padding-block: var(--lex-space-3); min-height: var(--lex-control-height); cursor: pointer; font-size: var(--lex-text-small); font-weight: 700; color: var(--lex-ink); }
   summary::marker { color: var(--lex-focus); }
