@@ -10,6 +10,50 @@ async function visibleImagesLoaded(locator) {
 }
 
 export async function verifyBrandBrowser({ browser, page, origin, base, evidence, check, settled }) {
+  for (const locale of ['', 'zh-cn/']) for (const theme of ['light', 'dark']) for (const width of [390, 1440]) {
+    await check('speaking card title icons, non-overlapping rows and page-end publication notes', async () => {
+      await page.setViewportSize({ width, height: 960 });
+      await page.goto(`${origin}/${locale}speaking-card/`);
+      await page.locator('starlight-theme-select select').selectOption(theme);
+      await settled(page);
+      await visibleImagesLoaded(page.locator('.speaking-card .resource-icon img:visible'));
+      const cards = await page.locator('.speaking-card').evaluateAll((cards) => cards.map((card) => {
+        const heading = card.querySelector('h2');
+        const icon = heading.querySelector('.resource-icon');
+        const image = [...icon.querySelectorAll('img')].find((image) => getComputedStyle(image).display !== 'none');
+        return {
+          id: card.id,
+          iconOffset: image.getBoundingClientRect().top - icon.getBoundingClientRect().top,
+          firstLineAlignment: icon.getBoundingClientRect().top + icon.getBoundingClientRect().height / 2 - heading.getBoundingClientRect().top - parseFloat(getComputedStyle(heading).lineHeight) / 2,
+          countsGap: card.querySelector('.relation-counts').getBoundingClientRect().top - card.querySelector('.card-share-actions').getBoundingClientRect().bottom,
+          notesGap: card.querySelector('details').getBoundingClientRect().top - card.querySelector('.relation-counts').getBoundingClientRect().bottom,
+        };
+      }));
+      assert.ok(cards.length > 0);
+      for (const card of cards) {
+        assert.ok(Math.abs(card.iconOffset) < 1, `${card.id}: icon image displaced`);
+        assert.ok(Math.abs(card.firstLineAlignment) < 1, `${card.id}: icon not centered on first title line`);
+        assert.ok(card.countsGap >= 0 && card.notesGap >= 0, `${card.id}: overlapping rows`);
+      }
+      assert.equal(await page.locator('.speaking-card [data-translation-coverage], .speaking-card .card-share-language').count(), 0);
+      assert.equal(await page.locator('[data-publication-notes]').count(), locale ? 1 : 0);
+      if (locale) {
+        assert.equal(await page.locator('[data-publication-notes] [data-translation-coverage]').count(), 1);
+        assert.equal(await page.locator('[data-publication-notes] .card-share-language').count(), 1);
+        assert.ok(await page.locator('[data-publication-notes]').evaluate((element) => element.getBoundingClientRect().top >= document.querySelector('.speaking-grid').getBoundingClientRect().bottom));
+      }
+      assert.ok(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+      await page.screenshot({ path: join(evidence, `cards-${locale ? 'zh' : 'en'}-${theme}-${width}.png`), fullPage: true });
+    }, { locale: locale || 'en', theme, width });
+  }
+  for (const route of ['', 'categories/context/', 'primitives/', 'concepts/harness/', 'primitives/harness/', 'skill-maps/pstack/nodes/tdd/']) {
+    await check('translation coverage is outside the primary reading content', async () => {
+      await page.goto(`${origin}/zh-cn/${route}`);
+      const coverage = page.locator('[data-translation-coverage]');
+      assert.equal(await coverage.count(), 1);
+      assert.ok(await coverage.evaluate((element) => !!element.closest('[data-publication-notes]') && !element.closest('.sl-markdown-content')));
+    }, { route });
+  }
   for (const locale of ['', 'zh-cn/']) for (const theme of ['light', 'dark']) {
     await check('brand homepage primary action and task discovery', async () => {
       await page.setViewportSize({ width: 390, height: 844 });

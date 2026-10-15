@@ -1,0 +1,17 @@
+{
+  "target": "https://hilt21.github.io/ai-native-lexicon/zh-cn/speaking-card/",
+  "theme": "dark",
+  "observed": {
+    "darkIconImageMarginTop": "16px",
+    "languageNoteBounds": {
+      "top": 789.984375,
+      "bottom": 813.78125
+    },
+    "relationCountBounds": {
+      "top": 797.78125,
+      "bottom": 814.78125
+    }
+  },
+  "deployedCommit": "not asserted from response",
+  "screenshot": "User attachment not redistributed. Cloud Browser screenshot inspected; filesystem synchronization unavailable."
+}

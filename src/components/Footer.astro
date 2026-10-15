@@ -1,16 +1,31 @@
 ---
 import DefaultFooter from '@astrojs/starlight/components/Footer.astro';
+import TranslationCoverage from './TranslationCoverage.astro';
 import { rootPath, routeLocale, uiFor } from '../lib/locale';
 const isHome = rootPath(Astro.url) === '/';
 const ui = uiFor(routeLocale(Astro.url));
+const notes = Astro.locals.publicationNotes;
 ---
 
+{notes && (notes.coverage || notes.englishShareImages) && <section class="publication-notes" data-publication-notes lang="zh-CN" aria-label="译文与资源说明" data-pagefind-ignore="all">
+  {notes.coverage && <TranslationCoverage coverage={notes.coverage} />}
+  {notes.englishShareImages && <p class="card-share-language">{ui('Images retain the original English content.')}</p>}
+</section>}
 {isHome ? <div class="home-footer">
   <DefaultFooter />
   <p class="home-edition" data-home-edition>{ui('EDITION 0.1')}</p>
 </div> : <DefaultFooter />}
 
 <style>
+  .publication-notes {
+    margin-block: var(--lex-space-6);
+    padding-block-start: var(--lex-space-4);
+    border-block-start: 1px solid var(--lex-line);
+    color: var(--lex-muted);
+    font-size: var(--lex-text-small);
+    line-height: var(--lex-leading-body);
+  }
+  .publication-notes p { margin: var(--lex-space-2) 0 0; }
   .home-edition {
     margin: var(--lex-space-4) 0 0;
     color: var(--lex-muted);
