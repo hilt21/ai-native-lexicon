@@ -13,8 +13,11 @@ export async function verifyBrandBrowser({ browser, page, origin, base, evidence
   for (const locale of ['', 'zh-cn/']) for (const theme of ['light', 'dark']) for (const width of [390, 1440]) {
     await check('speaking card title icons, non-overlapping rows and page-end publication notes', async () => {
       await page.setViewportSize({ width, height: 960 });
+      // Theme is setup for geometry, not a selector interaction test. Native
+      // controls have separate coverage and may have hidden mobile duplicates.
+      await page.evaluate((theme) => localStorage.setItem('starlight-theme', theme), theme);
       await page.goto(`${origin}/${locale}speaking-card/`);
-      await page.locator('starlight-theme-select select').selectOption(theme);
+      assert.equal(await page.locator('html').getAttribute('data-theme'), theme);
       await settled(page);
       await visibleImagesLoaded(page.locator('.speaking-card .resource-icon img:visible'));
       const cards = await page.locator('.speaking-card').evaluateAll((cards) => cards.map((card) => {
