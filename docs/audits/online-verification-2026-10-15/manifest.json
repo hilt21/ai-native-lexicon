@@ -1,0 +1,52 @@
+{
+  "source": {
+    "commit": "5189a6fdc50d793e3e90c29a50fdbb0677a4741a",
+    "dirty": false
+  },
+  "target": "https://hilt21.github.io/ai-native-lexicon/",
+  "startedAt": "2026-10-15T04:26:34.109Z",
+  "finishedAt": "2026-10-15T04:27:10.678Z",
+  "automatedStatus": "passed",
+  "browser": {
+    "status": "unverified"
+  },
+  "overallAcceptance": "pending-human-verification",
+  "manual": [
+    {
+      "id": "screen-reader",
+      "status": "unverified"
+    },
+    {
+      "id": "browser-400-percent",
+      "status": "unverified"
+    },
+    {
+      "id": "real-device-selects",
+      "status": "unverified"
+    },
+    {
+      "id": "linkedin-preview",
+      "status": "unverified"
+    },
+    {
+      "id": "x-preview",
+      "status": "unverified"
+    },
+    {
+      "id": "social-cache-refresh",
+      "status": "unverified"
+    }
+  ],
+  "requestCount": 627,
+  "files": {
+    "report.json": {
+      "sha256": "a606c1cea76ed5058d1dd790024ec9c6cb5bcb445a8d17a96d70d042bb78b951",
+      "bytes": 1758466,
+      "storedAs": "report.json.gz"
+    },
+    "report.json.gz": {
+      "sha256": "c3032bc8519fa0a43ed5bd96fc4e820cde110fa5b4ad734e48cfb5162c417e14",
+      "bytes": 126870
+    }
+  }
+}
