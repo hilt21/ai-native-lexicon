@@ -22,7 +22,7 @@ Use `ONLINE_EVIDENCE` to choose a different output directory. `NODE_USE_ENV_PROX
 
 `report.json` contains per-request timestamps, final URL, redirect hops, HTTP status, MIME, relevant cache headers, PNG dimensions, failures and source-derived translation inventory. `report.md` groups page risks with affected URLs as well as reporting failures. Risks remain observations requiring follow-up; they do not change automated pass/fail. Exit zero covers only the requested automated checks. Human acceptance remains pending. Browser reports include failed requests, page errors and screenshots; computed option colors do not establish native popup rendering.
 
-The HTTP inventory derives every Concept/Primitive in both locales, categories, core directories, map overviews and one node/journey per map, and every single-card share page. It compares current translation coverage, summary/definition text, field language, canonical, noindex and alternate links against the shared resolver. It checks discovered same-site HTML assets and CSS URL dependencies, including hero variants and social images. It does not crawl arbitrary JavaScript imports or every map detail. The browser smoke adds observed lazy Pagefind requests.
+The HTTP inventory derives every Concept/Primitive in both locales, categories, core directories, map overviews/directories/structure and every node/journey per map, and every single-card share page. It compares current translation coverage, summary/definition text, field language, canonical, noindex and alternate links against the shared resolver. It checks discovered same-site HTML assets and CSS URL dependencies, including hero variants and social images. It does not crawl arbitrary JavaScript imports or every map detail. The browser smoke adds observed lazy Pagefind requests.
 
 Relative HTML and CSS resources resolve against each response's final URL after redirects. Field text must match a complete candidate element, and all its nonblank text must have the expected effective language, including nested overrides. Summary and definition checks target their designated elements. Other fields are matched by text/language and do not prove placement when identical content appears elsewhere.
 
@@ -34,7 +34,7 @@ The manually dispatched **Verify deployed site** Actions workflow runs the same 
 - Core translation eligibility is separate from complete prose. A Primitive with translated summary/scope may be indexable while other fields remain English.
 - Referenced Primitive definitions reuse the resolved Concept and are checked as rendered definitions. They do not create new owned translation units.
 - Taxonomy counts must not be interpreted as whole-site coverage.
-- Skill Map annotations are inventoried separately. These original-language editions remain outside the Translation Overlay contract; no English-completeness score is fabricated.
+- Skill Maps use English canonical records and independently maintained Chinese prose through the shared map resolver. Report per-map reviewed/current, missing, draft and stale units separately; accurate original English source descriptions and literal identifiers can remain English. See [map prose contract](../design/skill-map-translations.md).
 - OG description language detection is a heuristic warning. Mixed-language editions and shared English artwork need editorial decisions before changing metadata policy.
 
 ## Manual acceptance session
@@ -56,4 +56,4 @@ A 320px viewport, device scale factor, pinch/page scale or CSS zoom does not cou
 
 The narrow-home native `<select>` uses transparent text for its collapsed icon. The fix gives option rows explicit theme foreground/background without changing labels, selected state or navigation. Validate native popup behavior on an actual device after deployment.
 
-Social images use stable file names, and single-card canonical points to the full guide while `og:url` points to the card. Keep platform identity/cache behavior open until the sessions above are observed. Translation expansion and English Skill Map edition design require separate content work.
+Social images use stable file names, and single-card canonical points to the full guide while `og:url` points to the card. Keep platform identity/cache behavior open until the sessions above are observed. The full i18n publication is recorded in [its dated audit](i18n-full-publication-2026-10-13.md); current deployed results are in [the 2026-10-15 follow-up](online-verification-2026-10-15.md). Registered translation completeness does not establish screen-reader pronunciation, fluent wording or social artwork localization.
