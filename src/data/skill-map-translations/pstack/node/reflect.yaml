@@ -11,79 +11,95 @@ units:
     translation: reflect
     language: en
     source_fingerprint: sha256:2f684d0e9434635071c8e7bb43fb9c37a58d45064716d79bffd4b20b8e18d4e9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 复盘一次 Agent 工作，把经验路由成具体 skill 改进。
     language: zh-Hans
     source_fingerprint: sha256:60f4f651248f678218056fcdf5cf437b96abbdcd45fb4357161e0b06262eba81
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 反思
     language: zh-CN
     source_fingerprint: sha256:3e71385bf83b076b80a2d110c6483b1a0d7b7c53a82bd90ca3f2dba75003d31b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 学习
     language: zh-CN
     source_fingerprint: sha256:fa91aff1485b54fa0573ded970c2ad23c40977abbf015b7aaca601f64cded300
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 技能
     language: zh-CN
     source_fingerprint: sha256:bffb7dc32276adb6fddb8c836d45915f7ae695c2aeb0357747b79ba71ee6306c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 当前对话记录
     language: zh-CN
     source_fingerprint: sha256:3ee1f122a8379029595b39ec889873459e1ea63057d3f5743dd87d09619622e5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 任务结果
     language: zh-CN
     source_fingerprint: sha256:09083df30867c1327c0c154dacf620e31871d3fd8bf4183e99bcf51b72c77f83
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已接受、已拒绝或待处理的经验
     language: zh-CN
     source_fingerprint: sha256:1f9ac9d13e9b9e29a3e2ed3210a462304fad7e0fe88533d4389c66770d7e7bf3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 技能编辑提案
     language: zh-CN
     source_fingerprint: sha256:ba134480db128be4150456f42e44a617f7b165557317cb18383bc3177ebdc51e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Spawn three parallel review subagents over the active transcript, surface learnings, and route each to a concrete edit on an existing skill. Use when the user says reflect.
     language: en
     source_fingerprint: sha256:dcaa306ffa4aef354d7d41988799b043202bde20d722c85dd3b395e90ee6c912
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 三个并行 reviewer 从不同角度分析 active transcript，综合 learnings，并把每条落到现有 skill 的可执行修改或 backlog。 仅定位当前工作区的活跃对话记录。区分拟采纳改动、拒绝建议和待办事项；应用拟采纳改动前取得明确批准。
+    translation: 三个并行 reviewer 从不同角度分析 active transcript，综合 learnings，并把每条落到现有 skill 的可执行修改或 backlog。仅定位当前工作区的活跃对话记录。区分拟采纳改动、拒绝建议和待办事项；应用拟采纳改动前取得明确批准。
     language: zh-Hans
     source_fingerprint: sha256:04d90787eb02c5d76f50ad0c235db816bfe1f087ecbad0ed4da46cf1a67e80f6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 复杂任务完成后
     language: zh-Hans
     source_fingerprint: sha256:8c7261dff5269c199c3597fc9ded68a9fb75c0dc4d6c31365384a7e11136d2f9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 用户显式说 reflect
     language: zh-Hans
     source_fingerprint: sha256:ab1a1ca961ce03c9c1a11c231e8f6629f842fd042410c36a8ffecc40d9e1e9af
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 想从一次运行中沉淀方法
     language: zh-Hans
     source_fingerprint: sha256:55a21e5448f5de1b9fbee3a1cf99e4e4a40546a2c5985a81f8e57c9b1280d140
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 避免经验只留在对话
     language: zh-Hans
     source_fingerprint: sha256:d2bdeb965d0fd106aa45bc35a44ad2fc84826772b64f459d920064bd9d88d25c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 把操作经验转成可维护 skill
     language: zh-Hans
     source_fingerprint: sha256:c778a37108d1a5e9385f1ea51a4b94c5a1542884a6a9a0b1024afbafcadc56e1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

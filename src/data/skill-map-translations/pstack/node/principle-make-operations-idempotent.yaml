@@ -11,44 +11,53 @@ units:
     translation: make-operations-idempotent
     language: en
     source_fingerprint: sha256:787edbc2454a0335d9a0a4b683804ed356d6857a8ed6ed4dff0cfa2ea9fb9581
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。
     language: zh-Hans
     source_fingerprint: sha256:51d57910b3afcb94be896914a5e5c814fc30aab1bde7c95cf9304d949c729d4d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 原则
     language: zh-CN
     source_fingerprint: sha256:112c8ef7bf8f25acad9f7f5a1c146a04b82eff8ec46713ad755385da2f2fd906
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 可重试操作
     language: zh-CN
     source_fingerprint: sha256:8e1641dd2080daf2b057afcc92447e64906bc3ffe461172b7bffc2701185231f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 幂等操作
     language: zh-CN
     source_fingerprint: sha256:cb9153419127ea2f68ad53a382f6a0d41b538618ecf71cb2cf7129c4e5a7c4c5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs.
     language: en
     source_fingerprint: sha256:2444d65a99d954816cfaebbacfdfab3c69c98ea64272689dafbbbff1111c3a77
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。 依据当前可观测状态决定修改，并让后续执行能识别中断留下的状态。
+    translation: 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。依据当前可观测状态决定修改，并让后续执行能识别中断留下的状态。
     language: zh-CN
     source_fingerprint: sha256:8008bcb83697ca9738a392a56ba932022fb452696e4dbd09b3aae0831afdddbb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 设计会经历崩溃、重启和重试的命令、生命周期步骤或处理循环时使用。无论之前运行完成到哪一步，都应收敛到相同最终状态。
     language: zh-CN
     source_fingerprint: sha256:7cc137d68a14c9efb0a06798c6e47613b3277b392fc20c7f9917a62554cae736
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 把 crash/retry 当正常路径设计，重复执行仍收敛同一结果。
     language: zh-Hans
     source_fingerprint: sha256:719623d5d2a06171fb35e25b89ab2e6733a75c538da95cb6ede74f1d19fd640b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

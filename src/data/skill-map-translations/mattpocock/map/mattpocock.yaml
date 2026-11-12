@@ -11,229 +11,275 @@ units:
     translation: Matt Pocock 技能地图
     language: zh-CN
     source_fingerprint: sha256:4fd3e1f933dce5d5787c4a26110f31fbd257c0f4b85ba1198842a50fef431f9b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 从用户目标出发，选择和组合 Matt Pocock 的工程技能，从需求澄清、规划、实现到验证和复盘。
     language: zh-Hans
     source_fingerprint: sha256:bd9a3901f0e1e58a02f24648bc1f3b0fe44f5d1d50c20ba8da5a29d120cb3169
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: scope
     translation: 固定于 mattpocock/skills 1.3.2（5863806d）。收录 31 项：插件分发 27 项、misc 工具 4 项。排除 8 项 in-progress 内容，其中包括 software-factory。教学目录和插件分发均有各自的覆盖范围。分类、关系和 7 条任务路径属于编辑指引；本站不安装或调用技能。
     language: zh-CN
     source_fingerprint: sha256:62149e7e924710ae9134c9191658bd480b573545444f0c3cf63858c754ce951a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: audience.0
     translation: 第一次使用 Matt Pocock skills 的开发者
     language: zh-Hans
     source_fingerprint: sha256:5b166de503b3bb2283c693b74ba09692a55f515bbc21c0b842b30b7108f47b48
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: audience.1
     translation: 希望建立可靠 AI coding workflow 的工程师
     language: zh-Hans
     source_fingerprint: sha256:a21f968be014f78094c09d4bbcff51d4bb7206998030884ee6b01aa2eb476542
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: audience.2
     translation: 需要理解不同 skills 如何组合的 Agent 使用者
     language: zh-Hans
     source_fingerprint: sha256:5265083a90ea74dea04847c0b9986d43410d2e902d4a5b2467d41aeadb8bdef5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.types.0.label
     translation: 入口路由
     language: zh-Hans
     source_fingerprint: sha256:e7bfc5b1117eb5a2aeab358cdba2e35adeaf29460184d9d23d4866813005baa2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.types.0.description
     translation: 帮助用户选择下一条工作路径。
     language: zh-Hans
     source_fingerprint: sha256:246a69b13a724e36f9887d484d16313ce238c0fda180226af0251f41dded10d4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.types.1.label
     translation: 用户工作流
     language: zh-Hans
     source_fingerprint: sha256:461964b9994ea6f5ccec177c3bd2dd3ca505727c77d105f0a022deba0d400d3c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.types.1.description
     translation: 用户显式启动并编排完整工作阶段的技能。
     language: zh-Hans
     source_fingerprint: sha256:f48728644e87401ead345b61547e5cae7f431941b0bc3df3914a217c2e5d2cbc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.types.2.label
     translation: 可复用能力
     language: zh-Hans
     source_fingerprint: sha256:ada81c6fa37f2ad3f5d7e5043ee7543bfbdae264cdbc3e717f9bb1918edb22bd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.types.2.description
     translation: Agent 可根据任务自动调用的工程方法与能力。
     language: zh-Hans
     source_fingerprint: sha256:b2e96b79d79c6f4fa98594aa804481b6d912a83d73609f011f1e6f2ec19da11c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.layers.0.label
     translation: 入口
     language: zh-CN
     source_fingerprint: sha256:b60421ad762c237f8773b05e8b103d0816eebb3aa5f2b54c432861834060f5e7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.layers.0.description
     translation: 配置系统并选择工作入口。
     language: zh-Hans
     source_fingerprint: sha256:511f584c27eddbb4f384b0a20f6e2bb56d8f7e9bab79c274516b6cf431ca0a8d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.layers.1.label
     translation: 工作流
     language: zh-CN
     source_fingerprint: sha256:fdfbb4f0a816e303df3592d60738d1b5bbb40fdcca51b91b9fdf38b8bc8b51cd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.layers.1.description
     translation: 从用户目标出发组织完整工作。
     language: zh-Hans
     source_fingerprint: sha256:630ec7ad0bdf95a62b8da80b480023b53492b766fbfa8987b17570602de64cf4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.layers.2.label
     translation: 实践规范
     language: zh-CN
     source_fingerprint: sha256:4e36f7e903e21efddb1ade5c692c0f557affff4dac1b6a8c771db8c466169868
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.layers.2.description
     translation: 为工作流提供可复用工程能力。
     language: zh-Hans
     source_fingerprint: sha256:da3ef5f041a4479bc75684f70a7c9aeef3afbc33859a57fab0b0ae9402511890
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.0.label
     translation: 入口与路由
     language: zh-Hans
     source_fingerprint: sha256:d5c0fac1b3717b76cc2c676825474170a2ed976bd2e5d076b91439123e28ec29
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.0.description
     translation: 我应该从哪里开始？
     language: zh-Hans
     source_fingerprint: sha256:79036cb6c24e640e70b1882f7295f41e0d557ded45aa74ccfe7276bfe5252f6a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.1.label
     translation: 对齐与领域理解
     language: zh-Hans
     source_fingerprint: sha256:46b3f097a2bc5f66149ce2597744c8a4189cd5a95817cb2476ffcc89b4b528ea
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.1.description
     translation: 我们真正要解决什么问题，语言是否一致？
     language: zh-Hans
     source_fingerprint: sha256:c14a054c871c169d95dd62aab759a6e606d0c37931b4e16bb454acf41be27409
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.2.label
     translation: 规格与计划
     language: zh-Hans
     source_fingerprint: sha256:184fac57bfb8e64225658cb383fdbc509f04387707c805a9d38d73ef1d3fe8d9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.2.description
     translation: 如何把想法变成可执行工作？
     language: zh-Hans
     source_fingerprint: sha256:4b2eaf0361a9efd5632cc64587d08190357b51e75e68e2734f6599d2e7c08f17
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.3.label
     translation: 实现与反馈
     language: zh-Hans
     source_fingerprint: sha256:371a383552f3360bff72d08e38bd27beecb7abb23be3db0c4810e9b8eacf6f78
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.3.description
     translation: 如何以短反馈循环完成代码？
     language: zh-Hans
     source_fingerprint: sha256:974b474c611b66d0b9fc89f1a9ffe77c8202e057c3021cf7b946fd6e6b2c2fe7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.4.label
     translation: 调试与探索
     language: zh-Hans
     source_fingerprint: sha256:9f00741699c7a557db34ed1848f324d152ab31b88f9572511a08fe462308cf89
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.4.description
     translation: 当答案或根因未知时如何获得证据？
     language: zh-Hans
     source_fingerprint: sha256:a2a71577085f4fb5190b013b1a9cc64770c03e9d838eec9b0c0cc91561529bb7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.5.label
     translation: 架构与代码质量
     language: zh-Hans
     source_fingerprint: sha256:7063cf65e66847b2f19064a8076b65e5141fe4caf8dbd106ad00dde8aaa7e0f4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.5.description
     translation: 如何保持代码库可理解、可测试和可演进？
     language: zh-Hans
     source_fingerprint: sha256:be03535f28174fd6e8d600924aea8d9dbc41d93e133229b2087cf8b58fc3d352
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.6.label
     translation: 交付与人工环节
     language: zh-Hans
     source_fingerprint: sha256:d3e682e5147ec85617e78935a0b60dcd79c4d2631431279e3d9be03154493d02
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.6.description
     translation: 如何完成 PR、交接和必须由人执行的步骤？
     language: zh-Hans
     source_fingerprint: sha256:ad2ebb5a17ddae5b399ee8bc7020f2aad0856aa3129aaad9c8503e8460eeff85
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.7.label
     translation: 沟通与工程工具
     language: zh-Hans
     source_fingerprint: sha256:a5cafada30dfca72d945237ed453cd25be8ba7e58821b6b85bae0d35582a92f6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.clusters.7.description
     translation: 如何改善 Agent communication 和工程环境？
     language: zh-Hans
     source_fingerprint: sha256:631b671f003dc155250296e03f4b37a28dd5e063d138d559cd28a5f030e00321
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.0.description
     translation: 入口只推荐适合当前任务的技能；由用户决定是否启动，不代表自动调用。
     language: zh-Hans
     source_fingerprint: sha256:39503bb28c18953c39e6bcdb46a71f4aedf848c3082d81c92059ebdc290280b1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.0.outgoing_label
     translation: 推荐进入
     language: zh-Hans
     source_fingerprint: sha256:2bb7d54431e740ee004ce3c2b6ccdd0514ba85b3347e83c694b2cfeb54e7e048
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.0.incoming_label
     translation: 由此路由进入
     language: zh-Hans
     source_fingerprint: sha256:b69155c0c31e6a407098d9bdbfa515e147fe699daecf86f17b3dee43f3299529
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.1.description
     translation: 实际使用或明确引用的可复用能力；仅共享设计词汇时在关系说明中限定，不代表运行调用。
     language: zh-Hans
     source_fingerprint: sha256:9693079e2aeaf7de6cd892b487c93e4b7ae1c88cd8ded5fff93fd99be25ec883
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.1.outgoing_label
     translation: 使用能力
     language: zh-Hans
     source_fingerprint: sha256:964f44ce9c5664dadd2d38d96e775360ed5b29b7a514efa80ee9f6fa6f72d2fa
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.1.incoming_label
     translation: 被这些工作流使用
     language: zh-Hans
     source_fingerprint: sha256:dd068fae7171e50fcba57244291732ec2159126a80d4221d20b52dd8b3e3d708
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.2.description
     translation: 一个阶段的产物成为另一阶段的输入。
     language: zh-Hans
     source_fingerprint: sha256:9c64be0faf357e132b08448d9c1358098b37b135105e31c74314576d5bd2a7fb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.2.outgoing_label
     translation: 产物可交接给
     language: zh-Hans
     source_fingerprint: sha256:bc5debb906169d465035f78a9e72a8da807eadb2bcf299210448ba63c1971f9f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.2.incoming_label
     translation: 接收来自
     language: zh-Hans
     source_fingerprint: sha256:e903c9d9df28f067ac09206dead21c3e5ca1cb4b7597728a7dd3cf407208822b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.3.description
     translation: 一个技能建立其他技能依赖的项目级配置。
     language: zh-Hans
     source_fingerprint: sha256:203c8681e20815b3f7793cffdbae1a619538b09dae9926e1ba591779e917928f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.3.outgoing_label
     translation: 配置
     language: zh-Hans
     source_fingerprint: sha256:48a5f322b03ee2c9ed9c9196696d1375063dd1ee6cdaeda22f7525619920d2dd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: taxonomy.relation_types.3.incoming_label
     translation: 由此配置
     language: zh-Hans
     source_fingerprint: sha256:a4f280ac2a61e82fcf62bcb1a12078df5ef271d41e45206d519adf752958730c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

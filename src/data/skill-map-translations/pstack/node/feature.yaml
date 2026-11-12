@@ -11,59 +11,71 @@ units:
     translation: feature
     language: en
     source_fingerprint: sha256:f5b345e0c0b1879356f00f7a84613a0144d51d6b12b339de29f4b5a07e679eae
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 新功能的设计、并行实现、真实验证和审查。
     language: zh-Hans
     source_fingerprint: sha256:5db42c68b00ea4640e097f91c6e21976862a21320fd21ed593bb81b6c89ad2c6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 功能需求
     language: zh-CN
     source_fingerprint: sha256:922534674c74c5477af721384d9238c0cb863896a53fcc7af034ea2a7b1888fa
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 受影响子系统
     language: zh-CN
     source_fingerprint: sha256:f7db6c528771e87723408fb2400569e61c1bb7d9c449991f0e5afa96ce2884f3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已实现功能
     language: zh-CN
     source_fingerprint: sha256:c4d8191a90c8bc9b16cfcb1441307a45ecc0428007aea49e7d3ddba5842c3b4f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 设计依据
     language: zh-CN
     source_fingerprint: sha256:3dfd433db5b79d8509b233f9b85c7b5cf4a1a558269648e61af10a636ff1899e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 验证证据
     language: zh-CN
     source_fingerprint: sha256:d90040912f39e71024c3106cc9d807c74306284075c84354ad892730a7885a2b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.3
     translation: PR
     language: en
     source_fingerprint: sha256:0d11d5bb29e69583e329ad98009ed320d3a96d3efef4e217567801bc10252fe4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: how grounding → architect → throughput checkpoint → 分离 workstreams → delegate/arena → live verify → interrogate if contested → PR。 分派逻辑实现前先选定组织数据的结构。耦合工作交给一名负责人，只并行处理可以独立交付的产物。
+    translation: how grounding → architect → throughput checkpoint → 分离 workstreams → delegate/arena → live verify → interrogate if contested → PR。分派逻辑实现前先选定组织数据的结构。耦合工作交给一名负责人，只并行处理可以独立交付的产物。
     language: zh-Hans
     source_fingerprint: sha256:747987e3b0f8019a5b43d0fd91a91c454ff4d4d5e5669af404d13fb08b801749
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 新增用户行为或 capability
     language: zh-Hans
     source_fingerprint: sha256:daa94cf4e171e21b5e97a1fdef4d8b042312b5f7497a184918a797f33604d44d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 直接写代码导致错误结构
     language: zh-Hans
     source_fingerprint: sha256:ebff8b62956a13168f07a8e4fd840a7f8a6108f3388b78de8eb7b88bb1452fb5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 并行写共享状态
     language: zh-Hans
     source_fingerprint: sha256:90bf1e3597ecec6ff2d859d0dc6a6d9077b5ce751618332e78159a5738038f7d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

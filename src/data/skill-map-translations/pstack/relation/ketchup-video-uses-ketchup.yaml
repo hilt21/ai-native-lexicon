@@ -11,4 +11,5 @@ units:
     translation: 沿用 ketchup 的进展与决策结构，用视频呈现进展。
     language: zh-CN
     source_fingerprint: sha256:2736a3f47feebd3a81a6c8ef714f2bdad1fd2259c7c7950044123ff8a0a725cc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

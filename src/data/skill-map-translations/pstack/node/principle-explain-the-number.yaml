@@ -11,44 +11,53 @@ units:
     translation: explain-the-number
     language: en
     source_fingerprint: sha256:a69c489f64be4aba6cbbbefc8f7ffa60ffb9b2b79f0f66c04bbf643002590198
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 任何数字先解释 limiter 和测量机制。
     language: zh-Hans
     source_fingerprint: sha256:0c668f46fd94bec37271339d0236358d9bb1516cda9d3b157bb4658dcba1c9d4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 原则
     language: zh-CN
     source_fingerprint: sha256:b97119b0a0c004c65a50024405bcb2d759c2436f57a504c3d615e0eb4707a1a6
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 测得的指标
     language: zh-CN
     source_fingerprint: sha256:7cfc66e158f083579db77a8364222905de7107d44f268d0f3ef799cecd102f3b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已验证的解释
     language: zh-CN
     source_fingerprint: sha256:d03e9dfaa609636379ccb63d97550a6ae05da51cc06935362df03e3a6c2ed488
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: "Apply before you measure, and before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think."
     language: en
     source_fingerprint: sha256:c10e9d58836a05c52bb030114b5f2afbf520d9ab750acb4873dd28bc7a9dcd1c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 任何数字先解释 limiter 和测量机制。 测量前写明决策与噪声下限；找出瓶颈资源，排除跳过工作、缓存命中和错误配置等替代解释。
+    translation: 任何数字先解释 limiter 和测量机制。测量前写明决策与噪声下限；找出瓶颈资源，排除跳过工作、缓存命中和错误配置等替代解释。
     language: zh-CN
     source_fingerprint: sha256:08b340c4860150b855809e916355a9b8657fca7822b3b8729a276c136aba4e08
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 在信任、报告或依据测得的数字行动之前使用。找出限制该数字的因素，并排除它实际测量的并非你所认为的工作这种情况。
     language: zh-CN
     source_fingerprint: sha256:45bb96ea880b393f2a7dcd6d39c7efea5b37c106c4f58957ac62a03054f1a37d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 任何数字先解释 limiter 和测量机制。
     language: zh-Hans
     source_fingerprint: sha256:ffb1e56cc598921c8d28c0dea71a3ccdf81c5859e96b34c4026846eb04d61107
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

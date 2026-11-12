@@ -1,5 +1,5 @@
 title: autopilot-stack
-summary: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+summary: Build and verify dependent PRs as a stack and hand verified PRs to the operator for landing.
 type: playbook
 layer: playbook
 primary_cluster: parallel-autonomy

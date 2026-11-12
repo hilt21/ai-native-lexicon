@@ -16,4 +16,4 @@ source_refs:
     path: skills/statechart/SKILL.md
 official_description: Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states.
 status: active
-mechanism: Check the TLA+ model with TLC and render the reachable states. Report shortest paths to reachable rule violations within the model and configuration.
+mechanism: Use TLC to check a TLA+ model and generate a Mermaid view of its behavior. Report the shortest paths found to rule violations; distinguish the checked model and configuration from the chart view, which may group states or hide transitions.

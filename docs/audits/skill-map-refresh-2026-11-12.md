@@ -1,6 +1,6 @@
 # Skill Map source refresh, 2026-11-12
 
-This is a review proposal for the English canonical records and Chinese draft overlays. The source inventory is verified; editorial decisions and draft translations await maintainer acceptance.
+This report records the initial refresh proposal and the subsequent delegated translation review. The draft counts below describe the initial proposal; the last section records the reviewed candidate.
 
 | Map | Previous snapshot | Proposed snapshot | Active nodes | Journeys | Relations |
 | --- | --- | --- | ---: | ---: | ---: |
@@ -36,3 +36,11 @@ The [orchestrate playbook](https://github.com/cursor/plugins/blob/c742dd61706fba
 The fingerprint binds every field to its complete owner, so an owner change sends even unchanged sibling text back for review. Unchanged owners keep their approved overlays. Draft text does not publish as reviewed; affected Chinese fields use English fallback, and the existing core eligibility rules still apply. The publication gate remains unchanged and rejects the candidate until the maintainer approves the current drafts.
 
 Inventory and exact refreshed official descriptions were compared against the pinned upstream trees. The historical migration tests now test the fixed proposal as a fixture; a separate live check preserves original public IDs and source snapshots. Targeted map tests pass. The cloud shell could not start Chromium: the Playwright archive download was invalid and the installed Chromium could not create its browser socket. Full rendered and interactive verification remains pending in CI and, once a candidate preview is reachable, Cloud Browser.
+
+## Delegated translation review, 2026-11-12
+
+At the maintainer's request to review the drafts and merge only after qualification, reviewed the two pinned editions and promoted 735 current units after corrections. Kept skill names and official English descriptions in their original language. Rechecked retained prose against the current owner and recalculated fingerprints for corrected records. Coverage at this review revision is **794/794 Matt Pocock** and **1,270/1,270 pstack**, with no draft, stale or missing units.
+
+Corrections align quiz option lengths with Teach, distinguish Code Review's two verdicts, replace an outdated premise-testing example, distinguish the TLA+ check from its summarized statechart, and keep independent verification mandatory even when the harness lacks event subscriptions. Autopilot-stack's summary now limits stacking to dependent PRs and leaves landing with the operator. These corrections do not change node or journey IDs, topology or source snapshots.
+
+The 14 targeted map tests passed on the reviewed candidate. Full CI and any rendered browser verification are separate evidence.

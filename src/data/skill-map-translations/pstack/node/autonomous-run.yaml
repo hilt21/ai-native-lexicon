@@ -11,74 +11,89 @@ units:
     translation: autonomous-run
     language: en
     source_fingerprint: sha256:cd4262d51292066980ed10e9512902d744edea92b683bb14ac0ba1a6df379309
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 单一任务无人值守推进到固定 exit predicate。
     language: zh-Hans
     source_fingerprint: sha256:f5c57020bd128e0c6354d158ae18ef388937d0d2e6764c06c1111a160a785a77
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 目标
     language: zh-CN
     source_fingerprint: sha256:52df4d97515089e83ff7d51024e2051f04377f47df34c406fee3c177111d4b27
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 退出判定条件
     language: zh-CN
     source_fingerprint: sha256:3913aa30742345f08fa8f492ca88ad156e46c1beb149b559ff6d05865be304b7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.2
     translation: 验证场景
     language: zh-CN
     source_fingerprint: sha256:0ea1dd3c24c329aefebf257c9d67afe6994902eab8a963b7ca5463cfec3c29d7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已满足的判定条件
     language: zh-CN
     source_fingerprint: sha256:35b6eaf31c2780fdd3e7f74b5ec97a6f0e8f910c4560a5010ebc93d0187b139e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 已接受的迭代
     language: zh-CN
     source_fingerprint: sha256:38eab7f85bcc10020927fc9e5c696b7577f0a0f6798d9e2a7ffe5628f25fff30
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 已舍弃的尝试
     language: zh-CN
     source_fingerprint: sha256:d65954b0a3f97c8db7bcd6251bcf6a4f7abf290c6aa3c0a9ac03588b904d7ae0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.3
     translation: 决策记录
     language: zh-CN
     source_fingerprint: sha256:93cde099e0fb6819fe53346cf76dcba24b480f629b1dcc2fe0382a8e182aaa7c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 开始前冻结 checkable predicate → /loop wake → smallest justified change → verify → commit if progress / discard if not → decision log → plateau 时换方法。 存在相关事件时，由事件监视器唤醒，长间隔定时检查兜底；无事件时按时间唤醒。
+    translation: 开始前冻结 checkable predicate → /loop wake → smallest justified change → verify → commit if progress / discard if not → decision log → plateau 时换方法。存在相关事件时，由事件监视器唤醒，长间隔定时检查兜底；无事件时按时间唤醒。
     language: zh-CN
     source_fingerprint: sha256:a0c41b1f6d18b9b296686abf964618d80193d46761c7d3435ef598d2bfe05864
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 整夜运行的单项任务
     language: zh-CN
     source_fingerprint: sha256:083eae51a4b405904d11458651c25e4de023738415d9a880509464a4985d9ac8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 一个目标可以定义明确 Done
     language: zh-Hans
     source_fingerprint: sha256:9acf8dde6c5df210b375822ec8d14d5fa7ac557986cfb2559db4686c54aeab2e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: Agent 过早宣告完成
     language: zh-Hans
     source_fingerprint: sha256:9deb997463ca90f70d78c7f3d00026c06cac0b8dfaa3c27eaa9429b96ef93364
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 无效改动累积
     language: zh-Hans
     source_fingerprint: sha256:fb5f6d15d23a7336124392aa97a4d596ae208fae7df3f7557f70daf4812252ab
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.2
     translation: 人频繁被问
     language: zh-Hans
     source_fingerprint: sha256:9f0af742ba71a2dd6067d69b257aa70d0361f1d3e942e37829a0ebad51afe20f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

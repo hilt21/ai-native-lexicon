@@ -18,6 +18,6 @@ official_description: Apply when two or more fixes that share one premise have f
 status: active
 mechanism: After repeated failed fixes, stop carrying the shared premise forward and recheck it. When two fixes based on the same premise fail the same gate, test that premise directly before attempting another fix.
 when_to_use:
-  - Apply when two or more fixes that share one premise have failed the same gate. Take a census of which actors hold the imbalance before the next fix, then question the premise instead of writing another fix that assumes it.
+  - Apply when two or more fixes based on the same premise fail the same check. Identify an observation that would differ if the premise were false, and test it before the next fix.
 solves:
   - After repeated failed fixes, stop carrying the shared premise forward and recheck it.

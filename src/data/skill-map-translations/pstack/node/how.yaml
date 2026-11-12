@@ -11,89 +11,107 @@ units:
     translation: how
     language: en
     source_fingerprint: sha256:ef670c8ccd1cc420b6b730596be99426fead24ba56fba7795d13ac879dfaaecb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 建立系统如何工作的 mental model。
     language: zh-Hans
     source_fingerprint: sha256:bf3676b8a3d3a464b4c4eb7b61bbae0f8ad89ee7e089e017eb6596945a56759a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 事实锚定
     language: zh-CN
     source_fingerprint: sha256:7fc4ccfcc1cccef67b06aa4c419a99f78cbfdcf861d7fc3a87dc4e9b561274eb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 架构
     language: zh-CN
     source_fingerprint: sha256:8f5c231e7ce6f506e2b37cb81adf03692f4e3e06ba2b5236c1a7a6433653de87
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 只读
     language: zh-CN
     source_fingerprint: sha256:4f25fd91da0b1ff3ef1bfd8a9ead54447b190909805979286ece7a47f1d84b3a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 子系统或代码区域
     language: zh-CN
     source_fingerprint: sha256:5a89440760269e4256f8d20af89668063accd6fa55f9295bc381d64368bd7cfe
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 运行时问题
     language: zh-CN
     source_fingerprint: sha256:a4af94dd17eda9b1a29b7225224c8363028d05da559e12757e65fd1cc806bccf
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 架构概览
     language: zh-CN
     source_fingerprint: sha256:78f1d383df782abe272c522181bba7d79d540a1f3edc54a8d6e806155737f486
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 运行时流程
     language: zh-CN
     source_fingerprint: sha256:683ea7cec9932096b14c778a984b4a44062e468c450a461b89bc16c4ecff859e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 关键文件与责任归属
     language: zh-CN
     source_fingerprint: sha256:8ec6ff97233c19b4cbacc03b70fa86de76106a8bdba1f205c9060d3426dce6d9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.3
     translation: 易错点
     language: zh-CN
     source_fingerprint: sha256:3e52c41d505f83381bf018248998e9bf4818f819a0b4ccd75c3885d9ce6d1c9c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Use for "how does X work", code walkthroughs before changing something, and placement / ownership / layering questions ("where should this live", "which package owns this", "is this the right layer"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation.
     language: en
     source_fingerprint: sha256:ce4186ece83f847a3b8b89d05a0f76ae373911cc0855556108a305342cf60315
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
     translation: 简单问题交给一名只读讲解者。复杂子系统先由多个代理并行查证，再由独立讲解者整理所有权、运行流程和边界。
     language: zh-CN
     source_fingerprint: sha256:df3b1e3ed73f57170677c98fcce0386df88bbff675ec38257f2e55b6229d0267
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 修改前理解 subsystem
     language: zh-Hans
     source_fingerprint: sha256:357d8c9be956a59089e565e97c39e99d04ef8e284de087cd62902f70997a8ba5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 代码 walkthrough
     language: zh-Hans
     source_fingerprint: sha256:50fe5bc20f0e726d12ec73c82d3a73c0f007b5b85083af54a606e1b348b8408b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 询问某代码应该放在哪一层
     language: zh-Hans
     source_fingerprint: sha256:d11de16e685724837ee2b1de7243ef2399a7d8ba9cb7ada0f25300c368c1b75f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 避免盲改
     language: zh-Hans
     source_fingerprint: sha256:9d46086327c9cd2ec31a760c4358b238d3bf42649f4fcd10ec801391310ad640
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 减少错误的模块归属和边界判断
     language: zh-Hans
     source_fingerprint: sha256:fd7125fdb28e42e3aefe749ee5fbf1d87a23b6c46d38eccf329118c4de030b44
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

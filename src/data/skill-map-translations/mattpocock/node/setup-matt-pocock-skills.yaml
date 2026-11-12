@@ -11,79 +11,95 @@ units:
     translation: setup-matt-pocock-skills
     language: en
     source_fingerprint: sha256:b5e33976b5c048c6ad53246b7eaa2873260dc249eac286ef3e6a7f0269f93dd5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 为仓库配置 Matt Pocock skills 依赖的项目级约定。
     language: zh-Hans
     source_fingerprint: sha256:b9e03adbb517ca8584fc36864280d7a8e55238c9b84fd99f933ddd4fd4c115a4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 工程
     language: zh-CN
     source_fingerprint: sha256:753d1d1a8172df69eaa579e3a49c2761a119556bebbe341dedb49fa7a43b02e2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 用户调用
     language: zh-CN
     source_fingerprint: sha256:e9e2c48612b13f535b256cc3ed1eb71b58df686b4e2954e44caddd33d7b3bab2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 稳定
     language: zh-CN
     source_fingerprint: sha256:5b2dac616942e3382ba01b0255f0c246bde7154b66cf062d3b1271cf6ad0288e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 仓库
     language: zh-Hans
     source_fingerprint: sha256:b8505207d7c9ca76d033244a53bcfbe21b7488b79e2d26da22073cb884448b78
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: issue tracker 选择
     language: zh-Hans
     source_fingerprint: sha256:9d0b644870d8b156308ca8314b4516a577638fbba371b02c68f4ceefae40c19a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.2
     translation: triage 标签约定
     language: zh-Hans
     source_fingerprint: sha256:912bedfaa7f8817c4c84c724bbad01c05726e772f5558e5e74a39716193f99d0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.3
     translation: 领域文档布局
     language: zh-Hans
     source_fingerprint: sha256:53a681c87448e01d979dc3fdd7cfc19274e5b48fa8ba24e2d6bc97be59eb2bb3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 项目级 skills 配置
     language: zh-Hans
     source_fingerprint: sha256:52b7846225f4bb486053bdf74f1ee1c5e14903207fe592db7842bac02a450532
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: "Configure this repo for the engineering skills: set up its issue tracker, triage label vocabulary, and domain doc layout. Run once before first use of the other engineering skills."
     language: en
     source_fingerprint: sha256:600aaf18e210d172aea965159285ad4c5be092a9888a643c7c762f40b107704d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
     translation: 先确认工单和领域配置，再写入 docs/agents 指引和代理入口引用。使用 GitHub 或 GitLab 时，确认选定的远端仓库可访问，并按适用配置补充缺失的分流标签。可建议将旧 CONTEXT 文件迁移至 GLOSSARY 命名。仅在实际 monorepo 中询问多上下文配置。
     language: zh-CN
     source_fingerprint: sha256:daf0449d4b446dfb100254758bb23c46b2cc593f1b500292b2d7aa0d87dffa11
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 第一次在一个仓库中使用这套 engineering skills。
     language: zh-Hans
     source_fingerprint: sha256:4b9761715c4959a5db6d6d059c24399a3f2a2acb8aec07762c763860f42dfb77
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 项目的 issue tracker、triage 标签或文档布局发生变化。
     language: zh-Hans
     source_fingerprint: sha256:fd51f99cbc88ca4291a2b12c80cd8fe4d082ef30394e7cb354c18d9ab2368408
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 避免每个 workflow 重复询问项目约定。
     language: zh-Hans
     source_fingerprint: sha256:d6a34b0c9ffea586500ecb9d06cbb99d04b9730e7aab67c6b1f0e0824b5ab6e0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 让 triage、spec 和 ticket 流程拥有稳定的共享配置。
     language: zh-Hans
     source_fingerprint: sha256:1dd89f0dec31c3475ab35c6685a937ada3e1641a2599b8094f4c17eca3ae4f4d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

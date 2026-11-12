@@ -11,79 +11,95 @@ units:
     translation: improve-codebase-architecture
     language: en
     source_fingerprint: sha256:8fffba7c48cc18a6ef163e6421814a0560c0fb7ce995842b33b167edf4eddb8b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 扫描代码库，寻找可以让模块更深、更易维护的架构机会。
     language: zh-Hans
     source_fingerprint: sha256:6b1fab82bf436d7fd4ebad23a5cd7b2eb3fe41ee48af336f971ee947e9639442
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 工程
     language: zh-CN
     source_fingerprint: sha256:eab9c8102dbf10cc12ca817cec56e5017748858e4ce8f9ee2f50cd551a3a425f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 用户调用
     language: zh-CN
     source_fingerprint: sha256:a108d938d08c0addebdea5910fb9a735b5065bd3392d35493eae5a5e39ef8683
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 稳定
     language: zh-CN
     source_fingerprint: sha256:1c16bd94a65f5bbf944327c42181c1c534fd8f6992c5fbb9be843a880579c87d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 代码库
     language: zh-Hans
     source_fingerprint: sha256:bc13c6ebbe0b335bf816addcc6af119ab0e971716c2e3dde9428cf07e696d9c0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 现有模块与接口
     language: zh-Hans
     source_fingerprint: sha256:5b4479b752f6b58735212165e1f1beb9e2e7c9995fb2449025182585f6ed4148
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 架构机会列表
     language: zh-Hans
     source_fingerprint: sha256:40989d62f479d8a4607f3298e71addb48271a25234ef787986593ec9346d275d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 可视化 HTML 报告
     language: zh-Hans
     source_fingerprint: sha256:97b5a5dda4be60e8970777ffb752055b1ffdf2547103d6c7cf2ff0201db453b9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 选中候选的设计问题
     language: zh-Hans
     source_fingerprint: sha256:63ab54da3b5438e05a1ccf0cf0c011c1b1ac4a776e7637192c2e88211a67da59
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
     language: en
     source_fingerprint: sha256:b5453d42b980d62618b3c02490eae396034c1621855a1c034bcec2eff71007a2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 用户显式启动后，先读取 codebase-design，结合仓库现状、历史与热点委派 survey，查找能隐藏更多复杂度的 deepening opportunities，并用 deletion test 检查改进意义。生成临时 HTML 候选报告，等待用户选择一个方向后，再通过 grilling 与 domain-modeling 深入设计；调查阶段不自动改源码或实施所有候选。 让使用新上下文的子代理走查代码库，记录实际遇到的障碍。
+    translation: 用户显式启动后，先读取 codebase-design，结合仓库现状、历史与热点委派 survey，查找能隐藏更多复杂度的 deepening opportunities，并用 deletion test 检查改进意义。生成临时 HTML 候选报告，等待用户选择一个方向后，再通过 grilling 与 domain-modeling 深入设计；调查阶段不自动改源码或实施所有候选。让使用新上下文的子代理走查代码库，记录实际遇到的障碍。
     language: zh-CN
     source_fingerprint: sha256:34d5c73f2165094e405a42a83fa06af0de9808ebc51b5b1691d722c3da21b4a3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 希望主动改善 codebase，而不是等待架构问题变成 bug。
     language: zh-Hans
     source_fingerprint: sha256:7636f0102559f46079f3920d5411f4f3748ffeb6a9c4765bce1d16c586864d08
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 需要寻找适合下一轮重构的高价值候选。
     language: zh-Hans
     source_fingerprint: sha256:fc707876c8c6110c4c3a9b6e775278cbd13cfa28d5cdbc1fd0ac6fc90727cc38
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 抑制 Agent 加速编码带来的软件熵。
     language: zh-Hans
     source_fingerprint: sha256:223367f4bb09d5f1c69977fe5722478ef2df50483aa7b23e3a93dcd217f80e6f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 让架构改进从模糊感觉变成可比较候选。
     language: zh-Hans
     source_fingerprint: sha256:bdd6a28ba5d5808ffb2918141121802e0851fae0e1204434665c554fdc929864
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

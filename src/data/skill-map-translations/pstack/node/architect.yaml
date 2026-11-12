@@ -11,94 +11,113 @@ units:
     translation: architect
     language: en
     source_fingerprint: sha256:a284f5794e0dcd77a2c8fbdd9c5a2b1032d1c0c2a19c0f219f27d5d26f9f4709
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 在写代码前确定类型、接口、模块和数据结构。
     language: zh-Hans
     source_fingerprint: sha256:c25b85d2d87ee330a23206c85de29a6ff12603797eded87cbcba3deb5c4ad89a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 架构
     language: zh-CN
     source_fingerprint: sha256:df9b9b3ad9f03f2d3af60cd48b6a96388f955ecd8b957408e37b4a6361566373
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 设计
     language: zh-CN
     source_fingerprint: sha256:cab2147d9f156e2a11bb9dd2f198f594f85dd885e82266b344d0047b0cc72a89
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 需求
     language: zh-CN
     source_fingerprint: sha256:304851474f0605b082fe93f734e580e55c868e9609ab7e426759625fe28a46f4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 当前架构
     language: zh-CN
     source_fingerprint: sha256:dc6e0cd627fcdb72105b842e927ccb7f8795d1652e6155b1083ee897bc3e6188
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.2
     translation: 约束
     language: zh-CN
     source_fingerprint: sha256:082a414f751aa504658755115d5e08b75bf3b4503e39dfead95cdcaf19028200
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 类型与签名
     language: zh-CN
     source_fingerprint: sha256:c18fef398d5140240cf5bfb8da54480f58d4e4f715913eef275fee3860adc1e2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 模块地图
     language: zh-CN
     source_fingerprint: sha256:c1cacbf006e03b03314a2f275b8a51dd31b4e1cf399f5b085217f2eb460d5e01
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 设计依据
     language: zh-CN
     source_fingerprint: sha256:ade67a5dd9e610173f918e1b7dc7e56c36dbdb7a572203b5b54300605dbec3ce
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.3
     translation: 实现约束
     language: zh-CN
     source_fingerprint: sha256:5862f2e85b1e7c8928061922acdf8589c6f0eb81c3b476b475bea266057b7f7d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Sketch types, signatures, and module structure before code, then stay in the loop while implementation fills in. Use for /architect, 'architect this', 'design this', or non-trivial work where jumping to code would lock in the wrong shape.
     language: en
     source_fingerprint: sha256:f0fc950773e1e234999bbd92586890baa2830b32d7728a2485dcd7bd139c1a5a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 用 how/why grounding 现状，用 arena 探索多个形状，选择可解释的 target architecture，并在实现中保持设计约束。 实施前先勾勒模块接口和类型，再用 arena 比较基于现状的候选方案，综合成一份设计方案。
+    translation: 用 how/why grounding 现状，用 arena 探索多个形状，选择可解释的 target architecture，并在实现中保持设计约束。实施前先勾勒模块接口和类型，再用 arena 比较基于现状的候选方案，综合成一份设计方案。
     language: zh-Hans
     source_fingerprint: sha256:4ba24b511acb5ec6c308802f67541a90d0f824d9048c67681f3c326217b6ec80
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 跨函数/模块变更
     language: zh-Hans
     source_fingerprint: sha256:56fa8e22ff78c4fa0caf17db665312b9d6d3c0e72a4541410c40122b823bd22b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 新 feature
     language: zh-Hans
     source_fingerprint: sha256:c045fa315306a1d339a9069c8abe1b883e7f961d5f99205213ec7ad7ddc80eba
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 非平凡 refactor
     language: zh-Hans
     source_fingerprint: sha256:d422dd2c770b05148c7725913a4aafa9a5fccff2d96a45b70c5a14f7f00a7096
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.3
     translation: 数据模型改变
     language: zh-Hans
     source_fingerprint: sha256:fdc7ebbb411194b2997e8c0beb267f1747deb65d5e28dcaacb6717f8c011aadd
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 避免局部 patch 锁死错误结构
     language: zh-Hans
     source_fingerprint: sha256:ed5953979296fa295b8a26ec1e65118793c995426420a035ba7f867d3eb0e48e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 降低返工和读者负担
     language: zh-Hans
     source_fingerprint: sha256:b3e9a62e97dedca9de643a0ab87ba0ec9b0c2adf49f80a237464b7ba51f1aaa9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

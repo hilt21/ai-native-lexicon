@@ -23,7 +23,7 @@ source_refs:
     path: engineering/code-review/SKILL.md
 official_description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
 status: active
-mechanism: Compute the diff from the supplied fixed point. Two independent reviewers assess repository standards and specification compliance, then report findings and results for each axis. Preserve separate verdicts rather than combining them. Address refactoring and standards constraints during review. Run the two review axes in parallel with fresh context and aggregate their findings. Check the tracker for cited issues and include any repository coding standards.
+mechanism: "Compute the diff from the supplied fixed point. Check referenced issues and repository coding standards. Run independent reviewers in parallel with fresh context: one checks repository standards and one checks specification compliance. Consolidate their findings and keep a separate verdict for each axis."
 when_to_use:
   - A branch, PR or work in progress needs formal review.
   - Implementation is complete and needs checks against both repository standards and the originating specification.

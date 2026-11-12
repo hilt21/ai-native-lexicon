@@ -11,59 +11,71 @@ units:
     translation: babysit
     language: en
     source_fingerprint: sha256:474fad6eb729765e9ed5ac36ca0e9a7dac8566841ee4cd7c89ae8fd03e055488
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 把已开的 PR/stack 推到 merge-ready，但不负责最终 landing。
     language: zh-Hans
     source_fingerprint: sha256:2e54dc8fe5f83094d4916ebcb0887ca74505a2d109eb90f53873245a56db0f42
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 未关闭的拉取请求或变更栈
     language: zh-CN
     source_fingerprint: sha256:719df0fa9bbbb378f096276227db0b29f2dd1b2b46cbcbb990bdd964b27fc91e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 代码托管平台状态
     language: zh-CN
     source_fingerprint: sha256:369fff5e6bc304f799b34d68775c8d5f2dcb51fc67d315c9a5dc43642a432128
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 可合并的推进边界
     language: zh-CN
     source_fingerprint: sha256:4f28370206e9ea5504752e9bda78cf9d225995fca8b70cd1d5d04c02967f567c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 已处理的审查与持续集成问题
     language: zh-CN
     source_fingerprint: sha256:986fe37a441dce4b562e5727f661ceba3e810c931e534ffcb5edc705f8d5bf3e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 阻塞报告
     language: zh-CN
     source_fingerprint: sha256:3e750b3c9898f1a9fc7556b42e790b5dd953a38ae382465e5142637e21371b74
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 声明 drive/background/threads-only/check 模式 → 只处理 merge frontier → conflicts → review → CI → forge verdict → 批量 fix wave。 保持 PR 栈的拓扑不变，将变基或更改基分支的工作交给 PR 负责人。
+    translation: 声明 drive/background/threads-only/check 模式 → 只处理 merge frontier → conflicts → review → CI → forge verdict → 批量 fix wave。保持 PR 栈的拓扑不变，将变基或更改基分支的工作交给 PR 负责人。
     language: zh-Hans
     source_fingerprint: sha256:3b9e4c6c2d0de335e5c74769cf6a8aae4fa696e0578ce07549d55b4891c802ed
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: PR 已开，需要 green/merge-ready
     language: zh-Hans
     source_fingerprint: sha256:62cb91dd97156fb5cf7f7e4c78b355d3864cc52562ca0c11e1ac6ffb70950e7f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 需要处理 review/CI
     language: zh-Hans
     source_fingerprint: sha256:dd24460203e8f4ea07f7d335bc2a0c54639dc7aed2bfdf2fc20fffc4ca173f82
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 同时处理整个 stack 导致 churn
     language: zh-Hans
     source_fingerprint: sha256:c3b1a959b3e81ccdda4ce5e93a7e7edf03bb45b1550dac818f462632a83c2d95
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 把 green checks 当 merge verdict
     language: zh-Hans
     source_fingerprint: sha256:35ccac8e31f512ab6024d33de704b165d7b10d53e3ff4420d833d7ab4ce346ce
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

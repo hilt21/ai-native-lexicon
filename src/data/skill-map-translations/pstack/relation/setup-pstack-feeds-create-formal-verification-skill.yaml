@@ -11,4 +11,5 @@ units:
     translation: 项目没有形式化验证技能时，单独询问是否创建。
     language: zh-CN
     source_fingerprint: sha256:90273d83947ca0c0dee1b7c59032926fd1423d9c4bf1a2d22ad98569419ca763
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

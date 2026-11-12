@@ -11,104 +11,125 @@ units:
     translation: poteto-mode
     language: en
     source_fingerprint: sha256:d51b3fcddbbecba26b69afbce3e19440e88fdeed03b2d6f26e67af791a3a5a0c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: pstack 的总路由器与工作风格入口。
     language: zh-Hans
     source_fingerprint: sha256:20805633ac78ce1400732c1d05f8b0600412a441e8847fad146085e185744b1f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 路由
     language: zh-CN
     source_fingerprint: sha256:f307be73953807a61e2b06ea32fca058a2dc28118bc5f156cacd7015d0cedbde
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 核心
     language: zh-CN
     source_fingerprint: sha256:e115d4e7620367bd8b7c189c32c9f6db5d24a781c068596a0659874e7080a3b9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 编排
     language: zh-CN
     source_fingerprint: sha256:11e2d2ed353a767dfd06fd92ef51bad7c3ac114129d70cc3d434aa4149339eff
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 用户任务
     language: zh-CN
     source_fingerprint: sha256:aade99364611119fc037dcb2725ca7f322e683078b9db7fffc4f56b6aac7eda8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 仓库上下文
     language: zh-CN
     source_fingerprint: sha256:f0f73fd725eb57417e43f32d17a98d6fd08945deb4077a9f155371fc7e3ceabf
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.2
     translation: pstack 模型配置
     language: zh-CN
     source_fingerprint: sha256:43855a95129529a838f660f173bbbc12fa2d89289d783473b994b59fd35ae833
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已选定操作手册
     language: zh-CN
     source_fingerprint: sha256:34169821582f46b5df9a1b6dbf3703288feabcf041b83372caa3891db0daac9a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 任务计划或待办清单
     language: zh-CN
     source_fingerprint: sha256:80600f5113b7c8cd6b6b73cd6db9caf5d5b1b565a2f101bb6efa2bfa36c613d8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 技能与原则链
     language: zh-CN
     source_fingerprint: sha256:53356f9ca4df2bcac099faa9769216c1f1a896a8b59ef979386e10cbb1db897a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.3
     translation: 已验证结果
     language: zh-CN
     source_fingerprint: sha256:cdee75f9ee888f27da755378bd058f5a385c3a0dfbe8eba0106a868b4ab7ca5f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: handoffs.0
     translation: 交接说明：all playbooks
     language: zh-Hans
     source_fingerprint: sha256:c33ca03f9ea846d1d588ec0ba37199fd9ac3116c521abeaef33e8b8b6418ebf8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: poteto's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style.
     language: en
     source_fingerprint: sha256:6261fde9928c20f877caf23ff1def806adf26577cd5cd099317a24b05809f1c5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 判断任务类型与所需严谨度，选择 playbook，并组合适当 skill、principle、subagent 和验证步骤。 入口先用自己的话复述目标。可观测事实先用工具核对，再将真正需要用户决定的问题交给用户。
+    translation: 判断任务类型与所需严谨度，选择 playbook，并组合适当 skill、principle、subagent 和验证步骤。入口先用自己的话复述目标。可观测事实先用工具核对，再将真正需要用户决定的问题交给用户。
     language: zh-CN
     source_fingerprint: sha256:43262e46cf0a911b417a605c6dd9332a3b5d9548260508b07ab109c11d0000b0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 需要 pstack 风格处理一个工程任务
     language: zh-Hans
     source_fingerprint: sha256:d7396d157ed448b6c72fb49f7deee20a476f229982f707c69c753688da040637
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 不知道该调用哪个 playbook 或 skill
     language: zh-Hans
     source_fingerprint: sha256:7482bba8aa54d7f7451d000f5cb85eb326abb6d60b60618bd1f90eb0e27f3fb0
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 希望默认获得简洁代码与可验证结果
     language: zh-Hans
     source_fingerprint: sha256:7c0b119be81fe9d055f80083dc1b27235766304ac72ae82aa69e8b80c8ee4ede
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 降低技能选择成本
     language: zh-Hans
     source_fingerprint: sha256:3bf002adcbbbf4ab5e0dbc1005a121e1da7901c2678bfb9f6c62385242d0cdc8
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 把复杂工作流封装成单一入口
     language: zh-Hans
     source_fingerprint: sha256:e331af849b2c1b180d900ad5ebf23e6528b1ab3889d5d3be4a35ccb69a8a4844
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.2
     translation: 维持跨任务一致的工程纪律
     language: zh-Hans
     source_fingerprint: sha256:5cd6bc191a5125d9c983618e24535dd1097c9617e6fa47c2babc33b3a958d908
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

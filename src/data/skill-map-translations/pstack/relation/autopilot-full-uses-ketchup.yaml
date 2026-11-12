@@ -11,4 +11,5 @@ units:
     translation: 使用 ketchup 向操作者报告。
     language: zh-CN
     source_fingerprint: sha256:1d15b14d19760f22438a09ae9afb5004a27ceb8595d193dbfab04ecaa58099a5
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

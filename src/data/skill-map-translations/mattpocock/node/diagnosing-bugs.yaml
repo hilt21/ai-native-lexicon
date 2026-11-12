@@ -11,79 +11,95 @@ units:
     translation: diagnosing-bugs
     language: en
     source_fingerprint: sha256:2b1afb1188fb153762b9715e06df174a36ec2ccd957aafb91a529c1093c3079e
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 用能捕获真实症状的短反馈寻找根因并修复；正确 seam 上建立回归保护，缺少 seam 时记录发现。
     language: zh-Hans
     source_fingerprint: sha256:86401000c5cbb674db31c3df56fd5d9df75927f7d6166e3a8f7362fe5df5bce2
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 工程
     language: zh-CN
     source_fingerprint: sha256:231214d502d32e4a232b625b03646ca29fbed51bc6151d5d88788de8ef50c4e7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 模型调用
     language: zh-CN
     source_fingerprint: sha256:83185a89dddfff67b5da9a5009cb4908539b8701607cdad8da99debb4198c035
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 稳定
     language: zh-CN
     source_fingerprint: sha256:e4387251693eb47f7ba3dfc25308688c29dc956712304e8b9809e4f2fbcb773c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 问题症状
     language: zh-CN
     source_fingerprint: sha256:3b973051f573b437561a6d70cfda6f7fe358ba34053921c73df69d8c9ecd8a64
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 可运行系统
     language: zh-Hans
     source_fingerprint: sha256:fe1121eb83766104f70e5fd0f4e648992a1398c1c2a6894a23287a2aee0c7503
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 可重复反馈或固定高复现率的 repro
     language: zh-Hans
     source_fingerprint: sha256:64672afe5c46924f92efe6202ce744e8cfe4f5e89df2bf54c383db2095998cbc
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 根因证据与修复
     language: zh-Hans
     source_fingerprint: sha256:558ffc82f31b6b12989c04c2767fe0c9270f5544764ae242f75d862d90e47b5c
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 正确 seam 上的回归测试，或明确记录缺失 seam
     language: zh-Hans
     source_fingerprint: sha256:b8ecdbfb19f96fd3f8f629e438ea388a0970e0e6e732cdcc1b16e6f31ed6b0e1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
     language: en
     source_fingerprint: sha256:8fdba0306aaa32364ee7a1b6d27b1340ba8224dbd4fa99cc563f24090f74a960
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 先实际运行一个能捕获此 bug 精确症状的快速反馈命令并看到失败；flake 先提高并固定复现率。再逐项缩小 repro、列出可证伪假设并 instrument。只有存在能表达真实调用模式的正确 seam 时，才先写失败回归测试、修复并看其通过；否则记录缺少 seam 这一发现。最后重跑原始场景、清理 debug instrumentation 并记录根因。没有反馈入口时先说明尝试与访问缺口，不靠猜测继续。 若通过修改代码或夹具制造回归失败，先与未改动副本比较，确认修改生效。
+    translation: 先实际运行一个能捕获此 bug 精确症状的快速反馈命令并看到失败；flake 先提高并固定复现率。再逐项缩小 repro、列出可证伪假设并 instrument。只有存在能表达真实调用模式的正确 seam 时，才先写失败回归测试、修复并看其通过；否则记录缺少 seam 这一发现。最后重跑原始场景、清理 debug instrumentation 并记录根因。没有反馈入口时先说明尝试与访问缺口，不靠猜测继续。若通过修改代码或夹具制造回归失败，先与未改动副本比较，确认修改生效。
     language: zh-CN
     source_fingerprint: sha256:ac0e801e13bec854f91bd5530f1a854edf63e5ca927e7c5988880df20d8e5ccb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: bug 不适合凭代码阅读直接判断。
     language: zh-Hans
     source_fingerprint: sha256:cc80e4b94245290da69ae5db7e71814128a890df6fe277316041eb4d781c2387
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 问题是间歇性、回归性或性能相关。
     language: zh-Hans
     source_fingerprint: sha256:c83f7e34d95ca42af6484d539625b4af2af1bcaaf7b7a91d2e3a9ad4f14efc4a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 把根因判断建立在能观察真实症状的反馈上。
     language: zh-Hans
     source_fingerprint: sha256:3ae7eeb55e4b72111f7fb07dbb5c7f187d07ebab3e7f84c318d129a980b8e3d3
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 在存在正确 seam 时锁定修复，否则揭示架构可测试性缺口。
     language: zh-Hans
     source_fingerprint: sha256:c51e36498597b5aa75724226b4bd9c0d95817ba498ed379927f7d4c885eb7236
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

@@ -11,79 +11,95 @@ units:
     translation: wayfinder
     language: en
     source_fingerprint: sha256:d77c54b1f56bb669f04551abc23048b087bb2ac32401e70e0ceed913455bb093
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 把超出单个 session 的模糊大项目拆成一张决策地图。
     language: zh-Hans
     source_fingerprint: sha256:e57ce7b86d8e65dec65129e266a0b294d49b164243295fd401f76262854de7ee
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 工程
     language: zh-CN
     source_fingerprint: sha256:9e45a8fcabc9d024e264a15b93377280fc9935301b87964e546e99b6549dfef9
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 用户调用
     language: zh-CN
     source_fingerprint: sha256:64e2b5c5c0e9f91fdcf2573dbf4210439efd915625b3d4e6a239b7c147321eb1
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 稳定
     language: zh-CN
     source_fingerprint: sha256:bc5ce272d515e142452969b53cf11e4caa24a87da6ee53f3ba1cc78aae1c34bb
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 目标或大方向
     language: zh-Hans
     source_fingerprint: sha256:932c98852acd2a0c5696e6e9320fc191c0e8853367fd6130661afe46b6341083
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 议题追踪器
     language: zh-CN
     source_fingerprint: sha256:0246060b09273b009df05f11eb99da0282b43322f4988fc0a1a24df65d9332be
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 决策地图
     language: zh-CN
     source_fingerprint: sha256:82b761bb23d99e0247e353f96d6613586a570a53bcae524a8bc755fae55dbf32
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 已澄清的未知事项
     language: zh-CN
     source_fingerprint: sha256:86a5a020c643827ee5f70ad930018921edacad357a219b7f1b586599f957db77
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 可进入 to-spec 的清晰路径
     language: zh-Hans
     source_fingerprint: sha256:a58c1df269aec9fce5a769cb4123d2c18489529b14ada76d4255218e4fdf64e7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
     language: en
     source_fingerprint: sha256:5255239b732dc81e28f27fe9eb0f1bf22b27800d93eae284eed30f7d7719d5da
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 用户显式启动后，针对太大且路线尚不清晰的工作在 tracker 建 decision map。随后通常每个 session 解决一个非研究票，研究票可由后台 Agent 并行推进；prototype、grilling 或必要 task 用于解除决策阻塞，人工决定需要真实交流。默认产出决策，再由用户带入 to-spec；正文允许 Notes 明确覆盖规划默认，但不把地图直接当工程交付 backlog。 决策图和票据只使用 wayfinder 类型标签。先建子票据，再写阻塞关系和实际引用。研究任务并行分配给使用新上下文的代理，研究分支不进入产品合并。
+    translation: 用户显式启动后，针对太大且路线尚不清晰的工作在 tracker 建 decision map。随后通常每个 session 解决一个非研究票，研究票可由后台 Agent 并行推进；prototype、grilling 或必要 task 用于解除决策阻塞，人工决定需要真实交流。默认产出决策，再由用户带入 to-spec；正文允许 Notes 明确覆盖规划默认，但不把地图直接当工程交付 backlog。决策图和票据只使用 wayfinder 类型标签。先建子票据，再写阻塞关系和实际引用。研究任务并行分配给使用新上下文的代理，研究分支不进入产品合并。
     language: zh-CN
     source_fingerprint: sha256:b50ac95ac316039c79533816174cae90ef55309e97a7a5bcad81c1048214c284
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: greenfield 或巨大 feature，当前还无法写出完整 spec。
     language: zh-Hans
     source_fingerprint: sha256:55744245982c8538b6d8d3d31b5d06d91aa7638be15f343bad552fa1a390f8b4
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 关键未知需要跨 session 逐步解决。
     language: zh-Hans
     source_fingerprint: sha256:a7b95a9a765137b778daa470aee0d4f9d4ea7d9f0636c613f2b633fd73ff8059
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 避免在高不确定性下过早进入实现。
     language: zh-Hans
     source_fingerprint: sha256:d7db8abbb26c78f162483df47b89c52759cf036cbbe6fbeec0fe230273b6ff4f
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 让长周期探索留下可共享的决策轨迹。
     language: zh-Hans
     source_fingerprint: sha256:03b1b895cc755ff50c2016730eb4f7cfc05bff55c84f57eba79d8d756c5f5ec7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12

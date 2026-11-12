@@ -22,7 +22,7 @@ variants:
         optional: false
         outputs: []
       - title: Coordinate and divide responsibilities
-        why: Start with one unit, assign a single owner per PR and track progress in Project. Use independent verification and event subscriptions when available.
+        why: Start with one complete unit, assign one owner per PR and track progress in Project. Require independent verification at the current head; use event subscriptions when the harness supports them.
         nodes:
           - orchestrate
         optional: false

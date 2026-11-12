@@ -11,59 +11,71 @@ units:
     translation: autopilot-full
     language: en
     source_fingerprint: sha256:06084370ab3798851b5732e5ef9a092d6fbd4de4e7e639c18dff16a08961169b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
     language: zh-Hans
     source_fingerprint: sha256:c359cebe22f4fc56ee5522bca9fbd0d9af8780ba48c1afb09560c060505873e7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 拉取请求队列
     language: zh-CN
     source_fingerprint: sha256:d5b7b4b0c012014b30badaa4a2e396ad88211afdde34fd4867ea80a09355176d
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 操作人员控制关卡
     language: zh-CN
     source_fingerprint: sha256:f48634c9a8a161372d61ea3a8b6cf17cebe1578e97881bc48f5badde04eb5159
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已合并且经过验证的拉取请求
     language: zh-CN
     source_fingerprint: sha256:a8e421abe8da60c91949574ca0664e9a4d089b9e474d77d1ac7aac95708e9b9b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 决策与子任务记录
     language: zh-CN
     source_fingerprint: sha256:08fb290d8089cbf4f341a50bb10f3c6741fb80fecc9c29cf2a75895bb998693b
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 审计结论
     language: zh-CN
     source_fingerprint: sha256:9f3102569991ded298983354537c22b7d706d7afe4ac1857cf0e5569775407fa
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: one owner per PR → durable trail → self-proof/CI/babysit 并行 → root swarm verify exact head → clean verdict 后 owner merge → 周期 audit/replacement。 遵守操作者明确设置的关卡。CI 结果只适用于对应提交；仅在 shipping 的补丁规则允许时复用某一类验证结果。用 ketchup 报告实际 PR 状态和待定事项。
+    translation: one owner per PR → durable trail → self-proof/CI/babysit 并行 → root swarm verify exact head → clean verdict 后 owner merge → 周期 audit/replacement。遵守操作者明确设置的关卡。CI 结果只适用于对应提交；仅在 shipping 的补丁规则允许时复用某一类验证结果。用 ketchup 报告实际 PR 状态和待定事项。
     language: zh-CN
     source_fingerprint: sha256:6c95981ab490a68c027e7c598d3661f81dfa85152f4d78deff0d7d9e140be1c7
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 多个独立 PR 要全自动做到 merged
     language: zh-Hans
     source_fingerprint: sha256:d1bc4f8055581ec7e8bd2b1fac4e7cca54643f6b38649d9835d93f7ba3fcfa24
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: root 成为执行瓶颈
     language: zh-Hans
     source_fingerprint: sha256:94fc5d617553e6197292da73f65b301cc6e41ae41032fc3b636a53261996c589
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: PR owner 丢失生命周期责任
     language: zh-Hans
     source_fingerprint: sha256:a1eb136691ab5bd96e51743133074540b6c32e552113c8affe080b1f7a649696
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: solves.2
     translation: 无独立 countersign
     language: zh-Hans
     source_fingerprint: sha256:7f34d1b1e45a30f4ca25d94cee980e7622e6304ccdc2e644401a6cd48d87953a
-    review_status: draft
+    review_status: reviewed
+    reviewed_at: 2026-11-12
