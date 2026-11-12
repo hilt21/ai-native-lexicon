@@ -1,0 +1,35 @@
+title: Verify an invariant
+summary: Check a high-impact invariant that ordinary tests rarely exercise.
+order: 7
+when_to_use:
+  - A critical property needs more than example tests.
+inputs:
+  - Code and a candidate invariant
+outputs:
+  - Evidence with explicit scope and a repeatable formal check
+source_refs: []
+status: active
+variants:
+  - id: standard
+    title: From property to maintenance
+    steps:
+      - title: Select and check the property
+        why: Choose the verifier from the property. Confirm the check detects a broken variant.
+        nodes:
+          - create-formal-verification-skill
+        optional: false
+        outputs: []
+      - title: Inspect state paths
+        why: Use a statechart to explain a reachable violation and the shortest path to it.
+        nodes:
+          - statechart
+        optional: true
+        when: The verification uses a TLA+ state model.
+        outputs: []
+      - title: Keep the check aligned with the code
+        why: After verified code changes, distinguish drift in the formal check from a defect in the code.
+        nodes:
+          - maintain-formal-verification-skill
+        optional: true
+        when: The project already has a formal check and the covered code changed.
+        outputs: []

@@ -1,0 +1,19 @@
+title: ketchup
+summary: Catch the user up on progress and decisions that still need them.
+type: capability
+layer: skill
+primary_cluster: learning-evolution
+inputs:
+  - Existing work and current status
+outputs:
+  - Progress summary and decisions awaiting the user
+when_to_use:
+  - Existing work and current status
+solves:
+  - Catch the user up on progress and decisions that still need them.
+source_refs:
+  - source: pstack-0-15-36-c742dd61
+    path: skills/ketchup/SKILL.md
+official_description: Catch the user up on what changed in this chat since their last message, in plain words and small visuals. List every item waiting on them with what they need to decide it from the reply alone. Use for /ketchup.
+status: active
+mechanism: Summarize changes since the previous user message using existing evidence. Check live status where relevant and separate waiting decisions from work the agent can continue.

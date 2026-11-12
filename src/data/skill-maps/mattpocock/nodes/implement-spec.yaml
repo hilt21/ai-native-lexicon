@@ -21,11 +21,11 @@ outputs:
   - Ready PR or branch
 handoffs: []
 source_refs:
-  - source: mattpocock-skills-1-3-1-dd400c3a
+  - source: mattpocock-skills-1-3-2-5863806d
     path: engineering/implement-spec/SKILL.md
 official_description: Implement the result of /to-spec and /to-tickets in code.
 status: active
-mechanism: The user explicitly starts implementation of the whole specification. Read tickets and blocking edges as a task graph, create an integration branch and delegate ready tickets to implementer subagents in separate worktrees. Each implements with TDD at the agreed seam and commits. Synchronize the integration tip before the orchestrator merges work, then run a final code-review after all tickets are complete. Choose this whole-graph path or per-ticket implement according to scope; they are alternatives.
+mechanism: The user explicitly starts implementation of the whole specification. Read tickets and blocking edges as a task graph, create an integration branch and delegate ready tickets to implementer subagents in separate worktrees. Each implements with TDD at the agreed seam and commits. Synchronize the integration tip before the orchestrator merges work, then run a final code-review after all tickets are complete. Choose this whole-graph path or per-ticket implement according to scope; they are alternatives. Give each ticket implementer fresh context; use a separate fresh implementer for fixes from the final integration review.
 when_to_use:
   - A complete specification and ticket set should be delivered through one orchestration.
   - Independent tickets can progress concurrently.

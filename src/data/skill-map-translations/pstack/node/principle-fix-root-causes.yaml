@@ -10,54 +10,54 @@ units:
   - path: title
     translation: fix-root-causes
     language: en
-    source_fingerprint: sha256:0708ae5f31b662fd35087fa4ab4329815c66cf2d22ae292166e3daa7f18a8fdd
+    source_fingerprint: sha256:bc75d6807d268d161e60a9fc7760377f81a1f453538e390dbdf950108e345c5d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 先复现并找到机制，再修根因。
     language: zh-Hans
-    source_fingerprint: sha256:f2b1690300e24b76919a0be836aa92a97ef4436a3883e7732d7d6417a0869bb1
+    source_fingerprint: sha256:17e1e91ad21f84d686943ce7e0daf5543e393eb3510f90da7680c3027b3bc25e
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 原则
     language: zh-CN
-    source_fingerprint: sha256:a284e6d8dcc1b9d0808648fe27d4244243c82a2dd252295e21708e0300434252
+    source_fingerprint: sha256:046722370eff985910868d11fa7454a9df275c79df50d8ffe294480776e5f642
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 症状或复现
     language: zh-CN
-    source_fingerprint: sha256:9163534861eabba13f52747e206dad8540c9790c9ba3fdd1e994176990627f9a
+    source_fingerprint: sha256:eef429b627ddd32e85ba95326bc24eabac6076f1bcd7d5b78be0b4331bcdfb3a
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 根因修复
     language: zh-CN
-    source_fingerprint: sha256:d6a24cdd24323cb1ee458edf679bbf60133a769509c93f15430b506dbfb26a80
+    source_fingerprint: sha256:0d02923865932447d2875456fa8f65fd142b2a8a792c886d2c2795661dda1222
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: official_description
-    translation: Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.
+    translation: Apply when debugging. Trace each symptom back to the first place the system went wrong and fix it there. A guard is a fix only when the state it handles is legitimate.
     language: en
-    source_fingerprint: sha256:1195527bec6954bc98d822872136692c8de28a7b8115b3974e93ce0c4a8b9d2d
+    source_fingerprint: sha256:bb95cd3fde753513dd50b123ebcee888ced0e7f4ea494c4eb18292210f44d0bd
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 先复现并找到机制，再修根因。
-    language: zh-Hans
-    source_fingerprint: sha256:b781ca29507391c77c88946d11424e362bbdf7738ca0be767912aab7f62cf6e3
+    translation: 先复现并找到机制，再修根因。只有防护条件处理的是合理状态时，才把该防护视为修复。
+    language: zh-CN
+    source_fingerprint: sha256:40d0752e03a8e68a3aaa572e7ae8cd88769e4732c13e66f59c38c7e881ff6500
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 调试时使用。追踪每个症状的根因，并在根因处修复；先复现，持续追问原因直到找到根因，避免用空值检查掩盖崩溃。
     language: zh-CN
-    source_fingerprint: sha256:ab05d0718e491a85abe3933298b06cc3642fce682f3353e8f5f8265ee6a2f66b
+    source_fingerprint: sha256:57a891ebdf3bbe995637d56a94b9aca8270293e23ec3e5125f2631538edea8e1
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 先复现并找到机制，再修根因。
     language: zh-Hans
-    source_fingerprint: sha256:735a463eac16885671b311bc879fdc454c7da29d2b1af24fc3cf007a17385b21
+    source_fingerprint: sha256:31f890962c31f4c17e5dee457730fac9510406112e3a486bf75ba7f1262652e6
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

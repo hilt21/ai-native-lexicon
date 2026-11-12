@@ -1,5 +1,5 @@
 title: autopilot-stack
-summary: Automatically build and verify a linear PR stack, leaving final landing to the operator.
+summary: Build and verify dependent PRs as a stack and hand verified PRs to the operator for landing.
 type: playbook
 layer: playbook
 primary_cluster: parallel-autonomy
@@ -14,10 +14,10 @@ outputs:
   - operator handoff
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/autopilot-stack.md
 status: active
-mechanism: Keep the one-owner lifecycle and root hourly audits. The root alone writes topology, appending verified PRs in order to a linear stack. Do not merge.
+mechanism: Follow Autopilot-full up to verified and green on each current head. Stack a PR only if it depends on another PR. Hand off the verified PRs without merging; no pushes after handoff without operator approval.
 when_to_use:
   - Automatically build several related PRs.
   - Keep final review and landing with a person.

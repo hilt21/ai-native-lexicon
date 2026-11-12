@@ -12,11 +12,11 @@ outputs:
   - lower reader load
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/principle-minimize-reader-load/SKILL.md
 official_description: Apply when reviewing or shaping code that's hard to trace. Count layers between question and answer, and hidden state in the reader's head; collapse one-caller wrappers and shrink mutable scope.
 status: active
-mechanism: Assess quality by reducing layers readers must cross and hidden state they must infer.
+mechanism: Assess quality by reducing layers readers must cross and hidden state they must infer. Check both layers a reader must trace and mutable state they must hold in mind.
 when_to_use:
   - Apply when reviewing or shaping code that's hard to trace. Count layers between question and answer, and hidden state in the reader's head; collapse one-caller wrappers and shrink mutable scope.
 solves:

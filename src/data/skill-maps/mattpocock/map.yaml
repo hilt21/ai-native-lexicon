@@ -1,7 +1,7 @@
 schema_version: 1.1.0
 title: Matt Pocock Skills Map
 summary: Choose and combine Matt Pocock's engineering skills around a user goal, from clarification and planning to implementation, verification and retrospective.
-scope: "The fixed mattpocock/skills 1.3.1 snapshot (dd400c3a): 31 skills outside in-progress, comprising 27 plugin-distributed skills and four misc utilities. Excludes seven in-progress entries and the removed resolving-merge-conflicts skill. Plugin distribution and the teaching catalog do not necessarily cover all 31 entries. Uses, classifications, relationships and seven task journeys are editorial interpretations. Users explicitly start user-invoked entries; this website provides reading material and does not install or run skills."
+scope: "Fixed mattpocock/skills 1.3.2 snapshot (5863806d): 31 entries outside in-progress, comprising 27 plugin-distributed skills and four misc utilities. Eight in-progress entries, including software-factory, are excluded. The teaching catalog and plugin distribution do not cover every entry. Classifications, relationships and seven task journeys are editorial guidance. This site does not install or invoke skills."
 audience:
   - Developers using Matt Pocock skills for the first time
   - Engineers building reliable AI coding workflows
@@ -15,8 +15,16 @@ sources:
     verification_status: verified
     commit: dd400c3ad65e57c06f05e832e0aac92c7992f34d
     verified_at: 2026-10-07
+  - id: mattpocock-skills-1-3-2-5863806d
+    repository: https://github.com/mattpocock/skills
+    root_path: skills
+    version: 1.3.2
+    observed_at: 2026-11-12
+    verification_status: verified
+    commit: 5863806dd4e15c63174bee4e7515a4256792ecfa
+    verified_at: 2026-11-12
 current_sources:
-  - mattpocock-skills-1-3-1-dd400c3a
+  - mattpocock-skills-1-3-2-5863806d
 taxonomy:
   types:
     - id: router

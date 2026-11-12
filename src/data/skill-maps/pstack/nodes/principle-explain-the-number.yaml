@@ -12,11 +12,11 @@ outputs:
   - validated interpretation
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/principle-explain-the-number/SKILL.md
-official_description: "Apply before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think."
+official_description: "Apply before you measure, and before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think."
 status: active
-mechanism: Explain the limiter and measurement mechanism before interpreting a number.
+mechanism: Explain the limiter and measurement mechanism before interpreting a number. Name the decision and noise floor before measuring; identify the limiting resource and rule out skipped, cached or misconfigured work.
 when_to_use:
   - Apply before you trust, report, or act on a number you measured. Find what limits it, and rule out that it measured something other than the work you think.
 solves:

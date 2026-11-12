@@ -10,108 +10,108 @@ units:
   - path: title
     translation: show-me-your-work
     language: en
-    source_fingerprint: sha256:74b96d15184f2affc389ca86a1c5a4d7cfaf83b1a53408baa78025f9365430d8
+    source_fingerprint: sha256:d3c6376826c63c01ba046824e26962eeb93e8846b0db85794ffaba55e4d2ccfb
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 把长时间 Agent 活动压缩成可审计 decision trail。
     language: zh-Hans
-    source_fingerprint: sha256:61c29b95f66d36a6ac3c31c95cfaabfcd80caa03b24805c4ce54add46abb3e9d
+    source_fingerprint: sha256:70003d86999e8a00c6467f18c08d6f7717429705e8a8de65f4510740b1673d97
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 审计
     language: zh-CN
-    source_fingerprint: sha256:6621be6b7b08f0accf0c6befaee0e086dc51b0f8351a3177fe1ee48c9418a348
+    source_fingerprint: sha256:0213b3e18b481124a079e34226a1c39b8d247bd07f8a45106b9a5da8f1a1b977
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 证据
     language: zh-CN
-    source_fingerprint: sha256:08965b0dc6b195e29a2c6135ae90279fe8e38b6d6eb3b3aa599489ccd7b4727b
+    source_fingerprint: sha256:93f3caefe89de4d56cd01f74f09ff53666db8ee81160f4fea4f9dd12b5268ce3
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 压缩关注信息
     language: zh-CN
-    source_fingerprint: sha256:299c2f16481130027337901243c5b06ecbb527c54caefb6124122b6cad15f664
+    source_fingerprint: sha256:40c41ba3576e191e710f9c0c43d4719908f018f0de39a325aa10ef26ad3ebc12
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 智能体决策
     language: zh-CN
-    source_fingerprint: sha256:e2e6774365b33707aea2c51d4a12af417788d6abdabc1000e72dba886b4c0de9
+    source_fingerprint: sha256:9eeca76d4ee2f292966b83edd571f52e5adb5f2d6a922e60c42102506faea5ba
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 证据指针
     language: zh-CN
-    source_fingerprint: sha256:7f598c5a49c81187dc0a54944a98145e81910bf26ccc8c157b082da55f3c4099
+    source_fingerprint: sha256:f695e9de45eed6ea1d951c00ec33d4e056e69238cceb7ec3cd4a96b5b7a65da4
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: decisions.tsv
     language: en
-    source_fingerprint: sha256:e23bbdf54c38546726e6e9cc197b6797e2c65a9a8c20a873904e9fbb85772e30
+    source_fingerprint: sha256:066a6e019a880f98a85cb5768b5d1ec6fdf2ed2c2dd94b17fe9c68ba28f33561
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 精简审计记录
     language: zh-CN
-    source_fingerprint: sha256:0bb2e02fbf92d9157a223132dd49e9fa3e59cac6bd31f86e971d7a5b5c7fdccf
+    source_fingerprint: sha256:74b769b6f13c7d1ec8d09156f757a61f180ae40b9392def6b1222c9ac3330c60
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: handoffs.0
     translation: 交接说明：human audit
     language: zh-Hans
-    source_fingerprint: sha256:6ed9b67055b6a73a63aa16a81245fd801a9b33ee5e499d377d1a65483a6ea316
+    source_fingerprint: sha256:53f1c869801f6d1f5fcbaa5b1b7ecf082d86be8c4b4b355c0c4b65c1605be0ef
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: "Keep a reviewable decision trail for long-running or unattended work: a TSV log with one row per decision (what, why, evidence, result). Local by default; commit it when a reviewer needs the trail to trust the result. Use for /show-me-your-work, autonomous or multi-phase runs, or work a human reviews after stepping away."
     language: en
-    source_fingerprint: sha256:27cb6eb178a55203db24e530131675d5a6675876193eef9542ba108f39ced738
+    source_fingerprint: sha256:10b3ecbb2daea82af273ba2ea8ed2acb3541cff2272267ff4f5b918d6f5aac18
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 以 append-only TSV 记录关键决策、原因、证据指针和结果，避免让人重读完整 transcript。
+    translation: 以 append-only TSV 记录关键决策、原因、证据指针和结果，避免让人重读完整 transcript。交接前请不同模型系列独立检查记录与对话，找出遗漏。
     language: zh-Hans
-    source_fingerprint: sha256:5cbb38c7e3c7240c0f3720e37e51cd9068e16d8462c1e2eba126985368edd5e4
+    source_fingerprint: sha256:78222271d8cd61d7bceda1b3f71a85bba28d292b777546fca9fdb356539502e7
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 整夜运行
     language: zh-CN
-    source_fingerprint: sha256:c80d6520a73058510ab626b1d7f408165e679e7cc43383b6cfcb5e89989b4ddb
+    source_fingerprint: sha256:9dcbdd1b75e7aa49c18cfa4ede2ff15e3314f5317448c535a9e3d4455bb9e6eb
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 自主运行
     language: zh-CN
-    source_fingerprint: sha256:8d48583d1d30b28a4c73836736fbaa11f3769e3dd8d6d4908d2d9ef37de2864c
+    source_fingerprint: sha256:8291a630449b133227d340a3dee33477cad64fa74bcdaa681d2f8822e03db7f4
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 多阶段工作
     language: zh-CN
-    source_fingerprint: sha256:fc6236e82ee2396819452a5e27c2ce99df553321aa4c83775bd81df49eba7933
+    source_fingerprint: sha256:9a7bd12445cb4a2f8670fc6e6c916a3bbe4f2ec3db24fee63a11ba3295a19da3
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.3
     translation: 人离开后回来审计
     language: zh-Hans
-    source_fingerprint: sha256:c79fd87a45bb7cfcbf7fa55ca9800f5e4b2d60ca8f2082e729fb7431d8c49e29
+    source_fingerprint: sha256:39555d7b7f7be715329e984df1d4b4c5cad5a89d46a64443ba6885b5a5709ebe
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
-    translation: 压缩 human review bandwidth
-    language: zh-Hans
-    source_fingerprint: sha256:f350fdc1a819706fa73224000243aa5be03dea9c6d848bd4d2fc69710881a6ca
+    translation: 减少人工审查所需时间。
+    language: zh-CN
+    source_fingerprint: sha256:ba0530a417a035fc07f0caa4fb31a1eb8452a8881e8e4b0b98f3c8022a240385
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 提高长期任务可追溯性
     language: zh-Hans
-    source_fingerprint: sha256:3d7ec8d1c8d23a43b0a3ce133e5c214c7e675f8b676e3284aff804d999b239cd
+    source_fingerprint: sha256:5adc3d84d1fc399d6513d7eb3b6a4ef0ee4ed4b858823376d281c60abd1778a2
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

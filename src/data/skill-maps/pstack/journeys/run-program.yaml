@@ -22,17 +22,17 @@ variants:
         optional: false
         outputs: []
       - title: Coordinate and divide responsibilities
-        why: Use a durable coordinator for multi-day programs with many agents, distribute separable work concurrently and aggregate findings.
+        why: Start with one complete unit, assign one owner per PR and track progress in Project. Require independent verification at the current head; use event subscriptions when the harness supports them.
         nodes:
           - orchestrate
-          - swarm
         optional: false
         outputs: []
-      - title: Retain decision evidence
-        why: Condense long agent activity into an auditable decision trail.
+      - title: Report progress and decisions
+        why: Use ketchup as an editorial handoff to summarize progress and decisions requiring the operator.
         nodes:
-          - show-me-your-work
-        optional: false
+          - ketchup
+        optional: true
+        when: The operator needs a progress update.
         outputs: []
       - title: Publish verified results
         why: Use independent verifiers to decide which PRs may actually land.

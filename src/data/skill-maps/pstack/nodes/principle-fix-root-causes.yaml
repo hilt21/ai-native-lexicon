@@ -12,11 +12,11 @@ outputs:
   - root-cause fix
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/principle-fix-root-causes/SKILL.md
-official_description: Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.
+official_description: Apply when debugging. Trace each symptom back to the first place the system went wrong and fix it there. A guard is a fix only when the state it handles is legitimate.
 status: active
-mechanism: Reproduce and establish the mechanism before fixing the root cause.
+mechanism: Reproduce and establish the mechanism before fixing the root cause. Allow a guard as a fix only if the state it handles is legitimate.
 when_to_use:
   - Apply when debugging. Trace each symptom to its root cause and fix it there; reproduce first, ask why until you reach it, resist nil-check guards that silence crashes.
 solves:

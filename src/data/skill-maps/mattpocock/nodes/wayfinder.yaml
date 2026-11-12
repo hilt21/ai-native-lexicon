@@ -19,11 +19,11 @@ outputs:
   - Clear route into to-spec
 handoffs: []
 source_refs:
-  - source: mattpocock-skills-1-3-1-dd400c3a
+  - source: mattpocock-skills-1-3-2-5863806d
     path: engineering/wayfinder/SKILL.md
 official_description: Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
 status: active
-mechanism: After explicit user invocation, create a tracker decision map for work that is both too large and lacks a clear route. Normally resolve one non-research ticket per session; background agents may pursue research tickets concurrently. Use prototypes, grilling or necessary tasks to unblock decisions; human choices require real discussion. Default to decisions that the user takes to to-spec. Source Notes may explicitly override the planning default, but the map is not automatically an implementation backlog.
+mechanism: After explicit user invocation, create a tracker decision map for work that is both too large and lacks a clear route. Normally resolve one non-research ticket per session; background agents may pursue research tickets concurrently. Use prototypes, grilling or necessary tasks to unblock decisions; human choices require real discussion. Default to decisions that the user takes to to-spec. Source Notes may explicitly override the planning default, but the map is not automatically an implementation backlog. Use only wayfinder type labels on the map and decision tickets. Create child tickets before adding blocking edges and real cross-references. Start fresh research agents in parallel and keep their research branches out of the product merge.
 when_to_use:
   - A greenfield project or huge feature cannot yet support a complete specification.
   - Resolve important unknowns over several sessions.

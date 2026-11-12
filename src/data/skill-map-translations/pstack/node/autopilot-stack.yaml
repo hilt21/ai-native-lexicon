@@ -10,72 +10,72 @@ units:
   - path: title
     translation: autopilot-stack
     language: en
-    source_fingerprint: sha256:1dd10ad269b38ace9a788a3228de909c5923dba471c968a3fcdd00508a3a752c
+    source_fingerprint: sha256:5178d5465b8f0fc32836e46823561358c7333e0dd04aca8a15f8469925d8e422
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
-    translation: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
-    language: zh-Hans
-    source_fingerprint: sha256:d3761f786f689fa2a350f47d7285ef553a0df45a7e721e75f416e4da451d10ae
+    translation: 对有依赖关系的 PR 建立堆叠并逐一验证，将通过验证的 PR 交给操作者合并。
+    language: zh-CN
+    source_fingerprint: sha256:41f216dbf2f9b13a0b6e539e305db16d7e2055736cdd245c69663b911b7ccce0
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 拉取请求队列
     language: zh-CN
-    source_fingerprint: sha256:36cc20af7807a9e245e4e03bb8ec5d187cdde68344172b0abfd3c88a46b344d8
+    source_fingerprint: sha256:a4bbc50e96f944cd32f981d8981598eeca494670e9241e166b046986cb62c351
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 目标变更栈顺序
     language: zh-CN
-    source_fingerprint: sha256:28894a299bf30f6c30e57a8ddeea64b0be7be2a09343058734d9d156f6a3dcce
+    source_fingerprint: sha256:5a3672e2fb2658aab02e618f394b36661dd48e373cbaac1ef5a5d31aba9109d2
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 已验证的线性变更栈
     language: zh-CN
-    source_fingerprint: sha256:f39cefdbd2878fa44a8be80d4fa8af785264666e76bcda05e77fee67c03c54e2
+    source_fingerprint: sha256:4fce1afb1d5809d22b5cd1a268ce10dad95bcc24724e53234b741f6818a492e7
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 可进入变更栈的提交 SHA
     language: zh-CN
-    source_fingerprint: sha256:11447d4a970e7f2a3867cf372b7c43b70d482631dfe9a39795d521b45cd6d98f
+    source_fingerprint: sha256:11b771f5ae62033b0480a9c65e177a852fd0633debca5fc627562007bf102453
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 操作人员交接
     language: zh-CN
-    source_fingerprint: sha256:1c604369a9f23d48fcabf1d9a5791f1c978e71ae06f7ddbcedef0c07c1f19374
+    source_fingerprint: sha256:c593f145de3bc655f03d5b62cc0f67d158959d64ac717b4709e48f55edaa6907
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 沿用 one-owner lifecycle；root hourly audit；root 是 topology single writer；verified PR 依序 append 到线性 stack；不 merge。
-    language: zh-Hans
-    source_fingerprint: sha256:7ae2e1c6a733c3ccd057bc3704a450d6181fd3536c4a5e090665f4625c8bf91c
+    translation: 沿用 Autopilot-full，直到每个 PR 的当前提交通过验证和 CI。只有存在依赖时才堆叠 PR。将已验证的 PR 交给操作者，保留合并决定；交接后再次推送须经操作者同意。
+    language: zh-CN
+    source_fingerprint: sha256:5fd8be531d873f0dcfea5bef2a3a6c72dba64a55c56018c924ef35f731442b00
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 多个相关 PR 要自动构建
     language: zh-Hans
-    source_fingerprint: sha256:b1859aecb11b93c548ee2be00b961efbe89be5d35e425fe69d92944b210e5029
+    source_fingerprint: sha256:ff479684ba1ef5234832dfbfa98b6f90a4ecd13d7e9e5840ff38662a921508f8
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 需要人工最终 review/land
     language: zh-Hans
-    source_fingerprint: sha256:c642037c0f2fc8fd3ca5131f63e2e978914b5bd0ced5a57f2ffd789dc95f71ce
+    source_fingerprint: sha256:dc2c252e6f3d68ba0bf7c191ec1afea2f91824dcb3d255c80fb62db6b573142e
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 多 owner 同时改 stack topology
     language: zh-Hans
-    source_fingerprint: sha256:2ed4fc6966405a4bb10f8c46e897463aaa0309566fc083015068643d294af5e5
+    source_fingerprint: sha256:fd753d2bfdb0c4980d6410ba3b0af5c27d63595d04667b0e7e5d0e451620b0a5
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 自动 merge 超出 operator gate
     language: zh-Hans
-    source_fingerprint: sha256:87312f7e195f3b4a97446a224c037f82df98191bb37d910879e8b1e4c8f253f8
+    source_fingerprint: sha256:f0633dac658da4aa2c567710570847f7d47b7949c689f7c6640855d86ed70364
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

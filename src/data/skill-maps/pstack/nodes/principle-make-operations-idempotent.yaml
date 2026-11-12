@@ -12,11 +12,11 @@ outputs:
   - idempotent operation
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/principle-make-operations-idempotent/SKILL.md
 official_description: Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs.
 status: active
-mechanism: Design crashes and retries as normal paths so repeated execution converges to the same result.
+mechanism: Design crashes and retries as normal paths so repeated execution converges to the same result. Derive each mutation from observed state and make leftovers from interrupted runs recognizable.
 when_to_use:
   - Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs.
 solves:

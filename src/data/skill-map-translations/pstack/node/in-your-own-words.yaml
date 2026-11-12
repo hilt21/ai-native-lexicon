@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: in-your-own-words
+provenance:
+  original_sha256: 247fa6d2451d407e058415cc977a4f27b541facd10d6ad35af951e048b60112f
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: in-your-own-words
+    language: en
+    source_fingerprint: sha256:96560c440bd8c4fb56609303448434e72b39ea31fd6784b00e9f4214a5c5e036
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: summary
+    translation: 用自己的话复述目标和问题。
+    language: zh-CN
+    source_fingerprint: sha256:3b4f9a69b25c3503f884ceb00f5c371432e64a9f240d79e7b389778b4c500434
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: inputs.0
+    translation: 用户请求
+    language: zh-CN
+    source_fingerprint: sha256:2764841b3dc122bfb222a29b49b275d87d7ce61905b357a82fbd9734ea2cff69
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: outputs.0
+    translation: 复述后的目标和问题
+    language: zh-CN
+    source_fingerprint: sha256:1cb5ecf1ca547b863510393732da7034fb14c6661143ce7377f8fb5387ff683c
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: official_description
+    translation: Restate in your own words what you think the user's goals are and what problem they're trying to solve. Use for /in-your-own-words.
+    language: en
+    source_fingerprint: sha256:673afbfecfdbba4f72a051cb6b8f8a3fdc3540114ca821952a46ab4567c89d9c
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: mechanism
+    translation: 根据用户请求陈述自己的理解，再进一步讨论方案。
+    language: zh-CN
+    source_fingerprint: sha256:fc5d12d6d140c91cc799c66ec589035fc3e60afa6c74e5d9b99147648b31724b
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: when_to_use.0
+    translation: 用户请求
+    language: zh-CN
+    source_fingerprint: sha256:239186c312d8211583c176d70179aa8bc5a07e026e32aeb2cd44ef6a5d5208a4
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: solves.0
+    translation: 用自己的话复述目标和问题。
+    language: zh-CN
+    source_fingerprint: sha256:703100a030a65f97570e0768883cb24ee270cdba9bc3fbccbe0bf202ca1b46b9
+    review_status: reviewed
+    reviewed_at: 2026-11-12

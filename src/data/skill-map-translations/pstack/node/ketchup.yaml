@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: ketchup
+provenance:
+  original_sha256: d82a8550aa6de1b3a76922f67658acc51095d33123762f75044f296b9fc94c1b
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: ketchup
+    language: en
+    source_fingerprint: sha256:7fd79f8b6b067a8c1694fc69b4c7a62e5f787e3591beaff4c3483d42d7da6a7a
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: summary
+    translation: 向用户同步进展，以及仍需要用户决定的事项。
+    language: zh-CN
+    source_fingerprint: sha256:451ca2cdc969dadcfc141564b026657900302ab6d771ba7c75af1b0f5df5406b
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: inputs.0
+    translation: 已有工作与当前状态
+    language: zh-CN
+    source_fingerprint: sha256:855652f8c82e45fecabe479817b35a3fe576056d6b1e9ab06fb384c29b853d74
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: outputs.0
+    translation: 进展摘要和待用户决策项
+    language: zh-CN
+    source_fingerprint: sha256:e1cd00f5f7dde5781af03fe2cbf32b80f2ffb3f0ad1d7318c14237dcb6326443
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: official_description
+    translation: Catch the user up on what changed in this chat since their last message, in plain words and small visuals. List every item waiting on them with what they need to decide it from the reply alone. Use for /ketchup.
+    language: en
+    source_fingerprint: sha256:3f14d3b432b3e8ce8cf0f655ba9e1199c2f1031d0421dc871fb3d5ca0d296d21
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: mechanism
+    translation: 依据已有证据总结自上一条用户消息以来的变化。必要时核对实时状态，区分待用户决策与代理可继续推进的工作。
+    language: zh-CN
+    source_fingerprint: sha256:f633483b1ab51d961c85473b28e17202f139e17df3ad9a4ea62220cfe8841279
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: when_to_use.0
+    translation: 已有工作与当前状态
+    language: zh-CN
+    source_fingerprint: sha256:368777b43805d9aeb8c0155a4b1d41252901b881732ed426b39ccd3421ec689b
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: solves.0
+    translation: 向用户同步进展，以及仍需要用户决定的事项。
+    language: zh-CN
+    source_fingerprint: sha256:1dd306d651e4b52542eb4b8a099301672bebfd1ed42cd5344b625dfdca24ad4c
+    review_status: reviewed
+    reviewed_at: 2026-11-12

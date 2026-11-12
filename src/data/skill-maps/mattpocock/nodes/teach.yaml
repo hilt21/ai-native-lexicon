@@ -18,11 +18,11 @@ outputs:
   - Learning records and assets that persist across sessions
 handoffs: []
 source_refs:
-  - source: mattpocock-skills-1-3-1-dd400c3a
+  - source: mattpocock-skills-1-3-2-5863806d
     path: productivity/teach/SKILL.md
 official_description: Teach the user a new skill or concept, within this workspace.
 status: active
-mechanism: After explicit user invocation, clarify the learning mission and trusted sources. Establish a durable teaching workspace in the current directory using short cited interactive HTML lessons, reference HTML, learning records and reusable assets. Confirm mission changes with the user. Records and repeated practice aim to retain understanding, without promising mastery.
+mechanism: After explicit user invocation, agree the learning goal and trusted sources. Keep learning state in the invocation directory and resolve format references from the skill directory. Use short cited interactive HTML lessons, reference material and repeated practice. Keep quiz answers at the same word count and, if possible, character count; vary where the correct answer appears. Confirm changes to the learning goal.
 when_to_use:
   - Learn a topic over time rather than receive one explanation.
 solves:

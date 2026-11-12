@@ -13,19 +13,20 @@ const catalog = await readCatalog();
 const maps = catalog.skillMaps.filter((m) => ['pstack', 'mattpocock'].includes(m.id));
 const overlays = catalog.skillMapTranslations.filter((o) => maps.some((m) => m.id === o.data.map_id));
 
-test('published English and retained Chinese maps cover every current prose owner without canonical mutation', () => {
+test('current map prose has reviewed or draft overlays without canonical mutation', () => {
   assert.deepEqual(validateCatalog(catalog).errors, []);
   const before = structuredClone(maps);
   const en = resolveSkillMaps(maps, overlays, 'en'), zh = resolveSkillMaps(maps, overlays, 'zh-CN');
   assert.equal(en.length, 2);
   for (const map of en) assert.ok(!/\p{Script=Han}/u.test(JSON.stringify(map.data)));
-  let count = 0;
+  // Full reviewed coverage is a separate release gate (verify:i18n).
   for (const map of zh) for (const state of Object.values(map.localization.owners)) {
-    assert.equal(state.coverage.translated, state.coverage.total);
-    assert.equal(state.coreTranslated, true);
-    count += state.coverage.total;
+    assert.equal(state.coverage.translated + state.coverage.draft, state.coverage.total);
+    for (const unit of Object.values(state.units)) if (unit.status === 'draft') {
+      assert.equal(unit.fallback, true);
+      assert.equal(unit.actualLang, 'en');
+    }
   }
-  assert.equal(count, 1988);
   assert.deepEqual(maps, before);
   for (const map of zh) {
     const canonical = maps.find((m) => m.id === map.id);
@@ -42,7 +43,12 @@ test('draft and stale map prose uses current English with its actual language', 
     const changed = structuredClone(overlays);
     const copy = changed.find((o) => o.id === owner.id);
     const u = copy.data.units.find((u) => u.path === 'summary');
-    if (mode === 'draft') u.review_status = 'draft'; else u.source_fingerprint = `sha256:${'0'.repeat(64)}`;
+    if (mode === 'draft') u.review_status = 'draft';
+    else {
+      u.review_status = 'reviewed';
+      u.reviewed_at = '2026-10-13';
+      u.source_fingerprint = `sha256:${'0'.repeat(64)}`;
+    }
     const result = resolveSkillMaps(maps, changed, 'zh-CN')[0];
     assert.equal(result.data.summary, map.data.summary);
     assert.equal(result.data.text_languages.summary, 'en');

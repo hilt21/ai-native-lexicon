@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: statechart
+provenance:
+  original_sha256: df7d126db8afe6395ac320bdd7cd4563ffecd877f8769aab80e4081410c0983a
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: statechart
+    language: en
+    source_fingerprint: sha256:040e143532480cb7edadd08dc0a0c69ce8ab356b8020e2d25950d407b5f91b17
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: summary
+    translation: 检查 TLA+ 状态模型，并用 Mermaid 状态图呈现行为。
+    language: zh-CN
+    source_fingerprint: sha256:73d53a347b24e37415ec2dce7399b819c20a81ac9e821e61f971070d30cdef80
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: inputs.0
+    translation: TLA+ 规格与配置
+    language: zh-CN
+    source_fingerprint: sha256:1d357ab975d8bd9c4f3cb90243709e310c7a1f06a826ba27f13ecf1cb6239825
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: outputs.0
+    translation: Mermaid 状态图与反例报告
+    language: zh-CN
+    source_fingerprint: sha256:8f1e8b6e78ad595a54560e3bdc1d059560694723a14b96198d357c6bebfd2808
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: official_description
+    translation: Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states.
+    language: en
+    source_fingerprint: sha256:d896ea42c1da2d0aab3b5d77c7f0b4b887568d4aad11a6be88d93b58965393e9
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: mechanism
+    translation: 用 TLC 检查 TLA+ 模型，并生成 Mermaid 状态图。报告找到的通往违规状态的最短路径。检查范围由模型和配置限定；状态图可合并显示状态或隐藏部分转换。
+    language: zh-CN
+    source_fingerprint: sha256:5c74d1ed87ca1f2637242963780971574e859f22f0b8c0563a085a189dddb5df
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: when_to_use.0
+    translation: TLA+ 规格与配置
+    language: zh-CN
+    source_fingerprint: sha256:eb5c5b030d43f5f54d76bf291bce5be00b0e43de11c4408662a1c2bc570ce229
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: solves.0
+    translation: 检查 TLA+ 状态模型，并用 Mermaid 状态图呈现行为。
+    language: zh-CN
+    source_fingerprint: sha256:40e22dea16765798a969b2321b83c17aebc16fef0b4ae298df1060792441b1f3
+    review_status: reviewed
+    reviewed_at: 2026-11-12

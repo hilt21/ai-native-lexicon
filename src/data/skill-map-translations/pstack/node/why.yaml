@@ -10,120 +10,120 @@ units:
   - path: title
     translation: why
     language: en
-    source_fingerprint: sha256:adbe213e8f7b96cbc56bf86db77d4ab9da9fe3a94046577d5f8fe40129df8933
+    source_fingerprint: sha256:7b4b5fad5bfe7e118959e031d6383bda3c35839906f8d10d2f228ee5509bfb71
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 解释系统为什么变成现在这样，并给出证据。
     language: zh-Hans
-    source_fingerprint: sha256:28314783c5fb1059d39e311a78718edc1a9a3fe06ae537d369e5ca27497a1616
+    source_fingerprint: sha256:0898d500869135fdf83573b26c9cd8cb561e0c6deefdd287614893250e197c30
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 事实锚定
     language: zh-CN
-    source_fingerprint: sha256:e821749bef9f0f94e77b7afbda206c4f389d352e0de5fd89c3eeaee8f2d0906c
+    source_fingerprint: sha256:bbaae3b4c90149d55dc24c9bba8d364a4da0f23536a18164922c6a8c27f25c00
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 历史
     language: zh-CN
-    source_fingerprint: sha256:7402fb0dc037e4298d03a7505516bf8fe14c10e236fca5a50d653fd1045f71ec
+    source_fingerprint: sha256:b8e38c387521ed616e8762ce57828b84d59f174551c114b6faa1e43947a1cc1e
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 证据
     language: zh-CN
-    source_fingerprint: sha256:e0bfc8af0b60801e8a847760786f004a614be3ef65c6ccd6d654148c2449e232
+    source_fingerprint: sha256:acbad57e326ae718077ea971827b10d9c743eb61f98e1901bdb1034288278461
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 代码或设计锚点
     language: zh-CN
-    source_fingerprint: sha256:d6f5ea8f2077d9843a142d03f167f98d06e2d741f6da05b6bef2f64ceba38c0c
+    source_fingerprint: sha256:dd1a6354719d74ef452cfd586b80ba1cfa6037456ef17d13a5ee388b21818456
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 动机问题
     language: zh-CN
-    source_fingerprint: sha256:6e06582210e4ac98771ad4dd0c571bf8727807bef9c3fb2aaa7b6f9c0ae49d6f
+    source_fingerprint: sha256:b8577100abc6523c9265e84fc4976517735ba892e505964c7519b037907eb2de
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.2
     translation: 可用证据系统
     language: zh-CN
-    source_fingerprint: sha256:27e024f529716e36de057df7e15c01706c2765c5364b4b6d4eb0af72d1ff3b1a
+    source_fingerprint: sha256:a80de30214268d97ad048dbb4fa75bbfd0ea67dd57bc5801581bb20914e19b3f
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 有证据支撑的依据
     language: zh-CN
-    source_fingerprint: sha256:78f035ddad9df28192389df621e33798bb762e2e1d5d8cca30f793b4f2875044
+    source_fingerprint: sha256:7ef55da4ccf8f9896c74d7613c24db9146da19f25527f741788186e0a31df429
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 取舍
     language: zh-CN
-    source_fingerprint: sha256:3a0f13ec1d0bed9ffeb3e1d0b6686029419dfdde03bf633daca90bd40f1b2ad4
+    source_fingerprint: sha256:ebc4c16e7554b751eeac9b04cabd7cc169ef875ed71565a5581b8cc3f49b3fa7
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 置信程度
     language: zh-CN
-    source_fingerprint: sha256:6a2cd6260f7df70c0bc8ad2ba7d0ceff1dbf004e3d530b15b8815237def5381c
+    source_fingerprint: sha256:5ac7cd56baabe0ccdc2f3d294d649aa24c042df9088bf1a0f6e033efd028489d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.3
     translation: 来源指针
     language: zh-CN
-    source_fingerprint: sha256:8c305168716454d4f99f7267159c53d31d8dc1ace7807331d630985b16f22a71
+    source_fingerprint: sha256:6a4b9ebb45e4353b0a4399a18bfa44cdca423f0209dd42c21fb6eba729efb170
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Use for 'why does X work this way', 'why we picked Y', design rationale, regressions, postmortems, or data-backed thresholds. Discovers available MCPs and queries each evidence category (source control, issue tracker, long-form docs, real-time chat, infrastructure observability, error tracking, product analytics warehouse) in parallel, then returns a cited read on decisions and tradeoffs. Use how for runtime behavior.
     language: en
-    source_fingerprint: sha256:f5f663e90d28d7a84451c3aac397f0fdb0c327b5b0d1787f8dde8f2aa4bc6436
+    source_fingerprint: sha256:87b836e1a66587ddc4189e11fc0f7d9a6badb29ae28cfc24a18261a7391c715d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 锚定代码后，并行查询 source control、issue、docs、chat、observability、error tracking、analytics 等来源，重建设计动机与演变。
+    translation: 锚定代码后，并行查询 source control、issue、docs、chat、observability、error tracking、analytics 等来源，重建设计动机与演变。让调查与综合角色能访问引用涉及的工具，并抽查来源定位。
     language: zh-Hans
-    source_fingerprint: sha256:3dd64c21285fffde16e5078cdfa235cdae68b5d44f09fee4df9e5e1067c5c1a1
+    source_fingerprint: sha256:cea9516e34c068919490403fc8d7d85d9699dec29a4ec779ccbb3c7b95490061
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 设计 rationale
     language: zh-Hans
-    source_fingerprint: sha256:add96782bd5d84a54a4fa2ed0dc54457e3ae4ac74fbba5832a5d59ac16a86ee9
+    source_fingerprint: sha256:04d92dfa82e08922b7b6d88f9b5fc2283dd2de2128e37e8fcafd1808fc599156
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 回归原因
     language: zh-Hans
-    source_fingerprint: sha256:5a072b03ca6fa2355eb3702318d07072415e526095e0eeb57ce3e9075d9703a5
+    source_fingerprint: sha256:6d34d77a5e82a8be3a0975e6eddfcc13c3541818663874ab19fee4e12c6c911a
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 历史决策
     language: zh-Hans
-    source_fingerprint: sha256:d430b2c6be7f7071fbd8e06abc7c7f7f77f0d73af771fbd2e376a8cb5ec4595a
+    source_fingerprint: sha256:8d9f2441754f4718d96fd5119f9c0e07390fd3d7e64bf081b9e53b90ff36563a
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.3
     translation: 阈值或 trade-off 来源
     language: zh-Hans
-    source_fingerprint: sha256:1fe16c4ca2f1f0b3edef9c01c15d79a6adc5704c9195f210e6f7f5bd3af906f9
+    source_fingerprint: sha256:de16a29d6d07ebf7e53eb07baa8ba7afcfccc5c4e0550893b22e2fd1c8c612d4
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 减少凭当前代码猜历史原因
     language: zh-Hans
-    source_fingerprint: sha256:4a2e1ce7ed549f51ce02b5fc106d457942e60c695ff63d6440095f47668507fb
+    source_fingerprint: sha256:151aa775beb8c00fefb1b8f790857580798d450f396cac8a0859eff65ad708ce
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 恢复组织记忆
     language: zh-Hans
-    source_fingerprint: sha256:4a064b3cce1e73ccdb837236a3ae2bd38a68bc09a53c13411b00b05f6a253919
+    source_fingerprint: sha256:82ff7c7b37d1a958d2f882c9ccf51aac2d3624235f0c7e214381e2ebef9255a7
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

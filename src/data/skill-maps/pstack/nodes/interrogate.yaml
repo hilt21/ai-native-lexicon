@@ -19,11 +19,11 @@ outputs:
 handoffs:
   - "Handoff guidance: fix round"
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/interrogate/SKILL.md
-official_description: Use for "interrogate", "adversarial review", "multi-model review", "challenge this", "stress test this code", "find blind spots", or "tear this apart". Multiple LLM reviewers challenge changes from independent angles.
+official_description: Use for "interrogate", "adversarial review", "multi-model review", "challenge this", "stress test this code", "find blind spots", or "tear this apart". Adversaries try to break a change or design, and only findings proven by a run survive.
 status: active
-mechanism: Have different models challenge the same diff or design independently. The lead classifies findings as Act on, Consider, Noted or Dismissed.
+mechanism: Restate the user’s intent, frame the review scope and have independent adversaries challenge the design or diff. Keep only findings that can be demonstrated by a run. Report the evidence without applying fixes.
 when_to_use:
   - Complex diff
   - Contested design

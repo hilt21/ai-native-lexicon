@@ -20,11 +20,11 @@ outputs:
   - regression protection
 handoffs: []
 source_refs:
-  - source: mattpocock-skills-1-3-1-dd400c3a
+  - source: mattpocock-skills-1-3-2-5863806d
     path: engineering/tdd/SKILL.md
 official_description: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
 status: active
-mechanism: At a public seam agreed with the user, write one failing vertical-slice test, then the minimum implementation that passes it. Derive expectations from requirements or independent facts. Refactoring belongs to code-review rather than the implementation loop. Agree a seam before standalone use too.
+mechanism: At a public seam agreed with the user, write one failing vertical-slice test, then the minimum implementation that passes it. Derive expectations from requirements or independent facts. Refactoring belongs to code-review rather than the implementation loop. Agree a seam before standalone use too. For each proposed test seam, state what it would catch and what it would miss.
 when_to_use:
   - Develop behavior expressible through automated tests.
   - Fix a defect that supports a regression test.

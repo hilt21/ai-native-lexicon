@@ -10,114 +10,114 @@ units:
   - path: title
     translation: benchmark-checklist
     language: en
-    source_fingerprint: sha256:e4090f90f9980aafa722f55a799b6b023c24c38c10e5ad3b94189cd9b1b28e44
+    source_fingerprint: sha256:34f8f0c6a3a36b12342dfe57759a9eb72bd816b24eb8b3ca9e32638cab970085
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 验证性能数字是否真的测到了目标工作。
     language: zh-Hans
-    source_fingerprint: sha256:75b33f93d0819c5c9152c105874f7a576e8e611a3d5418e3593c1b8ceddc685a
+    source_fingerprint: sha256:06b289325eea516fb305ab72bc43d7c67b6c70647359f244526570fc4addc700
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 性能
     language: zh-CN
-    source_fingerprint: sha256:da02354df2fa4eabe5441f59a34bd2d88f0c12ec873d74bafa92ed1bbe83fa51
+    source_fingerprint: sha256:ba8c0e2c3d45b69d84f945a147ca2d9526dfea96b7a6676ebb4e4205ae0e7998
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 测量
     language: zh-CN
-    source_fingerprint: sha256:4d0b78c35f3d25f23b8e2d5208dc0c60b6a8f2ddd9062ab09bb66ef085006536
+    source_fingerprint: sha256:9179e422413bc13e1dc008e942524cca65c8036eb08807aa4af58523a451dfe2
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 验证
     language: zh-CN
-    source_fingerprint: sha256:f8a61c19d81bde4ae68f6e876783f4912c9245113283db1e231573a386c23fb2
+    source_fingerprint: sha256:3b96c976bebd3215c31574a9d98f31aa11e3c898f20e53d237235ab7ac702be9
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 基准测试框架
     language: zh-CN
-    source_fingerprint: sha256:08951ae8bacf2e5a2b61c7b2055e86fd9f185134f4343bcedf6207c246d049c3
+    source_fingerprint: sha256:091511f1303869e3b8b7a0e0ecbbb3b2d3b1b17e917438fc85526f760937e488
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 测量结果
     language: zh-CN
-    source_fingerprint: sha256:2a9802fe6607b322810171c48b8edf71a9e24c239e56d481ee2d1852f147aa11
+    source_fingerprint: sha256:15188177090dc647f148a6050b0139d5c8c1fc5afab40818bfdc467caa089795
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.2
     translation: 工作负载
     language: zh-CN
-    source_fingerprint: sha256:e8fab70c3718c8df10151415bbeb3475dc153ca1079bbdb9a34ba85fdef085f6
+    source_fingerprint: sha256:cd95b50bc5bef24f23784f7feab62eea3be0d24a4d020548eb08b9904c40ec62
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 测量结论
     language: zh-CN
-    source_fingerprint: sha256:a8cd1816c4f732fbccef8c80b676d7bfce0374766d12a92d107908d37e48ada8
+    source_fingerprint: sha256:df05aaf66576cab978e4d8e08db54a2d920d0241d5246149c3a77808828d904b
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 已验证的基线
     language: zh-CN
-    source_fingerprint: sha256:d3953887669a8964cbc56f0e3c721ac50542ab381186bad2bed4043d4a8a3331
+    source_fingerprint: sha256:6af11f483fa9a53a69026bb3a83ac8595068affee02c2fe33a9dded23b06b9e1
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 已知限制
     language: zh-CN
-    source_fingerprint: sha256:69549aca6b8605df80ba053a55d2e11cfee22c6e20fb99620e91735ad2bcdee9
+    source_fingerprint: sha256:8a2a1fa847546c15b576d5c97907dbb7943f79c4c75e72c4bb0beebeb55c9c5b
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: handoffs.0
     translation: 交接说明：performance claim
     language: zh-Hans
-    source_fingerprint: sha256:16b7b3c1fa8163fe5abb40a637bb0f72c27f9d5da613dd392f2207620c412376
+    source_fingerprint: sha256:091e26c4939a26a3604c5d85654ae8bf289914131d11e535ef3dd46631ca2aca
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured.
     language: en
-    source_fingerprint: sha256:fa0f527e34a89c105042282e21d0be9d3cda85b58b06ff53887503fb7aec2388
+    source_fingerprint: sha256:c0c327ad144bbe8b0beba959416728813421c2509204f0becdd8e85508b0a5a4
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 检查 limiter、配置、物理上限、错误率、重复性、端到端相关性和 work count，避免把噪声当 speedup。
-    language: zh-Hans
-    source_fingerprint: sha256:f4262c11142b71929d0a870706781e548fa0f92d98727c4c527e135f83c39da5
+    translation: 检查 limiter、配置、物理上限、错误率、重复性、端到端相关性和 work count，避免把噪声当 speedup。识别瓶颈资源，匹配生产调优参数，并核对计时确实覆盖所声称的工作。
+    language: zh-CN
+    source_fingerprint: sha256:7ab1985c1484744afb77cd356b3cce4c19463269686dc7b8206dedae46583e0c
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 性能优化
     language: zh-Hans
-    source_fingerprint: sha256:4f09bcdd798c1aba59110a59a25b38dabcd72b52ca510230f4d242c14a76a63b
+    source_fingerprint: sha256:011c99817ca2b6d000d4011979b24a0d7c8e09e51e76d54428bfbca44fdd73de
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 基准测试
     language: zh-CN
-    source_fingerprint: sha256:49d28b2a18a155fae4fa0084642aee5f8564b2ac1b294ded4df79ec5cb0d7257
+    source_fingerprint: sha256:00c8eb4183e8ce012535b1391cd0c3b2e53bd8b1306690b36c37fedc36c89f08
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.2
     translation: 报告 latency/throughput/speedup/regression
     language: zh-Hans
-    source_fingerprint: sha256:270e3f46949132aa662efcf5511ba240aa2a8028910e492eba3a1e851ebe9da7
+    source_fingerprint: sha256:b3f545f2424d993c4a0bd39d907dbf9453793ede92daa260f63f34869ecef0f9
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 避免错误性能结论
     language: zh-Hans
-    source_fingerprint: sha256:600f1e578784ba9a79ca6c748d93b4a36ae0cb053647928f2b349808de25dbe5
+    source_fingerprint: sha256:5ac7c350dbc69e443498d58aec31574dd248c0b461c04641ca0d3d0e244bc145
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 提高实验可重复性
     language: zh-Hans
-    source_fingerprint: sha256:3ee7dd5dcdd1e701c9a15155d97d704739430e430c2f3c32fbe16361c3faacdc
+    source_fingerprint: sha256:00b315ea8b89dc2605bca60982331b01bc191707667d365046a843a0adf224bc
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

@@ -18,11 +18,11 @@ outputs:
   - persistent pstack model rule
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/setup-pstack/SKILL.md
 official_description: Configure which models pstack uses per role and at what reasoning budget. Detects your available models and writes an always-applied rule that overrides the skill defaults. Use for /setup-pstack, "configure pstack models", "pstack budget", or changing pstack's model choices.
 status: active
-mechanism: Detect available models and persist role-routing rules according to capability and cost needs.
+mechanism: Detect available models and persist role-routing rules according to capability and cost needs. Offer to create app verification and formal verification skills separately if missing.
 when_to_use:
   - Install pstack for the first time.
   - Control cost.

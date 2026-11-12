@@ -21,11 +21,11 @@ outputs:
   - first proof
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/create-verification-skill/SKILL.md
 official_description: Generate a project-local verification skill that drives your app the way a user does — any language, framework, or platform. Use for /create-verification-skill, "make a control skill for this repo", or when a project has no scripted way to prove UI/CLI/service behavior.
 status: active
-mechanism: Investigate Surface, Run, Drive, Observe and Isolate. Create Launch, Doctor, Drive, Evidence, Cleanup and Feature Map assets, then complete one real run.
+mechanism: Investigate Surface, Run, Drive, Observe and Isolate. Create Launch, Doctor, Drive, Evidence, Cleanup and Feature Map assets, then complete one real run. Make launch usable with an empty data directory, include the user-facing feature map, and confirm evidence survives cleanup.
 when_to_use:
   - The project lacks scripted real-surface verification.
   - The agent relies only on tests or self-reported completion.

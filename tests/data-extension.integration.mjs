@@ -42,8 +42,8 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     assert.equal(exportedMatt.title, matt.title);
     assert.equal(exportedMatt.text_languages?.scope ?? 'en', 'en');
     assert.equal(exportedMatt.text_languages?.title ?? 'en', 'en');
-    assert.equal(exportedMatt.nodes.length, 31);
-    assert.equal(exportedMatt.journeys.length, 7);
+    assert.equal(exportedMatt.nodes.length, matt.nodes.length);
+    assert.equal(exportedMatt.journeys.length, matt.journeys.length);
     assert.equal(dataset.skill_maps.find((m) => m.id === 'example').nodes[0].id, 'how');
     const page = await readFile(join(directory, 'dist/skill-maps/example/nodes/how/index.html'), 'utf8');
     assert.match(page, /Example Skill Map/);
@@ -55,12 +55,12 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     const maps = await readFile(join(directory, 'dist/skill-maps/index.html'), 'utf8');
     assert.match(maps, /\/ai-native-lexicon\/skill-maps\/mattpocock\//);
     for (const collection of ['nodes', 'journeys']) {
-      for (const { id } of matt[collection]) {
+      for (const { id, source_refs } of matt[collection]) {
         const route = `/ai-native-lexicon/skill-maps/mattpocock/${collection}/${id}/`;
         assert.ok(search.includes(route), `${route} is discoverable in Search`);
         const detail = await readFile(join(directory, `dist/skill-maps/mattpocock/${collection}/${id}/index.html`), 'utf8');
         assert.match(detail, /Matt Pocock Skills Map/);
-        assert.match(detail, /dd400c3ad65e57c06f05e832e0aac92c7992f34d/);
+        assertSourceLinks(detail, matt.sources, source_refs);
       }
     }
     for (const path of ['index.html', 'nodes/index.html', 'overview/index.html']) {
@@ -77,11 +77,21 @@ test('Matt Pocock and an additional skill map appear across page and machine pro
     await npm(directory, ['run', 'build'], { SKIP_PAGEFIND: 'true' });
     const retired = await readFile(join(directory, 'dist/skill-maps/example/nodes/how/index.html'), 'utf8');
     assert.match(retired, /Retired/);
-    assert.match(retired, new RegExp(originalMap.sources[0].commit));
+    assertSourceLinks(retired, originalMap.sources, node.source_refs);
     const second = JSON.parse(await readFile(join(directory, 'dist/dataset.json'), 'utf8'));
     assert.equal(second.skill_maps.find((m) => m.id === 'example').nodes[0].status, 'retired');
   });
 });
+
+function assertSourceLinks(html, snapshots, refs) {
+  for (const ref of refs) {
+    const snapshot = snapshots.find(({ id }) => id === ref.source);
+    assert.ok(snapshot?.commit, `Missing pinned source ${ref.source}`);
+    const path = [snapshot.root_path, ref.path].join('/').split('/').map(encodeURIComponent).join('/');
+    const href = `${snapshot.repository.replace(/\/$/, '')}/blob/${snapshot.commit}/${path}`;
+    assert.ok(html.includes(`href="${href}"`), `Missing rendered source link ${href}`);
+  }
+}
 
 const run = promisify(execFile);
 const repository = fileURLToPath(new URL('../', import.meta.url));

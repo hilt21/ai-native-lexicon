@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: create-formal-verification-skill
+provenance:
+  original_sha256: 79bf79844e373ce1c8f5d8b159777bbca86a81b592d84f584cef83c68ebea4fd
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: create-formal-verification-skill
+    language: en
+    source_fingerprint: sha256:b8086238d7fd8fe883174e8e239a6b07cc11465638ccc96336b18b5c0aa5c348
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: summary
+    translation: 为一项测试难以覆盖、失效代价高的属性创建项目内形式化验证技能。
+    language: zh-CN
+    source_fingerprint: sha256:3ca5b72eff8be1e50e00d2437d19fe92bf6d06dcfebdc15c2b9ecd1885505470
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: inputs.0
+    translation: 关键不变量或并发行为
+    language: zh-CN
+    source_fingerprint: sha256:3890d387577657d70b1809bc22a2ba97f9127e0b3fcf4f6e79cef6d872979edb
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: outputs.0
+    translation: 项目内验证技能和可复现证据
+    language: zh-CN
+    source_fingerprint: sha256:dd3ffbe2bc3abcde0b6cc754b169941ba4e9e3e99d93b9633b844790abedc8e6
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: official_description
+    translation: Generate a project-local skill that formally verifies the code where a bug costs the most and tests reach the least, in any language, with whichever verification tool fits. Use for /create-formal-verification-skill, "model-check this race", "prove this invariant", or when concurrency, retries, state machines, parsers, or unsafe code need more than tests.
+    language: en
+    source_fingerprint: sha256:22b15ebfae6e374c14aa3bdabb91982a9361670337032c62686a1854ce7476a2
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: mechanism
+    translation: 按属性选择工具，将模型映射到实际代码，并用故意破坏的变体证明检查能失败。记录检查范围与复现步骤。
+    language: zh-CN
+    source_fingerprint: sha256:e47d343f78af4f9dd8e9091fa91c88db7526de12c2f6618798bf9c5221795b4e
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: when_to_use.0
+    translation: 关键不变量或并发行为
+    language: zh-CN
+    source_fingerprint: sha256:7dc614f6a6dfbf37d918d3d877d308e2723901ac4a808694c80601d73bcda60a
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: solves.0
+    translation: 为一项测试难以覆盖、失效代价高的属性创建项目内形式化验证技能。
+    language: zh-CN
+    source_fingerprint: sha256:1fd7a08253de0df39802703613fe78a5c376836727eaac2d8082c38630cf9a3c
+    review_status: reviewed
+    reviewed_at: 2026-11-12

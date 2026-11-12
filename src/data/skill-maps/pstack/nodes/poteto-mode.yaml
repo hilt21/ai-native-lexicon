@@ -20,11 +20,11 @@ outputs:
 handoffs:
   - "Handoff guidance: all playbooks"
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/SKILL.md
 official_description: poteto's agent style for concise, detailed responses, deliberate subagents, unslopped prose, simple code, and verified work. Use for poteto, /poteto-mode, or requests to work in this style.
 status: active
-mechanism: Assess the task and required rigor, select a playbook and combine suitable skills, principles, subagents and verification steps.
+mechanism: Assess the task and required rigor, select a playbook and combine suitable skills, principles, subagents and verification steps. Restate the goal in your own words at entry and use tools to settle observable facts before asking the user to decide.
 when_to_use:
   - Handle an engineering task in the pstack style.
   - Choose the appropriate playbook or skill.

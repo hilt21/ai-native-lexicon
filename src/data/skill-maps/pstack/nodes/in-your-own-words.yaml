@@ -1,0 +1,19 @@
+title: in-your-own-words
+summary: Restate the goal and problem in your own words.
+type: capability
+layer: skill
+primary_cluster: understanding-context
+inputs:
+  - User request
+outputs:
+  - Restated goal and problem
+when_to_use:
+  - User request
+solves:
+  - Restate the goal and problem in your own words.
+source_refs:
+  - source: pstack-0-15-36-c742dd61
+    path: skills/in-your-own-words/SKILL.md
+official_description: Restate in your own words what you think the user's goals are and what problem they're trying to solve. Use for /in-your-own-words.
+status: active
+mechanism: Use the user’s request to state your understanding before elaborating on a solution.

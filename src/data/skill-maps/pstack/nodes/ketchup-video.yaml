@@ -1,0 +1,19 @@
+title: ketchup-video
+summary: Catch the user up through a short subtitled video.
+type: capability
+layer: skill
+primary_cluster: learning-evolution
+inputs:
+  - Existing progress evidence and visual artifacts
+outputs:
+  - Short subtitled video and textual decision list
+when_to_use:
+  - Existing progress evidence and visual artifacts
+solves:
+  - Catch the user up through a short subtitled video.
+source_refs:
+  - source: pstack-0-15-36-c742dd61
+    path: skills/ketchup-video/SKILL.md
+official_description: Catch the user up like /ketchup, with a short subtitled video of slides for what happened and the waiting calls as text under it. Use for /ketchup-video.
+status: active
+mechanism: Build slides from existing artifacts and render the video outside the repository. Keep decisions awaiting the user in text; if rendering fails, report the failure and give the decisions only.

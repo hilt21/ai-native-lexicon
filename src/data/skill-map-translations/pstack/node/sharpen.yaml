@@ -1,0 +1,57 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: sharpen
+provenance:
+  original_sha256: a33d7aca203ead7e329663d42e963970460eebe29b227aa71a71ee5a47a678e7
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: sharpen
+    language: en
+    source_fingerprint: sha256:0b31c6ddb13ace78cbfd9ab754826a9085dc918b3f06df7e1e52df1697abb3b7
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: summary
+    translation: 改写提示词，提高任务深度，同时保持范围。
+    language: zh-CN
+    source_fingerprint: sha256:8828d3e17f8a261e6e4c66da5320c8df7cb1aa7145d80fa5921a3482629412a2
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: inputs.0
+    translation: 原始任务提示词
+    language: zh-CN
+    source_fingerprint: sha256:293fee4e19c4fbf2b8abbddf68b03063727e2077348ddfc2913edcd9ab6b73ec
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: outputs.0
+    translation: 包含独立验收依据的改写提示词
+    language: zh-CN
+    source_fingerprint: sha256:1fd6decf074d5d67366c2d4fb6fe98544c1fa1a7c9b6a03c4d67bd30719d9692
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: official_description
+    translation: Make a task deeper, not bigger, then rewrite the prompt. Use for /sharpen.
+    language: en
+    source_fingerprint: sha256:bd01669d77927fca8a18dd791b382a2992f54d5feef33e80e481179ae8ba2ac5
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: mechanism
+    translation: 识别专家做法、一手材料、具体方法与独立验收依据。改写提示词，保留用户的决定权。
+    language: zh-CN
+    source_fingerprint: sha256:e406021c00bdd4df744de6a971403f172966df79ce0b7561099e03841f45a6b0
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: when_to_use.0
+    translation: 原始任务提示词
+    language: zh-CN
+    source_fingerprint: sha256:aede24ba2aaf233f9e96c7dfe9f4e6ca914222bc6a9d304fc8db0e5c34931fb3
+    review_status: reviewed
+    reviewed_at: 2026-11-12
+  - path: solves.0
+    translation: 改写提示词，提高任务深度，同时保持范围。
+    language: zh-CN
+    source_fingerprint: sha256:bd0c2c42093f2666ced99042560c0e9853f9408fa0296b5f1f2a505ccdcc37ac
+    review_status: reviewed
+    reviewed_at: 2026-11-12

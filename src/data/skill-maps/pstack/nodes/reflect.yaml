@@ -16,11 +16,11 @@ outputs:
   - skill-edit proposals
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/reflect/SKILL.md
 official_description: Spawn three parallel review subagents over the active transcript, surface learnings, and route each to a concrete edit on an existing skill. Use when the user says reflect.
 status: active
-mechanism: Three reviewers independently examine the active transcript from different perspectives. Synthesize lessons and turn each into an executable change to an existing skill or a backlog item.
+mechanism: Three reviewers independently examine the active transcript from different perspectives. Synthesize lessons and turn each into an executable change to an existing skill or a backlog item. Locate only the active workspace transcript. Separate accepted edits, rejected suggestions and backlog items; seek explicit approval before applying accepted edits.
 when_to_use:
   - A complex task has finished.
   - The user explicitly asks to reflect.

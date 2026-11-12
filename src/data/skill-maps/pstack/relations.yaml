@@ -420,14 +420,6 @@ relations:
     type: feeds
     source_refs: []
   - from: orchestrate
-    to: show-me-your-work
-    type: uses
-    source_refs: []
-  - from: orchestrate
-    to: swarm
-    type: uses
-    source_refs: []
-  - from: orchestrate
     to: principle-guard-the-context-window
     type: governed_by
     source_refs: []
@@ -675,3 +667,38 @@ relations:
     to: session-pickup
     type: resumes
     source_refs: []
+  - from: interrogate
+    to: in-your-own-words
+    type: uses
+    note: The review starts by restating the user’s intent.
+    source_refs:
+      - source: pstack-0-15-36-c742dd61
+        path: skills/interrogate/SKILL.md
+  - from: ketchup-video
+    to: ketchup
+    type: uses
+    note: Follows ketchup’s progress and decision structure, with a video for progress.
+    source_refs:
+      - source: pstack-0-15-36-c742dd61
+        path: skills/ketchup-video/SKILL.md
+  - from: autopilot-full
+    to: ketchup
+    type: uses
+    note: Uses ketchup for the report to the operator.
+    source_refs:
+      - source: pstack-0-15-36-c742dd61
+        path: skills/poteto-mode/playbooks/autopilot-full.md
+  - from: setup-pstack
+    to: create-formal-verification-skill
+    type: feeds
+    note: Offers formal verification separately when the project does not have it.
+    source_refs:
+      - source: pstack-0-15-36-c742dd61
+        path: skills/setup-pstack/SKILL.md
+  - from: create-formal-verification-skill
+    to: maintain-formal-verification-skill
+    type: feeds
+    note: The maintenance skill checks formal assets that already exist when verified code changes.
+    source_refs:
+      - source: pstack-0-15-36-c742dd61
+        path: skills/maintain-formal-verification-skill/SKILL.md

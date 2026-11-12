@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["interrogate","uses","in-your-own-words"]'
+provenance:
+  original_sha256: 4e971c131d80dd60d616ccd9b5073932b90deab853016306c14d59eeb29c7059
+  retained_at: 2026-11-12
+units:
+  - path: note
+    translation: 审查先复述用户意图。
+    language: zh-CN
+    source_fingerprint: sha256:86211a28ee62709e717360fbaab4000cb4afa1ca38748e9e5a1f8a795996a9d4
+    review_status: reviewed
+    reviewed_at: 2026-11-12

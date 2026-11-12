@@ -10,96 +10,96 @@ units:
   - path: title
     translation: improve-codebase-architecture
     language: en
-    source_fingerprint: sha256:4ac65fcc44e079f84251be53ab2b68f7bbf4e7a436af0aa4e4f85d6c6d54b9ab
+    source_fingerprint: sha256:8fffba7c48cc18a6ef163e6421814a0560c0fb7ce995842b33b167edf4eddb8b
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 扫描代码库，寻找可以让模块更深、更易维护的架构机会。
     language: zh-Hans
-    source_fingerprint: sha256:be72b337d12f96cb7f40b8264d0e122d02eebb78483343efc71147e4a8f9fd78
+    source_fingerprint: sha256:6b1fab82bf436d7fd4ebad23a5cd7b2eb3fe41ee48af336f971ee947e9639442
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.0
     translation: 工程
     language: zh-CN
-    source_fingerprint: sha256:c031cce95a0856a4f9338549364722c7865c5920f649a764362e01d66718a3c0
+    source_fingerprint: sha256:eab9c8102dbf10cc12ca817cec56e5017748858e4ce8f9ee2f50cd551a3a425f
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.1
     translation: 用户调用
     language: zh-CN
-    source_fingerprint: sha256:0b06039f8960188a45938b9213b53d25a8c1dd1031639d52365d0b9ac3d72037
+    source_fingerprint: sha256:a108d938d08c0addebdea5910fb9a735b5065bd3392d35493eae5a5e39ef8683
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: tags.2
     translation: 稳定
     language: zh-CN
-    source_fingerprint: sha256:48b134555c2153aad9ae5b8a6ff3060cfac14f7c7849e83ec30e9a0767cd1b32
+    source_fingerprint: sha256:1c16bd94a65f5bbf944327c42181c1c534fd8f6992c5fbb9be843a880579c87d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 代码库
     language: zh-Hans
-    source_fingerprint: sha256:76111c68356f59c83718e215e4b14b8d0ad33c7cd2354ec8562fc5be6e5a5efb
+    source_fingerprint: sha256:bc13c6ebbe0b335bf816addcc6af119ab0e971716c2e3dde9428cf07e696d9c0
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 现有模块与接口
     language: zh-Hans
-    source_fingerprint: sha256:4d9a9094467b6e8fa27c8205f501598cfa422c29366c4fade7fd392eff0a39d6
+    source_fingerprint: sha256:5b4479b752f6b58735212165e1f1beb9e2e7c9995fb2449025182585f6ed4148
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 架构机会列表
     language: zh-Hans
-    source_fingerprint: sha256:19a7930678524a04fe8f0d836ca65e681b3e4fa425ddc6bc79f3a173204ca045
+    source_fingerprint: sha256:40989d62f479d8a4607f3298e71addb48271a25234ef787986593ec9346d275d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 可视化 HTML 报告
     language: zh-Hans
-    source_fingerprint: sha256:e6469e9effe373c31f965a2e61b5acad966b8bf58c3898c6738a33318366f0c4
+    source_fingerprint: sha256:97b5a5dda4be60e8970777ffb752055b1ffdf2547103d6c7cf2ff0201db453b9
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 选中候选的设计问题
     language: zh-Hans
-    source_fingerprint: sha256:957c2067e96a5a8db146d43df603b73b6d748babfdab31c1f65d9c32feff528f
+    source_fingerprint: sha256:63ab54da3b5438e05a1ccf0cf0c011c1b1ac4a776e7637192c2e88211a67da59
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: official_description
     translation: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
     language: en
-    source_fingerprint: sha256:48788970412b3f809688d26b7bb3e14a27308809007ab2ec08545f92dd6fcf37
+    source_fingerprint: sha256:b5453d42b980d62618b3c02490eae396034c1621855a1c034bcec2eff71007a2
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 用户显式启动后，先读取 codebase-design，结合仓库现状、历史与热点委派 survey，查找能隐藏更多复杂度的 deepening opportunities，并用 deletion test 检查改进意义。生成临时 HTML 候选报告，等待用户选择一个方向后，再通过 grilling 与 domain-modeling 深入设计；调查阶段不自动改源码或实施所有候选。
-    language: zh-Hans
-    source_fingerprint: sha256:3e590d5a3d1978ebfbfc65840de08414e23754a2ed153a4d0297f17250fe0b61
+    translation: 用户显式启动后，先读取 codebase-design，结合仓库现状、历史与热点委派 survey，查找能隐藏更多复杂度的 deepening opportunities，并用 deletion test 检查改进意义。生成临时 HTML 候选报告，等待用户选择一个方向后，再通过 grilling 与 domain-modeling 深入设计；调查阶段不自动改源码或实施所有候选。让使用新上下文的子代理走查代码库，记录实际遇到的障碍。
+    language: zh-CN
+    source_fingerprint: sha256:34d5c73f2165094e405a42a83fa06af0de9808ebc51b5b1691d722c3da21b4a3
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 希望主动改善 codebase，而不是等待架构问题变成 bug。
     language: zh-Hans
-    source_fingerprint: sha256:1174df402b05d795b1cc430e2cc14b9a1227e60298b0953c8ef0ecda0a7659ab
+    source_fingerprint: sha256:7636f0102559f46079f3920d5411f4f3748ffeb6a9c4765bce1d16c586864d08
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 需要寻找适合下一轮重构的高价值候选。
     language: zh-Hans
-    source_fingerprint: sha256:eeac91032172ad17a884bfff36c1cc3d2313e3d9d0e4d140996613dee072567f
+    source_fingerprint: sha256:fc707876c8c6110c4c3a9b6e775278cbd13cfa28d5cdbc1fd0ac6fc90727cc38
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: 抑制 Agent 加速编码带来的软件熵。
     language: zh-Hans
-    source_fingerprint: sha256:e8e3a6bdf0e6ac7d2e0d9ea342ca6f9514fc6080c4e7d581d552fbc7c0a2076a
+    source_fingerprint: sha256:223367f4bb09d5f1c69977fe5722478ef2df50483aa7b23e3a93dcd217f80e6f
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 让架构改进从模糊感觉变成可比较候选。
     language: zh-Hans
-    source_fingerprint: sha256:bef80acf102cd11255502b9f7180327d4f9dc5bf9f8e39d4d1786520b2652fbb
+    source_fingerprint: sha256:bdd6a28ba5d5808ffb2918141121802e0851fae0e1204434665c554fdc929864
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

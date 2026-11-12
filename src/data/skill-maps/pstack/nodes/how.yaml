@@ -18,11 +18,11 @@ outputs:
   - gotchas
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/how/SKILL.md
 official_description: Use for "how does X work", code walkthroughs before changing something, and placement / ownership / layering questions ("where should this live", "which package owns this", "is this the right layer"). Explains subsystem architecture, runtime flow, onboarding mental models. Use why for motivation.
 status: active
-mechanism: Analyze simple questions directly. For a complex system, investigate critical paths, ownership, runtime flow and layers in parallel, then synthesize a structured explanation.
+mechanism: Use one read-only explainer for simple questions. For a complex subsystem, use parallel explorers and a separate explainer to synthesize ownership, runtime flow and boundaries.
 when_to_use:
   - Understand a subsystem before changing it.
   - Walk through code.

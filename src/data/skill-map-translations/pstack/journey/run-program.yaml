@@ -10,168 +10,174 @@ units:
   - path: title
     translation: 我想批量并行推进
     language: zh-Hans
-    source_fingerprint: sha256:6400b9218b243b8bf18a5971f6ba5ff8e43852c937b3ba71228663957535560e
+    source_fingerprint: sha256:5fcd4b586ca9b31ce1b60df6b4a71addecae63d37ad0c85400d97c055287126b
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
-    translation: 我想批量并行推进：从任务入口到可检查的产物。
-    language: zh-Hans
-    source_fingerprint: sha256:7b332fabeb8994d4ecc06d939c4ca3ceff4e8509d463dc3b56c19d4cd3c961a4
+    translation: 并行推进工作，从任务入口到可检查的产物。
+    language: zh-CN
+    source_fingerprint: sha256:a883d143a50112f8c0b76839a8b190483501d6fa4099c396a8bac8cba3200f1f
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 明确的任务目标与相关上下文。
     language: zh-Hans
-    source_fingerprint: sha256:c7074692d4570fecc3d22abf20f2ded05fe9cbabedda6f6429b8751ff226a8d5
+    source_fingerprint: sha256:e1c9a2cfce816c5092c15b66a453c8515217313f7d00b802291237ca1eaf9528
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: 规划并执行这次包含多个拉取请求的迁移
     language: zh-CN
-    source_fingerprint: sha256:a484aef095b8249fbde94641685f8505ebd6fd4a8748b5a8298538d0d0be4316
+    source_fingerprint: sha256:b5e542e70f365216fd75d778d6d4d6fd8862a6272b43b556c1ecd415cf13c83d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 编排这个项目
     language: zh-CN
-    source_fingerprint: sha256:5f97b33100510b82e4ad493646f126b9b89120e76f81d6ad2fa75b645db8e9b2
+    source_fingerprint: sha256:2456d2beb58f48ca878f38ca8a1e16389a0ab5ec9cec15a711ff74e786e162bf
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 持续验证的项目、已合并队列或已验证的变更栈
     language: zh-CN
-    source_fingerprint: sha256:cf6e1711a281cd9fe6d72ac83e2d454901128698c1a046dc074bcf3a0eec9532
+    source_fingerprint: sha256:51546b8cffb676b1b1f1d734f752fa4649f3a1e15cbfef83503d6e96575ca164
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.title
     translation: 推荐路径
     language: zh-Hans
-    source_fingerprint: sha256:8b903b3e8522700e9bc6b9fc2edf9e6e37922224133b83a51cec258c75645ec7
+    source_fingerprint: sha256:8d0f408c1856485b59093895761f22fac6a59bfbf1651befc9ac56afe7e8e1a9
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.0.title
     translation: 选择项目入口
     language: zh-Hans
-    source_fingerprint: sha256:1aba921b1621c1a9c96ae59aef73f4ed3b736a5d18535d373450a084c213fc45
+    source_fingerprint: sha256:f0c9546bbd62e42032a30ea409bedd41352fc12b6f6c99365bc1795c02316087
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.0.why
-    translation: pstack 的总路由器与工作风格入口。 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
-    language: zh-Hans
-    source_fingerprint: sha256:d1325bd9dbb0370b2acbc4eb2d1756566a78cfe08cd1c0aed61a87c3732f02c4
+    translation: 从 pstack 的主入口进入，制定多阶段计划，让负责人按清单执行，让操作者按证据审查。
+    language: zh-CN
+    source_fingerprint: sha256:3ebfec0d1eb543c6a9337b27f618dce67630ece92cecc20cb5692300dbee1b80
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.1.title
     translation: 协调与分工
     language: zh-Hans
-    source_fingerprint: sha256:bd655b60d3bfe5d3c272173a374005ac0c1b54f0369dd23c24b38c8ab098c485
+    source_fingerprint: sha256:c0cb604336340410e7610e0533c8ff2de8bb63eeddf543cba820c33ac557c6a5
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.1.why
-    translation: 用持久 coordinator 管理跨天、几十到几百 Agent 的 program。 把可分任务并行分发给多个 worker，再聚合结果。
-    language: zh-Hans
-    source_fingerprint: sha256:ba496855b8cf59bd14ceabe3d02a372b2b153e3374eabf2613781ab8f053394d
+    translation: 先跑通一个完整单元，为每个 PR 指定一名负责人，并在 Project 中跟踪进展。要求独立验证者检查当前提交；运行环境支持时订阅事件。
+    language: zh-CN
+    source_fingerprint: sha256:48894fd1978d3e0afc492504a4a889c8638f3715fa7637115f7d378535c3a477
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.2.title
-    translation: 保留决策依据
-    language: zh-Hans
-    source_fingerprint: sha256:f7a3fa7f874d0b052c3141ef6dbc8f3d5ccb978239185ccdebaeffa4c72e0abd
+    translation: 报告进展与待决事项
+    language: zh-CN
+    source_fingerprint: sha256:1e42b8d944d54dca8ff807e6325a84d94474547472f5a70e5acbf06c89c60013
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.2.why
-    translation: 把长时间 Agent 活动压缩成可审计 decision trail。
-    language: zh-Hans
-    source_fingerprint: sha256:729401078dd054b50d3707696606b884783c5116b9f27d63468a58b2699216ab
+    translation: 可选择使用 ketchup 汇总进展和需要操作者决定的问题。这是编辑建议。
+    language: zh-CN
+    source_fingerprint: sha256:f48c173f8887ce4101446b71f768ada04dc7cdb86e0a0b7a5bd96cc2a04f770f
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
+  - path: variants.0.steps.2.when
+    translation: 操作者需要查看进展时。
+    language: zh-CN
+    source_fingerprint: sha256:552eca4de61048a216438ba5fbcdef05a82d8e975e5d5152f1f7366d9deacbb5
+    review_status: reviewed
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.3.title
     translation: 发布已验证结果
     language: zh-Hans
-    source_fingerprint: sha256:faae8fb9b458479b1cf17a2b1647f1cf24d9f9f8ced9583005180920d6c0cefc
+    source_fingerprint: sha256:cdd222c4b8c672df94cb812be99067241479f0339e414c1987ee43e682cde85c
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.3.why
-    translation: 用独立 verifier 决定哪些 PR 可以真正 land。
-    language: zh-Hans
-    source_fingerprint: sha256:dd398da0bcdd8d79e8a22e5342708bd2026d53a94bf456feb95fcbb59f52a30a
+    translation: 根据独立验证结果判断哪些 PR 可以合并。
+    language: zh-CN
+    source_fingerprint: sha256:b3e9908eb724f1d6586d32e2a1d003655fb8f4d63d7413b19d7d4bbe174df3cf
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.0.steps.3.when
     translation: 已获得发布授权且结果满足验证条件时。
     language: zh-Hans
-    source_fingerprint: sha256:b9cabfb394a0f35508f3be3f0506075bf4ec60a80e5bb36fb3f6edb9ee37324a
+    source_fingerprint: sha256:e5d9e7a907b90bba7364e075501e6768eb4a70a94308bab85181bd7b733a76b8
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.1.title
     translation: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
     language: zh-Hans
-    source_fingerprint: sha256:a01186e70b7c805d65a0a3affd6b74baede0ff142de2aad050dc75bd9355e2ef
+    source_fingerprint: sha256:68bfe03a2e9c765a2fa111ae949d89b09746f20d2bf33dad158e4c39bff2aae6
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.1.when
     translation: 项目的交付结构适合 autopilot-full 时。
     language: zh-Hans
-    source_fingerprint: sha256:3f661715435f079982feed24a418519770bfe9c89795332c50c357933d0f182b
+    source_fingerprint: sha256:eaefb630b3f87630e2533a6a99870c7044a0fb6dfa4a0811a1a024526d5697cd
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.1.steps.0.title
     translation: multi-phase-plan
     language: en
-    source_fingerprint: sha256:ecbfa7a5a53a4862140f5a6018cf67d90bc11f762fe9f426358050d63702f59f
+    source_fingerprint: sha256:2bf704bd112a76b59fa36edb2f3a934fd20279f123ca7bbca0af98ea35158690
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.1.steps.0.why
     translation: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
     language: zh-Hans
-    source_fingerprint: sha256:488c2bb8837bb6c96c74540215b6b0f7bfd783309d4375fb04403babfeb9c1e4
+    source_fingerprint: sha256:22a9f2b4792080101d83b15c064d595f85ee4752df838c96801d742115b0fef3
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.1.steps.1.title
     translation: autopilot-full
     language: en
-    source_fingerprint: sha256:3c3636a610be8fe3096c25ee08d4153ad3ed2bed26d7327e75fb9130a5b4f9c8
+    source_fingerprint: sha256:0c9403783e17e8f186bb0e9ea065ed7faf95df592ca663ca97364cae9abea52d
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.1.steps.1.why
     translation: 一个 owner 负责每个 PR 从 build 到 merge，root 只做独立 verification/countersign/audit。
     language: zh-Hans
-    source_fingerprint: sha256:667464347c3c608503221f4fc6a0984c51b104533a2a54785893b77dfcdca7e3
+    source_fingerprint: sha256:2b0a09f8c786cf077832fe6b95323e571cd15774867e81d4831e1b3313aaec8e
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.2.title
     translation: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
     language: zh-Hans
-    source_fingerprint: sha256:a6d6fdea0967ce4da0df4b06dd4ea0b75c7cb7e76db703fd58d53c1cc1273443
+    source_fingerprint: sha256:85c2c0f94fae3b234d417513c97324c45a7c10fe5d5c09b6bd0482f26fb2ccce
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.2.when
     translation: 项目的交付结构适合 autopilot-stack 时。
     language: zh-Hans
-    source_fingerprint: sha256:ac4f468e217ac5524eecfcd0bf515506cb3239dd0a9e8751c6c61480c5df7f24
+    source_fingerprint: sha256:b3e7ba29e49b9d5961755ec11a9e95fd0cb1d63e059a1f73915d60edf223a8aa
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.2.steps.0.title
     translation: multi-phase-plan
     language: en
-    source_fingerprint: sha256:200688ce7b78421489abba96d89764f910ebf39b07c9af989c35393c1c5ddc82
+    source_fingerprint: sha256:da87ed314439386307137e952d2a3c0280f47b98d9bb0b9941f52a048550e1cc
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.2.steps.0.why
     translation: 把大型多阶段工作编成 owner 可逐项执行、operator 可按证据审计的计划。
     language: zh-Hans
-    source_fingerprint: sha256:e00b21de3f1573ff8ad7d59ae19bfcd6f4772c2b3cfbe21db9d3bfb076e648c2
+    source_fingerprint: sha256:19507d7129b93aae7fe11f90158d67767a6205361196b3ce5e197cce0362d63b
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.2.steps.1.title
     translation: autopilot-stack
     language: en
-    source_fingerprint: sha256:6e7e414f9eae0697fcbc44a80797692de090ccba0f0e898d767eaccfb7756882
+    source_fingerprint: sha256:881eb4ae196ea603c9d96320933324890f09686fa6cbf492d342bfbc9adcb0a5
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: variants.2.steps.1.why
     translation: 全自动构建并验证线性 PR stack，但最后 landing 交给 operator。
     language: zh-Hans
-    source_fingerprint: sha256:40c6bf69f26bc1b048bd1ee7351eae62f6fc179e430b3c11719aeb45c6608207
+    source_fingerprint: sha256:1db90059ef83baaba170d4e6b5114dd63fa1402800b03d187bf7782195ff1dc2
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

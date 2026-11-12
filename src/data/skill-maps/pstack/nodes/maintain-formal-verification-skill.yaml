@@ -1,0 +1,19 @@
+title: maintain-formal-verification-skill
+summary: Keep project-local formal checks aligned with changed code.
+type: capability
+layer: skill
+primary_cluster: verification-evidence
+inputs:
+  - Changed code with an existing formal check
+outputs:
+  - Updated verification and a drift or bug verdict
+when_to_use:
+  - Changed code with an existing formal check
+solves:
+  - Keep project-local formal checks aligned with changed code.
+source_refs:
+  - source: pstack-0-15-36-c742dd61
+    path: skills/maintain-formal-verification-skill/SKILL.md
+official_description: "Bring a project's formal verification back in line with the code after the code changes: find the commits that touched verified code, update the model, harness, or properties to describe the code as it is now, rerun, and say whether each failure is drift in the verification or a bug in the code. Use for /maintain-formal-verification-skill, \"is the model still true to the code\", or after merges and refactors that touched verified code without rechecking it."
+status: active
+mechanism: Find changes to verified code, update the model or harness, rerun checks and distinguish model drift from a product defect. Keep product code outside the maintenance scope.

@@ -10,78 +10,78 @@ units:
   - path: title
     translation: shipping
     language: en
-    source_fingerprint: sha256:60594619c792f6a2cc7d3efc5cf64edd5e8dde96686e26d626545a53db4c5002
+    source_fingerprint: sha256:3544990e41eb267d287bd75dad7a43c3f9735917f415ffe16412604aedf18fe9
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: summary
     translation: 用独立 verifier 决定哪些 PR 可以真正 land。
     language: zh-Hans
-    source_fingerprint: sha256:671a17f588c24025fb45e42ebcd501212fcfd3dbadbdb2abe14d918e4b4d6a2e
+    source_fingerprint: sha256:241ffaf44cfc4dcce20f9c1c50395e938e2d4749e64bb2fbc3792de48f3c7102
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.0
     translation: 可合并的拉取请求栈
     language: zh-CN
-    source_fingerprint: sha256:901817291c899412c10c6a7744503f305a939ca9a15a56377934337af939b5ac
+    source_fingerprint: sha256:1843f43736c5ad8eb42b3b080efbbf5c05550529c933f620d5e2d46db5de0048
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: inputs.1
     translation: 当前代码托管平台状态
     language: zh-CN
-    source_fingerprint: sha256:570c93f4177561044ff6d279f37dfef6ac4a122508eecd264575491234d74df3
+    source_fingerprint: sha256:bd68eabccb26512e2deaee7e4e02f0e8768cddf1dfdd0988e20061f22ba0771a
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.0
     translation: 独立判定
     language: zh-CN
-    source_fingerprint: sha256:ba92d4eb0e2c7c6393334e8117d9467ebdf6b39325e1a7e40b31b8b98e4be514
+    source_fingerprint: sha256:7e1f37c5fd2d52ca42007688851b5272311d3ba56e51e7b34ecd308523b18bf3
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.1
     translation: 已合入且经过验证的拉取请求
     language: zh-CN
-    source_fingerprint: sha256:354ad2f225002d9da56574590256a9ddda941df6287c835af7eb5029ab6288ae
+    source_fingerprint: sha256:eff217621f1e571e05584cdbe7a078adb0e468bb4ac22a10a47ac27c795b2b91
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: outputs.2
     translation: 合入上限
     language: zh-CN
-    source_fingerprint: sha256:be269f084cad4ed5738121b1d01f53f3edd73abdbe3b1dbbb2ab61b93c75ff5a
+    source_fingerprint: sha256:aa878a5d83a4499add3fc4ce1f66c8d6f67b3325fa481f2551fb54716068da6e
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: mechanism
-    translation: 每个 PR fresh verifier 在真实 surface 验证 parent vs head → verdict 绑定 SHA/base/patch-id → 只 landing 从底部开始的连续 verified run → 每次只处理一个 PR。
-    language: zh-Hans
-    source_fingerprint: sha256:2482adeb80cea355eb1ad39563a69adf239115db270ee133c9b388427a87547c
+    translation: 每个 PR fresh verifier 在真实 surface 验证 parent vs head → verdict 绑定 SHA/base/patch-id → 只 landing 从底部开始的连续 verified run → 每次只处理一个 PR。操作前先确认代码托管平台。合并从栈底开始，在首个未通过验证的 PR 前停止，不越过缺口。
+    language: zh-CN
+    source_fingerprint: sha256:7dee90ebc142b8adde0939ea8324f7aa9a8be8170298e358a76f45136b5bdbbd
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.0
     translation: PR 已 merge-ready
     language: zh-Hans
-    source_fingerprint: sha256:11f28b8ef2845e92831192232223fbfe1fb0cfa8cb4f195f19e62b0324a965d8
+    source_fingerprint: sha256:5e9c3bf1391cdb72306c27e72d1baff86f0af9197cea93675165630a519f6ea8
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: when_to_use.1
     translation: 用户要求 land/ship
     language: zh-Hans
-    source_fingerprint: sha256:d026fb872f28ef8fd81397005fe0eeb0b66eb169c24ecca65638f6e84c51e496
+    source_fingerprint: sha256:43f558312b0095ae1db97c0ecc544a668e5c349300ba8687b9e0a8c2dc0556c2
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.0
     translation: writer 自证
     language: zh-Hans
-    source_fingerprint: sha256:bb0c62ee57ec464de38f0d51b92bc33a8adf1a67231e5213dfac856fa842ae41
+    source_fingerprint: sha256:6908a419100ce57eb73bb93453dd85ad25e99bcb6da5bc54ee9cd98cb698e7b9
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.1
     translation: 旧 SHA 绿灯被误复用
     language: zh-Hans
-    source_fingerprint: sha256:45e188fd3d22b02240f0c1cf42b7141c56aac9bd25bac299852260de3ee19a52
+    source_fingerprint: sha256:5ca4677208531071af7bd85a84978d14c57fd3d5e640400298a9683569305620
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12
   - path: solves.2
     translation: 上层 PR 跳过未验证底层
     language: zh-Hans
-    source_fingerprint: sha256:16aa44a0e07df552ff69cf2e546069b822d8e534fac68cd5cde8e3fee9fa7009
+    source_fingerprint: sha256:a754e7eab018c44ca950f95cd58395549ca409f495fbc5adaa8175496381c341
     review_status: reviewed
-    reviewed_at: 2026-10-13
+    reviewed_at: 2026-11-12

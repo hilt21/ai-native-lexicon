@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["setup-pstack","feeds","create-formal-verification-skill"]'
+provenance:
+  original_sha256: 0bc95e18f078e715809cb23bb9490412e95527d60aa58febb0c7db8ea6f3e04d
+  retained_at: 2026-11-12
+units:
+  - path: note
+    translation: 项目没有形式化验证技能时，单独询问是否创建。
+    language: zh-CN
+    source_fingerprint: sha256:90273d83947ca0c0dee1b7c59032926fd1423d9c4bf1a2d22ad98569419ca763
+    review_status: reviewed
+    reviewed_at: 2026-11-12
