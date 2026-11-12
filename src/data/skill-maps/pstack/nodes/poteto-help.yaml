@@ -14,11 +14,11 @@ outputs:
   - usage guidance
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-help/SKILL.md
 official_description: Guides users through pstack setup, /poteto-mode, and picking the skill, playbook, or principle for a task. Type /poteto-help with a question.
 status: active
-mechanism: Explain the applicability boundaries of setup, poteto-mode, skills, playbooks and principles according to the user's question.
+mechanism: Explain the applicability boundaries of setup, poteto-mode, skills, playbooks and principles according to the user's question. Explain the Cursor and Claude Code installation paths and distinguish app-level verification from optional formal verification.
 when_to_use:
   - Use pstack for the first time.
   - Choose the right skill or playbook for a task.

@@ -10,54 +10,45 @@ units:
   - path: title
     translation: attack-the-premise
     language: en
-    source_fingerprint: sha256:d3859f99c4d5340662247f2b24762550e2c7ee06e46761f75006533e9092e637
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d77ee6a25b5761478079e519952a50c24e723663300a828c2982c36932b71924
+    review_status: draft
   - path: summary
     translation: 连续修复失败时，停止沿用共同前提，重新检查前提。
     language: zh-Hans
-    source_fingerprint: sha256:04fb97249a9e0439f0eff89cec0f5fc97c642ad3da407b6a3624c453f6ea08ac
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c295cd071b4bdebb010f8cb573af52f921a9c9dd01575597caa39d80e4ca06be
+    review_status: draft
   - path: tags.0
     translation: 原则
     language: zh-CN
-    source_fingerprint: sha256:acbcab05d8154b84fc59c382645e457b5487e9d3695ca3a8e675073297a8de55
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:513a86f8897cb2eba1e0ba6f2a48864d0bbb48e21079c8457f32505a3794b585
+    review_status: draft
   - path: inputs.0
     translation: 多次失败的修复
     language: zh-CN
-    source_fingerprint: sha256:9383bc83411d23d60283801df676d40f2feea574ae9a9814a842e720b462e928
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ea517b4838379d18553d7a5f3471d7e3a9caffc6b43188209b23fcddf6edbf46
+    review_status: draft
   - path: outputs.0
     translation: 重新界定的前提或新假设
     language: zh-CN
-    source_fingerprint: sha256:b6f7cab1b3511dc66e547991943a76d34e5c77a7fbbc9bea1497d71f4dd4c99d
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:a1a68ba0b813594c67ef4a2c8d7f88a2c2aa6ee81b9603201f418f23c1fe40a1
+    review_status: draft
   - path: official_description
-    translation: Apply when two or more fixes that share one premise have failed the same gate. Take a census of which actors hold the imbalance before the next fix, then question the premise instead of writing another fix that assumes it.
+    translation: Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it.
     language: en
-    source_fingerprint: sha256:6b01e7934173dd465abba16f214bec01a497a4e04ae0868cc20024432f33f328
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:9072f7bd161d22c479506b65bd331ab4a3a4961755fff8c63956f3d9c2b2f48a
+    review_status: draft
   - path: mechanism
-    translation: 连续修复失败时，停止沿用共同前提，重新检查前提。
-    language: zh-Hans
-    source_fingerprint: sha256:3e4ae3e44afb2e1c67e7c495e62b4b8c7cc6426de9a6f1a9e65846ed93bd2adb
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    translation: 连续修复失败时，停止沿用共同前提，重新检查前提。 若基于同一前提的两种修复都未通过同一关卡，下一次修复前先直接检验前提。
+    language: zh-CN
+    source_fingerprint: sha256:ab863f6bd911b42e621dd2bb06c8e7cae4a26dfbd0a3bb00973d3a6aa7ba660b
+    review_status: draft
   - path: when_to_use.0
     translation: 同一前提下的两次或更多修复都未通过同一关卡时使用。在下一次修复前，全面查明哪些行动主体承载着这种失衡；随后质疑前提，而不是继续编写依赖该前提的修复。
     language: zh-CN
-    source_fingerprint: sha256:bbfee947cedb5735829400e39e1d3ff0f9d0c5a51cae24157a04377da38c6876
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:0a202a6386384d69069b7f1245a2251af3268e36c8dbb4c6ab34efc9d20d3814
+    review_status: draft
   - path: solves.0
     translation: 连续修复失败时，停止沿用共同前提，重新检查前提。
     language: zh-Hans
-    source_fingerprint: sha256:0bcc0c55005e9e19e1be2efa82d8a2d60b6b726c06c5c15aead8cf10c0ed01aa
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:21c204b4084654f1e456b8992db3c4c9102176c8a6a62fc7acb83d0287ffd005
+    review_status: draft

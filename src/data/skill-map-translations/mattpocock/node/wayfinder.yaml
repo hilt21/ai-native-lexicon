@@ -10,96 +10,80 @@ units:
   - path: title
     translation: wayfinder
     language: en
-    source_fingerprint: sha256:a9525aa771b2504f26c4d79a56bcd39317272671230d3c86e3ed33457e4dee04
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d77c54b1f56bb669f04551abc23048b087bb2ac32401e70e0ceed913455bb093
+    review_status: draft
   - path: summary
     translation: 把超出单个 session 的模糊大项目拆成一张决策地图。
     language: zh-Hans
-    source_fingerprint: sha256:df8a930160b08bf723de18636328565d9934f16e593d326b1f5aa2a30ded4e9e
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:e57ce7b86d8e65dec65129e266a0b294d49b164243295fd401f76262854de7ee
+    review_status: draft
   - path: tags.0
     translation: 工程
     language: zh-CN
-    source_fingerprint: sha256:f601dd7b8ab10bf840b74c57f0b588ff7c90a38d8a1abb8a0c630637fc6af12f
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:9e45a8fcabc9d024e264a15b93377280fc9935301b87964e546e99b6549dfef9
+    review_status: draft
   - path: tags.1
     translation: 用户调用
     language: zh-CN
-    source_fingerprint: sha256:f506022519a2e8dd98c235b44c1c0c25d6fff27650708d41f54420917f1fe83e
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:64e2b5c5c0e9f91fdcf2573dbf4210439efd915625b3d4e6a239b7c147321eb1
+    review_status: draft
   - path: tags.2
     translation: 稳定
     language: zh-CN
-    source_fingerprint: sha256:ddabc3b38dc53e9fe22cde9107ac8c39e252986fe93d02319d31fd2e61c31fe0
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:bc5ce272d515e142452969b53cf11e4caa24a87da6ee53f3ba1cc78aae1c34bb
+    review_status: draft
   - path: inputs.0
     translation: 目标或大方向
     language: zh-Hans
-    source_fingerprint: sha256:a49ee6dac944af4534c7b7c398f1702ccb2e5c3b82df16c330577cd7da3a1bcf
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:932c98852acd2a0c5696e6e9320fc191c0e8853367fd6130661afe46b6341083
+    review_status: draft
   - path: inputs.1
     translation: 议题追踪器
     language: zh-CN
-    source_fingerprint: sha256:b0a0d28fd38f4947fcfea386c670449689fcefd04515db3622e346704199ee84
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:0246060b09273b009df05f11eb99da0282b43322f4988fc0a1a24df65d9332be
+    review_status: draft
   - path: outputs.0
     translation: 决策地图
     language: zh-CN
-    source_fingerprint: sha256:b935104e7392e6354b7149491678cbbaae01d8570ab39821665ec80cc13e1f5d
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:82b761bb23d99e0247e353f96d6613586a570a53bcae524a8bc755fae55dbf32
+    review_status: draft
   - path: outputs.1
     translation: 已澄清的未知事项
     language: zh-CN
-    source_fingerprint: sha256:97c9f8db2b3da357b47c66d30643143c367755f3e402d076d4a10f71d86f219c
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:86a5a020c643827ee5f70ad930018921edacad357a219b7f1b586599f957db77
+    review_status: draft
   - path: outputs.2
     translation: 可进入 to-spec 的清晰路径
     language: zh-Hans
-    source_fingerprint: sha256:c2debcded27eec50605969896b7ef4e2aac6f8d552aaa9a031ca4b67b8c50869
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:a58c1df269aec9fce5a769cb4123d2c18489529b14ada76d4255218e4fdf64e7
+    review_status: draft
   - path: official_description
     translation: Plan a huge chunk of work (more than one agent session can hold) as a shared map of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
     language: en
-    source_fingerprint: sha256:84c4b79c17a3c811266f3f0c62e6015513fbf97704bdb68b75b296c778b226d8
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:5255239b732dc81e28f27fe9eb0f1bf22b27800d93eae284eed30f7d7719d5da
+    review_status: draft
   - path: mechanism
-    translation: 用户显式启动后，针对太大且路线尚不清晰的工作在 tracker 建 decision map。随后通常每个 session 解决一个非研究票，研究票可由后台 Agent 并行推进；prototype、grilling 或必要 task 用于解除决策阻塞，人工决定需要真实交流。默认产出决策，再由用户带入 to-spec；正文允许 Notes 明确覆盖规划默认，但不把地图直接当工程交付 backlog。
-    language: zh-Hans
-    source_fingerprint: sha256:12dc434e7d07e61f4f91e945859f08a45c9b79f61bea2c929c187b39827528fe
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    translation: 用户显式启动后，针对太大且路线尚不清晰的工作在 tracker 建 decision map。随后通常每个 session 解决一个非研究票，研究票可由后台 Agent 并行推进；prototype、grilling 或必要 task 用于解除决策阻塞，人工决定需要真实交流。默认产出决策，再由用户带入 to-spec；正文允许 Notes 明确覆盖规划默认，但不把地图直接当工程交付 backlog。 决策图和票据只使用 wayfinder 类型标签。先建子票据，再写阻塞关系和实际引用。研究任务并行分配给使用新上下文的代理，研究分支不进入产品合并。
+    language: zh-CN
+    source_fingerprint: sha256:b50ac95ac316039c79533816174cae90ef55309e97a7a5bcad81c1048214c284
+    review_status: draft
   - path: when_to_use.0
     translation: greenfield 或巨大 feature，当前还无法写出完整 spec。
     language: zh-Hans
-    source_fingerprint: sha256:0823d51fb3752f5b9cbf75cf56914513f9f052bd6eb49946cff5df0552fd306d
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:55744245982c8538b6d8d3d31b5d06d91aa7638be15f343bad552fa1a390f8b4
+    review_status: draft
   - path: when_to_use.1
     translation: 关键未知需要跨 session 逐步解决。
     language: zh-Hans
-    source_fingerprint: sha256:f48a465663cc3bfa531e2b0f00a0c0f524882f0aab075964935dc9442b25e5d9
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:a7b95a9a765137b778daa470aee0d4f9d4ea7d9f0636c613f2b633fd73ff8059
+    review_status: draft
   - path: solves.0
     translation: 避免在高不确定性下过早进入实现。
     language: zh-Hans
-    source_fingerprint: sha256:5a059fb4d7a4b427d59182cede9292018c596ad6da554c17fd1353d00e701636
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d7db8abbb26c78f162483df47b89c52759cf036cbbe6fbeec0fe230273b6ff4f
+    review_status: draft
   - path: solves.1
     translation: 让长周期探索留下可共享的决策轨迹。
     language: zh-Hans
-    source_fingerprint: sha256:f656b1b0b5df5e514c9e99f83ccb4d5fc02b16126bf7a998e98e5ea9532091aa
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:03b1b895cc755ff50c2016730eb4f7cfc05bff55c84f57eba79d8d756c5f5ec7
+    review_status: draft

@@ -10,90 +10,75 @@ units:
   - path: title
     translation: teach
     language: en
-    source_fingerprint: sha256:f2a398ac9c3be53362f45fec749f5aa77f874a124eba1abc8322fe71cad7aece
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:0803b1332607b6a8054215e159c61b5b4d67e264ec201d11223b74d57ec26f9e
+    review_status: draft
   - path: summary
     translation: 在当前 workspace 中用多 session 方式持续教授一个技能或概念。
     language: zh-Hans
-    source_fingerprint: sha256:19d7f82a01af2d4b3fc04247d7b97a686208311d705e632a96462902e2a1b1b6
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c0a0d4acee8a36f4a6e01c2d45f4aeb703fc105c77ccf34ccba8f2fbbc49f16e
+    review_status: draft
   - path: tags.0
     translation: 生产力
     language: zh-CN
-    source_fingerprint: sha256:74300c608ee774eb4245927917451a3cd1484ce60511f6a768cc447f0446b99f
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:fdeab4b28b7d4cec264b199d4507200c09047ce966da54d614a83baa41fbb453
+    review_status: draft
   - path: tags.1
     translation: 用户调用
     language: zh-CN
-    source_fingerprint: sha256:c750c330fe7857d19782ad81c227121579148c8c4b944c278d35a03b1b51bdda
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d2656ec5804dc12c4b207380bc91d58e0b37a963c89ebcb5aafc7b4e419538b4
+    review_status: draft
   - path: tags.2
     translation: 稳定
     language: zh-CN
-    source_fingerprint: sha256:91508de48e621131e577f78539b6bf8a3173867fdd0e811058cbd7a3c131fb01
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:442cb6585381198f4d934510801195ae00a7899ea8025de79e4e99aeb41121f7
+    review_status: draft
   - path: inputs.0
     translation: 学习 mission
     language: zh-Hans
-    source_fingerprint: sha256:94c91f6055bb4aa20f38a88a8e2de6bc4ba783d27313e8a605d2c049283e0bd8
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:e477defda38ccad2f191c5f98f5c8290dc55e94bbe1eaf3c60544d89f99f68e3
+    review_status: draft
   - path: inputs.1
     translation: 可信资源
     language: zh-Hans
-    source_fingerprint: sha256:67df13435f3c5f13eff47172a3be52da948554d8eb8065e4843b46718a3fc14b
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:69de522b3a00ec158617c00fc5b70873ea3803d9ac719d9b0fde1dc0c9c23f78
+    review_status: draft
   - path: inputs.2
     translation: 当前学习记录与 workspace
     language: zh-Hans
-    source_fingerprint: sha256:46ebecf5a8f120657ea43f0c869528f9b93daa9f67fecc401ff42e546bd960e8
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:abc2cb9ba5a7621674f015898db9c6153fb407af024985e0887c0847b3e51096
+    review_status: draft
   - path: outputs.0
     translation: 带引用的交互 HTML lessons 与 reference HTML
     language: zh-Hans
-    source_fingerprint: sha256:65cb1de9d637461057787c35b5c6cf06c0965da602bcfec7610f51a45d62a839
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ac8b535696ba37d5d23ae3774d0741cb40ea626aaed18db8569ffcbc6dcc3735
+    review_status: draft
   - path: outputs.1
     translation: 可跨 session 延续的学习记录和资产
     language: zh-Hans
-    source_fingerprint: sha256:e73c198a7843ca25479bbae8ee831d2483d949bf46bb34e83f896ebe36ff525d
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c5064d3f6674fb4148dd838e3070a96f07a1191dcc744cb520ebc85b95c2be59
+    review_status: draft
   - path: official_description
     translation: Teach the user a new skill or concept, within this workspace.
     language: en
-    source_fingerprint: sha256:88dac2747fb338e1d6733d10bd5674f8fb0b38d5d438749aa2681e2b9cad81f4
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:1310cf08ccdd49647d1105618ae0afe0778620861dca8bb81f7c14e8168517c7
+    review_status: draft
   - path: mechanism
-    translation: 用户显式启动后先澄清学习 mission 与可信资料，在当前目录建立可持续的教学 workspace，用带引用的短篇交互 HTML lessons、reference HTML、学习记录和可复用资产支持跨 session 学习。mission 变化需用户确认；记录和重复练习旨在长期保留理解，不承诺掌握结果。
-    language: zh-Hans
-    source_fingerprint: sha256:eb2da72123bae302875c4ceced89e738d5f9a7d5b9b3994340cfffbcc52967a7
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    translation: 用户显式启动后先澄清学习 mission 与可信资料，在当前目录建立可持续的教学 workspace，用带引用的短篇交互 HTML lessons、reference HTML、学习记录和可复用资产支持跨 session 学习。mission 变化需用户确认；记录和重复练习旨在长期保留理解，不承诺掌握结果。 教学状态文件以调用目录为基准，格式参考以技能目录为基准。题目选项长度保持接近，正确选项位置应变化。
+    language: zh-CN
+    source_fingerprint: sha256:9779693991c2a577d050886f5ff1e8901a27bcfe757ebd68590bc071616e631b
+    review_status: draft
   - path: when_to_use.0
     translation: 希望持续学习一个主题，而不是得到一次性解释。
     language: zh-Hans
-    source_fingerprint: sha256:a8687fb5ea445fc9640731fed347dc4e65f3eb91a45bf01ca27a3e01ac3333cc
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:6f5062d8bca4ffbde8ce7d7575eaf569a882144308ecb3ebb5389ec766fff7d8
+    review_status: draft
   - path: solves.0
     translation: 跨 session 保留学习进度。
     language: zh-Hans
-    source_fingerprint: sha256:8a0b49a30a6dfdf80c448d06d896f2c2556ac0169214be59a89e58c383126db2
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ac556f53dda4fd4ba56d8835c023ee09858edd860ebce4a102a1d0585f331a00
+    review_status: draft
   - path: solves.1
     translation: 把教学从单次回答变成可延续的学习流程。
     language: zh-Hans
-    source_fingerprint: sha256:45600d9b608bc4770f52e1565d5987127a8c08709080704610620918bf82d24f
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d18ec92043719cdab901665f75f30069dd98e1c6bd8018164e6d92ff241a84a0
+    review_status: draft

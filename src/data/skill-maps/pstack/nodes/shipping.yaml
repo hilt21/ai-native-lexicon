@@ -14,10 +14,10 @@ outputs:
   - land ceiling
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/shipping.md
 status: active
-mechanism: A fresh verifier tests parent versus head on the real surface for each PR. Bind the verdict to SHA, base and patch-id. Land only the contiguous verified run from the bottom, processing one PR at a time.
+mechanism: A fresh verifier tests parent versus head on the real surface for each PR. Bind the verdict to SHA, base and patch-id. Land only the contiguous verified run from the bottom, processing one PR at a time. Resolve the forge before PR operations, stop the landing run at the first unverified PR and never land a verified PR above that gap.
 when_to_use:
   - A PR is merge-ready.
   - The user requests landing or shipping.

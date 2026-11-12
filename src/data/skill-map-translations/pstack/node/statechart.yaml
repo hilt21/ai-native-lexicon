@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: statechart
+provenance:
+  original_sha256: df7d126db8afe6395ac320bdd7cd4563ffecd877f8769aab80e4081410c0983a
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: statechart
+    language: en
+    source_fingerprint: sha256:4196d8d1dfe076d4b184070986f136123fa4f1891c33dbe26e4e278415483648
+    review_status: draft
+  - path: summary
+    translation: 检查 TLA+ 状态模型，并用 Mermaid 状态图呈现行为。
+    language: zh-CN
+    source_fingerprint: sha256:f5491beb589cabf445675433227d119b28b032f8d38731d9e7698df235ef767d
+    review_status: draft
+  - path: inputs.0
+    translation: TLA+ 规格与配置
+    language: zh-CN
+    source_fingerprint: sha256:08fc83fb2d4d1614277edd966f82f8f6ffdfcbbbe7b4e11e4b1a20039e1a6796
+    review_status: draft
+  - path: outputs.0
+    translation: Mermaid 状态图与反例报告
+    language: zh-CN
+    source_fingerprint: sha256:fa422e6729e8812ce60cee53accc1208543cf482a55abc4d2e7986fa3ce56f64
+    review_status: draft
+  - path: official_description
+    translation: Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states.
+    language: en
+    source_fingerprint: sha256:4639008713ffdea9fd3612533884c64c61106bad122991471e2c32393ac33951
+    review_status: draft
+  - path: mechanism
+    translation: 用 TLC 检查 TLA+ 模型并绘制可达状态。在给定模型和配置下，报告通往可达违规状态的最短路径。
+    language: zh-CN
+    source_fingerprint: sha256:793289fcf23eb032e72cd99b643a3fb5ecc5a1baa42d0c5a96a0e5bca8bbcdf3
+    review_status: draft
+  - path: when_to_use.0
+    translation: TLA+ 规格与配置
+    language: zh-CN
+    source_fingerprint: sha256:c66238dcc16f1dc2cd0a9d15aec0db7a230e8939e96dd90d7d8bb9d651d5e812
+    review_status: draft
+  - path: solves.0
+    translation: 检查 TLA+ 状态模型，并用 Mermaid 状态图呈现行为。
+    language: zh-CN
+    source_fingerprint: sha256:6330fe68331d3cc9dbbc03344c3cc930191dbff910c84ede30b2f3f94d9a4caa
+    review_status: draft

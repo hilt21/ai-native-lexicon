@@ -15,10 +15,10 @@ outputs:
   - human report
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/orchestrate.md
 status: active
-mechanism: The coordinator manages the program without writing code; the brief is its product. Workers and sub-coordinators report through queues/inboxes. Durable state tracks the frontier and each writer exclusively owns a worktree/branch.
+mechanism: The coordinator delegates through Task and tracks progress in the Project tracker and store. Use PR and CI event subscriptions when the harness supports them. Start with one complete unit, assign one writer per PR and require an independent verifier at the current head. The coordinator does not edit code, poll, relay worker messages or run the former orch scripts.
 when_to_use:
   - Work exceeds one agent session.
   - multi-day program

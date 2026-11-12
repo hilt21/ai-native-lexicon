@@ -1,0 +1,79 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: journey
+target_id: verify-an-invariant
+provenance:
+  original_sha256: eb4919f8684fe91f9686da41e2cd7c86c1aedb35140b43dfb07e15ef417eda07
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: 验证不变量
+    language: zh-CN
+    source_fingerprint: sha256:0e07934a55a190826590b1bcd95892cdb99371e4e4a5a95a0bdffcdf780dc2f8
+    review_status: draft
+  - path: summary
+    translation: 验证普通测试很少触及、但失效影响较大的不变量。
+    language: zh-CN
+    source_fingerprint: sha256:343c53f14d3416cce4c7988abe78813f19c97cbda8940e62b744db44bb35f530
+    review_status: draft
+  - path: inputs.0
+    translation: 代码与候选不变量
+    language: zh-CN
+    source_fingerprint: sha256:76749ce8137f4a132a5959175b4a43ab4f37c336aee95ed11c5f8688e5120dda
+    review_status: draft
+  - path: when_to_use.0
+    translation: 关键属性需要超越示例测试的验证。
+    language: zh-CN
+    source_fingerprint: sha256:566ee6e2e408372d658b5161b3125eaed304c4b76aaaa69e374434103257a06f
+    review_status: draft
+  - path: outputs.0
+    translation: 明确检查范围的证据与可重复执行的形式化检查
+    language: zh-CN
+    source_fingerprint: sha256:210711fba9ac26271ce13b515ad2c4b789c3bf477fe0dbaa6cc299f6b5db726d
+    review_status: draft
+  - path: variants.0.title
+    translation: 从选定属性到维护检查
+    language: zh-CN
+    source_fingerprint: sha256:89a51c3c09e78ed0a39b36b1efb8681529a5c0d0718c385e1a39ab94cb683e38
+    review_status: draft
+  - path: variants.0.steps.0.title
+    translation: 选择并检查属性
+    language: zh-CN
+    source_fingerprint: sha256:8e2ad8a0ed6049e63d8721c6c6013c83b52a32579caa5a8f569f36da08453458
+    review_status: draft
+  - path: variants.0.steps.0.why
+    translation: 按属性选择验证工具，并确认检查能发现被故意破坏的变体。
+    language: zh-CN
+    source_fingerprint: sha256:9f2942fd31a4c111b0f46db6102a0629df7519be70a6bf91113d438bbec3b9ff
+    review_status: draft
+  - path: variants.0.steps.1.title
+    translation: 查看状态路径
+    language: zh-CN
+    source_fingerprint: sha256:040416d280622a0d4e49e60508134df139549a8e5941bc3f5623011de8f960fe
+    review_status: draft
+  - path: variants.0.steps.1.why
+    translation: 用状态图说明可达违规状态和抵达该状态的最短路径。
+    language: zh-CN
+    source_fingerprint: sha256:98893e46d4eac942d9b26d5b39da4fbb614794a06088b4d5494012cf719b906b
+    review_status: draft
+  - path: variants.0.steps.1.when
+    translation: 验证使用 TLA+ 状态模型时。
+    language: zh-CN
+    source_fingerprint: sha256:c669a94cfb8619e336fd4c04442b5080c6b2b27a3ba15f18720dbb509636b547
+    review_status: draft
+  - path: variants.0.steps.2.title
+    translation: 让检查跟上代码
+    language: zh-CN
+    source_fingerprint: sha256:a6d2a8076e1a14aad0a0c514c05d6fda7b19089d19cb4aaadda09ccbffc6f726
+    review_status: draft
+  - path: variants.0.steps.2.why
+    translation: 受验证代码变化后，区分形式化检查漂移与代码缺陷。
+    language: zh-CN
+    source_fingerprint: sha256:dbe93610d05fbfba85e20c6ace0058167f056a49b0c6db48d9b7c16fa7e607e4
+    review_status: draft
+  - path: variants.0.steps.2.when
+    translation: 项目已有形式化检查，且受覆盖的代码发生变化时。
+    language: zh-CN
+    source_fingerprint: sha256:710fbe2e1c1cd661c997b4267177bb4a4d72421dc682d34cbdf4b29531ec2993
+    review_status: draft

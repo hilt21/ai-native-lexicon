@@ -19,11 +19,11 @@ outputs:
 handoffs:
   - "Handoff guidance: performance claim"
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/benchmark-checklist/SKILL.md
 official_description: Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured.
 status: active
-mechanism: Check limiters, configuration, physical limits, errors, repeatability, end-to-end relevance and work counts. Separate noise from speedup.
+mechanism: Check limiters, configuration, physical limits, errors, repeatability, end-to-end relevance and work counts. Separate noise from speedup. Identify the limiting resource, match production tuning, and check that the measurement actually includes the work it claims to time.
 when_to_use:
   - Optimize performance.
   - benchmark

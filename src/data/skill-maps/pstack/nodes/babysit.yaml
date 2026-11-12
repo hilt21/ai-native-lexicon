@@ -14,10 +14,10 @@ outputs:
   - blocker report
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/babysit.md
 status: active
-mechanism: Declare drive, background, threads-only or check mode. Work only at the merge frontier through conflicts, review, CI and forge verdict, then batch a fix wave.
+mechanism: Declare drive, background, threads-only or check mode. Work only at the merge frontier through conflicts, review, CI and forge verdict, then batch a fix wave. Keep stack topology unchanged; send rebase or retarget work to the PR owner.
 when_to_use:
   - An open PR needs green checks and merge readiness.
   - Handle review and CI.

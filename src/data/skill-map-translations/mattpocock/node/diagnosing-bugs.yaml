@@ -10,96 +10,80 @@ units:
   - path: title
     translation: diagnosing-bugs
     language: en
-    source_fingerprint: sha256:6d4aa5824d2edd432f8cefb392e452291b8725a3250e677e76e23b9a4f07590a
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:2b1afb1188fb153762b9715e06df174a36ec2ccd957aafb91a529c1093c3079e
+    review_status: draft
   - path: summary
     translation: 用能捕获真实症状的短反馈寻找根因并修复；正确 seam 上建立回归保护，缺少 seam 时记录发现。
     language: zh-Hans
-    source_fingerprint: sha256:2189d4ca86f13409b7a8df7af57570aa754735fb664e3cfdf5b58f4b60d94aa9
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:86401000c5cbb674db31c3df56fd5d9df75927f7d6166e3a8f7362fe5df5bce2
+    review_status: draft
   - path: tags.0
     translation: 工程
     language: zh-CN
-    source_fingerprint: sha256:eef7b6599d36590417c4902f51d71e296fd4ef21b493ddd3b0f1fc94f7b5a65e
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:231214d502d32e4a232b625b03646ca29fbed51bc6151d5d88788de8ef50c4e7
+    review_status: draft
   - path: tags.1
     translation: 模型调用
     language: zh-CN
-    source_fingerprint: sha256:b35a51d52795f0add8df9e6f2cc15e03c87e61cfda79947f56207f3262165e3e
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:83185a89dddfff67b5da9a5009cb4908539b8701607cdad8da99debb4198c035
+    review_status: draft
   - path: tags.2
     translation: 稳定
     language: zh-CN
-    source_fingerprint: sha256:8241acac47d4d9b7b74c927ae8bba51beaa052b8355d3a73ed9c2f61fd46b88c
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:e4387251693eb47f7ba3dfc25308688c29dc956712304e8b9809e4f2fbcb773c
+    review_status: draft
   - path: inputs.0
     translation: 问题症状
     language: zh-CN
-    source_fingerprint: sha256:327cf6ea8d09d0fe4a49c8367377186d6c9868cc26ba82b11500eabf54dfe466
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:3b973051f573b437561a6d70cfda6f7fe358ba34053921c73df69d8c9ecd8a64
+    review_status: draft
   - path: inputs.1
     translation: 可运行系统
     language: zh-Hans
-    source_fingerprint: sha256:f117d85fcc87e5391e8e0d64e779d7efe88304cd2a979f6c0d80b7aa516bab54
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:fe1121eb83766104f70e5fd0f4e648992a1398c1c2a6894a23287a2aee0c7503
+    review_status: draft
   - path: outputs.0
     translation: 可重复反馈或固定高复现率的 repro
     language: zh-Hans
-    source_fingerprint: sha256:0edbb676f4504b9b8ccf4125d7d4feff448aba210217d583311b4349d7a9cad7
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:64672afe5c46924f92efe6202ce744e8cfe4f5e89df2bf54c383db2095998cbc
+    review_status: draft
   - path: outputs.1
     translation: 根因证据与修复
     language: zh-Hans
-    source_fingerprint: sha256:6c2117c35204777f21695696f1135872966e1eca5b58c538c33772fd1f071350
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:558ffc82f31b6b12989c04c2767fe0c9270f5544764ae242f75d862d90e47b5c
+    review_status: draft
   - path: outputs.2
     translation: 正确 seam 上的回归测试，或明确记录缺失 seam
     language: zh-Hans
-    source_fingerprint: sha256:b2f733a53ba63072e0398c67db3800010c83985da2fe7fcf5e12822dc5968e0e
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:b8ecdbfb19f96fd3f8f629e438ea388a0970e0e6e732cdcc1b16e6f31ed6b0e1
+    review_status: draft
   - path: official_description
     translation: Diagnosis loop for hard bugs and performance regressions. Use when the user says "diagnose"/"debug this", or reports something broken/throwing/failing/slow.
     language: en
-    source_fingerprint: sha256:cc21fa4ddab35602cc4c7864bc8bbf5502ec9540c7a7d5b5e49c074266e04fe6
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:8fdba0306aaa32364ee7a1b6d27b1340ba8224dbd4fa99cc563f24090f74a960
+    review_status: draft
   - path: mechanism
-    translation: 先实际运行一个能捕获此 bug 精确症状的快速反馈命令并看到失败；flake 先提高并固定复现率。再逐项缩小 repro、列出可证伪假设并 instrument。只有存在能表达真实调用模式的正确 seam 时，才先写失败回归测试、修复并看其通过；否则记录缺少 seam 这一发现。最后重跑原始场景、清理 debug instrumentation 并记录根因。没有反馈入口时先说明尝试与访问缺口，不靠猜测继续。
-    language: zh-Hans
-    source_fingerprint: sha256:f6256cb519dc949d7d44227fca0c42a25ee24fa2aafd984b16572771639b7dc4
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    translation: 先实际运行一个能捕获此 bug 精确症状的快速反馈命令并看到失败；flake 先提高并固定复现率。再逐项缩小 repro、列出可证伪假设并 instrument。只有存在能表达真实调用模式的正确 seam 时，才先写失败回归测试、修复并看其通过；否则记录缺少 seam 这一发现。最后重跑原始场景、清理 debug instrumentation 并记录根因。没有反馈入口时先说明尝试与访问缺口，不靠猜测继续。 若通过修改代码或夹具制造回归失败，先与未改动副本比较，确认修改生效。
+    language: zh-CN
+    source_fingerprint: sha256:ac0e801e13bec854f91bd5530f1a854edf63e5ca927e7c5988880df20d8e5ccb
+    review_status: draft
   - path: when_to_use.0
     translation: bug 不适合凭代码阅读直接判断。
     language: zh-Hans
-    source_fingerprint: sha256:d3bf0190c7d7f312d920900b6af8aafc93fa2c50884146cc4458b595dd8efa42
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:cc80e4b94245290da69ae5db7e71814128a890df6fe277316041eb4d781c2387
+    review_status: draft
   - path: when_to_use.1
     translation: 问题是间歇性、回归性或性能相关。
     language: zh-Hans
-    source_fingerprint: sha256:34b2aaecfab491df4e59b00fef4516c23365a0791655f69acf9827d3308f9fe5
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c83f7e34d95ca42af6484d539625b4af2af1bcaaf7b7a91d2e3a9ad4f14efc4a
+    review_status: draft
   - path: solves.0
     translation: 把根因判断建立在能观察真实症状的反馈上。
     language: zh-Hans
-    source_fingerprint: sha256:d51dfd8bca820b43ecf861a692a1ca0f22fb342859b91c6578c17bf2596d8222
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:3ae7eeb55e4b72111f7fb07dbb5c7f187d07ebab3e7f84c318d129a980b8e3d3
+    review_status: draft
   - path: solves.1
     translation: 在存在正确 seam 时锁定修复，否则揭示架构可测试性缺口。
     language: zh-Hans
-    source_fingerprint: sha256:a66de623d82ecfa98c7e805fe6fee9de7b9cab9743a58ed0f1e67a5f32f22433
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c51e36498597b5aa75724226b4bd9c0d95817ba498ed379927f7d4c885eb7236
+    review_status: draft

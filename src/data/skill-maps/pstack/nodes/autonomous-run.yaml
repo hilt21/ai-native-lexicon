@@ -16,10 +16,10 @@ outputs:
   - decision trail
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/autonomous-run.md
 status: active
-mechanism: Freeze a checkable predicate, wake through /loop, make the smallest justified change, verify, commit progress or discard ineffective work, log decisions and change methods at a plateau.
+mechanism: Freeze a checkable predicate, wake through /loop, make the smallest justified change, verify, commit progress or discard ineffective work, log decisions and change methods at a plateau. Use an event watcher with a long heartbeat fallback when a relevant event exists; use timed wakes otherwise.
 when_to_use:
   - overnight single task
   - One objective has an explicit Done condition.

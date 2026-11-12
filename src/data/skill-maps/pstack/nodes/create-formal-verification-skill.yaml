@@ -1,0 +1,19 @@
+title: create-formal-verification-skill
+summary: Create a project-local skill for one high-cost property that tests seldom reach.
+type: capability
+layer: skill
+primary_cluster: verification-evidence
+inputs:
+  - Critical invariant or concurrency behavior
+outputs:
+  - Project-local verification skill and reproducible evidence
+when_to_use:
+  - Critical invariant or concurrency behavior
+solves:
+  - Create a project-local skill for one high-cost property that tests seldom reach.
+source_refs:
+  - source: pstack-0-15-36-c742dd61
+    path: skills/create-formal-verification-skill/SKILL.md
+official_description: Generate a project-local skill that formally verifies the code where a bug costs the most and tests reach the least, in any language, with whichever verification tool fits. Use for /create-formal-verification-skill, "model-check this race", "prove this invariant", or when concurrency, retries, state machines, parsers, or unsafe code need more than tests.
+status: active
+mechanism: Choose the tool from the property, tie the model to real code and demonstrate a failing broken variant. State the checked scope and leave reproducible verification instructions.

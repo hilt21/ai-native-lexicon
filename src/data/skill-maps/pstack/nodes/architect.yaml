@@ -19,11 +19,11 @@ outputs:
   - implementation constraints
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/architect/SKILL.md
 official_description: Sketch types, signatures, and module structure before code, then stay in the loop while implementation fills in. Use for /architect, 'architect this', 'design this', or non-trivial work where jumping to code would lock in the wrong shape.
 status: active
-mechanism: Ground the current system with how and why, explore alternative shapes with arena, choose an explainable target architecture and preserve its constraints during implementation.
+mechanism: Ground the current system with how and why, explore alternative shapes with arena, choose an explainable target architecture and preserve its constraints during implementation. Sketch module interfaces and types before implementation, then use arena to compare grounded candidates and synthesize one design package.
 when_to_use:
   - Changes span functions or modules.
   - Build a new feature.

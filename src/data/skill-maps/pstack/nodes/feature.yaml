@@ -15,10 +15,10 @@ outputs:
   - PR
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/feature.md
 status: active
-mechanism: Ground with how, use architect, check throughput, separate workstreams and delegate or use arena. Verify live, interrogate contested changes and prepare the PR.
+mechanism: Ground with how, use architect, check throughput, separate workstreams and delegate or use arena. Verify live, interrogate contested changes and prepare the PR. Choose the organizing data shape before delegating logic. Keep coupled work with one owner and fan out only across separable artifacts.
 when_to_use:
   - Add a user behavior or capability.
 solves:

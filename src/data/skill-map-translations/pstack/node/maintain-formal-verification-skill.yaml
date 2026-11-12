@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: maintain-formal-verification-skill
+provenance:
+  original_sha256: e137387d7cb867f1866f3b469c300523ff6386d63b7186a5500bd498010c16a2
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: maintain-formal-verification-skill
+    language: en
+    source_fingerprint: sha256:820b042f1976e755cef3b418edfdb832ab84655dfd8bd83e5c0758237dc3c92d
+    review_status: draft
+  - path: summary
+    translation: 让项目内形式化检查跟上代码变化。
+    language: zh-CN
+    source_fingerprint: sha256:749c8940a98baf9c4ad6794005744239bb3f0b2fe0a5ae2d95f0ec74b1a71e6e
+    review_status: draft
+  - path: inputs.0
+    translation: 已有形式化检查的代码发生变化
+    language: zh-CN
+    source_fingerprint: sha256:e51de2a0400360bbc23385a851ecdfff2fa680a48d4a7929f49bbc444d7e72e3
+    review_status: draft
+  - path: outputs.0
+    translation: 更新后的验证资产及漂移或缺陷结论
+    language: zh-CN
+    source_fingerprint: sha256:75e9e46ece28f965799f5505dbc8efaf021e0f41f72a587b7ea2ccaea15b3aec
+    review_status: draft
+  - path: official_description
+    translation: "Bring a project's formal verification back in line with the code after the code changes: find the commits that touched verified code, update the model, harness, or properties to describe the code as it is now, rerun, and say whether each failure is drift in the verification or a bug in the code. Use for /maintain-formal-verification-skill, \"is the model still true to the code\", or after merges and refactors that touched verified code without rechecking it."
+    language: en
+    source_fingerprint: sha256:ced565e5015a8e679a6a1a0cb1bbe7686c1eef029070b627fc01ae8252026d35
+    review_status: draft
+  - path: mechanism
+    translation: 查找影响受验证代码的提交，更新模型或验证环境，再运行检查，区分模型漂移与产品缺陷。维护范围仅限验证资产。
+    language: zh-CN
+    source_fingerprint: sha256:49fd856818399b793a65b3f3515cfffdf2bea04eb13265031a2595a7b3dc2ee5
+    review_status: draft
+  - path: when_to_use.0
+    translation: 已有形式化检查的代码发生变化
+    language: zh-CN
+    source_fingerprint: sha256:edac75ea5094ce768a888ac5eca186480f2a32274e567b40e41c3270a737fdd8
+    review_status: draft
+  - path: solves.0
+    translation: 让项目内形式化检查跟上代码变化。
+    language: zh-CN
+    source_fingerprint: sha256:4b1537265a73caf3a184c40c4f482a762340ebb7bc6210e0b2b727804db26359
+    review_status: draft

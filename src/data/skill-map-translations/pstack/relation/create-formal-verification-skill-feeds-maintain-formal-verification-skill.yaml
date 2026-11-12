@@ -1,0 +1,14 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["create-formal-verification-skill","feeds","maintain-formal-verification-skill"]'
+provenance:
+  original_sha256: 1fb2ab163c069a26f6982e3123ddde56dee5e65f819e00f31717397af1efb5aa
+  retained_at: 2026-11-12
+units:
+  - path: note
+    translation: 受验证代码变化时，维护技能检查已有形式化验证资产。
+    language: zh-CN
+    source_fingerprint: sha256:4e1733d7f4fe2c5ac334c1d402daeb391f81659e9c63931263d7373103568360
+    review_status: draft

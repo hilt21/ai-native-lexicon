@@ -1,0 +1,19 @@
+title: sharpen
+summary: Rewrite a prompt for deeper work without broadening its scope.
+type: capability
+layer: skill
+primary_cluster: design-decision
+inputs:
+  - Original task prompt
+outputs:
+  - Rewritten prompt with an independent check
+when_to_use:
+  - Original task prompt
+solves:
+  - Rewrite a prompt for deeper work without broadening its scope.
+source_refs:
+  - source: pstack-0-15-36-c742dd61
+    path: skills/sharpen/SKILL.md
+official_description: Make a task deeper, not bigger, then rewrite the prompt. Use for /sharpen.
+status: active
+mechanism: Identify expert practice, primary material, concrete methods and an independent success check. Rewrite the prompt and keep the user’s decisions open.

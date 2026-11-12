@@ -10,102 +10,85 @@ units:
   - path: title
     translation: code-review
     language: en
-    source_fingerprint: sha256:2a62231fdc1400c5c9e83c9a9e54a373d351795b5fae0c65a04a00a367bed1cf
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:935e90fde0c8767f0b50b14c2b1bfb699c92f1de25156cfb40f76d0eb505fa50
+    review_status: draft
   - path: summary
     translation: 沿 Standards 与 Spec 两条独立轴审查固定范围的 diff。
     language: zh-Hans
-    source_fingerprint: sha256:d479248e86b51072d674194803bcd888f854ba982fed399670c2af0d333c3b66
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:5a14a6dc202cdbc67932c8052eb52493e5e383f0b1fef6c887a11034471c5344
+    review_status: draft
   - path: tags.0
     translation: 工程
     language: zh-CN
-    source_fingerprint: sha256:656f3d2b8d75d6b49b5a45dda4ba5a55b3d81117b419f537ec05b11f35f029fe
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:213e948ba4959ea018554badf022c0caa40631570a0205cd2073f6903b122bd0
+    review_status: draft
   - path: tags.1
     translation: 模型调用
     language: zh-CN
-    source_fingerprint: sha256:1f81244c839c4acd3a51b5e15da96d95863c2f80d89a9da378c94f713d144e08
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:4b48859340d4d551964be09257e5648be4b46b9badb5ce52b40986f21076ebe9
+    review_status: draft
   - path: tags.2
     translation: 稳定
     language: zh-CN
-    source_fingerprint: sha256:aee38f895a0024b3404b133e9d98f7856bc23a9570592cde7f1f2b1b4f523124
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:f629d6c0a5f047d7ce42852b30d3c75be5c33e5cca1b014f560328f34fa84989
+    review_status: draft
   - path: inputs.0
     translation: 固定基准点
     language: zh-CN
-    source_fingerprint: sha256:53c08973246b7c52d6107e910d2302dd81fd2727742f4f02dfdfe3fac53d8012
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:999162e52c4631b2007a6c7f0433777e0328fd77f62ac1dbfcb8d89d3c9580ce
+    review_status: draft
   - path: inputs.1
     translation: 差异
     language: zh-CN
-    source_fingerprint: sha256:70edee9782564d3f0f7018dc8e0e1afb5b58b737df4fa2af43a664af8b85bdf2
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:3ff5122ce6294d3d422b58d15f8df16066f848080f99c21937a7a55ff02c3e5e
+    review_status: draft
   - path: inputs.2
     translation: 仓库规范
     language: zh-CN
-    source_fingerprint: sha256:7eb36461290f6efdb2d80579bfeb68ec7fcef4489aafd4591a86c2d7800605d8
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:864c02f57470bcca32366a0b4c13026aec1df0cad52742db1b481f751e2eea71
+    review_status: draft
   - path: inputs.3
     translation: 原始规格或议题
     language: zh-CN
-    source_fingerprint: sha256:2e324b25984b67304ae7d6d2bf13a5802459300e56d9360c60fa63038b5524f1
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:40132374f6a9f1bb987f15e9fbfba477bfcababe40479a5bfe9453762d71044e
+    review_status: draft
   - path: outputs.0
     translation: Standards 轴发现与结果
     language: zh-Hans
-    source_fingerprint: sha256:2ec30558f7ce7c1da0dc9760a662306a92324796720696fccd95d9dc22618e4a
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:928fde84a2debaaf878f8748ab010289518ee1b805c26ca253e0b8e548a96d51
+    review_status: draft
   - path: outputs.1
     translation: Spec 轴发现与结果
     language: zh-Hans
-    source_fingerprint: sha256:7f18a22886a1af244908ce511b63fec64bef31237ce40777e69ae189939bfad3
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:6332a599cf9381c9aec4041e338850199d59a3fdeaddc5d87837de7115c5845f
+    review_status: draft
   - path: official_description
     translation: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
     language: en
-    source_fingerprint: sha256:7e3b0cbd41ce32b134eb90adea2ef772e94bb685a447bfdf314f2c0f26d31a1f
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d4f96cdab04b813ea6436cebd87807f0b1f6a5cf397a83c6af652c1b33725889
+    review_status: draft
   - path: mechanism
-    translation: 从指定 fixed point 计算 diff，由两个独立 reviewer 分别检查仓库标准（Standards）与规格符合度（Spec），并列报告各轴的发现与结果；不把不同轴压成一个混合 verdict。重构与标准约束在审查阶段处理。
-    language: zh-Hans
-    source_fingerprint: sha256:90d5325cbe95f38b1631d66b5c8a210adf98f977e61ddec8d0c486f7db67f905
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    translation: 从指定 fixed point 计算 diff，由两个独立 reviewer 分别检查仓库标准（Standards）与规格符合度（Spec），并列报告各轴的发现与结果；不把不同轴压成一个混合 verdict。重构与标准约束在审查阶段处理。 两个审查维度各用独立的新上下文并行检查，再合并结果。查阅提交引用的工单，并纳入仓库代码规范。
+    language: zh-CN
+    source_fingerprint: sha256:56f6327d749270e65e7145648e473587ac1ac3e11c6d4bb49ed37d8c88663a11
+    review_status: draft
   - path: when_to_use.0
     translation: branch、PR 或 WIP 需要正式 review。
     language: zh-Hans
-    source_fingerprint: sha256:365a5e4882e46b147fd9836419a76f20ede3a6bdac340f16017c0a4e2901d472
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:2284e0666cdbd1060a1be5d2cc3daa30e9fb1a18bf6feecc300c9e701d7fc70b
+    review_status: draft
   - path: when_to_use.1
     translation: 实现完成，需要确认既符合仓库标准又忠实实现 spec。
     language: zh-Hans
-    source_fingerprint: sha256:840aef476c3f7fe848078fc0112a7d4f8506f180265562320b3cc9ea8ac13395
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:0cf2ab7046cea2b70df774074e3eef03ae53e13ff0e42aeddcf7c9cc93839fe3
+    review_status: draft
   - path: solves.0
     translation: 避免只检查代码风格而遗漏需求偏差。
     language: zh-Hans
-    source_fingerprint: sha256:0f3ab8c255364487fc27ead84e0fb547d16e3ec94209943eb3d35e05d3d58c97
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:1b02b017e704fd4b19f439362508febbeb1d0cc9f139833fb43425695c5c01c8
+    review_status: draft
   - path: solves.1
     translation: 减少单 reviewer 的上下文偏见。
     language: zh-Hans
-    source_fingerprint: sha256:c783d45c60081790bc6509849c854477caf95376731b8c0a8aa39ce353a1b31d
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:85a5e4dc56f9371c8455bbdc7770b629b5484aaf9fe7ab94073d98f8f62eccfc
+    review_status: draft

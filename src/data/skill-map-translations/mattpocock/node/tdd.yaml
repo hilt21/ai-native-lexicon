@@ -10,102 +10,85 @@ units:
   - path: title
     translation: tdd
     language: en
-    source_fingerprint: sha256:2b29bf67ef0345f06b70fa23b86f7779609051760f0679f2fbcab6c2cb1162fd
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:43d1ea3d24ceee0364e29af55ee2aab06986dfbe0e8fc488039d34777f93b5c7
+    review_status: draft
   - path: summary
     translation: 在已确认的公共 seam 上以 red→green 小片实现行为，重构在审查阶段处理。
     language: zh-Hans
-    source_fingerprint: sha256:904990aaf4a9fb708da59b03094cfe40cfa88fe13430be5032003f781a04e940
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:596e2147ab9cb148d8aeb6acd29e70e33ffded093a5a28f432b3986cd2603c11
+    review_status: draft
   - path: tags.0
     translation: 工程
     language: zh-CN
-    source_fingerprint: sha256:a195478ba4fcf25e043d841f5f540bfa3e85a0fdf2bf2cdbe2f51c124e21ab4c
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:fa9d2ab3ddc960d19a834ec5b9e6d1f49ea0c4233042ca0ae0f35438dacbdb0e
+    review_status: draft
   - path: tags.1
     translation: 模型调用
     language: zh-CN
-    source_fingerprint: sha256:5cbc35ab72c09f119ca67c990ebc82e8bce131c085f8f9e55215380beead4656
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:b911f63ddb152ab166d1773426d2041ed36529f1217e24abca664d6f0eeb97e9
+    review_status: draft
   - path: tags.2
     translation: 稳定
     language: zh-CN
-    source_fingerprint: sha256:7fb385ec46e9be333b8d270c9320621793b092fb34391f01b25b3bd83e29a2cf
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d61d2b7a823bfd07e7ebfbe4d20e234237f1df8b579c4f95ce6cf3df433fd4c5
+    review_status: draft
   - path: inputs.0
     translation: 目标行为与独立预期
     language: zh-Hans
-    source_fingerprint: sha256:21d0b7cce0b477d20ddae81ecb993d73e340d3da69f460ae6e9be9a6143a1777
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d7e76081929e0d43db377842d1c8a770339cd0bee18973529a84a969da42d2ac
+    review_status: draft
   - path: inputs.1
     translation: 用户已确认的公共测试 seam
     language: zh-Hans
-    source_fingerprint: sha256:94ab15cf0f285a8ab0e427659618784d2aac1238774e2c78e23c5e96dbe11c1e
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d056724b3c029042f2dec724eebd92e56a4a58733b3d0bbc53528bf370d90bf8
+    review_status: draft
   - path: inputs.2
     translation: 可运行测试环境
     language: zh-Hans
-    source_fingerprint: sha256:c7f698b467bc61adc2821f6fc47a9cf325a3debcd8034c59e44e250653b263e5
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:d1b46056b4b6bedd802de6a25e61c1d3ee86da626c046bc0eaeed719110c176c
+    review_status: draft
   - path: outputs.0
     translation: 失败的测试
     language: zh-CN
-    source_fingerprint: sha256:09bf573c1e1d10dc31b6ebeb71b251ac5ea11973f694134dd768313f471edbe2
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ae233e54f1c0e088bae17aadcf4c0f5f911688780390cea39c5725309d325bb2
+    review_status: draft
   - path: outputs.1
     translation: 通过测试的实现
     language: zh-CN
-    source_fingerprint: sha256:3142040bd36b0cc444637154bf9c0af56d1be83f14fceecb00fc091aaf8e5911
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:09c1ef10be742a0ac31faa1f880b5fc4967ac7203ccfbc5c6e1b32ce2884c10b
+    review_status: draft
   - path: outputs.2
     translation: 回归防护
     language: zh-CN
-    source_fingerprint: sha256:3ae3d54f915b0812ee7cf3652cd9d17439fc7e128a1ce957dcf7a068b98645b7
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:6793438ce227f5213fb42a8b3db632339eb927c96e823d36df0e2b640f060343
+    review_status: draft
   - path: official_description
     translation: Test-driven development. Use when the user wants to build features or fix bugs test-first, mentions "red-green-refactor", or wants integration tests.
     language: en
-    source_fingerprint: sha256:f1e378880832b8c89da2b56c5ea8f56596c227662d801df8a7ee13ec617548bc
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ca6d1b70dacb1c1d111e5cb5de2ce6bc5d71725410d02308a3fc36284b72ce12
+    review_status: draft
   - path: mechanism
-    translation: 只在用户事先确认的公共 seam 上，以一个 vertical slice 为单位先写失败测试，再做最小实现使测试通过（red→green），预期来自需求或独立事实。重构不属于实现循环，而在 code-review 审查阶段处理。单独使用时也需先约定 seam。
-    language: zh-Hans
-    source_fingerprint: sha256:3f7aadfab59cc95c8dbf7c5eeb27e401eb07368514e6899ea129588785a9a665
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    translation: 只在用户事先确认的公共 seam 上，以一个 vertical slice 为单位先写失败测试，再做最小实现使测试通过（red→green），预期来自需求或独立事实。重构不属于实现循环，而在 code-review 审查阶段处理。单独使用时也需先约定 seam。 逐一说明每个候选测试接口能发现什么、会漏掉什么。
+    language: zh-CN
+    source_fingerprint: sha256:a252ed92abf5241a133a97a697fa4748b0f7049008fc71ce86a3454762518331
+    review_status: draft
   - path: when_to_use.0
     translation: 开发可以通过自动测试表达的行为。
     language: zh-Hans
-    source_fingerprint: sha256:1c6ae54047f820f3003e0edc9d64e6f515a785b4900868bf5498d2a42e468ec0
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:b11650b9c76cedd758bbf0f92ae06dfc5f9f8e4e5aab91baa9bacd13798d6897
+    review_status: draft
   - path: when_to_use.1
     translation: 修复可以形成 regression test 的缺陷。
     language: zh-Hans
-    source_fingerprint: sha256:d119f3495faa4317f8c9039e00159d050a1c2d9bbac487e17269fd9d1740b5ed
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ffe03e4381be896fa92733cf7b80a17eec2cb9e8fe4a0b503ce481c955ada868
+    review_status: draft
   - path: solves.0
     translation: Agent 修改代码后缺少快速反馈。
     language: zh-Hans
-    source_fingerprint: sha256:4ea2af9c33ffce31efee7b53ee01d579f556464aadd6d634604514a69d1a8a01
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:06c6dd8ee91f3e011235105937634ecaf4df990306048cbf802ea6d27c254a2a
+    review_status: draft
   - path: solves.1
     translation: 大批修改后才发现实现方向错误。
     language: zh-Hans
-    source_fingerprint: sha256:1437cab861ccbd7dd9f34bc1437aa50b57c73d056399d7393db5f60a7ba739f2
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:a8e118f051b72f5a7c2697c1e11e5c15dae89cadffa071d94678ee36f5994e51
+    review_status: draft

@@ -1,0 +1,14 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: relation
+target_id: '["autopilot-full","uses","ketchup"]'
+provenance:
+  original_sha256: 8e2fb979ca7c744135898b650e1e858f2518cde62dfcb3879c4987dee93a0a9c
+  retained_at: 2026-11-12
+units:
+  - path: note
+    translation: 使用 ketchup 向操作者报告。
+    language: zh-CN
+    source_fingerprint: sha256:1d15b14d19760f22438a09ae9afb5004a27ceb8595d193dbfab04ecaa58099a5
+    review_status: draft

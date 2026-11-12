@@ -1,0 +1,49 @@
+schema_version: 1.0.0
+locale: zh-CN
+map_id: pstack
+kind: node
+target_id: ketchup-video
+provenance:
+  original_sha256: 91594f73a2c4390fc1228c1f8a6462a6eb7a387452bef60c125479a63f3a3dc4
+  retained_at: 2026-11-12
+units:
+  - path: title
+    translation: ketchup-video
+    language: en
+    source_fingerprint: sha256:5ca1a42482691d6d86c6aeb5745c61fa63992ea37d876ccbf0986052d2ad1b84
+    review_status: draft
+  - path: summary
+    translation: 用短字幕视频向用户同步进展。
+    language: zh-CN
+    source_fingerprint: sha256:6568d390c8526f9a39d13de48662147d673c889f4c813f90576f63e2fa77bdec
+    review_status: draft
+  - path: inputs.0
+    translation: 已有进展证据与视觉产物
+    language: zh-CN
+    source_fingerprint: sha256:da263a9cba4f3a1eb46ea3c56938703e08e50645414d124b5c881fcafeb702d3
+    review_status: draft
+  - path: outputs.0
+    translation: 短字幕视频与文字决策清单
+    language: zh-CN
+    source_fingerprint: sha256:b37f26a07e14af73e3c4d09412e3500995734e4be13b9193eae82e41c01c49c8
+    review_status: draft
+  - path: official_description
+    translation: Catch the user up like /ketchup, with a short subtitled video of slides for what happened and the waiting calls as text under it. Use for /ketchup-video.
+    language: en
+    source_fingerprint: sha256:964d716f2b2d8e046f882de2cdf26e36c2cec4af04c81ef3013c80bf7d5be10b
+    review_status: draft
+  - path: mechanism
+    translation: 使用已有产物制作幻灯片，在仓库外渲染视频。待用户决定的事项保留为文字；渲染失败时说明原因并只给出待决事项。
+    language: zh-CN
+    source_fingerprint: sha256:5f27a09dfb863895b2e607f4b729be1e62e3911c34f1e1f221d45a27fcea94cf
+    review_status: draft
+  - path: when_to_use.0
+    translation: 已有进展证据与视觉产物
+    language: zh-CN
+    source_fingerprint: sha256:a8891cc30efd64bc4afaf44e0cbb3a67f617967102968546c515f15b774a3fb1
+    review_status: draft
+  - path: solves.0
+    translation: 用短字幕视频向用户同步进展。
+    language: zh-CN
+    source_fingerprint: sha256:d1a70ad7369e1d870409d9804c056a3dbc863a4a245045d378a24ce9882392e4
+    review_status: draft

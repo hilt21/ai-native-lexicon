@@ -10,132 +10,110 @@ units:
   - path: title
     translation: create-verification-skill
     language: en
-    source_fingerprint: sha256:51d56b007e9566ffd2eeeebf341ab083119ae452f50f5f52878716bab1c10fde
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:75f54f52351aa53d2e9823efef9a9a2722597b37c1f4417241601210996ae938
+    review_status: draft
   - path: summary
     translation: 为项目建立可复用的真实产品验证接口。
     language: zh-Hans
-    source_fingerprint: sha256:c147d435a65c1b131f5bbb158596355fa80986ce9c528843fa4a6502e8ceb2d0
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:89672cc088b692a91268952c14fec4c3f4159758cbacb3751d83b70a883797f6
+    review_status: draft
   - path: tags.0
     translation: 验证
     language: zh-CN
-    source_fingerprint: sha256:381de0b0be2ccb038479989cd28d7c1b9f7aaacee513cd71f23d6ecc29388982
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c5a0b71c4a459459c52fdd3a71c62cf05d20bac5a93d26fc95601bbd00106a3e
+    review_status: draft
   - path: tags.1
     translation: 功能地图
     language: zh-CN
-    source_fingerprint: sha256:189d959aa2e6e25a0bc0a4d432a35b127895f56747214019b142a0bfcd15a1df
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:dd88d00c5de08de9b1fee90a46716ba3256a7c6ef8f068011985b37f74b9b52a
+    review_status: draft
   - path: tags.2
     translation: 证据
     language: zh-CN
-    source_fingerprint: sha256:13a324280c70c4e2d3706f36bad15951dbdbdf83f1de87f49613d820f7023c2d
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:91c236aa80aa6fc5008b993891c8753706a6a5a775f16276dad953e5e7b32fdb
+    review_status: draft
   - path: tags.3
     translation: 核心
     language: zh-CN
-    source_fingerprint: sha256:fdcc61cd9e061afcd4a0b44b68dbaa927da4d18837de120ced87480c46235c11
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:ffadab09129979fde12d91aec3063cb6eb77329d6c75f38ab0cd7c10e8a922bb
+    review_status: draft
   - path: inputs.0
     translation: 仓库
     language: zh-CN
-    source_fingerprint: sha256:e949b677ca5b61d59aff94107b8f485ede9bb2667119adba8eedd3530ceec7b6
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:91cce38d9230f1dc75de5f1dfc1c6de692db63ef582f17ce31535512b9e45950
+    review_status: draft
   - path: inputs.1
     translation: 应用场景
     language: zh-CN
-    source_fingerprint: sha256:9cf7ce5b5a2cc68dcc088ea4c93379b96f76ed7cce1aaa7958b5f844a4c88d12
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:b56980942e066beaeb41144dcf05be8f0e010d666321bd10e38822e2463c935c
+    review_status: draft
   - path: inputs.2
     translation: 运行命令
     language: zh-CN
-    source_fingerprint: sha256:1fadf904b1dec2938ce932c47879a5948ae1a1e95631004d72c4d0c229f61b21
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:7b7a8e20a2bb89c9462eb1653412388aab0c87e86bc5163814d97785d66b3fe9
+    review_status: draft
   - path: inputs.3
     translation: 可观察结果
     language: zh-CN
-    source_fingerprint: sha256:9f871fbdc56bfafe3a114feae464698cd28213900fc7ff92c69f6ede3042d54c
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:f747c01546cea37fc16134e27f9c989641bdba85ec3662e042517ce200cfa393
+    review_status: draft
   - path: outputs.0
     translation: 项目内的验证技能
     language: zh-CN
-    source_fingerprint: sha256:c46ae1a3519f486bc46aeaca69ee80ae8e342ae86c20faf6561e704afa8564f4
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:73fe51d2ade4a41028a90804d201e6b3b2bed982ace144cdfb538045c46345ac
+    review_status: draft
   - path: outputs.1
     translation: 功能地图
     language: zh-CN
-    source_fingerprint: sha256:bcb8b9c8d4e5146f63b485941dcc7a4320456a49a83e7865c3800547a1510cca
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c52dad4f2ec159a03fed4c4fe5c433999342ad719d24f41a6f95ea7377fff531
+    review_status: draft
   - path: outputs.2
     translation: 控制工作流
     language: zh-CN
-    source_fingerprint: sha256:be0cc7207a027bf6f90f45c52cbc8779442846fedd96a8f8a0c5fb0345b4e44b
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:12cd5a7a1d1e36fc688acd2c5ad74578c898eb542b1815ebbcbf653da4bd7ec1
+    review_status: draft
   - path: outputs.3
     translation: 首次验证证据
     language: zh-CN
-    source_fingerprint: sha256:a5be28af190bcd62c3b4c7c2a0b795e96ed5ebc0c0f7333347806f5d792c136c
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:4b5f96de1fe19fad437b555fcc67dfad6f4c2d63d228df4842b0a3cc559a6c88
+    review_status: draft
   - path: official_description
     translation: Generate a project-local verification skill that drives your app the way a user does — any language, framework, or platform. Use for /create-verification-skill, "make a control skill for this repo", or when a project has no scripted way to prove UI/CLI/service behavior.
     language: en
-    source_fingerprint: sha256:b35d46be14cc0010737f2a1f145d7f4bd076e957749d7ebfd5ca8cd4caf8eb31
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c02f162d23bc3e33359f97834b61ec96556612357ed57d57cede402e0d23a46c
+    review_status: draft
   - path: mechanism
-    translation: 调查 Surface / Run / Drive / Observe / Isolate，生成 Launch、Doctor、Drive、Evidence、Cleanup 和 Feature Map，并实际跑通一次。
+    translation: 调查 Surface / Run / Drive / Observe / Isolate，生成 Launch、Doctor、Drive、Evidence、Cleanup 和 Feature Map，并实际跑通一次。 确认应用可从空数据目录启动并达到可用状态，建立面向用户的功能地图，并检查清理后证据仍可读取。
     language: zh-Hans
-    source_fingerprint: sha256:c66f017180a1aa73eb1d319d81f54695ffea44a88c9bea3bc5d2791e8864c8e1
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:47a051cf189c68d267dc61b51b30e02df99019bb6a7cbc1914d8ac8f2c4f3d54
+    review_status: draft
   - path: when_to_use.0
     translation: 项目没有 scripted real-surface verification
     language: zh-Hans
-    source_fingerprint: sha256:93bc88e4df9bc6e04d074d6c61441969f22093e5dd4aa1b891757565916adbdc
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:6dc26f180e9753570ee400347d690296b0486ce96b9d69facf28fac30074f191
+    review_status: draft
   - path: when_to_use.1
     translation: Agent 只能靠测试或自报 done
     language: zh-Hans
-    source_fingerprint: sha256:91eaa3f96468e7a2fca3d1bbd16ff6b75773a3a299a39926b1226d0f58ed9f06
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:61f368845569d50523f7c97d278b5c719684c872f330aeddef7171cc33407bb4
+    review_status: draft
   - path: when_to_use.2
     translation: 想建立长期验证基础设施
     language: zh-Hans
-    source_fingerprint: sha256:a3c767acf38eb4e1947a52a0e0909778d1138bb961422d432407728d9c08d3fc
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:8e0571482289a61cdd9a941273170c0598c30729470c4192691b5339b4b8c9ba
+    review_status: draft
   - path: solves.0
     translation: 验证瓶颈
     language: zh-CN
-    source_fingerprint: sha256:cc83ca0af5b2793d9bb90344a454744fb7c6f5f09f8c8ccc25d09d710746e9e2
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:66a44f35263a1828eb94c0b82c313404bceff046e476462b4f75fba14ef9fcf1
+    review_status: draft
   - path: solves.1
     translation: 真实结果不可直接观察
     language: zh-Hans
-    source_fingerprint: sha256:f0ced7151309484421b0fbe151f8b21df213cc6e255532cfde52482363314403
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:c0cb5daa7edd3da1235d08d9e8f3f01975043b37c19053106f83a523be647623
+    review_status: draft
   - path: solves.2
     translation: 每次验证都要重新摸索
     language: zh-Hans
-    source_fingerprint: sha256:1008e39456f9f862ef0970f2e0b0f05699e32323a6306e48440ccd49c5e5da9b
-    review_status: reviewed
-    reviewed_at: 2026-10-13
+    source_fingerprint: sha256:06fa439850ab2cde32946f92095782f7ad40ca1ca967aca81571e4607923ed0b
+    review_status: draft

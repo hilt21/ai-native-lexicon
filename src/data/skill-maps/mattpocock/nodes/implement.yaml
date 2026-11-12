@@ -19,11 +19,11 @@ outputs:
   - Commit
 handoffs: []
 source_refs:
-  - source: mattpocock-skills-1-3-1-dd400c3a
+  - source: mattpocock-skills-1-3-2-5863806d
     path: engineering/implement/SKILL.md
 official_description: Implement a piece of work based on a spec or set of tickets.
 status: active
-mechanism: After explicit user invocation, implement the specification or ticket in small red-to-green slices using TDD at an agreed public test seam where possible. Run type checks and relevant tests during implementation, run the full tests and code-review at the end, then commit to the current branch. TDD and review are capabilities included in this implementation path.
+mechanism: After explicit user invocation, implement the specification or ticket in small red-to-green slices using TDD at an agreed public test seam where possible. Run type checks and relevant tests during implementation, run the full tests and code-review at the end, then commit to the current branch. TDD and review are capabilities included in this implementation path. When given a ticket reference, fetch it and state its title before work; ask if the reference is ambiguous.
 when_to_use:
   - A clear ticket or small specification can be completed in the current session.
   - Implementation should be constrained by tests and review.

@@ -16,11 +16,11 @@ outputs:
   - Recommended work path
 handoffs: []
 source_refs:
-  - source: mattpocock-skills-1-3-1-dd400c3a
+  - source: mattpocock-skills-1-3-2-5863806d
     path: engineering/ask-matt/SKILL.md
 official_description: Ask which skill or flow fits your situation. A router over the skills in this repo.
 status: active
-mechanism: Read the user's current objective and stage, recommend a main workflow, on-ramp or standalone skill, then stop. The user explicitly starts user-invoked entries; a recommendation does not invoke them. Complete the repository configuration with setup-matt-pocock-skills before the first engineering task.
+mechanism: Read the user's current objective and stage, recommend a main workflow, on-ramp or standalone skill, then stop. The user explicitly starts user-invoked entries; a recommendation does not invoke them. Complete the repository configuration with setup-matt-pocock-skills before the first engineering task. Read the underlying SKILL.md before describing a skill or advising that a step can be skipped.
 when_to_use:
   - You do not know which Matt Pocock skill to use.
   - You need to choose between planning, implementation, debugging or another standalone capability.

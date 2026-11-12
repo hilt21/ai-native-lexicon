@@ -14,10 +14,10 @@ outputs:
   - audit verdicts
 handoffs: []
 source_refs:
-  - source: pstack-0-15-15-df581122
+  - source: pstack-0-15-36-c742dd61
     path: skills/poteto-mode/playbooks/autopilot-full.md
 status: active
-mechanism: Use one owner per PR and a durable trail. Run self-proof, CI and babysit concurrently; the root verifies the exact head independently. After a clean verdict the owner merges. Audit or replace owners periodically.
+mechanism: Use one owner per PR and a durable trail. Run self-proof, CI and babysit concurrently; the root verifies the exact head independently. After a clean verdict the owner merges. Audit or replace owners periodically. Honor explicit operator gates. Treat green CI as head-specific, reusing a verification lane only where the shipping patch rule allows it. Use ketchup to report live PR state and pending decisions.
 when_to_use:
   - Automatically bring several independent PRs to merged state.
 solves:

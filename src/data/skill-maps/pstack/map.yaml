@@ -1,7 +1,7 @@
 schema_version: 1.1.0
 title: pstack Skill Map
 summary: Choose and combine pstack skills, playbooks and engineering principles around a work objective.
-scope: The skill system at the fixed pstack 0.15.15 snapshot. Uses and task journeys are editorial interpretations.
+scope: "Fixed pstack 0.15.36 snapshot (c742dd61): 58 skills and 23 embedded playbooks. The map includes engineering principles, formal verification, progress handoffs and agentic program coordination. Relationships and journeys are editorial unless a pinned source is given."
 audience:
   - Developers using pstack for the first time
   - Agent users choosing an engineering workflow
@@ -14,8 +14,16 @@ sources:
     verification_status: verified
     commit: df581122cde17e6e27686b5a448bde23e4ad4318
     verified_at: 2026-10-07
+  - id: pstack-0-15-36-c742dd61
+    repository: https://github.com/cursor/plugins
+    root_path: pstack
+    version: 0.15.36
+    observed_at: 2026-11-12
+    verification_status: verified
+    commit: c742dd61706fbacc1b95f1a20b7b988cf096ce6c
+    verified_at: 2026-11-12
 current_sources:
-  - pstack-0-15-15-df581122
+  - pstack-0-15-36-c742dd61
 taxonomy:
   types:
     - id: router
