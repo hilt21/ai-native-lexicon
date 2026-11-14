@@ -13,6 +13,7 @@ export function translationsLoader(directory = new URL('../data/', import.meta.u
       stopWatching?.();
       const current = ++generation;
       const sync = async () => {
+        if (current !== generation) return;
         const catalog = await readCatalog(directory);
         const {errors} = validateCatalog(catalog);
         if (errors.length) throw new Error(errors.join('\n'));
@@ -25,13 +26,13 @@ export function translationsLoader(directory = new URL('../data/', import.meta.u
         for (const record of parsed) context.store.set(record);
       };
       await sync();
-      if (context.watcher) {
+      if (context.watcher && current === generation) {
         let pending = Promise.resolve();
         const reload = (path) => {
           const changed = path.replaceAll('\\', '/');
           if (changed === root || changed.startsWith(`${root}/`)) {
             pending = pending.then(sync,sync);
-            void pending.catch((error) => context.logger.error(error.message));
+            void pending.catch((error) => { if (current === generation) context.logger.error(error.message); });
           }
         };
         const events = ['add','change','unlink','addDir','unlinkDir'];
