@@ -46,8 +46,9 @@ jobs:
         run: npm run verify:i18n
       - name: Verify production browser behavior
         run: npm run test:browser -- --reuse-build
-      - name: Upload browser evidence
-        if: always()
+      # Keep full test coverage; persist potentially large browser evidence only on failure.
+      - name: Upload browser evidence on failure
+        if: failure()
         uses: actions/upload-artifact@v4
         with:
           name: web-browser-evidence
@@ -56,6 +57,7 @@ jobs:
             work/web-browser
             output/playwright/l2-10
           if-no-files-found: warn
+          retention-days: 3
       - name: Upload Pages artifact
         if: github.event_name != 'pull_request'
         uses: actions/upload-pages-artifact@v3
