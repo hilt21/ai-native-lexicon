@@ -7,7 +7,7 @@ const locale = routeLocale(Astro.url);
 const ui = uiFor(locale);
 ---
 
-<copy-definition data-success={ui("Definition copied.")} data-failure={ui("Could not copy the definition. Select the text and copy it manually.")}>
+<copy-definition data-pending={ui("Copying definition…")} data-success={ui("Definition copied.")} data-failure={ui("Could not copy the definition. Select the text and copy it manually.")}>
   <slot />
   <div class="definition-actions">
     <button type="button" aria-label={`${ui("Copy definition")}: ${name}`} aria-describedby={statusId}>{ui("Copy definition")}</button>
@@ -17,20 +17,36 @@ const ui = uiFor(locale);
 
 <script>
   class CopyDefinition extends HTMLElement {
+    #connection?: AbortController;
+    #pending = false;
+
     connectedCallback() {
+      if (this.#connection) return;
       const button = this.querySelector('button');
       const body = this.querySelector<HTMLElement>('[data-definition-body]');
       const status = this.querySelector<HTMLElement>('[data-copy-status]');
       if (!button || !body || !status) throw new Error('Copy definition requires a button, displayed body and status');
+      this.#connection = new AbortController();
       button.addEventListener('click', async () => {
-        status.textContent = '';
+        if (this.#pending) return;
+        this.#pending = true;
+        button.setAttribute('aria-disabled', 'true');
+        status.textContent = this.dataset.pending!;
         try {
           await navigator.clipboard.writeText(body.innerText.trim());
           status.textContent = this.dataset.success!;
         } catch {
           status.textContent = this.dataset.failure!;
+        } finally {
+          this.#pending = false;
+          button.removeAttribute('aria-disabled');
         }
-      });
+      }, { signal: this.#connection.signal });
+    }
+
+    disconnectedCallback() {
+      this.#connection?.abort();
+      this.#connection = undefined;
     }
   }
   customElements.define('copy-definition', CopyDefinition);

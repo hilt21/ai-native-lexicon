@@ -104,6 +104,7 @@ const chinese: Record<string, string> = {
   "PRIMITIVES / 原语": "原语",
   "FOLLOW THE THREAD": "继续探索",
   "Copy definition": "复制定义",
+  "Copying definition…": "正在复制定义…",
   "Definition copied.": "定义已复制。",
   "Could not copy the definition. Select the text and copy it manually.": "无法复制定义。请选中文字并手动复制。",
   "CONTINUE READING": "继续阅读",

@@ -224,6 +224,42 @@ try {
     assert.equal(await button.isEnabled(), true);
     assert.equal(await page.locator('[data-copy-status]').getAttribute('role'), 'status');
   });
+  await check('clipboard keeps one pending write and supports retry after reconnect', async () => {
+    await page.goto(`${origin}/concepts/harness/`);
+    const copy = page.locator('copy-definition').first();
+    const button = copy.getByRole('button');
+    await button.focus();
+    await copy.evaluate((element) => {
+      let calls = 0;
+      const first = Promise.withResolvers();
+      const control = element.querySelector('button');
+      Object.defineProperty(navigator.clipboard, 'writeText', { configurable: true, value: async () => {
+        element.setAttribute('data-test-writes', String(++calls));
+        if (calls === 1) return first.promise;
+      } });
+      element.addEventListener('test-reject-copy', () => first.reject(new DOMException('Permission denied', 'NotAllowedError')), { once: true });
+      control.click();
+      control.click();
+    });
+    assert.equal(await copy.getAttribute('data-test-writes'), '1');
+    assert.equal(await button.getAttribute('aria-disabled'), 'true');
+    assert.equal(await button.evaluate((element) => element === document.activeElement), true);
+    await copy.locator('[data-copy-status]').getByText('Copying definition…', { exact: true }).waitFor();
+    await copy.evaluate((element) => {
+      const parent = element.parentNode;
+      const next = element.nextSibling;
+      element.remove();
+      parent.insertBefore(element, next);
+      element.querySelector('button').click();
+      element.dispatchEvent(new Event('test-reject-copy'));
+    });
+    await copy.locator('[data-copy-status]').getByText(/Could not copy/).waitFor();
+    assert.equal(await copy.getAttribute('data-test-writes'), '1');
+    await button.click();
+    await copy.locator('[data-copy-status]').getByText('Definition copied.', { exact: true }).waitFor();
+    assert.equal(await copy.getAttribute('data-test-writes'), '2');
+    assert.equal(await button.getAttribute('aria-disabled'), null);
+  });
   await check('same-type English A–Z neighbors and canonical related previews', async () => {
     for (const kind of ['concepts', 'primitives']) {
       const records = [...dataset[kind]].sort((a, b) => a.term.localeCompare(b.term, 'en') || a.slug.localeCompare(b.slug, 'en'));

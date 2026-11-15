@@ -6,6 +6,41 @@ import test from 'node:test';
 import { stringify } from 'yaml';
 import { fixture, mapInput } from './skill-map-fixture.mjs';
 import { skillMapLoader } from '../src/lib/skill-map-loader.mjs';
+import { translationsLoader } from '../src/lib/translations-loader.mjs';
+
+for (const [collection, makeLoader] of [
+  ['skill maps', (root) => skillMapLoader(join(root, 'skill-maps'))],
+  ['translations', (root) => translationsLoader(root, 'skillMapTranslations')],
+]) {
+  test(`only the current ${collection} loader watches after overlapping loads`, async () => {
+    const root = new URL('../src/data/', import.meta.url).pathname;
+    const loader = makeLoader(root);
+    const oldWatcher = new EventEmitter(), newWatcher = new EventEmitter();
+    oldWatcher.add = newWatcher.add = () => {};
+    const writes = [];
+    const context = {
+      store: { clear: () => {}, set: () => writes.push('current') },
+      generateDigest: JSON.stringify, logger: { error: assert.fail },
+      parseData: async ({ data }) => data,
+    };
+    const started = Promise.withResolvers(), release = Promise.withResolvers();
+    const oldLoad = loader.load({
+      ...context, watcher: oldWatcher,
+      store: { clear: () => writes.push('stale'), set: () => writes.push('stale') },
+      async parseData({ data }) { started.resolve(); await release.promise; return data; },
+    });
+    await started.promise;
+    try { await loader.load({ ...context, watcher: newWatcher }); }
+    finally { release.resolve(); await oldLoad; }
+    assert.ok(writes.length > 0);
+    assert.ok(writes.every((value) => value === 'current'));
+    assert.deepEqual(oldWatcher.eventNames(), []);
+    assert.equal(newWatcher.listenerCount('change'), 1);
+    // Reinitializing again must detach the correct watcher.
+    await loader.load(context);
+    assert.deepEqual(newWatcher.eventNames(), []);
+  });
+}
 
 test('a later filesystem snapshot cannot be overwritten by an earlier delayed Astro parse', async (t) => {
   const directory = await fixture(t);
