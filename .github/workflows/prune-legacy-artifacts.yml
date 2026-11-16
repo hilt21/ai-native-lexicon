@@ -1,0 +1,61 @@
+name: One-time legacy browser evidence cleanup
+on:
+  push:
+    branches: [master]
+    paths:
+      - .github/workflows/prune-legacy-artifacts.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: write
+jobs:
+  cleanup:
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Delete successful-run browser evidence (manual dispatch is dry-run)
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const {owner, repo} = context.repo;
+            const execute = context.eventName === 'push';
+            const all = await github.paginate(github.rest.actions.listArtifactsForRepo, {
+              owner, repo, per_page: 100
+            });
+            const records = [];
+            for (const artifact of all) {
+              if (artifact.name !== 'web-browser-evidence' || artifact.expired) continue;
+              if (!artifact.workflow_run?.id) continue;
+              let run;
+              try {
+                ({data: run} = await github.rest.actions.getWorkflowRun({
+                  owner, repo, run_id: artifact.workflow_run.id
+                }));
+              } catch (error) {
+                // Never delete evidence whose owning run cannot be independently checked.
+                if (error.status === 404) continue;
+                throw error;
+              }
+              if (run.status !== 'completed' || run.conclusion !== 'success') continue;
+              if (run.name !== 'Validate and deploy') continue;
+              if (artifact.workflow_run.head_sha && artifact.workflow_run.head_sha !== run.head_sha) continue;
+              records.push({id: artifact.id, run: run.id, size: artifact.size_in_bytes});
+            }
+            if (records.length > 100) throw Error('Refusing to delete more than 100 artifacts in one run');
+            let bytes = 0;
+            for (const item of records) {
+              if (execute) {
+                await github.rest.actions.deleteArtifact({owner, repo, artifact_id: item.id});
+                core.info(`Deleted successful evidence artifact ${item.id}, run ${item.run}`);
+              } else {
+                core.info(`DRY RUN: would delete artifact ${item.id}, run ${item.run}`);
+              }
+              bytes += item.size;
+            }
+            await core.summary
+              .addHeading('Legacy browser evidence cleanup')
+              .addRaw(`Mode: ${execute ? 'DELETE after approved workflow merge' : 'DRY RUN (manual dispatch)'}\n\n`)
+              .addRaw(`Artifacts: ${records.length}; bytes: ${bytes} (${(bytes / 1e6).toFixed(2)} MB)\n\n`)
+              .addRaw('Only successful Validate and deploy web-browser-evidence artifacts are eligible. Failed-run evidence and Pages deployment artifacts remain intact.')
+              .write();
